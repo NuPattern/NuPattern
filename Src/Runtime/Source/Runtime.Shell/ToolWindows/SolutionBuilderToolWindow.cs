@@ -18,7 +18,7 @@ namespace NuPattern.Runtime.Shell.ToolWindows
     /// </summary>
     internal partial class SolutionBuilderToolWindow
     {
-        private const string SolutionBuilderVisibilitySetting = "FirstTimeInitialization";
+        private const string VisibilitySetting = "FirstTimeInitialization";
         private const string SolutionBuilderAutoOpenedSetting = "SolutionBuilderAutoOpened";
         private SelectionContainer selectionContainer;
         private SolutionBuilderViewModel viewModel;
@@ -82,13 +82,13 @@ namespace NuPattern.Runtime.Shell.ToolWindows
             var packageToolWindow = serviceProvider.GetService<IPackageToolWindow>();
 
             if (!(store.CollectionExists(Constants.SettingsName) &&
-                  store.PropertyExists(Constants.SettingsName, SolutionBuilderVisibilitySetting)))
+                  store.PropertyExists(Constants.SettingsName, VisibilitySetting)))
             {
                 //First time after installation
                 packageToolWindow.ShowWindow<SolutionBuilderToolWindow>(true);
 
                 store.CreateCollection(Constants.SettingsName);
-                store.SetString(Constants.SettingsName, SolutionBuilderVisibilitySetting, bool.FalseString);
+                store.SetString(Constants.SettingsName, VisibilitySetting, bool.FalseString);
             }
             else
             {

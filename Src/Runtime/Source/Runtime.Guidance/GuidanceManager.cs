@@ -14,7 +14,6 @@ using NuPattern.Runtime.Composition;
 using NuPattern.Runtime.Guidance.Diagnostics;
 using NuPattern.Runtime.Guidance.Extensions;
 using NuPattern.Runtime.Guidance.Properties;
-using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.Guidance
 {
@@ -27,17 +26,11 @@ namespace NuPattern.Runtime.Guidance
         private const string ExtensionsDir = @"Extensions";
         private const string ExtensionsFileFilter = @"*.vsixmanifest";
         private const string ExtensionManifestFileName = @"source.extension.vsixmanifest";
-        private const string CommandsExtension = @"*.commands";
         private CompositionContainer extensionsGlobalContainer;
         private Func<IGuidanceExtensionRegistration, IGuidanceExtension> extensionFactory;
         private List<Tuple<IGuidanceExtension, INuPatternCompositionService>> instantiatedGuidanceExtensions = new List<Tuple<IGuidanceExtension, INuPatternCompositionService>>();
         private ISolutionState solutionState;
         private IGuidanceExtension activeExtension;
-        private static string FeatureBuilderDSLPath = string.Empty;
-
-#pragma warning disable 0414
-        private int inTemplateWizard = 0;
-#pragma warning restore 0414
 
         /// <summary>
         /// Gets the InTemplateWzard
@@ -174,9 +167,6 @@ namespace NuPattern.Runtime.Guidance
         public void Open(ISolutionState solutionState)
         {
             Guard.NotNull(() => solutionState, solutionState);
-
-            var theSolution = ((SolutionDataState)solutionState).Solution;
-            SetDslPathIfPresent();
 
             //
             // Ok, now let's load any guidance extensions we find from the "Solution State" which is
@@ -374,8 +364,6 @@ namespace NuPattern.Runtime.Guidance
         {
             var extensionInstance = this.CreateExtension(extensionId);
             var composition = this.CreateCompositionService(extensionInstance, extensionId);
-
-            SetDslPathIfPresent();
 
             //
             // Let's check to see if the instantiation should be registered with the
@@ -660,25 +648,5 @@ namespace NuPattern.Runtime.Guidance
             return this.InstalledGuidanceExtensions
                 .FirstOrDefault(predicate);
         }
-
-        /// <summary>
-        /// If this a Feature Builder Solution,
-        /// save the absolute path to the Feature.command file into the
-        /// FeatureCallContext so we can use it in the IElementExtensions and in the
-        /// GuidanceWorkflow.t4
-        /// </summary>
-        public void SetDslPathIfPresent()
-        {
-            if (solutionState != null)
-            {
-                ISolution theSolution = ((SolutionDataState)solutionState).Solution;
-                var dslFile = theSolution.Find(CommandsExtension).FirstOrDefault();
-                if (dslFile != null)
-                    FeatureBuilderDSLPath = dslFile.PhysicalPath;
-                else
-                    FeatureBuilderDSLPath = null;
-            }
-        }
-
     }
 }

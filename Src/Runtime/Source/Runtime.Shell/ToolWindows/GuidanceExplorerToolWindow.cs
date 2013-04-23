@@ -1,8 +1,10 @@
 ﻿using System;
 using System.ComponentModel.Composition;
 using Microsoft.VisualStudio.ComponentModelHost;
+using Microsoft.VisualStudio.Settings;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
+using Microsoft.VisualStudio.Shell.Settings;
 using NuPattern.Runtime.Guidance;
 using NuPattern.Runtime.Guidance.UI;
 using NuPattern.Runtime.Guidance.UI.ViewModels;
@@ -17,6 +19,8 @@ namespace NuPattern.Runtime.Shell.ToolWindows
     /// </summary>
     internal partial class GuidanceExplorerToolWindow
     {
+        private const string VisibilitySetting = "FirstTimeInitialization";
+        private const string GuidanceExplorerAutoOpenedSetting = "GuidanceExplorerAutoOpened";
         private SelectionContainer selectionContainer;
         private GuidanceExplorerViewModel viewModel;
         private IVsTrackSelectionEx trackSelection;
@@ -59,6 +63,81 @@ namespace NuPattern.Runtime.Shell.ToolWindows
             this.Content = new GuidanceExplorerView { DataContext = this.viewModel };
         }
 
+
+        /// <summary>
+        /// Displays the tool window the first time the environment is used after installation.
+        /// </summary>
+        internal static void InitializeWindowVisibility(IServiceProvider serviceProvider)
+        {
+            Guard.NotNull(() => serviceProvider, serviceProvider);
+
+            var settingsManager = new ShellSettingsManager(serviceProvider);
+            var store = settingsManager.GetWritableSettingsStore(SettingsScope.UserSettings);
+            var packageToolWindow = serviceProvider.GetService<IPackageToolWindow>();
+
+            if (!(store.CollectionExists(Constants.SettingsName) &&
+                  store.PropertyExists(Constants.SettingsName, VisibilitySetting)))
+            {
+                //First time after installation
+                packageToolWindow.ShowWindow<GuidanceExplorerToolWindow>(true);
+
+                store.CreateCollection(Constants.SettingsName);
+                store.SetString(Constants.SettingsName, VisibilitySetting, bool.FalseString);
+            }
+            else
+            {
+                // Afterwards, we load the toolwindow so that the drag&drop events can get access to the 
+                // toolwindow usercontrol that handles the operations.
+                // Querying visibility will automatically create the control.
+                packageToolWindow.IsWindowVisible<GuidanceExplorerToolWindow>();
+            }
+        }
+
+        /// <summary>
+        /// Automatically opens the window, if not already opened.
+        /// </summary>
+        internal static void AutoOpenWindow(IServiceProvider serviceProvider)
+        {
+            Guard.NotNull(() => serviceProvider, serviceProvider);
+
+            var packageToolWindow = serviceProvider.GetService<IPackageToolWindow>();
+
+            if (!packageToolWindow.IsWindowVisible<GuidanceExplorerToolWindow>())
+            {
+                var settingsManager = new ShellSettingsManager(serviceProvider);
+                var store = settingsManager.GetWritableSettingsStore(SettingsScope.UserSettings);
+
+                if (!store.CollectionExists(Constants.SettingsName))
+                {
+                    store.CreateCollection(Constants.SettingsName);
+                }
+
+                store.SetString(Constants.SettingsName, GuidanceExplorerAutoOpenedSetting, bool.TrueString);
+            }
+
+            packageToolWindow.ShowWindow<GuidanceExplorerToolWindow>(true);
+        }
+
+        /// <summary>
+        /// Automatically hides the window, if it was automatically opened.
+        /// </summary>
+        internal static void AutoHideWindow(IServiceProvider serviceProvider)
+        {
+            Guard.NotNull(() => serviceProvider, serviceProvider);
+
+            var settingsManager = new ShellSettingsManager(serviceProvider);
+            var store = settingsManager.GetWritableSettingsStore(SettingsScope.UserSettings);
+
+            if (store.CollectionExists(Constants.SettingsName) &&
+                store.PropertyExists(Constants.SettingsName, GuidanceExplorerAutoOpenedSetting))
+            {
+                var packageToolWindow = serviceProvider.GetService<IPackageToolWindow>();
+
+                packageToolWindow.HideWindow<GuidanceExplorerToolWindow>();
+
+                store.DeleteProperty(Constants.SettingsName, GuidanceExplorerAutoOpenedSetting);
+            }
+        }
 
         /// <summary>
         /// Opens the window, if not already opened.

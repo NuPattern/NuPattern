@@ -128,7 +128,7 @@ namespace NuPattern.Runtime.Shell
 #if VSVER11
         private ResolveEventHandler assemblyResolve = OnAssemblyResolve;
         [ThreadStatic]
-        private static bool _isResolveAssemblyRunningOnThisThread = false;
+        private static bool isResolveAssemblyRunningOnThisThread = false;
 #endif
         /// <summary>
         /// Called when the VSPackage is loaded by Visual Studio.
@@ -140,7 +140,7 @@ namespace NuPattern.Runtime.Shell
 #if VSVER11
             //Register global assembly resolver
             AppDomain.CurrentDomain.AssemblyResolve += this.assemblyResolve;
-            _isResolveAssemblyRunningOnThisThread = true;
+            isResolveAssemblyRunningOnThisThread = true;
 #endif
 
             //Import all services
@@ -245,7 +245,7 @@ namespace NuPattern.Runtime.Shell
                     this.SolutionEvents.SolutionClosed -= OnSolutionClosed;
                 }
 #if VSVER11
-                _isResolveAssemblyRunningOnThisThread = false;
+                isResolveAssemblyRunningOnThisThread = false;
                 if (this.assemblyResolve != null)
                 {
                     AppDomain.CurrentDomain.AssemblyResolve -= this.assemblyResolve;
@@ -254,9 +254,10 @@ namespace NuPattern.Runtime.Shell
             }
         }
 
-        internal void AutoOpenSolutionBuilder()
+        internal void AutoOpenToolWindows()
         {
             SolutionBuilderToolWindow.AutoOpenWindow(this);
+            GuidanceExplorerToolWindow.AutoOpenWindow(this);
         }
 
         private void AddServices()
@@ -282,15 +283,16 @@ namespace NuPattern.Runtime.Shell
 
         private void OnShellInitialized(object sender, EventArgs e)
         {
-            CheckFertInstalled();
+            CheckFertNotInstalled();
 
             SolutionBuilderToolWindow.InitializeWindowVisibility(this);
+            GuidanceExplorerToolWindow.InitializeWindowVisibility(this);
         }
 
         private void OnSolutionClosed(object sender, SolutionEventArgs e)
         {
             SolutionBuilderToolWindow.AutoHideWindow(this);
-            GuidanceExplorerToolWindow.HideWindow(this);
+            GuidanceExplorerToolWindow.AutoHideWindow(this);
             GuidanceBrowserToolWindow.HideWindow(this);
         }
 
@@ -324,8 +326,8 @@ namespace NuPattern.Runtime.Shell
                 this.GuidanceManager.Open(new SolutionDataState(this.Solution));
 
                 // Open guidance windows
-                GuidanceExplorerToolWindow.OpenWindow(this);
-                GuidanceBrowserToolWindow.OpenWindow(this);
+                GuidanceExplorerToolWindow.AutoOpenWindow(this);
+                //GuidanceBrowserToolWindow.OpenWindow(this);
             }
         }
 
@@ -377,6 +379,9 @@ namespace NuPattern.Runtime.Shell
             return sourceNames;
         }
 
+        /// <summary>
+        /// Reloads trace settings, when user changes settings in Options dialog
+        /// </summary>
         private void OnSettingsChanged(object sender, ChangedEventArgs<IRuntimeSettings> e)
         {
             var sourceNames = GetConfiguredSourceNames(e.NewValue);
@@ -400,7 +405,7 @@ namespace NuPattern.Runtime.Shell
         /// <remarks>
         /// Cannot tolerate either version of FERT being installed (i.e. FeatureExtensionUltimateRuntime or FeatureExtensionRuntime versions)
         /// </remarks>
-        private void CheckFertInstalled()
+        private void CheckFertNotInstalled()
         {
             if (this.ExtensionManager != null)
             {
@@ -424,6 +429,53 @@ namespace NuPattern.Runtime.Shell
             }
         }
 
+        /// <summary>
+        /// Installs any VsMenuLaunchPoints defined by guidance extensions in environment
+        /// </summary>
+        private void InitializeVsLaunchPoints()
+        {
+            var menuCommandService = GetService(typeof(IMenuCommandService)) as OleMenuCommandService;
+            if (menuCommandService != null)
+            {
+                var lps = this.LaunchPoints
+                    .Select(lazy => lazy.Value)
+                    .OfType<VsLaunchPoint>();
+
+                foreach (var launchPoint in lps)
+                {
+                    menuCommandService.AddCommand(launchPoint);
+                }
+            }
+        }
+
+        private void OnInstantiatedGuidanceExtensionChanged(object sender, EventArgs args)
+        {
+            this.showWindows = true;
+        }
+
+        /// <summary>
+        /// Ensures guidance windows are displayed when the guidance is changed (i.e. programmatically)
+        /// </summary>
+        private void OnActiveGuidanceExtensionChanged(object sender, EventArgs args)
+        {
+            var activeExtension = this.GuidanceManager.ActiveGuidanceExtension;
+            if (activeExtension != null && activeExtension.GuidanceWorkflow != null)
+            {
+                if (this.showWindows)
+                {
+                    this.GuidanceWindowsService.ShowGuidanceExplorer(this);
+                    this.GuidanceWindowsService.ShowGuidanceBrowser(this);
+                }
+            }
+        }
+
+        private void RegisterRefreshGuidanceStates()
+        {
+            var conditionsEvaluator = new GuidanceConditionsEvaluator(this.GuidanceManager);
+            this.idleTaskHost = new VsIdleTaskHost(this, conditionsEvaluator.EvaluateGraphs, TimeSpan.FromSeconds(GuidanceEvalTimeGovernor));
+            this.idleTaskHost.Start(TimeSpan.FromMilliseconds(IdleTimeout));
+        }
+
 #if VSVER11
         /// <summary>
         /// Finds toolkit assemblies (in the current AppDomain) that are loaded with a partial name.
@@ -440,7 +492,7 @@ namespace NuPattern.Runtime.Shell
             try
             {
                 // Only process events from the thread that started it, not any other thread
-                if (_isResolveAssemblyRunningOnThisThread)
+                if (isResolveAssemblyRunningOnThisThread)
                 {
                     // Determine if lost assembly has a partial name 
                     // (only these are the ones that cause VS2012 difficulty in resolving)
@@ -542,43 +594,5 @@ namespace NuPattern.Runtime.Shell
             return assembly;
         }
 #endif
-
-        private void InitializeVsLaunchPoints()
-        {
-            var menuCommandService = GetService(typeof(IMenuCommandService)) as OleMenuCommandService;
-            if (menuCommandService != null)
-            {
-                var lps = this.LaunchPoints
-                    .Select(lazy => lazy.Value)
-                    .OfType<VsLaunchPoint>();
-
-                foreach (var launchPoint in lps)
-                {
-                    menuCommandService.AddCommand(launchPoint);
-                }
-            }
-        }
-
-        private void OnInstantiatedGuidanceExtensionChanged(object sender, EventArgs args)
-        {
-            this.showWindows = true;
-        }
-
-        private void OnActiveGuidanceExtensionChanged(object sender, EventArgs args)
-        {
-            var activeExtension = this.GuidanceManager.ActiveGuidanceExtension;
-            if (activeExtension != null && this.showWindows && activeExtension.GuidanceWorkflow != null)
-            {
-                this.GuidanceWindowsService.ShowGuidanceExplorer(this);
-                this.GuidanceWindowsService.ShowGuidanceBrowser(this);
-            }
-        }
-
-        private void RegisterRefreshGuidanceStates()
-        {
-            var conditionsEvaluator = new GuidanceConditionsEvaluator(this.GuidanceManager);
-            this.idleTaskHost = new VsIdleTaskHost(this, () => conditionsEvaluator.EvaluateGraphs(), TimeSpan.FromSeconds(GuidanceEvalTimeGovernor));
-            this.idleTaskHost.Start(TimeSpan.FromMilliseconds(IdleTimeout));
-        }
     }
 }
