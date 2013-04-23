@@ -12,55 +12,55 @@ namespace NuPattern.Runtime.Shell
         /// <summary>
         /// The GUID for this package.
         /// </summary>
-        public const string VsixIdentifier = "<#=VsixInfo.PatternToolkitRuntime.Identifier#>";
+        public const string VsixIdentifier = @"<#=VsixInfo.PatternToolkitRuntime.Identifier#>";
 
         /// <summary>
         /// The Identifiers of the FERT VSixes
         /// </summary>
         public static readonly string[] FertVsixIdentifiers = new []
             {
-                "<#=VsixInfo.FeatureExtensionRuntime.Identifier.Pro#>",
-                "<#=VsixInfo.FeatureExtensionRuntime.Identifier.Ultimate#>",
+                @"<#=VsixInfo.FeatureExtensionRuntime.Identifier.Pro#>",
+                @"<#=VsixInfo.FeatureExtensionRuntime.Identifier.Ultimate#>",
             };
 
         /// <summary>
         /// The GUID for this package.
         /// </summary>
-        public const string RuntimeShellPkgGuid = "<#=RuntimeShellPackageInfo.PackageGuid#>";
+        public const string RuntimeShellPkgGuid = @"<#=RuntimeShellPackageInfo.PackageGuid#>";
 
         /// <summary>
         /// Description for the runtime store T4 process
         /// </summary>
-        public const string ProductStateStoreDirectiveProcessorDescription = "Provides access to the solution builder store.";
+        public const string ProductStateStoreDirectiveProcessorDescription = @"Provides access to the solution builder store.";
 
         /// <summary>
         /// Description for the library T4 process
         /// </summary>
-        public const string LibraryDirectiveProcessorDescription = "Provides access to pattern model element information.";
+        public const string LibraryDirectiveProcessorDescription = @"Provides access to pattern model element information.";
 
         /// <summary>
         /// Id of the Visual Studio OutputPane window.
         /// </summary>
-        public const string VsOutputWindowPaneId = "{35A16645-19A3-4CCA-9C44-631C33D750D4}";
+        public const string VsOutputWindowPaneId = @"{35A16645-19A3-4CCA-9C44-631C33D750D4}";
 
         /// <summary>
         /// The product name.
         /// </summary>
-        public const string ProductName = "<#=VsixInfo.PatternToolkitRuntime.Name#>";
+        public const string ProductName = @"<#=VsixInfo.PatternToolkitRuntime.Name#>";
 
         /// <summary>
         /// The name for storing settings for this package.
         /// </summary>
-        public const string SettingsName = "<#=VsixInfo.PatternToolkitRuntime.SettingsName#>";
+        public const string SettingsName = @"<#=VsixInfo.PatternToolkitRuntime.SettingsName#>";
 
         /// <summary>
         /// The name of the output window used for tracing.
         /// </summary>
-        public const string OutputWindowTitle = "<#=RuntimeShellPackageInfo.OutputWindowTitle#>";
+        public const string OutputWindowTitle = @"<#=RuntimeShellPackageInfo.OutputWindowTitle#>";
 
         /// <summary>
         /// The GUID of the Solution Builder tool window.
         /// </summary>
-        public const string SolutionBuilderToolWindowGuid = "{<#=RuntimeShellPackageInfo.SolutionBuilder.ToolWindowGuid#>}";
+        public const string SolutionBuilderToolWindowGuid = @"{<#=RuntimeShellPackageInfo.SolutionBuilder.ToolWindowGuid#>}";
     }
 }

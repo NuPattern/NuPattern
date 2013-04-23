@@ -160,8 +160,8 @@ namespace NuPattern.VisualStudio.Solution.Templates
         {
             return extensions.FirstOrDefault(ext =>
                 ext.Assembly.StartsWith(extensionType.Assembly.GetName().Name)
-                && ext.Assembly.Contains(string.Format(CultureInfo.CurrentCulture, "Version={0}", extensionType.Assembly.GetName().Version.ToString(4)))
-                && ext.Assembly.EndsWith(string.Format(CultureInfo.CurrentCulture, "PublicKeyToken={0}", extensionType.Assembly.GetName().GetPublicKeyTokenString()))
+                && ext.Assembly.Contains(string.Format(CultureInfo.CurrentCulture, @"Version={0}", extensionType.Assembly.GetName().Version.ToString(4)))
+                && ext.Assembly.EndsWith(string.Format(CultureInfo.CurrentCulture, @"PublicKeyToken={0}", extensionType.Assembly.GetName().GetPublicKeyTokenString()))
                 && ext.FullClassName.Equals(extensionType.ToString()));
         }
 

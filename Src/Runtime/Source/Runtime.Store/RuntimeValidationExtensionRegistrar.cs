@@ -33,8 +33,8 @@ namespace NuPattern.Runtime.Store
 
             if (!string.IsNullOrEmpty(this.MetadataFilter))
             {
-                return lazyImport.Metadata.ContainsKey("MetadataFilter") &&
-                    lazyImport.Metadata["MetadataFilter"].Equals(this.MetadataFilter);
+                return lazyImport.Metadata.ContainsKey(@"MetadataFilter") &&
+                    lazyImport.Metadata[@"MetadataFilter"].Equals(this.MetadataFilter);
             }
 
             return true;

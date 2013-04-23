@@ -24,6 +24,10 @@ namespace NuPattern.Runtime.Guidance
     [Export(typeof(IGuidanceManager))]
     internal class GuidanceManager : IGuidanceManager
     {
+        private const string ExtensionsDir = @"Extensions";
+        private const string ExtensionsFileFilter = @"*.vsixmanifest";
+        private const string ExtensionManifestFileName = @"source.extension.vsixmanifest";
+        private const string CommandsExtension = @"*.commands";
         private CompositionContainer extensionsGlobalContainer;
         private Func<IGuidanceExtensionRegistration, IGuidanceExtension> extensionFactory;
         private List<Tuple<IGuidanceExtension, INuPatternCompositionService>> instantiatedGuidanceExtensions = new List<Tuple<IGuidanceExtension, INuPatternCompositionService>>();
@@ -185,7 +189,7 @@ namespace NuPattern.Runtime.Guidance
             RaisePropertyChanged(x => x.IsOpened);
 
 
-            using (new TraceActivity("Loading guidance extensions from solution state", Tracer.GetSourceFor<GuidanceManager>()))
+            using (new TraceActivity(Resources.GuidanceManager_TraceOpenFromSolutionState, Tracer.GetSourceFor<GuidanceManager>()))
             {
                 // Ignore guidance extensions that are not installed.
                 var availableSolutionExtensions = solutionState
@@ -220,7 +224,7 @@ namespace NuPattern.Runtime.Guidance
                 foreach (var extension in availableSolutionExtensions)
                 {
                     var extensionTracer = GuidanceExtensionTracer.GetSourceFor(this, extension.State.ExtensionId, extension.State.InstanceName);
-                    using (new TraceActivity("Initializing existing guidance extension", extensionTracer))
+                    using (new TraceActivity(Resources.GuidanceManager_TraceInitializeExtension, extensionTracer))
                     {
                         try
                         {
@@ -238,7 +242,7 @@ namespace NuPattern.Runtime.Guidance
                         }
                         catch (Exception ex)
                         {
-                            extensionTracer.TraceError(ex, "Failed to initialize guidance extension");
+                            extensionTracer.TraceError(ex, Resources.GuidanceManager_TraceFailedExtensionInitialization);
                         }
                     }
                 }
@@ -261,7 +265,7 @@ namespace NuPattern.Runtime.Guidance
 
             var extensionTracer = GuidanceExtensionTracer.GetSourceFor(this, extensionId, instanceName);
 
-            using (new TraceActivity("Instantiating guidance extension", extensionTracer))
+            using (new TraceActivity(Resources.GuidanceManager_TraceInstantiateExtension, extensionTracer))
             {
                 try
                 {
@@ -309,7 +313,7 @@ namespace NuPattern.Runtime.Guidance
                 }
                 catch (Exception ex)
                 {
-                    extensionTracer.TraceError(ex, "Failed to instantiate guidance extension");
+                    extensionTracer.TraceError(ex, Resources.GuidanceManager_TraceFailedInstantiate);
                     throw;
                 }
             }
@@ -321,7 +325,7 @@ namespace NuPattern.Runtime.Guidance
             Guard.NotNullOrEmpty(() => instanceName, instanceName);
 
             var extensionTracer = GuidanceExtensionTracer.GetSourceFor(this, extensionId, instanceName);
-            using (new TraceActivity("Instantiating guidance extension", extensionTracer))
+            using (new TraceActivity(Resources.GuidanceManager_TraceInstantiateExtension, extensionTracer))
             {
                 try
                 {
@@ -351,7 +355,7 @@ namespace NuPattern.Runtime.Guidance
                 }
                 catch (Exception ex)
                 {
-                    extensionTracer.TraceError(ex, "Failed to instantiate guidance extension");
+                    extensionTracer.TraceError(ex, Resources.GuidanceManager_TraceFailedInstantiate);
                     throw;
                 }
             }
@@ -508,7 +512,7 @@ namespace NuPattern.Runtime.Guidance
             if (extension != null)
             {
                 var tracer = GuidanceExtensionTracer.GetSourceFor(this, extension.Item1.ExtensionId, instanceName);
-                using (new TraceActivity("Finishing guidance extension", tracer))
+                using (new TraceActivity(Resources.GuidanceManager_TraceFinishExtension, tracer))
                 {
                     try
                     {
@@ -516,7 +520,7 @@ namespace NuPattern.Runtime.Guidance
                     }
                     catch (Exception ex)
                     {
-                        tracer.TraceWarning("An error happened while finishing the guidance extension. State may be invalid. Continuing to remove guidance extension from solution state.\n{0}", ex);
+                        tracer.TraceWarning(Resources.GuidanceManager_TraceFailedFinish, ex);
                     }
 
                     var disposable = extension.Item1 as IDisposable;
@@ -528,7 +532,7 @@ namespace NuPattern.Runtime.Guidance
                     InstantiatedExtensionsChanged(this, EventArgs.Empty);
                     RaisePropertyChanged(x => x.InstantiatedGuidanceExtensions);
 
-                    tracer.TraceInformation("Guidance extension successfully finished.");
+                    tracer.TraceInformation(Resources.GuidanceManager_TraceFinishCOmplete);
                 }
             }
         }
@@ -592,10 +596,10 @@ namespace NuPattern.Runtime.Guidance
             string extensionId = null;
 
             var currentDir = Path.GetDirectoryName(filename);
-            while (string.IsNullOrEmpty(extensionId) && !string.IsNullOrEmpty(currentDir) && Path.GetFileName(currentDir) != "Extensions")
+            while (string.IsNullOrEmpty(extensionId) && !string.IsNullOrEmpty(currentDir) && Path.GetFileName(currentDir) != ExtensionsDir)
             {
-                var manifestFile = Directory.EnumerateFiles(currentDir, "*.vsixmanifest", SearchOption.TopDirectoryOnly).FirstOrDefault();
-                if (manifestFile != null && !manifestFile.ToLower().EndsWith("source.extension.vsixmanifest"))
+                var manifestFile = Directory.EnumerateFiles(currentDir, ExtensionsFileFilter, SearchOption.TopDirectoryOnly).FirstOrDefault();
+                if (manifestFile != null && !manifestFile.ToLower().EndsWith(ExtensionManifestFileName))
                 {
                     extensionId = ReadVsixIdentifier(manifestFile);
                     if (string.IsNullOrEmpty(extensionId))
@@ -668,7 +672,7 @@ namespace NuPattern.Runtime.Guidance
             if (solutionState != null)
             {
                 ISolution theSolution = ((SolutionDataState)solutionState).Solution;
-                var dslFile = theSolution.Find("*.commands").FirstOrDefault();
+                var dslFile = theSolution.Find(CommandsExtension).FirstOrDefault();
                 if (dslFile != null)
                     FeatureBuilderDSLPath = dslFile.PhysicalPath;
                 else

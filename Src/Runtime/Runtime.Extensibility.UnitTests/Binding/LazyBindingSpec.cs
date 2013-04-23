@@ -107,7 +107,7 @@ namespace NuPattern.Runtime.UnitTests.Binding
             {
                 get
                 {
-                    return Catalog.CatalogName;
+                    return Catalog.DefaultCatalogName;
                 }
             }
         }

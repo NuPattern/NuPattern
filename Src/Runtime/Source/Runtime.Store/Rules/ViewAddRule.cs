@@ -5,6 +5,7 @@ using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using NuPattern.Diagnostics;
 using NuPattern.Runtime.Bindings;
+using NuPattern.Runtime.Store.Properties;
 using NuPattern.Runtime.ToolkitInterface;
 
 namespace NuPattern.Runtime.Store
@@ -66,7 +67,7 @@ namespace NuPattern.Runtime.Store
             }
             else
             {
-                tracer.TraceWarning("DefinitionId not set for view '{0}', the schema information can not be loaded.", view.Id);
+                tracer.TraceWarning(Resources.ViewAddRule_TraceViewInfoLoadFailed, view.Id);
             }
         }
 

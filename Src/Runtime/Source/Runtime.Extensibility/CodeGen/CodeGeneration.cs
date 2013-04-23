@@ -43,10 +43,10 @@ namespace NuPattern.Runtime.CodeGen
         /// <summary>
         /// Gets the characters used for indenting generated code.
         /// </summary>
-        public static string GetIndentation(string language = "c#")
+        public static string GetIndentation(string language = @"c#")
         {
             // TODO: Read this setting from VS settings for: Tools | Options | Text Editor | <language> | Tabs (Inserts Spaces| Keep Tabs)
-            return "\t";
+            return @"	";
         }
 
         /// <summary>
@@ -165,7 +165,7 @@ namespace NuPattern.Runtime.CodeGen
             var typeName = fullName;
             if (!this.TypeNameMap.TryGetValue(typeName, out typeName))
                 typeName = Expressions.ComaWithoutSpace.Replace(
-                    Expressions.GenericsArity.Replace(SanitizeGenerics(fullName), ""), ", ");
+                    Expressions.GenericsArity.Replace(SanitizeGenerics(fullName), string.Empty), @", ");
 
             return typeName;
         }
@@ -189,10 +189,10 @@ namespace NuPattern.Runtime.CodeGen
                 }
 
                 if (argument.ArgumentType == typeof(string))
-                    return "\"" + argument.Value + "\"";
+                    return @"""" + argument.Value + @"""";
 
                 if (argument.ArgumentType.IsEnum)
-                    return argument.ArgumentType.Name + "." + Enum.GetName(argument.ArgumentType, argument.Value);
+                    return argument.ArgumentType.Name + @"." + Enum.GetName(argument.ArgumentType, argument.Value);
 
                 if (argument.ArgumentType == typeof(Type))
                     provider.GenerateCodeFromExpression(new System.CodeDom.CodeTypeOfExpression(((Type)argument.Value).Name), writer, new System.CodeDom.Compiler.CodeGeneratorOptions());

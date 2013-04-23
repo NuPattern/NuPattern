@@ -48,7 +48,7 @@ namespace NuPattern.VisualStudio.TemplateWizards
                             var registryRoot = VsHelper.GetPropertyOrDefault<string>(shell.GetProperty, (int)__VSSPROPID.VSSPROPID_VirtualRegistryRoot);
                             var suffix = registryRoot.Replace(VsSettingsRegistryKey, string.Empty);
 
-                            replacementsDictionary.Add("$vsrootsuffix$", suffix);
+                            replacementsDictionary.Add(@"$vsrootsuffix$", suffix);
 
                             tracer.TraceInformation(Resources.VsRootSuffixTemplateWizard_RootSuffixDetermined, suffix);
                         }),

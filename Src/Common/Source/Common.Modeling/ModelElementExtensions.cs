@@ -50,7 +50,7 @@ namespace NuPattern.Modeling
             var domainProperty = element.GetDomainClass().FindDomainProperty(propertyName, true);
             if (domainProperty == null)
             {
-                throw new InvalidOperationException("Property does not exist on element.");
+                throw new InvalidOperationException(Resources.ModelElementExtensions_GetPropertyDefaultValue_NoProperty);
             }
 
             return (TResult)domainProperty.DefaultValue;
@@ -89,7 +89,7 @@ namespace NuPattern.Modeling
 
             if (!parent.Store.TransactionManager.InTransaction)
             {
-                using (var tx = parent.Store.TransactionManager.BeginTransaction("Creating: " + typeof(T).Name))
+                using (var tx = parent.Store.TransactionManager.BeginTransaction(Resources.ModelElementExtensions_CreateTransactionText + typeof(T).Name))
                 {
                     var result = CreateChildElement<T>(parent, raiseInstantiateEvents);
                     tx.Commit();

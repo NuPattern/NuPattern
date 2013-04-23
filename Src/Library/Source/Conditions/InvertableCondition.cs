@@ -10,8 +10,8 @@ namespace NuPattern.Library.Conditions
     /// <summary>
     /// Invertable Condition
     /// </summary>
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "Invertable"), DisplayNameResource("InvertableCondition_DisplayName", typeof(Resources))]
-    [DescriptionResource("InvertableCondition_Description", typeof(Resources))]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "Invertable"), DisplayNameResource(@"InvertableCondition_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"InvertableCondition_Description", typeof(Resources))]
     [CLSCompliant(false)]
     public abstract class InvertableCondition : Condition
     {
@@ -30,8 +30,8 @@ namespace NuPattern.Library.Conditions
         /// </summary>
         [Required]
         [DefaultValue(DefaultIsInverted)]
-        [DisplayNameResource("InvertableCondition_IsInverted_DisplayName", typeof(Resources))]
-        [DescriptionResource("InvertableCondition_IsInverted_Description", typeof(Resources))]
+        [DisplayNameResource(@"InvertableCondition_IsInverted_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"InvertableCondition_IsInverted_Description", typeof(Resources))]
         internal bool IsInverted { get; set; }
 
         /// <summary>

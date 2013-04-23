@@ -227,9 +227,9 @@ namespace NuPattern.Runtime
 
                     var dslStore = new Dsl.Store(this.serviceProvider, typeof(Dsl.CoreDomainModel), typeof(ProductStateStoreDomainModel));
 
-                    using (var tx = dslStore.TransactionManager.BeginTransaction("Loading", true))
+                    using (var tx = dslStore.TransactionManager.BeginTransaction(Resources.PatternManager_OpenTransactionDescription, true))
                     {
-                        using (var bag = new StorePropertyBag(dslStore, ProductState.IsSerializingKey, true))
+                        using (new StorePropertyBag(dslStore, ProductState.IsSerializingKey, true))
                         {
                             // Flag the state as being deserialized. This is 
                             // required by the ProductState class to ignore 

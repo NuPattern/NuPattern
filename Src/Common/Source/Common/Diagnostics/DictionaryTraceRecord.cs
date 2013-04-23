@@ -45,13 +45,13 @@ namespace NuPattern.Diagnostics
             // string in a generic fashion.
             XmlConverters = typeof(XmlConvert)
                 .GetMethods(BindingFlags.Public | BindingFlags.Static)
-                .Where(method => method.Name == "ToString" && method.GetParameters().Length == 1)
+                .Where(method => method.Name.Equals(@"ToString", StringComparison.OrdinalIgnoreCase) && method.GetParameters().Length == 1)
                 .ToDictionary(
                     method => method.GetParameters()[0].ParameterType,
                     method =>
                     {
                         var valueType = method.GetParameters()[0].ParameterType;
-                        var parameter = Expression.Parameter(valueType, "x");
+                        var parameter = Expression.Parameter(valueType, @"x");
                         return Expression.Lambda(
                             typeof(Func<,>).MakeGenericType(valueType, typeof(string)),
                             Expression.Call(method, parameter),

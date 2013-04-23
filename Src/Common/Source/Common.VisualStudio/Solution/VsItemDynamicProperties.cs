@@ -8,6 +8,7 @@ using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using NuPattern.IO;
+using NuPattern.VisualStudio.Properties;
 using NuPattern.VisualStudio.Solution.Hierarchy;
 
 namespace NuPattern.VisualStudio.Solution
@@ -16,7 +17,7 @@ namespace NuPattern.VisualStudio.Solution
     /// Provides a dynamic object API to store data 
     /// as MSBuild item properties.
     /// </summary>
-    [DebuggerDisplay("{AllProperties}")]
+    [DebuggerDisplay(@"{AllProperties}")]
     internal class VsItemDynamicProperties : DynamicObject
     {
         private static readonly TraceSource tracer = new TraceSource(typeof(VsItemDynamicProperties).FullName);
@@ -109,7 +110,7 @@ namespace NuPattern.VisualStudio.Solution
 
             // Next go custom MSBuild properties.
             if (value == null)
-                throw new NotSupportedException("Cannot set null value for custom MSBuild item properties.");
+                throw new NotSupportedException(Resources.VsItemDynamicProperties_ErrorNullItemProperies);
 
             var storage = this.node.GetObject<IVsHierarchy>() as IVsBuildPropertyStorage;
             if (storage != null)
@@ -136,7 +137,7 @@ namespace NuPattern.VisualStudio.Solution
                 {
                     var formattedProperties = item.Properties
                         .Cast<Property>()
-                        .Select(prop => string.Format(@"{0}={1}", prop.Name, prop.Value ?? "null"))
+                        .Select(prop => string.Format(@"{0}={1}", prop.Name, prop.Value ?? @"null"))
                         .ToArray();
                     properties.Append(string.Join(Environment.NewLine, formattedProperties));
                 }

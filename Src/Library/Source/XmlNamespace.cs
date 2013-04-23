@@ -9,22 +9,22 @@ namespace NuPattern.Library
     /// <summary>
     /// An XML namespace declaration.
     /// </summary>
-    [DisplayNameResource("XmlNamespace_DisplayName", typeof(Resources))]
-    [DescriptionResource("XmlNamespace_Description", typeof(Resources))]
+    [DisplayNameResource(@"XmlNamespace_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"XmlNamespace_Description", typeof(Resources))]
     public class XmlNamespace
     {
         /// <summary>
         /// The prefix of the namespace
         /// </summary>
-        [DisplayNameResource("XmlNamespace_Prefix_DisplayName", typeof(Resources))]
-        [DescriptionResource("XmlNamespace_Prefix_Description", typeof(Resources))]
+        [DisplayNameResource(@"XmlNamespace_Prefix_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"XmlNamespace_Prefix_Description", typeof(Resources))]
         public string Prefix { get; set; }
 
         /// <summary>
         /// The full namespace
         /// </summary>
-        [DisplayNameResource("XmlNamespace_Namespace_DisplayName", typeof(Resources))]
-        [DescriptionResource("XmlNamespace_Namespace_Description", typeof(Resources))]
+        [DisplayNameResource(@"XmlNamespace_Namespace_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"XmlNamespace_Namespace_Description", typeof(Resources))]
         public string Namespace { get; set; }
 
         /// <summary>
@@ -38,7 +38,7 @@ namespace NuPattern.Library
                 return Resources.XmlNamespace_EmptyNamespace;
             }
 
-            return string.Format(CultureInfo.CurrentCulture, "xmlns{2}{0}={1}", this.Prefix, this.Namespace, (!string.IsNullOrEmpty(this.Prefix) ? ":" : ""));
+            return string.Format(CultureInfo.CurrentCulture, @"xmlns{2}{0}={1}", this.Prefix, this.Namespace, (!string.IsNullOrEmpty(this.Prefix) ? @":" : ""));
         }
     }
 

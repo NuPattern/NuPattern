@@ -34,7 +34,7 @@ namespace NuPattern
                   var formatGroup = match.Groups["format"];
                   var endGroup = match.Groups["end"];
 
-                  values.Add((propertyGroup.Value == "0")
+                  values.Add((propertyGroup.Value == 0.ToString())
                     ? source
                     : Eval(source, propertyGroup.Value));
 

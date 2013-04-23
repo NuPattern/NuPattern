@@ -2,6 +2,7 @@ using System;
 using System.Diagnostics;
 using System.Linq.Expressions;
 using System.Reflection;
+using NuPattern.Properties;
 
 namespace NuPattern.Reflection
 {
@@ -55,11 +56,11 @@ namespace NuPattern.Reflection
 
         private static MethodInfo GetMethodInfo(Expression method)
         {
-            if (method == null) throw new ArgumentNullException("method");
+            Guard.NotNull(() => method, method);
 
-            LambdaExpression lambda = method as LambdaExpression;
-            if (lambda == null) throw new ArgumentException("Not a lambda expression", "method");
-            if (lambda.Body.NodeType != ExpressionType.Call) throw new ArgumentException("Not a method call", "method");
+            var lambda = method as LambdaExpression;
+            if (lambda == null) throw new ArgumentException(Resources.Reflect_ErrorNotLambda, "method");
+            if (lambda.Body.NodeType != ExpressionType.Call) throw new ArgumentException(Resources.Reflect_NotMethodCall, "method");
 
             return ((MethodCallExpression)lambda.Body).Method;
         }
@@ -72,7 +73,7 @@ namespace NuPattern.Reflection
         public static PropertyInfo GetProperty(Expression<Func<TTarget, object>> property)
         {
             PropertyInfo info = GetMemberInfo(property) as PropertyInfo;
-            if (info == null) throw new ArgumentException("Member is not a property");
+            if (info == null) throw new ArgumentException(Resources.Reflect_ErrorNotProperty);
 
             return info;
         }
@@ -85,7 +86,7 @@ namespace NuPattern.Reflection
         public static FieldInfo GetField(Expression<Func<TTarget, object>> field)
         {
             FieldInfo info = GetMemberInfo(field) as FieldInfo;
-            if (info == null) throw new ArgumentException("Member is not a field");
+            if (info == null) throw new ArgumentException(Resources.Reflect_ErrorNotField);
 
             return info;
         }
@@ -95,7 +96,7 @@ namespace NuPattern.Reflection
             if (member == null) throw new ArgumentNullException("member");
 
             LambdaExpression lambda = member as LambdaExpression;
-            if (lambda == null) throw new ArgumentException("Not a lambda expression", "member");
+            if (lambda == null) throw new ArgumentException(Resources.Reflect_ErrorNotLambda, "member");
 
             MemberExpression memberExpr = null;
 
@@ -112,7 +113,7 @@ namespace NuPattern.Reflection
                 memberExpr = lambda.Body as MemberExpression;
             }
 
-            if (memberExpr == null) throw new ArgumentException("Not a member access", "member");
+            if (memberExpr == null) throw new ArgumentException(Resources.Reflect_ErrorNotMemberAccess, "member");
 
             return memberExpr.Member;
         }

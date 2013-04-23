@@ -9,7 +9,7 @@ namespace NuPattern.Runtime.Guidance.Workflow
     /// <summary>
     /// Defines a guidance predecessor that allows choose between two activities in the workflow.
     /// </summary>
-    [DisplayNameResource("GuidanceNode_Decision_DisplayName", typeof(Resources))]
+    [DisplayNameResource(@"GuidanceNode_Decision_DisplayName", typeof(Resources))]
     public class Decision : ConditionalNode, IDecision
     {
         /// <summary>

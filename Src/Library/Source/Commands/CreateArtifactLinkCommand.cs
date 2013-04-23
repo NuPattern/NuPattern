@@ -15,9 +15,9 @@ namespace NuPattern.Library.Commands
     /// <summary>
     /// Creates an artifact link between the owner element and the specified Items
     /// </summary>
-    [DisplayNameResource("CreateArtifactLinkCommand_DisplayName", typeof(Resources))]
-    [DescriptionResource("CreateArtifactLinkCommand_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
+    [DisplayNameResource(@"CreateArtifactLinkCommand_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"CreateArtifactLinkCommand_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class CreateArtifactLinkCommand : Command
     {
@@ -48,8 +48,8 @@ namespace NuPattern.Library.Commands
         /// The Items to link to the owner element.
         /// </summary>
         [Required]
-        [DisplayNameResource("CreateArtifactLinkCommand_Items_DisplayName", typeof(Resources))]
-        [DescriptionResource("CreateArtifactLinkCommand_Items_Description", typeof(Resources))]
+        [DisplayNameResource(@"CreateArtifactLinkCommand_Items_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"CreateArtifactLinkCommand_Items_Description", typeof(Resources))]
         public virtual IEnumerable<string> Items { get; set; }
 
         /// <summary>

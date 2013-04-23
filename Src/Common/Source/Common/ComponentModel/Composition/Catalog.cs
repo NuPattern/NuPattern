@@ -8,6 +8,6 @@ namespace NuPattern.ComponentModel.Composition
         /// <summary>
         /// Catalog name to use for our container.
         /// </summary>
-        public const string CatalogName = "NuPattern";
+        public const string DefaultCatalogName = @"NuPattern";
     }
 }

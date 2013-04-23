@@ -64,12 +64,12 @@ namespace NuPattern.Runtime.Shell.OptionPages
         private void InitializeDropDowns()
         {
             this.RootSourceLevel.DataSource = new BindingSource(levels, null);
-            this.RootSourceLevel.DisplayMember = "Key";
-            this.RootSourceLevel.ValueMember = "Value";
+            this.RootSourceLevel.DisplayMember = @"Key";
+            this.RootSourceLevel.ValueMember = @"Value";
 
             this.cmbLevel.DataSource = new BindingSource(levels, null);
-            this.cmbLevel.DisplayMember = "Key";
-            this.cmbLevel.ValueMember = "Value";
+            this.cmbLevel.DisplayMember = @"Key";
+            this.cmbLevel.ValueMember = @"Value";
         }
 
         private void ClearInputControls()

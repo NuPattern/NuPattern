@@ -19,9 +19,9 @@ namespace NuPattern.Library.Commands
     /// <summary>
     /// Auto renames the owner's referenced artifact with the owner name.
     /// </summary>
-    [DisplayNameResource("SynchArtifactNameCommand_DisplayName", typeof(Resources))]
-    [DescriptionResource("SynchArtifactNameCommand_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
+    [DisplayNameResource(@"SynchArtifactNameCommand_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"SynchArtifactNameCommand_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class SynchArtifactNameCommand : Command
     {
@@ -31,8 +31,8 @@ namespace NuPattern.Library.Commands
         /// <summary>
         /// Gets or sets the tag for the command.
         /// </summary>
-        [DisplayNameResource("SynchArtifactNameCommand_ReferenceTag_DisplayName", typeof(Resources))]
-        [DescriptionResource("SynchArtifactNameCommand_ReferenceTag_Description", typeof(Resources))]
+        [DisplayNameResource(@"SynchArtifactNameCommand_ReferenceTag_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"SynchArtifactNameCommand_ReferenceTag_Description", typeof(Resources))]
         public string ReferenceTag { get; set; }
 
         /// <summary>
@@ -111,7 +111,7 @@ namespace NuPattern.Library.Commands
                                     // TODO: Determine whether any of the properties referenced in TargetFileName syntax 
                                     // (i.e. {InstanceName} or {PropertyName}) was the property actually changed, and if not, dont sync!
 
-                                    var resolver = new PathResolver(this.CurrentElement, this.UriReferenceService, "\\",
+                                    var resolver = new PathResolver(this.CurrentElement, this.UriReferenceService, @"\",
                                         string.IsNullOrEmpty(referenceTag.TargetFileName) ? this.CurrentElement.InstanceName : referenceTag.TargetFileName);
                                     resolver.Resolve();
 

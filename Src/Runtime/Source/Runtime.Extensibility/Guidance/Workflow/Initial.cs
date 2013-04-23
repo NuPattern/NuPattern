@@ -8,7 +8,7 @@ namespace NuPattern.Runtime.Guidance.Workflow
     /// <summary>
     /// Defines the entry point element for a guidance workflow.
     /// </summary>
-    [DisplayNameResource("GuidanceNode_Initial_DisplayName", typeof(Resources))]
+    [DisplayNameResource(@"GuidanceNode_Initial_DisplayName", typeof(Resources))]
     public class Initial : Node, IInitial
     {
         /// <summary>

@@ -10,9 +10,9 @@ namespace NuPattern.Library.Commands
     /// <summary>
     /// Sets a value in the current guidance using the <see cref="BlackboardManager"/>
     /// </summary>
-    [DisplayNameResource("SetBlackboardValueCommand_DisplayName", typeof(Resources))]
-    [DescriptionResource("SetBlackboardValueCommand_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Guidance", typeof(Resources))]
+    [DisplayNameResource(@"SetBlackboardValueCommand_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"SetBlackboardValueCommand_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Guidance", typeof(Resources))]
     public class SetBlackboardValueCommand : Command
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<SetBlackboardValueCommand>();
@@ -21,16 +21,16 @@ namespace NuPattern.Library.Commands
         /// Gets or sets the key.
         /// </summary>
         [Required]
-        [DisplayNameResource("SetBlackboardValueCommand_Key_DisplayName", typeof(Resources))]
-        [DescriptionResource("SetBlackboardValueCommand_Key_Description", typeof(Resources))]
+        [DisplayNameResource(@"SetBlackboardValueCommand_Key_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"SetBlackboardValueCommand_Key_Description", typeof(Resources))]
         public string Key { get; set; }
 
         /// <summary>
         /// Gets or sets the value
         /// </summary>
         [Required]
-        [DisplayNameResource("SetBlackboardValueCommand_Value_DisplayName", typeof(Resources))]
-        [DescriptionResource("SetBlackboardValueCommand_Value_Description", typeof(Resources))]
+        [DisplayNameResource(@"SetBlackboardValueCommand_Value_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"SetBlackboardValueCommand_Value_Description", typeof(Resources))]
         public string Value { get; set; }
 
         /// <summary>

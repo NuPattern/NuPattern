@@ -56,7 +56,7 @@ namespace NuPattern.Diagnostics
 
             base.WriteLine(String.Format(CultureInfo.CurrentCulture, RecordFormat, eventType, record.Description));
             if (record.Exception != null)
-                base.WriteLine(String.Format(CultureInfo.CurrentCulture, DictionaryFormat, "Exception", record.Exception));
+                base.WriteLine(String.Format(CultureInfo.CurrentCulture, DictionaryFormat, @"Exception", record.Exception));
 
             var dictionary = data as DictionaryTraceRecord;
             if (dictionary == null)

@@ -1,12 +1,17 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using NuPattern.Diagnostics;
 using NuPattern.Runtime.Bindings;
+using NuPattern.Runtime.Guidance.Properties;
 
 namespace NuPattern.Runtime.Guidance.Workflow
 {
     internal class GuidanceConditionsEvaluator
     {
+        private const string DebugToken = @"DebugTrace";
+        private const string DebugWithBindingsToken = @"DebugTraceWithBindings";
+        private const string TraceToken = @"Trace";
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<GuidanceConditionsEvaluator>();
         public static bool TraceStateChanges = false;
 
@@ -34,8 +39,8 @@ namespace NuPattern.Runtime.Guidance.Workflow
             var workflow = extension.GuidanceWorkflow;
             if (workflow != null)
             {
-                TraceStateChanges = GuidanceManagerSettings.VerboseTracing = workflow.Successors.ToArray<INode>()[0].Name.StartsWith("DebugTrace");
-                GuidanceManagerSettings.VerboseBindingTracing = workflow.Successors.ToArray<INode>()[0].Name == "DebugTraceWithBindings";
+                TraceStateChanges = GuidanceManagerSettings.VerboseTracing = workflow.Successors.ToArray<INode>()[0].Name.StartsWith(DebugToken);
+                GuidanceManagerSettings.VerboseBindingTracing = workflow.Successors.ToArray<INode>()[0].Name.Equals(DebugWithBindingsToken, StringComparison.OrdinalIgnoreCase);
 
                 EvaluateNode(workflow);
 
@@ -59,9 +64,9 @@ namespace NuPattern.Runtime.Guidance.Workflow
                 if (queuedExtensions.Count == 0 && queuedActions.Count == 0)
                 {
                     if (TraceStateChanges)
-                        tracer.TraceVerbose("========================== Evaluating Conditions for '{0}.{1}'.",
+                        tracer.TraceVerbose(Resources.GuidanceConditionsEvaluator_TraceEvaluationHeader,
                             currentExtensionInstance.InstanceName,
-                            "Workflow");
+                            @"Workflow");
                     EnqueueAll<IGuidanceExtension>(queuedExtensions, this.guidanceManager.InstantiatedGuidanceExtensions);
                     return false;
                 }
@@ -75,7 +80,7 @@ namespace NuPattern.Runtime.Guidance.Workflow
                         var workflow = feature.GuidanceWorkflow;
                         if (workflow != null)
                         {
-                            if (workflow.Successors.ToArray<INode>()[0].Name == "Trace")
+                            if (workflow.Successors.ToArray<INode>()[0].Name.Equals(TraceToken, StringComparison.OrdinalIgnoreCase))
                                 TraceStateChanges = true;
                             EnqueueAll(queuedActions, workflow.AllNodesToEvaluate);
 
@@ -135,7 +140,7 @@ namespace NuPattern.Runtime.Guidance.Workflow
                 //    !(node is Merge))
                 if (TraceStateChanges &&
                     node.State != NodeState.Blocked)
-                    tracer.TraceVerbose("Setting state to BLOCKED '{0}.{1}'.",
+                    tracer.TraceVerbose(Resources.GuidanceConditionsEvaluator_TraceBlockState,
                         currentExtensionInstance.InstanceName,
                         node.Name);
                 node.SetState(NodeState.Blocked, false);
@@ -175,7 +180,7 @@ namespace NuPattern.Runtime.Guidance.Workflow
                 //    !(node is Merge))
                 if (TraceStateChanges &&
                     node.State != postConditionsState)
-                    tracer.TraceVerbose("Setting state to " + postConditionsState.ToString() + " '{0}.{1}'.",
+                    tracer.TraceVerbose(Resources.GuidanceConditionsEvaluator_TraceStateToPostConditions + postConditionsState.ToString() + @" '{0}.{1}'.",
                         currentExtensionInstance.InstanceName,
                         node.Name);
                 node.SetState(postConditionsState, false);

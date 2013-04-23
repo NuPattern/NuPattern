@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using Microsoft.VisualStudio.Shell;
 using NuPattern.Diagnostics;
+using NuPattern.Runtime.Guidance.Properties;
 
 namespace NuPattern.Runtime.Guidance.UriProviders
 {
@@ -48,14 +49,14 @@ namespace NuPattern.Runtime.Guidance.UriProviders
         /// </summary>
         public Uri CreateUri(GuidanceContent instance)
         {
-            tracer.TraceVerbose("Creating uri for content with feature id {0}, path {1}", instance.GuidanceExtensionId, instance.Path);
+            tracer.TraceVerbose(Resources.GuidanceContentUriReferenceProvider_TraceCreateUri, instance.GuidanceExtensionId, instance.Path);
 
             var extension = this.guidanceManager.InstalledGuidanceExtensions
                 .FirstOrDefault(installedFeature => installedFeature.ExtensionId.Equals(instance.GuidanceExtensionId, StringComparison.InvariantCultureIgnoreCase));
             if (extension == null)
-                throw new ArgumentException(string.Format("Feature '{0}' not found", instance.GuidanceExtensionId));
+                throw new ArgumentException(string.Format(Resources.GuidanceContentUriReferenceProvider_ErrorExtensionNotFound, instance.GuidanceExtensionId));
 
-            var path = instance.Path.Replace(extension.InstallPath, string.Empty).Replace("\\", "/");
+            var path = instance.Path.Replace(extension.InstallPath, string.Empty).Replace(@"\", @"/");
 
             var uri = new Uri(UriFormat.NamedFormat(new
             {
@@ -63,7 +64,7 @@ namespace NuPattern.Runtime.Guidance.UriProviders
                 Path = path,
             }));
 
-            tracer.TraceVerbose("Created uri {0}", uri);
+            tracer.TraceVerbose(Resources.GuidanceContentUriReferenceProvider_TraceUriCreated, uri);
 
             return uri;
         }
@@ -73,24 +74,24 @@ namespace NuPattern.Runtime.Guidance.UriProviders
         /// </summary>
         public GuidanceContent ResolveUri(Uri uri)
         {
-            tracer.TraceVerbose("Resolving uri {0}", uri);
+            tracer.TraceVerbose(Resources.GuidanceContentUriReferenceProvider_TraceResolvingUri, uri);
             var extensionId = uri.Host;
 
-            if (extensionId == "." && guidanceManager.ActiveGuidanceExtension != null)
+            if (extensionId == @"." && guidanceManager.ActiveGuidanceExtension != null)
                 extensionId = guidanceManager.ActiveGuidanceExtension.ExtensionId;
 
             var extension = this.guidanceManager.InstalledGuidanceExtensions
                 .FirstOrDefault(installedFeature => installedFeature.ExtensionId.Equals(extensionId, StringComparison.InvariantCultureIgnoreCase));
             if (extension == null)
-                throw new ArgumentException(string.Format("Guidance extension '{0}' not found", extensionId));
+                throw new ArgumentException(string.Format(Resources.GuidanceContentUriReferenceProvider_ErrorExtensionNotFound, extensionId));
 
             var path = Path.Combine(extension.InstallPath, Uri.UnescapeDataString(uri.PathAndQuery.Substring(1))
-                .Replace("/", @"\"));
+                .Replace(@"/", @"\"));
 
             if (!File.Exists(path))
-                throw new FileNotFoundException(string.Format(CultureInfo.CurrentCulture, "File '{0}' does not exist.", path));
+                throw new FileNotFoundException(string.Format(CultureInfo.CurrentCulture, Resources.GuidanceContentUriReferenceProvider_ErrorFileNotExist, path));
 
-            tracer.TraceVerbose("Resolved to path {0}", path);
+            tracer.TraceVerbose(Resources.GuidanceContentUriReferenceProvider_TraceResolvedToPath, path);
             return new GuidanceContent(extensionId, path);
         }
 
@@ -99,7 +100,7 @@ namespace NuPattern.Runtime.Guidance.UriProviders
         /// </summary>
         public void Open(GuidanceContent instance)
         {
-            tracer.TraceVerbose("Opening content ", instance.Path);
+            tracer.TraceVerbose(Resources.GuidanceContentUriReferenceProvider_TraceOpenUri, instance.Path);
             dynamic vs = this.ServiceProvider.GetService(typeof(EnvDTE.DTE));
 
             if (vs != null)

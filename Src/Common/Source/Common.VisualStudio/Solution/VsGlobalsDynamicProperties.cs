@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Dynamic;
 using System.Linq;
+using NuPattern.VisualStudio.Properties;
 
 namespace NuPattern.VisualStudio.Solution
 {
@@ -37,7 +38,7 @@ namespace NuPattern.VisualStudio.Solution
             catch (Exception ex)
             {
                 tracer.TraceEvent(TraceEventType.Error, 0,
-                    "Failed to set data on Globals bag. Key={0}, Value={1}, Error={2}",
+                    Resources.VsGlobalsDynamicProperties_TraceFailedToSetGlobals,
                     binder.Name, value, ex);
                 return false;
             }

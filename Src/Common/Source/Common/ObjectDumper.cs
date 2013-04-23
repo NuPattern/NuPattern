@@ -75,7 +75,7 @@ namespace NuPattern
 
         private void WriteIndent()
         {
-            for (int i = 0; i < level; i++) writer.Write("  ");
+            for (int i = 0; i < level; i++) writer.Write(@"  ");
         }
 
         private void WriteLine()
@@ -86,8 +86,8 @@ namespace NuPattern
 
         private void WriteTab()
         {
-            Write("  ");
-            while (pos % 8 != 0) Write(" ");
+            Write(@"  ");
+            while (pos % 8 != 0) Write(@" ");
         }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity",
@@ -112,7 +112,7 @@ namespace NuPattern
                         {
                             WriteIndent();
                             Write(prefix);
-                            Write("...");
+                            Write(@"...");
                             WriteLine();
                             if (level < depth)
                             {
@@ -148,7 +148,7 @@ namespace NuPattern
                                 propWritten = true;
                             }
                             Write(m.Name);
-                            Write("=");
+                            Write(@"=");
                             Type t = f != null ? f.FieldType : p.PropertyType;
                             if (t.IsValueType || t == typeof(string))
                             {
@@ -158,11 +158,11 @@ namespace NuPattern
                             {
                                 if (typeof(IEnumerable).IsAssignableFrom(t))
                                 {
-                                    Write("...");
+                                    Write(@"...");
                                 }
                                 else
                                 {
-                                    Write("{ }");
+                                    Write(@"{ }");
                                 }
                             }
                         }
@@ -183,7 +183,7 @@ namespace NuPattern
                                     if (value != null)
                                     {
                                         level++;
-                                        WriteObject(m.Name + ": ", value);
+                                        WriteObject(m.Name + @": ", value);
                                         level--;
                                     }
                                 }
@@ -198,7 +198,7 @@ namespace NuPattern
         {
             if (o == null)
             {
-                Write("null");
+                Write(@"null");
             }
             else if (o is DateTime)
             {
@@ -210,11 +210,11 @@ namespace NuPattern
             }
             else if (o is IEnumerable)
             {
-                Write("...");
+                Write(@"...");
             }
             else
             {
-                Write("{ }");
+                Write(@"{ }");
             }
         }
     }

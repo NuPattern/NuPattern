@@ -16,7 +16,7 @@ namespace NuPattern.Presentation
     /// <summary>
     /// Represents an editor control that abstract the way to edit a property containing a <c>TypeConverter</c> or <c>TypeUIEditor</c>.
     /// </summary>
-    [ContentProperty("Value")]
+    [ContentProperty(@"Value")]
     [DefaultProperty("Value")]
     [TemplatePart(Name = SelectorPart, Type = typeof(ComboBox))]
     [TemplatePart(Name = EditorPickerPart, Type = typeof(ButtonBase))]
@@ -127,7 +127,7 @@ namespace NuPattern.Presentation
 
         private static Func<BindingExpression, object> CreateGetAccessor(PropertyInfo propertyInfo)
         {
-            var instance = System.Linq.Expressions.Expression.Parameter(propertyInfo.DeclaringType, "i");
+            var instance = System.Linq.Expressions.Expression.Parameter(propertyInfo.DeclaringType, @"i");
             var property = System.Linq.Expressions.Expression.Property(instance, propertyInfo);
             return (Func<BindingExpression, object>)System.Linq.Expressions.Expression.Lambda(property, instance).Compile();
         }

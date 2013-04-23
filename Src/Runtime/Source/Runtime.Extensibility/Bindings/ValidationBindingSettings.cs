@@ -12,8 +12,8 @@ namespace NuPattern.Runtime.Bindings
     /// <summary>
     /// <see cref="IValidationRule"/> implementation of <see cref="IBindingSettings"/>.
     /// </summary>
-    [DisplayNameResource("ValidationBindingSettings_DisplayName", typeof(Resources))]
-    [DescriptionResource("ValidationBindingSettings_Description", typeof(Resources))]
+    [DisplayNameResource(@"ValidationBindingSettings_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"ValidationBindingSettings_Description", typeof(Resources))]
     [DataContract]
     [TypeDescriptionProvider(typeof(BindingSettingsTypeDescriptionProvider<IValidationRule>))]
     public class ValidationBindingSettings : BindingSettings

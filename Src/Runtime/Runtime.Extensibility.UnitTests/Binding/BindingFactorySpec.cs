@@ -42,14 +42,14 @@ namespace NuPattern.Runtime.UnitTests.Binding
                     .Returns(new[]
                     {
                         new Lazy<IFoo, IComponentMetadata>(() => value.Object, 
-                            Mocks.Of<IComponentMetadata>().First(m => m.CatalogName ==  Catalog.CatalogName && m.Id == "Foo"))
+                            Mocks.Of<IComponentMetadata>().First(m => m.CatalogName ==  Catalog.DefaultCatalogName && m.Id == "Foo"))
                     });
 
                 compositionService.Setup(cs => cs.GetExports<IValueProvider, IComponentMetadata>())
                     .Returns(new[]
                     {
                         new Lazy<IValueProvider, IComponentMetadata>(() => valueProvider.Object, 
-                            Mocks.Of<IComponentMetadata>().First(m => m.CatalogName == Catalog.CatalogName && m.Id == "ValueProvider"))
+                            Mocks.Of<IComponentMetadata>().First(m => m.CatalogName == Catalog.DefaultCatalogName && m.Id == "ValueProvider"))
                     });
 
 

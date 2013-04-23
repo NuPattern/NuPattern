@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using NuPattern.Properties;
 
 namespace NuPattern.ComponentModel.Design
 {
@@ -15,9 +16,8 @@ namespace NuPattern.ComponentModel.Design
         public DesignEditorAttribute(Type editorType, Type baseType)
         {
             if (!baseType.IsAssignableFrom(editorType))
-                throw new ArgumentException(string.Format(
-                    CultureInfo.CurrentCulture,
-                    "Editor type {0} is not derived from the given base type {1}.",
+                throw new ArgumentException(string.Format(CultureInfo.CurrentCulture,
+                    Resources.DesignEditorAttribute_ErrorNotEditorType,
                     editorType, baseType));
 
             this.EditorType = editorType;

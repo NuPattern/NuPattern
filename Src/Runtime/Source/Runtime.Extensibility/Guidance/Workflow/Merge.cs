@@ -9,7 +9,7 @@ namespace NuPattern.Runtime.Guidance.Workflow
     /// <summary>
     /// Defines a guidance predecessor that allows merge different branchs that were separated by a <see cref="Decision"/> process element.
     /// </summary>
-    [DisplayNameResource("GuidanceNode_Merge_DisplayName", typeof(Resources))]
+    [DisplayNameResource(@"GuidanceNode_Merge_DisplayName", typeof(Resources))]
     public class Merge : ConditionalNode, IMerge
     {
         /// <summary>

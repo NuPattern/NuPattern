@@ -15,9 +15,9 @@ namespace NuPattern.Library.Commands
     /// <summary>
     /// Command that activates an existing guidance workflow.
     /// </summary>
-    [DisplayNameResource("ActivateGuidanceWorkCommand_DisplayName", typeof(Resources))]
-    [DescriptionResource("ActivateGuidanceWorkCommand_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Guidance", typeof(Resources))]
+    [DisplayNameResource(@"ActivateGuidanceWorkCommand_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"ActivateGuidanceWorkCommand_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Guidance", typeof(Resources))]
     [CLSCompliant(false)]
     public class ActivateGuidanceWorkflowCommand : Command
     {

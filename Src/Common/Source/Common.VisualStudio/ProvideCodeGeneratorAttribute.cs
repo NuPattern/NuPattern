@@ -66,31 +66,31 @@ namespace NuPattern.VisualStudio
         {
             Guard.NotNull(() => context, context);
 
-            using (RegistrationAttribute.Key generatorsKey = context.CreateKey("Generators"))
+            using (RegistrationAttribute.Key generatorsKey = context.CreateKey(@"Generators"))
             {
                 using (RegistrationAttribute.Key projectSystemKey = generatorsKey.CreateSubkey(this.ProjectSystem))
                 using (RegistrationAttribute.Key generatorKey = projectSystemKey.CreateSubkey(this.Name))
                 {
-                    generatorKey.SetValue("", this.Description);
-                    generatorKey.SetValue("CLSID", "{" + this.Type.GUID + "}");
-                    generatorKey.SetValue("GeneratesDesignTimeSource", Convert.ToInt32(this.GeneratesDesignTimeSource));
+                    generatorKey.SetValue(string.Empty, this.Description);
+                    generatorKey.SetValue(@"CLSID", @"{" + this.Type.GUID + @"}");
+                    generatorKey.SetValue(@"GeneratesDesignTimeSource", Convert.ToInt32(this.GeneratesDesignTimeSource));
                 }
 
-                using (RegistrationAttribute.Key clsIdKey = context.CreateKey("CLSID"))
-                using (RegistrationAttribute.Key registrationKey = clsIdKey.CreateSubkey("{" + this.Type.GUID + "}"))
+                using (RegistrationAttribute.Key clsIdKey = context.CreateKey(@"CLSID"))
+                using (RegistrationAttribute.Key registrationKey = clsIdKey.CreateSubkey(@"{" + this.Type.GUID + @"}"))
                 {
-                    registrationKey.SetValue("", this.Description);
-                    registrationKey.SetValue("Class", this.Type.FullName);
-                    registrationKey.SetValue("InprocServer32", context.InprocServerPath);
-                    registrationKey.SetValue("ThreadingModel", "Both");
+                    registrationKey.SetValue(string.Empty, this.Description);
+                    registrationKey.SetValue(@"Class", this.Type.FullName);
+                    registrationKey.SetValue(@"InprocServer32", context.InprocServerPath);
+                    registrationKey.SetValue(@"ThreadingModel", @"Both");
                     if (context.RegistrationMethod == RegistrationMethod.CodeBase)
                     {
                         var fileName = Path.GetFileName(this.Type.Assembly.CodeBase);
-                        registrationKey.SetValue("CodeBase", Path.Combine(context.ComponentPath, fileName));
+                        registrationKey.SetValue(@"CodeBase", Path.Combine(context.ComponentPath, fileName));
                     }
                     else
                     {
-                        registrationKey.SetValue("Assembly", this.Type.Assembly.FullName);
+                        registrationKey.SetValue(@"Assembly", this.Type.Assembly.FullName);
                     }
                 }
             }
@@ -109,7 +109,7 @@ namespace NuPattern.VisualStudio
         public override void Unregister(RegistrationAttribute.RegistrationContext context)
         {
             context.RemoveKey(@"Generators\" + this.ProjectSystem + @"\" + this.Name);
-            context.RemoveKey(@"CLSID\{" + this.Type.GUID + "}");
+            context.RemoveKey(@"CLSID\{" + this.Type.GUID + @"}");
             context.Log.WriteLine(string.Format(
                 CultureInfo.CurrentCulture,
                 Resources.ProvideCodeGeneratorAttribute_UnregisterLog,

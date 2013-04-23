@@ -734,7 +734,7 @@ namespace NuPattern.VisualStudio.Solution
             var extension = Path.GetExtension(childNameSeed);
             var seed = Path.GetFileNameWithoutExtension(childNameSeed);
 
-            return String.Format(CultureInfo.CurrentCulture, "{0}{1}",
+            return String.Format(CultureInfo.CurrentCulture, @"{0}{1}",
                 UniqueNameGenerator.EnsureUnique(seed,
                     newName => parent.Items.Where(item => String.IsNullOrEmpty(extension) ? item.Name.Equals(newName, StringComparison.OrdinalIgnoreCase)
                         : item.Name.Equals(Path.ChangeExtension(newName, extension), StringComparison.OrdinalIgnoreCase)).FirstOrDefault() == null), extension);

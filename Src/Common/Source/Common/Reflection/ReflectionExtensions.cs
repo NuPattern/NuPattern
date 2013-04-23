@@ -169,7 +169,7 @@ namespace NuPattern.Reflection
         {
             Guard.NotNull(() => name, name);
 
-            return name.GetPublicKeyToken().Select(x => x.ToString("x2")).Aggregate((x, y) => x + y);
+            return name.GetPublicKeyToken().Select(x => x.ToString(@"x2")).Aggregate((x, y) => x + y);
         }
     }
 }

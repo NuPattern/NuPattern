@@ -11,9 +11,9 @@ namespace NuPattern.Library.ValueProviders
     /// <summary>
     /// A <see cref=" ValueProvider"/> that provides the current value of a variable property of the current element in the pattern model.
     /// </summary>
-    [DescriptionResource("ElementPropertyValueProvider_Description", typeof(Resources))]
-    [DisplayNameResource("ElementPropertyValueProvider_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
+    [DescriptionResource(@"ElementPropertyValueProvider_Description", typeof(Resources))]
+    [DisplayNameResource(@"ElementPropertyValueProvider_DisplayName", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class ElementPropertyValueProvider : ValueProvider
     {
@@ -23,8 +23,8 @@ namespace NuPattern.Library.ValueProviders
         /// Gets or sets the name of the property of the current pattern/element to read.
         /// </summary>
         [Required(AllowEmptyStrings = false)]
-        [DisplayNameResource("ElementPropertyValueProvider_PropertyName_DisplayName", typeof(Resources))]
-        [DescriptionResource("ElementPropertyValueProvider_PropertyName_Description", typeof(Resources))]
+        [DisplayNameResource(@"ElementPropertyValueProvider_PropertyName_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"ElementPropertyValueProvider_PropertyName_Description", typeof(Resources))]
         public string PropertyName { get; set; }
 
         /// <summary>

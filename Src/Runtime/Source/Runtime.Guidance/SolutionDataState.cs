@@ -99,8 +99,8 @@ namespace NuPattern.Runtime.Guidance
 
         private void SerializeExtensions(IEnumerable<IGuidanceExtensionPersistState> extensions)
         {
-            Solution.Data.GuidanceWorkflows = String.Join("|", extensions
-                .Select(state => state.ExtensionId + ":" + state.InstanceName + ":" + state.Version.ToString())
+            Solution.Data.GuidanceWorkflows = String.Join(@"|", extensions
+                .Select(state => state.ExtensionId + @":" + state.InstanceName + @":" + state.Version.ToString())
                 .ToArray());
         }
     }

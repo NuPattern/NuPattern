@@ -98,7 +98,7 @@ namespace NuPattern.VisualStudio.Solution
         /// </summary>
         public static string MakePreferredSolutionItemName(string value)
         {
-            return DataFormats.MakeValidSolutionItemName(value).Replace(" ", string.Empty);
+            return DataFormats.MakeValidSolutionItemName(value).Replace(@" ", string.Empty);
         }
 
         /// <summary>

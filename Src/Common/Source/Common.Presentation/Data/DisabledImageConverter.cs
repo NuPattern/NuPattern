@@ -22,6 +22,7 @@ namespace NuPattern.Presentation.Data
     [ValueConversion(typeof(BitmapImage), typeof(Image))]
     public sealed class DisabledImageConverter : ValueConverter<BitmapSource, Image>
     {
+        private string BiasColor = @"#40FFFFFF";
         private ThemedImageConverter innerConverter;
 
         /// <summary>
@@ -42,7 +43,7 @@ namespace NuPattern.Presentation.Data
 
             if (parameter == null)
             {
-                parameter = (Color)ColorConverter.ConvertFromString("#40FFFFFF");
+                parameter = (Color)ColorConverter.ConvertFromString(BiasColor);
             }
 
             if (value == null)

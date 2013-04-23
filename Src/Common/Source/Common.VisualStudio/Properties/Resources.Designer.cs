@@ -187,6 +187,15 @@ namespace NuPattern.VisualStudio.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Could not retrieve tool window..
+        /// </summary>
+        internal static string HierarchyNodeFactory_ErrorNoToolWindow {
+            get {
+                return ResourceManager.GetString("HierarchyNodeFactory_ErrorNoToolWindow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Designer item for file {0} was not found..
         /// </summary>
         internal static string OpenDesignerTemplateWizard_DesignerItemNotFound {
@@ -467,11 +476,56 @@ namespace NuPattern.VisualStudio.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to This method requires a hierarchy item.
+        /// </summary>
+        internal static string VsFileTemplate_ErrorParentNotHierarchy {
+            get {
+                return ResourceManager.GetString("VsFileTemplate_ErrorParentNotHierarchy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Source file for template was not found..
+        /// </summary>
+        internal static string VsFileTemplate_VsFileTemplate_ErrorTemplateNotFound {
+            get {
+                return ResourceManager.GetString("VsFileTemplate_VsFileTemplate_ErrorTemplateNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to set data on Globals bag. Key={0}, Value={1}, Error={2}.
+        /// </summary>
+        internal static string VsGlobalsDynamicProperties_TraceFailedToSetGlobals {
+            get {
+                return ResourceManager.GetString("VsGlobalsDynamicProperties_TraceFailedToSetGlobals", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to There is already an item named &apos;{0}&apos; inside &apos;{1}&apos;. Please choose a different name..
         /// </summary>
         internal static string VsItem_DuplicateItemName {
             get {
                 return ResourceManager.GetString("VsItem_DuplicateItemName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cannot retrieve a VS solution from the given solution interface..
+        /// </summary>
+        internal static string VsItemContainerExtensions_ErrorNoSolution {
+            get {
+                return ResourceManager.GetString("VsItemContainerExtensions_ErrorNoSolution", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cannot set null value for custom MSBuild item properties..
+        /// </summary>
+        internal static string VsItemDynamicProperties_ErrorNullItemProperies {
+            get {
+                return ResourceManager.GetString("VsItemDynamicProperties_ErrorNullItemProperies", resourceCulture);
             }
         }
         

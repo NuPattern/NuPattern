@@ -23,9 +23,9 @@ namespace NuPattern.Library.Commands
     /// A command that generates code from text templates.
     /// </summary>
     [CLSCompliant(false)]
-    [DisplayNameResource("GenerateModelingCodeCommand_DisplayName", typeof(Resources))]
-    [DescriptionResource("GenerateModelingCodeCommand_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_DslAutomation", typeof(Resources))]
+    [DisplayNameResource(@"GenerateModelingCodeCommand_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"GenerateModelingCodeCommand_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_DslAutomation", typeof(Resources))]
     public class GenerateModelingCodeCommand : Command
     {
         private const bool DefaultSantizeName = true;
@@ -62,16 +62,16 @@ namespace NuPattern.Library.Commands
         /// Optional Build Action to set on the generated output item. If empty, 
         /// the default for the owning project or file extension will be used automatically by Visual Studio.
         /// </summary>
-        [DisplayNameResource("GenerateModelingCodeCommand_TargetBuildAction_DisplayName", typeof(Resources))]
-        [DescriptionResource("GenerateModelingCodeCommand_TargetBuildAction_Description", typeof(Resources))]
+        [DisplayNameResource(@"GenerateModelingCodeCommand_TargetBuildAction_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"GenerateModelingCodeCommand_TargetBuildAction_Description", typeof(Resources))]
         [DefaultValue(DefaultTargetBuildAction)]
         public string TargetBuildAction { get; set; }
 
         /// <summary>
         /// Optional Copy To Ouput to set on the generated output item. If empty, 
         /// </summary>
-        [DisplayNameResource("GenerateModelingCodeCommand_TargetCopyToOutput_DisplayName", typeof(Resources))]
-        [DescriptionResource("GenerateModelingCodeCommand_TargetCopyToOutput_Description", typeof(Resources))]
+        [DisplayNameResource(@"GenerateModelingCodeCommand_TargetCopyToOutput_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"GenerateModelingCodeCommand_TargetCopyToOutput_Description", typeof(Resources))]
         [DefaultValue(DefaultTargetCopyToOutput)]
         public CopyToOutput TargetCopyToOutput { get; set; }
 
@@ -84,8 +84,8 @@ namespace NuPattern.Library.Commands
         /// <summary>
         /// Gets or sets the template filename.
         /// </summary>
-        [DisplayNameResource("GenerateModelingCodeCommand_TemplateUri_DisplayName", typeof(Resources))]
-        [DescriptionResource("GenerateModelingCodeCommand_TemplateUri_Description", typeof(Resources))]
+        [DisplayNameResource(@"GenerateModelingCodeCommand_TemplateUri_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"GenerateModelingCodeCommand_TemplateUri_Description", typeof(Resources))]
         [Editor(typeof(TextTemplateUriEditor), typeof(UITypeEditor))]
         [DesignOnly(true)]
         [Required]
@@ -94,31 +94,31 @@ namespace NuPattern.Library.Commands
         /// <summary>
         /// Gets or sets the target path.
         /// </summary>
-        [DisplayNameResource("GenerateModelingCodeCommand_TargetPath_DisplayName", typeof(Resources))]
-        [DescriptionResource("GenerateModelingCodeCommand_TargetPath_Description", typeof(Resources))]
+        [DisplayNameResource(@"GenerateModelingCodeCommand_TargetPath_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"GenerateModelingCodeCommand_TargetPath_Description", typeof(Resources))]
         public virtual string TargetPath { get; set; }
 
         /// <summary>
         /// Gets or sets the name of the target.
         /// </summary>
         [Required(AllowEmptyStrings = false)]
-        [DisplayNameResource("GenerateModelingCodeCommand_TargetFileName_DisplayName", typeof(Resources))]
-        [DescriptionResource("GenerateModelingCodeCommand_TargetFileName_Description", typeof(Resources))]
+        [DisplayNameResource(@"GenerateModelingCodeCommand_TargetFileName_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"GenerateModelingCodeCommand_TargetFileName_Description", typeof(Resources))]
         public virtual string TargetFileName { get; set; }
 
         /// <summary>
         /// Gets or sets the automation extension that executes this command.
         /// </summary>
-        [DisplayNameResource("GenerateModelingCodeCommand_ModelElement_DisplayName", typeof(Resources))]
-        [DescriptionResource("GenerateModelingCodeCommand_ModelElement_Description", typeof(Resources))]
+        [DisplayNameResource(@"GenerateModelingCodeCommand_ModelElement_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"GenerateModelingCodeCommand_ModelElement_Description", typeof(Resources))]
         public virtual ModelElement ModelElement { get; set; }
 
         /// <summary>
         /// Gets or sets the model file where the <see cref="ModelElement"/> lives.
         /// </summary>
         [Required(AllowEmptyStrings = false)]
-        [DisplayNameResource("GenerateModelingCodeCommand_ModelFile_DisplayName", typeof(Resources))]
-        [DescriptionResource("GenerateModelingCodeCommand_ModelFile_Description", typeof(Resources))]
+        [DisplayNameResource(@"GenerateModelingCodeCommand_ModelFile_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"GenerateModelingCodeCommand_ModelFile_Description", typeof(Resources))]
         public virtual string ModelFile { get; set; }
 
         /// <summary>
@@ -126,8 +126,8 @@ namespace NuPattern.Library.Commands
         /// </summary>
         [DefaultValue(DefaultSantizeName)]
         [DesignOnly(true)]
-        [DisplayNameResource("GenerateModelingCodeCommand_SanitizeName_DisplayName", typeof(Resources))]
-        [DescriptionResource("GenerateModelingCodeCommand_SanitizeName_Description", typeof(Resources))]
+        [DisplayNameResource(@"GenerateModelingCodeCommand_SanitizeName_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"GenerateModelingCodeCommand_SanitizeName_Description", typeof(Resources))]
         public virtual bool SanitizeName { get; set; }
 
         /// <summary>
@@ -290,7 +290,7 @@ namespace NuPattern.Library.Commands
         /// <returns></returns>
         protected string SanitizeItemName(string solutionItemName)
         {
-            return DataFormats.MakeValidSolutionItemName(solutionItemName).Replace(" ", "");
+            return DataFormats.MakeValidSolutionItemName(solutionItemName).Replace(@" ", string.Empty);
         }
     }
 }

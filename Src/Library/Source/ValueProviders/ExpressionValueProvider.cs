@@ -11,9 +11,9 @@ namespace NuPattern.Library.ValueProviders
     /// <summary>
     /// A custom value provider that is used to provide values at runtime for other types of configured automation.
     /// </summary>
-    [DisplayNameResource("ExpressionValueProvider_DisplayName", typeof(Resources))]
-    [DescriptionResource("ExpressionValueProvider_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_General", typeof(Resources))]
+    [DisplayNameResource(@"ExpressionValueProvider_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"ExpressionValueProvider_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_General", typeof(Resources))]
     [CLSCompliant(false)]
     public class ExpressionValueProvider : ValueProvider
     {
@@ -33,8 +33,8 @@ namespace NuPattern.Library.ValueProviders
         /// Gets or sets the expression to evaluate.
         /// </summary>
         [Required(AllowEmptyStrings = false)]
-        [DisplayNameResource("ExpressionValueProvider_Expression_DisplayName", typeof(Resources))]
-        [DescriptionResource("ExpressionValueProvider_Expression_Description", typeof(Resources))]
+        [DisplayNameResource(@"ExpressionValueProvider_Expression_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"ExpressionValueProvider_Expression_Description", typeof(Resources))]
         public string Expression
         {
             get;

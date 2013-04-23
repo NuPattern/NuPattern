@@ -17,18 +17,18 @@ namespace NuPattern.Library.SchemaUpgrade
     /// Migrates the delimited string values of the <see cref="AggregatorCommand"/>
     /// </summary>
     /// <remarks> this processor must run after the <see cref="CommandSettingsUpgradeProcessor"/></remarks>
-    [SchemaUpgradeProcessorOptions(Order = 1200, TargetVersion = "1.2.0.0")]
+    [SchemaUpgradeProcessorOptions(Order = 1200, TargetVersion = @"1.2.0.0")]
     internal class AggregatorCommandUpgradeProcessor : IPatternModelSchemaUpgradeProcessor
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<CommandSettingsUpgradeProcessor>();
         private const string DefaultNamespace = SchemaConstants.DefaultNamespace;
-        private static readonly XName CommandSettingsElementName = XName.Get("commandSettings", DefaultNamespace);
-        private static readonly XName CommandSettingsPropertiesElementName = XName.Get("properties", DefaultNamespace);
-        private const string CommandSettingsIdName = "Id";
-        private const string CommandSettingsTypeIdName = "typeId";
+        private static readonly XName CommandSettingsElementName = XName.Get(@"commandSettings", DefaultNamespace);
+        private static readonly XName CommandSettingsPropertiesElementName = XName.Get(@"properties", DefaultNamespace);
+        private const string CommandSettingsIdName = @"Id";
+        private const string CommandSettingsTypeIdName = @"typeId";
         private const char CommandReferenceDelimitier = ';';
         private const string GuidRegEx = @"[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}";
-        private static readonly string DelimitedListGuidRegEx = @"^(" + GuidRegEx + @"[\" + Convert.ToString(CommandReferenceDelimitier) + "]{0,1}){0,}$";
+        private static readonly string DelimitedListGuidRegEx = @"^(" + GuidRegEx + @"[\" + Convert.ToString(CommandReferenceDelimitier) + @"]{0,1}){0,}$";
 
         /// <summary>
         /// Gets whether the document has been changed.

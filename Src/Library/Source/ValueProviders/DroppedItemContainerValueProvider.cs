@@ -15,9 +15,9 @@ namespace NuPattern.Library.ValueProviders
     /// Returns items dragged from Solution Explorer to Solution Builder
     /// </summary>
     [CLSCompliant(false)]
-    [DisplayNameResource("DroppedItemContainerValueProvider_DisplayName", typeof(Resources))]
-    [DescriptionResource("DroppedItemContainerValueProvider_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
+    [DisplayNameResource(@"DroppedItemContainerValueProvider_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"DroppedItemContainerValueProvider_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     public class DroppedItemContainerValueProvider : ValueProvider
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<DroppedItemContainerValueProvider>();
@@ -46,7 +46,7 @@ namespace NuPattern.Library.ValueProviders
             paths.AddRange(DragArgs.GetVSProjectsPaths());
 
             tracer.TraceInformation(
-                Resources.DroppedItemContainerValueProvider_TraceEvaluation, string.Join(";", paths.ToArray<string>()));
+                Resources.DroppedItemContainerValueProvider_TraceEvaluation, string.Join(@";", paths.ToArray<string>()));
 
             return paths;
         }

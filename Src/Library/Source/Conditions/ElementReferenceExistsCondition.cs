@@ -12,9 +12,9 @@ namespace NuPattern.Library.Conditions
     /// <summary>
     /// A <see cref="Condition"/> that evaluates to true if a reference of the specified Reference Kind exists on the current element.
     /// </summary>
-    [DisplayNameResource("ElementReferenceExistsCondition_DisplayName", typeof(Resources))]
-    [DescriptionResource("ElementReferenceExistsCondition_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
+    [DisplayNameResource(@"ElementReferenceExistsCondition_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"ElementReferenceExistsCondition_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class ElementReferenceExistsCondition : Condition
     {
@@ -24,8 +24,8 @@ namespace NuPattern.Library.Conditions
         /// Gets or sets the kind of reference to verify.
         /// </summary>
         [Required(AllowEmptyStrings = false)]
-        [DisplayNameResource("ElementReferenceExistsCondition_Kind_DisplayName", typeof(Resources))]
-        [DescriptionResource("ElementReferenceExistsCondition_Kind_Description", typeof(Resources))]
+        [DisplayNameResource(@"ElementReferenceExistsCondition_Kind_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"ElementReferenceExistsCondition_Kind_Description", typeof(Resources))]
         public string Kind { get; set; }
 
         /// <summary>

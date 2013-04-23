@@ -12,7 +12,7 @@ namespace NuPattern.Runtime.Guidance.Workflow
     /// <summary>
     /// Represents the guidance workflow.
     /// </summary>
-    [DisplayNameResource("GuidanceNode_GuidanceWorkflow_DisplayName", typeof(Resources))]
+    [DisplayNameResource(@"GuidanceNode_GuidanceWorkflow_DisplayName", typeof(Resources))]
     public class GuidanceWorkflow : ConditionalNode, IGuidanceWorkflow
     {
         private string focusedActionName;

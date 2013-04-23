@@ -23,24 +23,24 @@ namespace NuPattern.Library.Commands
         /// The file extensions which are supported.
         /// </summary>
         [Required(AllowEmptyStrings = false)]
-        [DisplayNameResource("CreateElementFromPickedFileCommand_Extension_DisplayName", typeof(Resources))]
-        [DescriptionResource("CreateElementFromPickedFileCommand_Extension_Description", typeof(Resources))]
+        [DisplayNameResource(@"CreateElementFromPickedFileCommand_Extension_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"CreateElementFromPickedFileCommand_Extension_Description", typeof(Resources))]
         public virtual string Extension { get; set; }
 
         /// <summary>
         /// The title for the picker
         /// </summary>
         [Required(AllowEmptyStrings = true)]
-        [DisplayNameResource("CreateElementFromPickedFileCommand_PickerTitle_DisplayName", typeof(Resources))]
-        [DescriptionResource("CreateElementFromPickedFileCommand_PickerTitle_Description", typeof(Resources))]
+        [DisplayNameResource(@"CreateElementFromPickedFileCommand_PickerTitle_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"CreateElementFromPickedFileCommand_PickerTitle_Description", typeof(Resources))]
         public virtual string PickerTitle { get; set; }
 
         /// <summary>
         /// The initial directory for the picker
         /// </summary>
         [Required(AllowEmptyStrings = true)]
-        [DisplayNameResource("CreateElementFromPickedFileCommand_InitialDirectory_DisplayName", typeof(Resources))]
-        [DescriptionResource("CreateElementFromPickedFileCommand_InitialDirectory_Description", typeof(Resources))]
+        [DisplayNameResource(@"CreateElementFromPickedFileCommand_InitialDirectory_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"CreateElementFromPickedFileCommand_InitialDirectory_Description", typeof(Resources))]
         public virtual string InitialDirectory { get; set; }
 
         /// <summary>
@@ -90,11 +90,11 @@ namespace NuPattern.Library.Commands
             var extensions = DragDropHelpers.GetSafeExtensions(this.Extension);
             extensions.ForEach(ext =>
                 {
-                    filters.Add(string.Format(CultureInfo.CurrentCulture, "(*{0})|*{0}", ext));
+                    filters.Add(string.Format(CultureInfo.CurrentCulture, Resources.CreateElementFromPickedFileCommand_FilterFormat, ext));
                 });
-            filters.Add("All files (*.*)|*.*");
+            filters.Add(Resources.CreateElementFromPickedFileCommand_AllFilesFilter);
 
-            return string.Join("|", filters);
+            return string.Join(@"|", filters);
         }
     }
 }

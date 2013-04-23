@@ -13,9 +13,9 @@ namespace NuPattern.Library.ValueProviders
     /// Returns items that have been dropped in Solution Builder
     /// </summary>
     [CLSCompliant(false)]
-    [DisplayNameResource("GenericDroppedItemValueProvider_DisplayName", typeof(Resources))]
-    [DescriptionResource("GenericDroppedItemValueProvider_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
+    [DisplayNameResource(@"GenericDroppedItemValueProvider_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"GenericDroppedItemValueProvider_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     public class GenericDroppedItemValueProvider : ValueProvider
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<GenericDroppedItemValueProvider>();
@@ -32,8 +32,8 @@ namespace NuPattern.Library.ValueProviders
         /// The format of the item to return
         /// </summary>
         [Required]
-        [DisplayNameResource("GenericDroppedItemValueProvider_Format_DisplayName", typeof(Resources))]
-        [DescriptionResource("GenericDroppedItemValueProvider_Format_Description", typeof(Resources))]
+        [DisplayNameResource(@"GenericDroppedItemValueProvider_Format_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"GenericDroppedItemValueProvider_Format_Description", typeof(Resources))]
         public string Format { get; set; }
 
         /// <summary>
@@ -50,7 +50,7 @@ namespace NuPattern.Library.ValueProviders
             var result = DragArgs.Data.GetData(Format);
 
             tracer.TraceInformation(
-                Resources.GenericDroppedItemValueProvider_TraceEvaluation, string.Join(";", DragArgs.Data.GetFormats()));
+                Resources.GenericDroppedItemValueProvider_TraceEvaluation, string.Join(@";", DragArgs.Data.GetFormats()));
 
             return result;
         }

@@ -8,9 +8,9 @@ namespace NuPattern.Library.ValidationRules
     /// <summary>
     /// Specifies that a data field value is required.
     /// </summary>
-    [DescriptionResource("PropertyRequiredValidationRule_Description", typeof(Resources))]
-    [DisplayNameResource("PropertyRequiredValidationRule_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_General", typeof(Resources))]
+    [DescriptionResource(@"PropertyRequiredValidationRule_Description", typeof(Resources))]
+    [DisplayNameResource(@"PropertyRequiredValidationRule_DisplayName", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_General", typeof(Resources))]
     public class PropertyRequiredValidationRule : PropertyAttributeValidationRule
     {
         /// <summary>

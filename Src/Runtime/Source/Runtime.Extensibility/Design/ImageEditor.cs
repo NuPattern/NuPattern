@@ -92,13 +92,13 @@ namespace NuPattern.Runtime.Design
         internal static bool IsCursorFile(string fileName)
         {
             return !string.IsNullOrEmpty(fileName) &&
-                string.Equals(Path.GetExtension(fileName), ".cur", StringComparison.OrdinalIgnoreCase);
+                string.Equals(Path.GetExtension(fileName), @".cur", StringComparison.OrdinalIgnoreCase);
         }
 
         internal static bool IsIconFile(string fileName)
         {
             return !string.IsNullOrEmpty(fileName) &&
-                string.Equals(Path.GetExtension(fileName), ".ico", StringComparison.OrdinalIgnoreCase);
+                string.Equals(Path.GetExtension(fileName), @".ico", StringComparison.OrdinalIgnoreCase);
         }
 
         private void SetContext(ITypeDescriptorContext context)

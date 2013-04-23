@@ -11,9 +11,9 @@ namespace NuPattern.Library.ValueProviders
     /// <summary>
     /// Returns the value from the user.
     /// </summary>
-    [DisplayNameResource("InputBoxValueProvider_DisplayName", typeof(Resources))]
-    [DescriptionResource("InputBoxValueProvider_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_General", typeof(Resources))]
+    [DisplayNameResource(@"InputBoxValueProvider_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"InputBoxValueProvider_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_General", typeof(Resources))]
     public class InputBoxValueProvider : ValueProvider
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<InputBoxValueProvider>();
@@ -21,15 +21,15 @@ namespace NuPattern.Library.ValueProviders
         /// <summary>
         /// Gets or sets the message
         /// </summary>
-        [DisplayNameResource("InputBoxValueProvider_Message_DisplayName", typeof(Resources))]
-        [DescriptionResource("InputBoxValueProvider_Message_Description", typeof(Resources))]
+        [DisplayNameResource(@"InputBoxValueProvider_Message_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"InputBoxValueProvider_Message_Description", typeof(Resources))]
         public string Message { get; set; }
 
         /// <summary>
         /// Gets or sets the defult value
         /// </summary>
-        [DisplayNameResource("InputBoxValueProvider_DefaultValue_DisplayName", typeof(Resources))]
-        [DescriptionResource("InputBoxValueProvider_DefaultValue_Description", typeof(Resources))]
+        [DisplayNameResource(@"InputBoxValueProvider_DefaultValue_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"InputBoxValueProvider_DefaultValue_Description", typeof(Resources))]
         public string DefaultValue { get; set; }
 
         /// <summary>

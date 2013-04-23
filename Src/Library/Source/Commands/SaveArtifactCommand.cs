@@ -15,9 +15,9 @@ namespace NuPattern.Library.Commands
     /// <summary>
     /// Saves the linked artifacts associated to current element.
     /// </summary>
-    [DisplayNameResource("SaveArtifactCommand_DisplayName", typeof(Resources))]
-    [DescriptionResource("SaveArtifactCommand_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
+    [DisplayNameResource(@"SaveArtifactCommand_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"SaveArtifactCommand_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class SaveArtifactCommand : Command
     {

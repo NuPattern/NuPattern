@@ -275,8 +275,8 @@ namespace NuPattern.Library.Automation.Template
                         return;
                     }
 
-                    if (!(string.Equals(item.Data.ItemType, "ProjectTemplate", StringComparison.OrdinalIgnoreCase)
-                        || string.Equals(item.Data.ItemType, "ItemTemplate", StringComparison.OrdinalIgnoreCase)))
+                    if (!(string.Equals(item.Data.ItemType, @"ProjectTemplate", StringComparison.OrdinalIgnoreCase)
+                        || string.Equals(item.Data.ItemType, @"ItemTemplate", StringComparison.OrdinalIgnoreCase)))
                     {
                         //item type should be set to content
                         context.LogWarning(

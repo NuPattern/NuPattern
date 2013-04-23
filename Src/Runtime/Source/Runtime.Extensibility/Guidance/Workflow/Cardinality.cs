@@ -68,10 +68,10 @@ namespace NuPattern.Runtime.Guidance.Workflow
         /// </returns>
         public override string ToString()
         {
-            return "# " +
-                (this.from == int.MaxValue ? "*" : this.from.ToString(CultureInfo.CurrentCulture)) +
-                ".." +
-                (this.to == int.MaxValue ? "*" : this.to.ToString(CultureInfo.CurrentCulture));
+            return @"# " +
+                (this.from == int.MaxValue ? @"*" : this.from.ToString(CultureInfo.CurrentCulture)) +
+                @".." +
+                (this.to == int.MaxValue ? @"*" : this.to.ToString(CultureInfo.CurrentCulture));
         }
     }
 }

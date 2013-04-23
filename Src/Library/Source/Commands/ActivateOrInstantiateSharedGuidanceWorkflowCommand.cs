@@ -17,9 +17,9 @@ namespace NuPattern.Library.Commands
     /// <summary>
     /// Command that activates or instantiates a new feature.
     /// </summary>
-    [DisplayNameResource("ActivateOrInstantiateSharedGuidanceWorkflowCommand_DisplayName", typeof(Resources))]
-    [DescriptionResource("ActivateOrInstantiateSharedGuidanceWorkflowCommand_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Guidance", typeof(Resources))]
+    [DisplayNameResource(@"ActivateOrInstantiateSharedGuidanceWorkflowCommand_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"ActivateOrInstantiateSharedGuidanceWorkflowCommand_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Guidance", typeof(Resources))]
     [CLSCompliant(false)]
     public class ActivateOrInstantiateSharedGuidanceWorkflowCommand : Command
     {
@@ -31,8 +31,8 @@ namespace NuPattern.Library.Commands
         [Required(AllowEmptyStrings = false)]
         [TypeConverter(typeof(GuidanceExtensionsTypeConverter))]
         [Editor(typeof(StandardValuesEditor), typeof(UITypeEditor))]
-        [DisplayNameResource("InstantiateGuidanceWorkflowCommand_ExtensionId_DisplayName", typeof(Resources))]
-        [DescriptionResource("ActivateGuidanceWorkCommand_ExtensionId_Description", typeof(Resources))]
+        [DisplayNameResource(@"InstantiateGuidanceWorkflowCommand_ExtensionId_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"ActivateGuidanceWorkCommand_ExtensionId_Description", typeof(Resources))]
         public string ExtensionId { get; set; }
 
         /// <summary>

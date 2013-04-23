@@ -213,19 +213,19 @@
   <data name="PropertyPropertyDescriptor_ValueProviderEvaluationFailed" xml:space="preserve">
     <value>Evaluation of value provider for property '{0}' failed.</value>
   </data>
-  <data name="ProductToolkitInfo_VersionDescription" xml:space="preserve">
+  <data name="ProductToolkitInfo_Version_Description" xml:space="preserve">
     <value>The current version of this toolkit.</value>
   </data>
-  <data name="ProductToolkitInfo_AuthorDescription" xml:space="preserve">
+  <data name="ProductToolkitInfo_Author_Description" xml:space="preserve">
     <value>The original author of this toolkit.</value>
   </data>
-  <data name="ProductToolkitInfo_DescriptionDescription" xml:space="preserve">
+  <data name="ProductToolkitInfo_Description_Description" xml:space="preserve">
     <value>The description of this pattern toolkit.</value>
   </data>
-  <data name="ProductToolkitInfo_NameDescription" xml:space="preserve">
+  <data name="ProductToolkitInfo_Name_Description" xml:space="preserve">
     <value>The name of this pattern toolkit.</value>
   </data>
-  <data name="ProductToolkitInfo_IdentifierDescription" xml:space="preserve">
+  <data name="ProductToolkitInfo_Identifier_Description" xml:space="preserve">
     <value>The unique identifier of this toolkit, also used as the VSIX identifier.</value>
   </data>
   <data name="Product_ErrorUnknownView" xml:space="preserve">
@@ -243,5 +243,23 @@
   </data>
   <data name="ProductElementAddRule_InitializingEventId" type="System.Int32, mscorlib">
     <value>100</value>
+  </data>
+  <data name="ProductState_TransactionDescriptionCreate" xml:space="preserve">
+    <value>Creating instance</value>
+  </data>
+  <data name="ViewAddRule_TraceViewInfoLoadFailed" xml:space="preserve">
+    <value>DefinitionId not set for view '{0}', the schema information can not be loaded.</value>
+  </data>
+  <data name="ElementContainerImplementation_TransactionDescriptionCreateCollection" xml:space="preserve">
+    <value>Creating collection</value>
+  </data>
+  <data name="ElementContainerImplementation_TransactionDescriptionCreateElement" xml:space="preserve">
+    <value>Creating element</value>
+  </data>
+  <data name="ElementContainerImplementation_TransactionDescriptionCreateExtension" xml:space="preserve">
+    <value>Creating extension</value>
+  </data>
+  <data name="ElementContainerImplementation_TransactionDescriptionCreateProduct" xml:space="preserve">
+    <value>Creating product</value>
   </data>
 </root>

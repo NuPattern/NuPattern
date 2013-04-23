@@ -38,7 +38,7 @@ namespace NuPattern.VisualStudio.Solution.Templates
                         .OfType<ZipEntry>()
                         .FirstOrDefault(entry =>
                             entry.FileName.EndsWith(TemplateFileExtension, StringComparison.InvariantCultureIgnoreCase) &&
-                            !entry.FileName.Contains("/")
+                            !entry.FileName.Contains(Path.AltDirectorySeparatorChar)
                             );
 
                     if (templateZipEntry == null)
@@ -104,7 +104,7 @@ namespace NuPattern.VisualStudio.Solution.Templates
                     templateFilename,
                     tempDir,
                     Directory
-                        .GetFiles(tempDir, "*.*", SearchOption.AllDirectories)
+                        .GetFiles(tempDir, @"*.*", SearchOption.AllDirectories)
                         .Select(x => x.Replace(tempDir + Path.DirectorySeparatorChar, ""))
                         .ToArray(),
                     true,

@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NuPattern.Modeling.Properties
-{
-
-
+namespace NuPattern.Modeling.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -70,11 +70,38 @@ namespace NuPattern.Modeling.Properties
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Creating: .
+        /// </summary>
+        internal static string ModelElementExtensions_CreateTransactionText {
+            get {
+                return ResourceManager.GetString("ModelElementExtensions_CreateTransactionText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The domain class {0} doesn&apos;t have a Name domain property.
         /// </summary>
         internal static string ModelElementExtensions_ElementNameNotSupported {
             get {
                 return ResourceManager.GetString("ModelElementExtensions_ElementNameNotSupported", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Property does not exist on element..
+        /// </summary>
+        internal static string ModelElementExtensions_GetPropertyDefaultValue_NoProperty {
+            get {
+                return ResourceManager.GetString("ModelElementExtensions_GetPropertyDefaultValue_NoProperty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Executing {0} @ {1}.
+        /// </summary>
+        internal static string TransactionManagerExtensions_DoWithinTransactionDescription {
+            get {
+                return ResourceManager.GetString("TransactionManagerExtensions_DoWithinTransactionDescription", resourceCulture);
             }
         }
     }

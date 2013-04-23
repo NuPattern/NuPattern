@@ -18,7 +18,7 @@ namespace NuPattern.Runtime.Design
     public class ImageUriEditor : UITypeEditor
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<ImageUriEditor>();
-        private const string ImageExtension = ".ico;*.png;*.jpg";
+        private const string ImageExtension = @".ico;*.png;*.jpg";
         private Window currentWindow;
 
         /// <summary>
@@ -67,7 +67,7 @@ namespace NuPattern.Runtime.Design
 
                     ConfigureSolutionItem(item);
 
-                    iconUri = uriService.CreateUri<ResourcePack>(new ResourcePack(item), "pack").AbsoluteUri;
+                    iconUri = uriService.CreateUri<ResourcePack>(new ResourcePack(item), PackUri.UriScheme).AbsoluteUri;
                 }
             }, Resources.ImageUriEditor_FailedToEdit);
 
@@ -79,7 +79,7 @@ namespace NuPattern.Runtime.Design
             if (item != null)
             {
                 var customTool = item.Data.CustomTool;
-                item.Data.ItemType = "Resource";
+                item.Data.ItemType = @"Resource";
                 item.Data.CustomTool = customTool;
             }
         }

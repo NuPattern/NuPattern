@@ -30,7 +30,7 @@ namespace NuPattern.ComponentModel.Composition
             where T : class
             where TMetadataView : IComponentMetadata
         {
-            return exports.Where(e => e.Metadata.CatalogName == Catalog.CatalogName);
+            return exports.Where(e => e.Metadata.CatalogName == Catalog.DefaultCatalogName);
         }
 
         /// <summary>
@@ -41,7 +41,7 @@ namespace NuPattern.ComponentModel.Composition
         {
             return exports.Where(e =>
                 e.Metadata.ContainsKey(ComponentCatalog.CatalogNameMetadataKey) &&
-                (string)e.Metadata[ComponentCatalog.CatalogNameMetadataKey] == Catalog.CatalogName);
+                (string)e.Metadata[ComponentCatalog.CatalogNameMetadataKey] == Catalog.DefaultCatalogName);
         }
     }
 }

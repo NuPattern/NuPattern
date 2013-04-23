@@ -29,8 +29,8 @@ namespace NuPattern.Library.Commands
         /// The file extensions which are supported.
         /// </summary>
         [Required(AllowEmptyStrings = false)]
-        [DisplayNameResource("CreateElementFromDroppedFileCommand_Extension_DisplayName", typeof(Resources))]
-        [DescriptionResource("CreateElementFromDroppedFileCommand_Extension_Description", typeof(Resources))]
+        [DisplayNameResource(@"CreateElementFromDroppedFileCommand_Extension_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"CreateElementFromDroppedFileCommand_Extension_Description", typeof(Resources))]
         public virtual string Extension { get; set; }
 
         /// <summary>

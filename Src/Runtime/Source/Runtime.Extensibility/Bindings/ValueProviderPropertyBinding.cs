@@ -1,4 +1,5 @@
 ﻿using NuPattern.Diagnostics;
+using NuPattern.Runtime.Properties;
 
 namespace NuPattern.Runtime.Bindings
 {
@@ -37,7 +38,7 @@ namespace NuPattern.Runtime.Bindings
             }
             else
             {
-                tracer.TraceError("Value provider binding for property {0}.{1} could not be successfully evaluated. Errors: \n",
+                tracer.TraceError(Resources.ValueProviderPropertyBinding_TraceFailedEvaluation,
                                   target, this.PropertyName, ObjectDumper.ToString(this.Binding.EvaluationResults, 5));
             }
         }

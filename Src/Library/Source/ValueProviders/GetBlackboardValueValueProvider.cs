@@ -9,9 +9,9 @@ namespace NuPattern.Library.ValueProviders
     /// <summary>
     /// Gets teh value of the current guidance workflow using the <see cref="BlackboardManager"/>.
     /// </summary>
-    [DisplayNameResource("GetBlackboardValueValueProvider_DisplayName", typeof(Resources))]
-    [DescriptionResource("GetBlackboardValueValueProvider_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Guidance", typeof(Resources))]
+    [DisplayNameResource(@"GetBlackboardValueValueProvider_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"GetBlackboardValueValueProvider_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Guidance", typeof(Resources))]
     public class GetBlackboardValueValueProvider : ValueProvider
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<GetBlackboardValueValueProvider>();
@@ -19,8 +19,8 @@ namespace NuPattern.Library.ValueProviders
         /// <summary>
         /// Gets or sets the key.
         /// </summary>
-        [DisplayNameResource("GetBlackboardValueValueProvider_Key_DisplayName", typeof(Resources))]
-        [DescriptionResource("GetBlackboardValueValueProvider_Key_Description", typeof(Resources))]
+        [DisplayNameResource(@"GetBlackboardValueValueProvider_Key_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"GetBlackboardValueValueProvider_Key_Description", typeof(Resources))]
         public string Key { get; set; }
 
         /// <summary>

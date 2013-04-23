@@ -1,5 +1,6 @@
 using System;
-using System.ComponentModel;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Runtime.Properties;
 
 namespace NuPattern.Runtime
 {
@@ -11,41 +12,41 @@ namespace NuPattern.Runtime
         ///	<summary>
         ///	The name of this pattern toolkit.
         ///	</summary>
-        [Description("The name of this pattern toolkit.")]
-        [DisplayName("Name")]
-        [Category("General")]
+        [DisplayNameResource(@"IProductToolkitInfo_Name_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"IProductToolkitInfo_Name_Description", typeof(Resources))]
+        [CategoryResource(@"DefaultCategory", typeof(Resources))]
         String Name { get; set; }
 
         ///	<summary>
         ///	The original author of this toolkit.
         ///	</summary>
-        [Description("The original author of this toolkit.")]
-        [DisplayName("Author")]
-        [Category("Identification")]
+        [DisplayNameResource(@"IProductToolkitInfo_Author_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"IProductToolkitInfo_Author_Description", typeof(Resources))]
+        [CategoryResource(@"Category_Identification", typeof(Resources))]
         String Author { get; set; }
 
         ///	<summary>
         ///	The name of this pattern toolkit.
         ///	</summary>
-        [Description("The description of this pattern toolkit.")]
-        [DisplayName("Description")]
-        [Category("General")]
+        [DisplayNameResource(@"IProductToolkitInfo_Description_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"IProductToolkitInfo_Description_Description", typeof(Resources))]
+        [CategoryResource(@"DefaultCategory", typeof(Resources))]
         String Description { get; set; }
 
         ///	<summary>
         ///	The current version of this toolkit.
         ///	</summary>
-        [Description("The current version of this toolkit.")]
-        [DisplayName("Version")]
-        [Category("Identification")]
+        [DisplayNameResource(@"IProductToolkitInfo_Version_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"IProductToolkitInfo_Version_Description", typeof(Resources))]
+        [CategoryResource(@"Category_Identification", typeof(Resources))]
         String Version { get; set; }
 
         ///	<summary>
         ///	The unique identifier of this toolkit, also used as the VSIX identifier.
         ///	</summary>
-        [Description("The unique identifier of this toolkit, also used as the VSIX identifier.")]
-        [DisplayName("Identifier")]
-        [Category("Identification")]
+        [DisplayNameResource(@"IProductToolkitInfo_Identifier_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"IProductToolkitInfo_Identifier_Description", typeof(Resources))]
+        [CategoryResource(@"Category_Identification", typeof(Resources))]
         String Identifier { get; set; }
     }
 }

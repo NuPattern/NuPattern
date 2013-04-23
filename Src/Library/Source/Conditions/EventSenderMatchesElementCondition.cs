@@ -13,9 +13,9 @@ namespace NuPattern.Library.Conditions
     /// <summary>
     /// A <see cref="Condition"/> that evaluates to true if the <see cref="CurrentElement"/> equals the <see cref="Event"/> sender.
     /// </summary>
-    [DisplayNameResource("EventSenderMatchesElementCondition_DisplayName", typeof(Resources))]
-    [DescriptionResource("EventSenderMatchesElementCondition_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
+    [DisplayNameResource(@"EventSenderMatchesElementCondition_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"EventSenderMatchesElementCondition_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class EventSenderMatchesElementCondition : Condition, IEventCondition
     {
@@ -84,7 +84,7 @@ namespace NuPattern.Library.Conditions
             var asElement = thing as IProductElement;
             if (asElement != null)
             {
-                return string.Format(CultureInfo.InvariantCulture, "{0}({1})",
+                return string.Format(CultureInfo.InvariantCulture, @"{0}({1})",
                     asElement.InstanceName, asElement.DefinitionName);
             }
             else
@@ -92,12 +92,12 @@ namespace NuPattern.Library.Conditions
                 var asInstance = thing as IInstanceBase;
                 if (asInstance != null)
                 {
-                    return string.Format(CultureInfo.InvariantCulture, "{0}",
+                    return string.Format(CultureInfo.InvariantCulture, @"{0}",
                         asInstance.DefinitionName);
                 }
                 else
                 {
-                    return string.Format(CultureInfo.InvariantCulture, ".NETType:{0}",
+                    return string.Format(CultureInfo.InvariantCulture, @".NETType:{0}",
                         thing.GetType().Name);
                 }
             }

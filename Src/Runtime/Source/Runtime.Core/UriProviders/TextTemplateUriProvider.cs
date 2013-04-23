@@ -38,7 +38,7 @@ namespace NuPattern.Runtime.UriProviders
         /// <summary>
         /// The host to use in a uri that is resolved relative to the current solution.
         /// </summary>
-        public const string SolutionRelativeHost = SolutionUriProvider.UriSchemeName;
+        public const string SolutionRelativeHost = SolutionUri.UriScheme;
 
         private ITextTemplating templating;
         private IModelBus modelBus;

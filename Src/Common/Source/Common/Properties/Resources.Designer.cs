@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NuPattern.Properties
-{
-
-
+namespace NuPattern.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -97,11 +97,38 @@ namespace NuPattern.Properties
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Decorating Catalog for .
+        /// </summary>
+        internal static string DecoratingReflectionCatalog_CatalogDisplayName {
+            get {
+                return ResourceManager.GetString("DecoratingReflectionCatalog_CatalogDisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Decorating Catalog.
+        /// </summary>
+        internal static string DecoratingReflectionCatalog_DisplayName {
+            get {
+                return ResourceManager.GetString("DecoratingReflectionCatalog_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The descriptor must inherit from {0} or provide a constructor receiving a single parameter of type {1}, which is the original one to be replaced..
         /// </summary>
         internal static string DescriptorExtensions_MustBeDelegatingDescriptor {
             get {
                 return ResourceManager.GetString("DescriptorExtensions_MustBeDelegatingDescriptor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Editor type {0} is not derived from the given base type {1}..
+        /// </summary>
+        internal static string DesignEditorAttribute_ErrorNotEditorType {
+            get {
+                return ResourceManager.GetString("DesignEditorAttribute_ErrorNotEditorType", resourceCulture);
             }
         }
         
@@ -160,11 +187,128 @@ namespace NuPattern.Properties
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Expression is not a lambda..
+        /// </summary>
+        internal static string PropertyChangeManager_ErrorNotLambda {
+            get {
+                return ResourceManager.GetString("PropertyChangeManager_ErrorNotLambda", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Expression is not a property access..
+        /// </summary>
+        internal static string PropertyChangeManager_ErrorNotPropertyAccess {
+            get {
+                return ResourceManager.GetString("PropertyChangeManager_ErrorNotPropertyAccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Member is not a field.
+        /// </summary>
+        internal static string Reflect_ErrorNotField {
+            get {
+                return ResourceManager.GetString("Reflect_ErrorNotField", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Not a lambda expression.
+        /// </summary>
+        internal static string Reflect_ErrorNotLambda {
+            get {
+                return ResourceManager.GetString("Reflect_ErrorNotLambda", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Not a member access.
+        /// </summary>
+        internal static string Reflect_ErrorNotMemberAccess {
+            get {
+                return ResourceManager.GetString("Reflect_ErrorNotMemberAccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Member is not a property.
+        /// </summary>
+        internal static string Reflect_ErrorNotProperty {
+            get {
+                return ResourceManager.GetString("Reflect_ErrorNotProperty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Not a method call.
+        /// </summary>
+        internal static string Reflect_NotMethodCall {
+            get {
+                return ResourceManager.GetString("Reflect_NotMethodCall", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Member is not a field.
+        /// </summary>
+        internal static string Reflector_ErrorNotField {
+            get {
+                return ResourceManager.GetString("Reflector_ErrorNotField", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Not a member access.
+        /// </summary>
+        internal static string Reflector_ErrorNotMemberAccess {
+            get {
+                return ResourceManager.GetString("Reflector_ErrorNotMemberAccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Not a method call.
+        /// </summary>
+        internal static string Reflector_ErrorNotMethodCall {
+            get {
+                return ResourceManager.GetString("Reflector_ErrorNotMethodCall", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Member is not a property.
+        /// </summary>
+        internal static string Reflector_ErrorNotProperty {
+            get {
+                return ResourceManager.GetString("Reflector_ErrorNotProperty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to General.
         /// </summary>
         internal static string StandardValue_DefaultGroupName {
             get {
                 return ResourceManager.GetString("StandardValue_DefaultGroupName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The converter does not support standard values.
+        /// </summary>
+        internal static string StandardValuesEditor_ErrorStandardValuesUnsupported {
+            get {
+                return ResourceManager.GetString("StandardValuesEditor_ErrorStandardValuesUnsupported", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to resolve provider for scheme {0} and type {1}.
+        /// </summary>
+        internal static string UriReferenceService_ErrorFailedResolveUri {
+            get {
+                return ResourceManager.GetString("UriReferenceService_ErrorFailedResolveUri", resourceCulture);
             }
         }
         

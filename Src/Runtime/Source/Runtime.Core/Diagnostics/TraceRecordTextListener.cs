@@ -116,7 +116,7 @@ namespace NuPattern.Runtime.Diagnostics
                 this.WriteLine(String.Format(CultureInfo.CurrentCulture, RecordFormat, eventType, record.Description));
                 if (record.Exception != null)
                 {
-                    this.WriteLine(String.Format(CultureInfo.CurrentCulture, DictionaryFormat, "Exception", record.Exception));
+                    this.WriteLine(String.Format(CultureInfo.CurrentCulture, DictionaryFormat, @"Exception", record.Exception));
                 }
 
                 var dictionary = data as DictionaryTraceRecord;

@@ -8,9 +8,9 @@ namespace NuPattern.Library.ValueComparers
     /// <summary>
     /// Compares the already established <see cref="IProductElement.InstanceOrder"/> of two elements.
     /// </summary>
-    [DisplayNameResource("PreserveOrderComparer_DisplayName", typeof(Resources))]
-    [DescriptionResource("PreserveOrderComparer_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
+    [DisplayNameResource(@"PreserveOrderComparer_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"PreserveOrderComparer_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     public class PreserveOrderComparer : ProductElementComparer
     {
         /// <summary>

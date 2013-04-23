@@ -13,9 +13,9 @@ namespace NuPattern.Library.Commands
     /// <summary>
     /// Creates a new instance of a pattern from another pattern toolkit.
     /// </summary>
-    [DisplayNameResource("InstantiateSolutionElementCommand_DisplayName", typeof(Resources))]
-    [DescriptionResource("InstantiateSolutionElementCommand_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
+    [DisplayNameResource(@"InstantiateSolutionElementCommand_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"InstantiateSolutionElementCommand_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class InstantiateSolutionElementCommand : Command
     {
@@ -25,8 +25,8 @@ namespace NuPattern.Library.Commands
         /// Gets or sets the VSIX ID of the solution element to be added.
         /// </summary>
         [Required(AllowEmptyStrings = false)]
-        [DisplayNameResource("InstantiateSolutionElementCommand_ToolkitIdentifier_DisplayName", typeof(Resources))]
-        [DescriptionResource("InstantiateSolutionElementCommand_ToolkitIdentifier_Description", typeof(Resources))]
+        [DisplayNameResource(@"InstantiateSolutionElementCommand_ToolkitIdentifier_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"InstantiateSolutionElementCommand_ToolkitIdentifier_Description", typeof(Resources))]
         public string ToolkitIdentifier
         {
             get;
@@ -37,8 +37,8 @@ namespace NuPattern.Library.Commands
         /// Gets or sets the name that will be used for the element in Solution Builder.
         /// </summary>
         [Required(AllowEmptyStrings = false)]
-        [DisplayNameResource("InstantiateSolutionElementCommand_InstanceName_DisplayName", typeof(Resources))]
-        [DescriptionResource("InstantiateSolutionElementCommand_InstanceName_Description", typeof(Resources))]
+        [DisplayNameResource(@"InstantiateSolutionElementCommand_InstanceName_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"InstantiateSolutionElementCommand_InstanceName_Description", typeof(Resources))]
         public string InstanceName
         {
             get;

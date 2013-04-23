@@ -110,7 +110,7 @@ namespace NuPattern.Runtime.Schema.Design
                         element,
                         this.ExtensionPoints,
                         this.MessageService,
-                        "ImplementedExtensionPointsRaw",
+                        @"ImplementedExtensionPointsRaw",
                         new List<IExtensionPointSchema>(),
                         new CategoryAttribute(Resources.ExtensibilityCategory),
                         new DisplayNameAttribute(Resources.ProvidedExtensionPointsDisplayName),

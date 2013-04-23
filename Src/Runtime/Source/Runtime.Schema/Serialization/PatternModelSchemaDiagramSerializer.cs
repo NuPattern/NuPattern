@@ -106,15 +106,15 @@ namespace NuPattern.Runtime.Schema
             }
             catch (ArgumentNullException)
             {
-                PatternModelSerializationBehaviorSerializationMessages.InvalidPropertyValue(serializationContext, reader, "Id", typeof(Guid), idstring);
+                PatternModelSerializationBehaviorSerializationMessages.InvalidPropertyValue(serializationContext, reader, @"Id", typeof(Guid), idstring);
             }
             catch (FormatException)
             {
-                PatternModelSerializationBehaviorSerializationMessages.InvalidPropertyValue(serializationContext, reader, "Id", typeof(Guid), idstring);
+                PatternModelSerializationBehaviorSerializationMessages.InvalidPropertyValue(serializationContext, reader, @"Id", typeof(Guid), idstring);
             }
             catch (OverflowException)
             {
-                PatternModelSerializationBehaviorSerializationMessages.InvalidPropertyValue(serializationContext, reader, "Id", typeof(Guid), idstring);
+                PatternModelSerializationBehaviorSerializationMessages.InvalidPropertyValue(serializationContext, reader, @"Id", typeof(Guid), idstring);
             }
 
             return null;

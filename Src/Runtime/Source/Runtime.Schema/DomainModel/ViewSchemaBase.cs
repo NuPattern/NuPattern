@@ -10,7 +10,7 @@ namespace NuPattern.Runtime.Schema
         private string GetCaptionValue()
         {
             return this.IsDefault ?
-                string.Format(CultureInfo.CurrentUICulture, "{0} ({1})", this.Name, Properties.Resources.Default) : this.Name;
+                string.Format(CultureInfo.CurrentUICulture, @"{0} ({1})", this.Name, Properties.Resources.Default) : this.Name;
         }
     }
 }

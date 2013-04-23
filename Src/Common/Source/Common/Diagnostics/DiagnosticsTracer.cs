@@ -17,7 +17,7 @@ namespace NuPattern.Diagnostics
 
         public TraceSource DefaultUnderlyingSource
         {
-            get { return GetOrCreateUnderlyingSource("*"); }
+            get { return GetOrCreateUnderlyingSource(@"*"); }
         }
 
         public TraceSource GetOrCreateUnderlyingSource(string sourceName)
@@ -42,7 +42,7 @@ namespace NuPattern.Diagnostics
 
         public string GetSourceNameFor(Type type)
         {
-            return type.ToSimpleName().Replace("+", ".");
+            return type.ToSimpleName().Replace(@"+", @".");
         }
 
         public CompositeTraceSource GetSourceFor(Type type)
@@ -62,7 +62,7 @@ namespace NuPattern.Diagnostics
                         for (int i = 1; i <= parts.Length; i++)
                         {
                             innerSources.Add(new DiagnosticsTraceSource(GetOrCreateUnderlyingSource(
-                                String.Join(".", parts, 0, i))));
+                                String.Join(@".", parts, 0, i))));
                         }
 
                         // Add the default tracesource to the concrete source for the type, which 

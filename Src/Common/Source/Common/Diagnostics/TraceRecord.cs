@@ -157,31 +157,31 @@ namespace NuPattern.Diagnostics
 
         private void AddExceptionToTraceString(XmlWriter xml, Exception exception)
         {
-            xml.WriteElementString("ExceptionType", exception.GetType().AssemblyQualifiedName);
-            xml.WriteElementString("Message", exception.Message);
-            xml.WriteElementString("StackTrace", StackTraceString(exception));
-            xml.WriteElementString("ExceptionString", exception.ToString());
+            xml.WriteElementString(@"ExceptionType", exception.GetType().AssemblyQualifiedName);
+            xml.WriteElementString(@"Message", exception.Message);
+            xml.WriteElementString(@"StackTrace", StackTraceString(exception));
+            xml.WriteElementString(@"ExceptionString", exception.ToString());
             Win32Exception winException = exception as Win32Exception;
             if (winException != null)
             {
-                xml.WriteElementString("NativeErrorCode",
-                    winException.NativeErrorCode.ToString("X", CultureInfo.InvariantCulture));
+                xml.WriteElementString(@"NativeErrorCode",
+                    winException.NativeErrorCode.ToString(@"X", CultureInfo.InvariantCulture));
             }
             if ((exception.Data != null) && (exception.Data.Count > 0))
             {
-                xml.WriteStartElement("DataItems");
+                xml.WriteStartElement(@"DataItems");
                 foreach (object key in exception.Data.Keys)
                 {
-                    xml.WriteStartElement("Data");
-                    xml.WriteElementString("Key", key.ToString());
-                    xml.WriteElementString("Value", exception.Data[key].ToString());
+                    xml.WriteStartElement(@"Data");
+                    xml.WriteElementString(@"Key", key.ToString());
+                    xml.WriteElementString(@"Value", exception.Data[key].ToString());
                     xml.WriteEndElement();
                 }
                 xml.WriteEndElement();
             }
             if (exception.InnerException != null)
             {
-                xml.WriteStartElement("InnerException");
+                xml.WriteStartElement(@"InnerException");
                 AddExceptionToTraceString(xml, exception.InnerException);
                 xml.WriteEndElement();
             }

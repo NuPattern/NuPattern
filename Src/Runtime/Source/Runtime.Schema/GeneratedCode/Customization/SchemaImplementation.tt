@@ -22,6 +22,7 @@ using System.Linq.Expressions;
 using Microsoft.VisualStudio.Modeling.Extensibility;
 using NuPattern.ComponentModel;
 using NuPattern.Modeling;
+using NuPattern.Runtime.Schema.Properties;
 
 <#
 foreach (var domainClass in this.DslLibrary.Classes)
@@ -291,7 +292,7 @@ public I<#= propertyType #> Create<#= propertyType #>()
 /// </summary>
 public I<#= propertyType #> Create<#= propertyType #>(Action<I<#= propertyType #>> initializer)
 {
-    using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of <#= propertyType #>", this.IsSerializing))
+    using (var tx = this.Store.TransactionManager.BeginTransaction(Resources.SchemaImplementation_TransactionDescriptionCreate, this.IsSerializing))
     {
         var instance = this.Create<<#= propertyType #>>();
         if (initializer != null)
@@ -315,7 +316,7 @@ private void ImplementDelete(string propertyType, string propertyName)
 /// </summary>
 public void Delete<#= propertyType #>(I<#= propertyType #> instance)
 {
-    using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting <#= propertyType #> instance", this.IsSerializing))
+    using (var tx = this.Store.TransactionManager.BeginTransaction(Resources.SchemaImplementation_TransactionDescriptionDelete, this.IsSerializing))
     {
         var modelElement = instance as <#= propertyType #>;
         if (modelElement != null)

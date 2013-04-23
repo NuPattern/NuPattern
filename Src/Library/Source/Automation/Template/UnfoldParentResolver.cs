@@ -28,7 +28,7 @@ namespace NuPattern.Library.Automation.Template
         public void ResolveParent(string targetPath, string targetFileName)
         {
             var resolver = new PathResolver(this.currentElement, this.uriService,
-                    string.IsNullOrEmpty(targetPath) ? "\\" : targetPath,
+                    string.IsNullOrEmpty(targetPath) ? @"\" : targetPath,
                     string.IsNullOrEmpty(targetFileName) ? this.currentElement.InstanceName : targetFileName);
             resolver.Resolve();
 

@@ -14,9 +14,9 @@ namespace NuPattern.Library.Commands
     /// <summary>
     /// Invokes the validation of the current element.
     /// </summary>
-    [DescriptionResource("ValidateElementCommand_Description", typeof(Resources))]
-    [DisplayNameResource("ValidateElementCommand_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
+    [DescriptionResource(@"ValidateElementCommand_Description", typeof(Resources))]
+    [DisplayNameResource(@"ValidateElementCommand_DisplayName", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class ValidateElementCommand : Command
     {
@@ -36,8 +36,8 @@ namespace NuPattern.Library.Commands
         /// Gets or sets whether to validate the descendants of the current element.
         /// </summary>
         [DefaultValue(DefaultValidateDescendants)]
-        [DisplayNameResource("ValidateElementCommand_ValidateDescendantsDisplayName", typeof(Resources))]
-        [DescriptionResource("ValidateElementCommand_ValidateDescendantsDescription", typeof(Resources))]
+        [DisplayNameResource(@"ValidateElementCommand_ValidateDescendantsDisplayName", typeof(Resources))]
+        [DescriptionResource(@"ValidateElementCommand_ValidateDescendantsDescription", typeof(Resources))]
         public bool ValidateDescendants { get; set; }
 
         /// <summary>

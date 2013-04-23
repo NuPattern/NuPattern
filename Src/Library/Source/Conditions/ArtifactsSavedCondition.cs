@@ -14,9 +14,9 @@ namespace NuPattern.Library.Conditions
     /// <summary>
     /// A <see cref="Condition"/> that evaluates to true if all artifacts on the current element are saved.
     /// </summary>
-    [DisplayNameResource("ArtifactsSavedCondition_DisplayName", typeof(Resources))]
-    [DescriptionResource("ArtifactsSavedCondition_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
+    [DisplayNameResource(@"ArtifactsSavedCondition_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"ArtifactsSavedCondition_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class ArtifactsSavedCondition : Condition
     {

@@ -1,9 +1,10 @@
 ﻿using System;
-using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
+using NuPattern.ComponentModel.Design;
 using NuPattern.Diagnostics;
 using NuPattern.Runtime.Guidance.Diagnostics;
+using NuPattern.Runtime.Properties;
 
 namespace NuPattern.Runtime.Guidance.LaunchPoints
 {
@@ -15,7 +16,7 @@ namespace NuPattern.Runtime.Guidance.LaunchPoints
     /// is included has been instantiated, and then delegates to the derived 
     /// class to check additional conditions eventually.
     /// </remarks>
-    [DisplayName("VS Template Launch Point")]
+    [DisplayNameResource(@"VsTemplateLaunchPoint_DisplayName", typeof(Resources))]
     internal abstract class VsTemplateLaunchPoint : ILaunchPoint
     {
         protected VsTemplateLaunchPoint(IGuidanceManager guidanceManager, string id, string name, string category)
@@ -114,11 +115,11 @@ namespace NuPattern.Runtime.Guidance.LaunchPoints
                 {
                     throw new InvalidOperationException(string.Format(
                         CultureInfo.CurrentCulture,
-                        "Command binding '{0}' can not be executed.",
+                        Resources.VsTemplateLaunchPoint_ErrorEvaluateFailed,
                         bindingName));
                 }
 
-                using (tracer.StartActivity("Executing command {0}", commandBinding.Name))
+                using (tracer.StartActivity(Resources.VsTemplateLaunchPoint_TraceExecuteCommand, commandBinding.Name))
                 {
                     commandBinding.Value.Execute();
                 }

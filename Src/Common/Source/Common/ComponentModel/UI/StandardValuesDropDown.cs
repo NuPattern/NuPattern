@@ -123,7 +123,7 @@ namespace NuPattern.ComponentModel.UI
         {
             if (string.IsNullOrEmpty(this.searchText) && !searching)
             {
-                this.textBoxSearch.Text = "Search";
+                this.textBoxSearch.Text = @"Search";
                 this.textBoxSearch.Font = new Font(this.textBoxSearch.Font, FontStyle.Italic);
                 this.textBoxSearch.ForeColor = Color.Gray;
             }
@@ -164,7 +164,7 @@ namespace NuPattern.ComponentModel.UI
 
             if (!string.IsNullOrEmpty(this.searchText))
                 tokens = this.searchText
-                    .Split(" ".ToCharArray())
+                    .Split(@" ".ToCharArray())
                     .Select(token => token.Trim().ToLower())
                     .ToList();
 

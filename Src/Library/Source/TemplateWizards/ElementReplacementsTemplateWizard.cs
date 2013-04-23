@@ -30,12 +30,12 @@ namespace NuPattern.Library.TemplateWizards
             {
                 replacementsDictionary.AddRange(
                     ProductElementDictionaryConverter.Convert(UnfoldScope.Current.Automation.Owner)
-                    .ToDictionary(e => string.Format(CultureInfo.InvariantCulture, "${0}$", e.Key), e => e.Value));
+                    .ToDictionary(e => string.Format(CultureInfo.InvariantCulture, @"${0}$", e.Key), e => e.Value));
 
                 tracer.TraceVerbose(Resources.ElementReplacementWizard_TracerTitle);
                 foreach (var item in replacementsDictionary)
                 {
-                    tracer.TraceVerbose("\t{0}:'{1}'", item.Key, item.Value);
+                    tracer.TraceVerbose(@"	{0}:'{1}'", item.Key, item.Value);
                 }
             }
         }

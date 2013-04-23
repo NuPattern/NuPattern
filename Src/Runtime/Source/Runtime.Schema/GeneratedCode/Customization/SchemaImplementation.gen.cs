@@ -17,6 +17,7 @@ using System.Linq.Expressions;
 using Microsoft.VisualStudio.Modeling.Extensibility;
 using NuPattern.ComponentModel;
 using NuPattern.Modeling;
+using NuPattern.Runtime.Schema.Properties;
 
 namespace NuPattern.Runtime.Schema
 {/// <summary>
@@ -122,7 +123,7 @@ namespace NuPattern.Runtime.Schema
         /// </summary>
         public IPatternSchema CreatePatternSchema(Action<IPatternSchema> initializer)
         {
-            using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of PatternSchema", this.IsSerializing))
+            using (var tx = this.Store.TransactionManager.BeginTransaction(Resources.SchemaImplementation_TransactionDescriptionCreate, this.IsSerializing))
             {
                 var instance = this.Create<PatternSchema>();
                 if (initializer != null)
@@ -140,7 +141,7 @@ namespace NuPattern.Runtime.Schema
         /// </summary>
         public void DeletePatternSchema(IPatternSchema instance)
         {
-            using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting PatternSchema instance", this.IsSerializing))
+            using (var tx = this.Store.TransactionManager.BeginTransaction(Resources.SchemaImplementation_TransactionDescriptionDelete, this.IsSerializing))
             {
                 var modelElement = instance as PatternSchema;
                 if (modelElement != null)
@@ -267,7 +268,7 @@ namespace NuPattern.Runtime.Schema
         /// </summary>
         public IViewSchema CreateViewSchema(Action<IViewSchema> initializer)
         {
-            using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of ViewSchema", this.IsSerializing))
+            using (var tx = this.Store.TransactionManager.BeginTransaction(Resources.SchemaImplementation_TransactionDescriptionCreate, this.IsSerializing))
             {
                 var instance = this.Create<ViewSchema>();
                 if (initializer != null)
@@ -285,7 +286,7 @@ namespace NuPattern.Runtime.Schema
         /// </summary>
         public void DeleteViewSchema(IViewSchema instance)
         {
-            using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting ViewSchema instance", this.IsSerializing))
+            using (var tx = this.Store.TransactionManager.BeginTransaction(Resources.SchemaImplementation_TransactionDescriptionDelete, this.IsSerializing))
             {
                 var modelElement = instance as ViewSchema;
                 if (modelElement != null)
@@ -329,7 +330,7 @@ namespace NuPattern.Runtime.Schema
         /// </summary>
         public IProvidedExtensionPointSchema CreateProvidedExtensionPointSchema(Action<IProvidedExtensionPointSchema> initializer)
         {
-            using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of ProvidedExtensionPointSchema", this.IsSerializing))
+            using (var tx = this.Store.TransactionManager.BeginTransaction(Resources.SchemaImplementation_TransactionDescriptionCreate, this.IsSerializing))
             {
                 var instance = this.Create<ProvidedExtensionPointSchema>();
                 if (initializer != null)
@@ -347,7 +348,7 @@ namespace NuPattern.Runtime.Schema
         /// </summary>
         public void DeleteProvidedExtensionPointSchema(IProvidedExtensionPointSchema instance)
         {
-            using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting ProvidedExtensionPointSchema instance", this.IsSerializing))
+            using (var tx = this.Store.TransactionManager.BeginTransaction(Resources.SchemaImplementation_TransactionDescriptionDelete, this.IsSerializing))
             {
                 var modelElement = instance as ProvidedExtensionPointSchema;
                 if (modelElement != null)
@@ -524,7 +525,7 @@ namespace NuPattern.Runtime.Schema
         /// </summary>
         public IPropertySchema CreatePropertySchema(Action<IPropertySchema> initializer)
         {
-            using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of PropertySchema", this.IsSerializing))
+            using (var tx = this.Store.TransactionManager.BeginTransaction(Resources.SchemaImplementation_TransactionDescriptionCreate, this.IsSerializing))
             {
                 var instance = this.Create<PropertySchema>();
                 if (initializer != null)
@@ -542,7 +543,7 @@ namespace NuPattern.Runtime.Schema
         /// </summary>
         public void DeletePropertySchema(IPropertySchema instance)
         {
-            using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting PropertySchema instance", this.IsSerializing))
+            using (var tx = this.Store.TransactionManager.BeginTransaction(Resources.SchemaImplementation_TransactionDescriptionDelete, this.IsSerializing))
             {
                 var modelElement = instance as PropertySchema;
                 if (modelElement != null)
@@ -586,7 +587,7 @@ namespace NuPattern.Runtime.Schema
         /// </summary>
         public IAutomationSettingsSchema CreateAutomationSettingsSchema(Action<IAutomationSettingsSchema> initializer)
         {
-            using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of AutomationSettingsSchema", this.IsSerializing))
+            using (var tx = this.Store.TransactionManager.BeginTransaction(Resources.SchemaImplementation_TransactionDescriptionCreate, this.IsSerializing))
             {
                 var instance = this.Create<AutomationSettingsSchema>();
                 if (initializer != null)
@@ -604,7 +605,7 @@ namespace NuPattern.Runtime.Schema
         /// </summary>
         public void DeleteAutomationSettingsSchema(IAutomationSettingsSchema instance)
         {
-            using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting AutomationSettingsSchema instance", this.IsSerializing))
+            using (var tx = this.Store.TransactionManager.BeginTransaction(Resources.SchemaImplementation_TransactionDescriptionDelete, this.IsSerializing))
             {
                 var modelElement = instance as AutomationSettingsSchema;
                 if (modelElement != null)
@@ -745,7 +746,7 @@ namespace NuPattern.Runtime.Schema
         /// </summary>
         public ICollectionSchema CreateCollectionSchema(Action<ICollectionSchema> initializer)
         {
-            using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of CollectionSchema", this.IsSerializing))
+            using (var tx = this.Store.TransactionManager.BeginTransaction(Resources.SchemaImplementation_TransactionDescriptionCreate, this.IsSerializing))
             {
                 var instance = this.Create<CollectionSchema>();
                 if (initializer != null)
@@ -763,7 +764,7 @@ namespace NuPattern.Runtime.Schema
         /// </summary>
         public void DeleteCollectionSchema(ICollectionSchema instance)
         {
-            using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting CollectionSchema instance", this.IsSerializing))
+            using (var tx = this.Store.TransactionManager.BeginTransaction(Resources.SchemaImplementation_TransactionDescriptionDelete, this.IsSerializing))
             {
                 var modelElement = instance as CollectionSchema;
                 if (modelElement != null)
@@ -789,7 +790,7 @@ namespace NuPattern.Runtime.Schema
         /// </summary>
         public IElementSchema CreateElementSchema(Action<IElementSchema> initializer)
         {
-            using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of ElementSchema", this.IsSerializing))
+            using (var tx = this.Store.TransactionManager.BeginTransaction(Resources.SchemaImplementation_TransactionDescriptionCreate, this.IsSerializing))
             {
                 var instance = this.Create<ElementSchema>();
                 if (initializer != null)
@@ -807,7 +808,7 @@ namespace NuPattern.Runtime.Schema
         /// </summary>
         public void DeleteElementSchema(IElementSchema instance)
         {
-            using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting ElementSchema instance", this.IsSerializing))
+            using (var tx = this.Store.TransactionManager.BeginTransaction(Resources.SchemaImplementation_TransactionDescriptionDelete, this.IsSerializing))
             {
                 var modelElement = instance as ElementSchema;
                 if (modelElement != null)
@@ -833,7 +834,7 @@ namespace NuPattern.Runtime.Schema
         /// </summary>
         public IExtensionPointSchema CreateExtensionPointSchema(Action<IExtensionPointSchema> initializer)
         {
-            using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of ExtensionPointSchema", this.IsSerializing))
+            using (var tx = this.Store.TransactionManager.BeginTransaction(Resources.SchemaImplementation_TransactionDescriptionCreate, this.IsSerializing))
             {
                 var instance = this.Create<ExtensionPointSchema>();
                 if (initializer != null)
@@ -851,7 +852,7 @@ namespace NuPattern.Runtime.Schema
         /// </summary>
         public void DeleteExtensionPointSchema(IExtensionPointSchema instance)
         {
-            using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting ExtensionPointSchema instance", this.IsSerializing))
+            using (var tx = this.Store.TransactionManager.BeginTransaction(Resources.SchemaImplementation_TransactionDescriptionDelete, this.IsSerializing))
             {
                 var modelElement = instance as ExtensionPointSchema;
                 if (modelElement != null)
@@ -1041,7 +1042,7 @@ namespace NuPattern.Runtime.Schema
         /// </summary>
         public ICustomizationPolicySchema CreateCustomizationPolicySchema(Action<ICustomizationPolicySchema> initializer)
         {
-            using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of CustomizationPolicySchema", this.IsSerializing))
+            using (var tx = this.Store.TransactionManager.BeginTransaction(Resources.SchemaImplementation_TransactionDescriptionCreate, this.IsSerializing))
             {
                 var instance = this.Create<CustomizationPolicySchema>();
                 if (initializer != null)
@@ -1059,7 +1060,7 @@ namespace NuPattern.Runtime.Schema
         /// </summary>
         public void DeleteCustomizationPolicySchema(ICustomizationPolicySchema instance)
         {
-            using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting CustomizationPolicySchema instance", this.IsSerializing))
+            using (var tx = this.Store.TransactionManager.BeginTransaction(Resources.SchemaImplementation_TransactionDescriptionDelete, this.IsSerializing))
             {
                 var modelElement = instance as CustomizationPolicySchema;
                 if (modelElement != null)
@@ -1134,7 +1135,7 @@ namespace NuPattern.Runtime.Schema
         /// </summary>
         public ICollectionSchema CreateCollectionSchema(Action<ICollectionSchema> initializer)
         {
-            using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of CollectionSchema", this.IsSerializing))
+            using (var tx = this.Store.TransactionManager.BeginTransaction(Resources.SchemaImplementation_TransactionDescriptionCreate, this.IsSerializing))
             {
                 var instance = this.Create<CollectionSchema>();
                 if (initializer != null)
@@ -1152,7 +1153,7 @@ namespace NuPattern.Runtime.Schema
         /// </summary>
         public void DeleteCollectionSchema(ICollectionSchema instance)
         {
-            using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting CollectionSchema instance", this.IsSerializing))
+            using (var tx = this.Store.TransactionManager.BeginTransaction(Resources.SchemaImplementation_TransactionDescriptionDelete, this.IsSerializing))
             {
                 var modelElement = instance as CollectionSchema;
                 if (modelElement != null)
@@ -1178,7 +1179,7 @@ namespace NuPattern.Runtime.Schema
         /// </summary>
         public IElementSchema CreateElementSchema(Action<IElementSchema> initializer)
         {
-            using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of ElementSchema", this.IsSerializing))
+            using (var tx = this.Store.TransactionManager.BeginTransaction(Resources.SchemaImplementation_TransactionDescriptionCreate, this.IsSerializing))
             {
                 var instance = this.Create<ElementSchema>();
                 if (initializer != null)
@@ -1196,7 +1197,7 @@ namespace NuPattern.Runtime.Schema
         /// </summary>
         public void DeleteElementSchema(IElementSchema instance)
         {
-            using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting ElementSchema instance", this.IsSerializing))
+            using (var tx = this.Store.TransactionManager.BeginTransaction(Resources.SchemaImplementation_TransactionDescriptionDelete, this.IsSerializing))
             {
                 var modelElement = instance as ElementSchema;
                 if (modelElement != null)
@@ -1222,7 +1223,7 @@ namespace NuPattern.Runtime.Schema
         /// </summary>
         public IExtensionPointSchema CreateExtensionPointSchema(Action<IExtensionPointSchema> initializer)
         {
-            using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of ExtensionPointSchema", this.IsSerializing))
+            using (var tx = this.Store.TransactionManager.BeginTransaction(Resources.SchemaImplementation_TransactionDescriptionCreate, this.IsSerializing))
             {
                 var instance = this.Create<ExtensionPointSchema>();
                 if (initializer != null)
@@ -1240,7 +1241,7 @@ namespace NuPattern.Runtime.Schema
         /// </summary>
         public void DeleteExtensionPointSchema(IExtensionPointSchema instance)
         {
-            using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting ExtensionPointSchema instance", this.IsSerializing))
+            using (var tx = this.Store.TransactionManager.BeginTransaction(Resources.SchemaImplementation_TransactionDescriptionDelete, this.IsSerializing))
             {
                 var modelElement = instance as ExtensionPointSchema;
                 if (modelElement != null)
@@ -1358,7 +1359,7 @@ namespace NuPattern.Runtime.Schema
         /// </summary>
         public ICustomizableSettingSchema CreateCustomizableSettingSchema(Action<ICustomizableSettingSchema> initializer)
         {
-            using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of CustomizableSettingSchema", this.IsSerializing))
+            using (var tx = this.Store.TransactionManager.BeginTransaction(Resources.SchemaImplementation_TransactionDescriptionCreate, this.IsSerializing))
             {
                 var instance = this.Create<CustomizableSettingSchema>();
                 if (initializer != null)
@@ -1376,7 +1377,7 @@ namespace NuPattern.Runtime.Schema
         /// </summary>
         public void DeleteCustomizableSettingSchema(ICustomizableSettingSchema instance)
         {
-            using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting CustomizableSettingSchema instance", this.IsSerializing))
+            using (var tx = this.Store.TransactionManager.BeginTransaction(Resources.SchemaImplementation_TransactionDescriptionDelete, this.IsSerializing))
             {
                 var modelElement = instance as CustomizableSettingSchema;
                 if (modelElement != null)

@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NuPattern.Runtime.Properties
-{
-
-
+namespace NuPattern.Runtime.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -241,6 +241,35 @@ namespace NuPattern.Runtime.Properties
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Extension Manager service not available. Cannot load registered guidance extensions..
+        /// </summary>
+        internal static string GuidanceRegistrationAdapter_TraceExtensionManagerNotAvailable {
+            get {
+                return ResourceManager.GetString("GuidanceRegistrationAdapter_TraceExtensionManagerNotAvailable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not locate vsix manifest file from location inferred from the exported guidance extension assembly location: {0}.
+        ///Skipping guidance extension type with identifier {1}..
+        /// </summary>
+        internal static string GuidanceRegistrationAdapter_TraceMissingManifest {
+            get {
+                return ResourceManager.GetString("GuidanceRegistrationAdapter_TraceMissingManifest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Guidance extension metadata attribute specifies idenfitier &apos;{0}&apos; but guidance extension vsix manifest specifies &apos;{1}&apos;.
+        ///The two values must match. Skipping guidance extension registration. Please contact guidance extension author..
+        /// </summary>
+        internal static string GuidanceRegistrationAdapter_TraceSkipIdMismatch {
+            get {
+                return ResourceManager.GetString("GuidanceRegistrationAdapter_TraceSkipIdMismatch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Extension installed on &apos;{0}&apos; is not a valid pattern toolkit extension..
         /// </summary>
         internal static string InstalledToolkitAdapter_FailedToCreateRegistration {
@@ -466,6 +495,15 @@ namespace NuPattern.Runtime.Properties
             get {
                 object obj = ResourceManager.GetObject("PatternManager_OpeningStoreEventId", resourceCulture);
                 return ((int)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loading.
+        /// </summary>
+        internal static string PatternManager_OpenTransactionDescription {
+            get {
+                return ResourceManager.GetString("PatternManager_OpenTransactionDescription", resourceCulture);
             }
         }
         

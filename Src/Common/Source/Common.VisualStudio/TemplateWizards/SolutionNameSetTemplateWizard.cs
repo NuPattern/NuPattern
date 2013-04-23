@@ -58,10 +58,10 @@ namespace NuPattern.VisualStudio.TemplateWizards
             }
             else
             {
-                tracer.TraceVerbose(Resources.SolutionNameTemplateWizard_NewContextSolution, replacementsDictionary["$projectname$"]);
+                tracer.TraceVerbose(Resources.SolutionNameTemplateWizard_NewContextSolution, replacementsDictionary[@"$projectname$"]);
 
-                replacementsDictionary[SolutionNameKey] = replacementsDictionary["$projectname$"];
-                replacementsDictionary[SafeSolutionNameKey] = replacementsDictionary["$safeprojectname$"];
+                replacementsDictionary[SolutionNameKey] = replacementsDictionary[@"$projectname$"];
+                replacementsDictionary[SafeSolutionNameKey] = replacementsDictionary[@"$safeprojectname$"];
 
                 CallContext.LogicalSetData(SolutionNameKey, replacementsDictionary[SolutionNameKey]);
                 CallContext.LogicalSetData(SafeSolutionNameKey, replacementsDictionary[SafeSolutionNameKey]);

@@ -170,7 +170,7 @@ namespace NuPattern.Library.Automation
                     instantiateProperty.Description = description;
                     instantiateProperty.Category = category;
                     var converterType = typeof(TTypeConverter);
-                    instantiateProperty.TypeConverterTypeName = converterType.FullName + ", " + converterType.Assembly.FullName.Split(',')[0];
+                    instantiateProperty.TypeConverterTypeName = converterType.FullName + @", " + converterType.Assembly.FullName.Split(',')[0];
                 }
             }
             else
@@ -191,7 +191,7 @@ namespace NuPattern.Library.Automation
             if (!string.IsNullOrEmpty(iconPath))
             {
                 return string.Format(CultureInfo.CurrentCulture,
-                    "pack://application:,,,/{0};component/{1}", typeof(PatternElementSchemaExtensions).Assembly.GetName().Name, iconPath);
+                    @"pack://application:,,,/{0};component/{1}", typeof(PatternElementSchemaExtensions).Assembly.GetName().Name, iconPath);
             }
 
             else

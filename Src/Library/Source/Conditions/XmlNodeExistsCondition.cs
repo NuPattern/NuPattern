@@ -17,9 +17,9 @@ namespace NuPattern.Library.Conditions
     /// <summary>
     /// Indicates that an element orattribute of an XML document exists.
     /// </summary>
-    [DescriptionResource("XmlNodeExistsCondition_Description", typeof(Resources))]
-    [DisplayNameResource("XmlNodeExistsCondition_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_General", typeof(Resources))]
+    [DescriptionResource(@"XmlNodeExistsCondition_Description", typeof(Resources))]
+    [DisplayNameResource(@"XmlNodeExistsCondition_DisplayName", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_General", typeof(Resources))]
     [CLSCompliant(false)]
     public class XmlNodeExistsCondition : Condition
     {
@@ -64,23 +64,23 @@ namespace NuPattern.Library.Conditions
         /// <summary>
         /// Gets or sets the source path of the XML file.
         /// </summary>
-        [DisplayNameResource("ModifyXmlCommand_SourcePath_DisplayName", typeof(Resources))]
-        [DescriptionResource("ModifyXmlCommand_SourcePath_Description", typeof(Resources))]
+        [DisplayNameResource(@"ModifyXmlCommand_SourcePath_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"ModifyXmlCommand_SourcePath_Description", typeof(Resources))]
         public virtual string SourcePath { get; set; }
 
         /// <summary>
         /// Gets or sets the path in the XML element/attribute to modify.
         /// </summary>
         [Required(AllowEmptyStrings = false)]
-        [DisplayNameResource("ModifyXmlCommand_XmlPath_DisplayName", typeof(Resources))]
-        [DescriptionResource("ModifyXmlCommand_XmlPath_Description", typeof(Resources))]
+        [DisplayNameResource(@"ModifyXmlCommand_XmlPath_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"ModifyXmlCommand_XmlPath_Description", typeof(Resources))]
         public virtual string XmlPath { get; set; }
 
         /// <summary>
         /// Gets or sets the namespaces to use in the <see cref="XmlPath"/> query.
         /// </summary>
-        [DisplayNameResource("ModifyXmlCommand_Namespaces_DisplayName", typeof(Resources))]
-        [DescriptionResource("ModifyXmlCommand_Namespaces_Description", typeof(Resources))]
+        [DisplayNameResource(@"ModifyXmlCommand_Namespaces_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"ModifyXmlCommand_Namespaces_Description", typeof(Resources))]
         [TypeConverter(typeof(DesignCollectionConverter<XmlNamespace>))]
         public Collection<XmlNamespace> Namespaces { get; set; }
 

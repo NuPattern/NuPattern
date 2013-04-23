@@ -18,7 +18,7 @@ namespace NuPattern.Runtime.Design
             if (value != null)
             {
                 var uriService = provider.GetService<IUriReferenceService>();
-                return uriService.CreateUri(value, "solution");
+                return uriService.CreateUri(value, SolutionUri.UriScheme);
             }
 
             return null;

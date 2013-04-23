@@ -10,7 +10,8 @@ namespace NuPattern.Modeling
     [Export(typeof(IUriReferenceProvider))]
     internal class ModelBusUriReferenceProvider : IUriReferenceProvider<ModelBusReference>
     {
-        IModelBus modelBus;
+        private const string Scheme = "modelbus";
+        private IModelBus modelBus;
 
         [ImportingConstructor]
         public ModelBusUriReferenceProvider([Import(typeof(SVsServiceProvider), AllowDefault = true)] IServiceProvider serviceProviderForModelBus)
@@ -27,7 +28,7 @@ namespace NuPattern.Modeling
 
         public string UriScheme
         {
-            get { return "modelbus"; }
+            get { return Scheme; }
         }
 
         public Uri CreateUri(ModelBusReference instance)
@@ -35,7 +36,7 @@ namespace NuPattern.Modeling
             // Append our "progression" authority to get away with the normalization of 
             // the adapter id that would happen otherwise.
             var serialized = ModelBusReference.Serialize(instance);
-            serialized = serialized.Replace("://", "://progression/");
+            serialized = serialized.Replace(@"://", @"://progression/");
 
             return new Uri(serialized);
         }

@@ -11,9 +11,9 @@ namespace NuPattern.Library.Commands
     /// <summary>
     /// Creates a new instance of a child element for each dropped explorer file.
     /// </summary>
-    [DisplayNameResource("CreateElementFromPickedWindowsFileCommand_DisplayName", typeof(Resources))]
-    [DescriptionResource("CreateElementFromPickedWindowsFileCommand_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
+    [DisplayNameResource(@"CreateElementFromPickedWindowsFileCommand_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"CreateElementFromPickedWindowsFileCommand_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class CreateElementFromPickedWindowsFileCommand : CreateElementFromPickedFileCommand
     {
@@ -24,8 +24,8 @@ namespace NuPattern.Library.Commands
         /// Gets or sets the target path.
         /// </summary>
         [Required(AllowEmptyStrings = false)]
-        [DisplayNameResource("CreateElementFromPickedWindowsFileCommand_TargetPath_DisplayName", typeof(Resources))]
-        [DescriptionResource("CreateElementFromPickedWindowsFileCommand_TargetPath_Description", typeof(Resources))]
+        [DisplayNameResource(@"CreateElementFromPickedWindowsFileCommand_TargetPath_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"CreateElementFromPickedWindowsFileCommand_TargetPath_Description", typeof(Resources))]
         public virtual string TargetPath { get; set; }
 
         /// <summary>

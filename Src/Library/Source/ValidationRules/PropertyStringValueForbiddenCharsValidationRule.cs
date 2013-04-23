@@ -15,9 +15,9 @@ namespace NuPattern.Library.ValidationRules
     /// <summary>
     /// Specifies the forbidden characters that cannot exist in a data field.
     /// </summary>
-    [DescriptionResource("PropertyStringValueForbiddenCharsValidationRule_Description", typeof(Resources))]
-    [DisplayNameResource("PropertyStringValueForbiddenCharsValidationRule_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_General", typeof(Resources))]
+    [DescriptionResource(@"PropertyStringValueForbiddenCharsValidationRule_Description", typeof(Resources))]
+    [DisplayNameResource(@"PropertyStringValueForbiddenCharsValidationRule_DisplayName", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_General", typeof(Resources))]
     public class PropertyStringValueForbiddenCharsValidationRule : ValidationRule
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<PropertyStringValueForbiddenCharsValidationRule>();
@@ -25,8 +25,8 @@ namespace NuPattern.Library.ValidationRules
         /// <summary>
         /// Gets or sets the characters that are forbidden.
         /// </summary>
-        [DescriptionResource("PropertyStringValueForbiddenCharsValidationRule_ForbiddenChars_Description", typeof(Resources))]
-        [DisplayNameResource("PropertyStringValueForbiddenCharsValidationRule_ForbiddenChars_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"PropertyStringValueForbiddenCharsValidationRule_ForbiddenChars_Description", typeof(Resources))]
+        [DisplayNameResource(@"PropertyStringValueForbiddenCharsValidationRule_ForbiddenChars_DisplayName", typeof(Resources))]
         public string ForbiddenChars
         {
             get;

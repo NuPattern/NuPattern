@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using Microsoft.VisualStudio.Modeling;
+using NuPattern.Modeling.Properties;
 
 namespace NuPattern.Modeling
 {
@@ -57,11 +58,8 @@ namespace NuPattern.Modeling
 
             if (string.IsNullOrEmpty(transacName))
             {
-                transacName = string.Format(
-                    CultureInfo.CurrentCulture,
-                    "Executing {0} @ {1}",
-                    action.Method.Name,
-                    DateTime.Now.ToString());
+                transacName = string.Format(CultureInfo.CurrentCulture, Resources.TransactionManagerExtensions_DoWithinTransactionDescription,
+                    action.Method.Name, DateTime.Now.ToString());
             }
 
             if (manager.Store.InUndoRedoOrRollback || manager.InTransaction || (manager.CurrentTransaction != null && manager.CurrentTransaction.InRollback))

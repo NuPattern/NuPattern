@@ -12,9 +12,9 @@ namespace NuPattern.Library.ValueProviders
     /// <summary>
     /// A <see cref=" ValueProvider"/> that provides solution name.
     /// </summary>
-    [DisplayNameResource("SolutionNameValueProvider_DisplayName", typeof(Resources))]
-    [DescriptionResource("SolutionNameValueProvider_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_VisualStudio", typeof(Resources))]
+    [DisplayNameResource(@"SolutionNameValueProvider_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"SolutionNameValueProvider_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_VisualStudio", typeof(Resources))]
     [CLSCompliant(false)]
     public class SolutionNameValueProvider : ValueProvider
     {

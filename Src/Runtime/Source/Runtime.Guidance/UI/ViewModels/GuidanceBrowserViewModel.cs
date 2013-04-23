@@ -175,7 +175,7 @@ namespace NuPattern.Runtime.Guidance.UI.ViewModels
             IGuidanceAction focusedAction = feature.GuidanceWorkflow.Successors
                                 .Traverse<INode>(s => s.Successors)
                                 .OfType<IGuidanceAction>()
-                                .FirstOrDefault(a => (a.Link == null ? "~~~" : a.Link.ToLower()) == link.ToLower());
+                                .FirstOrDefault(a => (a.Link == null ? @"~~~" : a.Link.ToLower()) == link.ToLower());
 
             return focusedAction;
         }
@@ -207,7 +207,7 @@ namespace NuPattern.Runtime.Guidance.UI.ViewModels
 
 
                 if (uri.OriginalString != null &&
-                    uri.OriginalString.ToLower().StartsWith("http"))
+                    uri.OriginalString.ToLower().StartsWith(Uri.UriSchemeHttp))
                     return uri;
                 else
                     return (null);

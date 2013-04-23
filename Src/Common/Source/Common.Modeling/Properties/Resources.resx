@@ -123,4 +123,13 @@
   <data name="ModelElementExtensions_ElementNameNotSupported" xml:space="preserve">
     <value>The domain class {0} doesn't have a Name domain property</value>
   </data>
+  <data name="ModelElementExtensions_GetPropertyDefaultValue_NoProperty" xml:space="preserve">
+    <value>Property does not exist on element.</value>
+  </data>
+  <data name="TransactionManagerExtensions_DoWithinTransactionDescription" xml:space="preserve">
+    <value>Executing {0} @ {1}</value>
+  </data>
+  <data name="ModelElementExtensions_CreateTransactionText" xml:space="preserve">
+    <value>Creating: </value>
+  </data>
 </root>

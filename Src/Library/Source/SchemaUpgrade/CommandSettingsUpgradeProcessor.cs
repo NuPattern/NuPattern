@@ -12,24 +12,24 @@ namespace NuPattern.Library.SchemaUpgrade
     /// <summary>
     /// Migrates CommandSetting properties from XML to JSon.
     /// </summary>
-    [SchemaUpgradeProcessorOptions(Order = 1100, TargetVersion = "1.2.0.0")]
+    [SchemaUpgradeProcessorOptions(Order = 1100, TargetVersion = @"1.2.0.0")]
     internal class CommandSettingsUpgradeProcessor : IPatternModelSchemaUpgradeProcessor
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<CommandSettingsUpgradeProcessor>();
         private const string DefaultNamespace = SchemaConstants.DefaultNamespace;
-        private static readonly XName CommandSettingsElementName = XName.Get("commandSettings", DefaultNamespace);
-        private static readonly XName CommandSettingsPropertiesElementName = XName.Get("properties", DefaultNamespace);
-        private static readonly XName PropertySettingsElementName = XName.Get("propertySettings", DefaultNamespace);
-        private static readonly XName ValueProviderElementName = XName.Get("valueProvider", DefaultNamespace);
-        private static readonly XName ValueProviderSettingElementName = XName.Get("valueProviderSettings", DefaultNamespace);
-        private static readonly XName PropertySettingMonikerElementName = XName.Get("propertySettingsMoniker", DefaultNamespace);
-        private const string CommandSettingsIdName = "Id";
-        private const string ValueProviderSettingsIdName = "Id";
-        private const string PropertySettingsIdName = "Id";
-        private const string PropertySettingsMonikerIdName = "Id";
-        private const string PropertySettingsNameName = "name";
-        private const string PropertySettingsValueName = "value";
-        private const string ValueProviderSettingsTypeIdName = "typeId";
+        private static readonly XName CommandSettingsElementName = XName.Get(@"commandSettings", DefaultNamespace);
+        private static readonly XName CommandSettingsPropertiesElementName = XName.Get(@"properties", DefaultNamespace);
+        private static readonly XName PropertySettingsElementName = XName.Get(@"propertySettings", DefaultNamespace);
+        private static readonly XName ValueProviderElementName = XName.Get(@"valueProvider", DefaultNamespace);
+        private static readonly XName ValueProviderSettingElementName = XName.Get(@"valueProviderSettings", DefaultNamespace);
+        private static readonly XName PropertySettingMonikerElementName = XName.Get(@"propertySettingsMoniker", DefaultNamespace);
+        private const string CommandSettingsIdName = @"Id";
+        private const string ValueProviderSettingsIdName = @"Id";
+        private const string PropertySettingsIdName = @"Id";
+        private const string PropertySettingsMonikerIdName = @"Id";
+        private const string PropertySettingsNameName = @"name";
+        private const string PropertySettingsValueName = @"value";
+        private const string ValueProviderSettingsTypeIdName = @"typeId";
 
         /// <summary>
         /// Gets whether the document has been changed.

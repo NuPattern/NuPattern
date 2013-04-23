@@ -89,7 +89,7 @@ namespace NuPattern.VisualStudio.TemplateWizards
 
             var dte = (automationObject as DTE);
 
-            if (!replacementsDictionary.TryGetValue("$patterndefinition$", out this.designerFileName))
+            if (!replacementsDictionary.TryGetValue(@"$patterndefinition$", out this.designerFileName))
                 tracer.TraceWarning(Resources.OpenDesignerTemplateWizard_DesignerItemNotFound);
 
             using (var serviceProvider = new ServiceProvider((Microsoft.VisualStudio.OLE.Interop.IServiceProvider)dte))

@@ -438,4 +438,18 @@ Would you like to automatically upgrade this file to the current version?</value
   <data name="SolutionPickerBaseViewModel_EmptyItemsMessageFileType" xml:space="preserve">
     <value>There are no '{0}' files to select in the current solution.</value>
   </data>
+  <data name="PatternManager_OpenTransactionDescription" xml:space="preserve">
+    <value>Loading</value>
+  </data>
+  <data name="GuidanceRegistrationAdapter_TraceExtensionManagerNotAvailable" xml:space="preserve">
+    <value>Extension Manager service not available. Cannot load registered guidance extensions.</value>
+  </data>
+  <data name="GuidanceRegistrationAdapter_TraceSkipIdMismatch" xml:space="preserve">
+    <value>Guidance extension metadata attribute specifies idenfitier '{0}' but guidance extension vsix manifest specifies '{1}'.
+The two values must match. Skipping guidance extension registration. Please contact guidance extension author.</value>
+  </data>
+  <data name="GuidanceRegistrationAdapter_TraceMissingManifest" xml:space="preserve">
+    <value>Could not locate vsix manifest file from location inferred from the exported guidance extension assembly location: {0}.
+Skipping guidance extension type with identifier {1}.</value>
+  </data>
 </root>

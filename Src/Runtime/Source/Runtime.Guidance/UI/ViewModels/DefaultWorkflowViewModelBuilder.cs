@@ -57,7 +57,7 @@ namespace NuPattern.Runtime.Guidance.UI.ViewModels
                 {
                     IJoin matchingJoin = FindMatchingJoin(node);
                     if (matchingJoin == null)
-                        throw new Exception("Could not find matching Join for Fork");
+                        throw new Exception(Resources.DefaultWorkflowViewModelBuilder_ErrorNoMatchingForkOrJoin);
                     matchingJoin.ParentObject = parentNode;
                 }
 
@@ -65,7 +65,7 @@ namespace NuPattern.Runtime.Guidance.UI.ViewModels
                 {
                     IMerge matchingMerge = FindMatchingMerge(node);
                     if (matchingMerge == null)
-                        throw new Exception("Could not find matching Merge for Decision");
+                        throw new Exception(Resources.DefaultWorkflowViewModelBuilder_NoMatchingMerge);
                     matchingMerge.ParentObject = parentNode;
                 }
 
@@ -73,13 +73,13 @@ namespace NuPattern.Runtime.Guidance.UI.ViewModels
                 if (node is IJoin)
                 {
                     if (node.ParentObject == null)
-                        throw new Exception("Encountered Join with parent not set");
+                        throw new Exception(Resources.DefaultWorkflowViewModelBuilder_ErrorOrphanJoin);
                     this.BuildTreeFromGraph((TreeNodeViewModel<INode>)node.ParentObject, node.Successors);
                 }
                 else if (node is IMerge)
                 {
                     if (node.ParentObject == null)
-                        throw new Exception("Encountered Merge with parent not set");
+                        throw new Exception(Resources.DefaultWorkflowViewModelBuilder_ErrorOrphanMerge);
                     this.BuildTreeFromGraph((TreeNodeViewModel<INode>)node.ParentObject, node.Successors);
                 }
                 else if (!(node is IFinal))

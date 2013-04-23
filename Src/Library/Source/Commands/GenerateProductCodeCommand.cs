@@ -23,9 +23,9 @@ namespace NuPattern.Library.Commands
     /// A command that generates code from text templates.
     /// </summary>
     [CLSCompliant(false)]
-    [DisplayNameResource("GenerateProductCodeCommand_DisplayName", typeof(Resources))]
-    [DescriptionResource("GenerateProductCodeCommand_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
+    [DisplayNameResource(@"GenerateProductCodeCommand_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"GenerateProductCodeCommand_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     public class GenerateProductCodeCommand : GenerateModelingCodeCommand
     {
         private const bool DefaultSyncName = false;
@@ -77,15 +77,15 @@ namespace NuPattern.Library.Commands
         /// </summary>
         [DefaultValue(DefaultSyncName)]
         [DesignOnly(true)]
-        [Dsl.DisplayNameResource("NuPattern.Library.Automation.TemplateSettings/SyncName.DisplayName", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
-        [Dsl.DescriptionResource("NuPattern.Library.Automation.TemplateSettings/SyncName.Description", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+        [Dsl.DisplayNameResource(@"NuPattern.Library.Automation.TemplateSettings/SyncName.DisplayName", typeof(LibraryDomainModel), @"NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+        [Dsl.DescriptionResource(@"NuPattern.Library.Automation.TemplateSettings/SyncName.Description", typeof(LibraryDomainModel), @"NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
         public bool SyncName { get; set; }
 
         /// <summary>
         /// An optional value to atg the generated reference for the generated file.
         /// </summary>
-        [Dsl.DisplayNameResource("NuPattern.Library.Automation.TemplateSettings/Tag.DisplayName", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
-        [Dsl.DescriptionResource("NuPattern.Library.Automation.TemplateSettings/Tag.Description", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+        [Dsl.DisplayNameResource(@"NuPattern.Library.Automation.TemplateSettings/Tag.DisplayName", typeof(LibraryDomainModel), @"NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+        [Dsl.DescriptionResource(@"NuPattern.Library.Automation.TemplateSettings/Tag.Description", typeof(LibraryDomainModel), @"NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
         [DefaultValue(DefaultTag)]
         public string Tag { get; set; }
 

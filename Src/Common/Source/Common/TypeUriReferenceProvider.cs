@@ -6,7 +6,9 @@ namespace NuPattern
     [Export(typeof(IUriReferenceProvider))]
     internal class TypeUriReferenceProvider : IUriReferenceProvider<Type>
     {
-        public string UriScheme { get { return "type"; } }
+        private const string Scheme = "type";
+
+        public string UriScheme { get { return Scheme; } }
 
         public Uri CreateUri(Type instance)
         {

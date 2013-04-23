@@ -12,9 +12,9 @@ namespace NuPattern.Library.ValueProviders
     /// <summary>
     /// A <see cref=" ValueProvider"/> that provides the project guid.
     /// </summary>
-    [DisplayNameResource("ProjectGuidValueProvider_DisplayName", typeof(Resources))]
-    [DescriptionResource("ProjectGuidValueProvider_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_VisualStudio", typeof(Resources))]
+    [DisplayNameResource(@"ProjectGuidValueProvider_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"ProjectGuidValueProvider_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_VisualStudio", typeof(Resources))]
     [CLSCompliant(false)]
     public class ProjectGuidValueProvider : VsProjectPropertyValueProvider
     {
@@ -32,8 +32,8 @@ namespace NuPattern.Library.ValueProviders
         /// <summary>
         /// The format of the returned guid.
         /// </summary>
-        [DisplayNameResource("ProjectGuidValueProvider_Format_DisplayName", typeof(Resources))]
-        [DescriptionResource("ProjectGuidValueProvider_Format_Description", typeof(Resources))]
+        [DisplayNameResource(@"ProjectGuidValueProvider_Format_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"ProjectGuidValueProvider_Format_Description", typeof(Resources))]
         [DefaultValue(GuidFormat.JustDigitsWithHyphens)]
         [Required]
         public GuidFormat Format

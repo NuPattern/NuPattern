@@ -10,9 +10,9 @@ namespace NuPattern.Library.ValueProviders
     /// <summary>
     /// A <see cref=" ValueProvider"/> that provides the project assembly name.
     /// </summary>
-    [DisplayNameResource("AssemblyNameValueProvider_DisplayName", typeof(Resources))]
-    [DescriptionResource("AssemblyNameValueProvider_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_VisualStudio", typeof(Resources))]
+    [DisplayNameResource(@"AssemblyNameValueProvider_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"AssemblyNameValueProvider_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_VisualStudio", typeof(Resources))]
     [CLSCompliant(false)]
     public class AssemblyNameValueProvider : VsProjectPropertyValueProvider
     {

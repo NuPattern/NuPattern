@@ -54,8 +54,8 @@ namespace NuPattern.Library.ValueProviders
         /// <summary>
         /// The project path.
         /// </summary>
-        [DisplayNameResource("VsProjectPropertyValueProvider_ProjectPath_DisplayName", typeof(Resources))]
-        [DescriptionResource("VsProjectPropertyValueProvider_ProjectPath_Description", typeof(Resources))]
+        [DisplayNameResource(@"VsProjectPropertyValueProvider_ProjectPath_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"VsProjectPropertyValueProvider_ProjectPath_Description", typeof(Resources))]
         public virtual string ProjectPath
         {
             get;

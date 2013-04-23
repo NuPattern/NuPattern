@@ -88,6 +88,24 @@ namespace NuPattern.Runtime.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Could not resolve component with id &apos;{0}&apos; to an actual instance of type {1}..
+        /// </summary>
+        internal static string Binding_EvaluateBindingError {
+            get {
+                return ResourceManager.GetString("Binding_EvaluateBindingError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Evaluating binding {0}.
+        /// </summary>
+        internal static string Binding_TraceEvaluate {
+            get {
+                return ResourceManager.GetString("Binding_TraceEvaluate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Both the Visual Studio default catalog and the Feature Builder catalogs must be present in the system..
         /// </summary>
         internal static string BindingCompositionService_CatalogsNotAvailable {
@@ -174,6 +192,15 @@ namespace NuPattern.Runtime.Properties {
         internal static string BitmapFilter {
             get {
                 return ResourceManager.GetString("BitmapFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Identification.
+        /// </summary>
+        internal static string Category_Identification {
+            get {
+                return ResourceManager.GetString("Category_Identification", resourceCulture);
             }
         }
         
@@ -291,6 +318,15 @@ namespace NuPattern.Runtime.Properties {
         internal static string DesignPropertyValueDescriptor_ValueDisplayName {
             get {
                 return ResourceManager.GetString("DesignPropertyValueDescriptor_ValueDisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dynamic binding &apos;{0}&apos; failed on imported property &apos;{1}&apos;: {2}.
+        /// </summary>
+        internal static string DynamicBinding_TraceFailedDynamicBinding {
+            get {
+                return ResourceManager.GetString("DynamicBinding_TraceFailedDynamicBinding", resourceCulture);
             }
         }
         
@@ -719,6 +755,132 @@ namespace NuPattern.Runtime.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The original author of this toolkit..
+        /// </summary>
+        internal static string IProductToolkitInfo_Author_Description {
+            get {
+                return ResourceManager.GetString("IProductToolkitInfo_Author_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Author.
+        /// </summary>
+        internal static string IProductToolkitInfo_Author_DisplayName {
+            get {
+                return ResourceManager.GetString("IProductToolkitInfo_Author_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The description of this pattern toolkit..
+        /// </summary>
+        internal static string IProductToolkitInfo_Description_Description {
+            get {
+                return ResourceManager.GetString("IProductToolkitInfo_Description_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Description.
+        /// </summary>
+        internal static string IProductToolkitInfo_Description_DisplayName {
+            get {
+                return ResourceManager.GetString("IProductToolkitInfo_Description_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The unique identifier of this toolkit, also used as the VSIX identifier..
+        /// </summary>
+        internal static string IProductToolkitInfo_Identifier_Description {
+            get {
+                return ResourceManager.GetString("IProductToolkitInfo_Identifier_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Identifier.
+        /// </summary>
+        internal static string IProductToolkitInfo_Identifier_DisplayName {
+            get {
+                return ResourceManager.GetString("IProductToolkitInfo_Identifier_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The name of this pattern toolkit..
+        /// </summary>
+        internal static string IProductToolkitInfo_Name_Description {
+            get {
+                return ResourceManager.GetString("IProductToolkitInfo_Name_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        internal static string IProductToolkitInfo_Name_DisplayName {
+            get {
+                return ResourceManager.GetString("IProductToolkitInfo_Name_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The current version of this toolkit..
+        /// </summary>
+        internal static string IProductToolkitInfo_Version_Description {
+            get {
+                return ResourceManager.GetString("IProductToolkitInfo_Version_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Version.
+        /// </summary>
+        internal static string IProductToolkitInfo_Version_DisplayName {
+            get {
+                return ResourceManager.GetString("IProductToolkitInfo_Version_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Command {0}&apos; can not be executed..
+        /// </summary>
+        internal static string LinkLaunchPoint_ErrorCommandCannotExecute {
+            get {
+                return ResourceManager.GetString("LinkLaunchPoint_ErrorCommandCannotExecute", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unable to execute command because the associated guidance action is not in the Enabled (green) state..
+        /// </summary>
+        internal static string LinkLaunchPoint_NotifyUser {
+            get {
+                return ResourceManager.GetString("LinkLaunchPoint_NotifyUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Executing command {0}.
+        /// </summary>
+        internal static string LinkLaunchPoint_TraceExecute {
+            get {
+                return ResourceManager.GetString("LinkLaunchPoint_TraceExecute", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Workflow actions containing include:// must have only one predecessor and one successor.
+        /// </summary>
+        internal static string Node_ErrorOnlySinglePredecessor {
+            get {
+                return ResourceManager.GetString("Node_ErrorOnlySinglePredecessor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Blocked.
         /// </summary>
         internal static string NodeState_Blocked {
@@ -760,6 +922,33 @@ namespace NuPattern.Runtime.Properties {
         internal static string NodeState_Unknown {
             get {
                 return ResourceManager.GetString("NodeState_Unknown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to initialize global container.
+        /// </summary>
+        internal static string NuPatternGlobalContainer_TraceFailedContainerInitialization {
+            get {
+                return ResourceManager.GetString("NuPatternGlobalContainer_TraceFailedContainerInitialization", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not retrieve the catalog &apos;{0}&apos; from the global IComponentModel service..
+        /// </summary>
+        internal static string NuPatternGlobalContainer_TraceNoComponentModel {
+            get {
+                return ResourceManager.GetString("NuPatternGlobalContainer_TraceNoComponentModel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not retrieve the VS global IComponentModel service..
+        /// </summary>
+        internal static string NuPatternGlobalContainer_TraceNoComponentModelService {
+            get {
+                return ResourceManager.GetString("NuPatternGlobalContainer_TraceNoComponentModelService", resourceCulture);
             }
         }
         
@@ -1025,6 +1214,33 @@ namespace NuPattern.Runtime.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Provided value {0} is not compatible with property {1}.{2} of type {3}, and specific type conversion is not supported by provided converter {4}..
+        /// </summary>
+        internal static string PropertyBinding_PropertyNotCompatible {
+            get {
+                return ResourceManager.GetString("PropertyBinding_PropertyNotCompatible", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Provided value {0} is not compatible with property {1}.{2} of type {3}, and a custom type conversion is not provided..
+        /// </summary>
+        internal static string PropertyBinding_TracePropertyCustomNotCompatible {
+            get {
+                return ResourceManager.GetString("PropertyBinding_TracePropertyCustomNotCompatible", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Property {0}.{1} not found.
+        /// </summary>
+        internal static string PropertyBinding_TracePropertyNotFound {
+            get {
+                return ResourceManager.GetString("PropertyBinding_TracePropertyNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The TypeConverter on this ReferenceKindProvider type does not support convert from System.String to of its declared type. The reference value cannot be read..
         /// </summary>
         internal static string ReferenceKindProvider_CanNotConvertFromString {
@@ -1286,6 +1502,15 @@ namespace NuPattern.Runtime.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to instantiate the interface layer proxy type &apos;{0}&apos;..
+        /// </summary>
+        internal static string ToolkitInterfaceLayer_TraceFailedInstantiation {
+            get {
+                return ResourceManager.GetString("ToolkitInterfaceLayer_TraceFailedInstantiation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The product does not have a view named &apos;{0}&apos;..
         /// </summary>
         internal static string ToolkitInterfaceLayer_ViewNotFound {
@@ -1354,6 +1579,70 @@ namespace NuPattern.Runtime.Properties {
         internal static string ValueProviderBindingSettings_EmptyBinding {
             get {
                 return ResourceManager.GetString("ValueProviderBindingSettings_EmptyBinding", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Value provider binding for property {0}.{1} could not be successfully evaluated. Errors: 
+        ///.
+        /// </summary>
+        internal static string ValueProviderPropertyBinding_TraceFailedEvaluation {
+            get {
+                return ResourceManager.GetString("ValueProviderPropertyBinding_TraceFailedEvaluation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Command binding &apos;{0}&apos; can not be executed..
+        /// </summary>
+        internal static string VsLaunchPoint_ErrorCommandCannotExecute {
+            get {
+                return ResourceManager.GetString("VsLaunchPoint_ErrorCommandCannotExecute", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Executing command {0}.
+        /// </summary>
+        internal static string VsLaunchPoint_TraceExecute {
+            get {
+                return ResourceManager.GetString("VsLaunchPoint_TraceExecute", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Attempted to execute launch point {0} but its querystatus did not return Enabled..
+        /// </summary>
+        internal static string VsLaunchPoint_TraceNotEnabled {
+            get {
+                return ResourceManager.GetString("VsLaunchPoint_TraceNotEnabled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to VS Template Launch Point.
+        /// </summary>
+        internal static string VsTemplateLaunchPoint_DisplayName {
+            get {
+                return ResourceManager.GetString("VsTemplateLaunchPoint_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Command binding &apos;{0}&apos; can not be executed..
+        /// </summary>
+        internal static string VsTemplateLaunchPoint_ErrorEvaluateFailed {
+            get {
+                return ResourceManager.GetString("VsTemplateLaunchPoint_ErrorEvaluateFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Executing command {0}.
+        /// </summary>
+        internal static string VsTemplateLaunchPoint_TraceExecuteCommand {
+            get {
+                return ResourceManager.GetString("VsTemplateLaunchPoint_TraceExecuteCommand", resourceCulture);
             }
         }
     }

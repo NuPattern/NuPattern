@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NuPattern.Runtime.Schema.Properties
-{
-
-
+namespace NuPattern.Runtime.Schema.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -437,6 +437,24 @@ namespace NuPattern.Runtime.Schema.Properties
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Loading Diagram.
+        /// </summary>
+        internal static string PatternModelSerializationHelper_TransactionDescriptionLoadingDiagram {
+            get {
+                return ResourceManager.GetString("PatternModelSerializationHelper_TransactionDescriptionLoadingDiagram", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loading pattern model.
+        /// </summary>
+        internal static string PatternModelSerializationHelper_TransactionDescriptionLoadingModel {
+            get {
+                return ResourceManager.GetString("PatternModelSerializationHelper_TransactionDescriptionLoadingModel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to PatternName.
         /// </summary>
         internal static string PatternSchema_DefaultName {
@@ -595,6 +613,24 @@ namespace NuPattern.Runtime.Schema.Properties
         internal static string RegistrationSchema_DocumentEditorTitle {
             get {
                 return ResourceManager.GetString("RegistrationSchema_DocumentEditorTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Creating new instance.
+        /// </summary>
+        internal static string SchemaImplementation_TransactionDescriptionCreate {
+            get {
+                return ResourceManager.GetString("SchemaImplementation_TransactionDescriptionCreate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deleting instance.
+        /// </summary>
+        internal static string SchemaImplementation_TransactionDescriptionDelete {
+            get {
+                return ResourceManager.GetString("SchemaImplementation_TransactionDescriptionDelete", resourceCulture);
             }
         }
         

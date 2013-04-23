@@ -16,18 +16,18 @@ namespace NuPattern.Library.SchemaUpgrade
     /// <see cref="InstantiateGuidanceWorkflowCommand"/> and <see cref="ActivateOrInstantiateSharedGuidanceWorkflowCommand"/> commands.
     /// </summary>
     /// <remarks> this processor must run after the <see cref="CommandSettingsUpgradeProcessor"/></remarks>
-    [SchemaUpgradeProcessorOptions(Order = 1200, TargetVersion = "1.2.0.0")]
+    [SchemaUpgradeProcessorOptions(Order = 1200, TargetVersion = @"1.2.0.0")]
     internal class GuidanceCommandUpgradeProcessor : IPatternModelSchemaUpgradeProcessor
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<GuidanceCommandUpgradeProcessor>();
         private const string DefaultNamespace = SchemaConstants.DefaultNamespace;
-        private static readonly XName CommandSettingsElementName = XName.Get("commandSettings", DefaultNamespace);
-        private static readonly XName CommandSettingsPropertiesElementName = XName.Get("properties", DefaultNamespace);
-        private const string CommandSettingsTypeIdName = "typeId";
-        private const string ActivateCommandTypeName = "NuPattern.Library.Commands.ActivateFeatureCommand";
-        private const string InstantiateCommandTypeName = "NuPattern.Library.Commands.InstantiateFeatureCommand";
-        private const string ActivateOrInstantiateCommandTypeName = "NuPattern.Library.Commands.ActivateOrInstantiateSharedFeatureCommand";
-        private const string FeatureIdPropertyName = "FeatureId";
+        private static readonly XName CommandSettingsElementName = XName.Get(@"commandSettings", DefaultNamespace);
+        private static readonly XName CommandSettingsPropertiesElementName = XName.Get(@"properties", DefaultNamespace);
+        private const string CommandSettingsTypeIdName = @"typeId";
+        private const string ActivateCommandTypeName = @"NuPattern.Library.Commands.ActivateFeatureCommand";
+        private const string InstantiateCommandTypeName = @"NuPattern.Library.Commands.InstantiateFeatureCommand";
+        private const string ActivateOrInstantiateCommandTypeName = @"NuPattern.Library.Commands.ActivateOrInstantiateSharedFeatureCommand";
+        private const string FeatureIdPropertyName = @"FeatureId";
 
         /// <summary>
         /// Gets whether the document has been changed.

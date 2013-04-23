@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 using NuPattern.Diagnostics;
+using NuPattern.Runtime.Properties;
 
 namespace NuPattern.Runtime.Bindings
 {
@@ -56,7 +57,7 @@ namespace NuPattern.Runtime.Bindings
                         else
                         {
                             var message = string.Format(CultureInfo.CurrentCulture,
-                                "Provided value {0} is not compatible with property {1}.{2} of type {3}, and specific type conversion is not supported by provided converter {4}.",
+                                Resources.PropertyBinding_PropertyNotCompatible,
                                 ObjectDumper.ToString(value, 5), target, this.PropertyName, property.PropertyType, property.Converter);
 
                             tracer.TraceError(message);
@@ -66,7 +67,7 @@ namespace NuPattern.Runtime.Bindings
                     else
                     {
                         var message = string.Format(CultureInfo.CurrentCulture,
-                            "Provided value {0} is not compatible with property {1}.{2} of type {3}, and a custom type conversion is not provided.",
+                            Resources.PropertyBinding_TracePropertyCustomNotCompatible,
                             ObjectDumper.ToString(value, 5), target, this.PropertyName, property.PropertyType);
 
                         tracer.TraceError(message);
@@ -80,7 +81,7 @@ namespace NuPattern.Runtime.Bindings
             }
             else
             {
-                var message = string.Format(CultureInfo.CurrentCulture, "Property {0}.{1} not found", target, this.PropertyName);
+                var message = string.Format(CultureInfo.CurrentCulture, Resources.PropertyBinding_TracePropertyNotFound, target, this.PropertyName);
                 tracer.TraceError(message);
                 throw new ArgumentException(message);
             }

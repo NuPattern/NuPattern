@@ -48,16 +48,16 @@ namespace NuPattern.Runtime
             {
                 this.ResourceName = content.RelativePath;
             }
-            else if (resourceNames.Contains(assemblyName.Name + "." + content.RelativePath))
+            else if (resourceNames.Contains(assemblyName.Name + @"." + content.RelativePath))
             {
-                this.ResourceName = assemblyName.Name + "." + content.RelativePath;
+                this.ResourceName = assemblyName.Name + @"." + content.RelativePath;
             }
             else
             {
                 var message = string.Format(CultureInfo.CurrentCulture,
                     Resources.SchemaResource_FailedToLoadSchemaStream,
                     content.RelativePath,
-                    assemblyName.Name + "." + this.ResourceName,
+                    assemblyName.Name + @"." + this.ResourceName,
                     this.AssemblyPath);
 
                 tracer.TraceError(message);
@@ -92,7 +92,7 @@ namespace NuPattern.Runtime
                 var message = string.Format(CultureInfo.CurrentCulture,
                     Resources.SchemaResource_FailedToLoadSchemaStream,
                     this.ResourceName,
-                    assemblyName.Name + "." + this.ResourceName,
+                    assemblyName.Name + @"." + this.ResourceName,
                     this.AssemblyPath);
 
                 tracer.TraceError(message);

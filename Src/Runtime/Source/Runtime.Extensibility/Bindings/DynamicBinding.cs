@@ -109,7 +109,7 @@ namespace NuPattern.Runtime.Bindings
 
                 foreach (var result in results)
                 {
-                    tracer.TraceError("Dynamic binding '{0}' failed on imported property '{1}': {2}", this.ComponentTypeId, property.Name, result.ErrorMessage);
+                    tracer.TraceError(Resources.DynamicBinding_TraceFailedDynamicBinding, this.ComponentTypeId, property.Name, result.ErrorMessage);
                     evaluationResult = false;
                 }
             }

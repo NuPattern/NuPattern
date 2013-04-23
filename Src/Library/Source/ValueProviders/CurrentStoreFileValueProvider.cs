@@ -11,9 +11,9 @@ namespace NuPattern.Library.ValueProviders
     /// <summary>
     /// A <see cref=" ValueProvider"/> that provides the current value of a variable property of the current element in the pattern model.
     /// </summary>
-    [DisplayNameResource("CurrentStoreFileValueProvider_DisplayName", typeof(Resources))]
-    [DescriptionResource("CurrentStoreFileValueProvider_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
+    [DisplayNameResource(@"CurrentStoreFileValueProvider_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"CurrentStoreFileValueProvider_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class CurrentStoreFileValueProvider : ValueProvider
     {

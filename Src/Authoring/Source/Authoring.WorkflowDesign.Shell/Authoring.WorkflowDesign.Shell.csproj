@@ -26,7 +26,11 @@
 			<HintPath>$(PatternToolkitRuntime)\NuPattern.Common.dll</HintPath>
 			<Private>false</Private>
 		</Reference>
-		<Reference Include="EnvDTE">
+    <Reference Include="NuPattern.VisualStudio">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.VisualStudio.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="EnvDTE">
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\envdte.dll</HintPath>
     </Reference>

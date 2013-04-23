@@ -158,19 +158,19 @@ namespace NuPattern.VisualStudio.TemplateWizards
         private void LoadWizards(IVsTemplateWizardData wizardData)
         {
             var wizardElements = from coordinator in wizardData.Elements
-                                 where coordinator.Name.Equals("CoordinatedWizards", StringComparison.OrdinalIgnoreCase)
+                                 where coordinator.Name.Equals(@"CoordinatedWizards", StringComparison.OrdinalIgnoreCase)
                                  from wizardNode in coordinator.ChildNodes.OfType<XmlElement>()
-                                 where wizardNode.LocalName == "WizardExtension"
+                                 where wizardNode.LocalName == @"WizardExtension"
                                  select new
                                  {
                                      Assembly = wizardNode.ChildNodes
                                         .OfType<XmlElement>()
-                                        .Where(node => node.LocalName == "Assembly")
+                                        .Where(node => node.LocalName == @"Assembly")
                                         .Select(node => node.InnerText)
                                         .FirstOrDefault(),
                                      TypeName = wizardNode.ChildNodes
                                         .OfType<XmlElement>()
-                                        .Where(node => node.LocalName == "FullClassName")
+                                        .Where(node => node.LocalName == @"FullClassName")
                                         .Select(node => node.InnerText)
                                         .FirstOrDefault(),
                                  };

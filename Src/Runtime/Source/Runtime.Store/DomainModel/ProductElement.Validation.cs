@@ -85,7 +85,7 @@ namespace NuPattern.Runtime.Store
                         // If we have an info, first check that it differs from the instance name
                         // to avoid duplicating the same string
                         this.InstanceName != this.Info.DisplayName ?
-                            this.InstanceName + " (" + this.Info.DisplayName + ")" :
+                            this.InstanceName + @" (" + this.Info.DisplayName + @")" :
                         // If they are equal, just use the instance name.
                             this.InstanceName
                         : this.InstanceName;
@@ -98,7 +98,7 @@ namespace NuPattern.Runtime.Store
                             {
                                 Name = name,
                                 DisplayName = properties[name].DisplayName,
-                                FormattedName = typeName + " '" + properties[name].DisplayName + "'",
+                                FormattedName = typeName + @" '" + properties[name].DisplayName + @"'",
                             });
 
                         var message = result.ErrorMessage;
@@ -194,7 +194,7 @@ namespace NuPattern.Runtime.Store
                         var errors = validationController.ErrorMessages.Select(e => e.Description).Where(d => d != null).ToList();
                         if (errors.Count > 0)
                         {
-                            return string.Join("\n", errors);
+                            return string.Join(Environment.NewLine, errors);
                         }
                     }
                 }

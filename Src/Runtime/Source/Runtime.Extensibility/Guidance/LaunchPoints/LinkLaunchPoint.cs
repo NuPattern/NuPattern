@@ -4,6 +4,7 @@ using System.Windows;
 using NuPattern.Diagnostics;
 using NuPattern.Runtime.Guidance.Diagnostics;
 using NuPattern.Runtime.Guidance.Workflow;
+using NuPattern.Runtime.Properties;
 
 namespace NuPattern.Runtime.Guidance.LaunchPoints
 {
@@ -67,7 +68,7 @@ namespace NuPattern.Runtime.Guidance.LaunchPoints
         /// </summary>
         public virtual void NotifyUser()
         {
-            MessageBox.Show("Unable to execute command because the associated guidance action is not in the Enabled (green) state.");
+            MessageBox.Show(Resources.LinkLaunchPoint_NotifyUser);
         }
 
         /// <summary>
@@ -80,13 +81,13 @@ namespace NuPattern.Runtime.Guidance.LaunchPoints
             {
                 throw new InvalidOperationException(string.Format(
                     CultureInfo.CurrentCulture,
-                    "Command {0}' can not be executed.",
+                    Resources.LinkLaunchPoint_ErrorCommandCannotExecute,
                     this.BindingName));
             }
 
             var tracer = GuidanceExtensionTracer.GetSourceFor(this, extension.ExtensionId, extension.InstanceName);
 
-            using (tracer.StartActivity("Executing command {0}", BindingName))
+            using (tracer.StartActivity(Resources.LinkLaunchPoint_TraceExecute, BindingName))
             {
                 var commandBinding = extension.Commands.FindByName(this.BindingName);
                 if (commandBinding != null)

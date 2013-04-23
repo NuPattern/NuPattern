@@ -14,10 +14,10 @@ namespace NuPattern.Runtime.References
     /// Provides type information for the <see cref="SolutionArtifactLinkReference"/> reference kind.
     /// </summary>
     [ReferenceKindProvider]
-    [DisplayNameResource("SolutionArtifactLinkReference_DisplayName", typeof(Resources))]
-    [DescriptionResource("SolutionArtifactLinkReference_Description", typeof(Resources))]
+    [DisplayNameResource(@"SolutionArtifactLinkReference_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"SolutionArtifactLinkReference_Description", typeof(Resources))]
     [Editor(typeof(SolutionItemUriEditor), typeof(UITypeEditor))]
-    [SolutionEditorSettings(TitleResourceName = "SolutionArtifactLinkReference_EditorTitle", ResourceType = typeof(Resources),
+    [SolutionEditorSettings(TitleResourceName = @"SolutionArtifactLinkReference_EditorTitle", ResourceType = typeof(Resources),
         Kind = ItemKind.Solution | ItemKind.SolutionFolder | ItemKind.Project | ItemKind.Folder | ItemKind.Item)]
     public class SolutionArtifactLinkReference : ReferenceKindProvider<SolutionArtifactLinkReference, Uri>
     {

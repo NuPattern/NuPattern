@@ -9,7 +9,7 @@ namespace NuPattern.Runtime.Guidance.Workflow
     /// <summary>
     /// Represents an activity in the guidance workflow.
     /// </summary>
-    [DisplayNameResource("GuidanceNode_GuidanceAction_DisplayName", typeof(Resources))]
+    [DisplayNameResource(@"GuidanceNode_GuidanceAction_DisplayName", typeof(Resources))]
     public class GuidanceAction : ConditionalNode, IGuidanceAction
     {
         //private static readonly ITraceSource tracer = Tracer.GetSourceFor<Node>();

@@ -74,7 +74,7 @@ namespace NuPattern.Runtime.Design
 
             return new StandardValue(
                 displayNameAttribute != null ? displayNameAttribute.DisplayName : type.FullName,
-                type.FullName + ", " + type.Assembly.FullName.Split(',')[0],
+                type.FullName + @", " + type.Assembly.FullName.Split(',')[0],
                 descriptionAttribute != null ? descriptionAttribute.Description : string.Empty,
                 categoryAttribute != null ? categoryAttribute.Category : string.Empty);
         }

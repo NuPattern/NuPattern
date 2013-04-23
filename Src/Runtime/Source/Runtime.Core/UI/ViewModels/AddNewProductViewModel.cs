@@ -211,14 +211,14 @@ namespace NuPattern.Runtime.UI.ViewModels
             var sortingItems = new List<SortItem>();
             sortingItems.Add(new SortItem(
                     Resources.AddNewProductViewModel_SortFormatNameAscending,
-                    String.Format(CultureInfo.InvariantCulture, "{{{0}.{1}.{2}}}",
+                    String.Format(CultureInfo.InvariantCulture, @"{{{0}.{1}.{2}}}",
                         Reflector<IInstalledToolkitInfo>.GetPropertyName(x => x.Schema),
                         Reflector<IPatternModelInfo>.GetPropertyName(x => x.Pattern),
                         Reflector<IPatternInfo>.GetPropertyName(x => x.DisplayName)),
                     ListSortDirection.Ascending));
             sortingItems.Add(new SortItem(
                     Resources.AddNewProductViewModel_SortFormatNameDescending,
-                    String.Format(CultureInfo.InvariantCulture, "{{{0}.{1}.{2}}}",
+                    String.Format(CultureInfo.InvariantCulture, @"{{{0}.{1}.{2}}}",
                         Reflector<IInstalledToolkitInfo>.GetPropertyName(x => x.Schema),
                         Reflector<IPatternModelInfo>.GetPropertyName(x => x.Pattern),
                         Reflector<IPatternInfo>.GetPropertyName(x => x.DisplayName)),

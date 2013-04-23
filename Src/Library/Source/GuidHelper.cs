@@ -15,15 +15,15 @@ namespace NuPattern.Library
             switch (format)
             {
                 case GuidFormat.JustDigits:
-                    return "N";
+                    return @"N";
                 case GuidFormat.JustDigitsWithHyphens:
-                    return "D";
+                    return @"D";
                 case GuidFormat.DigitsHyphensCurlyBraces:
-                    return "B";
+                    return @"B";
                 case GuidFormat.DigitsHyphensRoundBraces:
-                    return "P";
+                    return @"P";
                 case GuidFormat.Hexadecimal:
-                    return "X";
+                    return @"X";
                 default:
                     throw new InvalidOperationException();
             }

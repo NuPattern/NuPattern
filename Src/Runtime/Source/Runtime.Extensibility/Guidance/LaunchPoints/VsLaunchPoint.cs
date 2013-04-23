@@ -5,6 +5,7 @@ using Microsoft.VisualStudio.Modeling.ExtensionEnablement;
 using Microsoft.VisualStudio.Shell;
 using NuPattern.Diagnostics;
 using NuPattern.Runtime.Guidance.Diagnostics;
+using NuPattern.Runtime.Properties;
 
 namespace NuPattern.Runtime.Guidance.LaunchPoints
 {
@@ -81,7 +82,7 @@ namespace NuPattern.Runtime.Guidance.LaunchPoints
             {
                 throw new InvalidOperationException(string.Format(
                     CultureInfo.CurrentCulture,
-                    "Command binding '{0}' can not be executed.",
+                    Resources.VsLaunchPoint_ErrorCommandCannotExecute,
                     this.BindingName));
             }
 
@@ -93,7 +94,7 @@ namespace NuPattern.Runtime.Guidance.LaunchPoints
 
             var tracer = GuidanceExtensionTracer.GetSourceFor(this, extension.ExtensionId, extension.InstanceName);
 
-            using (tracer.StartActivity("Executing command {0}", BindingName))
+            using (tracer.StartActivity(Resources.VsLaunchPoint_TraceExecute, BindingName))
             {
                 var commandBinding = extension.Commands.FindByName(this.BindingName);
                 commandBinding.Value.Execute();
@@ -116,7 +117,7 @@ namespace NuPattern.Runtime.Guidance.LaunchPoints
                     GuidanceExtensionTracer.GetSourceFor<VsLaunchPoint>(extension.ExtensionId) :
                     Tracer.GetSourceFor<VsLaunchPoint>();
 
-                tracer.TraceWarning("Attempted to execute launch point {0} but its querystatus did not return Enabled.", launchPoint);
+                tracer.TraceWarning(Resources.VsLaunchPoint_TraceNotEnabled, launchPoint);
             }
         }
 

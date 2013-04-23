@@ -5,6 +5,7 @@ using System.Security.Permissions;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
+using NuPattern.VisualStudio.Properties;
 
 namespace NuPattern.VisualStudio.Solution.Hierarchy
 {
@@ -36,7 +37,7 @@ namespace NuPattern.VisualStudio.Solution.Hierarchy
 
             if (hr != VSConstants.S_OK)
             {
-                throw new HierarchyNodeException("Could not retrieve tool window.");
+                throw new HierarchyNodeException(Resources.HierarchyNodeFactory_ErrorNoToolWindow);
             }
 
             IVsHierarchy selectedHier = Marshal.GetObjectForIUnknown(pHier) as IVsHierarchy;

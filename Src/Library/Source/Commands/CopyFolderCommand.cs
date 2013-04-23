@@ -17,9 +17,9 @@ namespace NuPattern.Library.Commands
     /// <summary>
     /// Activates (opens or selects) the linked artifacts associated to current element.
     /// </summary>
-    [DisplayNameResource("CopyFolderCommand_DisplayName", typeof(Resources))]
-    [DescriptionResource("CopyFolderCommand_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_General", typeof(Resources))]
+    [DisplayNameResource(@"CopyFolderCommand_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"CopyFolderCommand_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_General", typeof(Resources))]
     [CLSCompliant(false)]
     public class CopyFolderCommand : Command
     {
@@ -48,8 +48,8 @@ namespace NuPattern.Library.Commands
         /// <summary>
         /// Gets or sets whether to overwrite the destination folder if it exists.
         /// </summary>
-        [DisplayNameResource("CopyFolderCommand_OverwriteIfExists_DisplayName", typeof(Resources))]
-        [DescriptionResource("CopyFolderCommand_OverwriteIfExists_Description", typeof(Resources))]
+        [DisplayNameResource(@"CopyFolderCommand_OverwriteIfExists_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"CopyFolderCommand_OverwriteIfExists_Description", typeof(Resources))]
         [DefaultValue(DefaultOverwriteIfExists)]
         [Required]
         public bool OverwriteIfExists { get; set; }
@@ -58,8 +58,8 @@ namespace NuPattern.Library.Commands
         /// Gets or sets the source folder to copy from.
         /// </summary>
         [Editor(typeof(FolderNameEditor), typeof(UITypeEditor))]
-        [DisplayNameResource("CopyFolderCommand_SourcePath_DisplayName", typeof(Resources))]
-        [DescriptionResource("CopyFolderCommand_SourcePath_Description", typeof(Resources))]
+        [DisplayNameResource(@"CopyFolderCommand_SourcePath_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"CopyFolderCommand_SourcePath_Description", typeof(Resources))]
         [Required]
         public string SourcePath { get; set; }
 
@@ -67,8 +67,8 @@ namespace NuPattern.Library.Commands
         /// Gets or sets the destination folder to copy to.
         /// </summary>
         [Editor(typeof(FolderNameEditor), typeof(UITypeEditor))]
-        [DisplayNameResource("CopyFolderCommand_DestinationPath_DisplayName", typeof(Resources))]
-        [DescriptionResource("CopyFolderCommand_DestinationPath_Description", typeof(Resources))]
+        [DisplayNameResource(@"CopyFolderCommand_DestinationPath_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"CopyFolderCommand_DestinationPath_Description", typeof(Resources))]
         [Required]
         public string DestinationPath { get; set; }
 

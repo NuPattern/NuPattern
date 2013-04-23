@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.IO;
 using System.Linq;
-using Microsoft.VisualStudio.Shell;
 using NuPattern.Diagnostics;
 using NuPattern.Drawing;
 using NuPattern.Runtime.Composition;
 using NuPattern.Runtime.Guidance;
+using NuPattern.Runtime.Properties;
 using NuPattern.VisualStudio.Extensions;
 
 namespace NuPattern.Runtime.Shell
@@ -48,7 +48,7 @@ namespace NuPattern.Runtime.Shell
                 {
                     if (this.ExtensionManager == null)
                     {
-                        tracer.TraceError("Extension Manager service not available. Cannot load registered guidance extensions.");
+                        tracer.TraceError(Resources.GuidanceRegistrationAdapter_TraceExtensionManagerNotAvailable);
                         yield break;
                     }
 
@@ -82,7 +82,7 @@ namespace NuPattern.Runtime.Shell
                             // Verify that both IDs match and issue a warning if they don't.
                             if (export.Metadata.ExtensionId != extension.Header.Identifier)
                             {
-                                tracer.TraceWarning("Guidance extension metadata attribute specifies idenfitier '{0}' but guidance extension vsix manifest specifies '{1}'.\nThe two values must match. Skipping guidance extension registration. Please contact guidance extension author.",
+                                tracer.TraceWarning(Resources.GuidanceRegistrationAdapter_TraceSkipIdMismatch,
                                     export.Metadata.ExtensionId, extension.Header.Identifier);
                                 continue;
                             }
@@ -100,7 +100,7 @@ namespace NuPattern.Runtime.Shell
                         }
                         else
                         {
-                            tracer.TraceWarning("Could not locate vsix manifest file from location inferred from the exported guidance extension assembly location: {0}.\nSkipping guidance extension type with identifier {1}.",
+                            tracer.TraceWarning(Resources.GuidanceRegistrationAdapter_TraceMissingManifest,
                                 extensionManifestFilename, export.Metadata.ExtensionId);
                             continue;
                         }

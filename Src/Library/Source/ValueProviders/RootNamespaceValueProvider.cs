@@ -10,9 +10,9 @@ namespace NuPattern.Library.ValueProviders
     /// <summary>
     /// A <see cref=" ValueProvider"/> that provides the project root namespace.
     /// </summary>
-    [DisplayNameResource("RootNamespaceValueProvider_DisplayName", typeof(Resources))]
-    [DescriptionResource("RootNamespaceValueProvider_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_VisualStudio", typeof(Resources))]
+    [DisplayNameResource(@"RootNamespaceValueProvider_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"RootNamespaceValueProvider_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_VisualStudio", typeof(Resources))]
     [CLSCompliant(false)]
     public class RootNamespaceValueProvider : VsProjectPropertyValueProvider
     {

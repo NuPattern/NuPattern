@@ -11,9 +11,9 @@ namespace NuPattern.Library.ValueProviders
     /// <summary>
     /// A <see cref=" ValueProvider"/> that returns a new randomly created GUID.
     /// </summary>
-    [DisplayNameResource("RandomGuidValueProvider_DisplayName", typeof(Resources))]
-    [DescriptionResource("RandomGuidValueProvider_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_General", typeof(Resources))]
+    [DisplayNameResource(@"RandomGuidValueProvider_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"RandomGuidValueProvider_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_General", typeof(Resources))]
     [CLSCompliant(false)]
     public class RandomGuidValueProvider : ValueProvider
     {
@@ -30,8 +30,8 @@ namespace NuPattern.Library.ValueProviders
         /// <summary>
         /// The format of the returned guid.
         /// </summary>
-        [DisplayNameResource("RandomGuidValueProvider_Format_DisplayName", typeof(Resources))]
-        [DescriptionResource("RandomGuidValueProvider_Format_Description", typeof(Resources))]
+        [DisplayNameResource(@"RandomGuidValueProvider_Format_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"RandomGuidValueProvider_Format_Description", typeof(Resources))]
         [DefaultValue(GuidFormat.JustDigitsWithHyphens)]
         [Required]
         public GuidFormat Format { get; set; }

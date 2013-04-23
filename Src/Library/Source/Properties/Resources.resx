@@ -2432,4 +2432,16 @@ Select the related solution items to delete and press 'OK', or press 'Cancel' to
   <data name="GuidanceExtensionUpgradeProcessor_TraceDeserialize" xml:space="preserve">
     <value>Upgrading GuidanceExtension elements.</value>
   </data>
+  <data name="ProductElementDictionaryConverter_ErrorElementNotSupportAncestors" xml:space="preserve">
+    <value>Element '{0}' does not support ancestors.</value>
+  </data>
+  <data name="ProductElementDictionaryConverter_ErrorElementNotSupportDescendants" xml:space="preserve">
+    <value>Element '{0}' does not support descendants.</value>
+  </data>
+  <data name="CreateElementFromPickedFileCommand_AllFilesFilter" xml:space="preserve">
+    <value>All files (*.*)|*.*</value>
+  </data>
+  <data name="CreateElementFromPickedFileCommand_FilterFormat" xml:space="preserve">
+    <value>(*{0})|*{0}</value>
+  </data>
 </root>

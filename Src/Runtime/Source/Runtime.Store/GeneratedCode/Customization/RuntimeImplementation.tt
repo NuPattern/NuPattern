@@ -21,6 +21,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using NuPattern.ComponentModel;
 using NuPattern.Modeling;
+using NuPattern.Runtime.Store.Properties;
 
 <#
 foreach (var domainClass in this.DslLibrary.Classes)
@@ -247,7 +248,7 @@ private void GenerateCreate(string propertyType, string propertyName)
 /// </summary>
 public I<#= propertyType #> Create<#= propertyType #>(Action<I<#= propertyType #>> initializer = null)
 {
-    using (var tx = this.Store.TransactionManager.BeginTransaction("InnerTx", this.IsSerializing))
+    using (var tx = this.Store.TransactionManager.BeginTransaction(Resources.ProductState_TransactionDescriptionCreate, this.IsSerializing))
     using (new StorePropertyBag(this.Store, ProductState.IsCreatingElementKey, true))
     {
         var instance = this.Create<<#= propertyType #>>();

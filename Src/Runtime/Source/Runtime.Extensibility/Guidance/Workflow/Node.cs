@@ -48,8 +48,8 @@ namespace NuPattern.Runtime.Guidance.Workflow
         /// Gets or sets the node name.
         /// </summary>
         /// <value>The process element name.</value>
-        [DisplayNameResource("GuidanceNode_Name_DisplayName", typeof(Resources))]
-        [DescriptionResource("GuidanceNode_Name_Description", typeof(Resources))]
+        [DisplayNameResource(@"GuidanceNode_Name_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"GuidanceNode_Name_Description", typeof(Resources))]
         [ReadOnly(true)]
         public string Name { get; set; }
 
@@ -64,8 +64,8 @@ namespace NuPattern.Runtime.Guidance.Workflow
         /// Gets or sets the node description.
         /// </summary>
         /// <value>The guidance predecessor description.</value>
-        [DisplayNameResource("GuidanceNode_Description_DisplayName", typeof(Resources))]
-        [DescriptionResource("GuidanceNode_Description_Description", typeof(Resources))]
+        [DisplayNameResource(@"GuidanceNode_Description_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"GuidanceNode_Description_Description", typeof(Resources))]
         [ReadOnly(true)]
         public string Description { get; set; }
 
@@ -81,8 +81,8 @@ namespace NuPattern.Runtime.Guidance.Workflow
         /// <summary>
         /// Gets the node state.
         /// </summary>
-        [DisplayNameResource("GuidanceNode_State_DisplayName", typeof(Resources))]
-        [DescriptionResource("GuidanceNode_State_Description", typeof(Resources))]
+        [DisplayNameResource(@"GuidanceNode_State_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"GuidanceNode_State_Description", typeof(Resources))]
         [ReadOnly(true)]
         public virtual NodeState State { get; protected set; }
 
@@ -110,8 +110,8 @@ namespace NuPattern.Runtime.Guidance.Workflow
         /// <summary>
         /// Optional link to documentation about this node.
         /// </summary>
-        [DisplayNameResource("GuidanceNode_Link_DisplayName", typeof(Resources))]
-        [DescriptionResource("GuidanceNode_Link_Description", typeof(Resources))]
+        [DisplayNameResource(@"GuidanceNode_Link_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"GuidanceNode_Link_Description", typeof(Resources))]
         [ReadOnly(true)]
         public string Link { get; set; }
 
@@ -135,7 +135,7 @@ namespace NuPattern.Runtime.Guidance.Workflow
             if (this.predecessors.Count != 1 ||
                 this.predecessors.Count != 1)
             {
-                throw new Exception("Workflow actions containing include:// must have only one predecessor and one successor");
+                throw new Exception(Resources.Node_ErrorOnlySinglePredecessor);
             }
 
 

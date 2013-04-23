@@ -14,6 +14,8 @@ namespace NuPattern.VisualStudio.Solution
 {
     internal class VsProject : HierarchyItem, IProject
     {
+        private const string BuildConfigurationSeparator = @"|";
+
         // For testing
         internal VsProject() { }
 
@@ -130,7 +132,7 @@ namespace NuPattern.VisualStudio.Solution
                         foreach (string platform in (IEnumerable)this.project.As<EnvDTE.Project>().ConfigurationManager.PlatformNames)
                         {
                             // Remove the whitespace from platform (Any CPU becomes AnyCPU)
-                            storage.GetPropertyValue(binder.Name, configuration + "|" + platform.Replace(" ", ""), (uint)storageType, out value);
+                            storage.GetPropertyValue(binder.Name, configuration + BuildConfigurationSeparator + platform.Replace(@" ", string.Empty), (uint)storageType, out value);
                             if (!string.IsNullOrEmpty(value))
                             {
                                 result = value;
@@ -178,7 +180,7 @@ namespace NuPattern.VisualStudio.Solution
                         {
                             ErrorHandler.Succeeded(storage.SetPropertyValue(binder.Name,
                                 // Remove the whitespace from platform (Any CPU becomes AnyCPU)
-                                configuration + "|" + platform.Replace(" ", ""), (uint)storageType, value.ToString()));
+                                configuration + BuildConfigurationSeparator + platform.Replace(@" ", string.Empty), (uint)storageType, value.ToString()));
                         }
                     }
 
@@ -207,7 +209,7 @@ namespace NuPattern.VisualStudio.Solution
                     if (indexes[0] is ProjectConfiguration && indexes[1] is ProjectPlatform)
                     {
                         return new SpecificConfigurationAndPlatformProperties(this.project,
-                            indexes[0] + "|" + indexes[1], userData);
+                            indexes[0] + BuildConfigurationSeparator + indexes[1], userData);
                     }
                 }
                 else if (indexes.Length == 1)
@@ -294,7 +296,7 @@ namespace NuPattern.VisualStudio.Solution
                 {
                     foreach (string configuration in (IEnumerable)this.project.As<EnvDTE.Project>().ConfigurationManager.ConfigurationRowNames)
                     {
-                        storage.GetPropertyValue(binder.Name, configuration + "|" + platform, (uint)storageType, out value);
+                        storage.GetPropertyValue(binder.Name, configuration + BuildConfigurationSeparator + platform, (uint)storageType, out value);
                         if (!string.IsNullOrEmpty(value))
                             return true;
                     }
@@ -313,7 +315,7 @@ namespace NuPattern.VisualStudio.Solution
                     foreach (string configuration in (IEnumerable)this.project.As<EnvDTE.Project>().ConfigurationManager.ConfigurationRowNames)
                     {
                         ErrorHandler.Succeeded(storage.SetPropertyValue(binder.Name,
-                            configuration + "|" + platform, (uint)storageType, value.ToString()));
+                            configuration + BuildConfigurationSeparator + platform, (uint)storageType, value.ToString()));
                     }
 
                     return true;
@@ -346,7 +348,7 @@ namespace NuPattern.VisualStudio.Solution
                 {
                     foreach (string platform in (IEnumerable)this.project.As<EnvDTE.Project>().ConfigurationManager.PlatformNames)
                     {
-                        storage.GetPropertyValue(binder.Name, configuration + "|" + platform, (uint)storageType, out value);
+                        storage.GetPropertyValue(binder.Name, configuration + BuildConfigurationSeparator + platform, (uint)storageType, out value);
                         if (!string.IsNullOrEmpty(value))
                             return true;
                     }
@@ -365,7 +367,7 @@ namespace NuPattern.VisualStudio.Solution
                     foreach (string platform in (IEnumerable)this.project.As<EnvDTE.Project>().ConfigurationManager.PlatformNames)
                     {
                         ErrorHandler.Succeeded(storage.SetPropertyValue(binder.Name,
-                            configuration + "|" + platform, (uint)storageType, value.ToString()));
+                            configuration + BuildConfigurationSeparator + platform, (uint)storageType, value.ToString()));
                     }
 
                     return true;

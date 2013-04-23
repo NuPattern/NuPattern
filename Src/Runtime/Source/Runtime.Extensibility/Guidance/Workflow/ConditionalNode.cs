@@ -44,8 +44,8 @@ namespace NuPattern.Runtime.Guidance.Workflow
         /// Gets the pre-conditions evaluated before the activity begins.
         /// </summary>
         /// <value>The pre-conditions evaluated before the activity begins.</value>
-        [DisplayNameResource("GuidanceNode_PreConditions_DisplayName", typeof(Resources))]
-        [DescriptionResource("GuidanceNode_PreConditions_Description", typeof(Resources))]
+        [DisplayNameResource(@"GuidanceNode_PreConditions_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"GuidanceNode_PreConditions_Description", typeof(Resources))]
         public IList<IBinding<ICondition>> Preconditions { get; private set; }
 
         /// <summary>
@@ -61,8 +61,8 @@ namespace NuPattern.Runtime.Guidance.Workflow
         /// Gets the post-conditions evaluated when the activity is <see cref="NodeState.Enabled"/>.
         /// </summary>
         /// <value>The post-conditions evaluated when the activity is <see cref="NodeState.Enabled"/>.</value>
-        [DisplayNameResource("GuidanceNode_PostConditions_DisplayName", typeof(Resources))]
-        [DescriptionResource("GuidanceNode_PostConditions_Description", typeof(Resources))]
+        [DisplayNameResource(@"GuidanceNode_PostConditions_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"GuidanceNode_PostConditions_Description", typeof(Resources))]
         public IList<IBinding<ICondition>> Postconditions { get; private set; }
 
         /// <summary>
@@ -80,8 +80,8 @@ namespace NuPattern.Runtime.Guidance.Workflow
         /// <value>
         /// 	<see langword="true"/> if the state is forced; otherwise, <see langword="false"/>.
         /// </value>
-        [DisplayNameResource("GuidanceNode_HasStateOverride_DisplayName", typeof(Resources))]
-        [DescriptionResource("GuidanceNode_HasStateOverride_Description", typeof(Resources))]
+        [DisplayNameResource(@"GuidanceNode_HasStateOverride_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"GuidanceNode_HasStateOverride_Description", typeof(Resources))]
         [ReadOnly(true)]
         public bool HasStateOverride
         {
@@ -100,8 +100,8 @@ namespace NuPattern.Runtime.Guidance.Workflow
         /// <summary>
         /// Gets or sets whether the user has accepted this node.
         /// </summary>
-        [DisplayNameResource("GuidanceNode_IsUserAccepted_DisplayName", typeof(Resources))]
-        [DescriptionResource("GuidanceNode_IsUserAccepted_Description", typeof(Resources))]
+        [DisplayNameResource(@"GuidanceNode_IsUserAccepted_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"GuidanceNode_IsUserAccepted_Description", typeof(Resources))]
         [ReadOnly(true)]
         public bool IsUserAccepted
         {

@@ -76,6 +76,10 @@
             <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Extensibility.dll</HintPath>
             <Private>false</Private>
         </Reference>
+        <Reference Include="NuPattern.VisualStudio">
+            <HintPath>$(PatternToolkitRuntime)\NuPattern.VisualStudio.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
     </ItemGroup>
     <ItemGroup>
         <Folder Include="Properties\" />

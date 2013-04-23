@@ -283,4 +283,22 @@ The solution item has instead been renamed to: '{1}'.</value>
   <data name="UserMessageService_MessageBoxTitle" xml:space="preserve">
     <value>Visual Studio</value>
   </data>
+  <data name="HierarchyNodeFactory_ErrorNoToolWindow" xml:space="preserve">
+    <value>Could not retrieve tool window.</value>
+  </data>
+  <data name="VsFileTemplate_VsFileTemplate_ErrorTemplateNotFound" xml:space="preserve">
+    <value>Source file for template was not found.</value>
+  </data>
+  <data name="VsFileTemplate_ErrorParentNotHierarchy" xml:space="preserve">
+    <value>This method requires a hierarchy item</value>
+  </data>
+  <data name="VsGlobalsDynamicProperties_TraceFailedToSetGlobals" xml:space="preserve">
+    <value>Failed to set data on Globals bag. Key={0}, Value={1}, Error={2}</value>
+  </data>
+  <data name="VsItemContainerExtensions_ErrorNoSolution" xml:space="preserve">
+    <value>Cannot retrieve a VS solution from the given solution interface.</value>
+  </data>
+  <data name="VsItemDynamicProperties_ErrorNullItemProperies" xml:space="preserve">
+    <value>Cannot set null value for custom MSBuild item properties.</value>
+  </data>
 </root>

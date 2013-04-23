@@ -11,8 +11,8 @@ namespace NuPattern.Library
     /// <summary>
     /// Command reference element to be shown int he command reference editor
     /// </summary>
-    [DisplayNameResource("CommandReference_DisplayName", typeof(Resources))]
-    [DescriptionResource("CommandReference_Description", typeof(Resources))]
+    [DisplayNameResource(@"CommandReference_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"CommandReference_Description", typeof(Resources))]
     [TypeDescriptionProvider(typeof(CommandReferenceTypeDescriptionProvider))]
     public class CommandReference
     {
@@ -31,9 +31,9 @@ namespace NuPattern.Library
         /// Gets or sets the command id.
         /// </summary>
         /// <value>The command id.</value>
-        [DisplayNameResource("CommandReference_DisplayName", typeof(Resources))]
-        [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
-        [DescriptionResource("CommandReference_Description", typeof(Resources))]
+        [DisplayNameResource(@"CommandReference_DisplayName", typeof(Resources))]
+        [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
+        [DescriptionResource(@"CommandReference_Description", typeof(Resources))]
         public Guid CommandId { get; set; }
 
         /// <summary>

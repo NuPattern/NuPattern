@@ -46,7 +46,7 @@ namespace NuPattern.Runtime.Guidance.Diagnostics
             get
             {
                 object name = null;
-                base.Data.TryGetValue("InstanceName", out name);
+                base.Data.TryGetValue(Reflector<GuidanceExtensionTraceRecord>.GetPropertyName(x => x.InstanceName), out name);
                 return (string)name;
             }
             private set

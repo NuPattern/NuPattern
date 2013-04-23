@@ -10,6 +10,7 @@ using NuPattern.Diagnostics;
 using NuPattern.Runtime.Composition;
 using NuPattern.Runtime.Guidance;
 using NuPattern.Runtime.Guidance.Diagnostics;
+using NuPattern.Runtime.Properties;
 using NuPattern.Runtime.Validation;
 
 namespace NuPattern.Runtime.Bindings
@@ -118,7 +119,7 @@ namespace NuPattern.Runtime.Bindings
         {
             if (GuidanceManagerSettings.VerboseBindingTracing)
             {
-                tracer.TraceVerbose("Evaluating binding {0}",
+                tracer.TraceVerbose(Resources.Binding_TraceEvaluate,
                                     this.lazyValue == null ? this.ToString() : this.lazyValue.Metadata.Id, this);
             }
             this.evaluationResults.Clear();
@@ -135,12 +136,12 @@ namespace NuPattern.Runtime.Bindings
             {
                 evaluationResult = false;
 
-                var bindingResult = new BindingResult("this");
+                var bindingResult = new BindingResult(@"this");
                 bindingResult.Errors.Add(string.Format(CultureInfo.CurrentCulture,
-                    "Could not resolve component with id '{0}' to an actual instance of type {1}.",
+                    Resources.Binding_EvaluateBindingError,
                     this.componentTypeId, typeof(T).Name));
 
-                this.evaluationResults.Add("this", bindingResult);
+                this.evaluationResults.Add(@"this", bindingResult);
             }
             else
             {

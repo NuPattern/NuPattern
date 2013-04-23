@@ -12,9 +12,9 @@ namespace NuPattern.Library.Commands
     /// <summary>
     /// Transforms all the Text Templates for the current solution.
     /// </summary>
-    [DisplayNameResource("RunVsCommandCommand_DisplayName", typeof(Resources))]
-    [DescriptionResource("RunVsCommandCommand_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_VisualStudio", typeof(Resources))]
+    [DisplayNameResource(@"RunVsCommandCommand_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"RunVsCommandCommand_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_VisualStudio", typeof(Resources))]
     [CLSCompliant(false)]
     public class RunVsCommandCommand : Command
     {
@@ -31,8 +31,8 @@ namespace NuPattern.Library.Commands
         /// Gets or sets the command to execute.
         /// </summary>
         [Required(AllowEmptyStrings = false)]
-        [DisplayNameResource("RunVsCommandCommand_CommandName_DisplayName", typeof(Resources))]
-        [DescriptionResource("RunVsCommandCommand_CommandName_Description", typeof(Resources))]
+        [DisplayNameResource(@"RunVsCommandCommand_CommandName_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"RunVsCommandCommand_CommandName_Description", typeof(Resources))]
         public virtual string CommandName { get; set; }
 
         /// <summary>

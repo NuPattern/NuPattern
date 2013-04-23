@@ -49,7 +49,7 @@ namespace NuPattern.Runtime.Shell
     [ProvideEditorExtension(typeof(ProductStateEditorFactory), NuPattern.Runtime.StoreConstants.RuntimeStoreExtension, 8, DefaultName = NuPattern.Runtime.StoreConstants.RuntimeStoreEditorDescription)]
     [ProvideAutoLoad(UIContextGuids.NoSolution)]
     [PackageRegistration(UseManagedResourcesOnly = true)]
-    [ProvideMenuResource("Menus.ctmenu", 1)]
+    [ProvideMenuResource(@"Menus.ctmenu", 1)]
     [ProvideToolWindow(typeof(SolutionBuilderToolWindow), Window = ToolWindowGuids.Toolbox, Orientation = ToolWindowOrientation.Right, Style = VsDockStyle.Tabbed)]
     [ProvideToolWindow(typeof(GuidanceExplorerToolWindow), Window = Constants.SolutionBuilderToolWindowGuid, Orientation = ToolWindowOrientation.Bottom, Style = VsDockStyle.Linked)]
     [ProvideToolWindow(typeof(GuidanceBrowserToolWindow), Window = ToolWindowGuids.TaskList, Style = VsDockStyle.Tabbed)]
@@ -57,22 +57,22 @@ namespace NuPattern.Runtime.Shell
     [Microsoft.VisualStudio.Modeling.Shell.ProvideBindingPath]
     [Guid(Constants.RuntimeShellPkgGuid)]
     [CLSCompliant(false)]
-    [ProvideService(typeof(IUriReferenceService), ServiceName = "IUriReferenceService")]
-    [ProvideService(typeof(ITemplateService), ServiceName = "TemplateService")]
-    [ProvideService(typeof(ISolution), ServiceName = "ISolution")]
-    [ProvideService(typeof(IExtensionManager), ServiceName = "IExtensionManager")]
-    [ProvideService(typeof(IGuidanceManager), ServiceName = "IGuidanceManager")]
-    [ProvideService(typeof(INuPatternCompositionService), ServiceName = "INuPatternCompositionService")]
-    [ProvideService(typeof(IGuidanceWindowsService), ServiceName = "IGuidanceWindowsService")]
-    [ProvideService(typeof(INuPatternProjectTypeProvider), ServiceName = "INuPatternProjectTypeProvider")]
-    [ProvideService(typeof(IPatternManager), ServiceName = "IPatternManager")]
-    [ProvideService(typeof(IPackageToolWindow), ServiceName = "IPackageToolWindow")]
-    [ProvideService(typeof(ISolutionEvents), ServiceName = "ISolutionEvents")]
-    [ProvideService(typeof(IUserMessageService), ServiceName = "IUserMessageService")]
-    [ProvideService(typeof(IBindingFactory), ServiceName = "IBindingFactory")]
-    [ProvideService(typeof(IBindingCompositionService), ServiceName = "IBindingCompositionService")]
-    [ProvideService(typeof(IToolkitInterfaceService), ServiceName = "IToolkitInferfaceService")]
-    [ProvideOptionPage(typeof(TraceOptionsPage), Constants.SettingsName, "TraceOptionsPage", 17131, 21356, true)]
+    [ProvideService(typeof(IUriReferenceService), ServiceName = @"IUriReferenceService")]
+    [ProvideService(typeof(ITemplateService), ServiceName = @"TemplateService")]
+    [ProvideService(typeof(ISolution), ServiceName = @"ISolution")]
+    [ProvideService(typeof(IExtensionManager), ServiceName = @"IExtensionManager")]
+    [ProvideService(typeof(IGuidanceManager), ServiceName = @"IGuidanceManager")]
+    [ProvideService(typeof(INuPatternCompositionService), ServiceName = @"INuPatternCompositionService")]
+    [ProvideService(typeof(IGuidanceWindowsService), ServiceName = @"IGuidanceWindowsService")]
+    [ProvideService(typeof(INuPatternProjectTypeProvider), ServiceName = @"INuPatternProjectTypeProvider")]
+    [ProvideService(typeof(IPatternManager), ServiceName = @"IPatternManager")]
+    [ProvideService(typeof(IPackageToolWindow), ServiceName = @"IPackageToolWindow")]
+    [ProvideService(typeof(ISolutionEvents), ServiceName = @"ISolutionEvents")]
+    [ProvideService(typeof(IUserMessageService), ServiceName = @"IUserMessageService")]
+    [ProvideService(typeof(IBindingFactory), ServiceName = @"IBindingFactory")]
+    [ProvideService(typeof(IBindingCompositionService), ServiceName = @"IBindingCompositionService")]
+    [ProvideService(typeof(IToolkitInterfaceService), ServiceName = @"IToolkitInferfaceService")]
+    [ProvideOptionPage(typeof(TraceOptionsPage), Constants.SettingsName, @"TraceOptionsPage", 17131, 21356, true)]
     [ProvideDirectiveProcessor(typeof(ModelElementDirectiveProcessor), ModelElementDirectiveProcessor.ProcessorName, Constants.LibraryDirectiveProcessorDescription)]
     public sealed class RuntimeShellPackage : Package
     {
@@ -329,7 +329,7 @@ namespace NuPattern.Runtime.Shell
             }
         }
 
-        [Conditional("DEBUG")]
+        [Conditional(@"DEBUG")]
         private void DumpMefLog(IComponentModel componentModel)
         {
             PackageUtility.ShowError(this, string.Format(CultureInfo.InvariantCulture, Resources.RuntimeShellPackage_DumpMefLogs, Constants.ProductName));
@@ -358,7 +358,7 @@ namespace NuPattern.Runtime.Shell
                 using (var writer = new StreamWriter(tempFile, false))
                 {
                     CompositionInfoTextFormatter.Write(new CompositionInfo(componentModel.GetCatalog(
-                        Catalog.CatalogName), componentModel.DefaultExportProvider), writer);
+                        Catalog.DefaultCatalogName), componentModel.DefaultExportProvider), writer);
                 }
 
                 Process.Start(tempFile);

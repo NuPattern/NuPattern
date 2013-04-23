@@ -6,10 +6,7 @@ using System.IO.Packaging;
 using System.Linq;
 using System.Xml;
 using Microsoft.VisualStudio.Settings;
-using Microsoft.VisualStudio.Shell;
 using NuPattern.VisualStudio.Properties;
-using Microsoft.VisualStudio.ComponentModelHost;
-using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.VisualStudio.Extensions
 {
@@ -27,6 +24,9 @@ namespace NuPattern.VisualStudio.Extensions
         private const long BufferSize = 4096;
         private static readonly Microsoft.VisualStudio.Settings.SettingsManager FakeSettings = new FakeSettingsManager();
         private const string ExtensionManagerServiceTypeFormat = "Microsoft.VisualStudio.ExtensionManager.ExtensionManagerService, Microsoft.VisualStudio.ExtensionManager.Implementation, Version={0}.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+        private const string PackageFileExtension = ".vsix";
+        private const string ManifestFileExtension = "extension.vsixmanifest";
+
         /// <summary>
         /// Unzips the contents of the vsix file to the target location. If the 
         /// target folder exists, it will be deleted before unzipping.
@@ -103,13 +103,13 @@ namespace NuPattern.VisualStudio.Extensions
         {
             Guard.NotNullOrEmpty(() => vsixOrManifest, vsixOrManifest);
 
-            if (vsixOrManifest.EndsWith(".vsix", StringComparison.OrdinalIgnoreCase))
+            if (vsixOrManifest.EndsWith(PackageFileExtension, StringComparison.OrdinalIgnoreCase))
             {
                 // Unzip just the manifest to temp location.
                 using (var package = ZipPackage.Open(vsixOrManifest, FileMode.Open))
                 {
                     var vsixPart = package.GetParts()
-                        .SingleOrDefault(part => part.Uri.OriginalString.EndsWith("extension.vsixmanifest", StringComparison.OrdinalIgnoreCase));
+                        .SingleOrDefault(part => part.Uri.OriginalString.EndsWith(ManifestFileExtension, StringComparison.OrdinalIgnoreCase));
                     if (vsixPart == null)
                     {
                         throw new ArgumentException(String.Format(
@@ -118,7 +118,7 @@ namespace NuPattern.VisualStudio.Extensions
                             vsixOrManifest));
                     }
 
-                    vsixOrManifest = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString(), "extension.vsixmanifest");
+                    vsixOrManifest = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString(), ManifestFileExtension);
                     Directory.CreateDirectory(Path.GetDirectoryName(vsixOrManifest));
 
                     using (var partStream = vsixPart.GetStream())
@@ -141,13 +141,13 @@ namespace NuPattern.VisualStudio.Extensions
         /// <returns>The in-memory extension manifest.</returns>
         public static IExtension ReadManifest(Stream vsixOrManifestStream)
         {
-            var vsixOrManifest = "From Stream";
+            var vsixOrManifest = @"From Stream";
 
             //// Unzip just the manifest to temp location.
             using (var package = ZipPackage.Open(vsixOrManifestStream))
             {
                 var vsixPart = package.GetParts()
-                    .SingleOrDefault(part => part.Uri.OriginalString.EndsWith("extension.vsixmanifest", StringComparison.OrdinalIgnoreCase));
+                    .SingleOrDefault(part => part.Uri.OriginalString.EndsWith(ManifestFileExtension, StringComparison.OrdinalIgnoreCase));
                 if (vsixPart == null)
                 {
                     throw new ArgumentException(string.Format(
@@ -156,7 +156,7 @@ namespace NuPattern.VisualStudio.Extensions
                         vsixOrManifest));
                 }
 
-                vsixOrManifest = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString(), "extension.vsixmanifest");
+                vsixOrManifest = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString(), ManifestFileExtension);
                 var dir = Path.GetDirectoryName(vsixOrManifest);
                 if (!String.IsNullOrEmpty(dir))
                 {
@@ -203,10 +203,10 @@ namespace NuPattern.VisualStudio.Extensions
         private static Type GetExtensionManagerType()
         {
 #if VSVER11
-            var version = "11.0";
+            var version = @"11.0";
 #endif
 #if VSVER10
-            var version = "10.0";
+            var version = @"10.0";
 #endif
             var type = string.Format(ExtensionManagerServiceTypeFormat, version);
             return Type.GetType(type, true);

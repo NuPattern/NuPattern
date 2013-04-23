@@ -35,8 +35,8 @@ namespace NuPattern.Library.Commands
         /// </summary>
         [Required]
         [DefaultValue(DefaultOpen)]
-        [DisplayNameResource("ActivateSolutionItemsCommand_Open_DisplayName", typeof(Resources))]
-        [DescriptionResource("ActivateSolutionItemsCommand_Open_Description", typeof(Resources))]
+        [DisplayNameResource(@"ActivateSolutionItemsCommand_Open_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"ActivateSolutionItemsCommand_Open_Description", typeof(Resources))]
         public bool Open { get; set; }
 
         /// <summary>

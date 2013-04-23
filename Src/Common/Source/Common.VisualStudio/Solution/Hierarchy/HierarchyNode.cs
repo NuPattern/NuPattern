@@ -46,9 +46,9 @@ namespace NuPattern.VisualStudio.Solution.Hierarchy
             public const uint SHGFI_LARGEICON = 0x0; // 'Large icon
             public const uint SHGFI_SMALLICON = 0x1; // 'Small icon
 
-            [DllImport("shell32.dll", CharSet = CharSet.Unicode)]
+            [DllImport(@"shell32.dll", CharSet = CharSet.Unicode)]
             public static extern IntPtr SHGetFileInfo(string pszPath, uint dwFileAttributes, ref SHFILEINFO psfi, uint cbSizeFileInfo, uint uFlags);
-            [DllImport("comctl32.dll")]
+            [DllImport(@"comctl32.dll")]
             public extern static IntPtr ImageList_GetIcon(IntPtr himl, int i, uint flags);
         }
 
@@ -77,8 +77,8 @@ namespace NuPattern.VisualStudio.Solution.Hierarchy
             Guard.NotNullOrEmpty(() => projectUniqueName, projectUniqueName);
 
             IVsHierarchy rootHierarchy = null;
-            if (projectUniqueName.StartsWith("{", StringComparison.OrdinalIgnoreCase) &&
-                projectUniqueName.EndsWith("}", StringComparison.OrdinalIgnoreCase))
+            if (projectUniqueName.StartsWith(@"{", StringComparison.OrdinalIgnoreCase) &&
+                projectUniqueName.EndsWith(@"}", StringComparison.OrdinalIgnoreCase))
             {
                 projectUniqueName = projectUniqueName.Substring(1, projectUniqueName.Length - 2);
             }
@@ -323,7 +323,7 @@ namespace NuPattern.VisualStudio.Solution.Hierarchy
                 {
                     if (HasIconIndex)
                     {
-                        iconKey = TypeGuid.ToString("b", CultureInfo.InvariantCulture) + "." + IconIndex.ToString(CultureInfo.InvariantCulture);
+                        iconKey = TypeGuid.ToString(@"b", CultureInfo.InvariantCulture) + @"." + IconIndex.ToString(CultureInfo.InvariantCulture);
                     }
                     else if (IsValidFullPathName(SaveName))
                     {
@@ -645,7 +645,7 @@ namespace NuPattern.VisualStudio.Solution.Hierarchy
         [SecurityCritical]
         public HierarchyNode CreateSolutionFolder(string folderName)
         {
-            Guard.NotNullOrEmpty(() => folderName, "folderName");
+            Guard.NotNullOrEmpty(() => folderName, folderName);
             IntPtr ptr = IntPtr.Zero;
             Guid solutionFolderGuid = new Guid(Constants.SolutionFolderType);
             Guid iidProject = typeof(IVsHierarchy).GUID;
@@ -921,7 +921,7 @@ namespace NuPattern.VisualStudio.Solution.Hierarchy
                 {
                     string parentRelativeName = ParentNode.SolutionRelativeName;
                     if (!String.IsNullOrEmpty(parentRelativeName))
-                        return parentRelativeName + "\\" + Name;
+                        return parentRelativeName + System.IO.Path.DirectorySeparatorChar + Name;
                 }
 
                 return Name;

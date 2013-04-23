@@ -14,8 +14,8 @@ namespace NuPattern.Runtime.References
     /// Provides type information for the <see cref="GuidanceReference"/> reference kind.
     /// </summary>
     [ReferenceKindProvider]
-    [DisplayNameResource("GuidanceReference_DisplayName", typeof(Resources))]
-    [DescriptionResource("GuidanceReference_Description", typeof(Resources))]
+    [DisplayNameResource(@"GuidanceReference_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"GuidanceReference_Description", typeof(Resources))]
     [TypeConverter(typeof(GuidanceExtensionsTypeConverter))]
     [Editor(typeof(StandardValuesEditor), typeof(UITypeEditor))]
     public class GuidanceReference : ReferenceKindProvider<GuidanceReference, string>

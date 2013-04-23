@@ -12,7 +12,7 @@ namespace NuPattern.Runtime.Store
         /// </summary>
         public string FileExtension
         {
-            get { return ".slnbldr"; }
+            get { return @".slnbldr"; }
         }
 
         /// <summary>
@@ -23,13 +23,13 @@ namespace NuPattern.Runtime.Store
             if (!GetSupportedLogicalAdapterIds().Contains(adapterId))
                 yield break;
 
-            yield return new SupportedType(typeof(IProductState), "ProductState");
-            yield return new SupportedType(typeof(IProperty), "Property");
-            yield return new SupportedType(typeof(ICollection), "Collection");
-            yield return new SupportedType(typeof(IElement), "Element");
-            yield return new SupportedType(typeof(IProduct), "Product");
-            yield return new SupportedType(typeof(IView), "View");
-            yield return new SupportedType(typeof(IReference), "Reference");
+            yield return new SupportedType(typeof(IProductState), @"ProductState");
+            yield return new SupportedType(typeof(IProperty), @"Property");
+            yield return new SupportedType(typeof(ICollection), @"Collection");
+            yield return new SupportedType(typeof(IElement), @"Element");
+            yield return new SupportedType(typeof(IProduct), @"Product");
+            yield return new SupportedType(typeof(IView), @"View");
+            yield return new SupportedType(typeof(IReference), @"Reference");
         }
     }
 }

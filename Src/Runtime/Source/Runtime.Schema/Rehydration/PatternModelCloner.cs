@@ -129,16 +129,16 @@ namespace NuPattern.Runtime.Schema
             StringBuilder nameBuilder = new StringBuilder();
 
             nameBuilder.Insert(0, element.Name);
-            nameBuilder.Insert(0, ":");
+            nameBuilder.Insert(0, @":");
             nameBuilder.Insert(0, element.GetType().Name);
             var parent = DomainClassInfo.FindEmbeddingElement(element);
 
             while (parent != null && parent is NamedElementSchema)
             {
                 var namedParent = (NamedElementSchema)parent;
-                nameBuilder.Insert(0, ".");
+                nameBuilder.Insert(0, @".");
                 nameBuilder.Insert(0, namedParent.Name);
-                nameBuilder.Insert(0, ":");
+                nameBuilder.Insert(0, @":");
                 nameBuilder.Insert(0, namedParent.GetType().Name);
 
                 parent = DomainClassInfo.FindEmbeddingElement(parent);

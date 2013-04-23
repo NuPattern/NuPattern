@@ -9,9 +9,9 @@ namespace NuPattern.Library.Conditions
     /// <summary>
     /// Indicates whether the string value is null or empty
     /// </summary>
-    [DisplayNameResource("StringNotNullOrEmptyCondition_DisplayName", typeof(Resources))]
-    [DescriptionResource("StringNotNullOrEmptyCondition_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_General", typeof(Resources))]
+    [DisplayNameResource(@"StringNotNullOrEmptyCondition_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"StringNotNullOrEmptyCondition_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_General", typeof(Resources))]
     public class StringNotNullOrEmptyCondition : Condition
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<StringNotNullOrEmptyCondition>();
@@ -20,8 +20,8 @@ namespace NuPattern.Library.Conditions
         /// Gets or sets the value
         /// </summary>
         [Required]
-        [DisplayNameResource("StringNotNullOrEmptyCondition_Value_DisplayName", typeof(Resources))]
-        [DescriptionResource("StringNotNullOrEmptyCondition_Value_Description", typeof(Resources))]
+        [DisplayNameResource(@"StringNotNullOrEmptyCondition_Value_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"StringNotNullOrEmptyCondition_Value_Description", typeof(Resources))]
         public string Value { get; set; }
 
         /// <summary>

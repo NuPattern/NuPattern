@@ -16,16 +16,15 @@ namespace NuPattern.Runtime.UriProviders
     [CLSCompliant(false)]
     public class PackUriProvider : IUriReferenceProvider<ResourcePack>
     {
-        private const string PackUriScheme = "pack";
-        private const string PackUriFormat = PackUriScheme + "://application:,,,/{0};component/{1}";
+        private const string PackUriFormat = PackUri.UriScheme + @"://application:,,,/{0};component/{1}";
 
         [Import]
         internal ISolution Solution { get; set; }
 
         static PackUriProvider()
         {
-            if (!UriParser.IsKnownScheme(PackUriScheme))
-                UriParser.Register(new GenericUriParser(GenericUriParserOptions.GenericAuthority), PackUriScheme, -1);
+            if (!UriParser.IsKnownScheme(PackUri.UriScheme))
+                UriParser.Register(new GenericUriParser(GenericUriParserOptions.GenericAuthority), PackUri.UriScheme, -1);
         }
 
         /// <summary>
@@ -63,7 +62,7 @@ namespace NuPattern.Runtime.UriProviders
             Guard.NotNull(() => uri, uri);
 
             // Parse the URI 
-            var packRegexExpr = string.Format(CultureInfo.InvariantCulture, PackUriFormat, "([^;]+)", "(.+)");
+            var packRegexExpr = string.Format(CultureInfo.InvariantCulture, PackUriFormat, @"([^;]+)", @"(.+)");
             var packRegex = new Regex(packRegexExpr);
             var match = packRegex.Match(uri.AbsoluteUri);
             if (match.Groups.Count != 3)
@@ -115,7 +114,7 @@ namespace NuPattern.Runtime.UriProviders
         {
             get
             {
-                return PackUriScheme;
+                return PackUri.UriScheme;
             }
         }
 

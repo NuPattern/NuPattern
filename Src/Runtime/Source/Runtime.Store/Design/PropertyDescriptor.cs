@@ -321,7 +321,7 @@ namespace NuPattern.Runtime.Store.Design
             }
             else if (this.PropertyType.IsNumber())
             {
-                this.property.RawValue = "0";
+                this.property.RawValue = @"0";
             }
             else if (this.PropertyType.IsValueType)
             {

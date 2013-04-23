@@ -19,8 +19,8 @@ namespace NuPattern.Library.ValidationRules
         /// <summary>
         /// Gets or sets the error message.
         /// </summary>
-        [DescriptionResource("PropertyAttributeValidationRule_ErrorMessageDescription", typeof(Resources))]
-        [DisplayNameResource("PropertyAttributeValidationRule_ErrorMessageDisplayName", typeof(Resources))]
+        [DescriptionResource(@"PropertyAttributeValidationRule_ErrorMessageDescription", typeof(Resources))]
+        [DisplayNameResource(@"PropertyAttributeValidationRule_ErrorMessageDisplayName", typeof(Resources))]
         public virtual string ErrorMessage { get; set; }
 
         /// <summary>

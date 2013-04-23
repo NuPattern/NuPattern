@@ -11,8 +11,8 @@ namespace NuPattern.Runtime.Bindings
     /// <summary>
     /// Defines an <see cref="ICondition"/> implementation of <see cref="BindingSettings"/>.
     /// </summary>
-    [DisplayNameResource("ConditionBindingSettings_DisplayName", typeof(Resources))]
-    [DescriptionResource("ConditionBindingSettings_Description", typeof(Resources))]
+    [DisplayNameResource(@"ConditionBindingSettings_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"ConditionBindingSettings_Description", typeof(Resources))]
     [DataContract]
     [TypeDescriptionProvider(typeof(BindingSettingsTypeDescriptionProvider<ICondition>))]
     public class ConditionBindingSettings : BindingSettings

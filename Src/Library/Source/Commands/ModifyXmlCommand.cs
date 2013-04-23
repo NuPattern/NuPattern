@@ -18,9 +18,9 @@ namespace NuPattern.Library.Commands
     /// <summary>
     /// Updates or deletes a value in the specified XML file.
     /// </summary>
-    [DisplayNameResource("ModifyXmlCommand_DisplayName", typeof(Resources))]
-    [DescriptionResource("ModifyXmlCommand_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_General", typeof(Resources))]
+    [DisplayNameResource(@"ModifyXmlCommand_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"ModifyXmlCommand_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_General", typeof(Resources))]
     [CLSCompliant(false)]
     public class ModifyXmlCommand : Command
     {
@@ -72,16 +72,16 @@ namespace NuPattern.Library.Commands
         /// <summary>
         /// Gets or sets the source path of the XML file.
         /// </summary>
-        [DisplayNameResource("ModifyXmlCommand_SourcePath_DisplayName", typeof(Resources))]
-        [DescriptionResource("ModifyXmlCommand_SourcePath_Description", typeof(Resources))]
+        [DisplayNameResource(@"ModifyXmlCommand_SourcePath_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"ModifyXmlCommand_SourcePath_Description", typeof(Resources))]
         public virtual string SourcePath { get; set; }
 
         /// <summary>
         /// Gets or sets the path in the XML element/attribute to modify.
         /// </summary>
         [Required(AllowEmptyStrings = false)]
-        [DisplayNameResource("ModifyXmlCommand_XmlPath_DisplayName", typeof(Resources))]
-        [DescriptionResource("ModifyXmlCommand_XmlPath_Description", typeof(Resources))]
+        [DisplayNameResource(@"ModifyXmlCommand_XmlPath_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"ModifyXmlCommand_XmlPath_Description", typeof(Resources))]
         public virtual string XmlPath { get; set; }
 
         /// <summary>
@@ -90,22 +90,22 @@ namespace NuPattern.Library.Commands
         [DefaultValue(ModifyAction.Update)]
         [DesignOnly(true)]
         [Required(AllowEmptyStrings = false)]
-        [DisplayNameResource("ModifyXmlCommand_Action_DisplayName", typeof(Resources))]
-        [DescriptionResource("ModifyXmlCommand_Action_Description", typeof(Resources))]
+        [DisplayNameResource(@"ModifyXmlCommand_Action_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"ModifyXmlCommand_Action_Description", typeof(Resources))]
         public virtual ModifyAction Action { get; set; }
 
         /// <summary>
         /// Gets or sets the new value to update with.
         /// </summary>
-        [DisplayNameResource("ModifyXmlCommand_NewValue_DisplayName", typeof(Resources))]
-        [DescriptionResource("ModifyXmlCommand_NewValue_Description", typeof(Resources))]
+        [DisplayNameResource(@"ModifyXmlCommand_NewValue_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"ModifyXmlCommand_NewValue_Description", typeof(Resources))]
         public virtual string NewValue { get; set; }
 
         /// <summary>
         /// Gets or sets the namespaces to use in the <see cref="XmlPath"/> query.
         /// </summary>
-        [DisplayNameResource("ModifyXmlCommand_Namespaces_DisplayName", typeof(Resources))]
-        [DescriptionResource("ModifyXmlCommand_Namespaces_Description", typeof(Resources))]
+        [DisplayNameResource(@"ModifyXmlCommand_Namespaces_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"ModifyXmlCommand_Namespaces_Description", typeof(Resources))]
         [TypeConverter(typeof(DesignCollectionConverter<XmlNamespace>))]
         public Collection<XmlNamespace> Namespaces { get; set; }
 

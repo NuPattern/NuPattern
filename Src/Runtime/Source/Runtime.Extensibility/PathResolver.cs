@@ -192,13 +192,13 @@ namespace NuPattern.Runtime
             // and get back a normalized path, even if the target path does 
             // not exist, so we just append a safe root path and then remove it.
 
-            var safeRoot = "C:\\" + string.Join(
+            var safeRoot = @"C:\" + string.Join(
                 System.IO.Path.DirectorySeparatorChar.ToString(),
                 Enumerable.Range(0, SafeDirCount).Select(i => SafeDirSeparator)) +
-                "\\";
+                System.IO.Path.DirectorySeparatorChar;
 
             // Wildcards are not valid path characters for the calculation.
-            var safePath = path.Replace("*", "~~");
+            var safePath = path.Replace(@"*", @"~~");
             var fullPath = new DirectoryInfo(System.IO.Path.Combine(safeRoot, safePath)).FullName;
 
             if (!fullPath.StartsWith(safeRoot, StringComparison.OrdinalIgnoreCase))
@@ -213,29 +213,29 @@ namespace NuPattern.Runtime
                 var missingSeparators = SafeDirCount - remainingSeparators;
 
                 // Build the new safe root path that remains in the path.
-                var newSafeRoot = "C:\\" + string.Join(
+                var newSafeRoot = @"C:\" + string.Join(
                     System.IO.Path.DirectorySeparatorChar.ToString(),
                     Enumerable.Range(0, remainingSeparators).Select(i => SafeDirSeparator)) +
-                    "\\";
+                    System.IO.Path.DirectorySeparatorChar;
 
                 // and remove it.
-                fullPath = fullPath.Replace(newSafeRoot, "");
+                fullPath = fullPath.Replace(newSafeRoot, string.Empty);
 
                 // Now we need to restore the "..\\" from the path that took us out of 
                 // our root. 
                 var relativePathToRestore = string.Join(
                         System.IO.Path.DirectorySeparatorChar.ToString(),
-                        Enumerable.Range(0, missingSeparators).Select(i => ".."));
+                        Enumerable.Range(0, missingSeparators).Select(i => @".."));
 
                 fullPath = System.IO.Path.Combine(relativePathToRestore, fullPath);
             }
             else
             {
-                fullPath = fullPath.Replace(safeRoot, "");
+                fullPath = fullPath.Replace(safeRoot, string.Empty);
             }
 
             // Restore the wildcards.
-            fullPath = fullPath.Replace("~~", "*");
+            fullPath = fullPath.Replace(@"~~", @"*");
 
             if (fullPath.StartsWith(System.IO.Path.DirectorySeparatorChar.ToString(), StringComparison.Ordinal))
                 fullPath = fullPath.Substring(1);
@@ -295,7 +295,7 @@ namespace NuPattern.Runtime
 
                 this.Path = ResolveRelativeTargetPath(ancestorWithArtifactLink, pathToResolve, artifactReferenceFilter);
             }
-            else if (pathToResolve.StartsWith("..", StringComparison.Ordinal))
+            else if (pathToResolve.StartsWith(@"..", StringComparison.Ordinal))
             {
                 var parentWithArtifactLink = LocateRelativeParent(productElement, pathToResolve);
 
@@ -313,12 +313,12 @@ namespace NuPattern.Runtime
         {
             var parentWithArtifactLink = context;
             // Make the path relative to the element asset link.
-            if (path.StartsWith("..", StringComparison.Ordinal))
+            if (path.StartsWith(@"..", StringComparison.Ordinal))
             {
                 var parts = path.Split(System.IO.Path.DirectorySeparatorChar, System.IO.Path.AltDirectorySeparatorChar);
                 foreach (var part in parts)
                 {
-                    if (part.Equals("..", StringComparison.Ordinal))
+                    if (part.Equals(@"..", StringComparison.Ordinal))
                     {
                         parentWithArtifactLink = parentWithArtifactLink.GetParentAutomation();
 
@@ -365,12 +365,12 @@ namespace NuPattern.Runtime
             var oldPath = path;
 
             var result = path
-                .Replace("..\\", string.Empty)
-                .Replace(".\\", string.Empty)
-                .Replace("../", string.Empty)
-                .Replace("./", string.Empty)
-                .Replace(ResolveArtifactLinkCharacter + "\\", string.Empty)
-                .Replace(ResolveArtifactLinkCharacter + "/", string.Empty)
+                .Replace(@"..\", string.Empty)
+                .Replace(@".\", string.Empty)
+                .Replace(@"../", string.Empty)
+                .Replace(@"./", string.Empty)
+                .Replace(ResolveArtifactLinkCharacter + @"\", string.Empty)
+                .Replace(ResolveArtifactLinkCharacter + @"/", string.Empty)
                 // This covers the case where we automatically added it t signal a solution path when it was empty.
                 .Replace(ResolveArtifactLinkCharacter, string.Empty);
 

@@ -11,6 +11,7 @@ using Microsoft.VisualStudio.Shell.Design;
 using Microsoft.VisualStudio.Shell.Interop;
 using NuPattern.Diagnostics;
 using NuPattern.Presentation;
+using NuPattern.Runtime.Guidance.Properties;
 using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.Guidance
@@ -78,7 +79,7 @@ namespace NuPattern.Runtime.Guidance
 
             try
             {
-                tracer.TraceVerbose("Reloading types available in the current solution");
+                tracer.TraceVerbose(Resources.ProjectTypeProvider_TraceLoadTypes);
                 loadingTypes = true;
 
                 this.availableTypes.Clear();
@@ -88,13 +89,13 @@ namespace NuPattern.Runtime.Guidance
                     var hierarchy = project.As<IVsHierarchy>();
                     if (hierarchy != null)
                     {
-                        tracer.TraceVerbose("Retrieving types from project {0}", project.Name);
+                        tracer.TraceVerbose(Resources.ProjectTypeProvider_TraceLoadProjectTypes, project.Name);
                         var typeDiscoveryService = dynamicTypeService.GetTypeDiscoveryService(hierarchy);
                         string currentProjectAssemblyName;
 
                         try
                         {
-                            currentProjectAssemblyName = project.As<EnvDTE.Project>().Properties.Item("AssemblyName").Value as string;
+                            currentProjectAssemblyName = project.As<EnvDTE.Project>().Properties.Item(@"AssemblyName").Value as string;
                         }
                         catch (Exception)
                         {

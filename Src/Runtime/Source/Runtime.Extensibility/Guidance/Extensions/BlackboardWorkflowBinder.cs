@@ -85,14 +85,14 @@ namespace NuPattern.Runtime.Guidance.Extensions
         {
             var guidanceNode = node as IConditionalNode;
 
-            return (feature.InstanceName + "." + guidanceNode.Name + ".UserAccepted");
+            return (feature.InstanceName + @"." + guidanceNode.Name + @".UserAccepted");
         }
 
         public static string StateOverrideKey(IGuidanceExtension feature, object node)
         {
             var guidanceNode = node as IConditionalNode;
 
-            return (feature.InstanceName + "." + guidanceNode.Name + ".StateOverride");
+            return (feature.InstanceName + @"." + guidanceNode.Name + @".StateOverride");
         }
 
     }

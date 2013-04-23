@@ -76,12 +76,12 @@ namespace NuPattern.Library.Automation
             var uniqueName = UniqueNameGenerator.EnsureUnique(
                 baseName,
                 newName => !files.Any(file => System.IO.Path.GetFileName(file).Equals(
-                    string.Format(CultureInfo.InvariantCulture, "{0}{1}", System.IO.Path.GetFileNameWithoutExtension(newName), outputExtension),
+                    string.Format(CultureInfo.InvariantCulture, @"{0}{1}", System.IO.Path.GetFileNameWithoutExtension(newName), outputExtension),
                     StringComparison.OrdinalIgnoreCase)));
 
             return string.Format(
                 CultureInfo.InvariantCulture,
-                "{0}{1}",
+                @"{0}{1}",
                 System.IO.Path.GetFileNameWithoutExtension(uniqueName),
                 System.IO.Path.GetExtension(baseName));
         }

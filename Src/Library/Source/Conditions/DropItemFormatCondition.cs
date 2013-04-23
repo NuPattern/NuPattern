@@ -11,9 +11,9 @@ namespace NuPattern.Library.Conditions
     /// <summary>
     /// Checks if the specified format exists in the drag event's data collection
     /// </summary>
-    [DisplayNameResource("DropItemFormatCondition_DisplayName", typeof(Resources))]
-    [DescriptionResource("DropItemFormatCondition_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
+    [DisplayNameResource(@"DropItemFormatCondition_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"DropItemFormatCondition_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class DropItemFormatCondition : Condition
     {
@@ -30,8 +30,8 @@ namespace NuPattern.Library.Conditions
         /// The format to check for
         /// </summary>
         [Required(AllowEmptyStrings = false)]
-        [DisplayNameResource("DropItemFormatCondition_Format_DisplayName", typeof(Resources))]
-        [DescriptionResource("DropItemFormatCondition_Format_Description", typeof(Resources))]
+        [DisplayNameResource(@"DropItemFormatCondition_Format_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"DropItemFormatCondition_Format_Description", typeof(Resources))]
         public string Format { get; set; }
 
         /// <summary>

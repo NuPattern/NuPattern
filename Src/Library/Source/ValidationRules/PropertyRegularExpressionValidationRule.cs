@@ -8,16 +8,16 @@ namespace NuPattern.Library.ValidationRules
     /// <summary>
     /// Specifies that a data field value in ASP.NET Dynamic Data must match the specified regular expression.
     /// </summary>
-    [DescriptionResource("PropertyRegularExpressionValidationRule_Description", typeof(Resources))]
-    [DisplayNameResource("PropertyRegularExpressionValidationRule_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_General", typeof(Resources))]
+    [DescriptionResource(@"PropertyRegularExpressionValidationRule_Description", typeof(Resources))]
+    [DisplayNameResource(@"PropertyRegularExpressionValidationRule_DisplayName", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_General", typeof(Resources))]
     public class PropertyRegularExpressionValidationRule : PropertyAttributeValidationRule
     {
         /// <summary>
         /// Gets or sets the regular expression pattern.
         /// </summary>
-        [DescriptionResource("PropertyRegularExpressionValidationRule_PatternDescription", typeof(Resources))]
-        [DisplayNameResource("PropertyRegularExpressionValidationRule_PatternDisplayName", typeof(Resources))]
+        [DescriptionResource(@"PropertyRegularExpressionValidationRule_PatternDescription", typeof(Resources))]
+        [DisplayNameResource(@"PropertyRegularExpressionValidationRule_PatternDisplayName", typeof(Resources))]
         public string Pattern { get; set; }
 
         /// <summary>

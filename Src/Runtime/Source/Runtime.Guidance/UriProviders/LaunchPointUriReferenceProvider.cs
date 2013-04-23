@@ -4,6 +4,7 @@ using System.ComponentModel.Composition;
 using NuPattern.ComponentModel.Composition;
 using NuPattern.Diagnostics;
 using NuPattern.Runtime.Composition;
+using NuPattern.Runtime.Guidance.Properties;
 
 namespace NuPattern.Runtime.Guidance.UriProviders
 {
@@ -87,7 +88,7 @@ namespace NuPattern.Runtime.Guidance.UriProviders
                     ExportId = export.Metadata.Id,
                 }));
 
-                tracer.TraceVerbose("Registering launch point uri {0}", uri);
+                tracer.TraceVerbose(Resources.LaunchPointUriReferenceProvider_TraceRegisterLaunchPoint, uri);
                 this.launchPoints.Add(uri, launchPoint);
             }
         }

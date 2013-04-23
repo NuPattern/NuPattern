@@ -9,9 +9,9 @@ namespace NuPattern.Library.ValueProviders
     /// <summary>
     /// A <see cref=" ValueProvider"/> that returns the current date and time.
     /// </summary>
-    [DisplayNameResource("CurrentDateTimeValueProvider_DisplayName", typeof(Resources))]
-    [DescriptionResource("CurrentDateTimeValueProvider_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_General", typeof(Resources))]
+    [DisplayNameResource(@"CurrentDateTimeValueProvider_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"CurrentDateTimeValueProvider_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_General", typeof(Resources))]
     [CLSCompliant(false)]
     public class CurrentDateTimeValueProvider : ValueProvider
     {

@@ -9,7 +9,7 @@ namespace NuPattern.Runtime.Guidance.Workflow
     /// <summary>
     /// Defines a guidance predecessor that allows join the processing of multiple activities in a threads.
     /// </summary>
-    [DisplayNameResource("GuidanceNode_Join_DisplayName", typeof(Resources))]
+    [DisplayNameResource(@"GuidanceNode_Join_DisplayName", typeof(Resources))]
     public class Join : ConditionalNode, IJoin
     {
         /// <summary>

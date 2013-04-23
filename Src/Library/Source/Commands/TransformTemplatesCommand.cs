@@ -21,9 +21,9 @@ namespace NuPattern.Library.Commands
     /// <summary>
     /// Command used to Transform Templates
     /// </summary>
-    [DisplayNameResource("TransformTemplatesCommand_DisplayName", typeof(Resources))]
-    [DescriptionResource("TransformTemplatesCommand_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_VisualStudio", typeof(Resources))]
+    [DisplayNameResource(@"TransformTemplatesCommand_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"TransformTemplatesCommand_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_VisualStudio", typeof(Resources))]
     [CLSCompliant(false)]
     public class TransformTemplatesCommand : NuPattern.Runtime.Command
     {
@@ -76,8 +76,8 @@ namespace NuPattern.Library.Commands
         /// <summary>
         /// Gets or sets the target path.
         /// </summary>
-        [DisplayNameResource("TransformTemplatesCommand_TargetPath_DisplayName", typeof(Resources))]
-        [DescriptionResource("TransformTemplatesCommand_TargetPath_Description", typeof(Resources))]
+        [DisplayNameResource(@"TransformTemplatesCommand_TargetPath_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"TransformTemplatesCommand_TargetPath_Description", typeof(Resources))]
         public virtual string TargetPath { get; set; }
 
         /// <summary>

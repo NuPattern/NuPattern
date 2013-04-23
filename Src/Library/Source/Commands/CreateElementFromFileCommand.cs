@@ -35,8 +35,8 @@ namespace NuPattern.Library.Commands
         /// <summary>
         /// Gets or sets whether to sync the name of the added file
         /// </summary>
-        [DisplayNameResource("CreateElementFromFileCommand_SyncName_DisplayName", typeof(Resources))]
-        [DescriptionResource("CreateElementFromFileCommand_SyncName_Description", typeof(Resources))]
+        [DisplayNameResource(@"CreateElementFromFileCommand_SyncName_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"CreateElementFromFileCommand_SyncName_Description", typeof(Resources))]
         [DesignOnly(true)]
         [DefaultValue(DefaultSyncName)]
         public virtual bool SyncName

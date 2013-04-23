@@ -14,9 +14,9 @@ namespace NuPattern.Library.Commands
     /// <summary>
     /// Command used to set a build action over a project item
     /// </summary>
-    [DisplayNameResource("SetBuildActionCommand_DisplayName", typeof(Resources))]
-    [DescriptionResource("SetBuildActionCommand_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_VisualStudio", typeof(Resources))]
+    [DisplayNameResource(@"SetBuildActionCommand_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"SetBuildActionCommand_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_VisualStudio", typeof(Resources))]
     [CLSCompliant(false)]
     public class SetBuildActionCommand : Command
     {
@@ -48,16 +48,16 @@ namespace NuPattern.Library.Commands
         /// <summary>
         /// Gets or sets the target path.
         /// </summary>
-        [DisplayNameResource("SetBuildActionCommand_TargetPath_DisplayName", typeof(Resources))]
-        [DescriptionResource("SetBuildActionCommand_TargetPath_Description", typeof(Resources))]
+        [DisplayNameResource(@"SetBuildActionCommand_TargetPath_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"SetBuildActionCommand_TargetPath_Description", typeof(Resources))]
         public virtual string TargetPath { get; set; }
 
         /// <summary>
         /// Gets or sets the target path.
         /// </summary>
         [Required(AllowEmptyStrings = false)]
-        [DisplayNameResource("SetBuildActionCommand_BuildAction_DisplayName", typeof(Resources))]
-        [DescriptionResource("SetBuildActionCommand_BuildAction_Description", typeof(Resources))]
+        [DisplayNameResource(@"SetBuildActionCommand_BuildAction_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"SetBuildActionCommand_BuildAction_Description", typeof(Resources))]
         public virtual BuildAction BuildAction { get; set; }
 
         /// <summary>

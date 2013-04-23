@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Drawing.Design;
 using System.Globalization;
 using System.Windows.Forms.Design;
+using NuPattern.Properties;
 
 namespace NuPattern.ComponentModel.Design
 {
@@ -28,7 +29,7 @@ namespace NuPattern.ComponentModel.Design
 
             if (!converter.GetStandardValuesSupported(context))
             {
-                throw new InvalidOperationException("The converter does not support standard values");
+                throw new InvalidOperationException(Resources.StandardValuesEditor_ErrorStandardValuesUnsupported);
             }
 
             var windowsFormsService = provider.GetService(typeof(IWindowsFormsEditorService)) as IWindowsFormsEditorService;

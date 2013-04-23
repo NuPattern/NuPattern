@@ -10,7 +10,9 @@ using System.Security.Permissions;
 using Microsoft.Build.BuildEngine;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell.Interop;
+using NuPattern.Reflection;
 using NuPattern.VisualStudio.Properties;
+using VsWebSite;
 
 namespace NuPattern.VisualStudio.Solution.Hierarchy
 {
@@ -66,7 +68,7 @@ namespace NuPattern.VisualStudio.Solution.Hierarchy
         /// </returns>
         public static bool CanAddItem(string name)
         {
-            Guard.NotNullOrEmpty(() => name, "name");
+            Guard.NotNullOrEmpty(() => name, name);
             return IsValidFullPathName(name);
         }
 
@@ -78,7 +80,7 @@ namespace NuPattern.VisualStudio.Solution.Hierarchy
         [SecurityCritical]
         public HierarchyNode AddItem(string name)
         {
-            Guard.NotNullOrEmpty(() => name, "name");
+            Guard.NotNullOrEmpty(() => name, name);
             if (!CanAddItem(name))
             {
                 throw new InvalidOperationException(
@@ -176,7 +178,7 @@ namespace NuPattern.VisualStudio.Solution.Hierarchy
         [SecurityCritical]
         public ProjectNode FindOrCreateFolder(string folderName)
         {
-            if (string.IsNullOrEmpty(folderName) || folderName == ".")
+            if (string.IsNullOrEmpty(folderName) || folderName == @".")
             {
                 return this;
             }
@@ -241,7 +243,7 @@ namespace NuPattern.VisualStudio.Solution.Hierarchy
         public BuildItem GetBuildItem(string includeSpec)
         {
             Guard.NotNullOrEmpty(() => includeSpec, includeSpec);
-            string currentDir = "." + System.IO.Path.DirectorySeparatorChar;
+            string currentDir = @"." + System.IO.Path.DirectorySeparatorChar;
             if (includeSpec.StartsWith(currentDir, StringComparison.OrdinalIgnoreCase))
             {
                 includeSpec = includeSpec.Substring(currentDir.Length);
@@ -323,7 +325,7 @@ namespace NuPattern.VisualStudio.Solution.Hierarchy
         /// <param name="assemblyPath">The assembly path.</param>
         public void AddAssemblyReference(string assemblyPath)
         {
-            Guard.NotNullOrEmpty(() => assemblyPath, "assemblyPath");
+            Guard.NotNullOrEmpty(() => assemblyPath, assemblyPath);
 
             if (VSProject != null)
             {
@@ -444,7 +446,7 @@ namespace NuPattern.VisualStudio.Solution.Hierarchy
             {
                 return string.Empty;
             }
-            Guard.NotNullOrEmpty(() => propertyName, "propertyName");
+            Guard.NotNullOrEmpty(() => propertyName, propertyName);
 
             string value = string.Empty;
             foreach (EnvDTE.Property prop in project.Properties)
@@ -520,9 +522,9 @@ namespace NuPattern.VisualStudio.Solution.Hierarchy
             }
             if (!IsWebCSharpProject(project))
             {
-                return ".vb";
+                return @".vb";
             }
-            return ".cs";
+            return @".cs";
         }
 
         // FxCop: The reason for project properties retrieval failures may be varied.
@@ -544,8 +546,8 @@ namespace NuPattern.VisualStudio.Solution.Hierarchy
             {
                 try
                 {
-                    EnvDTE.Property property = containingProject.Properties.Item("CurrentWebsiteLanguage");
-                    return ((property.Value != null) && property.Value.ToString().Equals("Visual C#", StringComparison.OrdinalIgnoreCase));
+                    EnvDTE.Property property = containingProject.Properties.Item(Reflector<WebSiteProperties>.GetPropertyName(x => x.CurrentWebsiteLanguage));
+                    return ((property.Value != null) && property.Value.ToString().Equals(@"Visual C#", StringComparison.OrdinalIgnoreCase));
                 }
                 catch (Exception exception)
                 {
@@ -559,21 +561,21 @@ namespace NuPattern.VisualStudio.Solution.Hierarchy
         private static string GetDefaultExtensionFromNonWebProject(EnvDTE.Project project)
         {
             Guard.NotNull(() => project, project);
-            if (project.Kind == "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}")
+            if (project.Kind.Equals(@"{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}", StringComparison.OrdinalIgnoreCase))
             {
-                return ".cs";
+                return @".cs";
             }
-            if (project.Kind != "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}")
+            if (project.Kind.Equals(@"{F184B08F-C81C-45F6-A57F-5ABD9991F28F}", StringComparison.OrdinalIgnoreCase))
             {
                 throw new NotSupportedException(string.Format(CultureInfo.CurrentCulture, Resources.ProjectNode_UnsupportedProjectKind, new object[] { project.Name }));
             }
-            return ".vb";
+            return @".vb";
         }
 
 
         private static bool IsWebProject(EnvDTE.Project project)
         {
-            return (project.Kind == "{E24C65DC-7377-472b-9ABA-BC803B73C61A}");
+            return (project.Kind.Equals(@"{E24C65DC-7377-472b-9ABA-BC803B73C61A}", StringComparison.OrdinalIgnoreCase));
         }
     }
 }

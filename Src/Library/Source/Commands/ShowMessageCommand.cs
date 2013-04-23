@@ -13,9 +13,9 @@ namespace NuPattern.Library.Commands
     /// <summary>
     /// Displays a message box
     /// </summary>
-    [DisplayNameResource("ShowMessageCommand_DisplayName", typeof(Resources))]
-    [DescriptionResource("ShowMessageCommand_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_General", typeof(Resources))]
+    [DisplayNameResource(@"ShowMessageCommand_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"ShowMessageCommand_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_General", typeof(Resources))]
     public class ShowMessageCommand : Command
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<ShowMessageCommand>();
@@ -25,16 +25,16 @@ namespace NuPattern.Library.Commands
         /// </summary>
         [Required]
         [DefaultValue(MessageLevel.Information)]
-        [DisplayNameResource("ShowMessageCommand_Level_DisplayName", typeof(Resources))]
-        [DescriptionResource("ShowMessageCommand_Level_Description", typeof(Resources))]
+        [DisplayNameResource(@"ShowMessageCommand_Level_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"ShowMessageCommand_Level_Description", typeof(Resources))]
         public MessageLevel Level { get; set; }
 
         /// <summary>
         /// Gets the message to show
         /// </summary>
         [Required(AllowEmptyStrings = true)]
-        [DisplayNameResource("ShowMessageCommand_Message_DisplayName", typeof(Resources))]
-        [DescriptionResource("ShowMessageCommand_Message_Description", typeof(Resources))]
+        [DisplayNameResource(@"ShowMessageCommand_Message_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"ShowMessageCommand_Message_Description", typeof(Resources))]
         public string Message { get; set; }
 
         /// <summary>

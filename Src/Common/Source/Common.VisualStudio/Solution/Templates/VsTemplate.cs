@@ -9,11 +9,13 @@ namespace NuPattern.VisualStudio.Solution.Templates
 {
     partial class VSTemplate : NuPattern.VisualStudio.Solution.Templates.IVsTemplate
     {
+        private const string ArchiveFileExtension = @".zip";
+
         [XmlIgnore]
         public string PhysicalPath { get; set; }
 
         [XmlIgnore]
-        public bool IsZip { get { return PhysicalPath.EndsWith(".zip", StringComparison.InvariantCultureIgnoreCase); } }
+        public bool IsZip { get { return PhysicalPath.EndsWith(ArchiveFileExtension, StringComparison.InvariantCultureIgnoreCase); } }
 
         [XmlIgnore]
         public string TemplateFileName { get; set; }

@@ -105,7 +105,7 @@ namespace NuPattern
             }
             else if (type.IsNumber())
             {
-                return "0";
+                return 0.ToString();
             }
             else if (!type.IsValueType)
             {
@@ -148,11 +148,11 @@ namespace NuPattern
             if (type.IsGenericType || type.IsGenericTypeDefinition)
             {
                 return type.FullName.Substring(0, type.FullName.IndexOf('`')) +
-                    "<" + String.Join(",",
+                    @"<" + String.Join(@",",
                             type.GetGenericArguments()
                                 .Select(t => t.ToSimpleName())
                                 .ToArray()) +
-                    ">";
+                    @">";
             }
             else
             {

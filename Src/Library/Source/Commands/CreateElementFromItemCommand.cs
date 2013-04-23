@@ -56,8 +56,8 @@ namespace NuPattern.Library.Commands
         /// Gets or sets the name of the  child element to create for each item.
         /// </summary>
         [Required(AllowEmptyStrings = false)]
-        [DisplayNameResource("CreateElementFromItemCommand_ChildElementName_DisplayName", typeof(Resources))]
-        [DescriptionResource("CreateElementFromItemCommand_ChildElementName_Description", typeof(Resources))]
+        [DisplayNameResource(@"CreateElementFromItemCommand_ChildElementName_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"CreateElementFromItemCommand_ChildElementName_Description", typeof(Resources))]
         public virtual string ChildElementName
         {
             get;

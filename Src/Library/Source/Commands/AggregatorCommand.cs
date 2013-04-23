@@ -22,9 +22,9 @@ namespace NuPattern.Library.Commands
     /// <summary>
     ///  Command that executes a list of commands sequentially.
     /// </summary>
-    [DisplayNameResource("AggregatorCommand_DisplayName", typeof(Resources))]
-    [DescriptionResource("AggregatorCommand_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_General", typeof(Resources))]
+    [DisplayNameResource(@"AggregatorCommand_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"AggregatorCommand_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_General", typeof(Resources))]
     [CLSCompliant(false)]
     public class AggregatorCommand : Command
     {
@@ -34,8 +34,8 @@ namespace NuPattern.Library.Commands
         /// Gets or sets the command reference list.
         /// </summary>
         /// <value>The command reference list.</value>
-        [DisplayNameResource("AggregatorCommand_CommandReferences_DisplayName", typeof(Resources))]
-        [DescriptionResource("AggregatorCommand_CommandReferences_Description", typeof(Resources))]
+        [DisplayNameResource(@"AggregatorCommand_CommandReferences_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"AggregatorCommand_CommandReferences_Description", typeof(Resources))]
         [TypeConverter(typeof(CommandReferencesConverter))]
         [Editor(typeof(CommandReferencesEditor), typeof(UITypeEditor))]
         public Collection<CommandReference> CommandReferenceList { get; set; }

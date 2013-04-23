@@ -2,6 +2,7 @@
 using System.IO;
 using System.Linq;
 using System.Text;
+using NuPattern.VisualStudio.Properties;
 
 namespace NuPattern.VisualStudio.Solution
 {
@@ -20,7 +21,7 @@ namespace NuPattern.VisualStudio.Solution
             var vsSolution = solution.As<EnvDTE.Solution>();
 
             if (vsSolution == null)
-                throw new NotSupportedException("Cannot retrieve a VS solution from the given solution interface.");
+                throw new NotSupportedException(Resources.VsItemContainerExtensions_ErrorNoSolution);
 
             var activeDocument = vsSolution.DTE.ActiveDocument;
             if (activeDocument == null)

@@ -30,9 +30,9 @@ namespace NuPattern.Runtime.Store
         /// </summary>
         public ICollection CreateCollection(Action<ICollection> initializer = null, bool raiseInstantiateEvents = true)
         {
-            using (var tx = this.owner.Store.TransactionManager.BeginTransaction("CreateCollection", this.owner.IsSerializing))
+            using (var tx = this.owner.Store.TransactionManager.BeginTransaction(Resources.ElementContainerImplementation_TransactionDescriptionCreateCollection, this.owner.IsSerializing))
             {
-                using (var bag = new StorePropertyBag(this.owner.Store, ProductState.IsCreatingElementKey, true))
+                using (new StorePropertyBag(this.owner.Store, ProductState.IsCreatingElementKey, true))
                 {
                     var instance = this.owner.Create<Collection>(raiseInstantiateEvents);
                     SetOwner(instance);
@@ -55,9 +55,9 @@ namespace NuPattern.Runtime.Store
         /// </summary>
         public IElement CreateElement(Action<IElement> initializer = null, bool raiseInstantiateEvents = true)
         {
-            using (var tx = this.owner.Store.TransactionManager.BeginTransaction("CreateElement", this.owner.IsSerializing))
+            using (var tx = this.owner.Store.TransactionManager.BeginTransaction(Resources.ElementContainerImplementation_TransactionDescriptionCreateElement, this.owner.IsSerializing))
             {
-                using (var bag = new StorePropertyBag(this.owner.Store, ProductState.IsCreatingElementKey, true))
+                using (new StorePropertyBag(this.owner.Store, ProductState.IsCreatingElementKey, true))
                 {
                     var instance = this.owner.Create<Element>(raiseInstantiateEvents);
                     SetOwner(instance);
@@ -86,10 +86,10 @@ namespace NuPattern.Runtime.Store
                     Resources.ElementContainerImplementation_MisingElementContainerInfo,
                     this.container.DefinitionName));
 
-            using (var tx = this.owner.Store.TransactionManager.BeginTransaction("CreateExtension", this.owner.IsSerializing))
-            using (var inner = this.owner.Store.TransactionManager.BeginTransaction("CreateProduct", this.owner.IsSerializing))
+            using (var tx = this.owner.Store.TransactionManager.BeginTransaction(Resources.ElementContainerImplementation_TransactionDescriptionCreateExtension, this.owner.IsSerializing))
+            using (var inner = this.owner.Store.TransactionManager.BeginTransaction(Resources.ElementContainerImplementation_TransactionDescriptionCreateProduct, this.owner.IsSerializing))
             {
-                using (var bag = new StorePropertyBag(this.owner.Store, ProductState.IsCreatingElementKey, true))
+                using (new StorePropertyBag(this.owner.Store, ProductState.IsCreatingElementKey, true))
                 {
                     var instance = (IProduct)this.owner.Create<Product>(raiseInstantiateEvents);
                     var view = this.owner as IView;

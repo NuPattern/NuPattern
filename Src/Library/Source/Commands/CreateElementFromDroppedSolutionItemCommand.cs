@@ -10,9 +10,9 @@ namespace NuPattern.Library.Commands
     /// <summary>
     /// Creates a new instance of a child element for each dropped solution item.
     /// </summary>
-    [DisplayNameResource("CreateElementFromDroppedSolutionItemCommand_DisplayName", typeof(Resources))]
-    [DescriptionResource("CreateElementFromDroppedSolutionItemCommand_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
+    [DisplayNameResource(@"CreateElementFromDroppedSolutionItemCommand_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"CreateElementFromDroppedSolutionItemCommand_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class CreateElementFromDroppedSolutionItemCommand : CreateElementFromDroppedFileCommand
     {

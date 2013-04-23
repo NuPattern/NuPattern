@@ -13,9 +13,9 @@ namespace NuPattern.Library.ValueProviders
     /// <summary>
     /// Provides the physical path for the first resolved artifact link.
     /// </summary>
-    [DisplayNameResource("ReferencedSolutionItemPathValueProvider_DisplayName", typeof(Resources))]
-    [DescriptionResource("ReferencedSolutionItemPathValueProvider_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_VisualStudio", typeof(Resources))]
+    [DisplayNameResource(@"ReferencedSolutionItemPathValueProvider_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"ReferencedSolutionItemPathValueProvider_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_VisualStudio", typeof(Resources))]
     [CLSCompliant(false)]
     public class ReferencedSolutionItemPathValueProvider : ValueProvider
     {
@@ -45,8 +45,8 @@ namespace NuPattern.Library.ValueProviders
         /// The extension of the item to return
         /// </summary>
         [Required(AllowEmptyStrings = false)]
-        [DisplayNameResource("ReferencedSolutionItemPathValueProvider_Extension_DisplayName", typeof(Resources))]
-        [DescriptionResource("ReferencedSolutionItemPathValueProvider_Extension_Description", typeof(Resources))]
+        [DisplayNameResource(@"ReferencedSolutionItemPathValueProvider_Extension_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"ReferencedSolutionItemPathValueProvider_Extension_Description", typeof(Resources))]
         public string Extension
         {
             get;
@@ -64,11 +64,11 @@ namespace NuPattern.Library.ValueProviders
                 Resources.ReferencedSolutionItemPathValueProvider_TraceInitial, this.CurrentElement.InstanceName, this.Extension);
 
             var extension = this.Extension
-                .Replace("*", string.Empty)
-                .Replace(" ", string.Empty);
-            if (!extension.StartsWith(".", StringComparison.OrdinalIgnoreCase))
+                .Replace(@"*", string.Empty)
+                .Replace(@" ", string.Empty);
+            if (!extension.StartsWith(@".", StringComparison.OrdinalIgnoreCase))
             {
-                extension = "." + extension;
+                extension = @"." + extension;
             }
 
             var item =

@@ -51,7 +51,7 @@ namespace NuPattern.ComponentModel.Composition
         private static void DecorateMetadata(Type partType, IDictionary<string, object> metadata)
         {
             // Mark all components as having passed through our catalog.
-            metadata[CatalogNameMetadataKey] = Catalog.CatalogName;
+            metadata[CatalogNameMetadataKey] = Catalog.DefaultCatalogName;
 
             var attribute = partType.AsComponent();
 

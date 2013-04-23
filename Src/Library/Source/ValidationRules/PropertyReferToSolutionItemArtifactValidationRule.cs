@@ -14,17 +14,17 @@ namespace NuPattern.Library.ValidationRules
     /// <summary>
     /// Specifies that a data field value is required.
     /// </summary>
-    [DescriptionResource("PropertyReferToSolutionItemArtifactValidationRule_Description", typeof(Resources))]
-    [DisplayNameResource("PropertyReferToSolutionItemArtifactValidationRule_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
+    [DescriptionResource(@"PropertyReferToSolutionItemArtifactValidationRule_Description", typeof(Resources))]
+    [DisplayNameResource(@"PropertyReferToSolutionItemArtifactValidationRule_DisplayName", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class PropertyReferToSolutionItemArtifactValidationRule : ValidationRule
     {
         /// <summary>
         /// Gets or sets the error message.
         /// </summary>
-        [DescriptionResource("PropertyReferToSolutionItemArtifactValidationRule_ErrorMessageDescription", typeof(Resources))]
-        [DisplayNameResource("PropertyReferToSolutionItemArtifactValidationRule_ErrorMessageDisplayName", typeof(Resources))]
+        [DescriptionResource(@"PropertyReferToSolutionItemArtifactValidationRule_ErrorMessageDescription", typeof(Resources))]
+        [DisplayNameResource(@"PropertyReferToSolutionItemArtifactValidationRule_ErrorMessageDisplayName", typeof(Resources))]
         public virtual string ErrorMessage { get; set; }
 
         /// <summary>

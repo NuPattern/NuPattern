@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data.Entity.Design.PluralizationServices;
 using System.Globalization;
 using System.Linq;
+using NuPattern.Library.Properties;
 using NuPattern.Runtime;
 
 namespace NuPattern.Library.Design
@@ -100,7 +101,7 @@ namespace NuPattern.Library.Design
                     else
                     {
                         throw new NotImplementedException(
-                            string.Format(CultureInfo.CurrentCulture, "Element '{0}' does not support ancestors.", element));
+                            string.Format(CultureInfo.CurrentCulture, Resources.ProductElementDictionaryConverter_ErrorElementNotSupportAncestors, element));
                     }
                 }
             }
@@ -130,7 +131,7 @@ namespace NuPattern.Library.Design
                 else
                 {
                     throw new NotImplementedException(
-                        string.Format(CultureInfo.CurrentCulture, "Element '{0}' does not support descendants.", element));
+                        string.Format(CultureInfo.CurrentCulture, Resources.ProductElementDictionaryConverter_ErrorElementNotSupportDescendants, element));
                 }
             }
         }

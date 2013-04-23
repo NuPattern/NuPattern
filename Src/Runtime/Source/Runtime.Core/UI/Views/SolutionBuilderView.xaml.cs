@@ -78,7 +78,7 @@ namespace NuPattern.Runtime.UI.Views
                     if (viewModel == null)
                         return;
 
-                    var dragData = new DataObject("VSPAT", viewModel.Model);
+                    var dragData = new DataObject(@"VSPAT", viewModel.Model);
                     DragDrop.DoDragDrop(treeViewItem, dragData, DragDropEffects.Move);
                 }
             }

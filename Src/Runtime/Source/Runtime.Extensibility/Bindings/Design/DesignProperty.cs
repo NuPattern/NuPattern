@@ -63,8 +63,8 @@ namespace NuPattern.Runtime.Bindings.Design
         /// <summary>
         /// Gets or sets the design value provider.
         /// </summary>
-        [DescriptionResource("DesignProperty_ValueProviderDescription", typeof(Resources))]
-        [DisplayNameResource("DesignProperty_ValueProviderDisplayName", typeof(Resources))]
+        [DescriptionResource(@"DesignProperty_ValueProviderDescription", typeof(Resources))]
+        [DisplayNameResource(@"DesignProperty_ValueProviderDisplayName", typeof(Resources))]
         [Editor(typeof(StandardValuesEditor), typeof(UITypeEditor))]
         [TypeConverter(typeof(DesignValueProviderTypeConverter))]
         public virtual DesignValueProvider ValueProvider

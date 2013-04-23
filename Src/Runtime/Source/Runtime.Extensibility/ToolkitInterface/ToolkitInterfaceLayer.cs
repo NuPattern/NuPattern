@@ -498,7 +498,7 @@ namespace NuPattern.Runtime.ToolkitInterface
                 }
                 catch (System.Reflection.TargetInvocationException tie)
                 {
-                    tracer.TraceError(tie.InnerException, "Failed to instantiate the interface layer proxy type '{0}'.", proxyType);
+                    tracer.TraceError(tie.InnerException, Resources.ToolkitInterfaceLayer_TraceFailedInstantiation, proxyType);
                 }
             }
 

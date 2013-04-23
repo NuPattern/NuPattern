@@ -24,9 +24,9 @@ namespace NuPattern.Library.Commands
     /// <summary>
     /// Deletes the linked artifacts associated to current element from the solution.
     /// </summary>
-    [DisplayNameResource("DeleteArtifactsCommand_DisplayName", typeof(Resources))]
-    [DescriptionResource("DeleteArtifactsCommand_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
+    [DisplayNameResource(@"DeleteArtifactsCommand_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"DeleteArtifactsCommand_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class DeleteArtifactsCommand : Command
     {
@@ -74,8 +74,8 @@ namespace NuPattern.Library.Commands
         [Required]
         [DesignOnly(true)]
         [DefaultValue(DeleteAction.DeleteAll)]
-        [DisplayNameResource("DeleteArtifactsCommand_Action_DisplayName", typeof(Resources))]
-        [DescriptionResource("DeleteArtifactsCommand_Action_Description", typeof(Resources))]
+        [DisplayNameResource(@"DeleteArtifactsCommand_Action_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"DeleteArtifactsCommand_Action_Description", typeof(Resources))]
         public DeleteAction Action { get; set; }
 
         /// <summary>

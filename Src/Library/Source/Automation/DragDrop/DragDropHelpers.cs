@@ -33,7 +33,7 @@ namespace NuPattern.Library
                     {
                         return reader.ReadToEnd()
                             .Split('\0')
-                            .Where(s => s.StartsWith("{", StringComparison.OrdinalIgnoreCase))
+                            .Where(s => s.StartsWith(@"{", StringComparison.OrdinalIgnoreCase))
                             .Select(p => GetProperCasedName(p.Split('|')[2]));
                     }
                 }
@@ -61,7 +61,7 @@ namespace NuPattern.Library
                     {
                         return reader.ReadToEnd()
                             .Split('\0')
-                            .Where(s => s.StartsWith("{", StringComparison.OrdinalIgnoreCase))
+                            .Where(s => s.StartsWith(@"{", StringComparison.OrdinalIgnoreCase))
                             .Select(p => GetProperCasedName(string.Concat(p.Split('|')[2], p.Split('|')[1])));
                     }
                 }
@@ -118,10 +118,10 @@ namespace NuPattern.Library
             Guard.NotNull(() => extensions, extensions);
 
             return extensions
-                .Replace("*", string.Empty)
-                .Replace(" ", string.Empty)
+                .Replace(@"*", string.Empty)
+                .Replace(@" ", string.Empty)
                 .Split(new[] { ExtensionDelimiter }, StringSplitOptions.RemoveEmptyEntries)
-                .Select(s => s.StartsWith(".", StringComparison.OrdinalIgnoreCase) ? s : "." + s);
+                .Select(s => s.StartsWith(@".", StringComparison.OrdinalIgnoreCase) ? s : @"." + s);
         }
 
         private static string GetProperCasedName(DirectoryInfo dirInfo)

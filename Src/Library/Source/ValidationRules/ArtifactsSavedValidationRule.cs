@@ -15,9 +15,9 @@ namespace NuPattern.Library.ValidationRules
     /// <summary>
     /// Validates that any project items linked via artifact links are in a saved state.
     /// </summary>
-    [DescriptionResource("ArtifactsSavedValidationRule_Description", typeof(Resources))]
-    [DisplayNameResource("ArtifactsSavedValidationRule_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
+    [DescriptionResource(@"ArtifactsSavedValidationRule_Description", typeof(Resources))]
+    [DisplayNameResource(@"ArtifactsSavedValidationRule_DisplayName", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class ArtifactsSavedValidationRule : ValidationRule
     {

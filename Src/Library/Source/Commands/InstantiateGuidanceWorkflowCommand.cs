@@ -18,9 +18,9 @@ namespace NuPattern.Library.Commands
     /// <summary>
     /// Command that instantiates a new feature.
     /// </summary>
-    [DisplayNameResource("InstantiateGuidanceWorkflowCommand_DisplayName", typeof(Resources))]
-    [DescriptionResource("InstantiateGuidanceWorkflowCommand_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Guidance", typeof(Resources))]
+    [DisplayNameResource(@"InstantiateGuidanceWorkflowCommand_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"InstantiateGuidanceWorkflowCommand_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Guidance", typeof(Resources))]
     [CLSCompliant(false)]
     public class InstantiateGuidanceWorkflowCommand : Command
     {
@@ -44,31 +44,31 @@ namespace NuPattern.Library.Commands
         [Required(AllowEmptyStrings = false)]
         [TypeConverter(typeof(GuidanceExtensionsTypeConverter))]
         [Editor(typeof(StandardValuesEditor), typeof(UITypeEditor))]
-        [DisplayNameResource("InstantiateGuidanceWorkflowCommand_ExtensionId_DisplayName", typeof(Resources))]
-        [DescriptionResource("InstantiateGuidanceWorkflowCommand_ExtensionId_Description", typeof(Resources))]
+        [DisplayNameResource(@"InstantiateGuidanceWorkflowCommand_ExtensionId_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"InstantiateGuidanceWorkflowCommand_ExtensionId_Description", typeof(Resources))]
         public string ExtensionId { get; set; }
 
         /// <summary>
         /// Gets or sets the default instance name.
         /// </summary>
-        [DisplayNameResource("InstantiateGuidanceWorkflowCommand_DefaultInstanceName_DisplayName", typeof(Resources))]
-        [DescriptionResource("InstantiateGuidanceWorkflowCommand_DefaultInstanceName_Description", typeof(Resources))]
+        [DisplayNameResource(@"InstantiateGuidanceWorkflowCommand_DefaultInstanceName_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"InstantiateGuidanceWorkflowCommand_DefaultInstanceName_Description", typeof(Resources))]
         public string DefaultInstanceName { get; set; }
 
         /// <summary>
         /// Gets or sets the default instance name.
         /// </summary>
         [DefaultValue(DefaultSharedInstance)]
-        [DisplayNameResource("InstantiateGuidanceWorkflowCommand_SharedInstance_DisplayName", typeof(Resources))]
-        [DescriptionResource("InstantiateGuidanceWorkflowCommand_SharedInstance_Description", typeof(Resources))]
+        [DisplayNameResource(@"InstantiateGuidanceWorkflowCommand_SharedInstance_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"InstantiateGuidanceWorkflowCommand_SharedInstance_Description", typeof(Resources))]
         public bool SharedInstance { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether to make the newly created instance the current active instance.
         /// </summary>
         [DefaultValue(DefaultActivateOnInstantiation)]
-        [DisplayNameResource("InstantiateGuidanceWorkflowCommand_ActivateOnInstantiation_DisplayName", typeof(Resources))]
-        [DescriptionResource("InstantiateGuidanceWorkflowCommand_ActivateOnInstantiation_Description", typeof(Resources))]
+        [DisplayNameResource(@"InstantiateGuidanceWorkflowCommand_ActivateOnInstantiation_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"InstantiateGuidanceWorkflowCommand_ActivateOnInstantiation_Description", typeof(Resources))]
         public bool ActivateOnInstantiation { get; set; }
 
         /// <summary>

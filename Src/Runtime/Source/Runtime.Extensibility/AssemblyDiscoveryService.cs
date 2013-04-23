@@ -51,7 +51,7 @@ namespace NuPattern.Runtime
             tracer.TraceInformation(
                 Resources.AssemblyDiscoveryService_GetAssemblies_TraceAssembliesFound, assemblies.Count());
 
-            return new Dictionary<string, IEnumerable<Assembly>> { { "Types", assemblies } };
+            return new Dictionary<string, IEnumerable<Assembly>> { { @"Types", assemblies } };
         }
     }
 

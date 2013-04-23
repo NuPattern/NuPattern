@@ -1,6 +1,7 @@
 using System;
 using System.Linq.Expressions;
 using System.Reflection;
+using NuPattern.Properties;
 
 namespace NuPattern.Reflection
 {
@@ -89,7 +90,7 @@ namespace NuPattern.Reflection
             PropertyInfo info = GetMemberInfo(property) as PropertyInfo;
             if (info == null)
             {
-                throw new ArgumentException("Member is not a property");
+                throw new ArgumentException(Resources.Reflector_ErrorNotProperty);
             }
 
             return info;
@@ -107,7 +108,7 @@ namespace NuPattern.Reflection
             FieldInfo info = GetMemberInfo(field) as FieldInfo;
             if (info == null)
             {
-                throw new ArgumentException("Member is not a field");
+                throw new ArgumentException(Resources.Reflector_ErrorNotField);
             }
 
             return info;
@@ -119,7 +120,7 @@ namespace NuPattern.Reflection
 
             if (lambda.Body.NodeType != ExpressionType.Call)
             {
-                throw new ArgumentException("Not a method call", "lambda");
+                throw new ArgumentException(Resources.Reflector_ErrorNotMethodCall, "lambda");
             }
 
             return ((MethodCallExpression)lambda.Body).Method;
@@ -135,7 +136,7 @@ namespace NuPattern.Reflection
             }
             else
             {
-                throw new ArgumentException("Not a member access", "lambda");
+                throw new ArgumentException(Resources.Reflector_ErrorNotMemberAccess, "lambda");
             }
         }
     }

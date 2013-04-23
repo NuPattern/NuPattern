@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using NuPattern.VisualStudio.Properties;
 
 namespace NuPattern.VisualStudio.Solution
 {
@@ -16,7 +17,7 @@ namespace NuPattern.VisualStudio.Solution
 
             if (!File.Exists(sourcePath))
             {
-                throw new FileNotFoundException("Source file for template was not found.", sourcePath);
+                throw new FileNotFoundException(Resources.VsFileTemplate_VsFileTemplate_ErrorTemplateNotFound, sourcePath);
             }
 
             this.SourcePath = sourcePath;
@@ -30,7 +31,7 @@ namespace NuPattern.VisualStudio.Solution
             Guard.NotNull(() => parent, parent);
 
             if (!typeof(HierarchyItem).IsAssignableFrom(parent.GetType()))
-                throw new NotSupportedException("This method requires a hierarchy item");
+                throw new NotSupportedException(Resources.VsFileTemplate_ErrorParentNotHierarchy);
 
             Guard.NotNullOrEmpty(() => parent.PhysicalPath, parent.PhysicalPath);
 

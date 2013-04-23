@@ -331,7 +331,7 @@ namespace NuPattern.Library.Automation
                     if (resolvedIcon.Type == ResourcePackType.ProjectItem)
                     {
                         var item = resolvedIcon.GetItem();
-                        if (item.Data.ItemType != "Resource")
+                        if (item.Data.ItemType != @"Resource")
                         {
                             context.LogError(
                                     string.Format(CultureInfo.CurrentCulture, Resources.Validate_MenuSettingsIconIsNotAResource, settings.Name, item.Name),

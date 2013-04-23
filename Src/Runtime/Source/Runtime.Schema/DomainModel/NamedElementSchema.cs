@@ -100,7 +100,7 @@ namespace NuPattern.Runtime.Schema
         {
             Guard.NotNull(() => value, value);
 
-            return value.Replace(" ", string.Empty);
+            return value.Replace(@" ", string.Empty);
         }
 
         /// <summary>

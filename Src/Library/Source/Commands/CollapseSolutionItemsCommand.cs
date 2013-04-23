@@ -13,9 +13,9 @@ namespace NuPattern.Library.Commands
     /// <summary>
     /// Collapses all solution items from the specified path.
     /// </summary>
-    [DisplayNameResource("CollapseSolutionItemsCommand_DisplayName", typeof(Resources))]
-    [DescriptionResource("CollapseSolutionItemsCommand_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_VisualStudio", typeof(Resources))]
+    [DisplayNameResource(@"CollapseSolutionItemsCommand_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"CollapseSolutionItemsCommand_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_VisualStudio", typeof(Resources))]
     [CLSCompliant(false)]
     public class CollapseSolutionItemsCommand : Command
     {
@@ -46,8 +46,8 @@ namespace NuPattern.Library.Commands
         /// Gets or sets whether to collapse projects.
         /// </summary>
         [DefaultValue(DefaultIncludeProjects)]
-        [DisplayNameResource("CollapseSolutionItemsCommand_IncludeProjects_DisplayName", typeof(Resources))]
-        [DescriptionResource("CollapseSolutionItemsCommand_IncludeProjects_Description", typeof(Resources))]
+        [DisplayNameResource(@"CollapseSolutionItemsCommand_IncludeProjects_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"CollapseSolutionItemsCommand_IncludeProjects_Description", typeof(Resources))]
         public virtual bool IncludeProjects
         {
             get;

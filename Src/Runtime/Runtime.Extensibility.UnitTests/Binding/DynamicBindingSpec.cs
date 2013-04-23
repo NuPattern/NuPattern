@@ -120,7 +120,7 @@ namespace NuPattern.Runtime.UnitTests.Binding
                         new Lazy<IFoo, IComponentMetadata>(
                         () => new Foo(), 
                         Mocks.Of<IComponentMetadata>().First(m => 
-                            m.CatalogName == Catalog.CatalogName && 
+                            m.CatalogName == Catalog.DefaultCatalogName && 
                             m.Id == "Foo"))
                     });
 
@@ -228,7 +228,7 @@ namespace NuPattern.Runtime.UnitTests.Binding
 
             public static string CatalogName
             {
-                get { return Catalog.CatalogName; }
+                get { return Catalog.DefaultCatalogName; }
             }
         }
     }

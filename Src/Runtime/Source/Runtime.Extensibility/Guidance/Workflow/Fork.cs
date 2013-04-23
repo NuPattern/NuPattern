@@ -9,7 +9,7 @@ namespace NuPattern.Runtime.Guidance.Workflow
     /// <summary>
     /// Defines a guidance predecessor that allows split the processing in multiple threads.
     /// </summary>
-    [DisplayNameResource("GuidanceNode_Fork_DisplayName", typeof(Resources))]
+    [DisplayNameResource(@"GuidanceNode_Fork_DisplayName", typeof(Resources))]
     public class Fork : ConditionalNode, IFork
     {
         /// <summary>

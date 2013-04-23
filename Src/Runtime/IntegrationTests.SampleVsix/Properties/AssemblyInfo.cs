@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Reflection;
 using Microsoft.VisualStudio.ExtensibilityHosting;
-using NuPattern.ComponentModel.Composition;
 
 [assembly: AssemblyTitle("NuPattern.Runtime.IntegrationTests.SampleVsix")]
 [assembly: AssemblyDescription("")]
@@ -9,5 +8,5 @@ using NuPattern.ComponentModel.Composition;
 
 [assembly: CLSCompliant(false)]
 
-[assembly: VsCatalogName(Catalog.CatalogName)]
-[assembly: VsCatalogName("Microsoft.VisualStudio.Default")]
+[assembly: VsCatalogName(NuPattern.ComponentModel.Composition.Catalog.DefaultCatalogName)]
+[assembly: VsCatalogName(NuPattern.VisualStudio.Composition.Catalog.DefaultCatalogName)]

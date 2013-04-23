@@ -10,6 +10,7 @@ using Microsoft.VisualStudio.ExtensibilityHosting;
 using Microsoft.VisualStudio.Shell;
 using NuPattern.ComponentModel.Composition;
 using NuPattern.Diagnostics;
+using NuPattern.Runtime.Properties;
 
 namespace NuPattern.Runtime.Composition
 {
@@ -39,14 +40,14 @@ namespace NuPattern.Runtime.Composition
             var globalComponentModel = (IComponentModel)Package.GetGlobalService(typeof(SComponentModel));
             if (globalComponentModel == null)
             {
-                tracer.TraceWarning("Could not retrieve the VS global IComponentModel service.");
+                tracer.TraceWarning(Resources.NuPatternGlobalContainer_TraceNoComponentModelService);
             }
             else
             {
-                var catalog = globalComponentModel.GetCatalog(NuPattern.ComponentModel.Composition.Catalog.CatalogName);
+                var catalog = globalComponentModel.GetCatalog(NuPattern.ComponentModel.Composition.Catalog.DefaultCatalogName);
                 if (catalog == null)
                 {
-                    tracer.TraceWarning("Could not retrieve the catalog '{0}' from the global IComponentModel service.", NuPattern.ComponentModel.Composition.Catalog.CatalogName);
+                    tracer.TraceWarning(Resources.NuPatternGlobalContainer_TraceNoComponentModel, NuPattern.ComponentModel.Composition.Catalog.DefaultCatalogName);
                 }
                 else
                 {
@@ -78,7 +79,7 @@ namespace NuPattern.Runtime.Composition
                     }
                     catch (Exception ex)
                     {
-                        tracer.TraceError(ex, "Failed to initialize global container");
+                        tracer.TraceError(ex, Resources.NuPatternGlobalContainer_TraceFailedContainerInitialization);
                         throw;
                     }
                 }

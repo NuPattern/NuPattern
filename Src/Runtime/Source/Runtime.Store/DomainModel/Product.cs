@@ -9,7 +9,7 @@ namespace NuPattern.Runtime.Store
 {
     partial class Product
     {
-        private static string ToolkitInfoElementId = "c00ddfa6-b949-4c7c-b8b9-f46b8e3ccf1e";
+        private static string ToolkitInfoElementId = @"c00ddfa6-b949-4c7c-b8b9-f46b8e3ccf1e";
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<Product>();
         private IView currentView;
 

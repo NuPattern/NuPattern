@@ -28,7 +28,7 @@ namespace NuPattern.Runtime.Guidance.UI
         {
             var assemblyName = typeof(ActivityIcons).Assembly.GetName().Name;
             var packUri = string.Format(CultureInfo.InvariantCulture,
-                "pack://application:,,,/{0};component/{1}", assemblyName, resourceName);
+                @"pack://application:,,,/{0};component/{1}", assemblyName, resourceName);
 
             return new ImageSourceConverter().ConvertFromString(packUri) as ImageSource;
         }

@@ -13,9 +13,9 @@ namespace NuPattern.Library.Conditions
     /// <summary>
     /// Indicates that an element, and its descendants are valid.
     /// </summary>
-    [DescriptionResource("ValidElementCondition_Description", typeof(Resources))]
-    [DisplayNameResource("ValidElementCondition_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
+    [DescriptionResource(@"ValidElementCondition_Description", typeof(Resources))]
+    [DisplayNameResource(@"ValidElementCondition_DisplayName", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class ValidElementCondition : Condition
     {
@@ -35,8 +35,8 @@ namespace NuPattern.Library.Conditions
         /// Gets or sets whether to validate the descendants of the current element.
         /// </summary>
         [DefaultValue(DefaultValidateDescendants)]
-        [DisplayNameResource("ValidElementCondition_ValidateDescendantsDisplayName", typeof(Resources))]
-        [DescriptionResource("ValidElementCondition_ValidateDescendantsDescription", typeof(Resources))]
+        [DisplayNameResource(@"ValidElementCondition_ValidateDescendantsDisplayName", typeof(Resources))]
+        [DescriptionResource(@"ValidElementCondition_ValidateDescendantsDescription", typeof(Resources))]
         public bool ValidateDescendants { get; set; }
 
         /// <summary>

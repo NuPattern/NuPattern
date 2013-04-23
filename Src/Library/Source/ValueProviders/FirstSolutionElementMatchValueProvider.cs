@@ -12,9 +12,9 @@ namespace NuPattern.Library.ValueProviders
     /// <summary>
     /// Returns the first item in the solution that matches the path expression. 
     /// </summary>
-    [DisplayNameResource("FirstSolutionElementMatchValueProvider_DisplayName", typeof(Resources))]
-    [DescriptionResource("FirstSolutionElementMatchValueProvider_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_VisualStudio", typeof(Resources))]
+    [DisplayNameResource(@"FirstSolutionElementMatchValueProvider_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"FirstSolutionElementMatchValueProvider_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_VisualStudio", typeof(Resources))]
     public class FirstSolutionElementMatchValueProvider : ValueProvider
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<FirstSolutionElementMatchValueProvider>();
@@ -29,8 +29,8 @@ namespace NuPattern.Library.ValueProviders
         /// Gets or sets the path expression.
         /// </summary>
         [Required]
-        [DisplayNameResource("FirstSolutionElementMatchValueProvider_PathExpression_DisplayName", typeof(Resources))]
-        [DescriptionResource("FirstSolutionElementMatchValueProvider_PathExpression_Description", typeof(Resources))]
+        [DisplayNameResource(@"FirstSolutionElementMatchValueProvider_PathExpression_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"FirstSolutionElementMatchValueProvider_PathExpression_Description", typeof(Resources))]
         public string PathExpression { get; set; }
 
         /// <summary>

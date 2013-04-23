@@ -19,7 +19,7 @@ namespace <#=CodeGenerationUtilities.GetPackageNamespace(this.Dsl)#>
 		/// </summary>
 		public string FileExtension
 		{
-			get { return ".<#=this.Dsl.Editor.FileExtension#>"; }
+			get { return @".<#=this.Dsl.Editor.FileExtension#>"; }
 		}
 
 		/// <summary>
@@ -36,8 +36,8 @@ foreach (DomainClass domainClass in this.DslLibrary.Classes)
 if (domainClass.InheritanceModifier != InheritanceModifier.Abstract)
 {
 #>
-			yield return new SupportedType(typeof(I<#=domainClass.Name#>), "<#=domainClass.Name#>");
-			yield return new SupportedType(typeof(I<#=ToInfo(domainClass.Name)#>), "<#=domainClass.Name#>");
+			yield return new SupportedType(typeof(I<#=domainClass.Name#>), @"<#=domainClass.Name#>");
+			yield return new SupportedType(typeof(I<#=ToInfo(domainClass.Name)#>), @"<#=domainClass.Name#>");
 <#
 }
 }

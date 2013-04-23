@@ -150,4 +150,80 @@
   <data name="DefaultWorkflowViewModel_InitialLabel" xml:space="preserve">
     <value>Start</value>
   </data>
+  <data name="DefaultWorkflowViewModelBuilder_ErrorNoMatchingForkOrJoin" xml:space="preserve">
+    <value>Could not find matching Join for Fork</value>
+  </data>
+  <data name="DefaultWorkflowViewModelBuilder_NoMatchingMerge" xml:space="preserve">
+    <value>Could not find matching Merge for Decision</value>
+  </data>
+  <data name="DefaultWorkflowViewModelBuilder_ErrorOrphanJoin" xml:space="preserve">
+    <value>Encountered Join with parent not set</value>
+  </data>
+  <data name="DefaultWorkflowViewModelBuilder_ErrorOrphanMerge" xml:space="preserve">
+    <value>Encountered Merge with parent not set</value>
+  </data>
+  <data name="GuidanceContentUriReferenceProvider_TraceCreateUri" xml:space="preserve">
+    <value>Creating uri for content with extension id {0}, path {1}</value>
+  </data>
+  <data name="GuidanceContentUriReferenceProvider_ErrorExtensionNotFound" xml:space="preserve">
+    <value>Guidance extension '{0}' not found</value>
+  </data>
+  <data name="GuidanceContentUriReferenceProvider_TraceUriCreated" xml:space="preserve">
+    <value>Created uri {0}</value>
+  </data>
+  <data name="GuidanceContentUriReferenceProvider_TraceResolvingUri" xml:space="preserve">
+    <value>Resolving uri {0}</value>
+  </data>
+  <data name="GuidanceContentUriReferenceProvider_ErrorFileNotExist" xml:space="preserve">
+    <value>File '{0}' does not exist.</value>
+  </data>
+  <data name="GuidanceContentUriReferenceProvider_TraceResolvedToPath" xml:space="preserve">
+    <value>Resolved to path {0}</value>
+  </data>
+  <data name="GuidanceContentUriReferenceProvider_TraceOpenUri" xml:space="preserve">
+    <value>Opening content </value>
+  </data>
+  <data name="LaunchPointUriReferenceProvider_TraceRegisterLaunchPoint" xml:space="preserve">
+    <value>Registering launch point uri {0}</value>
+  </data>
+  <data name="GuidanceConditionsEvaluator_TraceBlockState" xml:space="preserve">
+    <value>Setting state to BLOCKED '{0}.{1}'.</value>
+  </data>
+  <data name="GuidanceConditionsEvaluator_TraceEvaluationHeader" xml:space="preserve">
+    <value>========================== Evaluating Conditions for '{0}.{1}'.</value>
+  </data>
+  <data name="GuidanceConditionsEvaluator_TraceStateToPostConditions" xml:space="preserve">
+    <value>Setting state to </value>
+  </data>
+  <data name="GuidanceManager_TraceOpenFromSolutionState" xml:space="preserve">
+    <value>Loading guidance extensions from solution state</value>
+  </data>
+  <data name="GuidanceManager_TraceInitializeExtension" xml:space="preserve">
+    <value>Initializing existing guidance extension</value>
+  </data>
+  <data name="GuidanceManager_TraceFailedExtensionInitialization" xml:space="preserve">
+    <value>Failed to initialize guidance extension</value>
+  </data>
+  <data name="GuidanceManager_TraceInstantiateExtension" xml:space="preserve">
+    <value>Instantiating guidance extension</value>
+  </data>
+  <data name="GuidanceManager_TraceFailedInstantiate" xml:space="preserve">
+    <value>Failed to instantiate guidance extension</value>
+  </data>
+  <data name="GuidanceManager_TraceFinishExtension" xml:space="preserve">
+    <value>Finishing guidance extension</value>
+  </data>
+  <data name="GuidanceManager_TraceFailedFinish" xml:space="preserve">
+    <value>An error happened while finishing the guidance extension. State may be invalid. Continuing to remove guidance extension from solution state.
+{0}</value>
+  </data>
+  <data name="GuidanceManager_TraceFinishCOmplete" xml:space="preserve">
+    <value>Guidance extension successfully finished.</value>
+  </data>
+  <data name="ProjectTypeProvider_TraceLoadTypes" xml:space="preserve">
+    <value>Reloading types available in the current solution</value>
+  </data>
+  <data name="ProjectTypeProvider_TraceLoadProjectTypes" xml:space="preserve">
+    <value>Retrieving types from project {0}</value>
+  </data>
 </root>

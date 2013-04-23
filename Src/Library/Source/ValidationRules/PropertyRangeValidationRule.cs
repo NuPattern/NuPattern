@@ -12,30 +12,30 @@ namespace NuPattern.Library.ValidationRules
     /// <summary>
     /// Specifies the numeric range constraints for the value of a data field.
     /// </summary>
-    [DescriptionResource("PropertyRangeValidationRule_Description", typeof(Resources))]
-    [DisplayNameResource("PropertyRangeValidationRule_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_General", typeof(Resources))]
+    [DescriptionResource(@"PropertyRangeValidationRule_Description", typeof(Resources))]
+    [DisplayNameResource(@"PropertyRangeValidationRule_DisplayName", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_General", typeof(Resources))]
     public class PropertyRangeValidationRule : PropertyAttributeValidationRule
     {
         /// <summary>
         /// Gets or sets the maximum allowed field value.
         /// </summary>
-        [DescriptionResource("PropertyRangeValidationRule_MaximumDescription", typeof(Resources))]
-        [DisplayNameResource("PropertyRangeValidationRule_MaximumDisplayName", typeof(Resources))]
+        [DescriptionResource(@"PropertyRangeValidationRule_MaximumDescription", typeof(Resources))]
+        [DisplayNameResource(@"PropertyRangeValidationRule_MaximumDisplayName", typeof(Resources))]
         public string Maximum { get; set; }
 
         /// <summary>
         /// Gets or sets the minimum allowed field value.
         /// </summary>
-        [DescriptionResource("PropertyRangeValidationRule_MinimumDescription", typeof(Resources))]
-        [DisplayNameResource("PropertyRangeValidationRule_MinimumDisplayName", typeof(Resources))]
+        [DescriptionResource(@"PropertyRangeValidationRule_MinimumDescription", typeof(Resources))]
+        [DisplayNameResource(@"PropertyRangeValidationRule_MinimumDisplayName", typeof(Resources))]
         public string Minimum { get; set; }
 
         /// <summary>
         /// Gets or sets the type of the data field whose value must be validated.
         /// </summary>
-        [DescriptionResource("PropertyRangeValidationRule_OperandTypeDescription", typeof(Resources))]
-        [DisplayNameResource("PropertyRangeValidationRule_OperandTypeDisplayName", typeof(Resources))]
+        [DescriptionResource(@"PropertyRangeValidationRule_OperandTypeDescription", typeof(Resources))]
+        [DisplayNameResource(@"PropertyRangeValidationRule_OperandTypeDisplayName", typeof(Resources))]
         [Editor(typeof(StandardValuesEditor), typeof(UITypeEditor))]
         [TypeConverter(typeof(FullTypeTypeConverter<IComparable>))]
         public Type OperandType { get; set; }

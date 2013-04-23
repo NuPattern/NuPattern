@@ -207,16 +207,16 @@ namespace NuPattern.VisualStudio.Solution
         public static IEnumerable<T> Find<T>(this IItemContainer parent, string pathExpression)
                 where T : IItemContainer
         {
-            var safeRegex = "^" + pathExpression
-                    .Replace("\\", "\\\\")
-                    .Replace("[", "\\[")
-                    .Replace("]", "\\]")
-                    .Replace("(", "\\(")
-                    .Replace(")", "\\)")
-                    .Replace(".", "\\.")
-                    .Replace("<", "\\<")
-                    .Replace(">", "\\>")
-                    .Replace("*", ".+") + "$";
+            var safeRegex = @"^" + pathExpression
+                    .Replace(@"\", @"\\")
+                    .Replace(@"[", @"\[")
+                    .Replace(@"]", @"\]")
+                    .Replace(@"(", @"\(")
+                    .Replace(@")", @"\)")
+                    .Replace(@".", @"\.")
+                    .Replace(@"<", @"\<")
+                    .Replace(@">", @"\>")
+                    .Replace(@"*", @".+") + @"$";
 
             return FindMatch(parent.Items, string.Empty, new Regex(safeRegex)).OfType<T>();
         }

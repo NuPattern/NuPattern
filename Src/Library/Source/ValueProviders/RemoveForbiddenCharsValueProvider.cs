@@ -11,9 +11,9 @@ namespace NuPattern.Library.ValueProviders
     /// <summary>
     /// A custom value provider that is used to provide values at runtime for other types of configured automation.
     /// </summary>
-    [DisplayNameResource("RemoveForbiddenCharsExpressionValueProvider_DisplayName", typeof(Resources))]
-    [DescriptionResource("RemoveForbiddenCharsExpressionValueProvider_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_General", typeof(Resources))]
+    [DisplayNameResource(@"RemoveForbiddenCharsExpressionValueProvider_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"RemoveForbiddenCharsExpressionValueProvider_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_General", typeof(Resources))]
     [CLSCompliant(false)]
     public class RemoveForbiddenCharsExpressionValueProvider : ValueProvider
     {
@@ -33,8 +33,8 @@ namespace NuPattern.Library.ValueProviders
         /// Gets or sets the expression to evaluate.
         /// </summary>
         [Required(AllowEmptyStrings = false)]
-        [DisplayNameResource("RemoveForbiddenCharsExpressionValueProvider_Expression_DisplayName", typeof(Resources))]
-        [DescriptionResource("RemoveForbiddenCharsExpressionValueProvider_Expression_Description", typeof(Resources))]
+        [DisplayNameResource(@"RemoveForbiddenCharsExpressionValueProvider_Expression_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"RemoveForbiddenCharsExpressionValueProvider_Expression_Description", typeof(Resources))]
         public string Expression
         {
             get;
@@ -44,8 +44,8 @@ namespace NuPattern.Library.ValueProviders
         /// <summary>
         /// Gets or sets the characters that are forbidden.
         /// </summary>
-        [DescriptionResource("RemoveForbiddenCharsExpressionValueProvider_ForbiddenChars_Description", typeof(Resources))]
-        [DisplayNameResource("RemoveForbiddenCharsExpressionValueProvider_ForbiddenChars_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"RemoveForbiddenCharsExpressionValueProvider_ForbiddenChars_Description", typeof(Resources))]
+        [DisplayNameResource(@"RemoveForbiddenCharsExpressionValueProvider_ForbiddenChars_DisplayName", typeof(Resources))]
         public string ForbiddenChars
         {
             get;

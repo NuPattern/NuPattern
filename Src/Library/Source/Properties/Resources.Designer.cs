@@ -1340,6 +1340,15 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to All files (*.*)|*.*.
+        /// </summary>
+        internal static string CreateElementFromPickedFileCommand_AllFilesFilter {
+            get {
+                return ResourceManager.GetString("CreateElementFromPickedFileCommand_AllFilesFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The file extensions to pick (i.e. *.zip). Multiple file extensions are delimited with a &apos;;&apos;. (i.e. *.zip;*.rar).
         /// </summary>
         internal static string CreateElementFromPickedFileCommand_Extension_Description {
@@ -1354,6 +1363,15 @@ namespace NuPattern.Library.Properties {
         internal static string CreateElementFromPickedFileCommand_Extension_DisplayName {
             get {
                 return ResourceManager.GetString("CreateElementFromPickedFileCommand_Extension_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to (*{0})|*{0}.
+        /// </summary>
+        internal static string CreateElementFromPickedFileCommand_FilterFormat {
+            get {
+                return ResourceManager.GetString("CreateElementFromPickedFileCommand_FilterFormat", resourceCulture);
             }
         }
         
@@ -3839,6 +3857,24 @@ namespace NuPattern.Library.Properties {
         internal static string PreserveOrderComparer_DisplayName {
             get {
                 return ResourceManager.GetString("PreserveOrderComparer_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Element &apos;{0}&apos; does not support ancestors..
+        /// </summary>
+        internal static string ProductElementDictionaryConverter_ErrorElementNotSupportAncestors {
+            get {
+                return ResourceManager.GetString("ProductElementDictionaryConverter_ErrorElementNotSupportAncestors", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Element &apos;{0}&apos; does not support descendants..
+        /// </summary>
+        internal static string ProductElementDictionaryConverter_ErrorElementNotSupportDescendants {
+            get {
+                return ResourceManager.GetString("ProductElementDictionaryConverter_ErrorElementNotSupportDescendants", resourceCulture);
             }
         }
         

@@ -23,8 +23,8 @@ namespace NuPattern.Runtime.UI.ViewModels
     internal abstract class ProductElementViewModel : ViewModel<IProductElement>, IEditableObject
     {
         private static readonly string assemblyName = typeof(ProductElementViewModel).Assembly.GetName().Name;
-        private static readonly string deleteIconPath = "pack://application:,,,/" + assemblyName + ";component/Resources/CommandRemove.png";
-        private static readonly string propertiesIconPath = "pack://application:,,,/" + assemblyName + ";component/Resources/CommandProperties.png";
+        private static readonly string deleteIconPath = @"pack://application:,,,/" + assemblyName + @";component/Resources/CommandRemove.png";
+        private static readonly string propertiesIconPath = @"pack://application:,,,/" + assemblyName + @";component/Resources/CommandProperties.png";
 
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<ProductElementViewModel>();
 

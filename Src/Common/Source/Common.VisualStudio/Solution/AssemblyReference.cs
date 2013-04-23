@@ -70,9 +70,9 @@ namespace NuPattern.VisualStudio.Solution
                         if (assembly != null)
                         {
                             // .NET resources
-                            resources.AddRange(LoadResources(assembly, ".resources").Select(r => new AssemblyResource(assemblyReference, r)));
+                            resources.AddRange(LoadResources(assembly, @".resources").Select(r => new AssemblyResource(assemblyReference, r)));
                             // XAML resources
-                            resources.AddRange(LoadResources(assembly, ".g.resources").Select(r => new AssemblyResource(assemblyReference, r)));
+                            resources.AddRange(LoadResources(assembly, @".g.resources").Select(r => new AssemblyResource(assemblyReference, r)));
                         }
                     }
                     catch (Exception)

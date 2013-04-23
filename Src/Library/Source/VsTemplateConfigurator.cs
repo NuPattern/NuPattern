@@ -28,11 +28,11 @@ namespace NuPattern.Library
             Guard.NotNull(() => templateItem, templateItem);
 
             // Calculate the new Identifier
-            var unicySeed = Guid.NewGuid().ToString("N");
+            var unicySeed = Guid.NewGuid().ToString(@"N");
             var unicyIdentifier = unicySeed.Substring(unicySeed.Length - MaxUnicyLength);
             var remainingNamedLength = MaxTemplateIdLength - MaxUnicyLength - 1;
             var namedIdentifier = path.Substring(path.Length <= remainingNamedLength ? 0 : (path.Length - remainingNamedLength));
-            var templateId = string.Format(CultureInfo.InvariantCulture, "{0}-{1}", unicyIdentifier, namedIdentifier);
+            var templateId = string.Format(CultureInfo.InvariantCulture, @"{0}-{1}", unicyIdentifier, namedIdentifier);
 
             // Update the vstemplate
             var template = VsTemplateFile.Read(templateItem.PhysicalPath);
@@ -48,11 +48,11 @@ namespace NuPattern.Library
             // Set VS attributes on the vstemplate file
             if (template.Type == VsTemplateType.Item)
             {
-                templateItem.Data.ItemType = "ItemTemplate";
+                templateItem.Data.ItemType = @"ItemTemplate";
             }
             else
             {
-                templateItem.Data.ItemType = "ProjectTemplate";
+                templateItem.Data.ItemType = @"ProjectTemplate";
             }
 
             return template;
@@ -64,11 +64,11 @@ namespace NuPattern.Library
         public static void UpdateDirectoryProperties(IItem templateItem)
         {
             // Set VS attributes on each item included in the vstemplate
-            foreach (var item in templateItem.Parent.Traverse().OfType<IItem>().Where(t => (Path.GetExtension(t.PhysicalPath) ?? "") != ".vstemplate"))
+            foreach (var item in templateItem.Parent.Traverse().OfType<IItem>().Where(t => (Path.GetExtension(t.PhysicalPath) ?? string.Empty) != @".vstemplate"))
             {
                 var customTool = item.Data.CustomTool;
                 item.Data.CopyToOutputDirectory = (int)CopyToOutput.PreserveNewest;
-                item.Data.ItemType = "Content";
+                item.Data.ItemType = @"Content";
                 item.Data.CustomTool = customTool;
                 item.Data.IncludeInVSIX = Boolean.FalseString.ToLower(CultureInfo.CurrentCulture);
             }
@@ -78,7 +78,7 @@ namespace NuPattern.Library
         {
             Guard.NotNull(() => value, value);
 
-            return value.Replace(" ", string.Empty);
+            return value.Replace(@" ", string.Empty);
         }
     }
 }

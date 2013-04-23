@@ -27,7 +27,7 @@ namespace NuPattern.Diagnostics
 
         public string Name
         {
-            get { return string.Join(";", sources.Select(s => s.Name)); }
+            get { return string.Join(@";", sources.Select(s => s.Name)); }
         }
 
         public void Flush()

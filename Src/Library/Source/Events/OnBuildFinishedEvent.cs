@@ -17,9 +17,9 @@ namespace NuPattern.Library.Events
     /// <summary>
     /// Implements the <see cref="IOnBuildFinishedEvent"/>.
     /// </summary>
-    [DisplayNameResource("OnBuildFinishedEvent_DisplayName", typeof(Resources))]
-    [DescriptionResource("OnBuildFinishedEvent_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_VisualStudio", typeof(Resources))]
+    [DisplayNameResource(@"OnBuildFinishedEvent_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"OnBuildFinishedEvent_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_VisualStudio", typeof(Resources))]
     [Event(typeof(IOnBuildFinishedEvent))]
     [Export(typeof(IOnBuildFinishedEvent))]
     [PartCreationPolicy(CreationPolicy.Shared)]

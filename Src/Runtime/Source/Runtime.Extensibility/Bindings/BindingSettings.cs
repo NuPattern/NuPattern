@@ -46,8 +46,8 @@ namespace NuPattern.Runtime.Bindings
         /// </summary>
         [DataMember]
         [Editor(typeof(StandardValuesEditor), typeof(UITypeEditor))]
-        [DescriptionResource("BindingSettings_TypeIdDescription", typeof(Resources))]
-        [DisplayNameResource("BindingSettings_TypeIdDisplayName", typeof(Resources))]
+        [DescriptionResource(@"BindingSettings_TypeIdDescription", typeof(Resources))]
+        [DisplayNameResource(@"BindingSettings_TypeIdDisplayName", typeof(Resources))]
         [RefreshProperties(RefreshProperties.All)]
         public virtual string TypeId
         {

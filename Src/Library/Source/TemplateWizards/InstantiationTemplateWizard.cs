@@ -215,19 +215,19 @@ namespace NuPattern.Library.TemplateWizards
 
         private string GetSafeTemplateName(Dictionary<string, string> replacementsDictionary)
         {
-            if (replacementsDictionary.ContainsKey("$safeprojectname$"))
+            if (replacementsDictionary.ContainsKey(@"$safeprojectname$"))
             {
-                return replacementsDictionary["$safeprojectname$"];
+                return replacementsDictionary[@"$safeprojectname$"];
             }
             else
             {
-                if (replacementsDictionary.ContainsKey("$rootname$"))
+                if (replacementsDictionary.ContainsKey(@"$rootname$"))
                 {
-                    return Path.GetFileNameWithoutExtension(replacementsDictionary["$rootname$"]);
+                    return Path.GetFileNameWithoutExtension(replacementsDictionary[@"$rootname$"]);
                 }
                 else
                 {
-                    return Guid.NewGuid().ToString("N");
+                    return Guid.NewGuid().ToString(@"N");
                 }
             }
         }

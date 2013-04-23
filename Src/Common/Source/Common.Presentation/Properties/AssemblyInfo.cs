@@ -13,5 +13,5 @@ using System.Windows.Markup;
 
 [assembly: ThemeInfo(ResourceDictionaryLocation.SourceAssembly, ResourceDictionaryLocation.SourceAssembly)]
 
-[assembly: XmlnsDefinition("http://schemas.microsoft.com/nupattern/2012/xaml/", "NuPattern.Presentation")]
-[assembly: XmlnsDefinition("http://schemas.microsoft.com/nupattern/2012/xaml/", "NuPattern.Presentation.Data")]
+[assembly: XmlnsDefinition(@"http://schemas.microsoft.com/nupattern/2012/xaml/", @"NuPattern.Presentation")]
+[assembly: XmlnsDefinition(@"http://schemas.microsoft.com/nupattern/2012/xaml/", @"NuPattern.Presentation.Data")]

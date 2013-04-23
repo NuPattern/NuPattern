@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.Linq;
 using System.Reflection;
+using NuPattern.Properties;
 
 namespace NuPattern
 {
@@ -38,7 +39,7 @@ namespace NuPattern
             catch (Exception ex)
             {
                 throw new NotSupportedException(
-                    string.Format("Failed to resolve provider for scheme {0} and type {1}", uri.Scheme, typeof(T)),
+                    string.Format(Resources.UriReferenceService_ErrorFailedResolveUri, uri.Scheme, typeof(T)),
                     ex);
             }
         }
@@ -58,7 +59,7 @@ namespace NuPattern
             if (provider == null)
                 throw new NotSupportedException();
 
-            provider.GetType().InvokeMember("Open",
+            provider.GetType().InvokeMember(@"Open",
                 BindingFlags.Public | BindingFlags.Instance | BindingFlags.InvokeMethod, null, provider, new object[] { instance });
         }
 
@@ -72,7 +73,7 @@ namespace NuPattern
             if (selectedProvider == null)
                 throw new NotSupportedException();
 
-            return (Uri)selectedProvider.GetType().InvokeMember("CreateUri",
+            return (Uri)selectedProvider.GetType().InvokeMember(@"CreateUri",
                 BindingFlags.Public | BindingFlags.Instance | BindingFlags.InvokeMethod, null, selectedProvider, new object[] { instance });
         }
 

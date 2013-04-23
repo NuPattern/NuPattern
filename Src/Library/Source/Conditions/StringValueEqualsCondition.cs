@@ -11,9 +11,9 @@ namespace NuPattern.Library.Conditions
     /// <summary>
     /// A <see cref="Condition"/> that evaluates to true id the two strings compare with given comparison.
     /// </summary>
-    [DisplayNameResource("StringValueEqualsCondition_DisplayName", typeof(Resources))]
-    [DescriptionResource("StringValueEqualsCondition_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_General", typeof(Resources))]
+    [DisplayNameResource(@"StringValueEqualsCondition_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"StringValueEqualsCondition_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_General", typeof(Resources))]
     [CLSCompliant(false)]
     public class StringValueEqualsCondition : Condition
     {
@@ -34,24 +34,24 @@ namespace NuPattern.Library.Conditions
         /// </summary>
         [Required]
         [DefaultValue(StringComparison.OrdinalIgnoreCase)]
-        [DisplayNameResource("StringValueEqualsCondition_ComparisonKind_DisplayName", typeof(Resources))]
-        [DescriptionResource("StringValueEqualsCondition_ComparisonKind_Description", typeof(Resources))]
+        [DisplayNameResource(@"StringValueEqualsCondition_ComparisonKind_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"StringValueEqualsCondition_ComparisonKind_Description", typeof(Resources))]
         public StringComparison ComparisonKind { get; set; }
 
         /// <summary>
         /// Gets the left value to compare
         /// </summary>
         [Required]
-        [DisplayNameResource("StringValueEqualsCondition_LeftValue_DisplayName", typeof(Resources))]
-        [DescriptionResource("StringValueEqualsCondition_LeftValue_Description", typeof(Resources))]
+        [DisplayNameResource(@"StringValueEqualsCondition_LeftValue_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"StringValueEqualsCondition_LeftValue_Description", typeof(Resources))]
         public string LeftValue { get; set; }
 
         /// <summary>
         /// Gets the right value to compare.
         /// </summary>
         [Required]
-        [DisplayNameResource("StringValueEqualsCondition_RightValue_DisplayName", typeof(Resources))]
-        [DescriptionResource("StringValueEqualsCondition_RightValue_Description", typeof(Resources))]
+        [DisplayNameResource(@"StringValueEqualsCondition_RightValue_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"StringValueEqualsCondition_RightValue_Description", typeof(Resources))]
         public string RightValue { get; set; }
 
         /// <summary>

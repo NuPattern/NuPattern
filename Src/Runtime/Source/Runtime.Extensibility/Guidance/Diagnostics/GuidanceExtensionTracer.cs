@@ -83,7 +83,7 @@ namespace NuPattern.Runtime.Guidance.Diagnostics
                         new GuidanceExtensionTraceRecord(eventType, id.ToString(), extensionId,
                             instanceName: this.instanceName,
                             extendedData: data,
-                            description: "TraceData")
+                            description: @"TraceData")
                         );
                 }
                 else
@@ -162,7 +162,7 @@ namespace NuPattern.Runtime.Guidance.Diagnostics
                 string logmessage = message + Environment.NewLine + exception.Message;
 
                 InnerSource.TraceData(TraceEventType.Error, 0,
-                    new GuidanceExtensionTraceRecord(TraceEventType.Error, "0", extensionId,
+                    new GuidanceExtensionTraceRecord(TraceEventType.Error, 0.ToString(), extensionId,
                         instanceName: this.instanceName,
                         description: logmessage,
                         exception: exception));

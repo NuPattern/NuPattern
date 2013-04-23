@@ -8,7 +8,7 @@ namespace NuPattern.Library.Automation
     /// DomainModel Provider extension MEF registration.
     /// </summary>
     [Export(typeof(DomainModelExtensionProvider))]
-    [ProvidesExtensionToDomainModel("15a342fd-f046-4b7a-9dc8-73b0a8eec119")]
+    [ProvidesExtensionToDomainModel(@"15a342fd-f046-4b7a-9dc8-73b0a8eec119")]
     internal class DomainModelProvider : DomainModelExtensionProvider
     {
         /// <summary>

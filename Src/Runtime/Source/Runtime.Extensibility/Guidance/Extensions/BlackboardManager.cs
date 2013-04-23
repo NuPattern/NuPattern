@@ -25,17 +25,17 @@ namespace NuPattern.Runtime.Guidance.Extensions
         /// <summary>
         /// Name of the solution folder in which to store the Blackboard
         /// </summary>
-        private static string solutionFolderName = "Solution Items";
+        private static string solutionFolderName = @"Solution Items";
 
         /// <summary>
         /// Name of the file in which the Blackboard data is stored
         /// </summary>
-        private static string defaultBlackboardFileNameBase = ".guidancestate";
+        private static string defaultBlackboardFileNameBase = @".guidancestate";
 
         /// <summary>
         /// Empty dictionary contents with which we pre-populate the Blackboard on creation
         /// </summary>
-        private static string emptyDictionary = "<?xml version=\"1.0\" encoding=\"utf-8\"?><ArrayOfKeyValueOfstringstring xmlns:i=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://schemas.microsoft.com/2003/10/Serialization/Arrays\"></ArrayOfKeyValueOfstringstring>";
+        private static string emptyDictionary = @"<?xml version=""1.0"" encoding=""utf-8""?><ArrayOfKeyValueOfstringstring xmlns:i=""http://www.w3.org/2001/XMLSchema-instance"" xmlns=""http://schemas.microsoft.com/2003/10/Serialization/Arrays""></ArrayOfKeyValueOfstringstring>";
 
         /// <summary>
         /// The calculated absolute path to the blackboard file (for serialization)

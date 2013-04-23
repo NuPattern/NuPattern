@@ -12,13 +12,13 @@ namespace NuPattern.Library.SchemaUpgrade
     /// Migrates the property name of the <see cref="GuidanceExtension"/> automation.
     /// </summary>
     /// <remarks> this processor must run after the <see cref="CommandSettingsUpgradeProcessor"/></remarks>
-    [SchemaUpgradeProcessorOptions(Order = 1200, TargetVersion = "1.2.0.0")]
+    [SchemaUpgradeProcessorOptions(Order = 1200, TargetVersion = @"1.2.0.0")]
     internal class GuidanceExtensionUpgradeProcessor : IPatternModelSchemaUpgradeProcessor
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<GuidanceExtensionUpgradeProcessor>();
         private const string DefaultNamespace = SchemaConstants.DefaultNamespace;
-        private static readonly XName GuidanceExtensionElementName = XName.Get("guidanceExtension", DefaultNamespace);
-        private const string GuidanceFeatureIdPropertyName = "guidanceFeatureId";
+        private static readonly XName GuidanceExtensionElementName = XName.Get(@"guidanceExtension", DefaultNamespace);
+        private const string GuidanceFeatureIdPropertyName = @"guidanceFeatureId";
         private static readonly string ExtensionIdPropertyName = Reflector<GuidanceExtension>.GetPropertyName(x => x.ExtensionId).MakeCamel();
 
         /// <summary>

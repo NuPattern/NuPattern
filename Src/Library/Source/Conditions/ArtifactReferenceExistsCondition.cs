@@ -13,9 +13,9 @@ namespace NuPattern.Library.Conditions
     /// <summary>
     /// A <see cref="Condition"/> that evaluates to true if a solution artifact reference exists on the current element.
     /// </summary>
-    [DisplayNameResource("ArtifactReferenceExistsCondition_DisplayName", typeof(Resources))]
-    [DescriptionResource("ArtifactReferenceExistsCondition_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
+    [DisplayNameResource(@"ArtifactReferenceExistsCondition_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"ArtifactReferenceExistsCondition_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class ArtifactReferenceExistsCondition : Condition
     {

@@ -79,6 +79,42 @@ namespace NuPattern.Runtime.Guidance.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Could not find matching Join for Fork.
+        /// </summary>
+        internal static string DefaultWorkflowViewModelBuilder_ErrorNoMatchingForkOrJoin {
+            get {
+                return ResourceManager.GetString("DefaultWorkflowViewModelBuilder_ErrorNoMatchingForkOrJoin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Encountered Join with parent not set.
+        /// </summary>
+        internal static string DefaultWorkflowViewModelBuilder_ErrorOrphanJoin {
+            get {
+                return ResourceManager.GetString("DefaultWorkflowViewModelBuilder_ErrorOrphanJoin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Encountered Merge with parent not set.
+        /// </summary>
+        internal static string DefaultWorkflowViewModelBuilder_ErrorOrphanMerge {
+            get {
+                return ResourceManager.GetString("DefaultWorkflowViewModelBuilder_ErrorOrphanMerge", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not find matching Merge for Decision.
+        /// </summary>
+        internal static string DefaultWorkflowViewModelBuilder_NoMatchingMerge {
+            get {
+                return ResourceManager.GetString("DefaultWorkflowViewModelBuilder_NoMatchingMerge", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Post-Conditions.
         /// </summary>
         internal static string GuidanceActionViewModel_PostConditionsLabel {
@@ -93,6 +129,96 @@ namespace NuPattern.Runtime.Guidance.Properties {
         internal static string GuidanceActionViewModel_PreConditionsLabel {
             get {
                 return ResourceManager.GetString("GuidanceActionViewModel_PreConditionsLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Setting state to BLOCKED &apos;{0}.{1}&apos;..
+        /// </summary>
+        internal static string GuidanceConditionsEvaluator_TraceBlockState {
+            get {
+                return ResourceManager.GetString("GuidanceConditionsEvaluator_TraceBlockState", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ========================== Evaluating Conditions for &apos;{0}.{1}&apos;..
+        /// </summary>
+        internal static string GuidanceConditionsEvaluator_TraceEvaluationHeader {
+            get {
+                return ResourceManager.GetString("GuidanceConditionsEvaluator_TraceEvaluationHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Setting state to .
+        /// </summary>
+        internal static string GuidanceConditionsEvaluator_TraceStateToPostConditions {
+            get {
+                return ResourceManager.GetString("GuidanceConditionsEvaluator_TraceStateToPostConditions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Guidance extension &apos;{0}&apos; not found.
+        /// </summary>
+        internal static string GuidanceContentUriReferenceProvider_ErrorExtensionNotFound {
+            get {
+                return ResourceManager.GetString("GuidanceContentUriReferenceProvider_ErrorExtensionNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File &apos;{0}&apos; does not exist..
+        /// </summary>
+        internal static string GuidanceContentUriReferenceProvider_ErrorFileNotExist {
+            get {
+                return ResourceManager.GetString("GuidanceContentUriReferenceProvider_ErrorFileNotExist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Creating uri for content with extension id {0}, path {1}.
+        /// </summary>
+        internal static string GuidanceContentUriReferenceProvider_TraceCreateUri {
+            get {
+                return ResourceManager.GetString("GuidanceContentUriReferenceProvider_TraceCreateUri", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Opening content .
+        /// </summary>
+        internal static string GuidanceContentUriReferenceProvider_TraceOpenUri {
+            get {
+                return ResourceManager.GetString("GuidanceContentUriReferenceProvider_TraceOpenUri", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Resolved to path {0}.
+        /// </summary>
+        internal static string GuidanceContentUriReferenceProvider_TraceResolvedToPath {
+            get {
+                return ResourceManager.GetString("GuidanceContentUriReferenceProvider_TraceResolvedToPath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Resolving uri {0}.
+        /// </summary>
+        internal static string GuidanceContentUriReferenceProvider_TraceResolvingUri {
+            get {
+                return ResourceManager.GetString("GuidanceContentUriReferenceProvider_TraceResolvingUri", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Created uri {0}.
+        /// </summary>
+        internal static string GuidanceContentUriReferenceProvider_TraceUriCreated {
+            get {
+                return ResourceManager.GetString("GuidanceContentUriReferenceProvider_TraceUriCreated", resourceCulture);
             }
         }
         
@@ -147,6 +273,106 @@ namespace NuPattern.Runtime.Guidance.Properties {
         internal static string GuidanceManager_NullGuidanceWorkflow {
             get {
                 return ResourceManager.GetString("GuidanceManager_NullGuidanceWorkflow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to initialize guidance extension.
+        /// </summary>
+        internal static string GuidanceManager_TraceFailedExtensionInitialization {
+            get {
+                return ResourceManager.GetString("GuidanceManager_TraceFailedExtensionInitialization", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An error happened while finishing the guidance extension. State may be invalid. Continuing to remove guidance extension from solution state.
+        ///{0}.
+        /// </summary>
+        internal static string GuidanceManager_TraceFailedFinish {
+            get {
+                return ResourceManager.GetString("GuidanceManager_TraceFailedFinish", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to instantiate guidance extension.
+        /// </summary>
+        internal static string GuidanceManager_TraceFailedInstantiate {
+            get {
+                return ResourceManager.GetString("GuidanceManager_TraceFailedInstantiate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Guidance extension successfully finished..
+        /// </summary>
+        internal static string GuidanceManager_TraceFinishCOmplete {
+            get {
+                return ResourceManager.GetString("GuidanceManager_TraceFinishCOmplete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Finishing guidance extension.
+        /// </summary>
+        internal static string GuidanceManager_TraceFinishExtension {
+            get {
+                return ResourceManager.GetString("GuidanceManager_TraceFinishExtension", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Initializing existing guidance extension.
+        /// </summary>
+        internal static string GuidanceManager_TraceInitializeExtension {
+            get {
+                return ResourceManager.GetString("GuidanceManager_TraceInitializeExtension", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Instantiating guidance extension.
+        /// </summary>
+        internal static string GuidanceManager_TraceInstantiateExtension {
+            get {
+                return ResourceManager.GetString("GuidanceManager_TraceInstantiateExtension", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loading guidance extensions from solution state.
+        /// </summary>
+        internal static string GuidanceManager_TraceOpenFromSolutionState {
+            get {
+                return ResourceManager.GetString("GuidanceManager_TraceOpenFromSolutionState", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Registering launch point uri {0}.
+        /// </summary>
+        internal static string LaunchPointUriReferenceProvider_TraceRegisterLaunchPoint {
+            get {
+                return ResourceManager.GetString("LaunchPointUriReferenceProvider_TraceRegisterLaunchPoint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Retrieving types from project {0}.
+        /// </summary>
+        internal static string ProjectTypeProvider_TraceLoadProjectTypes {
+            get {
+                return ResourceManager.GetString("ProjectTypeProvider_TraceLoadProjectTypes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reloading types available in the current solution.
+        /// </summary>
+        internal static string ProjectTypeProvider_TraceLoadTypes {
+            get {
+                return ResourceManager.GetString("ProjectTypeProvider_TraceLoadTypes", resourceCulture);
             }
         }
         

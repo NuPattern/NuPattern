@@ -63,8 +63,8 @@ namespace NuPattern.Runtime.Bindings
         private void CreateBindingContainer()
         {
             // We leverage the Feature Runtime container, where all their components and extensions publish already.
-            var defaultCatalog = this.componentModel.GetCatalog("Microsoft.VisualStudio.Default");
-            var ourCatalog = this.componentModel.GetCatalog(Catalog.CatalogName);
+            var defaultCatalog = this.componentModel.GetCatalog(NuPattern.VisualStudio.Composition.Catalog.DefaultCatalogName);
+            var ourCatalog = this.componentModel.GetCatalog(Catalog.DefaultCatalogName);
             if (defaultCatalog == null || ourCatalog == null)
                 throw new InvalidOperationException(Resources.BindingCompositionService_CatalogsNotAvailable);
 

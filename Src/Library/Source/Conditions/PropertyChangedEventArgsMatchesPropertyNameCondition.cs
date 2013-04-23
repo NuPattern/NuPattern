@@ -12,9 +12,9 @@ namespace NuPattern.Library.Conditions
     /// <summary>
     /// An <see cref="IEventCondition"/> that evaluates to true if the specified <see cref="PropertyName"/> is the changed property.
     /// </summary>
-    [DisplayNameResource("PropertyChangedEventArgsMatchesPropertyNameCondition_DisplayName", typeof(Resources))]
-    [DescriptionResource("PropertyChangedEventArgsMatchesPropertyNameCondition_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
+    [DisplayNameResource(@"PropertyChangedEventArgsMatchesPropertyNameCondition_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"PropertyChangedEventArgsMatchesPropertyNameCondition_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class PropertyChangedEventArgsMatchesPropertyNameCondition : Condition, IEventCondition
     {
@@ -24,8 +24,8 @@ namespace NuPattern.Library.Conditions
         /// Gets or sets the name of the property to filter for changes.
         /// </summary>
         [Required(AllowEmptyStrings = false)]
-        [DisplayNameResource("PropertyChangedEventArgsMatchesPropertyNameCondition_PropertyName_DisplayName", typeof(Resources))]
-        [DescriptionResource("PropertyChangedEventArgsMatchesPropertyNameCondition_PropertyName_Description", typeof(Resources))]
+        [DisplayNameResource(@"PropertyChangedEventArgsMatchesPropertyNameCondition_PropertyName_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"PropertyChangedEventArgsMatchesPropertyNameCondition_PropertyName_Description", typeof(Resources))]
         public string PropertyName { get; set; }
 
         /// <summary>

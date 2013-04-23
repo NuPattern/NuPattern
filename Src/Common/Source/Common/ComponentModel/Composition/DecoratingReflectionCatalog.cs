@@ -5,6 +5,7 @@ using System.ComponentModel.Composition.Hosting;
 using System.ComponentModel.Composition.Primitives;
 using System.ComponentModel.Composition.ReflectionModel;
 using System.Linq;
+using NuPattern.Properties;
 
 namespace NuPattern.ComponentModel.Composition
 {
@@ -183,9 +184,9 @@ namespace NuPattern.ComponentModel.Composition
             {
                 var composition = innerCatalog as ICompositionElement;
                 if (composition == null)
-                    return "Decorating Catalog";
+                    return Resources.DecoratingReflectionCatalog_DisplayName;
                 else
-                    return "Decorating Catalog for " + composition.DisplayName;
+                    return Resources.DecoratingReflectionCatalog_CatalogDisplayName + composition.DisplayName;
             }
         }
 
