@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<patternModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/visualstudio/patterning/library/automationextensions" dslVersion="1.2.0.0" Id="ca29d512-9a24-4885-9221-cbbf31282c77" xmlns="http://schemas.microsoft.com/visualstudio/patterning/runtime/patternmodel">
+<patternModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/visualstudio/patterning/library/automationextensions" dslVersion="1.3.0.0" Id="ca29d512-9a24-4885-9221-cbbf31282c77" xmlns="http://schemas.microsoft.com/visualstudio/patterning/runtime/patternmodel">
   <dm0:extensions>
     <templateSettings Id="11c7bbc0-148f-4f4c-8ca1-6d6738f5d6ee" templateUri="template://project/CSharp/b1707c79361e-MainTest" commandId="00000000-0000-0000-0000-000000000000" wizardId="00000000-0000-0000-0000-000000000000" templateAuthoringUri="solution://397c660a-72da-44eb-a4ff-1ec8e673c594/af858aa1-5567-4174-901e-d0f91c7d721d" syncName="true">
       <extendedElement>
@@ -16,24 +16,28 @@
   "ValueProvider": null
 }</targetPath>
     </templateSettings>
-    <eventSettings Id="84fd62af-32f7-494c-abfa-cb170648be73" commandId="63205580-568f-4358-8ca8-5f9cb820b3d7" eventId="Microsoft.VisualStudio.Patterning.Library.Events.IOnElementPropertyChangedEvent" filterForCurrentElement="true" wizardId="00000000-0000-0000-0000-000000000000">
+    <eventSettings Id="84fd62af-32f7-494c-abfa-cb170648be73" commandId="63205580-568f-4358-8ca8-5f9cb820b3d7" eventId="NuPattern.Library.Events.IOnElementPropertyChangedEvent" filterForCurrentElement="true" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="3d9167ef-4848-4b0c-b540-3c437abafd47" />
       </extendedElement>
       <conditions>[
   {
-    "TypeId": "Microsoft.VisualStudio.Patterning.Library.Conditions.EventSenderMatchesElementCondition",
+    "TypeId": "NuPattern.Library.Conditions.EventSenderMatchesElementCondition",
     "Properties": []
   }
 ]</conditions>
     </eventSettings>
-    <commandSettings Id="63205580-568f-4358-8ca8-5f9cb820b3d7" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.SynchArtifactNameCommand">
+    <commandSettings Id="63205580-568f-4358-8ca8-5f9cb820b3d7" typeId="NuPattern.Library.Commands.SynchArtifactNameCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="41a46a03-57ca-43fa-9e9b-701910b00b59" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="6b3a69f1-9e26-47f0-aa5c-e64a3e564c3c" value="FilteredByTag" name="ReferenceTag" />
-      </properties>
+      <properties>[
+  {
+    "Name": "ReferenceTag",
+    "Value": "FilteredByTag",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <guidanceExtension Id="19777560-c7a0-4d6b-82fe-bf0363f89d24">
       <extendedElement>

@@ -1,0 +1,40 @@
+﻿<#+
+private void GenerateParentProperty(INamedElementInfo infoElement, bool noImpl)
+{
+    if (infoElement.Parent != null)
+    {
+        WriteBlankLine();
+        Indent();
+        Indent();
+#>
+/// <summary>
+/// Gets the parent element.
+/// </summary>
+<#+
+        // Generate property signature
+        if (noImpl)
+        {
+#>
+I<#=infoElement.Parent.CodeIdentifier #> Parent { get; }
+<#+
+        }
+        else
+        {
+#>
+public virtual I<#=infoElement.Parent.CodeIdentifier #> Parent
+{
+<#+
+            Indent();
+#>
+get { return this.target.Parent.As<I<#=infoElement.Parent.CodeIdentifier #>>(); }
+<#+
+            UnIndent();
+#>
+}
+<#+
+        }
+        
+        UnIndent();
+        UnIndent();
+    }
+}#>

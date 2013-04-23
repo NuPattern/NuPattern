@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<patternModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/visualstudio/patterning/library/automationextensions" dslVersion="1.2.0.0" Id="bcb52a48-a3db-4694-ad89-91d232ffa760" xmlns="http://schemas.microsoft.com/visualstudio/patterning/runtime/patternmodell">
+<patternModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/visualstudio/patterning/library/automationextensions" dslVersion="1.3.0.0" Id="bcb52a48-a3db-4694-ad89-91d232ffa760" xmlns="http://schemas.microsoft.com/visualstudio/patterning/runtime/patternmodel">
   <dm0:extensions>
     <templateSettings Id="0aefad96-521f-4d14-b59e-9ed10274de2d" templateUri="template://item/CSharp/44ec4601d1dd-ExtensionItem" commandId="00000000-0000-0000-0000-000000000000" wizardId="00000000-0000-0000-0000-000000000000" templateAuthoringUri="solution://fc09e8ed-2cc3-4bef-b4e8-2636587ddeec/3ecdc237-a217-4be6-9fd1-316905d53429">
       <extendedElement>

@@ -1,6 +1,7 @@
 ﻿<#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\..\..\..\..\..\Runtime\Source\Runtime.Schema\DslDefinition.dsl'" #>
 <#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
-<#@ output extension=".vstemplate" #>
+<#@ output extension=".gen.vstemplate" #>
+<#@ Include File="..\..\..\..\..\..\..\MasterVersion.gen.ttinclude" #>
 <?xml version="1.0" encoding="utf-8"?>
 <VSTemplate Type="Project" Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
   <TemplateData>
@@ -15,18 +16,18 @@
     <ProvideDefaultName>true</ProvideDefaultName>
   </TemplateData>
   <TemplateContent>
-    <Project File="ConsoleApplication.csproj" ReplaceParameters="true">
+    <Project File="ConsoleApplicationProject.gen.csproj" ReplaceParameters="true" TargetFileName="ConsoleApplicationProject.csproj">
       <ProjectItem TargetFileName="Properties\AssemblyInfo.cs" ReplaceParameters="true">AssemblyInfo.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true" OpenInEditor="true">Program.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true">App.config</ProjectItem>
     </Project>
   </TemplateContent>
   <WizardExtension>
-    <Assembly>Microsoft.VisualStudio.Patterning.Library, PublicKeyToken=ecdd31353928a4a5</Assembly>
-    <FullClassName>Microsoft.VisualStudio.Patterning.Library.Automation.InstantiationTemplateWizard</FullClassName>
+    <Assembly>NuPattern.VisualStudio.TemplateWizards, Version=<#=VersionInfo.TemplateWizardVersion#>, Culture=neutral, PublicKeyToken=<#=VersionInfo.AssemblyPublicKeyToken#></Assembly>
+    <FullClassName>NuPattern.VisualStudio.TemplateWizards.InstantiationTemplateWizard</FullClassName>
   </WizardExtension>
   <WizardExtension>
-    <Assembly>Microsoft.VisualStudio.Patterning.Library, PublicKeyToken=ecdd31353928a4a5</Assembly>
-    <FullClassName>Microsoft.VisualStudio.Patterning.Library.Automation.ElementReplacementsWizard</FullClassName>
+    <Assembly>NuPattern.VisualStudio.TemplateWizards, Version=<#=VersionInfo.TemplateWizardVersion#>, Culture=neutral, PublicKeyToken=<#=VersionInfo.AssemblyPublicKeyToken#></Assembly>
+    <FullClassName>NuPattern.VisualStudio.TemplateWizards.ElementReplacementsTemplateWizard</FullClassName>
   </WizardExtension>
 </VSTemplate>

@@ -7,33 +7,34 @@ using System.Drawing.Design;
 using System.Globalization;
 using System.IO;
 using System.Runtime.InteropServices;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
-using Microsoft.VisualStudio.Patterning.Extensibility.References;
-using Microsoft.VisualStudio.Patterning.Library.Automation;
-using Microsoft.VisualStudio.Patterning.Library.Automation.Template;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Library.TypeEditors;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TemplateWizard;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
+using NuPattern.Library.Automation;
+using NuPattern.Library.Automation.Template;
+using NuPattern.Library.Design;
+using NuPattern.Library.Properties;
+using NuPattern.Runtime;
+using NuPattern.Runtime.Bindings;
+using NuPattern.Runtime.References;
+using NuPattern.VisualStudio;
+using NuPattern.VisualStudio.Solution;
+using NuPattern.VisualStudio.Solution.Templates;
 using Dsl = Microsoft.VisualStudio.Modeling.Design;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Commands
+namespace NuPattern.Library.Commands
 {
     /// <summary>
     /// Command that unfolds a VSTemplate.
     /// </summary>
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1702:CompoundWordsShouldBeCasedCorrectly", MessageId = "VsTemplate")]
-    [DisplayNameResource("UnfoldVsTemplateCommand_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
-    [DescriptionResource("UnfoldVsTemplateCommand_Description", typeof(Resources))]
+    [DisplayNameResource(@"UnfoldVsTemplateCommand_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"UnfoldVsTemplateCommand_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_VisualStudio", typeof(Resources))]
     [CLSCompliant(false)]
-    public partial class UnfoldVsTemplateCommand : FeatureCommand
+    public partial class UnfoldVsTemplateCommand : Command
     {
         private const bool DefaultSyncName = false;
         private const bool DefaultSanitizeName = true;
@@ -65,9 +66,9 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
         /// </summary>
         [Required]
         [DesignOnly(true)]
-        [Editor(typeof(TemplateUriEditor), typeof(UITypeEditor))]
-        [Dsl.DisplayNameResource("Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/TemplateUri.DisplayName", typeof(LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx")]
-        [Dsl.DescriptionResource("Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/TemplateUri.Description", typeof(LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx")]
+        [Editor(typeof(VsTemplateUriEditor), typeof(UITypeEditor))]
+        [Dsl.DisplayNameResource(@"NuPattern.Library.Automation.TemplateSettings/TemplateUri.DisplayName", typeof(LibraryDomainModel), @"NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+        [Dsl.DescriptionResource(@"NuPattern.Library.Automation.TemplateSettings/TemplateUri.Description", typeof(LibraryDomainModel), @"NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
         public virtual Uri TemplateUri
         {
             get;
@@ -77,8 +78,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
         /// <summary>
         /// Gets or sets the target path.
         /// </summary>
-        [Dsl.DisplayNameResource("Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/RawTargetPath.DisplayName", typeof(LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx")]
-        [Dsl.DescriptionResource("Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/RawTargetPath.Description", typeof(LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx")]
+        [Dsl.DisplayNameResource(@"NuPattern.Library.Automation.TemplateSettings/RawTargetPath.DisplayName", typeof(LibraryDomainModel), @"NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+        [Dsl.DescriptionResource(@"NuPattern.Library.Automation.TemplateSettings/RawTargetPath.Description", typeof(LibraryDomainModel), @"NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
         public virtual string TargetPath
         {
             get;
@@ -89,8 +90,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
         /// Gets or sets the name of the target.
         /// </summary>
         [DefaultValue("{InstanceName}")]
-        [Dsl.DisplayNameResource("Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/RawTargetFileName.DisplayName", typeof(LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx")]
-        [Dsl.DescriptionResource("Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/RawTargetFileName.Description", typeof(LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx")]
+        [Dsl.DisplayNameResource(@"NuPattern.Library.Automation.TemplateSettings/RawTargetFileName.DisplayName", typeof(LibraryDomainModel), @"NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+        [Dsl.DescriptionResource(@"NuPattern.Library.Automation.TemplateSettings/RawTargetFileName.Description", typeof(LibraryDomainModel), @"NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
         public virtual string TargetFileName
         {
             get;
@@ -102,8 +103,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
         /// </summary>
         [DefaultValue(DefaultSyncName)]
         [DesignOnly(true)]
-        [Dsl.DisplayNameResource("Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/SyncName.DisplayName", typeof(LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx")]
-        [Dsl.DescriptionResource("Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/SyncName.Description", typeof(LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx")]
+        [Dsl.DisplayNameResource(@"NuPattern.Library.Automation.TemplateSettings/SyncName.DisplayName", typeof(LibraryDomainModel), @"NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+        [Dsl.DescriptionResource(@"NuPattern.Library.Automation.TemplateSettings/SyncName.Description", typeof(LibraryDomainModel), @"NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
         public virtual bool SyncName
         {
             get;
@@ -115,8 +116,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
         /// </summary>
         [DefaultValue(DefaultSanitizeName)]
         [DesignOnly(true)]
-        [Dsl.DisplayNameResource("Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/SanitizeName.DisplayName", typeof(LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx")]
-        [Dsl.DescriptionResource("Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/SanitizeName.Description", typeof(LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx")]
+        [Dsl.DisplayNameResource(@"NuPattern.Library.Automation.TemplateSettings/SanitizeName.DisplayName", typeof(LibraryDomainModel), @"NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+        [Dsl.DescriptionResource(@"NuPattern.Library.Automation.TemplateSettings/SanitizeName.Description", typeof(LibraryDomainModel), @"NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
         public virtual bool SanitizeName
         {
             get;
@@ -126,8 +127,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
         /// <summary>
         /// An optional value to atg the generated reference for the generated file.
         /// </summary>
-        [Dsl.DisplayNameResource("Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/Tag.DisplayName", typeof(LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx")]
-        [Dsl.DescriptionResource("Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/Tag.Description", typeof(LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx")]
+        [Dsl.DisplayNameResource(@"NuPattern.Library.Automation.TemplateSettings/Tag.DisplayName", typeof(LibraryDomainModel), @"NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+        [Dsl.DescriptionResource(@"NuPattern.Library.Automation.TemplateSettings/Tag.Description", typeof(LibraryDomainModel), @"NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
         [DefaultValue(DefaultTag)]
         public string Tag { get; set; }
 
@@ -136,7 +137,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
         /// </summary>
         [Required]
         [Import(AllowDefault = true)]
-        public virtual IFxrUriReferenceService UriService
+        public virtual IUriReferenceService UriService
         {
             get;
             set;
@@ -213,7 +214,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
                 TargetFileName = this.TargetFileName
             };
 
-            using (var scope = new UnfoldScope(this.CommandAutomation, tag, this.TemplateUri.AbsoluteUri))
+            using (new UnfoldScope(this.CommandAutomation, tag, this.TemplateUri.AbsoluteUri))
             {
                 this.GeneratedItem = UnfoldTemplate(this.Solution, this.UriService, this.ServiceProvider, this.CurrentElement,
                     new UnfoldVsTemplateSettings
@@ -233,7 +234,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
         /// Unfolds the specified template.
         /// </summary>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2202:Do not dispose objects multiple times"), System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Dispose is avoided when events should not fire at all")]
-        internal static IItemContainer UnfoldTemplate(ISolution solution, IFxrUriReferenceService uriService, IServiceProvider serviceProvider, IProductElement owner, UnfoldVsTemplateSettings settings, bool fromWizard)
+        internal static IItemContainer UnfoldTemplate(ISolution solution, IUriReferenceService uriService, IServiceProvider serviceProvider, IProductElement owner, UnfoldVsTemplateSettings settings, bool fromWizard)
         {
             var eventScope = new StoreEventBufferingScope();
             try

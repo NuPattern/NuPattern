@@ -1,0 +1,59 @@
+﻿<#@ Template Inherits="NuPattern.Library.ModelElementTextTransformation" HostSpecific="True" #>
+<#@ ModelElement Type="NuPattern.Runtime.IProductElement" Processor="ModelElementProcessor" #>
+<#@ Output extension=".patterndefinition" #>
+<#@ Assembly Name="NuPattern.Common.dll" #>
+<#@ Import Namespace="NuPattern.Runtime" #>
+<#@ Assembly Name="NuPattern.Runtime.Extensibility.dll" #>
+<#@ Assembly Name="NuPattern.Authoring.PatternToolkit.Automation.dll" #>
+<#@ Import Namespace="NuPattern.Runtime.ToolkitInterface" #>
+<#@ Import Namespace="NuPattern.Authoring.PatternToolkit" #>
+<#@ Import Namespace="System.Linq" #>
+<#
+var element = this.Element.As<IPatternModel>();
+#><?xml version="1.0" encoding="utf-8"?>
+<patternModel 
+    xmlns="http://schemas.microsoft.com/visualstudio/patterning/runtime/patternmodel"
+    xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" 
+    dslVersion="1.3.0.0" 
+    Id="<#=global::System.Guid.NewGuid() #>"
+<#
+if (String.IsNullOrEmpty(element.Parent.Parent.ExistingToolkitId))
+{
+#>
+    >
+    <pattern 
+        Id="<#=global::System.Guid.NewGuid() #>" 
+        name="<#=element.Parent.Parent.PatternName #>" 
+        description="<#=element.Parent.Parent.PatternDescription #>"
+                patternLink="patternmanager://<#= this.Element.Parent.Parent.Id #>">
+        <views>
+            <view 
+                Id="<#=global::System.Guid.NewGuid() #>" 
+                name="DefaultView" 
+                isDefault="true" 
+                diagramId="<#=global::System.Guid.NewGuid() #>">
+                <elements>
+                    <collection Id="<#=global::System.Guid.NewGuid() #>" name="ExampleCollection1">
+                        <childElement cardinality="ZeroToMany" autoCreate="true">
+                            <element Id="<#=global::System.Guid.NewGuid() #>" name="ExampleElement2">
+                            </element>
+                        </childElement>
+                    </collection>
+                </elements>
+                <elements>
+                    <element Id="<#=global::System.Guid.NewGuid() #>" name="ExampleElement1">
+                    </element>
+                </elements>
+            </view>
+        </views>
+    </pattern>
+<#
+}
+else
+{
+#>
+        baseId="<#=element.Parent.Parent.ExistingToolkitId #>" >
+<#
+}
+#>
+</patternModel>

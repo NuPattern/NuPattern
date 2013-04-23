@@ -10,4 +10,9 @@ packages
 Binaries
 TestResults
 Drops
+Backup*
+_UpgradeReport_Files
+UpgradeLog*.*
 tmp*.*
+*.tmp
+DslIncludeTemp

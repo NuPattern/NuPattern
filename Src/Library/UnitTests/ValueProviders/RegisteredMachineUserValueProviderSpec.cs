@@ -1,31 +1,47 @@
-﻿using Microsoft.VisualStudio.Patterning.Library.ValueProviders;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Moq;
+using NuPattern.Library.ValueProviders;
+using NuPattern.Win32;
 
-namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.ValueProviders
+namespace NuPattern.Library.UnitTests.ValueProviders
 {
-	[TestClass]
-	public class RegisteredMachineUserValueProviderSpec
-	{
-		internal static readonly IAssertion Assert = new Assertion();
+    [TestClass]
+    public class RegisteredMachineUserValueProviderSpec
+    {
+        internal static readonly IAssertion Assert = new Assertion();
 
-		[TestClass]
-		public class GivenAProvider
-		{
-			private RegisteredMachineUserValueProvider provider;
+        [TestClass]
+        public class GivenAProvider
+        {
+            private RegisteredMachineUserValueProvider provider;
+            private Mock<IRegistryReader> reader;
 
-			[TestInitialize]
-			public void InitializeContext()
-			{
-				this.provider = new RegisteredMachineUserValueProvider();
-			}
+            [TestInitialize]
+            public void InitializeContext()
+            {
+                this.reader = new Mock<IRegistryReader>();
+                this.provider = new RegisteredMachineUserValueProvider(this.reader.Object);
+            }
 
-			[TestMethod]
-			public void ThenReturnsNotNullOrEmpty()
-			{
-				var result = this.provider.Evaluate();
+            [TestMethod, TestCategory("Unit")]
+            public void ThenReturnsRegisteredMachineUser()
+            {
+                this.reader.Setup(r => r.ReadValue()).Returns("foo");
 
-				Assert.NotNull(result);
-			}
-		}
-	}
+                var result = this.provider.Evaluate();
+
+                Assert.Equal("foo", result);
+            }
+
+            [TestMethod, TestCategory("Unit")]
+            public void WhenRegisteredMachineIsEmpty_ThenReturnsUnknownUser()
+            {
+                this.reader.Setup(r => r.ReadValue()).Returns(string.Empty);
+
+                var result = this.provider.Evaluate();
+
+                Assert.Equal(RegisteredMachineUserValueProvider.UnknownOrganization, result);
+            }
+        }
+    }
 }

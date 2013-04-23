@@ -117,14 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ActivateFeatureCommand_Description" xml:space="preserve">
+  <data name="ActivateGuidanceWorkCommand_Description" xml:space="preserve">
     <value>Activates an existing guidance workflow making it the currently selected guidance workflow in the 'Guidance Explorer' window.</value>
   </data>
-  <data name="ActivateFeatureCommand_DisplayName" xml:space="preserve">
+  <data name="ActivateGuidanceWorkCommand_DisplayName" xml:space="preserve">
     <value>Activates an Associated Guidance Workflow.</value>
   </data>
-  <data name="ActivateFeatureCommand_TraceFeatureNotFound" xml:space="preserve">
-    <value>Guidance instance with feature id '{0}' not found in solution.</value>
+  <data name="ActivateGuidanceWorkCommand_TraceGuidanceNotFound" xml:space="preserve">
+    <value>Guidance instance with id '{0}' was not found in solution.</value>
   </data>
   <data name="AddCommandCommand_AddCommandCommandText" xml:space="preserve">
     <value>Add New Command</value>
@@ -183,32 +183,32 @@
   <data name="GuidanceExtension_InstantiateEventName" xml:space="preserve">
     <value>InstantiateGuidanceEvent</value>
   </data>
-  <data name="InstantiateFeatureCommand_ActivateOnInstantiation_Description" xml:space="preserve">
+  <data name="InstantiateGuidanceWorkflowCommand_ActivateOnInstantiation_Description" xml:space="preserve">
     <value>Whether to activate the instantiated guidance once created.</value>
   </data>
-  <data name="InstantiateFeatureCommand_ActivateOnInstantiation_DisplayName" xml:space="preserve">
+  <data name="InstantiateGuidanceWorkflowCommand_ActivateOnInstantiation_DisplayName" xml:space="preserve">
     <value>Activate On Instantiation</value>
   </data>
-  <data name="InstantiateFeatureCommand_DefaultInstanceName_Description" xml:space="preserve">
+  <data name="InstantiateGuidanceWorkflowCommand_DefaultInstanceName_Description" xml:space="preserve">
     <value>The default name of the created guidance workflow in the Guidance Explorer.</value>
   </data>
-  <data name="InstantiateFeatureCommand_DefaultInstanceName_DisplayName" xml:space="preserve">
+  <data name="InstantiateGuidanceWorkflowCommand_DefaultInstanceName_DisplayName" xml:space="preserve">
     <value>Default Name</value>
   </data>
-  <data name="InstantiateFeatureCommand_Description" xml:space="preserve">
-    <value>Creates a new guidance workflow, with an optional default name, and optionally makes the guidance the currently selected feature in the 'Guidance Explorer' window.</value>
+  <data name="InstantiateGuidanceWorkflowCommand_Description" xml:space="preserve">
+    <value>Creates a new guidance workflow, with an optional default name, and optionally makes the guidance the currently selected workflow in the 'Guidance Explorer' window.</value>
   </data>
-  <data name="InstantiateFeatureCommand_DisplayName" xml:space="preserve">
+  <data name="InstantiateGuidanceWorkflowCommand_DisplayName" xml:space="preserve">
     <value>Instantiates an Associated Guidance Workflow.</value>
   </data>
-  <data name="InstantiateFeatureCommand_FeatureId_Description" xml:space="preserve">
-    <value>The identifier of the Feature Extension containing the guidance process to instantiate.</value>
+  <data name="InstantiateGuidanceWorkflowCommand_ExtensionId_Description" xml:space="preserve">
+    <value>The identifier of the guidance extension containing the guidance workflow to instantiate.</value>
   </data>
-  <data name="InstantiateFeatureCommand_FeatureId_DisplayName" xml:space="preserve">
-    <value>Feature Id</value>
+  <data name="InstantiateGuidanceWorkflowCommand_ExtensionId_DisplayName" xml:space="preserve">
+    <value>Extension Id</value>
   </data>
-  <data name="InstantiateFeatureCommand_TraceFeatureNotFound" xml:space="preserve">
-    <value>Installed feature for current element '{0} with identifier '{1}' not installed.</value>
+  <data name="InstantiateGuidanceWorkflowCommand_TraceWorkflowNotFound" xml:space="preserve">
+    <value>Installed guidance extension for current element '{0} with identifier '{1}' not installed.</value>
   </data>
   <data name="InstantiationTemplateWizard_ToolkitInfoNotFound" xml:space="preserve">
     <value>Visual Studio extension providing template '{0}' is not a valid registered pattern toolkit extension.</value>
@@ -264,8 +264,8 @@ Evaluation results:
   <data name="TemplateAutomation_TraceUnfoldingAsset" xml:space="preserve">
     <value>Unfolding associated template '{0}'.</value>
   </data>
-  <data name="TemplateUriEditor_PickerTitle" xml:space="preserve">
-    <value>Select a VS Template (*.vstemplate) file</value>
+  <data name="VsTemplateUriEditor_PickerTitle" xml:space="preserve">
+    <value>Select a VS Template from the Solution</value>
   </data>
   <data name="Tracer_ElementAutomationUnavailable" xml:space="preserve">
     <value>The template automation extension is not available in the current context. Component instantiation might have failed.</value>
@@ -526,9 +526,9 @@ Possible causes can include that the reference URI is invalid, or an item with t
   <data name="WizardAutomation_WizardTypeMustBeWindow" xml:space="preserve">
     <value>Configured wizard type '{0}' does not derive from System.Windows.Window.</value>
   </data>
-  <data name="TemplateUriEditor_EmptyItemsMessage" xml:space="preserve">
-    <value>There are no '*.vstemplate ' files in the current solution.
-Please create a new folder within the 'Templates' folder in this project, and add a new or existing *.vstemplate file with all the template's associated artifacts, and try again.</value>
+  <data name="VsTemplateUriEditor_EmptyItemsMessage" xml:space="preserve">
+    <value>There were no VS Template files ({0}) found in the current solution.
+Please add or import a new 'Item/Project Template', or create a new folder within the 'Templates' folder in this project, and add a new or existing {0} file with all the template's associated artifacts, and try again.</value>
   </data>
   <data name="DesignValueProvider_ValueDescription" xml:space="preserve">
     <value>A configured value for this property, defined at design-time.</value>
@@ -570,7 +570,7 @@ Please create a new folder within the 'Templates' folder in this project, and ad
     <value>SelectArtifactCommand</value>
   </data>
   <data name="ArtifactExtension_SelectMenuItemText" xml:space="preserve">
-    <value>Go To Solution Items</value>
+    <value>Show Solution Items</value>
   </data>
   <data name="ArtifactExtension_SelectContextMenuName" xml:space="preserve">
     <value>SelectArtifactContextMenu</value>
@@ -617,7 +617,7 @@ Please create a new folder within the 'Templates' folder in this project, and ad
   <data name="Validate_GuidanceReferenceNotFoundCode" xml:space="preserve">
     <value>307</value>
   </data>
-  <data name="ActivateFeatureCommand_TraceNoReference" xml:space="preserve">
+  <data name="ActivateGuidanceWorkCommand_TraceNoReference" xml:space="preserve">
     <value>Current element '{0}' has no reference to an existing guidance instance.</value>
   </data>
   <data name="SettingsDescriptionProvider_ConditionsEditorCaption" xml:space="preserve">
@@ -764,22 +764,16 @@ Please create a new folder within the 'Templates' folder in this project, and ad
   <data name="CardinalityValidationRule_ChildElementNameDisplayName" xml:space="preserve">
     <value>Child Element Name</value>
   </data>
-  <data name="Validate_InvalidPropertyBinding" xml:space="preserve">
-    <value>Property '{0}' does no longer exist in target type '{1}' so it has been removed.</value>
-  </data>
-  <data name="Validate_InvalidPropertyBindingCode" xml:space="preserve">
-    <value>317</value>
-  </data>
   <data name="PropertyAttributeValidationRule_ErrorMessageDisplayName" xml:space="preserve">
     <value>Error Message</value>
   </data>
   <data name="PropertyAttributeValidationRule_ErrorMessageDescription" xml:space="preserve">
     <value>Optional. The error message to show to the user when the validation fails. If no message is given, a default internal message will be shown instead.</value>
   </data>
-  <data name="InstantiateFeatureCommand_SharedInstance_Description" xml:space="preserve">
+  <data name="InstantiateGuidanceWorkflowCommand_SharedInstance_Description" xml:space="preserve">
     <value>Whether all the instances of the current element share the same instance of guidance workflow, or have their own separate instances.</value>
   </data>
-  <data name="InstantiateFeatureCommand_SharedInstance_DisplayName" xml:space="preserve">
+  <data name="InstantiateGuidanceWorkflowCommand_SharedInstance_DisplayName" xml:space="preserve">
     <value>Shared Instance</value>
   </data>
   <data name="Validate_CannotResolveType" xml:space="preserve">
@@ -844,8 +838,8 @@ Do you  want your new product/element renamed from '{0}' to '{1}'?</value>
   <data name="GenerateProductCodeCommand_Trace_UpdatedExistingArtifactLink" xml:space="preserve">
     <value>Existing artifact link did not resolve to a solution element. It was updated to a new link: {0}.</value>
   </data>
-  <data name="TemplateSettingsChangeRule_ChangeHiddenFailed" xml:space="preserve">
-    <value>Failed to change Hidden value on Template '{0}'</value>
+  <data name="TemplateSettingsChangeRule_ErrorSyncNameFailed" xml:space="preserve">
+    <value>Failed to sync SyncName automation on Template LaunchPoint '{0}'</value>
   </data>
   <data name="TemplateSettingsChangeRule_ChangeHiddenOnCreateElementOnUnfold" xml:space="preserve">
     <value>Tracking changes for CreateOnUnfold on Template Launch Point '{0}'</value>
@@ -941,9 +935,6 @@ Error is: '{1}'.</value>
   <data name="AggregatorCommand_DisplayName" xml:space="preserve">
     <value>Aggregates Other Commands</value>
   </data>
-  <data name="CommandReferencesEditor_Caption" xml:space="preserve">
-    <value>Commands editor</value>
-  </data>
   <data name="AggregatorCommand_TraceExecutingCommands" xml:space="preserve">
     <value>Executing aggregated commands on current element '{0}'.</value>
   </data>
@@ -959,7 +950,7 @@ Error is: '{1}'.</value>
   <data name="OnElementDeletingEvent_DisplayName" xml:space="preserve">
     <value>Element is Deleting</value>
   </data>
-  <data name="TemplateUriEditor_ReferToGuidance" xml:space="preserve">
+  <data name="VsTemplateUriEditor_ReferToGuidance" xml:space="preserve">
     <value>The selected *.vstemplate file may have been generated by a text template. The selected *.vstemplate has been automatically modified to include vital changes that make this VS Template correctly work with this toolkit, for the current element. 
 As the re-generation of the text template will overwrite these vital changes, these vital changes need to be manually copied to your text template, to preserve them and the correct functionality of the template.
 
@@ -986,15 +977,8 @@ Please open and make a note of the updates that were automatically made to the *
   <data name="ValidationMethodFailed_Error" xml:space="preserve">
     <value>Invoke validation method '{0}' failed.</value>
   </data>
-  <data name="ImageUriEditor_EmptyItemsMessage" xml:space="preserve">
-    <value>There are no image files in the current solution.
-Please add a new or existing image file to the project and try again.</value>
-  </data>
-  <data name="ImageUriEditor_PickerTitle" xml:space="preserve">
-    <value>Select an Image file</value>
-  </data>
   <data name="Validate_MenuSettingsIconDoesNotPointToAValidFile" xml:space="preserve">
-    <value>'{0}' context menu launch point has an invalid value for the 'Icon' property. You must select an existing icon file from the solution, in the 'Settings'.</value>
+    <value>'{0}' context menu launch point has an invalid value for the 'Icon' property. You must select an existing icon file from the solution, or an icon resource in a referenced assembly of the project, in the 'Settings'</value>
   </data>
   <data name="Validate_MenuSettingsIconDoesNotPointToAValidFileCode" xml:space="preserve">
     <value>331</value>
@@ -1042,13 +1026,13 @@ Please add a new or existing image file to the project and try again.</value>
     <value>339</value>
   </data>
   <data name="Validate_TemplateSettingsWizardOrderIsNotCorrect" xml:space="preserve">
-    <value>'{0}' template launch point or unfold command is configured with a 'Template' property for a *.vstemplate file that is not configured correctly. The &lt;WizardExtension&gt; element for the 'InstantiationTemplateWizard' should appear before the &lt;WizardExtension&gt; element for the 'ElementReplacementsWizard'. You must correct the ordering of these &lt;TemplateWizard&gt; elements in the contents of the *.vstemplate file.</value>
+    <value>'{0}' template launch point or unfold command is configured with a 'Template' property for a *.vstemplate file that is not configured correctly. The &lt;WizardExtension&gt; element for the 'InstantiationTemplateWizard' should appear before the &lt;WizardExtension&gt; element for the 'ElementReplacementsTemplateWizard'. You must correct the ordering of these &lt;TemplateWizard&gt; elements in the contents of the *.vstemplate file.</value>
   </data>
   <data name="Validate_TemplateSettingsWizardOrderIsNotCorrectCode" xml:space="preserve">
     <value>341</value>
   </data>
   <data name="Validate_TemplateSettingsWizardsNotPresentInTemplate" xml:space="preserve">
-    <value>'{0}' template launch point or unfold command is configured with a 'Template' property for a *.vstemplate file that is not configured correctly. The &lt;WizardExtension&gt; element for the 'InstantiationTemplateWizard' or the &lt;WizardExtension&gt; element for the 'ElementReplacementsWizard' are missing from the contents of the file. You must re-select the template in the 'Template' property in the 'Settings' to automatically correct this.</value>
+    <value>'{0}' template launch point or unfold command is configured with a 'Template' property for a *.vstemplate file that is not configured correctly. The &lt;WizardExtension&gt; element for the 'InstantiationTemplateWizard' or the &lt;WizardExtension&gt; element for the 'ElementReplacementsTemplateWizard' are missing from the contents of the file, or are not declared correctly. You can re-select the template in the 'Template' property in the 'Settings' to automatically correct this.</value>
   </data>
   <data name="Validate_TemplateSettingsWizardsNotPresentInTemplateCode" xml:space="preserve">
     <value>340</value>
@@ -1178,13 +1162,13 @@ Please add a new or existing image file to the project and try again.</value>
     <value>Solution Name</value>
   </data>
   <data name="Validate_GenerateModelingCodeCommandIIncludeInVSIXShouldBeSetToTrue" xml:space="preserve">
-    <value>The file associated to the command '{0}' should have its  'Include in VSIX' property set to 'True'</value>
+    <value>The text template file associated to the command '{0}' should have its  'Include in VSIX' property set to 'True'. You can re-select the text template file in the 'Template' property in the 'Settings' to automatically correct this.</value>
   </data>
   <data name="Validate_GenerateModelingCodeCommandIIncludeInVSIXShouldBeSetToTrueCode" xml:space="preserve">
     <value>345</value>
   </data>
   <data name="Validate_GenerateModelingCodeCommandItemTypeShouldBeSetToContent" xml:space="preserve">
-    <value>The file associated to the command '{0}' should have its Item Type set to 'Content'</value>
+    <value>The text template file associated to the command '{0}' should have its 'Build Action' set to 'Content'</value>
   </data>
   <data name="Validate_GenerateModelingCodeCommandItemTypeShouldBeSetToContentCode" xml:space="preserve">
     <value>346</value>
@@ -1474,31 +1458,31 @@ Please add a new or existing image file to the project and try again.</value>
   <data name="ActivateArtifactCommand_TraceInitial" xml:space="preserve">
     <value>Executing activation of all solution item references for current element '{0}' with Open '{1}'.</value>
   </data>
-  <data name="ActivateFeatureCommand_TraceInitial" xml:space="preserve">
+  <data name="ActivateGuidanceWorkCommand_TraceInitial" xml:space="preserve">
     <value>Executing activation of guidance instance for current element, '{0}'.</value>
   </data>
-  <data name="ActivateFeatureCommand_TraceReferenceFound" xml:space="preserve">
+  <data name="ActivateGuidanceWorkCommand_TraceReferenceFound" xml:space="preserve">
     <value>Guidance instance on current element '{0}' has instance name '{1}'</value>
   </data>
-  <data name="ActivateFeatureCommand_TraceActivation" xml:space="preserve">
+  <data name="ActivateGuidanceWorkCommand_TraceActivation" xml:space="preserve">
     <value>Activating guidance instance on current element '{0}' with instance name '{1}'</value>
   </data>
-  <data name="InstantiateFeatureCommand_TraceInitial" xml:space="preserve">
-    <value>Executing instantiation of guidance instance for current element '{0}' of feature '{1}' with instance name '{2}' as shared '{3}' and activateoncreation '{4}'.</value>
+  <data name="InstantiateGuidanceWorkflowCommand_TraceInitial" xml:space="preserve">
+    <value>Executing instantiation of guidance instance for current element '{0}' of extension '{1}' with instance name '{2}' as shared '{3}' and activateoncreation '{4}'.</value>
   </data>
-  <data name="InstantiateFeatureCommand_TraceActivateShared" xml:space="preserve">
+  <data name="InstantiateGuidanceWorkflowCommand_TraceActivateShared" xml:space="preserve">
     <value>Activating existing shared guidance instance of current element '{0}' with name '{1}'</value>
   </data>
-  <data name="InstantiateFeatureCommand_TraceCreateUniqueInstanceName" xml:space="preserve">
+  <data name="InstantiateGuidanceWorkflowCommand_TraceCreateUniqueInstanceName" xml:space="preserve">
     <value>Created new guidance instance name for current element '{0}' with name '{1}'</value>
   </data>
-  <data name="InstantiateFeatureCommand_TraceInstantiateNew" xml:space="preserve">
-    <value>Instantiating new guidance instance of current element '{0}' with feature id '{1}' and name '{2}'</value>
+  <data name="InstantiateGuidanceWorkflowCommand_TraceInstantiateNew" xml:space="preserve">
+    <value>Instantiating new guidance instance of current element '{0}' with extension id '{1}' and name '{2}'</value>
   </data>
-  <data name="InstantiateFeatureCommand_TraceActivateNew" xml:space="preserve">
+  <data name="InstantiateGuidanceWorkflowCommand_TraceActivateNew" xml:space="preserve">
     <value>Activating new guidance instance of current element '{0}' with name '{1}'</value>
   </data>
-  <data name="InstantiateFeatureCommand_TraceAddingReference" xml:space="preserve">
+  <data name="InstantiateGuidanceWorkflowCommand_TraceAddingReference" xml:space="preserve">
     <value>Adding reference to new guidance instance of current element '{0}' with name '{1}'</value>
   </data>
   <data name="AggregatorCommand_TraceExecutingCommand" xml:space="preserve">
@@ -1736,7 +1720,7 @@ Please add a new or existing image file to the project and try again.</value>
     <value>Executing collapse of all items in the solution, including all projects '{0}'</value>
   </data>
   <data name="Validate_GenerateModelingCodeAuthoringUriIsInvalid" xml:space="preserve">
-    <value>'{0}' has either no value or an invalid value for the 'Text Template' property. You must select an existing *.t4 or *.tt for the 'Text Template' property in the 'Settings'.</value>
+    <value>The 'Text Template' property of command '{0}' is not defined, or has an invalid value. You must select an existing *.t4 or *.tt file for the 'Text Template' property in the 'Settings'.</value>
   </data>
   <data name="Validate_GenerateModelingCodeAuthoringUriIsInvalidCode" xml:space="preserve">
     <value>347</value>
@@ -1887,28 +1871,28 @@ Evaluation results:
   <data name="MenuAutomation_ConditionEvaluatedFalse" xml:space="preserve">
     <value>Condition '{0}' evaluated to false with the following configuration:</value>
   </data>
-  <data name="ActivateOrInstantiateSharedFeatureCommand_Description" xml:space="preserve">
-    <value>Activates the a shared instance of a feature, or instantiates it,  if it does not yet exist.</value>
+  <data name="ActivateOrInstantiateSharedGuidanceWorkflowCommand_Description" xml:space="preserve">
+    <value>Activates a shared instance of a guidance workflow, or instantiates it, if it does not yet exist.</value>
   </data>
-  <data name="ActivateOrInstantiateSharedFeatureCommand_DisplayName" xml:space="preserve">
-    <value>Activates or Instantiates a Shared Feature</value>
+  <data name="ActivateOrInstantiateSharedGuidanceWorkflowCommand_DisplayName" xml:space="preserve">
+    <value>Activates or Instantiates a Shared Guidance Workflow</value>
   </data>
-  <data name="ActivateOrInstantiateSharedFeatureCommand_FeatureId_Description" xml:space="preserve">
-    <value>The Feature Id of the feature to activate (or instantiate).</value>
+  <data name="ActivateOrInstantiateSharedGuidanceWorkflowCommand_ExtensionId_Description" xml:space="preserve">
+    <value>The Id of the extension containing the guidance to activate (or instantiate).</value>
   </data>
-  <data name="ActivateOrInstantiateSharedFeatureCommand_TraceActivate" xml:space="preserve">
-    <value>Activated feature named '{0}'</value>
+  <data name="ActivateOrInstantiateSharedGuidanceWorkflowCommand_TraceActivate" xml:space="preserve">
+    <value>Activated guidance workflow named '{0}'</value>
   </data>
-  <data name="ActivateOrInstantiateSharedFeatureCommand_TraceFeatureNotFound" xml:space="preserve">
-    <value>Feature with id '{0}' not registered.</value>
+  <data name="ActivateOrInstantiateSharedGuidanceWorkflowCommand_TraceWorkflowNotFound" xml:space="preserve">
+    <value>Guidance Workflow with id '{0}' not registered.</value>
   </data>
-  <data name="ActivateOrInstantiateSharedFeatureCommand_TraceInitial" xml:space="preserve">
-    <value>Executing activation or instantiation of feature '{0}'</value>
+  <data name="ActivateOrInstantiateSharedGuidanceWorkflowCommand_TraceInitial" xml:space="preserve">
+    <value>Executing activation or instantiation of guidance workflow '{0}'</value>
   </data>
-  <data name="ActivateOrInstantiateSharedFeatureCommand_TraceInstantiate" xml:space="preserve">
-    <value>Instantiated new feature '{0}', named '{1}'</value>
+  <data name="ActivateOrInstantiateSharedGuidanceWorkflowCommand_TraceInstantiate" xml:space="preserve">
+    <value>Instantiated new guidance workflow '{0}', named '{1}'</value>
   </data>
-  <data name="ActivateOrInstantiateSharedFeatureCommand_TraceShowingGuidanceExplorer" xml:space="preserve">
+  <data name="ActivateOrInstantiateSharedGuidanceWorkflowCommand_TraceShowingGuidanceExplorer" xml:space="preserve">
     <value>Opening guidance windows.</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
@@ -2042,5 +2026,422 @@ Error was: {2}</value>
   </data>
   <data name="PreserveOrderComparer_DisplayName" xml:space="preserve">
     <value>Preserves the Existing Order of Product Elements</value>
+  </data>
+  <data name="Validate_GenerateModelingCodeCommandIIncludeInVSIXAsShouldBeSameAsFile" xml:space="preserve">
+    <value>The text template file associated to the command '{0}' has been configured in its project with a 'IncludeInVSIXAs' value that does not match. You can re-select the text template file in the 'Template' property in the 'Settings' to automatically correct this.</value>
+  </data>
+  <data name="Validate_GenerateModelingCodeCommandIIncludeInVSIXAsShouldBeSameAsFileCode" xml:space="preserve">
+    <value>351</value>
+  </data>
+  <data name="Validate_GenerateModelingCodeCommandIIncludeInVSIXDuplicate" xml:space="preserve">
+    <value>The text template file associated to the command '{0}' has both its  'Include in VSIX' property set to 'True', and it defines a value for the 'IncludeInVSIXAs' property in the project file. You can re-select the text template file in the 'Template' property in the 'Settings' to automatically correct this.</value>
+  </data>
+  <data name="Validate_GenerateModelingCodeCommandIIncludeInVSIXDuplicateCode" xml:space="preserve">
+    <value>352</value>
+  </data>
+  <data name="ProjectNameValueProvider_Description" xml:space="preserve">
+    <value>Retrieves the name of a project in the current solution.</value>
+  </data>
+  <data name="ProjectNameValueProvider_DisplayName" xml:space="preserve">
+    <value>Project Name</value>
+  </data>
+  <data name="ProjectNameValueProvider_TraceEvaluation" xml:space="preserve">
+    <value>Evaluated name of project for current element '{0}', using project path '{1}', as '{2}'.</value>
+  </data>
+  <data name="ProjectNameValueProvider_TraceInitial" xml:space="preserve">
+    <value>Evaluating name of project for current element '{0}', using project path '{1}'.</value>
+  </data>
+  <data name="VsTemplateUriEditor_FailedToEdit" xml:space="preserve">
+    <value>Failed to edit file.</value>
+  </data>
+  <data name="TextTemplateUriEditor_FailedToEdit" xml:space="preserve">
+    <value>Failed to edit file.</value>
+  </data>
+  <data name="TextTemplateUriEditor_Title" xml:space="preserve">
+    <value>Select a Text Template from the Solution</value>
+  </data>
+  <data name="TextTemplateUriEditor_EmptyItemsMessage" xml:space="preserve">
+    <value>There were no Text Template files ({0}) found in the current solution.
+Please add a new 'Text Template', or create a new folder within the 'Templates\Text' folder in this project, and add a new or existing {0} file, and try again.</value>
+  </data>
+  <data name="ModifyXmlCommand_Action_Description" xml:space="preserve">
+    <value>The action to perform against the XML element or attribute.</value>
+  </data>
+  <data name="ModifyXmlCommand_Action_DisplayName" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="ModifyXmlCommand_Description" xml:space="preserve">
+    <value>Modifies the element text or attribute value in a referenced XML configuration file.</value>
+  </data>
+  <data name="ModifyXmlCommand_DisplayName" xml:space="preserve">
+    <value>Modify XML configuration file</value>
+  </data>
+  <data name="ModifyXmlCommand_SourcePath_Description" xml:space="preserve">
+    <value>The path to the XML file in the current solution. i.e. ..\~\GeneratedCode\MyConfig.xml, navigates up to the parent element, and traverses the first artifact link found on the parent element and into the 'GeneratedCode' sub-folder of that container (project or folder), to the file.  See guidance documentation for more example paths and details.</value>
+  </data>
+  <data name="ModifyXmlCommand_SourcePath_DisplayName" xml:space="preserve">
+    <value>Source Path</value>
+  </data>
+  <data name="ModifyXmlCommand_TraceInitial" xml:space="preserve">
+    <value>Executing modification of XML file with source path '{0}', and element path '{1}' with for action '{2}', with value '{3}'</value>
+  </data>
+  <data name="ModifyXmlCommand_NewValue_Description" xml:space="preserve">
+    <value>If 'Action'='Update' the new value of the element or attribute to update.</value>
+  </data>
+  <data name="ModifyXmlCommand_NewValue_DisplayName" xml:space="preserve">
+    <value>New Value</value>
+  </data>
+  <data name="ModifyXmlCommand_XmlPath_Description" xml:space="preserve">
+    <value>The XPath query to an element or attribute to modify. i.e. /bookstore/book/title for an element and /bookstore/book/@title for an attribute.  If your XML document has a namespace declaration, even a default one (i.e. xmlns="SomeURI"), you must qualify your query with a prefix i.e. /bk:bookstore/bk:book/bk:title. You will also need to declare the prefix and namespace in the 'XML Namespaces' property. i.e. bk = SomeURI.</value>
+  </data>
+  <data name="ModifyXmlCommand_XmlPath_DisplayName" xml:space="preserve">
+    <value>XPath Query</value>
+  </data>
+  <data name="ModifyXmlCommand_ErrorNoSource" xml:space="preserve">
+    <value>Could not resolve SourcePath '{1}' from element '{0}' to a file in the solution.</value>
+  </data>
+  <data name="ModifyXmlCommand_ErrorLoadXmlDoc" xml:space="preserve">
+    <value>Could not load XML from file '{0}'. File may not be a valid XML file.</value>
+  </data>
+  <data name="ModifyXmlCommand_ErrorSaveXmlDoc" xml:space="preserve">
+    <value>Could not save changes to file '{0}'</value>
+  </data>
+  <data name="ModifyXmlCommand_ErrorXPath" xml:space="preserve">
+    <value>Could not locate SourceElement in XML file '{0}' using XPath '{1}'</value>
+  </data>
+  <data name="ModifyXmlCommand_TraceNewValue" xml:space="preserve">
+    <value>NewValue evaluates to '{0}'</value>
+  </data>
+  <data name="ModifyXmlCommand_TraceXPath" xml:space="preserve">
+    <value>XmlPath evaluates to XPath '{0}'</value>
+  </data>
+  <data name="ModifyXmlCommand_ErrorUpdateNodeNotFound" xml:space="preserve">
+    <value>Could not locate element/attribute in solution item '{0}' with XML path '{1}'. This element/attribute must be created before this update can occur.</value>
+  </data>
+  <data name="XmlNodeExistsCondition_Description" xml:space="preserve">
+    <value>Used to verify that an element or attribute of a referenced XML configuration file exists.</value>
+  </data>
+  <data name="XmlNodeExistsCondition_DisplayName" xml:space="preserve">
+    <value>XML Configuration File Node Exists</value>
+  </data>
+  <data name="XmlNodeExistsCondition_ErrorCloseXmlDoc" xml:space="preserve">
+    <value>Could not save changes to file '{0}'</value>
+  </data>
+  <data name="XmlNodeExistsCondition_ErrorLoadXmlDoc" xml:space="preserve">
+    <value>Could not load XML from file '{0}'. File may not be a valid XML file.</value>
+  </data>
+  <data name="XmlNodeExistsCondition_ErrorNoSource" xml:space="preserve">
+    <value>Could not resolve SourcePath '{1}' from element '{0}' to a file in the solution.</value>
+  </data>
+  <data name="XmlNodeExistsCondition_ErrorXPath" xml:space="preserve">
+    <value>Could not locate SourceElement in XML file '{0}' using XPath '{1}'</value>
+  </data>
+  <data name="XmlNodeExistsCondition_TraceEvaluation" xml:space="preserve">
+    <value>Evaluated existance of element within XML file with source path '{0}', and element path '{1}', as '{2}'</value>
+  </data>
+  <data name="XmlNodeExistsCondition_TraceInitial" xml:space="preserve">
+    <value>Evaluating existance of element within XML file with source path '{0}', and element path '{1}'</value>
+  </data>
+  <data name="XmlNodeExistsCondition_TraceXPath" xml:space="preserve">
+    <value>XmlPath evaluates to XPath '{0}'</value>
+  </data>
+  <data name="XmlNodeValueProvider_Description" xml:space="preserve">
+    <value>Retrieves the text of an element or the value of an attribute in a referenced XML configuration file.</value>
+  </data>
+  <data name="XmlNodeValueProvider_DisplayName" xml:space="preserve">
+    <value>XML Configuration File Node</value>
+  </data>
+  <data name="XmlNodeValueProvider_ErrorCloseXmlDoc" xml:space="preserve">
+    <value>Could not save changes to file '{0}'</value>
+  </data>
+  <data name="XmlNodeValueProvider_ErrorLoadXmlDoc" xml:space="preserve">
+    <value>Could not load XML from file '{0}'. File may not be a valid XML file.</value>
+  </data>
+  <data name="XmlNodeValueProvider_ErrorNoSource" xml:space="preserve">
+    <value>Could not resolve SourcePath '{1}' from element '{0}' to a file in the solution.</value>
+  </data>
+  <data name="XmlNodeValueProvider_ErrorSearchNodeNotFound" xml:space="preserve">
+    <value>Could not locate element/attribute in solution item '{0}' with XML path '{1}'. This element/attribute must be created before this update can occur.</value>
+  </data>
+  <data name="XmlNodeValueProvider_ErrorXPath" xml:space="preserve">
+    <value>Could not locate SourceElement in XML file '{0}' using XPath '{1}'</value>
+  </data>
+  <data name="XmlNodeValueProvider_TraceEvaluation" xml:space="preserve">
+    <value>Evaluated value within XML file with source path '{0}', and element path '{1}', as '{2}'</value>
+  </data>
+  <data name="XmlNodeValueProvider_TraceInitial" xml:space="preserve">
+    <value>Evaluating value within XML file with source path '{0}', and element path '{1}'</value>
+  </data>
+  <data name="XmlNodeValueProvider_TraceXPath" xml:space="preserve">
+    <value>XmlPath evaluates to XPath '{0}'</value>
+  </data>
+  <data name="ModifyXmlCommand_Namespaces_Description" xml:space="preserve">
+    <value>A list of XML namespace declarations to use in the 'XML Path' query. You must include at least one prefix and namespace declaration if the XML document has a default namespace (i.e. xmlns="someURI"). And then use this prefix in your 'XPath Query' property.</value>
+  </data>
+  <data name="ModifyXmlCommand_Namespaces_DisplayName" xml:space="preserve">
+    <value>XML Namespaces</value>
+  </data>
+  <data name="XmlNamespace_Namespace_Description" xml:space="preserve">
+    <value>The full namespace for the 'Prefix'.</value>
+  </data>
+  <data name="XmlNamespace_Namespace_DisplayName" xml:space="preserve">
+    <value>Namespace</value>
+  </data>
+  <data name="XmlNamespace_Prefix_Description" xml:space="preserve">
+    <value>The prefix used to reference elements in the 'Namespace'.</value>
+  </data>
+  <data name="XmlNamespace_Prefix_DisplayName" xml:space="preserve">
+    <value>Prefix</value>
+  </data>
+  <data name="XmlNamespace_Description" xml:space="preserve">
+    <value>An XMLNamespace definition</value>
+  </data>
+  <data name="XmlNamespace_DisplayName" xml:space="preserve">
+    <value>XML Namespace</value>
+  </data>
+  <data name="XmlNamespace_EmptyNamespace" xml:space="preserve">
+    <value>(Empty Namespace)</value>
+  </data>
+  <data name="DeleteArtifactsCommand_Description" xml:space="preserve">
+    <value>Deletes all the associated solution items for the current element. This command supports prompting the user to choose which associated artifacts to delete.</value>
+  </data>
+  <data name="DeleteArtifactsCommand_DisplayName" xml:space="preserve">
+    <value>Deletes an Element's Associated Artifacts</value>
+  </data>
+  <data name="DeleteArtifactsCommand_TraceInitial" xml:space="preserve">
+    <value>Executing deletion of associated solution items for current element, '{0}', and action '{1}'.</value>
+  </data>
+  <data name="DeleteArtifactsCommand_TraceNoLinks" xml:space="preserve">
+    <value>No associated solution items to delete for the current element '{0}'.</value>
+  </data>
+  <data name="DeleteArtifactsCommand_ErrorDeletingSolutionItem" xml:space="preserve">
+    <value>Failed to delete solution item '{0}', error was: '{1}'</value>
+  </data>
+  <data name="DeleteArtifactsCommand_TraceDeleteSolutionItem" xml:space="preserve">
+    <value>Deleting item '{0}' from solution.</value>
+  </data>
+  <data name="DeleteArtifactsCommand_SelectorEmptyItems" xml:space="preserve">
+    <value>There are no items in the solution to delete.</value>
+  </data>
+  <data name="DeleteArtifactsCommand_SelectorTitle" xml:space="preserve">
+    <value>Select the solution items to delete</value>
+  </data>
+  <data name="DeleteArtifactsCommand_Action_Description" xml:space="preserve">
+    <value>The default delete action to take. 'DeleteAll' deletes all associated solution items automatically. 'PromptUser' allows the user to specify which solution items to delete.</value>
+  </data>
+  <data name="DeleteArtifactsCommand_Action_DisplayName" xml:space="preserve">
+    <value>Delete Action</value>
+  </data>
+  <data name="DeleteArtifactsCommand_SelectorMessage" xml:space="preserve">
+    <value>'{0}' was related to one or more items in solution, which it may have created. These solution items may no longer be required or managed by this element and may need deleting.
+
+Select the related solution items to delete and press 'OK', or press 'Cancel' to keep the items in the solution.</value>
+  </data>
+  <data name="DeleteArtifactsCommand_SelectorFailed" xml:space="preserve">
+    <value>Failed to select files to delete</value>
+  </data>
+  <data name="ArtifactExtension_DeleteCommandName" xml:space="preserve">
+    <value>DeleteArtifactsCommand</value>
+  </data>
+  <data name="ArtifactExtension_DeleteEventName" xml:space="preserve">
+    <value>DeleteArtifactsEvent</value>
+  </data>
+  <data name="CommandSettingsUpgradeProcessor_TraceDeserialize" xml:space="preserve">
+    <value>Upgrading CommandSettings elements.</value>
+  </data>
+  <data name="CommandSettingsUpgradeProcessor_TraceDeserializeCommandSettings" xml:space="preserve">
+    <value>Upgrading CommandSettings element '{0}', replacing XML properties with JSon.</value>
+  </data>
+  <data name="UnfoldVsCommandChangeRule_ErrorSyncNameFailed" xml:space="preserve">
+    <value>Failed to sync SyncName automation on Command '{0}'</value>
+  </data>
+  <data name="CommandReference_EmptyReference" xml:space="preserve">
+    <value>(Empty Command)</value>
+  </data>
+  <data name="AggregatorCommandUpgradeProcessor_TraceDeserialize" xml:space="preserve">
+    <value>Upgrading AggregatorCommand elements.</value>
+  </data>
+  <data name="AggregatorCommandUpgradeProcessor_TraceDeserializeCommandSettings" xml:space="preserve">
+    <value>Upgrading AggregatorCommandSettings element '{0}', replacing string JSon with CommandReference collection JSon.</value>
+  </data>
+  <data name="SetBlackboardValueCommand_Description" xml:space="preserve">
+    <value>Sets a value in the black board.</value>
+  </data>
+  <data name="SetBlackboardValueCommand_DisplayName" xml:space="preserve">
+    <value>Set Value in Blackboard</value>
+  </data>
+  <data name="ShowMessageCommand_Description" xml:space="preserve">
+    <value>Displays text in a Message Box</value>
+  </data>
+  <data name="ShowMessageCommand_DisplayName" xml:space="preserve">
+    <value>Displays a Message Box</value>
+  </data>
+  <data name="SetBlackboardValueCommand_Key_Description" xml:space="preserve">
+    <value>The name of the item in the black board.</value>
+  </data>
+  <data name="SetBlackboardValueCommand_Key_DisplayName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="SetBlackboardValueCommand_Value_Description" xml:space="preserve">
+    <value>The value of the item to set in the blackboard.</value>
+  </data>
+  <data name="SetBlackboardValueCommand_Value_DisplayName" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="ShowMessageCommand_DefaultMessage" xml:space="preserve">
+    <value>&lt;No Message Supplied&gt;</value>
+  </data>
+  <data name="ShowMessageCommand_Level_Description" xml:space="preserve">
+    <value>The severity level of the message</value>
+  </data>
+  <data name="ShowMessageCommand_Level_DisplayName" xml:space="preserve">
+    <value>Level</value>
+  </data>
+  <data name="ShowMessageCommand_Message_Description" xml:space="preserve">
+    <value>The text of the message to display</value>
+  </data>
+  <data name="ShowMessageCommand_Message_DisplayName" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="FirstOrDefaultValueProvider_Description" xml:space="preserve">
+    <value>Retrieves the first value in the collection of elements.</value>
+  </data>
+  <data name="FirstOrDefaultValueProvider_DisplayName" xml:space="preserve">
+    <value>First or Default Value</value>
+  </data>
+  <data name="FirstOrDefaultValueProvider_Elements_Description" xml:space="preserve">
+    <value>The elements in the collection.</value>
+  </data>
+  <data name="FirstOrDefaultValueProvider_Elements_DisplayName" xml:space="preserve">
+    <value>Elements</value>
+  </data>
+  <data name="FirstOrDefaultValueProvider_TraceEvaluation" xml:space="preserve">
+    <value>Evaluated the first or default value of the set of elements, as '{0}'.</value>
+  </data>
+  <data name="FirstOrDefaultValueProvider_TraceInitial" xml:space="preserve">
+    <value>Evaluating the first or default value of a set of elements.</value>
+  </data>
+  <data name="FirstOrDefaultValueProvider_TraceNoElements" xml:space="preserve">
+    <value>Failed to evaluate the first or default value of a null set of elements.</value>
+  </data>
+  <data name="FirstSolutionElementMatchValueProvider_Description" xml:space="preserve">
+    <value>Retrieves the first solution item that matches the path expression.</value>
+  </data>
+  <data name="FirstSolutionElementMatchValueProvider_DisplayName" xml:space="preserve">
+    <value>First Solution Item</value>
+  </data>
+  <data name="FirstSolutionElementMatchValueProvider_PathExpression_Description" xml:space="preserve">
+    <value>An expression that matches the item in the solution. May contain wildcard characters ('*') to search any folder and file name or file extension. (i.e. MyProject\SubFolder\*.cs)</value>
+  </data>
+  <data name="FirstSolutionElementMatchValueProvider_PathExpression_DisplayName" xml:space="preserve">
+    <value>Path Expression</value>
+  </data>
+  <data name="FirstSolutionElementMatchValueProvider_TraceEvaluation" xml:space="preserve">
+    <value>Evaluated the first item in the solution with path expression '{0}', as '{1}'.</value>
+  </data>
+  <data name="FirstSolutionElementMatchValueProvider_TraceInitial" xml:space="preserve">
+    <value>Evaluating the first item in the solution with path expression '{0}'.</value>
+  </data>
+  <data name="GetBlackboardValueValueProvider_Description" xml:space="preserve">
+    <value>Retrieves the value of the item in the black board.</value>
+  </data>
+  <data name="GetBlackboardValueValueProvider_DisplayName" xml:space="preserve">
+    <value>Blackboard Value</value>
+  </data>
+  <data name="GetBlackboardValueValueProvider_TraceEvaluation" xml:space="preserve">
+    <value>Evaluated blackboard value '{0}', as '{1}'</value>
+  </data>
+  <data name="GetBlackboardValueValueProvider_TraceInitial" xml:space="preserve">
+    <value>Evaluating blackboard value '{0}'.</value>
+  </data>
+  <data name="InputBoxValueProvider_Description" xml:space="preserve">
+    <value>Retrieves a textual input from the user.</value>
+  </data>
+  <data name="InputBoxValueProvider_DisplayName" xml:space="preserve">
+    <value>Prompt User Input</value>
+  </data>
+  <data name="InputBoxValueProvider_TraceEvaluation" xml:space="preserve">
+    <value>Evaluated the input from user with message '{0}', and default value '{1}', as '{2}'.</value>
+  </data>
+  <data name="InputBoxValueProvider_TraceInitial" xml:space="preserve">
+    <value>Evaluating the input from prompting user, with message '{0}', and default value '{1}'.</value>
+  </data>
+  <data name="SetBlackboardValueCommand_TraceInitial" xml:space="preserve">
+    <value>Executing the setting of Blackboard property '{0}', with value '{1}'</value>
+  </data>
+  <data name="ShowMessageCommand_TraceInitial" xml:space="preserve">
+    <value>Executing the display of message '{0}', with level '{1}'</value>
+  </data>
+  <data name="GetBlackboardValueValueProvider_Key_Description" xml:space="preserve">
+    <value>The name of the item in the black board.</value>
+  </data>
+  <data name="GetBlackboardValueValueProvider_Key_DisplayName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="InputBoxValueProvider_DefaultValue_Description" xml:space="preserve">
+    <value>A default value to display to the user, and return if the user cancels the dialog.</value>
+  </data>
+  <data name="InputBoxValueProvider_DefaultValue_DisplayName" xml:space="preserve">
+    <value>Default Value</value>
+  </data>
+  <data name="InputBoxValueProvider_Message_Description" xml:space="preserve">
+    <value>The textual message to display to the user.</value>
+  </data>
+  <data name="InputBoxValueProvider_Message_DisplayName" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="StringNotNullOrEmptyCondition_Description" xml:space="preserve">
+    <value>Used to verify that the string value is neither Null nor Empty.</value>
+  </data>
+  <data name="StringNotNullOrEmptyCondition_DisplayName" xml:space="preserve">
+    <value>String Value is Not Null or Empty</value>
+  </data>
+  <data name="StringNotNullOrEmptyCondition_TraceEvaluation" xml:space="preserve">
+    <value>Evaluated empty or null value of string '{0}', as '{1}'.</value>
+  </data>
+  <data name="StringNotNullOrEmptyCondition_TraceInitial" xml:space="preserve">
+    <value>Evaluating empty or null value of string: '{0}'.</value>
+  </data>
+  <data name="StringNotNullOrEmptyCondition_Value_Description" xml:space="preserve">
+    <value>The string value to verify.</value>
+  </data>
+  <data name="StringNotNullOrEmptyCondition_Value_DisplayName" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="ValueIsNotNullCondition_Description" xml:space="preserve">
+    <value>Used to verify that the value is not Null.</value>
+  </data>
+  <data name="ValueIsNotNullCondition_DisplayName" xml:space="preserve">
+    <value>Value is Not Null</value>
+  </data>
+  <data name="ValueIsNotNullCondition_TraceEvaluation" xml:space="preserve">
+    <value>Evaluated null value of '{0}', as '{1}'.</value>
+  </data>
+  <data name="ValueIsNotNullCondition_TraceInitial" xml:space="preserve">
+    <value>Evaluating null value of: '{0}'.</value>
+  </data>
+  <data name="ValueIsNotNullCondition_Value_Description" xml:space="preserve">
+    <value>The value to verify.</value>
+  </data>
+  <data name="ValueIsNotNullCondition_Value_DisplayName" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="GuidanceCommandUpgradeProcessor_TraceDeserialize" xml:space="preserve">
+    <value>Upgrading FeatureCommand elements.</value>
+  </data>
+  <data name="GuidanceExtensionUpgradeProcessor_TraceDeserialize" xml:space="preserve">
+    <value>Upgrading GuidanceExtension elements.</value>
+  </data>
+  <data name="ProductElementDictionaryConverter_ErrorElementNotSupportAncestors" xml:space="preserve">
+    <value>Element '{0}' does not support ancestors.</value>
+  </data>
+  <data name="ProductElementDictionaryConverter_ErrorElementNotSupportDescendants" xml:space="preserve">
+    <value>Element '{0}' does not support descendants.</value>
+  </data>
+  <data name="CreateElementFromPickedFileCommand_AllFilesFilter" xml:space="preserve">
+    <value>All files (*.*)|*.*</value>
+  </data>
+  <data name="CreateElementFromPickedFileCommand_FilterFormat" xml:space="preserve">
+    <value>(*{0})|*{0}</value>
   </data>
 </root>

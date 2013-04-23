@@ -3,20 +3,21 @@ using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Validation;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Automation.Template;
-using Microsoft.VisualStudio.Patterning.Library.Commands;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
+using NuPattern.Library.Automation.Template;
+using NuPattern.Library.Commands;
+using NuPattern.Library.Properties;
+using NuPattern.Reflection;
+using NuPattern.Runtime;
+using NuPattern.Runtime.Bindings;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
     /// <summary>
     /// Custom validation rules.
     /// </summary>
     [ValidationState(ValidationState.Enabled)]
-    public partial class TemplateSettings
+    partial class TemplateSettings
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<TemplateSettings>();
 
@@ -220,10 +221,10 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
                 var ownerElement = automationElement.Parent as IPatternSchema;
 
                 var unfoldCommands = ownerElement.GetAutomationSettings<CommandSettings>().Where(t => t.TypeId == typeof(UnfoldVsTemplateCommand).ToString());
-                Func<PropertySettings, bool> authoringProperty = p => p.Name == Reflector<UnfoldVsTemplateCommand>.GetPropertyName(t => t.TemplateAuthoringUri);
+                Func<IPropertyBindingSettings, bool> authoringProperty = p => p.Name == Reflector<UnfoldVsTemplateCommand>.GetPropertyName(t => t.TemplateAuthoringUri);
 
                 if (unfoldCommands.Count() > 0 &&
-                    unfoldCommands.Any(c => c.Properties.Any(authoringProperty) && c.Properties.First(authoringProperty).Value == this.TemplateAuthoringUri))
+                    unfoldCommands.Any(c => ((IBindingSettings)c).Properties.Any(authoringProperty) && ((IBindingSettings)c).Properties.First(authoringProperty).Value == this.TemplateAuthoringUri))
                 {
                     context.LogError(
                         string.Format(

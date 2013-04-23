@@ -9,25 +9,24 @@ using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Integration;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Library.TypeEditors;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
+using NuPattern.Library.Design;
+using NuPattern.Library.Properties;
+using NuPattern.Runtime;
+using NuPattern.VisualStudio.Solution;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Commands
+namespace NuPattern.Library.Commands
 {
     /// <summary>
     /// A command that generates code from text templates.
     /// </summary>
     [CLSCompliant(false)]
-    [DisplayNameResource("GenerateModelingCodeCommand_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_DslAutomation", typeof(Resources))]
-    [DescriptionResource("GenerateModelingCodeCommand_Description", typeof(Resources))]
-    public class GenerateModelingCodeCommand : FeatureCommand
+    [DisplayNameResource(@"GenerateModelingCodeCommand_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"GenerateModelingCodeCommand_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_DslAutomation", typeof(Resources))]
+    public class GenerateModelingCodeCommand : Command
     {
         private const bool DefaultSantizeName = true;
         private const string DefaultTargetBuildAction = "";
@@ -63,16 +62,16 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
         /// Optional Build Action to set on the generated output item. If empty, 
         /// the default for the owning project or file extension will be used automatically by Visual Studio.
         /// </summary>
-        [DisplayNameResource("GenerateModelingCodeCommand_TargetBuildAction_DisplayName", typeof(Resources))]
-        [DescriptionResource("GenerateModelingCodeCommand_TargetBuildAction_Description", typeof(Resources))]
+        [DisplayNameResource(@"GenerateModelingCodeCommand_TargetBuildAction_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"GenerateModelingCodeCommand_TargetBuildAction_Description", typeof(Resources))]
         [DefaultValue(DefaultTargetBuildAction)]
         public string TargetBuildAction { get; set; }
 
         /// <summary>
         /// Optional Copy To Ouput to set on the generated output item. If empty, 
         /// </summary>
-        [DisplayNameResource("GenerateModelingCodeCommand_TargetCopyToOutput_DisplayName", typeof(Resources))]
-        [DescriptionResource("GenerateModelingCodeCommand_TargetCopyToOutput_Description", typeof(Resources))]
+        [DisplayNameResource(@"GenerateModelingCodeCommand_TargetCopyToOutput_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"GenerateModelingCodeCommand_TargetCopyToOutput_Description", typeof(Resources))]
         [DefaultValue(DefaultTargetCopyToOutput)]
         public CopyToOutput TargetCopyToOutput { get; set; }
 
@@ -85,8 +84,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
         /// <summary>
         /// Gets or sets the template filename.
         /// </summary>
-        [DisplayNameResource("GenerateModelingCodeCommand_TemplateUri_DisplayName", typeof(Resources))]
-        [DescriptionResource("GenerateModelingCodeCommand_TemplateUri_Description", typeof(Resources))]
+        [DisplayNameResource(@"GenerateModelingCodeCommand_TemplateUri_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"GenerateModelingCodeCommand_TemplateUri_Description", typeof(Resources))]
         [Editor(typeof(TextTemplateUriEditor), typeof(UITypeEditor))]
         [DesignOnly(true)]
         [Required]
@@ -95,31 +94,31 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
         /// <summary>
         /// Gets or sets the target path.
         /// </summary>
-        [DisplayNameResource("GenerateModelingCodeCommand_TargetPath_DisplayName", typeof(Resources))]
-        [DescriptionResource("GenerateModelingCodeCommand_TargetPath_Description", typeof(Resources))]
+        [DisplayNameResource(@"GenerateModelingCodeCommand_TargetPath_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"GenerateModelingCodeCommand_TargetPath_Description", typeof(Resources))]
         public virtual string TargetPath { get; set; }
 
         /// <summary>
         /// Gets or sets the name of the target.
         /// </summary>
         [Required(AllowEmptyStrings = false)]
-        [DisplayNameResource("GenerateModelingCodeCommand_TargetFileName_DisplayName", typeof(Resources))]
-        [DescriptionResource("GenerateModelingCodeCommand_TargetFileName_Description", typeof(Resources))]
+        [DisplayNameResource(@"GenerateModelingCodeCommand_TargetFileName_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"GenerateModelingCodeCommand_TargetFileName_Description", typeof(Resources))]
         public virtual string TargetFileName { get; set; }
 
         /// <summary>
         /// Gets or sets the automation extension that executes this command.
         /// </summary>
-        [DisplayNameResource("GenerateModelingCodeCommand_ModelElement_DisplayName", typeof(Resources))]
-        [DescriptionResource("GenerateModelingCodeCommand_ModelElement_Description", typeof(Resources))]
+        [DisplayNameResource(@"GenerateModelingCodeCommand_ModelElement_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"GenerateModelingCodeCommand_ModelElement_Description", typeof(Resources))]
         public virtual ModelElement ModelElement { get; set; }
 
         /// <summary>
         /// Gets or sets the model file where the <see cref="ModelElement"/> lives.
         /// </summary>
         [Required(AllowEmptyStrings = false)]
-        [DisplayNameResource("GenerateModelingCodeCommand_ModelFile_DisplayName", typeof(Resources))]
-        [DescriptionResource("GenerateModelingCodeCommand_ModelFile_Description", typeof(Resources))]
+        [DisplayNameResource(@"GenerateModelingCodeCommand_ModelFile_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"GenerateModelingCodeCommand_ModelFile_Description", typeof(Resources))]
         public virtual string ModelFile { get; set; }
 
         /// <summary>
@@ -127,8 +126,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
         /// </summary>
         [DefaultValue(DefaultSantizeName)]
         [DesignOnly(true)]
-        [DisplayNameResource("GenerateModelingCodeCommand_SanitizeName_DisplayName", typeof(Resources))]
-        [DescriptionResource("GenerateModelingCodeCommand_SanitizeName_Description", typeof(Resources))]
+        [DisplayNameResource(@"GenerateModelingCodeCommand_SanitizeName_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"GenerateModelingCodeCommand_SanitizeName_Description", typeof(Resources))]
         public virtual bool SanitizeName { get; set; }
 
         /// <summary>
@@ -141,7 +140,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
         /// </summary>
         [Required]
         [Import(AllowDefault = true)]
-        public virtual IFxrUriReferenceService UriService { get; set; }
+        public virtual IUriReferenceService UriService { get; set; }
 
         /// <summary>
         /// Gets or sets the current solution.
@@ -291,7 +290,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
         /// <returns></returns>
         protected string SanitizeItemName(string solutionItemName)
         {
-            return DataFormats.MakeValidSolutionItemName(solutionItemName).Replace(" ", "");
+            return DataFormats.MakeValidSolutionItemName(solutionItemName).Replace(@" ", string.Empty);
         }
     }
 }

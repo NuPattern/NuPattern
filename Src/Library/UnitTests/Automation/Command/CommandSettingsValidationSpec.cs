@@ -1,14 +1,14 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using Microsoft.VisualStudio.Modeling.Extensibility;
 using Microsoft.VisualStudio.Modeling.Validation;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Automation;
-using Microsoft.VisualStudio.Patterning.Runtime.Schema;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Library.Automation;
+using NuPattern.Modeling;
+using NuPattern.Runtime.Composition;
+using NuPattern.Runtime.Schema;
 
-namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Command
+namespace NuPattern.Library.UnitTests.Automation.Command
 {
     [TestClass]
     public class CommandSettingsValidationSpec
@@ -38,7 +38,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Command
 
                 validationContext = new ValidationContext(ValidationCategories.Save, this.settings);
 
-                this.validators = new CommandSettingsValidations(Mock.Of<IFeatureCompositionService>());
+                this.validators = new CommandSettingsValidations(Mock.Of<INuPatternCompositionService>());
             }
 
             [TestCleanup]
@@ -47,7 +47,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Command
                 this.store.Dispose();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenValidateTypeIsNotEmptyFails()
             {
                 this.validators.ValidateTypeIsNotEmpty(validationContext, this.settings);
@@ -56,7 +56,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Command
                 Assert.True(validationContext.ValidationSubjects.IndexOf(this.settings) == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenTypeIsNotEmpty_ThenValidateTypeIsNotEmptySucceeds()
             {
                 this.settings.WithTransaction(setting => setting.TypeId = "foo");

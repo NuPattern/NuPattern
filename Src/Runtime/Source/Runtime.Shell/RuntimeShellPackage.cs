@@ -8,102 +8,140 @@ using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using Microsoft.ComponentModel.Composition.Diagnostics;
 using Microsoft.VisualStudio.ComponentModelHost;
-using Microsoft.VisualStudio.ExtensionManager;
 using Microsoft.VisualStudio.Modeling.Shell;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library;
-using Microsoft.VisualStudio.Patterning.Runtime.Shell.OptionPages;
-using Microsoft.VisualStudio.Patterning.Runtime.Shell.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime.Store;
-using Microsoft.VisualStudio.Patterning.Runtime.UI;
-using Microsoft.VisualStudio.Settings;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
-using Microsoft.VisualStudio.Shell.Settings;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TextTemplating.VSHost;
-using Ole = Microsoft.VisualStudio.OLE.Interop;
+using NuPattern.ComponentModel.Composition;
+using NuPattern.Diagnostics;
+using NuPattern.IO;
+using NuPattern.Library;
+using NuPattern.Reflection;
+using NuPattern.Runtime.Bindings;
+using NuPattern.Runtime.Composition;
+using NuPattern.Runtime.Diagnostics;
+using NuPattern.Runtime.Guidance;
+using NuPattern.Runtime.Guidance.LaunchPoints;
+using NuPattern.Runtime.Guidance.Workflow;
+using NuPattern.Runtime.Settings;
+using NuPattern.Runtime.Shell.Commands;
+using NuPattern.Runtime.Shell.OptionPages;
+using NuPattern.Runtime.Shell.Properties;
+using NuPattern.Runtime.Shell.ToolWindows;
+using NuPattern.Runtime.Store;
+using NuPattern.Runtime.ToolkitInterface;
+using NuPattern.Runtime.UI;
+using NuPattern.VisualStudio;
+using NuPattern.VisualStudio.Commands;
+using NuPattern.VisualStudio.Extensions;
+using NuPattern.VisualStudio.Solution;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
+namespace NuPattern.Runtime.Shell
 {
     /// <summary>
     /// Represents the VS package for this assembly.
     /// </summary>
     [SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable", Justification = "Disposed on package dispose.")]
-    [ProvideEditorExtension(typeof(ProductStateEditorFactory), Microsoft.VisualStudio.Patterning.Runtime.Constants.RuntimeStoreExtension, 8, DefaultName = Microsoft.VisualStudio.Patterning.Runtime.Constants.RuntimeStoreEditorDescription)]
+    [ProvideEditorExtension(typeof(ProductStateEditorFactory), NuPattern.Runtime.StoreConstants.RuntimeStoreExtension, 8, DefaultName = NuPattern.Runtime.StoreConstants.RuntimeStoreEditorDescription)]
     [ProvideAutoLoad(UIContextGuids.NoSolution)]
     [PackageRegistration(UseManagedResourcesOnly = true)]
-    [ProvideMenuResource("Menus.ctmenu", 1)]
+    [ProvideMenuResource(@"Menus.ctmenu", 1)]
     [ProvideToolWindow(typeof(SolutionBuilderToolWindow), Window = ToolWindowGuids.Toolbox, Orientation = ToolWindowOrientation.Right, Style = VsDockStyle.Tabbed)]
+    [ProvideToolWindow(typeof(GuidanceExplorerToolWindow), Window = Constants.SolutionBuilderToolWindowGuid, Orientation = ToolWindowOrientation.Bottom, Style = VsDockStyle.Linked)]
+    [ProvideToolWindow(typeof(GuidanceBrowserToolWindow), Window = ToolWindowGuids.TaskList, Style = VsDockStyle.Tabbed)]
     [ProvideDirectiveProcessor(typeof(ProductStateStoreDirectiveProcessor), ProductStateStoreDirectiveProcessor.ProductStateStoreDirectiveProcessorName, Constants.ProductStateStoreDirectiveProcessorDescription)]
-    [ProvideBindingPath]
+    [Microsoft.VisualStudio.Modeling.Shell.ProvideBindingPath]
     [Guid(Constants.RuntimeShellPkgGuid)]
     [CLSCompliant(false)]
-    [ProvideService(typeof(IPlatuProjectTypeProvider), ServiceName = "IPlatuProjectTypeProvider")]
-    [ProvideService(typeof(IPatternManager), ServiceName = "IPatternManager")]
-    [ProvideService(typeof(IPackageToolWindow), ServiceName = "IPackageToolWindow")]
-    [ProvideService(typeof(ISolutionEvents), ServiceName = "ISolutionEvents")]
-    [ProvideService(typeof(IUserMessageService), ServiceName = "IUserMessageService")]
-    [ProvideService(typeof(IBindingFactory), ServiceName = "IBindingFactory")]
-    [ProvideService(typeof(IBindingCompositionService), ServiceName = "IBindingCompositionService")]
-    [ProvideService(typeof(IToolkitInterfaceService), ServiceName = "IToolkitInferfaceService")]
-    [ProvideOptionPageAttribute(typeof(TraceOptionsPage), Constants.SettingsName, "TraceOptionsPage", 17131, 21356, true)]
+    [ProvideService(typeof(IUriReferenceService), ServiceName = @"IUriReferenceService")]
+    [ProvideService(typeof(ITemplateService), ServiceName = @"TemplateService")]
+    [ProvideService(typeof(ISolution), ServiceName = @"ISolution")]
+    [ProvideService(typeof(IExtensionManager), ServiceName = @"IExtensionManager")]
+    [ProvideService(typeof(IGuidanceManager), ServiceName = @"IGuidanceManager")]
+    [ProvideService(typeof(INuPatternCompositionService), ServiceName = @"INuPatternCompositionService")]
+    [ProvideService(typeof(IGuidanceWindowsService), ServiceName = @"IGuidanceWindowsService")]
+    [ProvideService(typeof(INuPatternProjectTypeProvider), ServiceName = @"INuPatternProjectTypeProvider")]
+    [ProvideService(typeof(IPatternManager), ServiceName = @"IPatternManager")]
+    [ProvideService(typeof(IPackageToolWindow), ServiceName = @"IPackageToolWindow")]
+    [ProvideService(typeof(ISolutionEvents), ServiceName = @"ISolutionEvents")]
+    [ProvideService(typeof(IUserMessageService), ServiceName = @"IUserMessageService")]
+    [ProvideService(typeof(IBindingFactory), ServiceName = @"IBindingFactory")]
+    [ProvideService(typeof(IBindingCompositionService), ServiceName = @"IBindingCompositionService")]
+    [ProvideService(typeof(IToolkitInterfaceService), ServiceName = @"IToolkitInferfaceService")]
+    [ProvideOptionPage(typeof(TraceOptionsPage), Constants.SettingsName, @"TraceOptionsPage", 17131, 21356, true)]
     [ProvideDirectiveProcessor(typeof(ModelElementDirectiveProcessor), ModelElementDirectiveProcessor.ProcessorName, Constants.LibraryDirectiveProcessorDescription)]
     public sealed class RuntimeShellPackage : Package
     {
+        private static readonly ITraceSource tracer = Tracer.GetSourceFor<RuntimeShellPackage>();
+        private const int IdleTimeout = 5000;
+        private const int GuidanceEvalTimeGovernor = 1; // In Seconds
         private static readonly Guid OutputPaneGuid = new Guid(Constants.VsOutputWindowPaneId);
         private ProductStateValidator productStateValidator;
+        private VsIdleTaskHost idleTaskHost;
+        private bool showWindows = false;
 
         [SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields", Justification = "Not sure if it's OK to leave this container unreferenced by anyone.")]
         private TracingSettingsMonitor tracingMonitor;
         private TraceOutputWindowManager traceOutputWindowManager;
 
+#pragma warning disable 0649
         [Import]
-        [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "MEF")]
+        private INuPatternCompositionService CompositionService { get; set; }
+        [Import]
+        private IGuidanceManager GuidanceManager { get; set; }
+        [Import]
+        private IUriReferenceService UriReferenceService { get; set; }
+        [Import]
+        private ITemplateService TemplateService { get; set; }
+        [Import]
+        private ISolution Solution { get; set; }
+        [Import]
+        private IExtensionManager ExtensionManager { get; set; }
+        [Import]
+        private IGuidanceWindowsService GuidanceWindowsService { get; set; }
+        [ImportMany(typeof(ILaunchPoint))]
+        private IEnumerable<Lazy<ILaunchPoint>> LaunchPoints { get; set; }
+        [Import]
         private IPatternManager PatternManager { get; set; }
-
         [Import]
-        [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "MEF")]
-        private IPlatuProjectTypeProvider ProjectTypes { get; set; }
-
+        private INuPatternProjectTypeProvider ProjectTypes { get; set; }
         [Import]
-        [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "MEF")]
         private IBindingFactory BindingFactory { get; set; }
-
         [Import]
-        [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "MEF")]
         private IBindingCompositionService BindingComposition { get; set; }
-
         [Import]
-        [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "MEF")]
         private ISolutionEvents SolutionEvents { get; set; }
-
         [Import]
-        [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "MEF")]
         private IShellEvents ShellEvents { get; set; }
-
         [Import]
-        [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "MEF")]
         private ISettingsManager SettingsManager { get; set; }
-
         [Import]
-        [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "MEF")]
         private IUserMessageService UserMessageService { get; set; }
-
         [Import]
-        [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "MEF")]
         private IToolkitInterfaceService ToolkitInterfaceService { get; set; }
+#pragma warning restore 0649
 
+#if VSVER11
+        private ResolveEventHandler assemblyResolve = OnAssemblyResolve;
+        [ThreadStatic]
+        private static bool _isResolveAssemblyRunningOnThisThread = false;
+#endif
         /// <summary>
         /// Called when the VSPackage is loaded by Visual Studio.
         /// </summary>
         protected override void Initialize()
         {
             base.Initialize();
+
+#if VSVER11
+            //Register global assembly resolver
+            AppDomain.CurrentDomain.AssemblyResolve += this.assemblyResolve;
+            _isResolveAssemblyRunningOnThisThread = true;
+#endif
 
             //Import all services
             var componentModel = this.GetService<SComponentModel, IComponentModel>();
@@ -115,6 +153,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
 
                 container.ComposeExportedValue<Func<ISolutionPicker>>(
                     () => new SolutionPicker());
+
+                container.ComposeExportedValue<Func<ISolutionSelector>>(
+                    () => new SolutionSelector());
 
                 container.ComposeExportedValue<Func<IProductPicker>>(
                     () => new ProductPicker());
@@ -142,7 +183,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
             this.tracingMonitor = new TracingSettingsMonitor(this.SettingsManager);
 
             var sourceNames = GetConfiguredSourceNames(this.SettingsManager.Read());
-            this.traceOutputWindowManager = new TraceOutputWindowManager(this, this.ShellEvents, OutputPaneGuid, Resources.TraceOutput_WindowTitle, sourceNames.ToArray());
+            this.traceOutputWindowManager = new TraceOutputWindowManager(this, this.ShellEvents, OutputPaneGuid, Constants.OutputWindowTitle, sourceNames.ToArray());
 
             // Monitor setting changes to refresh output window.
             this.SettingsManager.SettingsChanged += this.OnSettingsChanged;
@@ -155,27 +196,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
             this.SolutionEvents.SolutionOpened += OnSolutionOpened;
             this.SolutionEvents.SolutionClosed += OnSolutionClosed;
 
-            EnsureVsHelperInitializedHack();
-        }
+            // If initializing other packages launchpoints worked, 
+            // they wouldn't need to do this themselves.
+            this.RegisterRefreshGuidanceStates();
+            this.GuidanceManager.InstantiatedExtensionsChanged += this.OnInstantiatedGuidanceExtensionChanged;
+            this.GuidanceManager.ActiveExtensionChanged += this.OnActiveGuidanceExtensionChanged;
 
-        private void EnsureVsHelperInitializedHack()
-        {
-            var helperType = Type.GetType("Microsoft.VisualStudio.TeamArchitect.PowerTools.VsIde.VsHelper, Microsoft.VisualStudio.TeamArchitect.PowerTools");
-            if (helperType != null)
-            {
-                var providerField = helperType.GetField("serviceProvider", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static);
-                if (providerField != null)
-                {
-                    var value = providerField.GetValue(null);
-                    if (value == null)
-                    {
-                        using (var provider = new ServiceProvider((Ole.IServiceProvider)this.GetService<SDTE, EnvDTE.DTE>()))
-                        {
-                            providerField.SetValue(null, provider);
-                        }
-                    }
-                }
-            }
+            this.InitializeVsLaunchPoints();
         }
 
         /// <summary>
@@ -203,39 +230,49 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
                     this.productStateValidator.Dispose();
                 }
 
-                this.ShellEvents.ShellInitialized -= OnShellInitialized;
-                this.SolutionEvents.SolutionOpened -= OnSolutionOpened;
-                this.SolutionEvents.SolutionClosed -= OnSolutionClosed;
+                if (this.idleTaskHost != null)
+                {
+                    this.idleTaskHost.Dispose();
+                }
+
+                if (this.ShellEvents != null)
+                {
+                    this.ShellEvents.ShellInitialized -= OnShellInitialized;
+                }
+                if (this.SolutionEvents != null)
+                {
+                    this.SolutionEvents.SolutionOpened -= OnSolutionOpened;
+                    this.SolutionEvents.SolutionClosed -= OnSolutionClosed;
+                }
+#if VSVER11
+                _isResolveAssemblyRunningOnThisThread = false;
+                if (this.assemblyResolve != null)
+                {
+                    AppDomain.CurrentDomain.AssemblyResolve -= this.assemblyResolve;
+                }
+#endif
             }
         }
 
         internal void AutoOpenSolutionBuilder()
         {
-            var packageToolWindow = this.GetService<IPackageToolWindow>();
-
-            if (!packageToolWindow.IsWindowVisible<SolutionBuilderToolWindow>())
-            {
-                packageToolWindow.ShowWindow<SolutionBuilderToolWindow>();
-
-                var settingsManager = new ShellSettingsManager(this);
-                var store = settingsManager.GetWritableSettingsStore(SettingsScope.UserSettings);
-
-                if (!store.CollectionExists(Constants.SettingsName))
-                {
-                    store.CreateCollection(Constants.SettingsName);
-                }
-
-                store.SetString(Constants.SettingsName, "SolutionBuilderAutoOpened", bool.TrueString);
-            }
+            SolutionBuilderToolWindow.AutoOpenWindow(this);
         }
 
         private void AddServices()
         {
             var serviceContainer = (IServiceContainer)this;
+            serviceContainer.AddService(typeof(IUriReferenceService), new ServiceCreatorCallback((c, s) => this.UriReferenceService), true);
+            serviceContainer.AddService(typeof(ITemplateService), new ServiceCreatorCallback((c, s) => this.TemplateService), true);
+            serviceContainer.AddService(typeof(ISolution), new ServiceCreatorCallback((c, s) => this.Solution), true);
+            serviceContainer.AddService(typeof(IExtensionManager), new ServiceCreatorCallback((c, s) => this.ExtensionManager), true);
+            serviceContainer.AddService(typeof(IGuidanceManager), new ServiceCreatorCallback((c, s) => this.GuidanceManager), true);
+            serviceContainer.AddService(typeof(INuPatternCompositionService), new ServiceCreatorCallback((c, s) => this.CompositionService), true);
+            serviceContainer.AddService(typeof(IGuidanceWindowsService), new ServiceCreatorCallback((c, s) => this.GuidanceWindowsService), true);
             serviceContainer.AddService(typeof(RuntimeShellPackage), this, true);
             serviceContainer.AddService(typeof(IPackageToolWindow), new PackageToolWindow(this), true);
             serviceContainer.AddService(typeof(IPatternManager), new ServiceCreatorCallback((s, t) => this.PatternManager), true);
-            serviceContainer.AddService(typeof(IPlatuProjectTypeProvider), new ServiceCreatorCallback((s, t) => this.ProjectTypes), true);
+            serviceContainer.AddService(typeof(INuPatternProjectTypeProvider), new ServiceCreatorCallback((s, t) => this.ProjectTypes), true);
             serviceContainer.AddService(typeof(ISolutionEvents), new ServiceCreatorCallback((s, t) => this.SolutionEvents), true);
             serviceContainer.AddService(typeof(IUserMessageService), new ServiceCreatorCallback((s, t) => this.UserMessageService), true);
             serviceContainer.AddService(typeof(IBindingFactory), new ServiceCreatorCallback((s, t) => this.BindingFactory), true);
@@ -245,79 +282,94 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
 
         private void OnShellInitialized(object sender, EventArgs e)
         {
-            var settingsManager = new ShellSettingsManager(this);
-            var store = settingsManager.GetWritableSettingsStore(SettingsScope.UserSettings);
-            var packageToolWindow = this.GetService<IPackageToolWindow>();
+            CheckFertInstalled();
 
-            if (!(store.CollectionExists(Constants.SettingsName) &&
-                  store.PropertyExists(Constants.SettingsName, "FirstTimeInitialization")))
-            {
-                //First time after installation
-                packageToolWindow.ShowWindow<SolutionBuilderToolWindow>();
-
-                store.CreateCollection(Constants.SettingsName);
-                store.SetString(Constants.SettingsName, "FirstTimeInitialization", bool.FalseString);
-            }
-            else
-            {
-                // Afterwards, we load the toolwindow so that the drag&drop events can get access to the 
-                // toolwindow usercontrol that handles the operations.
-                // Querying visibility will automatically create the control.
-                packageToolWindow.IsWindowVisible<SolutionBuilderToolWindow>();
-            }
+            SolutionBuilderToolWindow.InitializeWindowVisibility(this);
         }
 
         private void OnSolutionClosed(object sender, SolutionEventArgs e)
         {
-            var settingsManager = new ShellSettingsManager(this);
-            var store = settingsManager.GetWritableSettingsStore(SettingsScope.UserSettings);
-
-            if (store.CollectionExists(Constants.SettingsName) &&
-                store.PropertyExists(Constants.SettingsName, "SolutionBuilderAutoOpened"))
-            {
-                var packageToolWindow = this.GetService<IPackageToolWindow>();
-
-                packageToolWindow.HideWindow<SolutionBuilderToolWindow>();
-
-                store.DeleteProperty(Constants.SettingsName, "SolutionBuilderAutoOpened");
-            }
+            SolutionBuilderToolWindow.AutoHideWindow(this);
+            GuidanceExplorerToolWindow.HideWindow(this);
+            GuidanceBrowserToolWindow.HideWindow(this);
         }
 
         private void OnSolutionOpened(object sender, SolutionEventArgs e)
         {
-            var pathExpression = string.Concat("*", Runtime.Constants.RuntimeStoreExtension);
+            var pathExpression1 = Path.Combine(SolutionExtensions.SolutionItemsFolderName, string.Concat(@"*", Runtime.StoreConstants.RuntimeStoreExtension));
+            var pathExpression2 = string.Concat(@"*", Runtime.StoreConstants.RuntimeStoreExtension);
 
-            // Ensure solution contains at least one toolkit definition file
-            if (e.Solution != null && e.Solution.Find<IItem>(pathExpression).Any())
+            // Ensure solution contains at least one state file
+            if (e.Solution != null)
             {
-                this.AutoOpenSolutionBuilder();
+                // Search Solution Items folder
+                var solutionFiles = e.Solution.Find<IItem>(pathExpression1);
+                if (solutionFiles.Any())
+                {
+                    SolutionBuilderToolWindow.AutoOpenWindow(this);
+                }
+                else
+                {
+                    // Search whole solution for state file.
+                    solutionFiles = e.Solution.Find<IItem>(pathExpression2);
+                    if (solutionFiles.Any())
+                    {
+                        SolutionBuilderToolWindow.AutoOpenWindow(this);
+                    }
+                }
+            }
+
+            if (!this.GuidanceManager.IsOpened)
+            {
+                this.GuidanceManager.Open(new SolutionDataState(this.Solution));
+
+                // Open guidance windows
+                GuidanceExplorerToolWindow.OpenWindow(this);
+                GuidanceBrowserToolWindow.OpenWindow(this);
             }
         }
 
-        [Conditional("DEBUG")]
+        [Conditional(@"DEBUG")]
         private void DumpMefLog(IComponentModel componentModel)
         {
             PackageUtility.ShowError(this, string.Format(CultureInfo.InvariantCulture, Resources.RuntimeShellPackage_DumpMefLogs, Constants.ProductName));
 
-            var tempFile = Path.Combine(Path.GetTempPath(), "mef.txt");
-            using (var writer = new StreamWriter(tempFile, false))
+            var tempFile = string.Empty;
+            try
             {
-                CompositionInfoTextFormatter.Write(new CompositionInfo(componentModel.DefaultCatalog, componentModel.DefaultExportProvider), writer);
+                // Write out the default VS catalog
+                tempFile = Path.Combine(Path.GetTempPath(), "mef.txt");
+                using (var writer = new StreamWriter(tempFile, false))
+                {
+                    CompositionInfoTextFormatter.Write(new CompositionInfo(componentModel.DefaultCatalog, componentModel.DefaultExportProvider), writer);
+                }
+
+                Process.Start(tempFile);
+            }
+            catch (IOException)
+            {
+                // Ignore writing issues
             }
 
-            Process.Start(tempFile);
-
-            tempFile = Path.Combine(Path.GetTempPath(), "mef-powertools.txt");
-            using (var writer = new StreamWriter(tempFile, false))
+            try
             {
-                CompositionInfoTextFormatter.Write(new CompositionInfo(componentModel.GetCatalog(
-                    Microsoft.VisualStudio.TeamArchitect.PowerTools.Constants.CatalogName), componentModel.DefaultExportProvider), writer);
-            }
+                // Write out the NuPattern catalog
+                tempFile = Path.Combine(Path.GetTempPath(), "mef-nupattern.txt");
+                using (var writer = new StreamWriter(tempFile, false))
+                {
+                    CompositionInfoTextFormatter.Write(new CompositionInfo(componentModel.GetCatalog(
+                        Catalog.DefaultCatalogName), componentModel.DefaultExportProvider), writer);
+                }
 
-            Process.Start(tempFile);
+                Process.Start(tempFile);
+            }
+            catch (IOException)
+            {
+                // Ignore writing issues
+            }
         }
 
-        private static IEnumerable<string> GetConfiguredSourceNames(RuntimeSettings settings)
+        private static IEnumerable<string> GetConfiguredSourceNames(IRuntimeSettings settings)
         {
             var sourceNames = settings.Tracing.TraceSources.Select(s => s.SourceName);
             sourceNames = sourceNames.Concat(new[] { TracingSettings.DefaultRootSourceName });
@@ -325,7 +377,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
             return sourceNames;
         }
 
-        private void OnSettingsChanged(object sender, ChangedEventArgs<RuntimeSettings> e)
+        private void OnSettingsChanged(object sender, ChangedEventArgs<IRuntimeSettings> e)
         {
             var sourceNames = GetConfiguredSourceNames(e.NewValue);
             this.traceOutputWindowManager.SetTraceSourceNames(sourceNames);
@@ -337,7 +389,196 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
             if (menuCommandService != null)
             {
                 menuCommandService.AddCommand(new OpenSolutionBuilderMenuCommand(this.GetService<IPackageToolWindow>()));
+                menuCommandService.AddCommand(new OpenGuidanceExplorerMenuCommand(this.GetService<IPackageToolWindow>()));
+                menuCommandService.AddCommand(new OpenGuidanceBrowserMenuCommand(this.GetService<IPackageToolWindow>()));
             }
+        }
+
+        /// <summary>
+        /// Checks to see if an older version of the Feature Extension Runtime extension is installed.
+        /// </summary>
+        /// <remarks>
+        /// Cannot tolerate either version of FERT being installed (i.e. FeatureExtensionUltimateRuntime or FeatureExtensionRuntime versions)
+        /// </remarks>
+        private void CheckFertInstalled()
+        {
+            if (this.ExtensionManager != null)
+            {
+                var enabledExtensions = this.ExtensionManager.GetEnabledExtensions();
+                var fertExtension = enabledExtensions.FirstOrDefault(ext =>
+                        Constants.FertVsixIdentifiers.Contains(ext.Header.Identifier, StringComparer.OrdinalIgnoreCase));
+                if (fertExtension != null)
+                {
+                    tracer.TraceError(
+                        Resources.RuntimeShellPackage_CheckFertInstalled_Enabled,
+                        fertExtension.Header.Name,
+                        Constants.ProductName);
+
+                    //Prompt user to manually uninstall the FERT extension
+                    this.UserMessageService.ShowWarning(
+                        string.Format(CultureInfo.CurrentCulture,
+                        Resources.RuntimeShellPackage_CheckFertInstalled_Enabled,
+                        fertExtension.Header.Name,
+                        Constants.ProductName));
+                }
+            }
+        }
+
+#if VSVER11
+        /// <summary>
+        /// Finds toolkit assemblies (in the current AppDomain) that are loaded with a partial name.
+        /// A partial name omits either the Version, Culture or PublicKeyToken.
+        /// Runtime loads many types dynamically using methods such as Type.GetType(string) with partial names, which aids versioning migrations.
+        /// VS2012 for some reason does not resolve assemblies with partial names unless the assemblies are signed.
+        /// </summary>
+        private static Assembly OnAssemblyResolve(object sender, ResolveEventArgs args)
+        {
+            //TODO: Why do we get called twice to resolve any assembly, despite the fact that we resolved it the first time?
+
+            Assembly assembly = null;
+
+            try
+            {
+                // Only process events from the thread that started it, not any other thread
+                if (_isResolveAssemblyRunningOnThisThread)
+                {
+                    // Determine if lost assembly has a partial name 
+                    // (only these are the ones that cause VS2012 difficulty in resolving)
+                    var name = new AssemblyName(args.Name);
+                    if (name.Version == null || name.CultureInfo == null)
+                    {
+                        tracer.TraceInformation(
+                            Resources.RuntimeShellPackage_OnAssemblyResolved_ResolvingAssembly, args.Name);
+
+                        var componentModel = ServiceProvider.GlobalProvider.GetService<SComponentModel, IComponentModel>();
+                        var patternManager = componentModel.GetService<IPatternManager>();
+                        if (patternManager != null)
+                        {
+                            // Match assemblies with lost name from loaded AppDomain assemblies
+                            var loadedAssemblies = from appDomainAssembly
+                                                         in ((AppDomain)sender).GetAssemblies()
+                                                   let assemblyName = appDomainAssembly.GetName()
+                                                   where assemblyName.Name.Equals(args.Name, StringComparison.OrdinalIgnoreCase)
+                                                   select appDomainAssembly;
+                            if (loadedAssemblies.Any())
+                            {
+                                tracer.TraceInformation(
+                                    Resources.RuntimeShellPackage_OnAssemblyResolved_ResolvingAssemblyForLoadedAssembly, args.Name);
+
+                                // Get install paths of all (enabled) toolkits
+                                var installedExtensionDirs = from installedToolkit
+                                                                 in patternManager.InstalledToolkits
+                                                             where installedToolkit.Extension.State == EnabledState.Enabled
+                                                             select new DirectoryInfo(installedToolkit.Extension.InstallPath);
+                                if (installedExtensionDirs.Any())
+                                {
+                                    // Match only (physical) assemblies installed by toolkits (by highest version)
+                                    var comparer = new DirectoryInfoComparer();
+                                    var toolkitAssemblies = from toolkitAssembly
+                                                                in loadedAssemblies
+                                                            let location = toolkitAssembly.Location
+                                                            where !toolkitAssembly.IsDynamic
+                                                                && !String.IsNullOrEmpty(location)
+                                                                && File.Exists(location)
+                                                            let assemblyName = toolkitAssembly.GetName()
+                                                            let assemblyVersion = assemblyName.Version
+                                                            where installedExtensionDirs.Contains(Directory.GetParent(location), comparer)
+                                                            orderby (assemblyVersion != null) ? assemblyVersion.ToString(4) : new Version().ToString(4) descending
+                                                            select toolkitAssembly;
+                                    if (toolkitAssemblies.Any())
+                                    {
+                                        tracer.TraceInformation(
+                                            Resources.RuntimeShellPackage_OnAssemblyResolved_ResolvingAssemblyForToolkitAssembly, args.Name);
+
+                                        if (name.KeyPair != null)
+                                        {
+                                            var publicKeyToken = name.GetPublicKeyTokenString();
+
+                                            // Match latest version by PublicKeyToken
+                                            var signedAssemblies = from signedAssembly
+                                                           in toolkitAssemblies
+                                                                   let assemblyName = signedAssembly.GetName()
+                                                                   let assemblyVersion = assemblyName.Version
+                                                                   where assemblyName.KeyPair != null
+                                                                   where assemblyName.GetPublicKeyTokenString().Equals(publicKeyToken, StringComparison.OrdinalIgnoreCase)
+                                                                   orderby (assemblyVersion != null) ? assemblyVersion.ToString(4) : new Version().ToString(4) descending
+                                                                   select signedAssembly;
+                                            if (signedAssemblies.Any())
+                                            {
+                                                assembly = signedAssemblies.FirstOrDefault();
+                                            }
+                                        }
+                                        else
+                                        {
+                                            // Match latest version
+                                            assembly = toolkitAssemblies.FirstOrDefault();
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        if (assembly == null)
+                        {
+                            tracer.TraceInformation(
+                            Resources.RuntimeShellPackage_OnAssemblyResolved_ResolvingAssemblyFailed, args.Name);
+                        }
+                        else
+                        {
+                            tracer.TraceInformation(
+                            Resources.RuntimeShellPackage_OnAssemblyResolved_ResolvingAssemblySucceeded, args.Name, assembly.GetName().FullName);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                tracer.TraceInformation(
+                    Resources.RuntimeShellPackage_OnAssemblyResolved_UnexpectedError, ex.Message);
+
+                throw;
+            }
+
+            return assembly;
+        }
+#endif
+
+        private void InitializeVsLaunchPoints()
+        {
+            var menuCommandService = GetService(typeof(IMenuCommandService)) as OleMenuCommandService;
+            if (menuCommandService != null)
+            {
+                var lps = this.LaunchPoints
+                    .Select(lazy => lazy.Value)
+                    .OfType<VsLaunchPoint>();
+
+                foreach (var launchPoint in lps)
+                {
+                    menuCommandService.AddCommand(launchPoint);
+                }
+            }
+        }
+
+        private void OnInstantiatedGuidanceExtensionChanged(object sender, EventArgs args)
+        {
+            this.showWindows = true;
+        }
+
+        private void OnActiveGuidanceExtensionChanged(object sender, EventArgs args)
+        {
+            var activeExtension = this.GuidanceManager.ActiveGuidanceExtension;
+            if (activeExtension != null && this.showWindows && activeExtension.GuidanceWorkflow != null)
+            {
+                this.GuidanceWindowsService.ShowGuidanceExplorer(this);
+                this.GuidanceWindowsService.ShowGuidanceBrowser(this);
+            }
+        }
+
+        private void RegisterRefreshGuidanceStates()
+        {
+            var conditionsEvaluator = new GuidanceConditionsEvaluator(this.GuidanceManager);
+            this.idleTaskHost = new VsIdleTaskHost(this, () => conditionsEvaluator.EvaluateGraphs(), TimeSpan.FromSeconds(GuidanceEvalTimeGovernor));
+            this.idleTaskHost.Start(TimeSpan.FromMilliseconds(IdleTimeout));
         }
     }
 }

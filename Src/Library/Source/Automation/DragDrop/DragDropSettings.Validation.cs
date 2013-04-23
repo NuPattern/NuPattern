@@ -4,29 +4,31 @@ using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling.Validation;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.ComponentModel.Composition;
+using NuPattern.Diagnostics;
+using NuPattern.Library.Properties;
+using NuPattern.Reflection;
+using NuPattern.Runtime;
+using NuPattern.Runtime.Authoring;
+using NuPattern.Runtime.Bindings;
+using NuPattern.Runtime.Composition;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
     /// <summary>
     /// Custom validation rules.Ev
     /// </summary>
     [ValidationState(ValidationState.Enabled)]
-    public partial class DragDropSettings
+    partial class DragDropSettings
     {
     }
 
     /// <summary>
     /// Exports the validations for <see cref="DragDropSettings"/>.
     /// </summary>
-    [CLSCompliant(false)]
     [Export]
     [PartCreationPolicy(CreationPolicy.Shared)]
-    public class DragDropSettingsValidations
+    internal class DragDropSettingsValidations
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<DragDropSettingsValidations>();
 
@@ -37,7 +39,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
         private static ILookup<string, Lazy<Type>> Events;
 
         [Import]
-        internal IPlatuProjectTypeProvider ProjectTypeProvider { get; set; }
+        internal INuPatternProjectTypeProvider ProjectTypeProvider { get; set; }
 
         [Import]
         internal IBindingFactory BindingFactory { get; set; }
@@ -46,7 +48,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
         /// Initializes a new instance of the <see cref="DragDropSettingsValidations"/> class.
         /// </summary>
         [ImportingConstructor]
-        public DragDropSettingsValidations(IFeatureCompositionService composition)
+        public DragDropSettingsValidations(INuPatternCompositionService composition)
         {
             Guard.NotNull(() => composition, composition);
 
@@ -54,8 +56,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
             // TODO: this could be refactored into a separate global service.
             if (ValueProviders == null || Conditions == null || Events == null)
             {
-                var valueProviders = composition.GetExports<IValueProvider, IFeatureComponentMetadata>();
-                var conditions = composition.GetExports<ICondition, IFeatureComponentMetadata>();
+                var valueProviders = composition.GetExports<IValueProvider, IComponentMetadata>();
+                var conditions = composition.GetExports<ICondition, IComponentMetadata>();
                 var events = composition.GetExports<IObservableEvent, IIdMetadata>();
 
                 ValueProviders = valueProviders.ToLookup(item => item.Metadata.Id, item => item.Metadata.ExportingType);

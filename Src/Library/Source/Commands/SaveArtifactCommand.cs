@@ -3,24 +3,23 @@ using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Extensibility.References;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
+using NuPattern.Library.Properties;
+using NuPattern.Runtime;
+using NuPattern.Runtime.References;
+using NuPattern.VisualStudio.Solution;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Commands
+namespace NuPattern.Library.Commands
 {
     /// <summary>
     /// Saves the linked artifacts associated to current element.
     /// </summary>
-    [DisplayNameResource("SaveArtifactCommand_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
-    [DescriptionResource("SaveArtifactCommand_Description", typeof(Resources))]
+    [DisplayNameResource(@"SaveArtifactCommand_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"SaveArtifactCommand_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
-    public class SaveArtifactCommand : FeatureCommand
+    public class SaveArtifactCommand : Command
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<SaveArtifactCommand>();
 
@@ -36,7 +35,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
         /// </summary>
         [Required]
         [Import(AllowDefault = true)]
-        public IFxrUriReferenceService UriReferenceService { get; set; }
+        public IUriReferenceService UriReferenceService { get; set; }
 
         /// <summary>
         /// Executes the command.

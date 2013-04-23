@@ -3,7 +3,7 @@
 <#@ import namespace="System.Collections.ObjectModel" #>
 <#@ assembly name="System.Core" #>
 <#@ import namespace="System.Linq" #>
-<#@ output extension=".cs" #>
+<#@ output extension=".gen.cs" #>
 <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\DslDefinition.dsl'" #>
 <#@ include file="Dsl\Utilities.tt" #>
 //------------------------------------------------------------------------------
@@ -15,98 +15,87 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Diagnostics.CodeAnalysis;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Xml;
-using Microsoft.VisualStudio.Modeling;
-using Microsoft.VisualStudio.Modeling.Diagrams;
-using Microsoft.VisualStudio.Modeling.Validation;
 using DslDiagrams = global::Microsoft.VisualStudio.Modeling.Diagrams;
 using DslModeling = global::Microsoft.VisualStudio.Modeling;
 
 <#
-	string dslName = this.DslLibrary.Name;
-	string namespaceString = this.DslLibrary.Namespace;
-	XmlSerializationBehavior behavior = this.DslLibrary.XmlSerializationBehavior;
-	string rootClassName = string.Empty;
-	Diagram diagram = this.Dsl.Diagram;
-	DomainClass rootClass = this.Dsl.Editor.RootClass;
-	rootClassName = rootClass.GetRelativeName(namespaceString, true);
-	string diagramTypeName = diagram.GetRelativeName(namespaceString, true);
-	string versionStr = CodeGenerationUtilities.WrapAsCSharpString(CodeGenerationUtilities.GetVersionString(this.Dsl));
-	OpenNamespace();
+    string dslName = this.DslLibrary.Name;
+    string namespaceString = this.DslLibrary.Namespace;
+    XmlSerializationBehavior behavior = this.DslLibrary.XmlSerializationBehavior;
+    string rootClassName = string.Empty;
+    Diagram diagram = this.Dsl.Diagram;
+    DomainClass rootClass = this.Dsl.Editor.RootClass;
+    rootClassName = rootClass.GetRelativeName(namespaceString, true);
+    string diagramTypeName = diagram.GetRelativeName(namespaceString, true);
+    string versionStr = CodeGenerationUtilities.WrapAsCSharpString(CodeGenerationUtilities.GetVersionString(this.Dsl));
+    OpenNamespace();
 #>
-public sealed partial class <#= dslName #>SerializationHelper
+sealed partial class <#= dslName #>SerializationHelper
 {
 
-	/// <summary>
-	/// Write an element as the root of XML.
-	/// </summary>
-	/// <param name="serializationContext">Serialization context.</param>
-	/// <param name="rootElement">Root element instance that will be serialized.</param>
-	/// <param name="writer">XmlWriter to write serialized data to.</param>
-	public override void WriteRootElement(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement rootElement, global::System.Xml.XmlWriter writer)
-	{
-		#region Check Parameters
-		global::System.Diagnostics.Debug.Assert(serializationContext != null);
-		if (serializationContext == null)
-			throw new global::System.ArgumentNullException("serializationContext");
-		global::System.Diagnostics.Debug.Assert(rootElement != null);
-		if (rootElement == null)
-			throw new global::System.ArgumentNullException("rootElement");
-		global::System.Diagnostics.Debug.Assert(writer != null);
-		if (writer == null)
-			throw new global::System.ArgumentNullException("writer");
-		#endregion
+    /// <summary>
+    /// Write an element as the root of XML.
+    /// </summary>
+    /// <param name="serializationContext">Serialization context.</param>
+    /// <param name="rootElement">Root element instance that will be serialized.</param>
+    /// <param name="writer">XmlWriter to write serialized data to.</param>
+    public override void WriteRootElement(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement rootElement, global::System.Xml.XmlWriter writer)
+    {
+        #region Check Parameters
+        global::System.Diagnostics.Debug.Assert(serializationContext != null);
+        if (serializationContext == null)
+            throw new global::System.ArgumentNullException("serializationContext");
+        global::System.Diagnostics.Debug.Assert(rootElement != null);
+        if (rootElement == null)
+            throw new global::System.ArgumentNullException("rootElement");
+        global::System.Diagnostics.Debug.Assert(writer != null);
+        if (writer == null)
+            throw new global::System.ArgumentNullException("writer");
+        #endregion
 
-		DslModeling::DomainXmlSerializerDirectory directory = this.GetDirectory(rootElement.Store);
+        DslModeling::DomainXmlSerializerDirectory directory = this.GetDirectory(rootElement.Store);
 
-		DslModeling::DomainClassXmlSerializer rootSerializer = null;
+        DslModeling::DomainClassXmlSerializer rootSerializer = null;
 
-		if (rootElement is DslDiagrams::Diagram)
-		{
-			rootSerializer = directory.GetSerializer(<#= diagramTypeName #>.DomainClassId);
-		}
-		else
-		{
-			rootSerializer = directory.GetSerializer(rootElement.GetDomainClass().Id);
-		}
+        if (rootElement is DslDiagrams::Diagram)
+        {
+            rootSerializer = directory.GetSerializer(<#= diagramTypeName #>.DomainClassId);
+        }
+        else
+        {
+            rootSerializer = directory.GetSerializer(rootElement.GetDomainClass().Id);
+        }
 
-		global::System.Diagnostics.Debug.Assert(rootSerializer != null, "Cannot find serializer for " + rootElement.GetDomainClass().Name + "!");
+        global::System.Diagnostics.Debug.Assert(rootSerializer != null, "Cannot find serializer for " + rootElement.GetDomainClass().Name + "!");
 
-		// Set up root element settings
-		DslModeling::RootElementSettings rootElementSettings = new DslModeling::RootElementSettings();
+        // Set up root element settings
+        DslModeling::RootElementSettings rootElementSettings = new DslModeling::RootElementSettings();
 <#
-	string schemaTargetNamespace = CodeGenerationUtilities.GetXmlSchemaNamespace(this.DslLibrary);
+    string schemaTargetNamespace = CodeGenerationUtilities.GetXmlSchemaNamespace(this.DslLibrary);
 
                                                                                                                                                                                                                                                             if (diagram == null)
                                                                                                                                                                                                                                                             {
 #>
-		rootElementSettings.SchemaTargetNamespace = <#= CodeGenerationUtilities.WrapAsCSharpString(schemaTargetNamespace) #>;
+        rootElementSettings.SchemaTargetNamespace = <#= CodeGenerationUtilities.WrapAsCSharpString(schemaTargetNamespace) #>;
 <#
                                                                                                                                                                                                                                               }
                                                                                                                                                                                                                                                             else
                                                                                                                                                                                                                                                             {
 #>
-		if (!(rootElement is DslDiagrams::Diagram))
-		{
-			// Only model has schema, diagram has no schema.
-			rootElementSettings.SchemaTargetNamespace = <#= CodeGenerationUtilities.WrapAsCSharpString(schemaTargetNamespace) #>;
-		}
+        if (!(rootElement is DslDiagrams::Diagram))
+        {
+            // Only model has schema, diagram has no schema.
+            rootElementSettings.SchemaTargetNamespace = <#= CodeGenerationUtilities.WrapAsCSharpString(schemaTargetNamespace) #>;
+        }
 <#
                                                                                                                                                                                                                                              }
 #>
-		rootElementSettings.Version = new global::System.Version(<#= versionStr #>);
+        rootElementSettings.Version = new global::System.Version(<#= versionStr #>);
 
-		// Carry out the normal serialization.
-		rootSerializer.Write(serializationContext, rootElement, writer, rootElementSettings);
-	}
+        // Carry out the normal serialization.
+        rootSerializer.Write(serializationContext, rootElement, writer, rootElementSettings);
+    }
 }
 <#
-	CloseNamespace();
+    CloseNamespace();
 #>

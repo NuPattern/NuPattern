@@ -1,0 +1,22 @@
+﻿<#@ output extension=".gen.cs" #>
+<#@ Include File="..\..\..\..\..\..\MasterVSIXInfo.gen.ttinclude" #>
+
+namespace NuPattern.Authoring.PatternToolkit.Guidance.Links
+{
+    /// <summary>
+    /// Definitions for the HandsOnLabs.Toolkit toolkit project
+    /// </summary>
+    internal class HandsOnLabsToolkitInfo
+    {
+        /// <summary>
+        /// Gets the VSIX identifier of this toolkit.
+        /// </summary>
+        public static string Identifier = "<#= new Guid(VsixInfo.PatternToolkitHol.Identifier).ToString() #>";
+
+        /// <summary>
+        /// Gets the VSIX name of this toolkit.
+        /// </summary>
+        public static string RegistrationName = "<#=VsixInfo.PatternToolkitHol.Name#>";
+    }
+}
+

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+    <Identifier Id="5d64cfe6-a6ff-4e73-a000-c6a8832740ff">
+        <Name>NuPattern Toolkit Builder HOL</Name>
+        <Author>NuPattern</Author>
+        <Version>1.3.20.0</Version>
+        <Description xml:space="preserve">A Hands-On Lab for creating and customizing NuPattern Toolkit projects.</Description>
+        <Locale>1033</Locale>
+        <License>LICENSE.txt</License>
+        <Icon>Resources\VsixIconHOL.png</Icon>
+        <MoreInfoUrl>http://nupattern.codeplex.com</MoreInfoUrl>
+        <GettingStartedGuide>http://nupattern.codeplex.com/wikipage?title=Getting%20Started</GettingStartedGuide>
+        <PreviewImage>Resources\VsixPreviewHOL.png</PreviewImage>
+        <SupportedProducts>
+          <VisualStudio Version="11.0">
+            <Edition>Pro</Edition>
+          </VisualStudio>
+        </SupportedProducts>
+        <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5"/>
+    </Identifier>
+    <References>
+        <Reference Id="9f6dc301-6f66-4d21-9f9c-b37412b162f6" MinVersion="1.3.20.0">
+            <Name>NuPattern Toolkit Builder</Name>
+        </Reference>
+    </References>
+    <Content>
+        <MefComponent>|%CurrentProject%|</MefComponent>
+        <MefComponent>|Authoring.HandsOnLabs.Automation|</MefComponent>
+        <CustomExtension Type="NuPattern.Toolkit.PatternModel" AssemblyFile="NuPattern.Authoring.HandsOnLabs.dll">NuPattern.Authoring.HandsOnLabs.PatternTool.patterndefinition</CustomExtension>
+        <CustomExtension Type="NuPattern.Toolkit.Classification" Category="HOL" CreateVisibility="Expanded" CustomizeVisibility="Collapsed"/>
+        <ItemTemplate>Assets\Templates\Items</ItemTemplate>
+        <ProjectTemplate>Assets\Templates\Projects</ProjectTemplate>
+    </Content>
+</Vsix>

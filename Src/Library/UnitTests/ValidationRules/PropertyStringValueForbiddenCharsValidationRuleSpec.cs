@@ -1,10 +1,10 @@
 ﻿using System.Linq;
-using Microsoft.VisualStudio.Patterning.Library.ValidationRules;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Library.ValidationRules;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
+namespace NuPattern.Library.UnitTests
 {
     public class PropertyStringValueForbiddenCharsValidationRuleSpec
     {
@@ -28,7 +28,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
                 this.rule.ForbiddenChars = " ";
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenNoValue_ThenSucceeds()
             {
                 Mock.Get(this.rule.CurrentProperty)
@@ -39,7 +39,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
                 Assert.Equal(result.Count(), 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenValueContainsNoForbidden_ThenSucceeds()
             {
                 Mock.Get(this.rule.CurrentProperty)
@@ -50,7 +50,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
                 Assert.Equal(result.Count(), 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenValueContainsForbidden_ThenFails()
             {
                 Mock.Get(this.rule.CurrentProperty)
@@ -80,7 +80,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
                 this.rule.ForbiddenChars = " ";
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenForbiddenValue_ThenSucceeds()
             {
                 Mock.Get(this.rule.CurrentProperty)

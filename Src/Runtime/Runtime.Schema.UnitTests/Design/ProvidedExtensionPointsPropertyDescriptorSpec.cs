@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.Drawing.Design;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Modeling;
+using NuPattern.Runtime.Schema.Design;
+using NuPattern.VisualStudio;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
+namespace NuPattern.Runtime.Schema.UnitTests.Design
 {
     public class ProvidedExtensionPointsPropertyDescriptorSpec
     {
@@ -24,7 +27,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
             [TestInitialize]
             public void InitializeContext()
             {
-                var uriService = Mock.Of<Microsoft.VisualStudio.TeamArchitect.PowerTools.IFxrUriReferenceService>(
+                var uriService = Mock.Of<IUriReferenceService>(
                     u => u.ResolveUri<IInstanceBase>(It.IsAny<Uri>()) == Mock.Of<IProduct>(p =>
                     p.ToolkitInfo.Identifier == "ToolkitId"));
 
@@ -55,37 +58,37 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 this.store.Dispose();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingConverter_ThenReturnsExtensionPointsConverter()
             {
                 Assert.True(this.descriptor.Converter.GetType() == typeof(ExtensionPointsConverter));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingEditor_ThenReturnsCollectionConverter()
             {
                 Assert.True(this.descriptor.GetEditor(typeof(UITypeEditor)).GetType() == typeof(CollectionDropDownEditor<IExtensionPointSchema>));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingPropertyType_ThenReturnsStringType()
             {
                 Assert.True(this.descriptor.PropertyType == typeof(string));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingReadOnlyProperty_ThenReturnsFalse()
             {
                 Assert.False(this.descriptor.IsReadOnly);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingCanResetValue_ThenReturnsTrue()
             {
                 Assert.True(this.descriptor.CanResetValue(null));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingValue_ThenReturnsValue()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -97,7 +100,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 CollectionAssert.AreEqual(this.allExtensionPoints.ToList(), (System.Collections.ICollection)this.descriptor.GetValue(null));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenResettingValue_ThenDeletesAllProvidedExtensionsAndContractProperties()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -145,7 +148,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 {
                     var patternModel = this.store.ElementFactory.CreateElement<PatternModelSchema>();
 
-                    var uriService = Mock.Of<Microsoft.VisualStudio.TeamArchitect.PowerTools.IFxrUriReferenceService>(
+                    var uriService = Mock.Of<IUriReferenceService>(
                         u => u.ResolveUri<IInstanceBase>(It.IsAny<Uri>()) == Mock.Of<IProduct>(p =>
                             p.ToolkitInfo.Identifier == "ToolkitId"));
 
@@ -179,7 +182,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 this.store.Dispose();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSettingValue_ThenSetsImplementedExtensionPointsAndVariableProperties()
             {
                 this.descriptor.SetValue(null, this.extensionPoints);
@@ -196,7 +199,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.Equal(typeof(string).Name, property1.Type);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingValue_ThenReturnsValue()
             {
                 this.descriptor.SetValue(null, this.extensionPoints);
@@ -226,7 +229,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 {
                     var patternModel = this.store.ElementFactory.CreateElement<PatternModelSchema>();
 
-                    var uriService = Mock.Of<Microsoft.VisualStudio.TeamArchitect.PowerTools.IFxrUriReferenceService>(
+                    var uriService = Mock.Of<IUriReferenceService>(
                         u => u.ResolveUri<IInstanceBase>(It.IsAny<Uri>()) == Mock.Of<IProduct>(p =>
                             p.ToolkitInfo.Identifier == "ToolkitId"));
 
@@ -267,7 +270,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 this.store.Dispose();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSettingValue_ThenSetsImplementedExtensionPointsAndVariableProperties()
             {
                 this.descriptor.SetValue(null, this.extensionPoints);
@@ -291,7 +294,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.Equal(typeof(string).Name, property2.Type);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingValue_ThenReturnsValue()
             {
                 this.descriptor.SetValue(null, this.extensionPoints);
@@ -321,7 +324,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 {
                     var patternModel = this.store.ElementFactory.CreateElement<PatternModelSchema>();
 
-                    var uriService = Mock.Of<Microsoft.VisualStudio.TeamArchitect.PowerTools.IFxrUriReferenceService>(
+                    var uriService = Mock.Of<IUriReferenceService>(
                         u => u.ResolveUri<IInstanceBase>(It.IsAny<Uri>()) == Mock.Of<IProduct>(p =>
                             p.ToolkitInfo.Identifier == "ToolkitId"));
 
@@ -363,7 +366,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 this.store.Dispose();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSettingValue_ThenSetsImplementedExtensionPointsAndVariableProperties()
             {
                 this.descriptor.SetValue(null, this.extensionPoints);
@@ -383,7 +386,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.Equal(typeof(string).Name, property1.Type);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingValue_ThenReturnsValue()
             {
                 this.descriptor.SetValue(null, this.extensionPoints);
@@ -413,7 +416,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 {
                     var patternModel = this.store.ElementFactory.CreateElement<PatternModelSchema>();
 
-                    var uriService = Mock.Of<Microsoft.VisualStudio.TeamArchitect.PowerTools.IFxrUriReferenceService>(
+                    var uriService = Mock.Of<IUriReferenceService>(
                         u => u.ResolveUri<IInstanceBase>(It.IsAny<Uri>()) == Mock.Of<IProduct>(p =>
                             p.ToolkitInfo.Identifier == "ToolkitId"));
 
@@ -455,7 +458,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 this.store.Dispose();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSettingValue_ThenSetsImplementedExtensionPointsAndVariableProperties()
             {
                 this.descriptor.SetValue(null, this.extensionPoints);
@@ -472,7 +475,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.Equal(typeof(string).Name, property1.Type);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingValue_ThenReturnsValue()
             {
                 this.descriptor.SetValue(null, this.extensionPoints);

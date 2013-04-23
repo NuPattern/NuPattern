@@ -1,23 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-			xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-			Version="1.0.0"
-			xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
-  <Identifier Id="Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests.SampleVsix">
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      Version="1.0.0"
+      xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+  <Identifier Id="NuPattern.Runtime.IntegrationTests.SampleVsix">
     <Name>Runtime IntegrationTests SampleVsix</Name>
-    <Author>Outercurve</Author>
+    <Author>NuPattern</Author>
     <Version>1.0</Version>
     <Description xml:space="preserve">Provides support for runtime integration tests (publishing mef components, etc.)</Description>
     <Locale>1033</Locale>
     <SupportedProducts>
       <VisualStudio Version="10.0">
-        <Edition>Ultimate</Edition>
-        <Edition>Premium</Edition>
         <Edition>Pro</Edition>
       </VisualStudio>
       <VisualStudio Version="11.0">
-        <Edition>Ultimate</Edition>
-        <Edition>Premium</Edition>
         <Edition>Pro</Edition>
       </VisualStudio>
     </SupportedProducts>

@@ -2,7 +2,7 @@
 <Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
   <Identifier Id="8b378a9d-d437-4ca7-8dd3-318c38dc0969">
     <Name>ExtensionItem</Name>
-    <Author>Outercurve</Author>
+    <Author>NuPattern</Author>
     <Version>1.0</Version>
     <Description xml:space="preserve">Description of ExtensionItem</Description>
     <Locale>1033</Locale>
@@ -11,13 +11,9 @@
     <PreviewImage></PreviewImage>
     <SupportedProducts>
       <VisualStudio Version="10.0">
-        <Edition>Ultimate</Edition>
-        <Edition>Premium</Edition>
         <Edition>Pro</Edition>
       </VisualStudio>
       <VisualStudio Version="11.0">
-        <Edition>Ultimate</Edition>
-        <Edition>Premium</Edition>
         <Edition>Pro</Edition>
       </VisualStudio>
     </SupportedProducts>
@@ -25,15 +21,14 @@
   </Identifier>
   <References>
     <Reference Id="93373818-600f-414b-8181-3a0cb79fa785">
-      <Name>Pattern Toolkit Manager</Name>
-      <VsixPath>PatternToolkitManager.vsix</VsixPath>
+      <Name>NuPattern Toolkit Manager</Name>
     </Reference>
   </References>
   <Content>
     <MefComponent>|ExtensionItem|</MefComponent>
     <MefComponent>|ExtensionItem.Automation|</MefComponent>
-    <CustomExtension Type="PatternModel" AssemblyFile="ExtensionItem.dll">ExtensionItem.PatternModel.patterndefinition</CustomExtension>
-    <CustomExtension Type="ToolkitCategory" Category="Test"/>
+    <CustomExtension Type="NuPattern.Toolkit.PatternModel" AssemblyFile="ExtensionItem.dll">ExtensionItem.PatternModel.patterndefinition</CustomExtension>
+    <CustomExtension Type="NuPattern.Toolkit.Classification" Category="Test" CreateVisibility="Collapsed" CustomizeVisibility="Hidden"/>
     <ItemTemplate>Assets\Templates\Items</ItemTemplate>
   </Content>
 </Vsix>

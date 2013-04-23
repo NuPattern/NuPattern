@@ -1,0 +1,6 @@
+﻿<#@ output extension=".gen.cs" #>
+<#@ Include File="..\..\..\..\MasterVersion.gen.ttinclude" #>
+using System.Reflection;
+
+[assembly: AssemblyVersion("<#=VersionInfo.TemplateWizardVersion #>")]
+[assembly: AssemblyFileVersion("<#=VersionInfo.AssemblyVersion #>")]

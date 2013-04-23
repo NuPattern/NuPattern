@@ -1,5 +1,5 @@
 ﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
-<#@ output extension=".cs" #>
+<#@ output extension=".gen.cs" #>
 <#@ Dsl processor="DslDirectiveProcessor"  requires="fileName='..\..\DslDefinition.dsl'" #>
 <#@ Assembly Name="System.Core" #>
 <#@ Import Namespace="System.Linq" #>
@@ -12,19 +12,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System.CodeDom.Compiler;
-using System.ComponentModel.Composition;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
+using NuPattern.Runtime.Automation;
 
 namespace <#= this.DslLibrary.Namespace #>
 {
 <#
-PushIndent("\t");
+PushIndent("    ");
 
 foreach(DomainClass domainClass in this.DslLibrary.Classes.Where(dc => IsModelElementExtension(dc)))
 {
-	GenerateExportAttributes(domainClass);
+    GenerateExportAttributes(domainClass);
 }
 
 PopIndent();
@@ -35,8 +32,8 @@ PopIndent();
 // TODO: move to Helpers.tt
 private bool IsModelElementExtension(DomainClass domainClass)
 {
-	return domainClass.BaseClass != null && (domainClass.BaseClass.Name == "ExtensionElement" || domainClass.BaseClass.Name.Equals("BindingSettings"))  && domainClass.InheritanceModifier != InheritanceModifier.Abstract &&
-		domainClass.Notes.Equals("IsAutomationExtension=True", StringComparison.OrdinalIgnoreCase);
+    return domainClass.BaseClass != null && (domainClass.BaseClass.Name == "ExtensionElement" || domainClass.BaseClass.Name.Equals("BindingSettings"))  && domainClass.InheritanceModifier != InheritanceModifier.Abstract &&
+        domainClass.Notes.Equals("IsAutomationExtension=True", StringComparison.OrdinalIgnoreCase);
 }
 
 private void GenerateExportAttributes(DomainClass domainClass)
@@ -46,8 +43,8 @@ private void GenerateExportAttributes(DomainClass domainClass)
 /// <summary>
 /// Exports the '<#= domainClass.Name #>' extension element.
 /// </summary>
-[ExportedAutomation(ExportingType = typeof(<#= domainClass.Name #>), IconPath = "pack://application:,,,/Microsoft.VisualStudio.Patterning.Library;component/Resources/<#= domainClass.Name #>.png")]
-public partial class <#= domainClass.Name #>
+[ExportedAutomation(ExportingType = typeof(<#= domainClass.Name #>), IconPath = "pack://application:,,,/NuPattern.Library;component/Resources/AutomationSettings<#= domainClass.Name #>.png")]
+partial class <#= domainClass.Name #>
 {
 }
 <#+
@@ -55,6 +52,6 @@ public partial class <#= domainClass.Name #>
 
 public Version DslVersion
 {
-	get { return new Version(this.DslLibrary.MajorVersion, this.DslLibrary.MinorVersion, this.DslLibrary.Build, this.DslLibrary.Revision); }
+    get { return new Version(this.DslLibrary.MajorVersion, this.DslLibrary.MinorVersion, this.DslLibrary.Build, this.DslLibrary.Revision); }
 }
 #>

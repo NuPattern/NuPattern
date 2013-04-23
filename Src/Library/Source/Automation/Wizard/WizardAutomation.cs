@@ -6,21 +6,23 @@ using System.Globalization;
 using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Forms.Design;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
+using NuPattern.Library.Properties;
+using NuPattern.Presentation;
+using NuPattern.Runtime;
+using NuPattern.Runtime.Automation;
+using NuPattern.Runtime.Bindings;
+using NuPattern.Runtime.Composition;
+using NuPattern.Runtime.ToolkitInterface;
 using Application = System.Windows.Application;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
     /// <summary>
     /// Defines a wizard automation.
     /// </summary>
-    [CLSCompliant(false)]
-    public class WizardAutomation : AutomationExtension<IWizardSettings>, IWizardAutomationExtension
+    internal class WizardAutomation : AutomationExtension<IWizardSettings>, IWizardAutomationExtension
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<WizardAutomation>();
 
@@ -47,7 +49,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
         /// </summary>
         [Import]
         [Required]
-        public IFeatureCompositionService FeatureComposition { get; set; }
+        public INuPatternCompositionService CompositionService { get; set; }
 
         [Import(typeof(SVsServiceProvider))]
         [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
@@ -80,7 +82,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
                 }
 
                 var wizard = (Window)Activator.CreateInstance(wizardType, this.GetArguments(wizardType));
-                this.FeatureComposition.SatisfyImportsOnce(wizard);
+                this.CompositionService.SatisfyImportsOnce(wizard);
 
                 if (Application.Current != null)
                 {
@@ -94,7 +96,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 
                 wizard.DataContext = this.Owner;
 
-                using (new Runtime.MouseCursor(System.Windows.Input.Cursors.Arrow))
+                using (new MouseCursor(System.Windows.Input.Cursors.Arrow))
                 {
                     this.IsCanceled = !wizard.ShowDialog().GetValueOrDefault();
                 }

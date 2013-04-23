@@ -1,5 +1,5 @@
 <#@ Include File="..\Toolkit.ttinclude" #>
-<#@ Include File="..\..\..\MasterVSIXInfo.ttinclude" #>
+<#@ Include File="..\..\..\MasterVSIXInfo.gen.ttinclude" #>
 <#@ Output Extension=".config" #>
 <?xml version ="1.0"?>
 <configuration>

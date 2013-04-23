@@ -3,17 +3,18 @@ using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Validation;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Commands;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
+using NuPattern.Library.Commands;
+using NuPattern.Library.Properties;
+using NuPattern.Reflection;
+using NuPattern.Runtime;
+using NuPattern.VisualStudio.Solution;
+using NuPattern.VisualStudio.Solution.Templates;
+using NuPattern.VisualStudio.TemplateWizards;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation.Template
+namespace NuPattern.Library.Automation.Template
 {
-    class TemplateValidator
+    internal class TemplateValidator
     {
         private UnfoldVsTemplateCommand.UnfoldVsTemplateSettings settings;
         private ITraceSource tracer;
@@ -130,7 +131,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation.Template
 
         private IItemContainer GetVsTemplateProjectItem()
         {
-            var uriService = serviceProvider.GetService<IFxrUriReferenceService>();
+            var uriService = serviceProvider.GetService<IUriReferenceService>();
             IItemContainer item = null;
             try
             {
@@ -182,9 +183,9 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation.Template
                             Resources.Validate_TemplateSettingsTemplateIdDoesNotMatchReferencedTemplateCode, settings.SettingsElement as ModelElement);
                         }
 
-                        if (!((template.Type == VsTemplateType.Item && settings.TemplateUri.StartsWith(VsTemplateUriProvider.GetUriBase(VsTemplateType.Item), StringComparison.OrdinalIgnoreCase)) ||
-                            (template.Type == VsTemplateType.Project && settings.TemplateUri.StartsWith(VsTemplateUriProvider.GetUriBase(VsTemplateType.Project), StringComparison.OrdinalIgnoreCase)) ||
-                            (template.Type == VsTemplateType.ProjectGroup && settings.TemplateUri.StartsWith(VsTemplateUriProvider.GetUriBase(VsTemplateType.ProjectGroup), StringComparison.OrdinalIgnoreCase))))
+                        if (!((template.Type == VsTemplateType.Item && settings.TemplateUri.StartsWith(VsTemplateUri.GetUriBase(VsTemplateType.Item), StringComparison.OrdinalIgnoreCase)) ||
+                            (template.Type == VsTemplateType.Project && settings.TemplateUri.StartsWith(VsTemplateUri.GetUriBase(VsTemplateType.Project), StringComparison.OrdinalIgnoreCase)) ||
+                            (template.Type == VsTemplateType.ProjectGroup && settings.TemplateUri.StartsWith(VsTemplateUri.GetUriBase(VsTemplateType.ProjectGroup), StringComparison.OrdinalIgnoreCase))))
                         {
                             //wrong uri for type
                             context.LogError(
@@ -195,11 +196,11 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation.Template
                             Resources.Validate_TemplateSettingsTemplateTypeDoesNotMatchReferencedTemplateCode, settings.SettingsElement as ModelElement);
                         }
 
-                        var elementReplacementsWizard = template.WizardExtension.GetExtension(typeof(ElementReplacementsWizard));
+                        var elementReplacementsWizard = template.WizardExtension.GetExtension(TemplateWizardInfo.ElementReplacementsTemplateWizardFullTypeName);
 
                         if (validatingTemplate)
                         {
-                            var instantiationWizard = template.WizardExtension.GetExtension(typeof(InstantiationTemplateWizard));
+                            var instantiationWizard = template.WizardExtension.GetExtension(TemplateWizardInfo.InstantiationTemplateWizardFullTypeName);
                             if (instantiationWizard == null || elementReplacementsWizard == null)
                             {
                                 //wizards not present
@@ -257,7 +258,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation.Template
             {
                 if (!string.IsNullOrEmpty(settings.TemplateAuthoringUri))
                 {
-                    var uriService = serviceProvider.GetService<IFxrUriReferenceService>();
+                    var uriService = serviceProvider.GetService<IUriReferenceService>();
                     IItem item = null;
                     try
                     {
@@ -274,8 +275,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation.Template
                         return;
                     }
 
-                    if (!(string.Equals(item.Data.ItemType, "ProjectTemplate", StringComparison.OrdinalIgnoreCase)
-                        || string.Equals(item.Data.ItemType, "ItemTemplate", StringComparison.OrdinalIgnoreCase)))
+                    if (!(string.Equals(item.Data.ItemType, @"ProjectTemplate", StringComparison.OrdinalIgnoreCase)
+                        || string.Equals(item.Data.ItemType, @"ItemTemplate", StringComparison.OrdinalIgnoreCase)))
                     {
                         //item type should be set to content
                         context.LogWarning(

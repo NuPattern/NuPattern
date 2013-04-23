@@ -1,7 +1,0 @@
-﻿<#@ output extension=".t4" #>
-<#@ Include File="..\..\..\ToolkitVersionInfo.ttinclude" #>
-
-\<#+
-	string libraryToolkitVersion = "<#= AutomationLibraryToolkitInfo.Version #>";
-	string libraryToolkitName = "<#= AutomationLibraryToolkitInfo.Name #>";
-\#>

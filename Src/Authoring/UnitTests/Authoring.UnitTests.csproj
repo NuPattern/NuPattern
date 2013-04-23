@@ -7,74 +7,37 @@
     <ProjectGuid>{63F04D57-AC8A-4813-A98F-9927AA7C3C6C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Microsoft.VisualStudio.Patterning.Authoring.UnitTests</RootNamespace>
-    <AssemblyName>Microsoft.VisualStudio.Patterning.Authoring.UnitTests</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <RootNamespace>NuPattern.Authoring.UnitTests</RootNamespace>
+    <AssemblyName>NuPattern.Authoring.UnitTests</AssemblyName>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <SccProjectName>
-    </SccProjectName>
-    <SccLocalPath>
-    </SccLocalPath>
-    <SccAuxPath>
-    </SccAuxPath>
-    <SccProvider>
-    </SccProvider>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\Authoring\</SolutionDir>
     <RestorePackages>true</RestorePackages>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath Condition="'$(OutputPath)'==''">bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+  <PropertyGroup>
+    <BranchRoot>..\..\</BranchRoot>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath Condition="'$(OutputPath)'==''">bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug With CA|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
+  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
   <ItemGroup>
     <!---->
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.VisualStudio.Patterning.Runtime">
-      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Runtime.dll</HintPath>
+    <Reference Include="NuPattern.Runtime.Extensibility">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Extensibility.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Patterning.Runtime.Interfaces">
-      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Runtime.Interfaces.dll</HintPath>
+    <Reference Include="NuPattern.Common">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Patterning.Extensibility">
-      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Extensibility.dll</HintPath>
+    <Reference Include="NuPattern.Presentation">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Presentation.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Patterning.Library">
-      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Library.dll</HintPath>
+    <Reference Include="NuPattern.Modeling">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Modeling.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
-    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features">
-      <HintPath>..\..\..\Lib\Feature Extensions\Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools">
-      <HintPath>..\..\..\Lib\Feature Extensions\Microsoft.VisualStudio.TeamArchitect.PowerTools.dll</HintPath>
+    <Reference Include="NuPattern.VisualStudio">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.VisualStudio.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Moq">
       <HintPath>..\packages\Moq.4.0.10827\lib\NET40\Moq.dll</HintPath>
@@ -82,29 +45,34 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
-    <Reference Include="Microsoft.VisualStudio.ExtensionManager">
-      <HintPath>$(VS100COMNTOOLS)..\IDE\PrivateAssemblies\Microsoft.VisualStudio.ExtensionManager.dll</HintPath>
-    </Reference>
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="WindowsBase" />
+    <Reference Include="Microsoft.VisualStudio.ExtensionManager">
+      <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ExtensionManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix)">
+      <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix).dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams$(DslToolsVersionSuffix)">
+      <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk.Diagrams$(DslToolsVersionSuffix).dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+      <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Authoring.UnitTests.Content\extension.vsixmanifest">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <None Include="Authoring.UnitTests.Content\Toolkit1.vsix">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="packages.config" />
-    <None Include="PatternModel.patterndefinition">
+    <None Include="PatternModel.gen.patterndefinition">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PatternModel.tt</DependentUpon>
     </None>
     <None Include="PatternModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>PatternModel.patterndefinition</LastGenOutput>
+      <LastGenOutput>PatternModel.gen.patterndefinition</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -117,14 +85,14 @@
     <Compile Include="..\..\Common\Helpers\FakeSolution.cs">
       <Link>FakeSolution.cs</Link>
     </Compile>
-    <Compile Include="..\..\GlobalAssemblyInfo.cs">
-      <Link>Properties\GlobalAssemblyInfo.cs</Link>
+    <Compile Include="..\..\GlobalAssemblyInfo.gen.cs">
+      <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
+    <Compile Include="PatternModelDesign\SchemaUpgradeContextSpec.cs" />
+    <Compile Include="PatternModelDesign\PatternModelSchemaUpgradeManagerSpec.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Toolkit.Automation\AddAutomationExtensionViewModelSpec.cs" />
     <Compile Include="Toolkit.Automation\Commands\CreateAutomationLibraryExtensionCommandSpec.cs" />
-    <Compile Include="VsixSpec.cs" />
-    <Compile Include="WorkflowDesign\AssetSpec.cs" />
     <Compile Include="WorkflowDesign\ProducedAssetSpec.cs" />
     <Compile Include="WorkflowDesign\ProducedAssetValidationSpec.cs" />
     <Compile Include="WorkflowDesign\ProductionToolSpec.cs" />
@@ -142,28 +110,26 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Source\Authoring.Toolkit.Automation\Authoring.Toolkit.Automation.csproj">
+    <ProjectReference Include="..\Source\Authoring.PatternToolkit.Automation\Authoring.PatternToolkit.Automation.csproj">
       <Project>{3CCD565D-D7A3-4AAE-8C6E-8E1B10FD77FE}</Project>
-      <Name>Authoring.Toolkit.Automation</Name>
+      <Name>Authoring.PatternToolkit.Automation</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Source\ToolkitDesign.Shell\ToolkitDesign.Shell.csproj">
+    <ProjectReference Include="..\Source\Authoring.PatternModelDesign.Shell\Authoring.PatternModelDesign.Shell.csproj">
       <Project>{A999A0EB-246C-4B63-8BC1-405020026CAB}</Project>
-      <Name>ToolkitDesign.Shell</Name>
+      <Name>Authoring.PatternModelDesign.Shell</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Source\WorkflowDesign.Interfaces\WorkflowDesign.Interfaces.csproj">
+    <ProjectReference Include="..\Source\Authoring.WorkflowDesign.Extensibility\Authoring.WorkflowDesign.Extensibility.csproj">
       <Project>{A55CFA2E-1519-4719-BAFB-D67F3C67E375}</Project>
-      <Name>WorkflowDesign.Interfaces</Name>
+      <Name>Authoring.WorkflowDesign.Extensibility</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Source\WorkflowDesign\WorkflowDesign.csproj">
+    <ProjectReference Include="..\Source\Authoring.WorkflowDesign\Authoring.WorkflowDesign.csproj">
       <Project>{B29AC5FA-1276-46C3-A6F5-C0F8D2F8914A}</Project>
-      <Name>WorkflowDesign</Name>
+      <Name>Authoring.WorkflowDesign</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <Import Project="..\Source\Authoring.Toolkit\Authoring.PatternToolkitVersion.targets" />
-  <PropertyGroup>
-    <BranchRoot>..\..\</BranchRoot>
-  </PropertyGroup>
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.TestProjects.targets" />
+  <Import Project="$(BranchRoot)Common\Source\Versioning\Authoring.PatternToolkitVersion.gen.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
 </Project>

@@ -1,15 +1,16 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
-using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
-using Microsoft.VisualStudio.Patterning.Runtime;
+using NuPattern.Library.Design;
+using NuPattern.Runtime;
+using NuPattern.Runtime.Bindings;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
     /// <summary>
     /// Double-derived class to allow easier code customization.
     /// </summary>
     [TypeDescriptionProvider(typeof(MenuSettingsDescriptionProvider))]
-    public partial class MenuSettings
+    partial class MenuSettings
     {
         private List<ConditionBindingSettings> conditionSettings;
 

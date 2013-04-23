@@ -1,0 +1,38 @@
+<#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\..\..\Runtime\Source\Runtime.Schema\DslDefinition.dsl'" #>
+<#
+	// This is a change from the DSLTools version, teh dslAssembly variable below is used only to define the assembly containing the toolbox items
+	// which by default is the Dsl project, not the DslPackage project.
+	// This assembly must also contain the resources for all the the toolboxitems so that VS can find them and load them
+	//
+
+	string dslAssembly = "NuPattern.Authoring.PatternModelDesign.Shell.dll";
+#>
+<#@ include file="DslPackage\Package.tt" #>
+<#
+	string directiveName = this.Dsl.Name;
+#>
+//
+// Package attributes which may need to change are placed on the partial class below, rather than in the main include file.
+//
+namespace <#= CodeGenerationUtilities.GetPackageNamespace(this.Dsl) #>
+{
+	/// <summary>
+	/// Double-derived class to allow easier code customization.
+	/// </summary>
+	[VSShell::ProvideMenuResource("1000.ctmenu", 1)]
+	[VSShell::ProvideToolboxItems(1)]
+	[global::Microsoft.VisualStudio.Modeling.Shell.ProvideXmlEditorChooserDesignerView(
+		"<#=directiveName#>",
+		Constants.DesignerFileExtension,
+		EnvDTE.Constants.vsViewKindDesigner,
+		1,
+		CodeLogicalViewEditor = Constants.<#= dslName #>EditorFactoryId,
+		DebuggingLogicalViewEditor = Constants.<#= dslName #>EditorFactoryId,
+		DesignerLogicalViewEditor = Constants.<#= dslName #>EditorFactoryId,
+		TextLogicalViewEditor = Constants.<#= dslName #>EditorFactoryId)]
+	[global::Microsoft.VisualStudio.TextTemplating.VSHost.ProvideDirectiveProcessor(typeof(global::<#= this.Dsl.Namespace #>.<#= directiveName #>DirectiveProcessor), global::<#= this.Dsl.Namespace #>.<#= directiveName #>DirectiveProcessor.<#= directiveName #>DirectiveProcessorName, "A directive processor that provides access to <#= directiveName #> files")]
+	[global::System.Runtime.InteropServices.Guid(Constants.<#= dslName #>PackageId)]
+	internal sealed partial class <#= dslName #>Package : <#= dslName #>PackageBase
+	{
+	}
+}

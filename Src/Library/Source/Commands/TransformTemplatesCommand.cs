@@ -5,27 +5,27 @@ using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using System.IO;
 using EnvDTE;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Extensibility.References;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
+using NuPattern.Library.Properties;
+using NuPattern.Runtime;
+using NuPattern.Runtime.References;
+using NuPattern.VisualStudio;
+using NuPattern.VisualStudio.Solution;
 using VSLangProj;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Commands
+namespace NuPattern.Library.Commands
 {
     /// <summary>
     /// Command used to Transform Templates
     /// </summary>
-    [DisplayNameResource("TransformTemplatesCommand_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
-    [DescriptionResource("TransformTemplatesCommand_Description", typeof(Resources))]
+    [DisplayNameResource(@"TransformTemplatesCommand_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"TransformTemplatesCommand_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_VisualStudio", typeof(Resources))]
     [CLSCompliant(false)]
-    public class TransformTemplatesCommand : FeatureCommand
+    public class TransformTemplatesCommand : NuPattern.Runtime.Command
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<TransformTemplatesCommand>();
 
@@ -63,7 +63,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
         /// </summary>
         [Required]
         [Import(AllowDefault = true)]
-        public virtual IFxrUriReferenceService UriService { get; set; }
+        public virtual IUriReferenceService UriService { get; set; }
 
         /// <summary>
         /// Gets or sets the current element.
@@ -76,8 +76,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
         /// <summary>
         /// Gets or sets the target path.
         /// </summary>
-        [DisplayNameResource("TransformTemplatesCommand_TargetPath_DisplayName", typeof(Resources))]
-        [DescriptionResource("TransformTemplatesCommand_TargetPath_Description", typeof(Resources))]
+        [DisplayNameResource(@"TransformTemplatesCommand_TargetPath_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"TransformTemplatesCommand_TargetPath_Description", typeof(Resources))]
         public virtual string TargetPath { get; set; }
 
         /// <summary>

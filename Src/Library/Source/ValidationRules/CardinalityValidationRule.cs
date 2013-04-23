@@ -5,17 +5,19 @@ using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Library.Properties;
+using NuPattern.Runtime;
+using NuPattern.Runtime.Validation;
 
-namespace Microsoft.VisualStudio.Patterning.Library.ValidationRules
+namespace NuPattern.Library.ValidationRules
 {
     /// <summary>
     /// Specifies the numeric range constraints for the cardinality.
     /// </summary>
-    [DescriptionResource("CardinalityValidationRule_Description", typeof(Resources))]
-    [DisplayNameResource("CardinalityValidationRule_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"CardinalityValidationRule_Description", typeof(Resources))]
+    [DisplayNameResource(@"CardinalityValidationRule_DisplayName", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     public class CardinalityValidationRule : ValidationRule
     {
         /// <summary>
@@ -29,16 +31,16 @@ namespace Microsoft.VisualStudio.Patterning.Library.ValidationRules
         /// The name of the child element to check cardinality on.
         /// </summary>
         [Required]
-        [DescriptionResource("CardinalityValidationRule_ChildElementNameDescription", typeof(Resources))]
-        [DisplayNameResource("CardinalityValidationRule_ChildElementNameDisplayName", typeof(Resources))]
+        [DescriptionResource(@"CardinalityValidationRule_ChildElementNameDescription", typeof(Resources))]
+        [DisplayNameResource(@"CardinalityValidationRule_ChildElementNameDisplayName", typeof(Resources))]
         public string ChildElementName { get; set; }
 
         /// <summary>
         /// Gets or sets the maximum allowed field value.
         /// </summary>
         [Required]
-        [DescriptionResource("CardinalityValidationRule_MaximumDescription", typeof(Resources))]
-        [DisplayNameResource("CardinalityValidationRule_MaximumDisplayName", typeof(Resources))]
+        [DescriptionResource(@"CardinalityValidationRule_MaximumDescription", typeof(Resources))]
+        [DisplayNameResource(@"CardinalityValidationRule_MaximumDisplayName", typeof(Resources))]
         [DefaultValue(Int32.MaxValue)]
         [Range(1, Int32.MaxValue)]
         public int Maximum { get; set; }
@@ -47,8 +49,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.ValidationRules
         /// Gets or sets the minimum allowed field value.
         /// </summary>
         [Required]
-        [DescriptionResource("CardinalityValidationRule_MinimumDescription", typeof(Resources))]
-        [DisplayNameResource("CardinalityValidationRule_MinimumDisplayName", typeof(Resources))]
+        [DescriptionResource(@"CardinalityValidationRule_MinimumDescription", typeof(Resources))]
+        [DisplayNameResource(@"CardinalityValidationRule_MinimumDisplayName", typeof(Resources))]
         [DefaultValue(Int32.MinValue)]
         [Range(0, Int32.MaxValue)]
         public int Minimum { get; set; }

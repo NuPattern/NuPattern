@@ -4,20 +4,20 @@ using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Windows;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
+using NuPattern.Library.Properties;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Library.ValueProviders
+namespace NuPattern.Library.ValueProviders
 {
     /// <summary>
     /// Returns items dragged from Solution Explorer to Solution Builder
     /// </summary>
     [CLSCompliant(false)]
-    [DisplayNameResource("DroppedItemContainerValueProvider_DisplayName", typeof(Resources))]
-    [DescriptionResource("DroppedItemContainerValueProvider_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
+    [DisplayNameResource(@"DroppedItemContainerValueProvider_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"DroppedItemContainerValueProvider_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     public class DroppedItemContainerValueProvider : ValueProvider
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<DroppedItemContainerValueProvider>();
@@ -46,7 +46,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.ValueProviders
             paths.AddRange(DragArgs.GetVSProjectsPaths());
 
             tracer.TraceInformation(
-                Resources.DroppedItemContainerValueProvider_TraceEvaluation, string.Join(";", paths.ToArray<string>()));
+                Resources.DroppedItemContainerValueProvider_TraceEvaluation, string.Join(@";", paths.ToArray<string>()));
 
             return paths;
         }

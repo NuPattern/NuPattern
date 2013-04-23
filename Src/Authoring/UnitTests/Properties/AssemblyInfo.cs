@@ -1,7 +1,7 @@
 using System;
 using System.Reflection;
 
-[assembly: AssemblyTitle(@"Microsoft.VisualStudio.Patterning.Authoring.UnitTests")]
+[assembly: AssemblyTitle(@"NuPattern.Authoring.UnitTests")]
 [assembly: AssemblyDescription(@"")]
 [assembly: AssemblyConfiguration("")]
 

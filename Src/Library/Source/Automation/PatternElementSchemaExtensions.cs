@@ -3,10 +3,9 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
     /// <summary>
     /// Extensions to the <see cref=" IPatternElementSchema"/> class.
@@ -29,7 +28,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
         /// <summary>
         /// Ensures specified command is either: present and configured correctly on the element, or removed from element, based on the evaluation of the given function. 
         /// </summary>
-        public static CommandSettings EnsureCommandAutomation<TCommand>(this IPatternElementSchema container, string instanceName, Func<bool> exists) where TCommand : IFeatureCommand
+        public static CommandSettings EnsureCommandAutomation<TCommand>(this IPatternElementSchema container, string instanceName, Func<bool> exists) where TCommand : ICommand
         {
             var settings = container.GetAutomationSettings<CommandSettings>(instanceName);
             if (exists() == true)
@@ -62,15 +61,15 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
         /// <summary>
         /// Ensures specified event is either: present and configured correctly on the element, or removed from element, based on the evaluation of the given function. 
         /// </summary>
-        public static EventSettings EnsureEventLaunchPoint<TEvent>(this IPatternElementSchema container, string instanceName, CommandSettings command, bool filterForCurrentElement, Func<bool> exists) where TEvent : IObservableEvent
+        public static EventSettings EnsureEventLaunchPoint<TEvent>(this IPatternElementSchema container, string instanceName, CommandSettings command, Func<bool> exists) where TEvent : IObservableEvent
         {
-            return EnsureEventLaunchPoint(container, typeof(TEvent).FullName, instanceName, command, filterForCurrentElement, exists);
+            return EnsureEventLaunchPoint(container, typeof(TEvent).FullName, instanceName, command, exists);
         }
 
         /// <summary>
         /// Ensures specified event is either: present and configured correctly on the element, or removed from element, based on the evaluation of the given function. 
         /// </summary>
-        public static EventSettings EnsureEventLaunchPoint(this IPatternElementSchema container, string eventTypeName, string instanceName, CommandSettings command, bool filterForCurrentElement, Func<bool> exists)
+        public static EventSettings EnsureEventLaunchPoint(this IPatternElementSchema container, string eventTypeName, string instanceName, CommandSettings command, Func<bool> exists)
         {
             var settings = container.GetAutomationSettings<EventSettings>(instanceName);
             if (exists() == true)
@@ -85,7 +84,6 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
                 if (settings != null)
                 {
                     settings.EventId = eventTypeName;
-                    settings.FilterForCurrentElement = filterForCurrentElement;
                     if (command != null)
                     {
                         settings.CommandId = command.Id;
@@ -172,7 +170,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
                     instantiateProperty.Description = description;
                     instantiateProperty.Category = category;
                     var converterType = typeof(TTypeConverter);
-                    instantiateProperty.TypeConverterTypeName = converterType.FullName + ", " + converterType.Assembly.FullName.Split(',')[0];
+                    instantiateProperty.TypeConverterTypeName = converterType.FullName + @", " + converterType.Assembly.FullName.Split(',')[0];
                 }
             }
             else
@@ -193,7 +191,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
             if (!string.IsNullOrEmpty(iconPath))
             {
                 return string.Format(CultureInfo.CurrentCulture,
-                    "pack://application:,,,/{0};component/{1}", typeof(PatternElementSchemaExtensions).Assembly.GetName().Name, iconPath);
+                    @"pack://application:,,,/{0};component/{1}", typeof(PatternElementSchemaExtensions).Assembly.GetName().Name, iconPath);
             }
 
             else

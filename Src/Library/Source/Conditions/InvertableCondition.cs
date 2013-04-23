@@ -1,17 +1,17 @@
 ﻿using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Library.Properties;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Conditions
+namespace NuPattern.Library.Conditions
 {
     /// <summary>
     /// Invertable Condition
     /// </summary>
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "Invertable"), DisplayNameResource("InvertableCondition_DisplayName", typeof(Resources))]
-    [DescriptionResource("InvertableCondition_Description", typeof(Resources))]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "Invertable"), DisplayNameResource(@"InvertableCondition_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"InvertableCondition_Description", typeof(Resources))]
     [CLSCompliant(false)]
     public abstract class InvertableCondition : Condition
     {
@@ -30,8 +30,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.Conditions
         /// </summary>
         [Required]
         [DefaultValue(DefaultIsInverted)]
-        [DisplayNameResource("InvertableCondition_IsInverted_DisplayName", typeof(Resources))]
-        [DescriptionResource("InvertableCondition_IsInverted_Description", typeof(Resources))]
+        [DisplayNameResource(@"InvertableCondition_IsInverted_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"InvertableCondition_IsInverted_Description", typeof(Resources))]
         internal bool IsInverted { get; set; }
 
         /// <summary>

@@ -6,22 +6,22 @@ using System.Drawing.Design;
 using System.IO;
 using System.Windows.Forms.Design;
 using Microsoft.VisualBasic.FileIO;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
+using NuPattern.Library.Properties;
+using NuPattern.Runtime;
+using NuPattern.VisualStudio.Solution;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Commands
+namespace NuPattern.Library.Commands
 {
     /// <summary>
     /// Activates (opens or selects) the linked artifacts associated to current element.
     /// </summary>
-    [DisplayNameResource("CopyFolderCommand_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_General", typeof(Resources))]
-    [DescriptionResource("CopyFolderCommand_Description", typeof(Resources))]
+    [DisplayNameResource(@"CopyFolderCommand_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"CopyFolderCommand_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_General", typeof(Resources))]
     [CLSCompliant(false)]
-    public class CopyFolderCommand : FeatureCommand
+    public class CopyFolderCommand : Command
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<CopyFolderCommand>();
         private const bool DefaultOverwriteIfExists = true;
@@ -48,8 +48,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
         /// <summary>
         /// Gets or sets whether to overwrite the destination folder if it exists.
         /// </summary>
-        [DisplayNameResource("CopyFolderCommand_OverwriteIfExists_DisplayName", typeof(Resources))]
-        [DescriptionResource("CopyFolderCommand_OverwriteIfExists_Description", typeof(Resources))]
+        [DisplayNameResource(@"CopyFolderCommand_OverwriteIfExists_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"CopyFolderCommand_OverwriteIfExists_Description", typeof(Resources))]
         [DefaultValue(DefaultOverwriteIfExists)]
         [Required]
         public bool OverwriteIfExists { get; set; }
@@ -58,8 +58,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
         /// Gets or sets the source folder to copy from.
         /// </summary>
         [Editor(typeof(FolderNameEditor), typeof(UITypeEditor))]
-        [DisplayNameResource("CopyFolderCommand_SourcePath_DisplayName", typeof(Resources))]
-        [DescriptionResource("CopyFolderCommand_SourcePath_Description", typeof(Resources))]
+        [DisplayNameResource(@"CopyFolderCommand_SourcePath_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"CopyFolderCommand_SourcePath_Description", typeof(Resources))]
         [Required]
         public string SourcePath { get; set; }
 
@@ -67,8 +67,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
         /// Gets or sets the destination folder to copy to.
         /// </summary>
         [Editor(typeof(FolderNameEditor), typeof(UITypeEditor))]
-        [DisplayNameResource("CopyFolderCommand_DestinationPath_DisplayName", typeof(Resources))]
-        [DescriptionResource("CopyFolderCommand_DestinationPath_Description", typeof(Resources))]
+        [DisplayNameResource(@"CopyFolderCommand_DestinationPath_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"CopyFolderCommand_DestinationPath_Description", typeof(Resources))]
         [Required]
         public string DestinationPath { get; set; }
 

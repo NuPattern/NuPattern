@@ -2,12 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Diagrams;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
     /// <summary>
     /// Extensions for authoring shapes.
@@ -35,7 +34,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
                 }
 
                 // Filter system items (based on diagram state)
-                var diagram = StoreExtensions.GetCurrentDiagram(store);
+                var diagram = ModelStoreExtensions.GetCurrentDiagram(store);
                 if (diagram != null)
                 {
                     if (diagram.ShowHiddenEntries == false)

@@ -1,30 +1,32 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Drawing.Design;
-using System.Globalization;
 using System.Linq;
 using System.Windows.Input;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Automation;
-using Microsoft.VisualStudio.Patterning.Library.Design;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
+using NuPattern.Library.Automation;
+using NuPattern.Library.Design;
+using NuPattern.Library.Properties;
+using NuPattern.Presentation;
+using NuPattern.Reflection;
+using NuPattern.Runtime;
+using NuPattern.Runtime.Automation;
+using NuPattern.VisualStudio;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Commands
+namespace NuPattern.Library.Commands
 {
     /// <summary>
     ///  Command that executes a list of commands sequentially.
     /// </summary>
-    [DisplayNameResource("AggregatorCommand_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
-    [DescriptionResource("AggregatorCommand_Description", typeof(Resources))]
+    [DisplayNameResource(@"AggregatorCommand_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"AggregatorCommand_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_General", typeof(Resources))]
     [CLSCompliant(false)]
-    public class AggregatorCommand : FeatureCommand
+    public class AggregatorCommand : Command
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<AggregatorCommand>();
 
@@ -32,13 +34,11 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
         /// Gets or sets the command reference list.
         /// </summary>
         /// <value>The command reference list.</value>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1002:DoNotExposeGenericLists"), Required]
-        [DisplayNameResource("AggregatorCommand_CommandReferences_DisplayName", typeof(Resources))]
-        [DescriptionResource("AggregatorCommand_CommandReferences_Description", typeof(Resources))]
-        [Editor(typeof(CommandReferencesEditor), typeof(UITypeEditor))]
+        [DisplayNameResource(@"AggregatorCommand_CommandReferences_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"AggregatorCommand_CommandReferences_Description", typeof(Resources))]
         [TypeConverter(typeof(CommandReferencesConverter))]
-        [DesignOnly(true)]
-        public List<CommandReference> CommandReferenceList { get; set; }
+        [Editor(typeof(CommandReferencesEditor), typeof(UITypeEditor))]
+        public Collection<CommandReference> CommandReferenceList { get; set; }
 
         /// <summary>
         /// Gets or sets the current element.
@@ -76,13 +76,6 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
 
                 if (settings != null)
                 {
-                    var converter = new CommandReferencesConverter();
-
-                    this.CommandReferenceList = (List<CommandReference>)converter.ConvertFrom(
-                        new SimpleTypeDescriptorContext { Instance = this.Settings },
-                        CultureInfo.CurrentCulture,
-                        settings.Value);
-
                     using (new MouseCursor(Cursors.Wait))
                     {
                         foreach (var reference in this.CommandReferenceList)

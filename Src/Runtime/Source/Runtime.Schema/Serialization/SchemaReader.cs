@@ -6,10 +6,10 @@ using System.Linq;
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Diagrams;
-using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.Shell;
+using NuPattern.Modeling;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
     /// <summary>
     /// Default <see cref="ISchemaReader"/> implementation that 
@@ -17,7 +17,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
     /// </summary>
     [PartCreationPolicy(CreationPolicy.Shared)]
     [Export(typeof(ISchemaReader))]
-    public class SchemaReader : ISchemaReader
+    internal class SchemaReader : ISchemaReader
     {
         private IServiceProvider serviceProvider;
         private ISerializerLocator serializerLocator;
@@ -56,11 +56,11 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
             var extensionTypes = this.extensionLocator.GetExtendingDomainModels(typeof(PatternModelDomainModel))
                 .Concat(
                     new[] 
-					{ 
-						typeof(CoreDomainModel), 
-						typeof(CoreDesignSurfaceDomainModel), 
-						typeof(PatternModelDomainModel) 
-					}).ToArray();
+                    { 
+                        typeof(CoreDomainModel), 
+                        typeof(CoreDesignSurfaceDomainModel), 
+                        typeof(PatternModelDomainModel) 
+                    }).ToArray();
 
             return new Store(this.serviceProvider, extensionTypes);
         }

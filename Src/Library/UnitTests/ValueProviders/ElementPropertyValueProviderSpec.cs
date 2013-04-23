@@ -1,10 +1,10 @@
 ﻿using System.ComponentModel;
-using Microsoft.VisualStudio.Patterning.Library.ValueProviders;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Library.ValueProviders;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.ValueProviders
+namespace NuPattern.Library.UnitTests.ValueProviders
 {
     [TestClass]
     public class ElementPropertyValueProviderSpec
@@ -23,7 +23,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.ValueProviders
                 this.provider.PropertyName = "TestPropertyName";
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenPropertyNameIsNullOrEmpty_ThenEvaluateReturnsEmpty()
             {
                 var owner = Mock.Of<IProductElement>(x => x.Root.ProductState == Mock.Of<IProductState>());
@@ -34,7 +34,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.ValueProviders
                 Assert.Equal(string.Empty, result);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenPropertyNotFoundOnOwner_ThenEvaluateReturnsEmpty()
             {
                 var owner = Mock.Of<IProductElement>(x =>
@@ -48,7 +48,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.ValueProviders
                 Assert.Equal(string.Empty, result);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenPropertyFoundOnOwner_ThenEvaluateReturnsPropertyValue()
             {
                 string propertyName = "TestPropertyName";

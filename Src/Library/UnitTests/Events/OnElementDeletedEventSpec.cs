@@ -1,10 +1,10 @@
 ﻿using System;
-using Microsoft.VisualStudio.Patterning.Library.Events;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Library.Events;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Events
+namespace NuPattern.Library.UnitTests.Events
 {
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable", Justification = "TestCleanup")]
     [TestClass]
@@ -32,13 +32,13 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Events
             this.publisher.Dispose();
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenPatternManagerOpenedAndNoSubscribers_ThenNoOp()
         {
             this.manager.Raise(x => x.IsOpenChanged += null, EventArgs.Empty);
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenManagerOpenedThenProductDeleted_ThenSubscriberIsNotified()
         {
             var subscriber = new Mock<ISubscriber>();
@@ -54,7 +54,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Events
                 It.Is<IEvent<EventArgs>>(e => e.Sender == this.current)));
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenManagerOpenedThenProductDeletedForOtherElement_ThenSubscriberIsNotNotified()
         {
             var subscriber = new Mock<ISubscriber>();
@@ -70,7 +70,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Events
                 It.Is<IEvent<EventArgs>>(e => e.Sender == this.current)), Times.Never());
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenManagerClosedThenProductDeleted_ThenSubscriberIsNotNotified()
         {
             var subscriber = new Mock<ISubscriber>();
@@ -90,7 +90,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Events
                 Times.Never());
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenDisposingSubscriptionThenProductDeleted_ThenSubscriberIsNotNotified()
         {
             var subscriber = new Mock<ISubscriber>();

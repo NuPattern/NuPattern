@@ -1,16 +1,17 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Library.Properties;
 
-namespace Microsoft.VisualStudio.Patterning.Library.ValidationRules
+namespace NuPattern.Library.ValidationRules
 {
     /// <summary>
     /// Specifies the minimum and maximum length of characters that are allowed in a data field.
     /// </summary>
-    [DescriptionResource("PropertyStringLengthValidationRule_Description", typeof(Resources))]
-    [DisplayNameResource("PropertyStringLengthValidationRule_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"PropertyStringLengthValidationRule_Description", typeof(Resources))]
+    [DisplayNameResource(@"PropertyStringLengthValidationRule_DisplayName", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_General", typeof(Resources))]
     public class PropertyStringLengthValidationRule : PropertyAttributeValidationRule
     {
         /// <summary>
@@ -18,8 +19,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.ValidationRules
         /// </summary>
         /// <value>The maximum length a string.</value>
         [Range(1, int.MaxValue)]
-        [DescriptionResource("PropertyStringLengthValidationRule_MaximumLengthDescription", typeof(Resources))]
-        [DisplayNameResource("PropertyStringLengthValidationRule_MaximumLengthDisplayName", typeof(Resources))]
+        [DescriptionResource(@"PropertyStringLengthValidationRule_MaximumLengthDescription", typeof(Resources))]
+        [DisplayNameResource(@"PropertyStringLengthValidationRule_MaximumLengthDisplayName", typeof(Resources))]
         public int MaximumLength { get; set; }
 
         /// <summary>
@@ -27,8 +28,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.ValidationRules
         /// </summary>
         /// <value>The minimum length of a string.</value>
         [Range(0, int.MaxValue)]
-        [DescriptionResource("PropertyStringLengthValidationRule_MinimumLengthDescription", typeof(Resources))]
-        [DisplayNameResource("PropertyStringLengthValidationRule_MinimumLengthDisplayName", typeof(Resources))]
+        [DescriptionResource(@"PropertyStringLengthValidationRule_MinimumLengthDescription", typeof(Resources))]
+        [DisplayNameResource(@"PropertyStringLengthValidationRule_MinimumLengthDisplayName", typeof(Resources))]
         public int MinimumLength { get; set; }
 
         /// <summary>

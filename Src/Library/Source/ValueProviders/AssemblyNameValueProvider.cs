@@ -1,18 +1,18 @@
 ﻿using System;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
+using NuPattern.Library.Properties;
+using NuPattern.Runtime;
+using NuPattern.VisualStudio.Solution;
 
-namespace Microsoft.VisualStudio.Patterning.Library.ValueProviders
+namespace NuPattern.Library.ValueProviders
 {
     /// <summary>
     /// A <see cref=" ValueProvider"/> that provides the project assembly name.
     /// </summary>
-    [DisplayNameResource("AssemblyNameValueProvider_DisplayName", typeof(Resources))]
-    [DescriptionResource("AssemblyNameValueProvider_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
+    [DisplayNameResource(@"AssemblyNameValueProvider_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"AssemblyNameValueProvider_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_VisualStudio", typeof(Resources))]
     [CLSCompliant(false)]
     public class AssemblyNameValueProvider : VsProjectPropertyValueProvider
     {

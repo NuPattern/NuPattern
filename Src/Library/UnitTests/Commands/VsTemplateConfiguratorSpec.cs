@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Commands;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.VisualStudio.Solution;
 
-namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
+namespace NuPattern.Library.UnitTests.Commands
 {
     [DeploymentItem("Library.UnitTests.Content\\VsTemplateConfigurator-Project.vstemplate", ".")]
     [DeploymentItem("Library.UnitTests.Content\\VsTemplateConfigurator-Item.vstemplate", ".")]
@@ -30,17 +28,17 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 Parent = new Item
                 {
                     Items = 
-					{
-						new Item
-						{
-							Name = "Foo.txt",
-						}
-					},
+                    {
+                        new Item
+                        {
+                            Name = "Foo.txt",
+                        }
+                    },
                 },
             };
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenProjectTemplateConfigured_ThenSetsVsTemplateBuildAction()
         {
             this.templateItem.PhysicalPath = "VsTemplateConfigurator-Project.vstemplate";
@@ -49,7 +47,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
             Assert.Equal("ProjectTemplate", (string)this.templateItem.Data.ItemType);
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenProjectTemplateConfigured_ThenSetsContentItemProperties()
         {
             this.templateItem.PhysicalPath = "VsTemplateConfigurator-Project.vstemplate";
@@ -62,7 +60,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
             Assert.Equal("false", (string)content.Data.IncludeInVSIX);
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenItemTemplateConfigured_ThenSetsVsTemplateBuildAction()
         {
             this.templateItem.PhysicalPath = "VsTemplateConfigurator-Item.vstemplate";
@@ -71,7 +69,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
             Assert.Equal("ItemTemplate", (string)this.templateItem.Data.ItemType);
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenItemTemplateConfigured_ThenSetsContentItemProperties()
         {
             this.templateItem.PhysicalPath = "VsTemplateConfigurator-Item.vstemplate";
@@ -84,7 +82,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
             Assert.Equal("false", (string)content.Data.IncludeInVSIX);
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenItemTemplateConfigured_ThenDefaultNameIsSanitized()
         {
             this.templateItem.PhysicalPath = "VsTemplateConfigurator-Item.vstemplate";

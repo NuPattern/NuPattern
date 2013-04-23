@@ -1,18 +1,18 @@
 ﻿using System;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Extensibility.References;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
+using NuPattern.Library.Properties;
+using NuPattern.Runtime.References;
+using NuPattern.VisualStudio.Solution;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Commands
+namespace NuPattern.Library.Commands
 {
     /// <summary>
     /// Activates (opens or selects) the linked artifacts associated to current element.
     /// </summary>
-    [DisplayNameResource("ActivateArtifactCommand_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
-    [DescriptionResource("ActivateArtifactCommand_Description", typeof(Resources))]
+    [DisplayNameResource(@"ActivateArtifactCommand_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"ActivateArtifactCommand_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class ActivateArtifactCommand : ActivateSolutionItemsCommand
     {

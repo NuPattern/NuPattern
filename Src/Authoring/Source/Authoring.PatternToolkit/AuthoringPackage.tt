@@ -1,0 +1,28 @@
+﻿<#@ Include File="..\..\..\MasterVSIXInfo.gen.ttinclude" #>
+<#@ Include File="AuthoringTargets.ttinclude" #>
+<#@ output extension=".gen.cs" #>
+using System;
+using System.Collections.Generic;
+using System.IO;
+using Microsoft.VisualStudio.Shell;
+using NuPattern.Diagnostics;
+
+namespace NuPattern.Authoring.PatternToolkit
+{
+    /// <summary>
+    /// The package class for this extension.
+    /// </summary>
+    public partial class AuthoringPackage : Package
+    {
+        private static readonly ITraceSource tracer = Tracer.GetSourceFor<AuthoringPackage>();
+        internal static string CurrentToolkitVersion = "<#=VsixInfo.PatternToolkitBuilder.Version #>";
+        private static string MsBuildPath = @"<#=AuthoringTargetsInfo.FormatVsEnvVarToMachineEnvVar(AuthoringTargetsInfo.MsBuildPath)#>\\<#= VsixInfo.PatternToolkitBuilder.Author #>\\<#= VsixInfo.PatternToolkitBuilder.Name #>";
+        private static string TargetsFilename = "<#=AuthoringTargetsInfo.VersionTargets#>";
+        internal static readonly string TargetsPath = Environment.ExpandEnvironmentVariables(Path.Combine(MsBuildPath, TargetsFilename));
+        internal static readonly Dictionary<string,string> InstalledExtensionProperties = new Dictionary<string, string>
+        { 
+            {"PatternToolkitRuntime", "<#=VsixInfo.PatternToolkitRuntime.Identifier #>" },
+            {"PatternToolkitBuilder", "<#=VsixInfo.PatternToolkitBuilder.Identifier #>" },
+        };
+    }
+}

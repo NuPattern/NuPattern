@@ -1,14 +1,13 @@
 ﻿using System;
-using Microsoft.VisualStudio.Patterning.Library.Automation;
-using Microsoft.VisualStudio.Patterning.Library.Commands;
-using Microsoft.VisualStudio.Patterning.Extensibility;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Library.Automation;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Design
+namespace NuPattern.Library.Design
 {
     /// <summary>
     /// Command references type editor
     /// </summary>
-    public class CommandReferencesEditor : CancelableCollectionEditor
+    internal class CommandReferencesEditor : DesignCollectionEditor
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CommandReferencesEditor"/> class.
@@ -17,20 +16,6 @@ namespace Microsoft.VisualStudio.Patterning.Library.Design
         public CommandReferencesEditor(Type type)
             : base(type)
         {
-        }
-
-        /// <summary>
-        /// Creates a new form to display and edit the current collection, with the help
-        /// panel on the properties grid turned on.
-        /// </summary>
-        /// <returns></returns>
-        protected override CollectionForm CreateCollectionForm()
-        {
-            var form = base.CreateCollectionForm();
-
-            form.Text = Properties.Resources.CommandReferencesEditor_Caption;
-
-            return form;
         }
 
         /// <summary>

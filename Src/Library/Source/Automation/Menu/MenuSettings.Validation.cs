@@ -4,30 +4,31 @@ using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling.Validation;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.ComponentModel.Composition;
+using NuPattern.Diagnostics;
+using NuPattern.Library.Properties;
+using NuPattern.Reflection;
+using NuPattern.Runtime;
+using NuPattern.Runtime.Authoring;
+using NuPattern.Runtime.Bindings;
+using NuPattern.Runtime.Composition;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
     /// <summary>
     /// Custom validation rules.
     /// </summary>
     [ValidationState(ValidationState.Enabled)]
-    public partial class MenuSettings
+    partial class MenuSettings
     {
     }
 
     /// <summary>
     /// Exports the validations for <see cref="MenuSettings"/>.
     /// </summary>
-    [CLSCompliant(false)]
     [Export]
     [PartCreationPolicy(CreationPolicy.Shared)]
-    public class MenuSettingsValidations
+    internal class MenuSettingsValidations
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<MenuSettingsValidations>();
 
@@ -38,7 +39,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
         private static ILookup<string, Lazy<Type>> Events;
 
         [Import]
-        internal IPlatuProjectTypeProvider ProjectTypeProvider { get; set; }
+        internal INuPatternProjectTypeProvider ProjectTypeProvider { get; set; }
 
         [Import]
         internal IBindingFactory BindingFactory { get; set; }
@@ -47,7 +48,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
         /// Initializes a new instance of the <see cref="MenuSettingsValidations"/> class.
         /// </summary>
         [ImportingConstructor]
-        public MenuSettingsValidations(IFeatureCompositionService composition)
+        public MenuSettingsValidations(INuPatternCompositionService composition)
         {
             Guard.NotNull(() => composition, composition);
 
@@ -55,8 +56,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
             // TODO: this could be refactored into a separate global service.
             if (ValueProviders == null || Conditions == null || Events == null)
             {
-                var valueProviders = composition.GetExports<IValueProvider, IFeatureComponentMetadata>();
-                var conditions = composition.GetExports<ICondition, IFeatureComponentMetadata>();
+                var valueProviders = composition.GetExports<IValueProvider, IComponentMetadata>();
+                var conditions = composition.GetExports<ICondition, IComponentMetadata>();
                 var events = composition.GetExports<IObservableEvent, IIdMetadata>();
 
                 ValueProviders = valueProviders.ToLookup(item => item.Metadata.Id, item => item.Metadata.ExportingType);
@@ -315,7 +316,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
             {
                 if (!string.IsNullOrEmpty(settings.Icon))
                 {
-                    var uriService = ((IServiceProvider)settings.Store).GetService<IFxrUriReferenceService>();
+                    var uriService = ((IServiceProvider)settings.Store).GetService<IUriReferenceService>();
                     var resolvedIcon = uriService.ResolveUri<ResourcePack>(new Uri(settings.Icon));
 
                     if (resolvedIcon == null)
@@ -327,12 +328,16 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
                         return;
                     }
 
-                    if (resolvedIcon.Item.Data.ItemType != "Resource")
+                    if (resolvedIcon.Type == ResourcePackType.ProjectItem)
                     {
-                        context.LogError(
-                                string.Format(CultureInfo.CurrentCulture, Resources.Validate_MenuSettingsIconIsNotAResource, settings.Name, resolvedIcon.Item.Name),
-                                Resources.Validate_MenuSettingsIconIsNotAResourceCode,
-                                settings);
+                        var item = resolvedIcon.GetItem();
+                        if (item.Data.ItemType != @"Resource")
+                        {
+                            context.LogError(
+                                    string.Format(CultureInfo.CurrentCulture, Resources.Validate_MenuSettingsIconIsNotAResource, settings.Name, item.Name),
+                                    Resources.Validate_MenuSettingsIconIsNotAResourceCode,
+                                    settings);
+                        }
                     }
                 }
             }

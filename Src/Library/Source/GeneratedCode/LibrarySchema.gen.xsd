@@ -1,0 +1,624 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema id="LibrarySchema" targetNamespace="http://schemas.microsoft.com/visualstudio/patterning/library/automationextensions" elementFormDefault="qualified" xmlns="http://schemas.microsoft.com/visualstudio/patterning/library/automationextensions" xmlns:core="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import id="CoreSchema" namespace="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" />
+  <!-- TemplateSettings -->
+  <xsd:element name="templateSettings" type="TemplateSettings" substitutionGroup="core:extensionElement" />
+  <xsd:complexType name="TemplateSettings">
+    <xsd:annotation>
+      <xsd:documentation>Configures the settings for adding a project or item template to unfold, and execute other automation on this element.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ExtensionElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Property: RawTargetFileName -->
+          <xsd:element name="targetFileName" type="xsd:string" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>The name of the unfolded artifact. For an item template, if no extension is provided, it is taken from the vstemplate file. This property supports property value substitution from properties on the current element. (e.g. {InstanceName} or {VariablePropertyName}). See guidance documentation for details.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <!-- Property: RawTargetPath -->
+          <xsd:element name="targetPath" type="xsd:string" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>The path to the target file, project, folder or solution folder in the current solution where the artifact is to be unfolded. Folders that don&apos;t currently exist are created automatically. i.e. ..\~\GeneratedCode, navigates up to the parent element, and traverses the first artifact link found on the parent element and into the &apos;GeneratedCode&apos; sub-folder of that container (project or folder).  See guidance documentation for more example paths and details.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: TemplateUri -->
+        <xsd:attribute name="templateUri" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The project or item template to unfold.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: CreateElementOnUnfold -->
+        <xsd:attribute name="createElementOnUnfold" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Whether to create the current element when the template is unfolded from the New Project/Item dialog in Visual Studio.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: UnfoldOnElementCreated -->
+        <xsd:attribute name="unfoldOnElementCreated" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Whether to unfold the template when the element is created from the Solution Builder.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: CommandId -->
+        <xsd:attribute name="commandId" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The command to execute after the template is unfolded.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: WizardId -->
+        <xsd:attribute name="wizardId" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>A wizard to gather input from the user, that configures the properties of this element, before the template is unfolded.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: TemplateAuthoringUri -->
+        <xsd:attribute name="templateAuthoringUri" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The Uri to resolve the referenced template at authoring time.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: SyncName -->
+        <xsd:attribute name="syncName" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Whether to keep in sync the name of the unfolded artifact with the name of the current element.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: SanitizeName -->
+        <xsd:attribute name="sanitizeName" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Whether to remove spaces and other illegal characters from the name of the unfolded artifact.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Tag -->
+        <xsd:attribute name="tag" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>An optional arbitrary text value to tag the generated solution item, that is used as an aid in resolving the artifact reference to the solution item.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- TemplateSettings Moniker -->
+  <xsd:element name="templateSettingsMoniker" type="TemplateSettingsMoniker" substitutionGroup="core:extensionElementMoniker" />
+  <xsd:complexType name="TemplateSettingsMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for TemplateSettings instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ExtensionElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- EventSettings -->
+  <xsd:element name="eventSettings" type="EventSettings" substitutionGroup="core:extensionElement" />
+  <xsd:complexType name="EventSettings">
+    <xsd:annotation>
+      <xsd:documentation>Configures the settings for handling an event for executing other automation on this element.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ExtensionElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Property: Conditions -->
+          <xsd:element name="conditions" type="xsd:string" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>The conditions that must be satisfied when the event is raised in order to execute the command.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: CommandId -->
+        <xsd:attribute name="commandId" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The command to execute on this event.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: EventId -->
+        <xsd:attribute name="eventId" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The type of event which triggers the command to execute when all conditions are met.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: WizardId -->
+        <xsd:attribute name="wizardId" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>A wizard to gather input from the user, that configures the properties of this element, when the event is raised.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- EventSettings Moniker -->
+  <xsd:element name="eventSettingsMoniker" type="EventSettingsMoniker" substitutionGroup="core:extensionElementMoniker" />
+  <xsd:complexType name="EventSettingsMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for EventSettings instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ExtensionElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- CommandSettings -->
+  <xsd:element name="commandSettings" type="CommandSettings" substitutionGroup="core:extensionElement" />
+  <xsd:complexType name="CommandSettings">
+    <xsd:annotation>
+      <xsd:documentation>Configures the settings for adding a command that can be executed on this element.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ExtensionElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Property: Properties -->
+          <xsd:element name="properties" type="xsd:string" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>The design-time properties of the command.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: TypeId -->
+        <xsd:attribute name="typeId" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The type of the command. Once selected, the specific properties of the selected command can be configured.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- CommandSettings Moniker -->
+  <xsd:element name="commandSettingsMoniker" type="CommandSettingsMoniker" substitutionGroup="core:extensionElementMoniker" />
+  <xsd:complexType name="CommandSettingsMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for CommandSettings instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ExtensionElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- MenuSettings -->
+  <xsd:element name="menuSettings" type="MenuSettings" substitutionGroup="core:extensionElement" />
+  <xsd:complexType name="MenuSettings">
+    <xsd:annotation>
+      <xsd:documentation>Configures the settings for adding a context menu item for executing other automation on this element.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ExtensionElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Property: Conditions -->
+          <xsd:element name="conditions" type="xsd:string" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>The conditions that must be satisfied in order to display the menu.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Text -->
+        <xsd:attribute name="text" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The text that is displayed on the menu to the user.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Icon -->
+        <xsd:attribute name="icon" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The icon that is displayed on the menu to the user.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: CommandId -->
+        <xsd:attribute name="commandId" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The command to execute when the menu is clicked.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: CustomStatus -->
+        <xsd:attribute name="customStatus" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>An optional type that provides dynamic menu status updates for this menu.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: WizardId -->
+        <xsd:attribute name="wizardId" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>A wizard to gather input from the user, that configures the properties of this element, when the menu is clicked.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: SortOrder -->
+        <xsd:attribute name="sortOrder" type="xsd:integer" >
+          <xsd:annotation>
+            <xsd:documentation>A number that orders this menu item with others on the context menu.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- MenuSettings Moniker -->
+  <xsd:element name="menuSettingsMoniker" type="MenuSettingsMoniker" substitutionGroup="core:extensionElementMoniker" />
+  <xsd:complexType name="MenuSettingsMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for MenuSettings instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ExtensionElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- GuidanceExtension -->
+  <xsd:element name="guidanceExtension" type="GuidanceExtension" substitutionGroup="core:extensionElement" />
+  <xsd:complexType name="GuidanceExtension">
+    <xsd:annotation>
+      <xsd:documentation>Configures the settings for associating guidance to this element.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ExtensionElement">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: AssociatedGuidance -->
+        <xsd:attribute name="associatedGuidance" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Configures guidance associated to this element. Expand this property to configure.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: GuidanceInstanceName -->
+        <xsd:attribute name="guidanceInstanceName" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The name of the created guidance workflow in the Guidance Explorer. If left blank, the instance name is calculated from the configured default name of the guidance extension.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: GuidanceActivateOnCreation -->
+        <xsd:attribute name="guidanceActivateOnCreation" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Whether to make this guidance the currently selected guidance in Guidance Explorer, when this element is created.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: ExtensionId -->
+        <xsd:attribute name="extensionId" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The identifier of the guidance extension associated to this element. This is the VSIX ID of the Guidance Extension, found in the source.extension.vsixmanifest file in the guidance extension project.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: GuidanceSharedInstance -->
+        <xsd:attribute name="guidanceSharedInstance" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Whether a single guidance instance is shared between all instances of this element, or a separate instance of guidance is created for each instance of this element.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- GuidanceExtension Moniker -->
+  <xsd:element name="guidanceExtensionMoniker" type="GuidanceExtensionMoniker" substitutionGroup="core:extensionElementMoniker" />
+  <xsd:complexType name="GuidanceExtensionMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for GuidanceExtension instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ExtensionElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- WizardSettings -->
+  <xsd:element name="wizardSettings" type="WizardSettings" substitutionGroup="core:extensionElement" />
+  <xsd:complexType name="WizardSettings">
+    <xsd:annotation>
+      <xsd:documentation>Configures the settings for adding a wizard to gather and initialize data for properties on this element.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ExtensionElement">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: TypeName -->
+        <xsd:attribute name="typeName" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The type name of the wizard. </xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- WizardSettings Moniker -->
+  <xsd:element name="wizardSettingsMoniker" type="WizardSettingsMoniker" substitutionGroup="core:extensionElementMoniker" />
+  <xsd:complexType name="WizardSettingsMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for WizardSettings instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ExtensionElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ArtifactExtension -->
+  <xsd:element name="artifactExtension" type="ArtifactExtension" substitutionGroup="core:extensionElement" />
+  <xsd:complexType name="ArtifactExtension">
+    <xsd:annotation>
+      <xsd:documentation>Configures settings for managing associated artifacts to this element.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ExtensionElement">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: OnArtifactActivation -->
+        <xsd:attribute name="onArtifactActivation" type="ArtifactActivatedAction" >
+          <xsd:annotation>
+            <xsd:documentation>The action to perform on associated solution items, when this element is &apos;activated&apos; by the user (i.e. double-clicked). A value of &apos;Open&apos; will open the solution item in its default view, a value of &apos;Select&apos; will select the item in &apos;Solution Explorer&apos;.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: AssociatedArtifacts -->
+        <xsd:attribute name="associatedArtifacts" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Configures actions for working with solution items associated with this element. Expand this property to configure.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: OnArtifactDeletion -->
+        <xsd:attribute name="onArtifactDeletion" type="ArtifactDeletedAction" >
+          <xsd:annotation>
+            <xsd:documentation>The action to perform on associated solution items, when this element is &apos;deleted&apos; by the user. A value of &apos;DeleteAll&apos; will automatically delete all associated solution items, a value of &apos;PromptUser&apos; prompt the user to select which solution items to delete.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ArtifactExtension Moniker -->
+  <xsd:element name="artifactExtensionMoniker" type="ArtifactExtensionMoniker" substitutionGroup="core:extensionElementMoniker" />
+  <xsd:complexType name="ArtifactExtensionMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ArtifactExtension instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ExtensionElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ValidationExtension -->
+  <xsd:element name="validationExtension" type="ValidationExtension" substitutionGroup="core:extensionElement" />
+  <xsd:complexType name="ValidationExtension">
+    <xsd:annotation>
+      <xsd:documentation>Configures settings for managing validation of this element.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ExtensionElement">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: ValidationExecution -->
+        <xsd:attribute name="validationExecution" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Configures actions for validating this element. Expand this property to configure.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: ValidationOnBuild -->
+        <xsd:attribute name="validationOnBuild" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Whether to validate the current element and all its descendants on build of the solution. (OnBuildStarted event).</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: ValidationOnSave -->
+        <xsd:attribute name="validationOnSave" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Whether to validate the current element and all its descendants on save of the product. (OnProductStoreSaved event).</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: ValidationOnMenu -->
+        <xsd:attribute name="validationOnMenu" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Whether to provide a menu to execute validation on this element and all its descendants. (&apos;Validate All&apos; menu item).</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: ValidationOnCustomEvent -->
+        <xsd:attribute name="validationOnCustomEvent" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>A custom event to execute validation on the current element and all its descendants.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ValidationExtension Moniker -->
+  <xsd:element name="validationExtensionMoniker" type="ValidationExtensionMoniker" substitutionGroup="core:extensionElementMoniker" />
+  <xsd:complexType name="ValidationExtensionMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ValidationExtension instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ExtensionElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- DragDropSettings -->
+  <xsd:element name="dragDropSettings" type="DragDropSettings" substitutionGroup="core:extensionElement" />
+  <xsd:complexType name="DragDropSettings">
+    <xsd:annotation>
+      <xsd:documentation>Configures settings for handling a drag drop operations on this element.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ExtensionElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Property: DropConditions -->
+          <xsd:element name="dropConditions" type="xsd:string" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>The conditions that determine whether the data being dragged over instances of this element is permitted for dropping.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: CommandId -->
+        <xsd:attribute name="commandId" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The command to execute when valid data is dropped on instances of this element.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: WizardId -->
+        <xsd:attribute name="wizardId" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>A wizard to gather input from the user, that configures the properties of this element, when dragged data is dropped on instances of this element.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: StatusText -->
+        <xsd:attribute name="statusText" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Informative message to display in Visual Studio&apos;s status bar when data is being dragged over instances of this element.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- DragDropSettings Moniker -->
+  <xsd:element name="dragDropSettingsMoniker" type="DragDropSettingsMoniker" substitutionGroup="core:extensionElementMoniker" />
+  <xsd:complexType name="DragDropSettingsMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for DragDropSettings instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ExtensionElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Enum ArtifactActivatedAction -->
+  <xsd:simpleType name="ArtifactActivatedAction">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="None">
+        <xsd:annotation>
+          <xsd:documentation>No action is performed, activated items are neither opened nor selected.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Open">
+        <xsd:annotation>
+          <xsd:documentation>Associated artifacts are opened, in their default view.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Select">
+        <xsd:annotation>
+          <xsd:documentation>Associated artifacts are selected in Solution Explorer.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- Enum ArtifactDeletedAction -->
+  <xsd:simpleType name="ArtifactDeletedAction">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="None">
+        <xsd:annotation>
+          <xsd:documentation>No action is performed, associated solution items are not deleted from the solution.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="DeleteAll">
+        <xsd:annotation>
+          <xsd:documentation>All associated solution items are deleted automatically.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PromptUser">
+        <xsd:annotation>
+          <xsd:documentation>The user is prompted to select which associated solution items to delete.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+</xsd:schema>
+

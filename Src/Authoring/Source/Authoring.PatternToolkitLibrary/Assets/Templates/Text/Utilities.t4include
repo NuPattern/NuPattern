@@ -1,0 +1,29 @@
+﻿<#+
+private IPatternModelInfo LoadPatternModel(string patternModelFile)
+{
+    return ToolkitInterfaceCodeGenUtilities.LoadPatternModelFromFile(patternModelFile);
+}
+
+private string Pluralize(IContainedElementInfo element)
+{
+    var name = Pluralizer.IsSingular(element.CodeIdentifier) ? Pluralizer.Pluralize(element.CodeIdentifier) : element.CodeIdentifier;
+    if (name == element.Parent.CodeIdentifier)
+        // Do not change if the pluralized version ends up being the same as the containing class.
+        name = element.CodeIdentifier;
+
+    return name;
+}
+
+private void WriteBlankLine()
+{
+    WriteLine("");
+}
+private void Indent()
+{
+    PushIndent(CodeGeneration.GetIndentation("csharp"));
+}
+
+private void UnIndent()
+{
+    PopIndent();
+}#>

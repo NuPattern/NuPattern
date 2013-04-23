@@ -4,14 +4,15 @@ using System.Diagnostics.CodeAnalysis;
 using System.Drawing.Design;
 using System.Windows;
 using Microsoft.VisualStudio.ComponentModelHost;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.Patterning.Runtime.UriProviders;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Runtime;
+using NuPattern.Runtime.Design;
+using NuPattern.Runtime.UI;
+using NuPattern.Runtime.UriProviders;
+using NuPattern.VisualStudio.Solution;
 
-namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Menu
+namespace NuPattern.Library.UnitTests.Automation.Menu
 {
     [TestClass]
     public class ImageUriEditorSpec
@@ -48,12 +49,12 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Menu
 
             var pack = new ResourcePack(item);
 
-            var uriService = new Mock<IFxrUriReferenceService>();
+            var uriService = new Mock<IUriReferenceService>();
             uriService.Setup(u => u.CreateUri<ResourcePack>(It.IsAny<ResourcePack>(), "pack")).Returns(uriProvider.CreateUri(pack));
 
             serviceProvider.Setup(s => s.GetService(typeof(SComponentModel))).Returns(componentModel.Object);
             serviceProvider.Setup(s => s.GetService(typeof(ISolution))).Returns(solution);
-            serviceProvider.Setup(s => s.GetService(typeof(IFxrUriReferenceService))).Returns(uriService.Object);
+            serviceProvider.Setup(s => s.GetService(typeof(IUriReferenceService))).Returns(uriService.Object);
             componentModel.Setup(c => c.GetService<Func<ISolutionPicker>>()).Returns(new Func<ISolutionPicker>(() => { return picker.Object; }));
 
             picker.Setup(p => p.Filter).Returns(Mock.Of<IPickerFilter>());
@@ -71,37 +72,39 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Menu
                 picker.Setup(p => p.SelectedItem).Returns(item);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCancelDialog_ThenReturnPreviousValue()
             {
                 var editor = new ImageUriEditor(new Window());
 
                 picker.Setup(p => p.ShowDialog()).Returns(false);
 
-                var value = editor.EditValue(context, serviceProvider.Object, "image");
+                var value = editor.EditValue(context, serviceProvider.Object, "image://");
 
-                Assert.Equal("image", value);
+                Assert.Equal("image://", value);
             }
 
 
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1804:RemoveUnusedLocals", MessageId = "value"), TestMethod]
+            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1804:RemoveUnusedLocals", MessageId = "value")]
+            [TestMethod, TestCategory("Unit")]
             public void ItemTypeIsUnchanged()
             {
                 item.Data.ItemType = "None";
                 var editor = new ImageUriEditor(new Window());
 
-                var value = editor.EditValue(context, serviceProvider.Object, "image");
+                var value = editor.EditValue(context, serviceProvider.Object, "image://");
 
                 Assert.Equal("None", (string)item.Data.ItemType);
             }
 
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1804:RemoveUnusedLocals", MessageId = "value"), TestMethod]
+            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1804:RemoveUnusedLocals", MessageId = "value")]
+            [TestMethod, TestCategory("Unit")]
             public void CustomToolIsUnchanged()
             {
                 item.Data.CustomTool = "MyTool";
                 var editor = new ImageUriEditor(new Window());
 
-                var value = editor.EditValue(context, serviceProvider.Object, "image");
+                var value = editor.EditValue(context, serviceProvider.Object, "image://");
 
                 Assert.Equal("MyTool", (string)item.Data.CustomTool);
             }
@@ -119,39 +122,41 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Menu
                 picker.Setup(p => p.SelectedItem).Returns(item);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ReturnUriForComponent()
             {
                 var editor = new ImageUriEditor(new Window());
 
-                var value = editor.EditValue(context, serviceProvider.Object, "image");
+                var value = editor.EditValue(context, serviceProvider.Object, "image://");
 
                 Assert.Equal("pack://application:,,,/project;component/assets/icon.ico", value);
             }
 
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1804:RemoveUnusedLocals", MessageId = "value"), TestMethod]
+            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1804:RemoveUnusedLocals", MessageId = "value")]
+            [TestMethod, TestCategory("Unit")]
             public void SetResourceAsItemType()
             {
                 var editor = new ImageUriEditor(new Window());
 
-                var value = editor.EditValue(context, serviceProvider.Object, "image");
+                var value = editor.EditValue(context, serviceProvider.Object, "image://");
 
                 Assert.Equal("Resource", (string)item.Data.ItemType);
             }
 
-            [SuppressMessage("Microsoft.Performance", "CA1804:RemoveUnusedLocals", MessageId = "value"), TestMethod]
+            [SuppressMessage("Microsoft.Performance", "CA1804:RemoveUnusedLocals", MessageId = "value")]
+            [TestMethod, TestCategory("Unit")]
             public void CustomToolIsUnchanged()
             {
                 item.Data.CustomTool = "MyTool";
                 var editor = new ImageUriEditor(new Window());
 
-                var value = editor.EditValue(context, serviceProvider.Object, "image");
+                var value = editor.EditValue(context, serviceProvider.Object, "image://");
 
                 Assert.Equal("MyTool", (string)item.Data.CustomTool);
             }
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenContextIsNotNull_EditStyleIsModal()
         {
             var editor = new ImageUriEditor(new Window());
@@ -161,7 +166,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Menu
             Assert.Equal(UITypeEditorEditStyle.Modal, editor.GetEditStyle(context));
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenContextIsNull_EditStyleIsModal()
         {
             var editor = new ImageUriEditor(new Window());
@@ -169,7 +174,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Menu
             Assert.Equal(UITypeEditorEditStyle.Modal, editor.GetEditStyle(null));
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenContextIsNotPassed_EditStyleIsModal()
         {
             var editor = new ImageUriEditor(new Window());

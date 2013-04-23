@@ -9,54 +9,100 @@
     <ProjectGuid>{EDC59846-6F05-4F66-B835-CD936DBD3D1B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Microsoft.VisualStudio.Patterning.Authoring.UserTests</RootNamespace>
-    <AssemblyName>Microsoft.VisualStudio.Patterning.Authoring.UserTests</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <RootNamespace>NuPattern.Authoring.UserTests</RootNamespace>
+    <AssemblyName>NuPattern.Authoring.UserTests</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <SccProjectName>
-    </SccProjectName>
-    <SccLocalPath>
-    </SccLocalPath>
-    <SccAuxPath>
-    </SccAuxPath>
-    <SccProvider>
-    </SccProvider>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\Authoring\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <IsCodedUITest>True</IsCodedUITest>
+    <TestProjectType>CodedUITest</TestProjectType>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+  <PropertyGroup>
+    <BranchRoot>..\..\</BranchRoot>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug With CA|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
+  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    <Reference Include="NuPattern.Runtime.Extensibility">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Extensibility.dll</HintPath>
+      <Private>True</Private>
     </Reference>
+    <Reference Include="NuPattern.Common">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NuPattern.Presentation">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Presentation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NuPattern.VisualStudio">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.VisualStudio.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="UIAutomationTypes" />
     <Reference Include="WindowsBase" />
+    <Reference Include="EnvDTE">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\envdte.dll</HintPath>
+    </Reference>
+    <Reference Include="EnvDTE80">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\envdte80.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix)">
+      <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix).dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams$(DslToolsVersionSuffix)">
+      <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk.Diagrams$(DslToolsVersionSuffix).dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell$(VsxVersionSuffix)">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.Shell$(VsxVersionSuffix).dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.Shell.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.Shell.Interop.8.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.9.0">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.Shell.Interop.9.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.10.0">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\10.0\Microsoft.VisualStudio.Shell.Interop.10.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+      <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VSSDK.TestHostFramework">
+      <HintPath>$(BranchReferencesPath)\VSSDK\$(TargetVsVersion)\Microsoft.VSSDK.TestHostFramework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework">
+      <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.QualityTools.CodedUITestFramework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common">
+      <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.TestTools.UITest.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension">
+      <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.TestTools.UITest.Extension.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestTools.UITesting">
+      <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.TestTools.UITesting.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
@@ -64,20 +110,36 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\GlobalAssemblyInfo.cs">
-      <Link>Properties\GlobalAssemblyInfo.cs</Link>
+    <Compile Include="..\..\Common\Helpers\Assertions.cs">
+      <Link>Assertions.cs</Link>
     </Compile>
+    <Compile Include="..\..\Common\Helpers\IntegrationTest.cs">
+      <Link>IntegrationTest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\Helpers\UserTest.cs">
+      <Link>UserTest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\GlobalAssemblyInfo.gen.cs">
+      <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
+    </Compile>
+    <Compile Include="AddNewProjectTest.cs" />
+    <Compile Include="ProjectUnfoldingSpec.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VsUIMap.cs" />
   </ItemGroup>
   <ItemGroup>
     <CodeAnalysisDictionary Include="..\..\CodeAnalysis.Dictionary.xml">
       <Link>Properties\CodeAnalysis.Dictionary.xml</Link>
     </CodeAnalysisDictionary>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Source\Authoring.PatternToolkit\Authoring.PatternToolkit.csproj">
+      <Project>{0216A624-C5C5-4335-8361-F640B91B4DEA}</Project>
+      <Name>Authoring.PatternToolkit</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <BranchRoot>..\..\</BranchRoot>
-  </PropertyGroup>
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.TestProjects.targets" />
+  <Import Project="$(BranchRoot)Common\Source\Versioning\Authoring.PatternToolkitVersion.gen.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
 </Project>

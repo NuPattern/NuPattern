@@ -1,20 +1,20 @@
 ﻿using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
+using NuPattern.Library.Properties;
+using NuPattern.Runtime;
+using NuPattern.VisualStudio.Solution;
 
-namespace Microsoft.VisualStudio.Patterning.Library.ValueProviders
+namespace NuPattern.Library.ValueProviders
 {
     /// <summary>
     /// A <see cref=" ValueProvider"/> that provides the project guid.
     /// </summary>
-    [DisplayNameResource("ProjectGuidValueProvider_DisplayName", typeof(Resources))]
-    [DescriptionResource("ProjectGuidValueProvider_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
+    [DisplayNameResource(@"ProjectGuidValueProvider_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"ProjectGuidValueProvider_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_VisualStudio", typeof(Resources))]
     [CLSCompliant(false)]
     public class ProjectGuidValueProvider : VsProjectPropertyValueProvider
     {
@@ -32,8 +32,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.ValueProviders
         /// <summary>
         /// The format of the returned guid.
         /// </summary>
-        [DisplayNameResource("ProjectGuidValueProvider_Format_DisplayName", typeof(Resources))]
-        [DescriptionResource("ProjectGuidValueProvider_Format_Description", typeof(Resources))]
+        [DisplayNameResource(@"ProjectGuidValueProvider_Format_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"ProjectGuidValueProvider_Format_Description", typeof(Resources))]
         [DefaultValue(GuidFormat.JustDigitsWithHyphens)]
         [Required]
         public GuidFormat Format

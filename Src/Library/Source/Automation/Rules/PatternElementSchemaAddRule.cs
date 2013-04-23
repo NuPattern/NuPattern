@@ -1,14 +1,14 @@
 ﻿using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Extensibility;
-using Microsoft.VisualStudio.Patterning.Runtime;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
     /// <summary>
-    /// Change rule for the <see cref="T:Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema"/> domain class.
+    /// Change rule for the <see cref="T:NuPattern.Runtime.Schema.PatternElementSchema"/> domain class.
     /// </summary>
     [RuleOn(PatternElementSchemaDomainClassId, FireTime = TimeToFire.TopLevelCommit)]
-    public partial class PatternElementSchemaAddRule : AddRule
+    internal class PatternElementSchemaAddRule : AddRule
     {
         private const string PatternElementSchemaDomainClassId = "dbe13a31-7dcd-4fbd-a601-18ca765e264e";
 

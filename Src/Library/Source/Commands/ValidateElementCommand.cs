@@ -4,22 +4,21 @@ using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
+using NuPattern.Library.Properties;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Commands
+namespace NuPattern.Library.Commands
 {
     /// <summary>
     /// Invokes the validation of the current element.
     /// </summary>
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
-    [DescriptionResource("ValidateElementCommand_Description", typeof(Resources))]
-    [DisplayNameResource("ValidateElementCommand_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"ValidateElementCommand_Description", typeof(Resources))]
+    [DisplayNameResource(@"ValidateElementCommand_DisplayName", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
-    public class ValidateElementCommand : FeatureCommand
+    public class ValidateElementCommand : Command
     {
         private const bool DefaultValidateDescendants = true;
 
@@ -37,8 +36,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
         /// Gets or sets whether to validate the descendants of the current element.
         /// </summary>
         [DefaultValue(DefaultValidateDescendants)]
-        [DisplayNameResource("ValidateElementCommand_ValidateDescendantsDisplayName", typeof(Resources))]
-        [DescriptionResource("ValidateElementCommand_ValidateDescendantsDescription", typeof(Resources))]
+        [DisplayNameResource(@"ValidateElementCommand_ValidateDescendantsDisplayName", typeof(Resources))]
+        [DescriptionResource(@"ValidateElementCommand_ValidateDescendantsDescription", typeof(Resources))]
         public bool ValidateDescendants { get; set; }
 
         /// <summary>

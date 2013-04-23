@@ -10,11 +10,24 @@ The full text for most of the licenses listed below can be found in the LICENSE.
 The original copyright notices have been preserved within the respective files and or packages. 
 Please refer to the specific files and/or packages for more detailed information about the authors, copyright notices, and licenses. 
 
+Visual Studio (Integration)
+----- 
+Website:      http://msdn.microsoft.com/en-us/vstudio
+Copyright:    Copyright (c) 2010 Microsoft
+License:      Microsoft EULA
+
 Visual Studio SDK
 ----- 
 Website:      http://msdn.microsoft.com/en-us/library/bb166441(VS.80).aspx 
 Copyright:    Copyright (c) 2010 Microsoft
-License:      Apache 2.0
+License:      MS-PL
+
+
+Visual Studio Visualization & Modeling SDK
+----- 
+Website:      http://archive.msdn.microsoft.com/vsvmsdk
+Copyright:    Copyright (c) 2010 Microsoft
+License:      MSDN CODE GALLERY BINARY LICENSE
 
 Feature Builder Power Tool
 ----
@@ -35,9 +48,9 @@ Copyright:    Copyright (c) Microsoft Corporation
 License:      Microsoft EULA
 
 MEF
------ 
-Website:      http://mef.codeplex.com 
-Copyright:    Copyright Microsoft Corporation
+---
+Website:      http://mef.codeplex.com
+Copyright:    Copyright (c) Microsoft Corporation
 License:      MS-PL
 
 NuGet 1.6

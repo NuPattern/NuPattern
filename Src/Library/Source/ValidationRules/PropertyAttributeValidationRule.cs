@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.Shell;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Library.Properties;
+using NuPattern.Runtime;
+using NuPattern.Runtime.Validation;
 
-namespace Microsoft.VisualStudio.Patterning.Library.ValidationRules
+namespace NuPattern.Library.ValidationRules
 {
     /// <summary>
     /// Provides a base validation rule for validation attributes in data anotations.
@@ -18,8 +19,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.ValidationRules
         /// <summary>
         /// Gets or sets the error message.
         /// </summary>
-        [DescriptionResource("PropertyAttributeValidationRule_ErrorMessageDescription", typeof(Resources))]
-        [DisplayNameResource("PropertyAttributeValidationRule_ErrorMessageDisplayName", typeof(Resources))]
+        [DescriptionResource(@"PropertyAttributeValidationRule_ErrorMessageDescription", typeof(Resources))]
+        [DisplayNameResource(@"PropertyAttributeValidationRule_ErrorMessageDisplayName", typeof(Resources))]
         public virtual string ErrorMessage { get; set; }
 
         /// <summary>

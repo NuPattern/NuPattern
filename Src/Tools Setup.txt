@@ -1,0 +1,29 @@
+Setting up a DIFF and MERGE Tool
+--------------------------------
+
+Edit your .gitconfig file (%userprofile%\.gitconfig) and add the following lines:
+
+[diff]
+	tool = diffmerge
+	guitool = diffmerge
+[difftool]
+	prompt = false
+[merge]
+	tool = diffmerge
+	summary = true
+[mergetool]
+	keepBackup = false
+	prompt = false
+[difftool "diffmerge"]
+	cmd = \"C:/Program Files/SourceGear/Common/DiffMerge/sgdm.exe\" --nosplash --title1=\"Old Version\" --title2=\"New Version\" \"$LOCAL\" \"$REMOTE\"
+	trustExitCode = false
+[mergetool "diffmerge"]
+	cmd = \"C:/Program Files/SourceGear/Common/DiffMerge/sgdm.exe\" --nosplash --merge --result=\"$MERGED\" --title1=\"Local Changes\" --title2=\"Merged: $MERGED\" --title3=\"Remote Changes\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+	trustExitCode = false
+
+[guitool "DiffMerge"]
+	cmd = git difftool -y $FILENAME
+	noconsole = yes
+	needsfile = yes
+
+

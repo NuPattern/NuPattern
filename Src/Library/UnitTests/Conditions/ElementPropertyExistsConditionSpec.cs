@@ -1,10 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using Microsoft.VisualStudio.Patterning.Library.Conditions;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Library.Conditions;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Conditions
+namespace NuPattern.Library.UnitTests.Conditions
 {
     [TestClass]
     public class ElementPropertyExistsConditionSpec
@@ -22,13 +22,13 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Conditions
                 this.condition = new ElementPropertyExistsCondition();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenOwnerIsNull_ThenEvaluateThrows()
             {
                 Assert.Throws<ValidationException>(() => this.condition.Evaluate());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenPropertyNameIsNullOrEmpty_ThenEvaluateThrows()
             {
                 Mock<IProductElement> mockOwner = new Mock<IProductElement>();
@@ -37,7 +37,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Conditions
                 Assert.Throws<ValidationException>(() => this.condition.Evaluate());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenPropertyNotFoundOnOwner_ThenEvaluateThrows()
             {
                 Mock<IProductElement> mockOwner = new Mock<IProductElement>();
@@ -69,7 +69,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Conditions
                 this.condition.PropertyName = propertyName;
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenMustHaveValueIsFalse_ThenEvaluateReturnsTrue()
             {
                 this.condition.MustHaveValue = false;
@@ -78,7 +78,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Conditions
                 Assert.True(result);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenMustHaveValueIsTrueAndPropertyValueIsNull_ThenEvaluateReturnsFalse()
             {
                 this.mockProperty.SetupGet(property => property.RawValue).Returns((string)null);
@@ -90,7 +90,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Conditions
                 Assert.False(result);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenMustHaveValueIsTrueAndPropertyValueIsEmpty_ThenEvaluateReturnsFalse()
             {
                 this.mockProperty.SetupGet(property => property.RawValue).Returns(string.Empty);
@@ -102,7 +102,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Conditions
                 Assert.False(result);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenMustHaveValueIsTrueAndPropertyValueIsNotNull_ThenEvaluateReturnsTrue()
             {
                 this.mockProperty.SetupGet(property => property.RawValue).Returns("Foo");

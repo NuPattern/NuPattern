@@ -3,21 +3,20 @@ using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
+using NuPattern.Library.Properties;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Conditions
+namespace NuPattern.Library.Conditions
 {
     /// <summary>
     /// A <see cref="Condition"/> that evaluates to true if the specified <see cref="PropertyName"/>, exists on the current element,
     /// and optionally, if the property has a value.
     /// </summary>
-    [DisplayNameResource("ElementPropertyExistsCondition_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
-    [DescriptionResource("ElementPropertyExistsCondition_Description", typeof(Resources))]
+    [DisplayNameResource(@"ElementPropertyExistsCondition_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"ElementPropertyExistsCondition_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class ElementPropertyExistsCondition : Condition
     {
@@ -36,8 +35,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.Conditions
         /// Gets or sets the name of the property of the current pattern/element to read.
         /// </summary>
         [Required(AllowEmptyStrings = false)]
-        [DisplayNameResource("ElementPropertyExistsCondition_PropertyName_DisplayName", typeof(Resources))]
-        [DescriptionResource("ElementPropertyExistsCondition_PropertyName_Description", typeof(Resources))]
+        [DisplayNameResource(@"ElementPropertyExistsCondition_PropertyName_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"ElementPropertyExistsCondition_PropertyName_Description", typeof(Resources))]
         public string PropertyName { get; set; }
 
         /// <summary>
@@ -45,8 +44,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.Conditions
         /// </summary>
         [Required]
         [DefaultValue(DefaultMustHaveValue)]
-        [DisplayNameResource("ElementPropertyExistsCondition_MustHaveValue_DisplayName", typeof(Resources))]
-        [DescriptionResource("ElementPropertyExistsCondition_MustHaveValue_Description", typeof(Resources))]
+        [DisplayNameResource(@"ElementPropertyExistsCondition_MustHaveValue_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"ElementPropertyExistsCondition_MustHaveValue_Description", typeof(Resources))]
         public bool MustHaveValue { get; set; }
 
         /// <summary>

@@ -1,19 +1,19 @@
 ﻿using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
+using NuPattern.Library.Properties;
+using NuPattern.VisualStudio.Solution;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Commands
+namespace NuPattern.Library.Commands
 {
     /// <summary>
     /// Creates a new instance of a child element for each dropped explorer file.
     /// </summary>
-    [DisplayNameResource("CreateElementFromPickedWindowsFileCommand_DisplayName", typeof(Resources))]
-    [DescriptionResource("CreateElementFromPickedWindowsFileCommand_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
+    [DisplayNameResource(@"CreateElementFromPickedWindowsFileCommand_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"CreateElementFromPickedWindowsFileCommand_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class CreateElementFromPickedWindowsFileCommand : CreateElementFromPickedFileCommand
     {
@@ -24,8 +24,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
         /// Gets or sets the target path.
         /// </summary>
         [Required(AllowEmptyStrings = false)]
-        [DisplayNameResource("CreateElementFromPickedWindowsFileCommand_TargetPath_DisplayName", typeof(Resources))]
-        [DescriptionResource("CreateElementFromPickedWindowsFileCommand_TargetPath_Description", typeof(Resources))]
+        [DisplayNameResource(@"CreateElementFromPickedWindowsFileCommand_TargetPath_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"CreateElementFromPickedWindowsFileCommand_TargetPath_Description", typeof(Resources))]
         public virtual string TargetPath { get; set; }
 
         /// <summary>

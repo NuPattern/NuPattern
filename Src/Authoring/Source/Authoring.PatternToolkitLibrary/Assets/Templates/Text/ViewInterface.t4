@@ -1,0 +1,38 @@
+﻿<#@ Template Inherits="NuPattern.Library.ModelElementTextTransformation" HostSpecific="True"#>
+<#@ ModelElement Type="NuPattern.Runtime.IProductElement" Processor="ModelElementProcessor" #>
+<#@ output extension=".gen.cs" #>
+<#@ Include File="Common.t4include" #>
+<#@ Include File="NamedElementParent.t4include" #>
+<#@ Include File="ElementContainer.t4include" #>
+<#
+var library = this.Element.As<IPatternToolkitLibrary>();
+var developmentView = this.Element.Parent.Parent.As<NuPattern.Authoring.PatternToolkit.IDevelopment>();
+var toolkitInfo = developmentView.PatternToolkitInfo;
+
+if (toolkitInfo == null)
+    throw new Exception("ToolkitInfo element not found");
+
+var patternModel = developmentView.PatternModel;
+var patternModelInfo = LoadPatternModel(patternModel.ToolkitDefinitionFile);
+var pattern = patternModelInfo.Pattern;
+
+foreach (var view in pattern.Views)
+{
+    var codegen = new ViewCodeGeneration<IViewInfo, IView>(view);
+    codegen.AddType(typeof(Action));
+    codegen.AddType(typeof(System.Collections.Generic.IEnumerable<object>));
+    codegen.AddType(typeof(NuPattern.Runtime.ToolkitInterface.ToolkitInterfaceLayer));
+    codegen.EndInit();
+
+    GenerateNamespaceBegin(library);
+    GenerateUsings(codegen);
+    GenerateToolkitCommentsAndAttributes(AttributeTargets.Interface, library, toolkitInfo, view);
+    GenerateClassBegin(view, true);
+    GenerateParentProperty(view, true);
+    GenerateContainedElements(view, true);
+    GenerateDeleteMethod(true);
+    GenerateAutoGeneralizedInterfaceMethod("View", true);
+    GenerateClassEnd();
+    GenerateNamespaceEnd();
+}
+#>

@@ -1,12 +1,12 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Library.ValidationRules;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Library.ValidationRules;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
+namespace NuPattern.Library.UnitTests
 {
     public class CardinalityValidationRuleSpec
     {
@@ -15,7 +15,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
         [TestClass]
         public class GivenNoContext
         {
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenNoChildElementName_ThenThrows()
             {
                 var rule = new CardinalityValidationRule();
@@ -24,7 +24,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
                     () => rule.Validate().ToList());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenMinimunIsGreaterThanMaximun_ThenThrows()
             {
                 var rule = new CardinalityValidationRule();
@@ -80,7 +80,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
                 this.rule.CurrentElement = product.Object;
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenNoChildInfo_ThenThrows()
             {
                 this.rule.Maximum = 1;
@@ -91,7 +91,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
                     rule.Validate().ToList());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCardinalityIsWrong_ThenErrorsAreReturned()
             {
                 this.rule.Maximum = 2;
@@ -103,7 +103,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
                 Assert.Equal(1, results.Count());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCardinalityIsCorrect_ThenNoErrorsAreReturned()
             {
                 rule.Maximum = 3;
@@ -115,7 +115,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
                 Assert.Equal(0, results.Count());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenErrorsAreReturned_UseChildDisplayNameForError()
             {
                 rule.Maximum = 2;

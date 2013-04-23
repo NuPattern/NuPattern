@@ -1,10 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using Microsoft.VisualStudio.Patterning.Library.Conditions;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Library.Conditions;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Conditions
+namespace NuPattern.Library.UnitTests.Conditions
 {
     [TestClass]
     public class ElementReferenceExistsConditionSpec
@@ -22,13 +22,13 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Conditions
                 this.condition = new ElementReferenceExistsCondition();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenKindIsEmpty_ThenEvaluateThrows()
             {
                 Assert.Throws<ValidationException>(() => this.condition.Evaluate());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenKindIsNullOrEmpty_ThenEvaluateThrows()
             {
                 Mock<IProductElement> mockCurrentElement = new Mock<IProductElement>();
@@ -37,7 +37,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Conditions
                 Assert.Throws<ValidationException>(() => this.condition.Evaluate());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenReferenceNotExist_ThenEvaluateReturnsFalse()
             {
                 Mock<IProductElement> mockCurrentElement = new Mock<IProductElement>();
@@ -47,7 +47,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Conditions
                 Assert.False(this.condition.Evaluate());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenReferenceExists_ThenEvaluateReturnsTrue()
             {
                 Mock<IProductElement> mockCurrentElement = new Mock<IProductElement>();

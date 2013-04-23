@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CancelableCollectionEditor_Title" xml:space="preserve">
+    <value>{0} Collection</value>
+  </data>
+  <data name="CollectionDropDownEditor_ConverterException" xml:space="preserve">
+    <value>The associated converter does not support standard values.</value>
+  </data>
+  <data name="CollectionDropDownEditor_ValueCollectionException" xml:space="preserve">
+    <value>The value must implement ICollection.</value>
+  </data>
+  <data name="ComponentAttribute_DefaultCategory" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="DescriptorExtensions_MustBeDelegatingDescriptor" xml:space="preserve">
+    <value>The descriptor must inherit from {0} or provide a constructor receiving a single parameter of type {1}, which is the original one to be replaced.</value>
+  </data>
+  <data name="Guard_ArgumentCanNotBeEmpty" xml:space="preserve">
+    <value>Parameter cannot be empty.</value>
+  </data>
+  <data name="Guard_ArgumentCanNotBeNull" xml:space="preserve">
+    <value>Parameter cannot be null.</value>
+  </data>
+  <data name="Guard_ArgumentTypeNotExpected" xml:space="preserve">
+    <value>Parameter must be a {0}.</value>
+  </data>
+  <data name="ObjectValidator_ValidationException" xml:space="preserve">
+    <value>Validation failed for {0}:</value>
+  </data>
+  <data name="ObjectValidator_ValidationResult" xml:space="preserve">
+    <value>{0} ({1})</value>
+  </data>
+  <data name="ObjectValidator_ValidatorDefaultMessage" xml:space="preserve">
+    <value>'{0}' validation failed.</value>
+  </data>
+  <data name="StandardValue_DefaultGroupName" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="XmlProcessor_ErrorLoadFailed" xml:space="preserve">
+    <value>XML document load failed for file '{0}'.</value>
+  </data>
+  <data name="XmlProcessor_ErrorLoadNotCalledFirst" xml:space="preserve">
+    <value>XML document must be loaded before you can call this method.</value>
+  </data>
+  <data name="XmlProcessor_ErrorSaveFailed" xml:space="preserve">
+    <value>Failed to save modified XML document '{0}'.</value>
+  </data>
+  <data name="XmlProcessor_ErrorXPathSearchFailed" xml:space="preserve">
+    <value>Failed to find nodes in the XMLdocument using XPath search '{0}'</value>
+  </data>
+  <data name="DecoratingReflectionCatalog_DisplayName" xml:space="preserve">
+    <value>Decorating Catalog</value>
+  </data>
+  <data name="DecoratingReflectionCatalog_CatalogDisplayName" xml:space="preserve">
+    <value>Decorating Catalog for </value>
+  </data>
+  <data name="DesignEditorAttribute_ErrorNotEditorType" xml:space="preserve">
+    <value>Editor type {0} is not derived from the given base type {1}.</value>
+  </data>
+  <data name="StandardValuesEditor_ErrorStandardValuesUnsupported" xml:space="preserve">
+    <value>The converter does not support standard values</value>
+  </data>
+  <data name="PropertyChangeManager_ErrorNotLambda" xml:space="preserve">
+    <value>Expression is not a lambda.</value>
+  </data>
+  <data name="PropertyChangeManager_ErrorNotPropertyAccess" xml:space="preserve">
+    <value>Expression is not a property access.</value>
+  </data>
+  <data name="Reflect_ErrorNotLambda" xml:space="preserve">
+    <value>Not a lambda expression</value>
+  </data>
+  <data name="Reflect_NotMethodCall" xml:space="preserve">
+    <value>Not a method call</value>
+  </data>
+  <data name="Reflect_ErrorNotProperty" xml:space="preserve">
+    <value>Member is not a property</value>
+  </data>
+  <data name="Reflect_ErrorNotField" xml:space="preserve">
+    <value>Member is not a field</value>
+  </data>
+  <data name="Reflect_ErrorNotMemberAccess" xml:space="preserve">
+    <value>Not a member access</value>
+  </data>
+  <data name="Reflector_ErrorNotProperty" xml:space="preserve">
+    <value>Member is not a property</value>
+  </data>
+  <data name="Reflector_ErrorNotField" xml:space="preserve">
+    <value>Member is not a field</value>
+  </data>
+  <data name="Reflector_ErrorNotMethodCall" xml:space="preserve">
+    <value>Not a method call</value>
+  </data>
+  <data name="Reflector_ErrorNotMemberAccess" xml:space="preserve">
+    <value>Not a member access</value>
+  </data>
+  <data name="UriReferenceService_ErrorFailedResolveUri" xml:space="preserve">
+    <value>Failed to resolve provider for scheme {0} and type {1}</value>
+  </data>
+</root>

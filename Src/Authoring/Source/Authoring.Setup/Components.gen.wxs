@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:vs="http://schemas.microsoft.com/wix/VSExtension">
+  
+  <Fragment>
+    <!-- VSIX IDs -->
+    <SetProperty Id="TOOLKITBUILDER2010VSIXID" After="AppSearch" Value="9f6dc301-6f66-4d21-9f9c-b37412b162f6"/>
+    <SetProperty Id="TOOLKITBUILDERLABS2010VSIXID" After="AppSearch" Value="5d64cfe6-a6ff-4e73-a000-c6a8832740ff"/>
+    <SetProperty Id="TOOLKITBUILDER2012VSIXID" After="AppSearch" Value="9f6dc301-6f66-4d21-9f9c-b37412b162f6"/>
+    <SetProperty Id="TOOLKITBUILDERLABS2012VSIXID" After="AppSearch" Value="5d64cfe6-a6ff-4e73-a000-c6a8832740ff"/>
+
+    <!-- Required component for parent directory -->
+    <Component Id="InstallFolder" Guid="729727B9-68B6-4872-B324-48727AD48C63" Directory="INSTALLFOLDER">
+      <RegistryKey Root="HKCU" Key="Software\!(loc.ManufacturerName)\!(loc.ApplicationName)">
+        <RegistryValue Name="InstallDir" Value="[INSTALLFOLDER]" Type="string" KeyPath="yes"/>
+        <RegistryValue Name="Version" Value="[ProductVersion]" Type="string" KeyPath="no"/>
+      </RegistryKey>
+      <RemoveFolder Id="RemoveFolderInstallFolder" On="both"/>
+    </Component>
+    
+    <!-- Components to Install  -->
+    <Component Id="ToolkitBuilderVsix2010" Guid="47540C54-6174-4B37-8666-6CE98A49A1A7" Directory="V10">
+      <File Id="ToolkitBuilderVsixFile2010" Source="..\..\..\Binaries\10.0\NuPatternToolkitBuilder.vsix"/>
+      <RegistryKey Root="HKCU" Key="Software\!(loc.ManufacturerName)\!(loc.ApplicationName)">
+        <RegistryValue Name="InstallDir" Value="[INSTALLFOLDER]" Type="string" KeyPath="yes"/>
+        <RegistryValue Name="Version" Value="[ProductVersion]" Type="string" KeyPath="no"/>
+      </RegistryKey>
+      <RemoveFile Id="RemoveFileToolkitBuilderVsixFile2010" Name="NuPatternToolkitBuilder.vsix" On="both"/>
+      <RemoveFolder Id="RemoveFolderToolkitBuilderVsixFile2010" On="both"/>
+    </Component>
+    <Component Id="ToolkitBuilderLabsVsix2010" Guid="DFA0088E-35DE-40AE-9884-971286EEF490" Directory="V10">
+      <File Id="ToolkitBuilderLabsVsixFile2010" Source="..\..\..\Binaries\10.0\NuPatternToolkitBuilderLabs.vsix"/>
+      <RegistryKey Root="HKCU" Key="Software\!(loc.ManufacturerName)\!(loc.ApplicationName)">
+        <RegistryValue Name="InstallDir" Value="[INSTALLFOLDER]" Type="string" KeyPath="yes"/>
+        <RegistryValue Name="Version" Value="[ProductVersion]" Type="string" KeyPath="no"/>
+      </RegistryKey>
+      <RemoveFile Id="RemoveFileToolkitBuilderLabsVsixFile2010" Name="NuPatternToolkitBuilderLabs.vsix" On="both"/>
+      <RemoveFolder Id="RemoveFolderToolkitBuilderLabsVsixFile2010" On="both"/>
+    </Component>
+    <Component Id="ToolkitBuilderVsix2012" Guid="BAD88824-C92D-4F07-92A7-BF0BEA57CA5D" Directory="V11">
+      <File Id="ToolkitBuilderVsixFile2012" Source="..\..\..\Binaries\11.0\NuPatternToolkitBuilder.vsix"/>
+      <RegistryKey Root="HKCU" Key="Software\!(loc.ManufacturerName)\!(loc.ApplicationName)">
+        <RegistryValue Name="InstallDir" Value="[INSTALLFOLDER]" Type="string" KeyPath="yes"/>
+        <RegistryValue Name="Version" Value="[ProductVersion]" Type="string" KeyPath="no"/>
+      </RegistryKey>
+      <RemoveFile Id="RemoveFileToolkitBuilderVsixFile2012" Name="NuPatternToolkitBuilder.vsix" On="both"/>
+      <RemoveFolder Id="RemoveFolderToolkitBuilderVsixFile2012" On="both"/>
+    </Component>
+    <Component Id="ToolkitBuilderLabsVsix2012" Guid="8054E94F-AAB1-4E1C-8628-8F44E9DF46C4" Directory="V11">
+      <File Id="ToolkitBuilderLabsVsixFile2012" Source="..\..\..\Binaries\11.0\NuPatternToolkitBuilderLabs.vsix"/>
+      <RegistryKey Root="HKCU" Key="Software\!(loc.ManufacturerName)\!(loc.ApplicationName)">
+        <RegistryValue Name="InstallDir" Value="[INSTALLFOLDER]" Type="string" KeyPath="yes"/>
+        <RegistryValue Name="Version" Value="[ProductVersion]" Type="string" KeyPath="no"/>
+      </RegistryKey>
+      <RemoveFile Id="RemoveFileToolkitBuilderLabsVsixFile2012" Name="NuPatternToolkitBuilderLabs.vsix" On="both"/>
+      <RemoveFolder Id="RemoveFolderToolkitBuilderLabsVsixFile2012" On="both"/>
+    </Component>      
+  </Fragment>
+</Wix>

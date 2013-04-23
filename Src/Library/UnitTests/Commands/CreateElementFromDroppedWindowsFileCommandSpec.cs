@@ -1,11 +1,10 @@
-﻿using System;
-using Microsoft.VisualStudio.Patterning.Library.Commands;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Library.Commands;
+using NuPattern.Runtime;
+using NuPattern.VisualStudio.Solution;
 
-namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands.Helpers
+namespace NuPattern.Library.UnitTests.Commands.Helpers
 {
     [TestClass]
     public class CreateElementFromDroppedWindowsFileCommandSpec
@@ -21,7 +20,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands.Helpers
             public void InitializeContext()
             {
                 var solution = Mock.Of<ISolution>();
-                var uriService = Mock.Of<IFxrUriReferenceService>();
+                var uriService = Mock.Of<IUriReferenceService>();
                 var currentElement = Mock.Of<IProductElement>();
                 var importer = Mock.Of<IWindowsFileImporter>();
 
@@ -35,7 +34,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands.Helpers
                 this.command.Extension = "txt";
             }
 
-            //[TestMethod]
+            //[TestMethod, TestCategory("Unit")]
             //public void ThenInitializeThrows()
             //{
             //    Assert.Throws<InvalidOperationException>(
@@ -52,7 +51,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands.Helpers
             public void InitializeContext()
             {
                 var solution = Mock.Of<ISolution>();
-                var uriService = Mock.Of<IFxrUriReferenceService>();
+                var uriService = Mock.Of<IUriReferenceService>();
                 var currentElement = Mock.Of<IProductElement>();
                 var importer = Mock.Of<IWindowsFileImporter>();
 
@@ -66,7 +65,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands.Helpers
                 this.command.Extension = "txt";
             }
 
-            //[TestMethod]
+            //[TestMethod, TestCategory("Unit")]
             //public void WhenTargetContainerNotExist_ThenInitializeCreatesContainer()
             //{
             //    this.command.Execute();
@@ -74,7 +73,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands.Helpers
             //    Assert.Equal("Foo", this.command.FileImporter.TargetContainer.Name);
             //}
 
-            //[TestMethod]
+            //[TestMethod, TestCategory("Unit")]
             //public void WhenImportNewFile_ThenNewFileAdded()
             //{
             //    this.command.Execute();
@@ -82,7 +81,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands.Helpers
             //    Assert.Fail();
             //}
 
-            //[TestMethod]
+            //[TestMethod, TestCategory("Unit")]
             //public void WhenImportExistingFile_ThenUniqueFileAdded()
             //{
             //    this.command.Execute();
@@ -90,7 +89,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands.Helpers
             //    Assert.Fail();
             //}
 
-            //[TestMethod]
+            //[TestMethod, TestCategory("Unit")]
             //public void WhenGetItemWithUnknownFile_ThenReturnNull()
             //{
             //    this.command.Execute();
@@ -98,7 +97,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands.Helpers
             //    Assert.Fail();
             //}
 
-            //[TestMethod]
+            //[TestMethod, TestCategory("Unit")]
             //public void WhenGetItemWithAddedFile_ThenReturnFile()
             //{
             //    this.command.Execute();

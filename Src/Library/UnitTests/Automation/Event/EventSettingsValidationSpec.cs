@@ -2,14 +2,15 @@
 using System.Diagnostics.CodeAnalysis;
 using Microsoft.VisualStudio.Modeling.Extensibility;
 using Microsoft.VisualStudio.Modeling.Validation;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Automation;
-using Microsoft.VisualStudio.Patterning.Runtime.Schema;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Library.Automation;
+using NuPattern.Modeling;
+using NuPattern.Runtime;
+using NuPattern.Runtime.Composition;
+using NuPattern.Runtime.Schema;
 
-namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Event
+namespace NuPattern.Library.UnitTests.Automation.Event
 {
     public class EventSettingsValidationSpec
     {
@@ -35,9 +36,9 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Event
                     this.settings = automationSettings.AddExtension<EventSettings>();
                 });
 
-                this.validator = new EventSettingsValidations(Mock.Of<IFeatureCompositionService>())
+                this.validator = new EventSettingsValidations(Mock.Of<INuPatternCompositionService>())
                 {
-                    ProjectTypeProvider = Mock.Of<IPlatuProjectTypeProvider>(),
+                    ProjectTypeProvider = Mock.Of<INuPatternProjectTypeProvider>(),
                 };
 
                 validationContext = new ValidationContext(ValidationCategories.Save, this.settings);
@@ -49,7 +50,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Event
                 this.store.Dispose();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenValidateCommandIdAndWizardIdIsNotEmptyFails()
             {
                 this.validator.ValidateCommandIdAndWizardIdIsNotEmpty(validationContext, this.settings);
@@ -58,7 +59,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Event
                 Assert.True(validationContext.ValidationSubjects.IndexOf(this.settings) == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCommandIdIsNotEmpty_ThenValidateCommandIdAndWizardIdIsNotEmptySucceeds()
             {
                 this.settings.WithTransaction(setting => setting.CommandId = Guid.NewGuid());
@@ -67,7 +68,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Event
                 Assert.True(validationContext.CurrentViolations.Count == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenWizardIdIsNotEmpty_ThenValidateCommandIdAndWizardIdIsNotEmptySucceeds()
             {
                 this.settings.WithTransaction(setting => setting.WizardId = Guid.NewGuid());
@@ -76,7 +77,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Event
                 Assert.True(validationContext.CurrentViolations.Count == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenWizardIdIsInvalid_ThenValidateWizardIdDoesNotSucceed()
             {
                 this.settings.WithTransaction(setting => setting.WizardId = Guid.NewGuid());
@@ -85,7 +86,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Event
                 Assert.True(validationContext.CurrentViolations.Count == 1);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCommandIdIsInvalid_ThenValidateCommandIdDoesNotSucceed()
             {
                 this.settings.WithTransaction(setting => setting.CommandId = Guid.NewGuid());
@@ -94,7 +95,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Event
                 Assert.True(validationContext.CurrentViolations.Count == 1);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCommandIdAndWizardIdIsNotEmpty_ThenValidateCommandIdAndWizardIdIsNotEmptySucceeds()
             {
                 this.settings.WithTransaction(setting => setting.CommandId = Guid.NewGuid());
@@ -104,7 +105,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Event
                 Assert.True(validationContext.CurrentViolations.Count == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenValidateEventIdIsNotEmptyFails()
             {
                 this.validator.ValidateEventIdIsNotEmpty(validationContext, this.settings);
@@ -113,7 +114,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Event
                 Assert.True(validationContext.ValidationSubjects.IndexOf(this.settings) == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenEventIdIsNotEmpty_ThenValidateEventIdIsNotEmptySucceeds()
             {
                 this.settings.WithTransaction(setting => setting.EventId = "foo");

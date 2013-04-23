@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.Modeling;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
     /// <summary>
     /// Double derived implementation for the rule that initiates view fixup when an element that has an associated shape is added to the model.
@@ -18,16 +18,16 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
             return root.GetViewForAbstractElement().Pattern.PatternModel;
         }
 
-		private static ModelElement GetParentForExtensionPointSchema(ExtensionPointSchema root)
-		{
-			if(root.View != null)
-			{
-				return root.View.Pattern.PatternModel;
-			}
-			else
-			{
-				return root.Owner.GetViewForAbstractElement().Pattern.PatternModel;
-			}
-		}
+        private static ModelElement GetParentForExtensionPointSchema(ExtensionPointSchema root)
+        {
+            if (root.View != null)
+            {
+                return root.View.Pattern.PatternModel;
+            }
+            else
+            {
+                return root.Owner.GetViewForAbstractElement().Pattern.PatternModel;
+            }
+        }
     }
 }

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+	<Identifier Id="$schemaId$">
+		<Name>$projectname$</Name>
+		<Author>$registeredorganization$</Author>
+		<Version>1.0</Version>
+		<Description xml:space="preserve">Description of the $projectname$ toolkit.</Description>
+		<Locale>1033</Locale>
+    <SupportedProducts>
+      <VisualStudio Version="10.0">
+        <Edition>Pro</Edition>
+      </VisualStudio>
+      <VisualStudio Version="11.0">
+        <Edition>Pro</Edition>
+      </VisualStudio>
+    </SupportedProducts>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5"/>
+  </Identifier>
+	<References />
+	<Content>
+		<MefComponent>|$safeprojectname$|</MefComponent>
+		<CustomExtension Type="ComponentModel" Assembly="$safeprojectname$.dll">ComponentModel.productstore</CustomExtension>
+		<ProjectTemplate>Templates\Projects</ProjectTemplate>
+	</Content>
+</Vsix>

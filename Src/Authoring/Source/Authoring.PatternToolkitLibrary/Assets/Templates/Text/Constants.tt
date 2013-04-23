@@ -1,0 +1,6 @@
+﻿<#@ output extension=".gen.t4include" #>
+<#@ Include File="..\..\..\..\..\..\MasterVSIXInfo.gen.ttinclude" #>
+\<#+
+string libraryToolkitVersion = "<#= VsixInfo.PatternToolkitLibrary.Version #>";
+string libraryToolkitName = "<#= VsixInfo.PatternToolkitLibrary.Name #>";
+\#>

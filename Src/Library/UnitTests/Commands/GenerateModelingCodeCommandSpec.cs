@@ -3,15 +3,15 @@ using System.IO;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Integration;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Commands;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.Patterning.Runtime.Store;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Library.Commands;
+using NuPattern.Modeling;
+using NuPattern.Runtime;
+using NuPattern.Runtime.Store;
+using NuPattern.VisualStudio.Solution;
 
-namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
+namespace NuPattern.Library.UnitTests.Commands
 {
     public class GenerateModelingCodeCommandSpec
     {
@@ -21,7 +21,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
         [TestClass]
         public class GivenASolution
         {
-            private Mock<IFxrUriReferenceService> uriService;
+            private Mock<IUriReferenceService> uriService;
             private Mock<ITemplate> template;
             private Mock<IServiceProvider> serviceProvider;
             private Mock<IModelBus> modelBus;
@@ -51,7 +51,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                     property.Info = Mocks.Of<IPropertyInfo>().First(i => i.Name == "GuidanceName" && i.Type == "System.String" && i.IsVisible == true && i.IsReadOnly == false);
                 });
 
-                this.uriService = new Mock<IFxrUriReferenceService>();
+                this.uriService = new Mock<IUriReferenceService>();
                 this.uriService.Setup(x => x.ResolveUri<ITemplate>(It.IsAny<Uri>())).Returns(this.template.Object);
 
                 this.command = new GenerateModelingCodeCommand
@@ -60,7 +60,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                     TemplateUri = new Uri("t4://foo.tt"),
                     UriService = this.uriService.Object,
                     ModelElement = (ModelElement)this.product,
-                    ModelFile = "C:\\Temp\\foo" + Microsoft.VisualStudio.Patterning.Runtime.Constants.RuntimeStoreExtension,
+                    ModelFile = "C:\\Temp\\foo" + NuPattern.Runtime.StoreConstants.RuntimeStoreExtension,
                     ServiceProvider = this.serviceProvider.Object,
                     Solution = this.solution,
                 };
@@ -78,7 +78,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 this.store.Dispose();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenTemplateCannotResolve_ThenThrowsFileNotFoundException()
             {
                 this.uriService.Setup(x => x.ResolveUri<ITemplate>(It.IsAny<Uri>())).Returns((ITemplate)null);
@@ -86,7 +86,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 Assert.Throws<FileNotFoundException>(() => this.command.Execute());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenTargetNameUsesNonExistingProperty_ThenThrowsInvalidOperationException()
             {
                 this.command.TargetFileName = "{NonExistentProperty}";
@@ -94,7 +94,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 Assert.Throws<InvalidOperationException>(() => this.command.Execute());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSimpleTargetPathExists_ThenUnfoldsToIt()
             {
                 this.command.TargetFileName = "Foo";
@@ -106,7 +106,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 this.template.Verify(x => x.Unfold(It.IsAny<string>(), projectParent));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenTargetFileNameContainsInvalidFileChars_ThenRemovesThemandUnfoldsToIt()
             {
                 this.command.TargetFileName = @"Foo\Bar";
@@ -118,7 +118,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 this.template.Verify(x => x.Unfold("FooBar", projectParent));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenTargetPathContainsDots_ThenCanResolveThem()
             {
                 this.command.TargetFileName = "Foo";
@@ -130,7 +130,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 this.template.Verify(x => x.Unfold(It.IsAny<string>(), projectParent));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenTargetPathExpressionExists_ThenUnfoldsToIt()
             {
                 this.command.TargetFileName = "Foo";
@@ -142,7 +142,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 this.template.Verify(x => x.Unfold(It.IsAny<string>(), projectParent));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenExecutingWithTargetNameExpression_ThenEvaluatesItForUnfold()
             {
                 this.command.TargetPath = "Project";
@@ -154,7 +154,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 this.template.Verify(x => x.Unfold("IFoo", projectParent));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenExecutingWithTargetNameExpression_ThenEvaluatesVariablePropertyForUnfold()
             {
                 this.command.TargetPath = "Project";
@@ -166,7 +166,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 this.template.Verify(x => x.Unfold("IGuidanceValue", projectParent));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSimpleTargetPathDoesNotExist_ThenAddsItAndUnfoldsToIt()
             {
                 this.command.TargetFileName = "Foo";
@@ -180,7 +180,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 this.template.Verify(x => x.Unfold(It.IsAny<string>(), projectParent));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenTargetPathExpressionDoesNotExist_ThenAddsItAndUnfoldsToIt()
             {
                 this.command.TargetFileName = "Foo";
@@ -201,21 +201,21 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                     Name = "Solution.sln",
                     PhysicalPath = "C:\\Temp",
                     Items = 
-					{
-						new SolutionFolder
-						{
-							Name = "Solution Items", 
-						},
-						new Project
-						{
-							Name = "Project",
-							Items = 
-							{
-								new Folder { Name = "Folder" },
-								new Folder { Name = "Foo" },
-							}
-						},
-					}
+                    {
+                        new SolutionFolder
+                        {
+                            Name = "Solution Items", 
+                        },
+                        new Project
+                        {
+                            Name = "Project",
+                            Items = 
+                            {
+                                new Folder { Name = "Folder" },
+                                new Folder { Name = "Foo" },
+                            }
+                        },
+                    }
                 };
             }
         }

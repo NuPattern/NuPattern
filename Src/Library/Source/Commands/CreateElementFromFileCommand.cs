@@ -4,15 +4,15 @@ using System.ComponentModel;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
-using Microsoft.VisualStudio.Patterning.Extensibility.References;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
+using NuPattern.Library.Properties;
+using NuPattern.Runtime;
+using NuPattern.Runtime.Bindings;
+using NuPattern.Runtime.References;
+using NuPattern.VisualStudio.Solution;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Commands
+namespace NuPattern.Library.Commands
 {
     /// <summary>
     /// Creates a new instance of a child element for each imported file.
@@ -35,8 +35,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
         /// <summary>
         /// Gets or sets whether to sync the name of the added file
         /// </summary>
-        [DisplayNameResource("CreateElementFromFileCommand_SyncName_DisplayName", typeof(Resources))]
-        [DescriptionResource("CreateElementFromFileCommand_SyncName_Description", typeof(Resources))]
+        [DisplayNameResource(@"CreateElementFromFileCommand_SyncName_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"CreateElementFromFileCommand_SyncName_Description", typeof(Resources))]
         [DesignOnly(true)]
         [DefaultValue(DefaultSyncName)]
         public virtual bool SyncName

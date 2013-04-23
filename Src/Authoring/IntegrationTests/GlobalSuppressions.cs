@@ -8,11 +8,11 @@
 // "In Project Suppression File".
 // You do not need to add suppressions to this file manually.
 
-[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1051:DoNotDeclareVisibleInstanceFields", Scope = "member", Target = "Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests.CreateOnUnfoldSpec.#dte")]
-[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1051:DoNotDeclareVisibleInstanceFields", Scope = "member", Target = "Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests.CreateOnUnfoldSpec.#instanceName")]
-[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1051:DoNotDeclareVisibleInstanceFields", Scope = "member", Target = "Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests.CreateOnUnfoldSpec.#MainToolkitId")]
-[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1051:DoNotDeclareVisibleInstanceFields", Scope = "member", Target = "Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests.CreateOnUnfoldSpec.#MainToolkitVsTemplate")]
-[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1051:DoNotDeclareVisibleInstanceFields", Scope = "member", Target = "Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests.CreateOnUnfoldSpec.#pattern")]
-[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1051:DoNotDeclareVisibleInstanceFields", Scope = "member", Target = "Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests.CreateOnUnfoldSpec.#patternManager")]
-[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1051:DoNotDeclareVisibleInstanceFields", Scope = "member", Target = "Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests.CreateOnUnfoldSpec.#solution")]
-[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1051:DoNotDeclareVisibleInstanceFields", Scope = "member", Target = "Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests.CreateOnUnfoldSpec.#pattern")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1051:DoNotDeclareVisibleInstanceFields", Scope = "member", Target = "NuPattern.Authoring.IntegrationTests.CreateOnUnfoldSpec.#dte")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1051:DoNotDeclareVisibleInstanceFields", Scope = "member", Target = "NuPattern.Authoring.IntegrationTests.CreateOnUnfoldSpec.#instanceName")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1051:DoNotDeclareVisibleInstanceFields", Scope = "member", Target = "NuPattern.Authoring.IntegrationTests.CreateOnUnfoldSpec.#MainToolkitId")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1051:DoNotDeclareVisibleInstanceFields", Scope = "member", Target = "NuPattern.Authoring.IntegrationTests.CreateOnUnfoldSpec.#MainToolkitVsTemplate")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1051:DoNotDeclareVisibleInstanceFields", Scope = "member", Target = "NuPattern.Authoring.IntegrationTests.CreateOnUnfoldSpec.#pattern")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1051:DoNotDeclareVisibleInstanceFields", Scope = "member", Target = "NuPattern.Authoring.IntegrationTests.CreateOnUnfoldSpec.#patternManager")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1051:DoNotDeclareVisibleInstanceFields", Scope = "member", Target = "NuPattern.Authoring.IntegrationTests.CreateOnUnfoldSpec.#solution")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1051:DoNotDeclareVisibleInstanceFields", Scope = "member", Target = "NuPattern.Authoring.IntegrationTests.CreateOnUnfoldSpec.#pattern")]

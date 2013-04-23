@@ -1,0 +1,19 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<!--
+	Common settings for DSL Tools projects.
+-->
+  
+  <!-- Version numbers for projects referencing this version of the DSL Tools targets -->
+  <PropertyGroup>
+    <MpfVersion>10.0</MpfVersion>
+    <MpfVersionSuffix>.$(MpfVersion)</MpfVersionSuffix>
+    <MpfAsmVersion>$(MpfVersion).0.0</MpfAsmVersion>
+    <DslToolsVersion>10.0</DslToolsVersion>
+    <DslToolsVersionSuffix>.$(DslToolsVersion)</DslToolsVersionSuffix>
+    <DslToolsAsmVersion>$(DslToolsVersion).0.0</DslToolsAsmVersion>
+    <T4Version>$(DslToolsVersion)</T4Version>
+    <T4VersionSuffix>.$(T4Version)</T4VersionSuffix>
+    <T4AsmVersion>$(DslToolsVersion).0.0</T4AsmVersion>
+  </PropertyGroup>
+  
+</Project>

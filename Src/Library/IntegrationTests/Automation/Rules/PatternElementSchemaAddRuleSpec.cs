@@ -1,11 +1,11 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Automation;
-using Microsoft.VisualStudio.Patterning.Runtime.Schema;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NuPattern.Library.Automation;
+using NuPattern.Modeling;
+using NuPattern.Runtime.Schema;
 
-namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests
+namespace NuPattern.Library.IntegrationTests
 {
     [TestClass]
     [SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable", Justification = "Test code")]
@@ -16,7 +16,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests
         private DslTestStore<PatternModelDomainModel> store =
             new DslTestStore<PatternModelDomainModel>(typeof(LibraryDomainModel));
 
-        [TestMethod]
+        [TestMethod, TestCategory("Integration")]
         public void WhenCreatingAnPatternElementSchema_ThenInjectsExtensionElements()
         {
             ElementSchema element = null;
@@ -30,7 +30,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests
             Assert.True(element.GetExtensions<IArtifactExtension>().Any());
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Integration")]
         public void WhenLoadingAnPatternElementSchema_ThenInjectsExtensionElements()
         {
             ElementSchema element = null;

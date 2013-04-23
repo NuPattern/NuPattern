@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Library.Conditions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NuPattern.Library.Conditions;
 
-namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Conditions
+namespace NuPattern.Library.UnitTests.Conditions
 {
     [TestClass]
     public class DropSolutionItemConditionSpec
@@ -21,7 +21,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Conditions
                 this.condition = new DropSolutionItemCondition();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSingleExtensionDoesNotMatch_ThenGetPathsEndingWithExtensionsReturnsNoPaths()
             {
                 var extensions = "cs";
@@ -31,7 +31,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Conditions
                 Assert.False(results.Any());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSingleExtensionWithNoPaths_ThenGetPathsEndingWithExtensionsReturnsNoPaths()
             {
                 var extensions = "cs";
@@ -41,7 +41,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Conditions
                 Assert.False(results.Any());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSingleExtensionContainsNoPeriod_ThenGetPathsEndingWithExtensionsReturnsPaths()
             {
                 var extensions = "cs";
@@ -51,7 +51,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Conditions
                 Assert.True(results.Match(new[] { "Foo.cs", "Bar.cs" }));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSingleExtensionContainsOnlyPeriod_ThenGetPathsEndingWithExtensionsReturnsPaths()
             {
                 var extensions = ".cs";
@@ -61,7 +61,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Conditions
                 Assert.True(results.Match(new[] { "Foo.cs", "Bar.cs" }));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSingleExtensionContainsWildcardAndPeriod_ThenGetPathsEndingWithExtensionsReturnsPaths()
             {
                 var extensions = "*.cs";
@@ -71,7 +71,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Conditions
                 Assert.True(results.Match(new[] { "Foo.cs", "Bar.cs" }));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenMultiExtensionContainsNoPeriod_ThenGetPathsEndingWithExtensionsReturnsPaths()
             {
                 var extensions = "cs;xml;tt";
@@ -81,7 +81,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Conditions
                 Assert.True(results.Match(new[] { "Foo.cs", "Bar.cs", "Foo.xml", "Bar.tt" }));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenMultiExtensionContainsOnlyPeriod_ThenGetPathsEndingWithExtensionsReturnsPaths()
             {
                 var extensions = ".cs;.xml;.tt";
@@ -91,7 +91,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Conditions
                 Assert.True(results.Match(new[] { "Foo.cs", "Bar.cs", "Foo.xml", "Bar.tt" }));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenMultiExtensionContainsWildcardAndPeriod_ThenGetPathsEndingWithExtensionsReturnsPaths()
             {
                 var extensions = "*.cs;*.xml;*.tt";
@@ -101,7 +101,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Conditions
                 Assert.True(results.Match(new[] { "Foo.cs", "Bar.cs", "Foo.xml", "Bar.tt" }));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenMultiExtensionContainsMixture_ThenGetPathsEndingWithExtensionsReturnsPaths()
             {
                 var extensions = "*.cs;.xml;tt";

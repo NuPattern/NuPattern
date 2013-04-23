@@ -2,20 +2,20 @@
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Windows;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
+using NuPattern.Library.Properties;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Library.ValueProviders
+namespace NuPattern.Library.ValueProviders
 {
     /// <summary>
     /// Returns items that have been dropped in Solution Builder
     /// </summary>
     [CLSCompliant(false)]
-    [DisplayNameResource("GenericDroppedItemValueProvider_DisplayName", typeof(Resources))]
-    [DescriptionResource("GenericDroppedItemValueProvider_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
+    [DisplayNameResource(@"GenericDroppedItemValueProvider_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"GenericDroppedItemValueProvider_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     public class GenericDroppedItemValueProvider : ValueProvider
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<GenericDroppedItemValueProvider>();
@@ -32,8 +32,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.ValueProviders
         /// The format of the item to return
         /// </summary>
         [Required]
-        [DisplayNameResource("GenericDroppedItemValueProvider_Format_DisplayName", typeof(Resources))]
-        [DescriptionResource("GenericDroppedItemValueProvider_Format_Description", typeof(Resources))]
+        [DisplayNameResource(@"GenericDroppedItemValueProvider_Format_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"GenericDroppedItemValueProvider_Format_Description", typeof(Resources))]
         public string Format { get; set; }
 
         /// <summary>
@@ -50,7 +50,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.ValueProviders
             var result = DragArgs.Data.GetData(Format);
 
             tracer.TraceInformation(
-                Resources.GenericDroppedItemValueProvider_TraceEvaluation, string.Join(";", DragArgs.Data.GetFormats()));
+                Resources.GenericDroppedItemValueProvider_TraceEvaluation, string.Join(@";", DragArgs.Data.GetFormats()));
 
             return result;
         }

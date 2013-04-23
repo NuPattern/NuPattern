@@ -1,17 +1,15 @@
 ﻿using System.Collections;
 using System.ComponentModel;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Library.Automation;
-using Microsoft.VisualStudio.Patterning.Library.Commands;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.Library.Automation;
+using NuPattern.Library.Commands;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Design
+namespace NuPattern.Library.Design
 {
     /// <summary>
     /// CommandReference type converter
     /// </summary>
-    public class CommandReferenceConverter : TypeConverter
+    internal class CommandReferenceConverter : TypeConverter
     {
         /// <summary>
         /// Returns whether the collection of standard values returned from <see cref="M:System.ComponentModel.TypeConverter.GetStandardValues"/> is an exclusive list of possible values, using the specified context.
@@ -61,8 +59,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.Design
                     .Owner
                     .AutomationSettings
                     .Select(s => s.As<ICommandSettings>())
-                    .Where(s => 
-                        s != null && 
+                    .Where(s =>
+                        s != null &&
                         s.Name != commandReference.CommandSettings.Name &&
                         s.TypeId != typeId)
                     .Select(c => c.Name)

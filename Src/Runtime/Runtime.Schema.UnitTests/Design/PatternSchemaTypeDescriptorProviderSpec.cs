@@ -1,11 +1,13 @@
 ﻿using System.ComponentModel;
 using System.Linq;
 using Microsoft.VisualStudio.ComponentModelHost;
-using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Modeling;
+using NuPattern.Runtime.Schema.Design;
+using NuPattern.VisualStudio;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
+namespace NuPattern.Runtime.Schema.UnitTests.Design
 {
     public class PatternSchemaTypeDescriptorProviderSpec
     {
@@ -48,19 +50,19 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 this.store.Dispose();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingExtensionPoints_ThenReturnsExtensionPoints()
             {
                 Assert.NotNull(this.descriptor.ExtensionPoints);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingMessageService_ThenReturnsMessageService()
             {
                 Assert.NotNull(this.descriptor.MessageService);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingProperties_ThenReturnsImplementedExtensionPointsRawProperty()
             {
                 Assert.True(

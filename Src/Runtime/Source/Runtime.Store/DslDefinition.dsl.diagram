@@ -1,60 +1,60 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <microsoft.VisualStudio.Modeling.DslDesigner.DslDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 13.435416671633721, 20.193491210937506" isCompleteView="false" name="DslDefinition">
-  <DslMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Store/ProductStateStore" />
+  <DslMoniker Name="/NuPattern.Runtime.Store/ProductStateStore" />
   <nestedChildShapes>
     <microsoft.VisualStudio.Modeling.DslDesigner.DomainModelElements Id="b02ee4a8-a443-4af9-a4bc-4add53e8d62b" absoluteBounds="0, 0, 12.435416671633721, 20.193491210937506">
       <nestedChildShapes>
         <microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape Id="8c731185-99f7-4728-a0f7-61475284e677" isExpanded="false" absoluteBounds="2.2, 8.7376611328125, 1.35, 0.25">
-          <DomainRelationshipMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Store/ProductElementHasProperties" />
+          <DomainRelationshipMoniker Name="/NuPattern.Runtime.Store/ProductElementHasProperties" />
           <relativeChildShapes />
           <nestedChildShapes>
             <elementListCompartment Id="4764064a-6033-4db9-a839-bacce550faa2" absoluteBounds="2.2150000000000003, 8.9976611328124978, 1.3200000000000003, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape>
         <microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape Id="10726b20-d5f2-4b7b-9701-dd4e40955d54" isExpanded="false" absoluteBounds="4.95, 3.3679850260416666, 1.3499999999999996, 0.25">
-          <DomainRelationshipMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Store/ProductHasViews" />
+          <DomainRelationshipMoniker Name="/NuPattern.Runtime.Store/ProductHasViews" />
           <relativeChildShapes />
           <nestedChildShapes>
             <elementListCompartment Id="31f0d561-21a7-4dae-a8ff-544e56f79bc3" absoluteBounds="4.9650000000000007, 3.6279850260416637, 1.3200000000000003, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape>
         <microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape Id="ab553304-e8db-4817-b309-e6ddea5a46b5" isExpanded="false" absoluteBounds="8.3, 4.4173746744791664, 1.3499999999999996, 0.25">
-          <DomainRelationshipMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Store/ViewHasElements" />
+          <DomainRelationshipMoniker Name="/NuPattern.Runtime.Store/ViewHasElements" />
           <relativeChildShapes />
           <nestedChildShapes>
             <elementListCompartment Id="e24ae60e-4cc3-4f1e-862b-78a4fded56ca" absoluteBounds="8.3150000000000013, 4.677374674479168, 1.3200000000000003, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape>
         <microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape Id="640f8b37-c212-4f72-babb-20e2cb5ee199" isExpanded="false" absoluteBounds="2.8000000000000003, 12.655035807291668, 1.3500000000000014, 0.25">
-          <DomainRelationshipMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Store/ElementHasChildElements" />
+          <DomainRelationshipMoniker Name="/NuPattern.Runtime.Store/ElementHasChildElements" />
           <relativeChildShapes />
           <nestedChildShapes>
             <elementListCompartment Id="a5102e8c-d3b8-457b-aa44-b02d731eb1d9" absoluteBounds="2.8150000000000004, 12.91503580729167, 1.3200000000000003, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape>
         <microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape Id="675bbab8-b041-405f-a19c-e4a7c851f532" isExpanded="false" absoluteBounds="1.6, 1.5493896484375, 1.35, 0.25">
-          <DomainRelationshipMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Store/ProductStateHasProducts" />
+          <DomainRelationshipMoniker Name="/NuPattern.Runtime.Store/ProductStateHasProducts" />
           <relativeChildShapes />
           <nestedChildShapes>
             <elementListCompartment Id="be050764-d87c-4c52-8b7d-764b13b25b02" absoluteBounds="1.6, 1.5493896484374998, 0.125, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape>
         <microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape Id="eb50cd13-1e51-480e-83b0-947947db6e07" isExpanded="false" absoluteBounds="2.8000000000000003, 13.345035807291669, 1.35, 0.25">
-          <DomainRelationshipMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Store/ElementHasExtensions" />
+          <DomainRelationshipMoniker Name="/NuPattern.Runtime.Store/ElementHasExtensions" />
           <relativeChildShapes />
           <nestedChildShapes>
             <elementListCompartment Id="2b867844-8f22-4457-abb2-9f5efc5b118e" absoluteBounds="2.8000000000000003, 13.345035807291669, 0.125, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape>
         <microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape Id="2be9db4d-9d07-425f-912d-6ac40d7d165b" isExpanded="false" absoluteBounds="8.3, 5.1073746744791659, 1.3499999999999996, 0.25">
-          <DomainRelationshipMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Store/ViewHasExtensionProducts" />
+          <DomainRelationshipMoniker Name="/NuPattern.Runtime.Store/ViewHasExtensionProducts" />
           <relativeChildShapes />
           <nestedChildShapes>
             <elementListCompartment Id="9f54581b-d651-420b-a878-9669ef1a54b6" absoluteBounds="8.3150000000000013, 5.3673746744791657, 1.3200000000000003, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape>
         <microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape Id="a0ec66ff-3ee6-49a8-bf6e-b04c0c6041d5" isExpanded="false" absoluteBounds="2.2, 9.9793522135416666, 1.35, 0.25">
-          <DomainRelationshipMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Store/ProductElementHasReferences" />
+          <DomainRelationshipMoniker Name="/NuPattern.Runtime.Store/ProductElementHasReferences" />
           <relativeChildShapes />
           <nestedChildShapes>
             <elementListCompartment Id="0311c3ed-541d-49aa-ae8a-0a2eaac1c65b" absoluteBounds="2.2, 9.9793522135416666, 0.125, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
@@ -347,89 +347,89 @@
           <Roots>
             <RootNode Id="ecbac361-f096-4423-9ff9-e465d6954e74">
               <Class>
-                <DomainClassMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Store/ProductState" />
+                <DomainClassMoniker Name="/NuPattern.Runtime.Store/ProductState" />
               </Class>
             </RootNode>
             <RootNode Id="68a00f0b-1ca5-4cb0-8b85-534decf7def7">
               <Class>
-                <DomainClassMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Store/InstanceBase" />
+                <DomainClassMoniker Name="/NuPattern.Runtime.Store/InstanceBase" />
               </Class>
             </RootNode>
           </Roots>
           <Arcs>
             <InheritanceNode Id="4b820952-0096-4d05-9379-39750b9d8ed7">
               <InheritanceLink>
-                <ClassHasBaseClassMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Store/Collection" />
+                <ClassHasBaseClassMoniker Name="/NuPattern.Runtime.Store/Collection" />
               </InheritanceLink>
             </InheritanceNode>
             <InheritanceNode Id="8a8636b5-9ca3-4e9e-ae1b-990b224701b2">
               <InheritanceLink>
-                <ClassHasBaseClassMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Store/Element" />
+                <ClassHasBaseClassMoniker Name="/NuPattern.Runtime.Store/Element" />
               </InheritanceLink>
             </InheritanceNode>
             <InheritanceNode Id="6b2da3ea-9b30-490f-98d1-c4fc8aa53dbd" IsLeaf="true">
               <InheritanceLink>
-                <ClassHasBaseClassMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Store/Product" />
+                <ClassHasBaseClassMoniker Name="/NuPattern.Runtime.Store/Product" />
               </InheritanceLink>
             </InheritanceNode>
             <InheritanceNode Id="d724abaf-4559-4ba2-adc3-ca0ca1d0dc95">
               <InheritanceLink>
-                <ClassHasBaseClassMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Store/AbstractElement" />
+                <ClassHasBaseClassMoniker Name="/NuPattern.Runtime.Store/AbstractElement" />
               </InheritanceLink>
             </InheritanceNode>
             <SourceRoleNode Id="852e5c0f-46f7-42fa-8cc9-018d2b1d3f40">
               <Role>
-                <DomainRoleMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Store/ProductElementHasProperties/ProductElement" />
+                <DomainRoleMoniker Name="/NuPattern.Runtime.Store/ProductElementHasProperties/ProductElement" />
               </Role>
             </SourceRoleNode>
             <SourceRoleNode Id="689ca23c-29d3-4e6d-8b4f-3d4ea95a1d7f">
               <Role>
-                <DomainRoleMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Store/ProductHasViews/Product" />
+                <DomainRoleMoniker Name="/NuPattern.Runtime.Store/ProductHasViews/Product" />
               </Role>
             </SourceRoleNode>
             <SourceRoleNode Id="6ce513ba-8e25-44bb-a9f5-c3350a8ffa7b" IsLeaf="true">
               <Role>
-                <DomainRoleMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Store/ViewHasElements/View" />
+                <DomainRoleMoniker Name="/NuPattern.Runtime.Store/ViewHasElements/View" />
               </Role>
             </SourceRoleNode>
             <SourceRoleNode Id="ecf44578-500f-45f4-afae-4ba3d9446ba0" IsLeaf="true">
               <Role>
-                <DomainRoleMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Store/ElementHasChildElements/ParentElement" />
+                <DomainRoleMoniker Name="/NuPattern.Runtime.Store/ElementHasChildElements/ParentElement" />
               </Role>
             </SourceRoleNode>
             <InheritanceNode Id="55cca143-bb7b-4a71-9f38-2af4245df95d">
               <InheritanceLink>
-                <ClassHasBaseClassMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Store/ProductElement" />
+                <ClassHasBaseClassMoniker Name="/NuPattern.Runtime.Store/ProductElement" />
               </InheritanceLink>
             </InheritanceNode>
             <InheritanceNode Id="21344c72-7f8a-447f-b654-359363cdc298" IsLeaf="true">
               <InheritanceLink>
-                <ClassHasBaseClassMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Store/View" />
+                <ClassHasBaseClassMoniker Name="/NuPattern.Runtime.Store/View" />
               </InheritanceLink>
             </InheritanceNode>
             <InheritanceNode Id="4e8d6935-8780-4e54-90c4-2570b6f55f5c" IsLeaf="true">
               <InheritanceLink>
-                <ClassHasBaseClassMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Store/Property" />
+                <ClassHasBaseClassMoniker Name="/NuPattern.Runtime.Store/Property" />
               </InheritanceLink>
             </InheritanceNode>
             <SourceRoleNode Id="59912604-e42e-43ae-9096-5033b4b7df52">
               <Role>
-                <DomainRoleMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Store/ProductStateHasProducts/ProductState" />
+                <DomainRoleMoniker Name="/NuPattern.Runtime.Store/ProductStateHasProducts/ProductState" />
               </Role>
             </SourceRoleNode>
             <SourceRoleNode Id="2b187747-770b-4f8a-ba39-4af8360b7995" IsLeaf="true">
               <Role>
-                <DomainRoleMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Store/ElementHasExtensions/AbstractElement" />
+                <DomainRoleMoniker Name="/NuPattern.Runtime.Store/ElementHasExtensions/AbstractElement" />
               </Role>
             </SourceRoleNode>
             <SourceRoleNode Id="c2a81d84-1896-4a88-9d0b-ffbdd03f72a4" IsLeaf="true">
               <Role>
-                <DomainRoleMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Store/ViewHasExtensionProducts/View" />
+                <DomainRoleMoniker Name="/NuPattern.Runtime.Store/ViewHasExtensionProducts/View" />
               </Role>
             </SourceRoleNode>
             <SourceRoleNode Id="7679c51a-a332-4278-b3c1-d7d9e9c00831">
               <Role>
-                <DomainRoleMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Store/ProductElementHasReferences/ProductElement" />
+                <DomainRoleMoniker Name="/NuPattern.Runtime.Store/ProductElementHasReferences/ProductElement" />
               </Role>
             </SourceRoleNode>
           </Arcs>

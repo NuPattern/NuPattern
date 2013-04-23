@@ -1,32 +1,31 @@
 ﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
 <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='DslDefinition.dsl'" #>
-<#@ output extension=".Designer.cs" #>
+<#@ output extension=".gen.cs" #>
 <# string dslName = this.Dsl.Name; #>
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling.Integration;
 
 namespace <#= CodeGenerationUtilities.GetPackageNamespace(this.Dsl) #>
 {
-	[System.CodeDom.Compiler.GeneratedCode("T4", "1.0")]
-	public partial class AdapterManager
-	{
-		/// <summary>
-		/// Gets the file extension.
-		/// </summary>
-		public string FileExtension
-		{
-			get { return ".<#= this.Dsl.Editor.FileExtension #>"; }
-		}
+    [System.CodeDom.Compiler.GeneratedCode("T4", "1.0")]
+    public partial class AdapterManager
+    {
+        /// <summary>
+        /// Gets the file extension.
+        /// </summary>
+        public string FileExtension
+        {
+            get { return @".<#= this.Dsl.Editor.FileExtension #>"; }
+        }
 
-		/// <summary>
-		/// Gets the exposed element types.
-		/// </summary>
-		public override IEnumerable<SupportedType> GetExposedElementTypes(string adapterId)
-		{
-			if (!GetSupportedLogicalAdapterIds().Contains(adapterId))
-				yield break;
+        /// <summary>
+        /// Gets the exposed element types.
+        /// </summary>
+        public override IEnumerable<SupportedType> GetExposedElementTypes(string adapterId)
+        {
+            if (!GetSupportedLogicalAdapterIds().Contains(adapterId))
+                yield break;
 
 <#
 foreach(DomainClass domainClass in this.DslLibrary.Classes)
@@ -34,11 +33,11 @@ foreach(DomainClass domainClass in this.DslLibrary.Classes)
  if (domainClass.InheritanceModifier != InheritanceModifier.Abstract)
  {
 #>
-			yield return new SupportedType(typeof(I<#= domainClass.Name #>), "<#= domainClass.Name #>");
+            yield return new SupportedType(typeof(I<#= domainClass.Name #>), @"<#= domainClass.Name #>");
 <#
  }
 }
 #>
-		}
-	}
+        }
+    }
 }

@@ -1,10 +1,11 @@
 ﻿using System.ComponentModel;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.ComponentModel;
+using NuPattern.Runtime.Schema.Design;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
+namespace NuPattern.Runtime.Schema.UnitTests.Design
 {
     [TestClass]
     public class ExtensionPointConverterSpec
@@ -33,7 +34,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
             this.converter = new ExtensionPointConverter();
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenGettingStandardValues_ThenReturnsValues()
         {
             var values = this.converter.GetStandardValues(this.context);
@@ -44,7 +45,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
         }
 
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenGettingFilteredStandardValues_ThenReturnsValues()
         {
             var values = new ExtensionPointConverter(p => p.RequiredExtensionPointId != "Foo").GetStandardValues(this.context);

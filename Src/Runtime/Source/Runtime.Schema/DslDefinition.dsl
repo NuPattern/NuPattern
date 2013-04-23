@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Dsl xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="15a342fd-f046-4b7a-9dc8-73b0a8eec119" Description="The design of a pattern in a pattern toolkit" Name="PatternModel" DisplayName="Pattern Model Designer" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema" MinorVersion="2" ProductName="Pattern Model Designer" CompanyName="The Outercurve Foundation" PackageGuid="95d8dad7-be4a-42ae-9cb1-a48bc0eb77c0" PackageNamespace="Microsoft.VisualStudio.Patterning.Runtime.Schema" xmlns="http://schemas.microsoft.com/VisualStudio/2005/DslTools/DslDefinitionModel">
+<Dsl xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="15a342fd-f046-4b7a-9dc8-73b0a8eec119" Description="The design of a pattern in a pattern toolkit" Name="PatternModel" DisplayName="Pattern Model Designer" Namespace="NuPattern.Runtime.Schema" AccessModifier="Assembly" MinorVersion="3" ProductName="Pattern Model Designer" CompanyName="NuPattern" PackageGuid="95d8dad7-be4a-42ae-9cb1-a48bc0eb77c0" PackageNamespace="NuPattern.Runtime.Schema" xmlns="http://schemas.microsoft.com/VisualStudio/2005/DslTools/DslDefinitionModel">
   <Classes>
-    <DomainClass Id="76e57dce-a400-4ed1-bbba-00e7d337f5ad" Description="The definition of the pattern in this toolkit." Name="PatternModelSchema" DisplayName="Pattern Model" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema" GeneratesDoubleDerived="true">
+    <DomainClass Id="76e57dce-a400-4ed1-bbba-00e7d337f5ad" Description="The definition of the pattern in this toolkit." Name="PatternModelSchema" DisplayName="Pattern Model" Namespace="NuPattern.Runtime.Schema" GeneratesDoubleDerived="true">
       <Notes>IsRoot</Notes>
       <Properties>
         <DomainProperty Id="adc27259-7812-4979-b334-3b4923fb7763" Description="The version of the base pattern line that this pattern line derives from." Name="BaseVersion" DisplayName="Base Version" Category="General" IsUIReadOnly="true">
@@ -27,7 +27,7 @@
         </ElementMergeDirective>
       </ElementMergeDirectives>
     </DomainClass>
-    <DomainClass Id="15a27251-8feb-4fae-b6d8-703a5697d3eb" Description="The definition of the pattern." Name="PatternSchema" DisplayName="Pattern" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema">
+    <DomainClass Id="15a27251-8feb-4fae-b6d8-703a5697d3eb" Description="The definition of the pattern." Name="PatternSchema" DisplayName="Pattern" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Schema">
       <BaseClass>
         <DomainClassMoniker Name="PatternElementSchema" />
       </BaseClass>
@@ -67,7 +67,7 @@
         </ElementMergeDirective>
       </ElementMergeDirectives>
     </DomainClass>
-    <DomainClass Id="50bd80bb-6516-4bfc-a5e5-8ce26fc23224" Description="An element that has a unique name." Name="NamedElementSchema" DisplayName="Named Element" InheritanceModifier="Abstract" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema">
+    <DomainClass Id="50bd80bb-6516-4bfc-a5e5-8ce26fc23224" Description="An element that has a unique name." Name="NamedElementSchema" DisplayName="Named Element" InheritanceModifier="Abstract" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Schema">
       <Properties>
         <DomainProperty Id="3e893411-e795-45d4-89b4-1d6d8beef0ec" Description="The well-known name of this item in this model." Name="Name" DisplayName="Name" Category="General" IsElementName="true">
           <Type>
@@ -84,7 +84,7 @@
         </DomainProperty>
         <DomainProperty Id="3cf4da77-3984-4048-913f-1014118cee9f" Description="The name used for instances of this item, as seen by the user. Also used to name associated artifacts/configuration created for this item." Name="DisplayName" DisplayName="Display Name" Kind="CustomStorage" Category="Appearance">
           <Attributes>
-            <ClrAttribute Name="Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
+            <ClrAttribute Name="NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
           </Attributes>
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
@@ -97,7 +97,7 @@
         </DomainProperty>
         <DomainProperty Id="d60b22b2-540e-4024-9a15-6a66fc3719ba" Description="The description of this item displayed to the user." Name="Description" DisplayName="Description" Kind="CustomStorage" Category="Appearance">
           <Attributes>
-            <ClrAttribute Name="Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
+            <ClrAttribute Name="NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
           </Attributes>
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
@@ -135,7 +135,7 @@
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="dbe13a31-7dcd-4fbd-a601-18ca765e264e" Description="A container of properties and automation." Name="PatternElementSchema" DisplayName="Pattern Element" InheritanceModifier="Abstract" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema">
+    <DomainClass Id="dbe13a31-7dcd-4fbd-a601-18ca765e264e" Description="A container of properties and automation." Name="PatternElementSchema" DisplayName="Pattern Element" InheritanceModifier="Abstract" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Schema">
       <BaseClass>
         <DomainClassMoniker Name="CustomizableElementSchema" />
       </BaseClass>
@@ -143,7 +143,7 @@
         <DomainProperty Id="009e8fbb-1e3a-4fd4-98ba-3e20e2507428" Description="The validation rules applied to this element." Name="ValidationRules" DisplayName="Validation Rules" Category="Validation">
           <Notes>Skip=true</Notes>
           <Attributes>
-            <ClrAttribute Name="Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
+            <ClrAttribute Name="NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
           </Attributes>
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
@@ -151,18 +151,18 @@
         </DomainProperty>
         <DomainProperty Id="036d59f2-87d1-49f3-aee4-4e73b3566b2e" Description="The icon for this item displayed to the user." Name="Icon" DisplayName="Icon" Category="Appearance">
           <Attributes>
-            <ClrAttribute Name="Microsoft.VisualStudio.Patterning.Extensibility.ImageFilter">
+            <ClrAttribute Name="NuPattern.Runtime.Design.ImageFilter">
               <Parameters>
-                <AttributeParameter Value="Microsoft.VisualStudio.Patterning.Extensibility.ImageKind.Image " />
+                <AttributeParameter Value="NuPattern.Runtime.Design.ImageKind.Image " />
               </Parameters>
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.Editor">
               <Parameters>
-                <AttributeParameter Value="typeof(Microsoft.VisualStudio.Patterning.Extensibility.ImageUriEditor)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.ImageUriEditor)" />
                 <AttributeParameter Value="typeof(System.Drawing.Design.UITypeEditor)" />
               </Parameters>
             </ClrAttribute>
-            <ClrAttribute Name="Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
+            <ClrAttribute Name="NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
           </Attributes>
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
@@ -188,14 +188,14 @@
         </ElementMergeDirective>
       </ElementMergeDirectives>
     </DomainClass>
-    <DomainClass Id="079a705a-0fc2-4c40-b0ba-c8b76fc60f7c" Description="A property of an element." Name="PropertySchema" DisplayName="Property" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema">
+    <DomainClass Id="079a705a-0fc2-4c40-b0ba-c8b76fc60f7c" Description="A property of an element." Name="PropertySchema" DisplayName="Property" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Schema">
       <BaseClass>
         <DomainClassMoniker Name="CustomizableElementSchema" />
       </BaseClass>
       <Properties>
         <DomainProperty Id="df11ede4-3da1-4416-9f7d-cfb840e28bb3" Description="The initial value of this property when created." Name="RawDefaultValue" DisplayName="Default Value" Category="Data" SetterAccessModifier="Assembly">
           <Attributes>
-            <ClrAttribute Name="Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
+            <ClrAttribute Name="NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
           </Attributes>
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
@@ -215,7 +215,7 @@
         </DomainProperty>
         <DomainProperty Id="97ced30c-61bc-44ad-9041-00945076d37d" Description="Whether this property is shown to the user." Name="IsVisible" DisplayName="Is Visible" DefaultValue="true" Category="Appearance">
           <Attributes>
-            <ClrAttribute Name="Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
+            <ClrAttribute Name="NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
           </Attributes>
           <Type>
             <ExternalTypeMoniker Name="/System/Boolean" />
@@ -223,7 +223,7 @@
         </DomainProperty>
         <DomainProperty Id="452d1740-162b-4911-874a-a45ca1018e97" Description="Whether this property is read-only to the user." Name="IsReadOnly" DisplayName="Is Read Only" DefaultValue="false" Category="Appearance">
           <Attributes>
-            <ClrAttribute Name="Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
+            <ClrAttribute Name="NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
           </Attributes>
           <Type>
             <ExternalTypeMoniker Name="/System/Boolean" />
@@ -231,7 +231,7 @@
         </DomainProperty>
         <DomainProperty Id="93af01ae-05ca-44fd-9e8b-8230c5662415" Description="The category for this property, used to organize similar properties shown in the Properties Window." Name="Category" DisplayName="Category" DefaultValue="General" Category="Appearance">
           <Attributes>
-            <ClrAttribute Name="Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
+            <ClrAttribute Name="NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
           </Attributes>
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
@@ -239,23 +239,23 @@
         </DomainProperty>
         <DomainProperty Id="b6c1c888-82c5-4619-8e2b-e69e1cf975aa" Description="The primary usage of this property," Name="PropertyUsage" DisplayName="Property Usage" DefaultValue="General" Category="General" SetterAccessModifier="Assembly" IsBrowsable="false" IsUIReadOnly="true">
           <Type>
-            <ExternalTypeMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime/PropertyUsages" />
+            <ExternalTypeMoniker Name="/NuPattern.Runtime/PropertyUsages" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="19df1177-f0a6-4540-bd5b-7b350441bee6" Description="A System.ComponentModel.TypeConverter that converts from the string value of this property, that the user enters, to an instance of the Type of this property (and visa-versa). This Type Converter can also be used to provide a list of acceptable values." Name="TypeConverterTypeName" DisplayName="Type Converter" Category="Appearance">
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.Editor">
               <Parameters>
-                <AttributeParameter Value="typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor)" />
+                <AttributeParameter Value="typeof(NuPattern.ComponentModel.Design.StandardValuesEditor)" />
                 <AttributeParameter Value="typeof(System.Drawing.Design.UITypeEditor)" />
               </Parameters>
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(Microsoft.VisualStudio.Patterning.Extensibility.FullTypeTypeConverter&lt;System.ComponentModel.TypeConverter&gt;)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.FullTypeTypeConverter&lt;System.ComponentModel.TypeConverter&gt;)" />
               </Parameters>
             </ClrAttribute>
-            <ClrAttribute Name="Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
+            <ClrAttribute Name="NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
           </Attributes>
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
@@ -265,16 +265,16 @@
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.Editor">
               <Parameters>
-                <AttributeParameter Value="typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor)" />
+                <AttributeParameter Value="typeof(NuPattern.ComponentModel.Design.StandardValuesEditor)" />
                 <AttributeParameter Value="typeof(System.Drawing.Design.UITypeEditor)" />
               </Parameters>
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(Microsoft.VisualStudio.Patterning.Extensibility.FullTypeTypeConverter&lt;System.Drawing.Design.UITypeEditor&gt;)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.FullTypeTypeConverter&lt;System.Drawing.Design.UITypeEditor&gt;)" />
               </Parameters>
             </ClrAttribute>
-            <ClrAttribute Name="Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
+            <ClrAttribute Name="NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
           </Attributes>
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
@@ -283,7 +283,7 @@
         <DomainProperty Id="e9070cd0-3aa5-4e07-8504-a735f40a8be4" Description="The validation rules applied to this element." Name="RawValidationRules" DisplayName="Validation Rules" Category="Validation">
           <Notes>Skip=true</Notes>
           <Attributes>
-            <ClrAttribute Name="Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
+            <ClrAttribute Name="NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
           </Attributes>
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
@@ -291,12 +291,12 @@
         </DomainProperty>
         <DomainProperty Id="e6d6779f-b6b9-4db4-9bf3-04e864a4c58e" Description="A value provider that calculates the value of this property dynamically." Name="RawValueProvider" DisplayName="Value Provider" Category="Data">
           <Attributes>
-            <ClrAttribute Name="Microsoft.VisualStudio.Patterning.Extensibility.PropertyDescriptor">
+            <ClrAttribute Name="NuPattern.ComponentModel.Design.PropertyDescriptor">
               <Parameters>
-                <AttributeParameter Value="typeof(Microsoft.VisualStudio.Patterning.Extensibility.Binding.BindingPropertyDescriptor&lt;Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.IValueProvider&gt;)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Bindings.BindingPropertyDescriptor&lt;NuPattern.Runtime.IValueProvider&gt;)" />
               </Parameters>
             </ClrAttribute>
-            <ClrAttribute Name="Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
+            <ClrAttribute Name="NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
           </Attributes>
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
@@ -304,14 +304,14 @@
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="14b6f5ec-0468-4380-9210-07c2fdbda012" Description="A distinct view of the pattern." Name="ViewSchema" DisplayName="View" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema" GeneratesDoubleDerived="true">
+    <DomainClass Id="14b6f5ec-0468-4380-9210-07c2fdbda012" Description="A distinct view of the pattern." Name="ViewSchema" DisplayName="View" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Schema" GeneratesDoubleDerived="true">
       <BaseClass>
         <DomainClassMoniker Name="CustomizableElementSchema" />
       </BaseClass>
       <Properties>
         <DomainProperty Id="5812d2f0-206f-4356-a12f-b2419cc11082" Description="Whether this view is shown to the user." Name="IsVisible" DisplayName="Is Visible" DefaultValue="true" Category="Appearance">
           <Attributes>
-            <ClrAttribute Name="Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
+            <ClrAttribute Name="NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
           </Attributes>
           <Type>
             <ExternalTypeMoniker Name="/System/Boolean" />
@@ -319,7 +319,7 @@
         </DomainProperty>
         <DomainProperty Id="0e03dbb8-03d7-44b6-9583-6ce62b8df519" Description="Whether this is the default view" Name="IsDefault" DisplayName="Is Default" DefaultValue="false" Category="General">
           <Attributes>
-            <ClrAttribute Name="Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
+            <ClrAttribute Name="NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
           </Attributes>
           <Type>
             <ExternalTypeMoniker Name="/System/Boolean" />
@@ -355,24 +355,24 @@
         </ElementMergeDirective>
       </ElementMergeDirectives>
     </DomainClass>
-    <DomainClass Id="5c399883-85a3-4863-90dd-470b20576f61" Description="A child collection element." Name="CollectionSchema" DisplayName="Collection" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema">
+    <DomainClass Id="5c399883-85a3-4863-90dd-470b20576f61" Description="A child collection element." Name="CollectionSchema" DisplayName="Collection" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Schema">
       <BaseClass>
         <DomainClassMoniker Name="AbstractElementSchema" />
       </BaseClass>
     </DomainClass>
-    <DomainClass Id="18de646e-e001-4e6b-b78b-59086f74d429" Description="A child element." Name="ElementSchema" DisplayName="Variable Element" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema">
+    <DomainClass Id="18de646e-e001-4e6b-b78b-59086f74d429" Description="A child element." Name="ElementSchema" DisplayName="Variable Element" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Schema">
       <BaseClass>
         <DomainClassMoniker Name="AbstractElementSchema" />
       </BaseClass>
     </DomainClass>
-    <DomainClass Id="129120e9-f7e2-4154-805e-16bf6890f67a" Description="An element that supports customization of its properties." Name="CustomizableElementSchema" DisplayName="Customizable Element" InheritanceModifier="Abstract" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema" GeneratesDoubleDerived="true">
+    <DomainClass Id="129120e9-f7e2-4154-805e-16bf6890f67a" Description="An element that supports customization of its properties." Name="CustomizableElementSchema" DisplayName="Customizable Element" InheritanceModifier="Abstract" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Schema" GeneratesDoubleDerived="true">
       <BaseClass>
         <DomainClassMoniker Name="NamedElementSchema" />
       </BaseClass>
       <Properties>
         <DomainProperty Id="0bc1eb0c-b224-4d81-871c-bfda75e94ba5" Description="Whether customization is permitted for this element, all its policy settings, and any child elements." Name="IsCustomizable" DisplayName="Is Customizable" DefaultValue="Inherited" Kind="CustomStorage" Category="Customization">
           <Type>
-            <ExternalTypeMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime/CustomizationState" />
+            <ExternalTypeMoniker Name="/NuPattern.Runtime/CustomizationState" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="f6025928-bb14-41d8-86fc-af24d6f05424" Description="Whether customization is enabled for the tailor." Name="IsCustomizationEnabled" DisplayName="Is Customization Enabled" DefaultValue="true" Category="Customization" SetterAccessModifier="Private" IsBrowsable="false" IsUIReadOnly="true">
@@ -402,14 +402,14 @@
         </ElementMergeDirective>
       </ElementMergeDirectives>
     </DomainClass>
-    <DomainClass Id="a022a552-666a-4f23-b829-4edf1cea0971" Description="A child element or collection of the pattern." Name="AbstractElementSchema" DisplayName="Abstract Element" InheritanceModifier="Abstract" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema">
+    <DomainClass Id="a022a552-666a-4f23-b829-4edf1cea0971" Description="A child element or collection of the pattern." Name="AbstractElementSchema" DisplayName="Abstract Element" InheritanceModifier="Abstract" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Schema">
       <BaseClass>
         <DomainClassMoniker Name="PatternElementSchema" />
       </BaseClass>
       <Properties>
         <DomainProperty Id="18d96656-8bab-4ce0-b8fa-2eb9edaf26cc" Description="Whether this item is shown to the user." Name="IsVisible" DisplayName="Is Visible" DefaultValue="true" Category="Appearance">
           <Attributes>
-            <ClrAttribute Name="Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
+            <ClrAttribute Name="NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
           </Attributes>
           <Type>
             <ExternalTypeMoniker Name="/System/Boolean" />
@@ -435,12 +435,12 @@
         </ElementMergeDirective>
       </ElementMergeDirectives>
     </DomainClass>
-    <DomainClass Id="c9fbbae3-628d-46f1-860e-5e80fc1b6211" Description="The policy that controls what properties are customizable on an element." Name="CustomizationPolicySchema" DisplayName="Customization Policy" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema" GeneratesDoubleDerived="true">
+    <DomainClass Id="c9fbbae3-628d-46f1-860e-5e80fc1b6211" Description="The policy that controls what properties are customizable on an element." Name="CustomizationPolicySchema" DisplayName="Customization Policy" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Schema" GeneratesDoubleDerived="true">
       <Attributes>
-        <ClrAttribute Name="Microsoft.VisualStudio.Patterning.Extensibility.CategoryResource">
+        <ClrAttribute Name="NuPattern.ComponentModel.Design.CategoryResource">
           <Parameters>
             <AttributeParameter Value="&quot;CustomizationCategory&quot;" />
-            <AttributeParameter Value="typeof(Microsoft.VisualStudio.Patterning.Runtime.Schema.Properties.Resources)" />
+            <AttributeParameter Value="typeof(NuPattern.Runtime.Schema.Properties.Resources)" />
           </Parameters>
         </ClrAttribute>
       </Attributes>
@@ -452,10 +452,10 @@
         </DomainProperty>
         <DomainProperty Id="9c519261-d0f9-4433-bcb4-7593c4ca6548" Description="The extent to which settings have been customized." Name="CustomizationLevel" DisplayName="Customization Level" DefaultValue="None" Kind="Calculated" Category="Customization" SetterAccessModifier="Private" IsBrowsable="false" IsUIReadOnly="true">
           <Type>
-            <ExternalTypeMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime/CustomizedLevel" />
+            <ExternalTypeMoniker Name="/NuPattern.Runtime/CustomizedLevel" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="29a60577-5540-4a0b-a1d2-e5496fd9ecd5" Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizationPolicySchema.Name" Name="Name" DisplayName="Name" GetterAccessModifier="Private" SetterAccessModifier="Private" IsElementName="true" IsBrowsable="false">
+        <DomainProperty Id="29a60577-5540-4a0b-a1d2-e5496fd9ecd5" Description="Description for NuPattern.Runtime.Schema.CustomizationPolicySchema.Name" Name="Name" DisplayName="Name" GetterAccessModifier="Private" SetterAccessModifier="Private" IsElementName="true" IsBrowsable="false">
           <Notes>Used by custom type descriptors.</Notes>
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
@@ -473,7 +473,7 @@
         </ElementMergeDirective>
       </ElementMergeDirectives>
     </DomainClass>
-    <DomainClass Id="a8991222-7d76-4467-b4d4-663daec5050d" Description="The settings for a customizable property." Name="CustomizableSettingSchema" DisplayName="Customizable Setting" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema" GeneratesDoubleDerived="true">
+    <DomainClass Id="a8991222-7d76-4467-b4d4-663daec5050d" Description="The settings for a customizable property." Name="CustomizableSettingSchema" DisplayName="Customizable Setting" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Schema" GeneratesDoubleDerived="true">
       <Properties>
         <DomainProperty Id="c85e8df3-5cfc-4f0e-8798-9f9efac899e1" Description="Whether this setting can be further customized by a tailor." Name="IsEnabled" DisplayName="Is Enabled" DefaultValue="true" Category="Customization" SetterAccessModifier="Private" IsBrowsable="false" IsUIReadOnly="true">
           <Type>
@@ -527,7 +527,7 @@
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="a997feca-f406-49ad-82ae-fc1f53d31527" Description="The settings for an automation extension." Name="AutomationSettingsSchema" DisplayName="Automation Settings" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema">
+    <DomainClass Id="a997feca-f406-49ad-82ae-fc1f53d31527" Description="The settings for an automation extension." Name="AutomationSettingsSchema" DisplayName="Automation Settings" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Schema">
       <BaseClass>
         <DomainClassMoniker Name="CustomizableElementSchema" />
       </BaseClass>
@@ -540,10 +540,10 @@
         <DomainProperty Id="f7ec96b2-44eb-4a19-8fd2-77a695f34e08" Description="The specific settings for this Automation Type." Name="Settings" DisplayName="Settings" Category="Automation" GetterAccessModifier="Assembly" SetterAccessModifier="Assembly">
           <Notes>The property is the placeholder for the type descriptor to provide reflected properties of the extender settings.</Notes>
           <Attributes>
-            <ClrAttribute Name="Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
+            <ClrAttribute Name="NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(AutomationSettingsTypeConverter)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Schema.Design.AutomationSettingsTypeConverter)" />
               </Parameters>
             </ClrAttribute>
           </Attributes>
@@ -553,12 +553,12 @@
         </DomainProperty>
         <DomainProperty Id="a1d81216-30bc-43a9-aa6d-ae06a58f5490" Description="The classification of this automation." Name="Classification" DisplayName="Classification" DefaultValue="General" Category="Automation" IsBrowsable="false" IsUIReadOnly="true">
           <Type>
-            <ExternalTypeMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime/AutomationSettingsClassification" />
+            <ExternalTypeMoniker Name="/NuPattern.Runtime/AutomationSettingsClassification" />
           </Type>
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="14956bbf-ded7-4762-9ade-ced0cc89683c" Description="The extension points that this pattern provides." Name="ProvidedExtensionPointSchema" DisplayName="Provided Extension Point Schema" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema">
+    <DomainClass Id="14956bbf-ded7-4762-9ade-ced0cc89683c" Description="The extension points that this pattern provides." Name="ProvidedExtensionPointSchema" DisplayName="Provided Extension Point Schema" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Schema">
       <Properties>
         <DomainProperty Id="9e6b27e9-f683-444d-a1ab-2b3b384f51de" Description="The extension point provided by this pattern." Name="ExtensionPointId" DisplayName="Extension Point Id" Category="Extensibility" IsElementName="true">
           <Type>
@@ -567,7 +567,7 @@
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="889fcf39-249f-4484-a7e8-2bf14320962f" Description="A child extension to the pattern, provided by a pattern of another toolkit." Name="ExtensionPointSchema" DisplayName="Extension Point" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema">
+    <DomainClass Id="889fcf39-249f-4484-a7e8-2bf14320962f" Description="A child extension to the pattern, provided by a pattern of another toolkit." Name="ExtensionPointSchema" DisplayName="Extension Point" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Schema">
       <BaseClass>
         <DomainClassMoniker Name="PatternElementSchema" />
       </BaseClass>
@@ -580,7 +580,7 @@
         <DomainProperty Id="a0a863a2-8c90-474f-b2ee-0a7f34037241" Description="The constraints that determine which patterns from other toolkits can extend this model." Name="Conditions" DisplayName="Constraints" Category="Extensibility">
           <Notes>Skip=true</Notes>
           <Attributes>
-            <ClrAttribute Name="Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
+            <ClrAttribute Name="NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
           </Attributes>
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
@@ -595,7 +595,7 @@
     </DomainClass>
   </Classes>
   <Relationships>
-    <DomainRelationship Id="ef11f513-2a94-4473-8b92-e23ad76801f3" Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelHasPattern" Name="PatternModelHasPattern" DisplayName="Pattern Model Has Pattern" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema" IsEmbedding="true">
+    <DomainRelationship Id="ef11f513-2a94-4473-8b92-e23ad76801f3" Description="Description for NuPattern.Runtime.Schema.PatternModelHasPattern" Name="PatternModelHasPattern" DisplayName="Pattern Model Has Pattern" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Schema" IsEmbedding="true">
       <Source>
         <DomainRole Id="ba78db30-bb4c-4613-b749-2c4112135770" Description="The pattern in this definition." Name="PatternModelSchema" DisplayName="Pattern Model Schema" PropertyName="Pattern" Multiplicity="One" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Pattern">
           <RolePlayer>
@@ -611,7 +611,7 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="4b1811b8-c0fe-451a-9715-881e3af1eb2f" Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties" Name="PatternElementHasProperties" DisplayName="Pattern Element Has Properties" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema" IsEmbedding="true">
+    <DomainRelationship Id="4b1811b8-c0fe-451a-9715-881e3af1eb2f" Description="Description for NuPattern.Runtime.Schema.PatternElementHasProperties" Name="PatternElementHasProperties" DisplayName="Pattern Element Has Properties" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Schema" IsEmbedding="true">
       <Source>
         <DomainRole Id="047b91aa-4ea9-4dfe-9f20-b5c2ff8ae6df" Description="The properties of this element." Name="PatternElementSchema" DisplayName="Pattern Element Schema" PropertyName="Properties" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Properties">
           <RolePlayer>
@@ -628,7 +628,7 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="aad70656-c8af-4d31-bd93-e288096ee274" Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasViews" Name="PatternHasViews" DisplayName="Pattern Has Views" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema" IsEmbedding="true">
+    <DomainRelationship Id="aad70656-c8af-4d31-bd93-e288096ee274" Description="Description for NuPattern.Runtime.Schema.PatternHasViews" Name="PatternHasViews" DisplayName="Pattern Has Views" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Schema" IsEmbedding="true">
       <Source>
         <DomainRole Id="9b7b2ee3-1c1f-48f2-a873-07774f4dd02d" Description="The views of this pattern." Name="PatternSchema" DisplayName="Pattern Schema" PropertyName="Views" Multiplicity="OneMany" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Views">
           <RolePlayer>
@@ -644,12 +644,12 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="3bfd2e51-26d4-48dd-89a2-7e7a715b2bfd" Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements" Name="ViewHasElements" DisplayName="View Has Elements" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema" IsEmbedding="true">
+    <DomainRelationship Id="3bfd2e51-26d4-48dd-89a2-7e7a715b2bfd" Description="Description for NuPattern.Runtime.Schema.ViewHasElements" Name="ViewHasElements" DisplayName="View Has Elements" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Schema" IsEmbedding="true">
       <Notes>Skip=true</Notes>
       <Properties>
         <DomainProperty Id="dfc4aa83-b438-459f-bb11-b470e82cbcc2" Description="The number of instances of this collection/element, for this view." Name="Cardinality" DisplayName="Cardinality" DefaultValue="OneToOne" Category="Structure">
           <Type>
-            <ExternalTypeMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime/Cardinality" />
+            <ExternalTypeMoniker Name="/NuPattern.Runtime/Cardinality" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="1e1d2e7f-fc69-484e-a9c8-f695e00b9b3d" Description="The displayed caption for the cardinality." Name="CardinalityCaption" DisplayName="Cardinality Caption" Kind="Calculated" Category="Structure" IsBrowsable="false" IsUIReadOnly="true">
@@ -676,16 +676,16 @@
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.Editor">
               <Parameters>
-                <AttributeParameter Value="typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor)" />
+                <AttributeParameter Value="typeof(NuPattern.ComponentModel.Design.StandardValuesEditor)" />
                 <AttributeParameter Value="typeof(System.Drawing.Design.UITypeEditor)" />
               </Parameters>
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(Microsoft.VisualStudio.Patterning.Extensibility.FullTypeTypeConverter&lt;System.Collections.IComparer&gt;)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.FullTypeTypeConverter&lt;System.Collections.IComparer&gt;)" />
               </Parameters>
             </ClrAttribute>
-            <ClrAttribute Name="Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
+            <ClrAttribute Name="NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
           </Attributes>
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
@@ -709,7 +709,7 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="c30fb6ed-9e58-473d-a596-e52f20c88224" Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Schema.PolicyHasSettings" Name="PolicyHasSettings" DisplayName="Policy Has Settings" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema" IsEmbedding="true">
+    <DomainRelationship Id="c30fb6ed-9e58-473d-a596-e52f20c88224" Description="Description for NuPattern.Runtime.Schema.PolicyHasSettings" Name="PolicyHasSettings" DisplayName="Policy Has Settings" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Schema" IsEmbedding="true">
       <Source>
         <DomainRole Id="eb849f5a-92b0-4bd1-8b0d-05663de599cd" Description="The individual settings of the customization policy" Name="CustomizationPolicySchema" DisplayName="Customization Policy Schema" PropertyName="Settings" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Settings">
           <RolePlayer>
@@ -725,7 +725,7 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="b060fe61-7009-47eb-a1ad-5267426e6afd" Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementHasPolicy" Name="CustomizableElementHasPolicy" DisplayName="Customizable Element Has Policy" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema" IsEmbedding="true">
+    <DomainRelationship Id="b060fe61-7009-47eb-a1ad-5267426e6afd" Description="Description for NuPattern.Runtime.Schema.CustomizableElementHasPolicy" Name="CustomizableElementHasPolicy" DisplayName="Customizable Element Has Policy" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Schema" IsEmbedding="true">
       <Source>
         <DomainRole Id="873ce323-5608-4607-870b-1419d5a4c88d" Description="The customization policy that applies to the element." Name="CustomizableElementSchema" DisplayName="Customizable Element Schema" PropertyName="Policy" Multiplicity="One" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Policy">
           <RolePlayer>
@@ -741,12 +741,12 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="b0afa4dc-233e-4c6c-a058-5b2f2989b751" Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements" Name="ElementHasElements" DisplayName="Element Has Elements" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema" IsEmbedding="true">
+    <DomainRelationship Id="b0afa4dc-233e-4c6c-a058-5b2f2989b751" Description="Description for NuPattern.Runtime.Schema.ElementHasElements" Name="ElementHasElements" DisplayName="Element Has Elements" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Schema" IsEmbedding="true">
       <Notes>Skip=true</Notes>
       <Properties>
         <DomainProperty Id="c67de03d-9482-4c9a-a6b9-e619f5aef380" Description="The number of instances of this element/collection, for each parent element." Name="Cardinality" DisplayName="Cardinality" DefaultValue="OneToOne" Category="Structure">
           <Type>
-            <ExternalTypeMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime/Cardinality" />
+            <ExternalTypeMoniker Name="/NuPattern.Runtime/Cardinality" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="b8f5717a-75e0-4afe-be12-dda9dc292df3" Description="The displayed caption for the cardinality." Name="CardinalityCaption" DisplayName="Cardinality Caption" Kind="Calculated" Category="Structure" IsBrowsable="false" IsUIReadOnly="true">
@@ -773,16 +773,16 @@
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.Editor">
               <Parameters>
-                <AttributeParameter Value="typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor)" />
+                <AttributeParameter Value="typeof(NuPattern.ComponentModel.Design.StandardValuesEditor)" />
                 <AttributeParameter Value="typeof(System.Drawing.Design.UITypeEditor)" />
               </Parameters>
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(Microsoft.VisualStudio.Patterning.Extensibility.FullTypeTypeConverter&lt;System.Collections.IComparer&gt;)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.FullTypeTypeConverter&lt;System.Collections.IComparer&gt;)" />
               </Parameters>
             </ClrAttribute>
-            <ClrAttribute Name="Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
+            <ClrAttribute Name="NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
           </Attributes>
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
@@ -806,7 +806,7 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="932e4f6e-8c17-4cdd-923e-409a627ba93c" Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasProvidedExtensionPoints" Name="PatternHasProvidedExtensionPoints" DisplayName="Pattern Has Provided Extension Points" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema" IsEmbedding="true">
+    <DomainRelationship Id="932e4f6e-8c17-4cdd-923e-409a627ba93c" Description="Description for NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints" Name="PatternHasProvidedExtensionPoints" DisplayName="Pattern Has Provided Extension Points" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Schema" IsEmbedding="true">
       <Source>
         <DomainRole Id="ac61bcdd-4aa4-44a2-b7a1-d71a7f46999a" Description="The extension points of other patterns that this pattern extends." Name="PatternSchema" DisplayName="Pattern Schema" PropertyName="ProvidedExtensionPoints" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Provided Extension Points">
           <RolePlayer>
@@ -822,12 +822,12 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="936a92cc-4eec-4e05-84b5-4dca5b2845bd" Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints" Name="ElementHasExtensionPoints" DisplayName="Element Has Extension Points" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema" IsEmbedding="true">
+    <DomainRelationship Id="936a92cc-4eec-4e05-84b5-4dca5b2845bd" Description="Description for NuPattern.Runtime.Schema.ElementHasExtensionPoints" Name="ElementHasExtensionPoints" DisplayName="Element Has Extension Points" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Schema" IsEmbedding="true">
       <Notes>Skip=true</Notes>
       <Properties>
         <DomainProperty Id="5852a2c3-b9c7-4833-9d7d-1374e473bd2d" Description="The number of instances of this extension, for each parent element." Name="Cardinality" DisplayName="Cardinality" DefaultValue="OneToOne" Category="Structure">
           <Type>
-            <ExternalTypeMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime/Cardinality" />
+            <ExternalTypeMoniker Name="/NuPattern.Runtime/Cardinality" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="ad438cd3-81c7-45aa-ad4f-8199952a0831" Description="The displayed caption for the cardinality." Name="CardinalityCaption" DisplayName="Cardinality Caption" Kind="Calculated" Category="Structure" IsBrowsable="false" IsUIReadOnly="true">
@@ -844,16 +844,16 @@
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.Editor">
               <Parameters>
-                <AttributeParameter Value="typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor)" />
+                <AttributeParameter Value="typeof(NuPattern.ComponentModel.Design.StandardValuesEditor)" />
                 <AttributeParameter Value="typeof(System.Drawing.Design.UITypeEditor)" />
               </Parameters>
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(Microsoft.VisualStudio.Patterning.Extensibility.FullTypeTypeConverter&lt;System.Collections.IComparer&gt;)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.FullTypeTypeConverter&lt;System.Collections.IComparer&gt;)" />
               </Parameters>
             </ClrAttribute>
-            <ClrAttribute Name="Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
+            <ClrAttribute Name="NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
           </Attributes>
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
@@ -876,12 +876,12 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="990a7838-e437-42ab-8bd6-2accfad82fc7" Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints" Name="ViewHasExtensionPoints" DisplayName="View Has Extension Points" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema" IsEmbedding="true">
+    <DomainRelationship Id="990a7838-e437-42ab-8bd6-2accfad82fc7" Description="Description for NuPattern.Runtime.Schema.ViewHasExtensionPoints" Name="ViewHasExtensionPoints" DisplayName="View Has Extension Points" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Schema" IsEmbedding="true">
       <Notes>Skip=true</Notes>
       <Properties>
         <DomainProperty Id="d3949f1f-1041-4a92-80b6-c17f6051119e" Description="The number of instances of this extension, for this view." Name="Cardinality" DisplayName="Cardinality" DefaultValue="OneToOne" Category="Structure">
           <Type>
-            <ExternalTypeMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime/Cardinality" />
+            <ExternalTypeMoniker Name="/NuPattern.Runtime/Cardinality" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="fb7c5df4-ebb1-4680-8bf2-581947a61524" Description="The displayed caption for the cardinality." Name="CardinalityCaption" DisplayName="Cardinality Caption" Kind="Calculated" Category="Structure" IsBrowsable="false" IsUIReadOnly="true">
@@ -898,16 +898,16 @@
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.Editor">
               <Parameters>
-                <AttributeParameter Value="typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor)" />
+                <AttributeParameter Value="typeof(NuPattern.ComponentModel.Design.StandardValuesEditor)" />
                 <AttributeParameter Value="typeof(System.Drawing.Design.UITypeEditor)" />
               </Parameters>
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(Microsoft.VisualStudio.Patterning.Extensibility.FullTypeTypeConverter&lt;System.Collections.IComparer&gt;)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.FullTypeTypeConverter&lt;System.Collections.IComparer&gt;)" />
               </Parameters>
             </ClrAttribute>
-            <ClrAttribute Name="Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
+            <ClrAttribute Name="NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
           </Attributes>
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
@@ -931,7 +931,7 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="66cfcfbd-f570-48a2-a9e7-a317c9779ca0" Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings" Name="PatternElementHasAutomationSettings" DisplayName="Pattern Element Has Automation Settings" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema" IsEmbedding="true">
+    <DomainRelationship Id="66cfcfbd-f570-48a2-a9e7-a317c9779ca0" Description="Description for NuPattern.Runtime.Schema.PatternElementHasAutomationSettings" Name="PatternElementHasAutomationSettings" DisplayName="Pattern Element Has Automation Settings" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Schema" IsEmbedding="true">
       <Source>
         <DomainRole Id="5f06d1b0-aba7-4689-8c74-e92735685207" Description="The automation settings of this element." Name="PatternElementSchema" DisplayName="Pattern Element Schema" PropertyName="AutomationSettings" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Automation Settings">
           <RolePlayer>
@@ -965,34 +965,34 @@
     <ExternalType Name="Guid" Namespace="System" />
     <ExternalType Name="Boolean" Namespace="System" />
     <ExternalType Name="Char" Namespace="System" />
-    <ExternalType Name="CustomizationState" Namespace="Microsoft.VisualStudio.Patterning.Runtime" />
-    <ExternalType Name="CustomizedLevel" Namespace="Microsoft.VisualStudio.Patterning.Runtime" />
+    <ExternalType Name="CustomizationState" Namespace="NuPattern.Runtime" />
+    <ExternalType Name="CustomizedLevel" Namespace="NuPattern.Runtime" />
     <ExternalType Name="Color" Namespace="System.Drawing" />
-    <ExternalType Name="Cardinality" Namespace="Microsoft.VisualStudio.Patterning.Runtime" />
+    <ExternalType Name="Cardinality" Namespace="NuPattern.Runtime" />
     <ExternalType Name="Image" Namespace="System.Drawing" />
-    <DomainEnumeration Name="CustomizationEnabledState" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema" AccessModifier="Assembly" Description="The combined state of IsEnabled and IsCustomizable.">
+    <DomainEnumeration Name="CustomizationEnabledState" Namespace="NuPattern.Runtime.Schema" AccessModifier="Assembly" Description="The combined state of IsEnabled and IsCustomizable.">
       <Literals>
-        <EnumerationLiteral Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizationEnabledState.FalseEnabled" Name="FalseEnabled" Value="" />
-        <EnumerationLiteral Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizationEnabledState.FalseDisabled" Name="FalseDisabled" Value="" />
-        <EnumerationLiteral Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizationEnabledState.InheritedEnabled" Name="InheritedEnabled" Value="" />
-        <EnumerationLiteral Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizationEnabledState.TrueDisabled" Name="TrueDisabled" Value="" />
-        <EnumerationLiteral Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizationEnabledState.TrueEnabled" Name="TrueEnabled" Value="" />
-        <EnumerationLiteral Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizationEnabledState.InheritedDisabled" Name="InheritedDisabled" Value="" />
+        <EnumerationLiteral Description="Description for NuPattern.Runtime.Schema.CustomizationEnabledState.FalseEnabled" Name="FalseEnabled" Value="" />
+        <EnumerationLiteral Description="Description for NuPattern.Runtime.Schema.CustomizationEnabledState.FalseDisabled" Name="FalseDisabled" Value="" />
+        <EnumerationLiteral Description="Description for NuPattern.Runtime.Schema.CustomizationEnabledState.InheritedEnabled" Name="InheritedEnabled" Value="" />
+        <EnumerationLiteral Description="Description for NuPattern.Runtime.Schema.CustomizationEnabledState.TrueDisabled" Name="TrueDisabled" Value="" />
+        <EnumerationLiteral Description="Description for NuPattern.Runtime.Schema.CustomizationEnabledState.TrueEnabled" Name="TrueEnabled" Value="" />
+        <EnumerationLiteral Description="Description for NuPattern.Runtime.Schema.CustomizationEnabledState.InheritedDisabled" Name="InheritedDisabled" Value="" />
       </Literals>
     </DomainEnumeration>
-    <DomainEnumeration Name="CustomizableDomainElementSettingType" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema" AccessModifier="Assembly" Description="The kinds of domain element that has been marked as customizable.">
+    <DomainEnumeration Name="CustomizableDomainElementSettingType" Namespace="NuPattern.Runtime.Schema" AccessModifier="Assembly" Description="The kinds of domain element that has been marked as customizable.">
       <Literals>
         <EnumerationLiteral Description="The domain property is customizable as a whole." Name="DomainProperty" Value="" />
         <EnumerationLiteral Description="The domain role, and all its child elements are customizable as a whole." Name="DomainRole" Value="" />
       </Literals>
     </DomainEnumeration>
-    <ExternalType Name="AutomationSettingsClassification" Namespace="Microsoft.VisualStudio.Patterning.Runtime" />
-    <ExternalType Name="PropertyUsages" Namespace="Microsoft.VisualStudio.Patterning.Runtime" />
-    <ExternalType Name="IBindingSettings" Namespace="Microsoft.VisualStudio.Patterning.Runtime" />
-    <ExternalType Name="NamedElementSchemaNameProvider" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema" />
+    <ExternalType Name="AutomationSettingsClassification" Namespace="NuPattern.Runtime" />
+    <ExternalType Name="PropertyUsages" Namespace="NuPattern.Runtime" />
+    <ExternalType Name="IBindingSettings" Namespace="NuPattern.Runtime" />
+    <ExternalType Name="NamedElementSchemaNameProvider" Namespace="NuPattern.Runtime.Schema" />
   </Types>
   <Shapes>
-    <CompartmentShape Id="6d4c3263-f5e1-49e0-b1be-d7188c1157eb" Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternShape" Name="PatternShape" DisplayName="Pattern Shape" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema" GeneratesDoubleDerived="true" FixedTooltipText="Pattern" OutlineColor="DarkGray" InitialWidth="2" InitialHeight="0.5" OutlineThickness="0.01" FillGradientMode="None" Geometry="Rectangle">
+    <CompartmentShape Id="6d4c3263-f5e1-49e0-b1be-d7188c1157eb" Description="Description for NuPattern.Runtime.Schema.PatternShape" Name="PatternShape" DisplayName="Pattern Shape" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Schema" GeneratesDoubleDerived="true" FixedTooltipText="Pattern" OutlineColor="DarkGray" InitialWidth="2" InitialHeight="0.5" OutlineThickness="0.01" FillGradientMode="None" Geometry="Rectangle">
       <BaseCompartmentShape>
         <CompartmentShapeMoniker Name="CustomizableElementShape" />
       </BaseCompartmentShape>
@@ -1023,13 +1023,13 @@
         <ExpandCollapseDecorator Name="ExpandCollapseDecorator" DisplayName="Expand Collapse Decorator" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0.0225" VerticalOffset="-0.025">
-        <IconDecorator Name="InheritedFromBaseDecorator" DisplayName="Inherited From Base Decorator" DefaultIcon="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\Inherited.png" />
+        <IconDecorator Name="InheritedFromBaseDecorator" DisplayName="Inherited From Base Decorator" DefaultIcon="..\..\..\Images\Inherited.png" />
       </ShapeHasDecorators>
       <Compartment Name="Properties" Title="Variable Properties" />
       <Compartment TitleFillColor="234, 234, 234" Name="LaunchPoints" Title="Launch Points" />
       <Compartment TitleFillColor="234, 234, 234" Name="Automation" Title="Automation" />
     </CompartmentShape>
-    <CompartmentShape Id="c5328ad8-6b7c-4688-97aa-dd2e25d8b1fc" Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementShape" Name="ElementShape" DisplayName="Element Shape" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema" GeneratesDoubleDerived="true" FixedTooltipText="Variability Element" FillColor="165, 198, 165" OutlineColor="White" InitialWidth="1.6" InitialHeight="0.5" OutlineThickness="0.03" FillGradientMode="None" Geometry="RoundedRectangle">
+    <CompartmentShape Id="c5328ad8-6b7c-4688-97aa-dd2e25d8b1fc" Description="Description for NuPattern.Runtime.Schema.ElementShape" Name="ElementShape" DisplayName="Element Shape" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Schema" GeneratesDoubleDerived="true" FixedTooltipText="Variability Element" FillColor="165, 198, 165" OutlineColor="White" InitialWidth="1.6" InitialHeight="0.5" OutlineThickness="0.03" FillGradientMode="None" Geometry="RoundedRectangle">
       <BaseCompartmentShape>
         <CompartmentShapeMoniker Name="CustomizableElementShape" />
       </BaseCompartmentShape>
@@ -1057,7 +1057,7 @@
         <TextDecorator Name="StereotypeDecorator" DisplayName="Stereotype Decorator" DefaultText="Element" FontSize="7" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0.0225" VerticalOffset="0">
-        <IconDecorator Name="InheritedFromBaseDecorator" DisplayName="Inherited From Base Decorator" DefaultIcon="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\Inherited.png" />
+        <IconDecorator Name="InheritedFromBaseDecorator" DisplayName="Inherited From Base Decorator" DefaultIcon="..\..\..\Images\Inherited.png" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopRight" HorizontalOffset="0" VerticalOffset="0">
         <ExpandCollapseDecorator Name="ExpandCollapseDecorator" DisplayName="Expand Collapse Decorator" />
@@ -1066,7 +1066,7 @@
       <Compartment TitleFillColor="234, 234, 234" Name="LaunchPoints" Title="Launch Points" />
       <Compartment TitleFillColor="234, 234, 234" Name="Automation" Title="Automation" />
     </CompartmentShape>
-    <Port Id="bc4bc41e-9104-45be-b98b-ee0caf55331f" Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewShape" Name="ViewShape" DisplayName="View Shape" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema" GeneratesDoubleDerived="true" FixedTooltipText="View Shape" FillColor="WhiteSmoke" OutlineColor="DarkGray" InitialWidth="2" InitialHeight="0.25" OutlineThickness="0.01" FillGradientMode="ForwardDiagonal" Geometry="Rectangle">
+    <Port Id="bc4bc41e-9104-45be-b98b-ee0caf55331f" Description="Description for NuPattern.Runtime.Schema.ViewShape" Name="ViewShape" DisplayName="View Shape" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Schema" GeneratesDoubleDerived="true" FixedTooltipText="View Shape" FillColor="WhiteSmoke" OutlineColor="DarkGray" InitialWidth="2" InitialHeight="0.25" OutlineThickness="0.01" FillGradientMode="ForwardDiagonal" Geometry="Rectangle">
       <Properties>
         <DomainProperty Id="ee96117e-2f48-4493-9c53-b7bc52fb7dbe" Description="The color of the shape fill, in tailoring mode." Name="TailoringFillColor" DisplayName="Tailoring Fill Color" DefaultValue="WhiteSmoke" GetterAccessModifier="Assembly" SetterAccessModifier="Assembly" IsBrowsable="false" IsUIReadOnly="true">
           <Type>
@@ -1093,28 +1093,28 @@
         <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" FontStyle="Bold, Italic" FontSize="10" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0.0225" VerticalOffset="-0.025">
-        <IconDecorator Name="InheritedFromBaseDecorator" DisplayName="Inherited From Base Decorator" DefaultIcon="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\Inherited.png" />
+        <IconDecorator Name="InheritedFromBaseDecorator" DisplayName="Inherited From Base Decorator" DefaultIcon="..\..\..\Images\Inherited.png" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0.1925" VerticalOffset="-0.025">
-        <IconDecorator Name="CustomizationTrueEnabledDecorator" DisplayName="Customization True Enabled Decorator" DefaultIcon="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\CustomizationTrueEnabled.png" />
+        <IconDecorator Name="CustomizationTrueEnabledDecorator" DisplayName="Customization True Enabled Decorator" DefaultIcon="..\..\..\Images\CustomizationTrueEnabled.png" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0.1925" VerticalOffset="-0.025">
-        <IconDecorator Name="CustomizationTrueDisabledDecorator" DisplayName="Customization True Disabled Decorator" DefaultIcon="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\CustomizationTrueDisabled.png" />
+        <IconDecorator Name="CustomizationTrueDisabledDecorator" DisplayName="Customization True Disabled Decorator" DefaultIcon="..\..\..\Images\CustomizationTrueDisabled.png" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0.1925" VerticalOffset="-0.025">
-        <IconDecorator Name="CustomizationFalseEnabledDecorator" DisplayName="Customization False Enabled Decorator" DefaultIcon="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\CustomizationFalseEnabled.png" />
+        <IconDecorator Name="CustomizationFalseEnabledDecorator" DisplayName="Customization False Enabled Decorator" DefaultIcon="..\..\..\Images\CustomizationFalseEnabled.png" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0.1925" VerticalOffset="-0.025">
-        <IconDecorator Name="CustomizationFalseDisabledDecorator" DisplayName="Customization False Disabled Decorator" DefaultIcon="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\CustomizationFalseDisabled.png" />
+        <IconDecorator Name="CustomizationFalseDisabledDecorator" DisplayName="Customization False Disabled Decorator" DefaultIcon="..\..\..\Images\CustomizationFalseDisabled.png" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0.1925" VerticalOffset="-0.025">
-        <IconDecorator Name="CustomizationInheritedEnabledDecorator" DisplayName="Customization Inherited Enabled Decorator" DefaultIcon="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\CustomizationInheritedEnabled.png" />
+        <IconDecorator Name="CustomizationInheritedEnabledDecorator" DisplayName="Customization Inherited Enabled Decorator" DefaultIcon="..\..\..\Images\CustomizationInheritedEnabled.png" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0.1925" VerticalOffset="-0.025">
-        <IconDecorator Name="CustomizationInheritedDisabledDecorator" DisplayName="Customization Inherited Disabled Decorator" DefaultIcon="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\CustomizationInheritedDisabled.png" />
+        <IconDecorator Name="CustomizationInheritedDisabledDecorator" DisplayName="Customization Inherited Disabled Decorator" DefaultIcon="..\..\..\Images\CustomizationInheritedDisabled.png" />
       </ShapeHasDecorators>
     </Port>
-    <CompartmentShape Id="33005d46-3de2-402a-bca3-9b7e89fa8486" Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionShape" Name="CollectionShape" DisplayName="Collection Shape" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema" GeneratesDoubleDerived="true" FixedTooltipText="Variable Collection" FillColor="255, 216, 98" OutlineColor="White" InitialWidth="1.6" InitialHeight="0.5" OutlineThickness="0.03" FillGradientMode="None" Geometry="RoundedRectangle" DefaultExpandCollapseState="Collapsed">
+    <CompartmentShape Id="33005d46-3de2-402a-bca3-9b7e89fa8486" Description="Description for NuPattern.Runtime.Schema.CollectionShape" Name="CollectionShape" DisplayName="Collection Shape" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Schema" GeneratesDoubleDerived="true" FixedTooltipText="Variable Collection" FillColor="255, 216, 98" OutlineColor="White" InitialWidth="1.6" InitialHeight="0.5" OutlineThickness="0.03" FillGradientMode="None" Geometry="RoundedRectangle" DefaultExpandCollapseState="Collapsed">
       <BaseCompartmentShape>
         <CompartmentShapeMoniker Name="CustomizableElementShape" />
       </BaseCompartmentShape>
@@ -1145,33 +1145,33 @@
         <TextDecorator Name="StereotypeDecorator" DisplayName="Stereotype Decorator" DefaultText="Collection" FontSize="7" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0.0225" VerticalOffset="-0.025">
-        <IconDecorator Name="InheritedFromBaseDecorator" DisplayName="Inherited From Base Decorator" DefaultIcon="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\Inherited.png" />
+        <IconDecorator Name="InheritedFromBaseDecorator" DisplayName="Inherited From Base Decorator" DefaultIcon="..\..\..\Images\Inherited.png" />
       </ShapeHasDecorators>
       <Compartment TitleFillColor="234, 234, 234" Name="Properties" Title="Variable Properties" />
       <Compartment TitleFillColor="234, 234, 234" Name="LaunchPoints" Title="Launch Points" />
       <Compartment TitleFillColor="234, 234, 234" Name="Automation" Title="Automation" />
     </CompartmentShape>
-    <CompartmentShape Id="c7199c01-4aad-496c-b124-f7016fba3749" Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementShape" Name="CustomizableElementShape" DisplayName="Customizable Element Shape" InheritanceModifier="Abstract" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema" FixedTooltipText="Customizable Element Shape" InitialHeight="1.1" Geometry="Rectangle">
+    <CompartmentShape Id="c7199c01-4aad-496c-b124-f7016fba3749" Description="Description for NuPattern.Runtime.Schema.CustomizableElementShape" Name="CustomizableElementShape" DisplayName="Customizable Element Shape" InheritanceModifier="Abstract" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Schema" FixedTooltipText="Customizable Element Shape" InitialHeight="1.1" Geometry="Rectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0.0225" VerticalOffset="0.1475">
-        <IconDecorator Name="CustomizationTrueEnabledDecorator" DisplayName="Customization True Enabled Decorator" DefaultIcon="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\CustomizationTrueEnabled.png" />
+        <IconDecorator Name="CustomizationTrueEnabledDecorator" DisplayName="Customization True Enabled Decorator" DefaultIcon="..\..\..\Images\CustomizationTrueEnabled.png" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0.0225" VerticalOffset="0.1475">
-        <IconDecorator Name="CustomizationTrueDisabledDecorator" DisplayName="Customization True Disabled Decorator" DefaultIcon="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\CustomizationTrueDisabled.png" />
+        <IconDecorator Name="CustomizationTrueDisabledDecorator" DisplayName="Customization True Disabled Decorator" DefaultIcon="..\..\..\Images\CustomizationTrueDisabled.png" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0.0225" VerticalOffset="0.1475">
-        <IconDecorator Name="CustomizationFalseEnabledDecorator" DisplayName="Customization False Enabled Decorator" DefaultIcon="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\CustomizationFalseEnabled.png" />
+        <IconDecorator Name="CustomizationFalseEnabledDecorator" DisplayName="Customization False Enabled Decorator" DefaultIcon="..\..\..\Images\CustomizationFalseEnabled.png" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0.0225" VerticalOffset="0.1475">
-        <IconDecorator Name="CustomizationFalseDisabledDecorator" DisplayName="Customization False Disabled Decorator" DefaultIcon="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\CustomizationFalseDisabled.png" />
+        <IconDecorator Name="CustomizationFalseDisabledDecorator" DisplayName="Customization False Disabled Decorator" DefaultIcon="..\..\..\Images\CustomizationFalseDisabled.png" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0.0225" VerticalOffset="0.1475">
-        <IconDecorator Name="CustomizationInheritedEnabledDecorator" DisplayName="Customization Inherited Enabled Decorator" DefaultIcon="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\CustomizationInheritedEnabled.png" />
+        <IconDecorator Name="CustomizationInheritedEnabledDecorator" DisplayName="Customization Inherited Enabled Decorator" DefaultIcon="..\..\..\Images\CustomizationInheritedEnabled.png" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0.0225" VerticalOffset="0.1475">
-        <IconDecorator Name="CustomizationInheritedDisabledDecorator" DisplayName="Customization Inherited Disabled Decorator" DefaultIcon="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\CustomizationInheritedDisabled.png" />
+        <IconDecorator Name="CustomizationInheritedDisabledDecorator" DisplayName="Customization Inherited Disabled Decorator" DefaultIcon="..\..\..\Images\CustomizationInheritedDisabled.png" />
       </ShapeHasDecorators>
     </CompartmentShape>
-    <CompartmentShape Id="268f9015-d395-4b5c-bc4f-2f671b82e04d" Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointShape" Name="ExtensionPointShape" DisplayName="Extension Point Shape" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema" GeneratesDoubleDerived="true" FixedTooltipText="Extension Point" FillColor="153, 204, 205" OutlineColor="White" InitialWidth="1.6" InitialHeight="0.5" OutlineThickness="0.03" FillGradientMode="None" Geometry="RoundedRectangle">
+    <CompartmentShape Id="268f9015-d395-4b5c-bc4f-2f671b82e04d" Description="Description for NuPattern.Runtime.Schema.ExtensionPointShape" Name="ExtensionPointShape" DisplayName="Extension Point Shape" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Schema" GeneratesDoubleDerived="true" FixedTooltipText="Extension Point" FillColor="153, 204, 205" OutlineColor="White" InitialWidth="1.6" InitialHeight="0.5" OutlineThickness="0.03" FillGradientMode="None" Geometry="RoundedRectangle">
       <BaseCompartmentShape>
         <CompartmentShapeMoniker Name="CustomizableElementShape" />
       </BaseCompartmentShape>
@@ -1199,7 +1199,7 @@
         <TextDecorator Name="StereotypeDecorator" DisplayName="Stereotype Decorator" DefaultText="Extension Point" FontSize="7" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0.0225" VerticalOffset="0">
-        <IconDecorator Name="InheritedFromBaseDecorator" DisplayName="Inherited From Base Decorator" DefaultIcon="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\Inherited.png" />
+        <IconDecorator Name="InheritedFromBaseDecorator" DisplayName="Inherited From Base Decorator" DefaultIcon="..\..\..\Images\Inherited.png" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopRight" HorizontalOffset="0" VerticalOffset="0">
         <ExpandCollapseDecorator Name="ExpandCollapseDecorator" DisplayName="Expand Collapse Decorator" />
@@ -1208,7 +1208,7 @@
     </CompartmentShape>
   </Shapes>
   <Connectors>
-    <Connector Id="4ab6824f-a9cf-45a6-9ac6-5a65b60fe5a0" Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElementsConnector" Name="ViewHasElementsConnector" DisplayName="View Has Elements Connector" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema" FixedTooltipText="View Has Elements Connector">
+    <Connector Id="4ab6824f-a9cf-45a6-9ac6-5a65b60fe5a0" Description="Description for NuPattern.Runtime.Schema.ViewHasElementsConnector" Name="ViewHasElementsConnector" DisplayName="View Has Elements Connector" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Schema" FixedTooltipText="View Has Elements Connector">
       <BaseConnector>
         <ConnectorMoniker Name="PatternElementConnector" />
       </BaseConnector>
@@ -1216,7 +1216,7 @@
         <TextDecorator Name="CardinalityDecorator" DisplayName="Cardinality Decorator" DefaultText="" />
       </ConnectorHasDecorators>
     </Connector>
-    <Connector Id="d880db25-406b-41e8-b8ec-0a0de1e3ac5d" Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElementsConnector" Name="ElementHasElementsConnector" DisplayName="Element Has Elements Connector" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema" FixedTooltipText="Element Has Elements Connector">
+    <Connector Id="d880db25-406b-41e8-b8ec-0a0de1e3ac5d" Description="Description for NuPattern.Runtime.Schema.ElementHasElementsConnector" Name="ElementHasElementsConnector" DisplayName="Element Has Elements Connector" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Schema" FixedTooltipText="Element Has Elements Connector">
       <BaseConnector>
         <ConnectorMoniker Name="PatternElementConnector" />
       </BaseConnector>
@@ -1224,7 +1224,7 @@
         <TextDecorator Name="CardinalityDecorator" DisplayName="Cardinality Decorator" DefaultText="" />
       </ConnectorHasDecorators>
     </Connector>
-    <Connector Id="147c9db8-7ff8-4426-a8f7-2ffa38cc6bad" Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementConnector" Name="PatternElementConnector" DisplayName="Pattern Element Connector" InheritanceModifier="Abstract" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema" GeneratesDoubleDerived="true" FixedTooltipText="Pattern Element Connector" TextColor="102, 102, 102" Color="102, 102, 102" SourceEndStyle="FilledDiamond" Thickness="0.03">
+    <Connector Id="147c9db8-7ff8-4426-a8f7-2ffa38cc6bad" Description="Description for NuPattern.Runtime.Schema.PatternElementConnector" Name="PatternElementConnector" DisplayName="Pattern Element Connector" InheritanceModifier="Abstract" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Schema" GeneratesDoubleDerived="true" FixedTooltipText="Pattern Element Connector" TextColor="102, 102, 102" Color="102, 102, 102" SourceEndStyle="FilledDiamond" Thickness="0.03">
       <Properties>
         <DomainProperty Id="7b3d245c-8d9d-4130-be33-bce008d2d047" Description="The color of the connector, in tailoring mode." Name="TailoringOutlineColor" DisplayName="Tailoring Outline Color" DefaultValue="178,178,178" GetterAccessModifier="Assembly" SetterAccessModifier="Assembly" IsBrowsable="false" IsUIReadOnly="true">
           <Type>
@@ -1238,7 +1238,7 @@
         </DomainProperty>
       </Properties>
     </Connector>
-    <Connector Id="5ff64aa7-63bd-4ae6-8395-fc955f077c42" Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPointsConnector" Name="ElementHasExtensionPointsConnector" DisplayName="Element Has Extension Points Connector" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema" FixedTooltipText="Element Has Extension Points Connector">
+    <Connector Id="5ff64aa7-63bd-4ae6-8395-fc955f077c42" Description="Description for NuPattern.Runtime.Schema.ElementHasExtensionPointsConnector" Name="ElementHasExtensionPointsConnector" DisplayName="Element Has Extension Points Connector" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Schema" FixedTooltipText="Element Has Extension Points Connector">
       <BaseConnector>
         <ConnectorMoniker Name="PatternElementConnector" />
       </BaseConnector>
@@ -1246,7 +1246,7 @@
         <TextDecorator Name="CardinalityDecorator" DisplayName="Cardinality Decorator" DefaultText="" />
       </ConnectorHasDecorators>
     </Connector>
-    <Connector Id="54c171e1-89d9-4023-89a6-8cddb13bda44" Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPointsConnector" Name="ViewHasExtensionPointsConnector" DisplayName="View Has Extension Points Connector" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema" FixedTooltipText="View Has Extension Points Connector">
+    <Connector Id="54c171e1-89d9-4023-89a6-8cddb13bda44" Description="Description for NuPattern.Runtime.Schema.ViewHasExtensionPointsConnector" Name="ViewHasExtensionPointsConnector" DisplayName="View Has Extension Points Connector" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Schema" FixedTooltipText="View Has Extension Points Connector">
       <BaseConnector>
         <ConnectorMoniker Name="PatternElementConnector" />
       </BaseConnector>
@@ -1255,7 +1255,7 @@
       </ConnectorHasDecorators>
     </Connector>
   </Connectors>
-  <XmlSerializationBehavior Name="PatternModelSerializationBehavior" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema">
+  <XmlSerializationBehavior Name="PatternModelSerializationBehavior" Namespace="NuPattern.Runtime.Schema">
     <ClassData>
       <XmlClassData TypeName="PatternModelSchema" MonikerAttributeName="" SerializeId="true" MonikerElementName="patternModelSchemaMoniker" ElementName="patternModel" MonikerTypeName="PatternModelSchemaMoniker">
         <DomainClassMoniker Name="PatternModelSchema" />
@@ -1761,14 +1761,14 @@
     </ClassData>
   </XmlSerializationBehavior>
   <ExplorerBehavior Name="PatternModelExplorer" />
-  <Diagram Id="bbbccbe0-cf42-4307-b8a3-d9ac6b7169ff" Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchemaDiagram" Name="PatternModelSchemaDiagram" DisplayName="Pattern Model Schema Diagram" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema" GeneratesDoubleDerived="true" FillColor="Silver">
+  <Diagram Id="bbbccbe0-cf42-4307-b8a3-d9ac6b7169ff" Description="Description for NuPattern.Runtime.Schema.PatternModelSchemaDiagram" Name="PatternModelSchemaDiagram" DisplayName="Pattern Model Schema Diagram" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Schema" GeneratesDoubleDerived="true" FillColor="Silver">
     <Properties>
       <DomainProperty Id="dcf24a57-f408-4ebb-a7e9-ba4abd2ef52e" Description="The color of the gradient in the title of the background." Name="AuthoringGradientColor" DisplayName="Authoring Gradient Color" DefaultValue="WhiteSmoke" GetterAccessModifier="Assembly" SetterAccessModifier="Assembly" IsBrowsable="false" IsUIReadOnly="true">
         <Type>
           <ExternalTypeMoniker Name="/System.Drawing/Color" />
         </Type>
       </DomainProperty>
-      <DomainProperty Id="0e90079d-12aa-433b-9e16-3bb229a6d5ab" Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchemaDiagram.Authoring Background Color" Name="AuthoringBackgroundColor" DisplayName="Authoring Background Color" DefaultValue="White" GetterAccessModifier="Assembly" SetterAccessModifier="Assembly" IsBrowsable="false" IsUIReadOnly="true">
+      <DomainProperty Id="0e90079d-12aa-433b-9e16-3bb229a6d5ab" Description="Description for NuPattern.Runtime.Schema.PatternModelSchemaDiagram.Authoring Background Color" Name="AuthoringBackgroundColor" DisplayName="Authoring Background Color" DefaultValue="White" GetterAccessModifier="Assembly" SetterAccessModifier="Assembly" IsBrowsable="false" IsUIReadOnly="true">
         <Type>
           <ExternalTypeMoniker Name="/System.Drawing/Color" />
         </Type>
@@ -1783,7 +1783,7 @@
           <ExternalTypeMoniker Name="/System.Drawing/Color" />
         </Type>
       </DomainProperty>
-      <DomainProperty Id="42510b7f-442b-45fe-9932-dae575609522" Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchemaDiagram.Tailoring Background Color" Name="TailoringBackgroundColor" DisplayName="Tailoring Background Color" DefaultValue="204, 204, 204" GetterAccessModifier="Assembly" SetterAccessModifier="Assembly" IsBrowsable="false" IsUIReadOnly="true">
+      <DomainProperty Id="42510b7f-442b-45fe-9932-dae575609522" Description="Description for NuPattern.Runtime.Schema.PatternModelSchemaDiagram.Tailoring Background Color" Name="TailoringBackgroundColor" DisplayName="Tailoring Background Color" DefaultValue="204, 204, 204" GetterAccessModifier="Assembly" SetterAccessModifier="Assembly" IsBrowsable="false" IsUIReadOnly="true">
         <Type>
           <ExternalTypeMoniker Name="/System.Drawing/Color" />
         </Type>
@@ -2436,13 +2436,13 @@
       <XmlSerializationBehaviorMoniker Name="PatternModelSerializationBehavior" />
     </XmlSerializationDefinition>
     <ToolboxTab TabText="Pattern Model Designer">
-      <ElementTool Name="Collection" ToolboxIcon="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\CollectionShapeToolBitmap.bmp" Caption="Collection" Tooltip="Add a Collection to add structure or grouping of other elements in the pattern." HelpKeyword="Collection">
+      <ElementTool Name="Collection" ToolboxIcon="..\..\..\Images\CollectionShapeToolBitmap.bmp" Caption="Collection" Tooltip="Add a Collection to add structure or grouping of other elements in the pattern." HelpKeyword="Collection">
         <DomainClassMoniker Name="CollectionSchema" />
       </ElementTool>
-      <ElementTool Name="Element" ToolboxIcon="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\ElementShapeToolBitmap.bmp" Caption="Element" Tooltip="Add an Element to define a set of variable elements in the pattern." HelpKeyword="Element">
+      <ElementTool Name="Element" ToolboxIcon="..\..\..\Images\ElementShapeToolBitmap.bmp" Caption="Element" Tooltip="Add an Element to define a set of variable elements in the pattern." HelpKeyword="Element">
         <DomainClassMoniker Name="ElementSchema" />
       </ElementTool>
-      <ElementTool Name="ExtensionPoint" ToolboxIcon="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\ExtensionPointToolBitmap.bmp" Caption="Extension Point" Tooltip="Add an Extension Point to define an extension of your pattern, that will be provided by other pattern toolkits." HelpKeyword="ExtensionPoint">
+      <ElementTool Name="ExtensionPoint" ToolboxIcon="..\..\..\Images\ExtensionPointToolBitmap.bmp" Caption="Extension Point" Tooltip="Add an Extension Point to define an extension of your pattern, that will be provided by other pattern toolkits." HelpKeyword="ExtensionPoint">
         <DomainClassMoniker Name="ExtensionPointSchema" />
       </ElementTool>
     </ToolboxTab>

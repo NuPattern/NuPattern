@@ -1,5 +1,5 @@
 ﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
-<#@ output extension=".cs" #>
+<#@ output extension=".gen.cs" #>
 <#@ Dsl processor="DslDirectiveProcessor"  requires="fileName='..\..\DslDefinition.dsl'" #>
 <#@ Include File="..\..\..\..\Common\Helpers\Helpers.tt" #>
 <#@ Include File="..\..\..\..\Common\Helpers\PropertyChangedInterface.tt" #>
@@ -17,8 +17,7 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq.Expressions;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
+using NuPattern.Runtime;
 
 #pragma warning disable 0108
 
@@ -38,7 +37,7 @@ private void GenerateInterface(DomainClass domainClass)
 #>
 namespace <#=this.DslLibrary.Namespace #>
 { <#+
-PushIndent("\t");
+PushIndent("    ");
 
 GeneratePropertyChanged(domainClass, domainClass.Name);
 
@@ -68,7 +67,7 @@ if ((domainClass.BaseClass != null && (domainClass.BaseClass.Name == "ExtensionE
 /// <#=domainClass.Description #>
 /// </summary>
 [GeneratedCode("<#=this.ToolName #>", "<#=this.DslVersion #>")]
-public partial interface I<#=domainClass.Name #> <#+if (baseInterfaces.Count > 0)
+partial interface I<#=domainClass.Name #> <#+if (baseInterfaces.Count > 0)
 { #> : <#=string.Join(", ", baseInterfaces.ToArray()) #><#+} #>
 
 { <#+
@@ -95,7 +94,7 @@ private void GenerateProperty(DomainProperty property)
     if (!PropertyHasGetter(property) && !PropertyHasSetter(property))
         return;
 
-    PushIndent("\t");
+    PushIndent("    ");
 #>
 
 /// <summary>
@@ -200,7 +199,7 @@ private void GenerateProperty(DomainRole role)
                 throw new NotSupportedException();
         }
     }
-    PushIndent("\t");
+    PushIndent("    ");
 #>
 
 /// <summary>
@@ -263,6 +262,6 @@ public Version DslVersion
 
 public string ToolName
 {
-    get { return "Microsoft.VisualStudio.Patterning"; }
+    get { return "NuPattern"; }
 }
 #>

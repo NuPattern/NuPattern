@@ -1,15 +1,16 @@
-﻿using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime;
+﻿using NuPattern.ComponentModel.Design;
+using NuPattern.Library.Properties;
+using NuPattern.Runtime;
+using NuPattern.Runtime.Comparers;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Comparers
+namespace NuPattern.Library.ValueComparers
 {
     /// <summary>
     /// Compares the already established <see cref="IProductElement.InstanceOrder"/> of two elements.
     /// </summary>
-    [DisplayNameResource("PreserveOrderComparer_DisplayName", typeof(Resources))]
-    [DescriptionResource("PreserveOrderComparer_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
+    [DisplayNameResource(@"PreserveOrderComparer_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"PreserveOrderComparer_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     public class PreserveOrderComparer : ProductElementComparer
     {
         /// <summary>

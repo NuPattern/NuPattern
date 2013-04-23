@@ -3,22 +3,21 @@ using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
+using NuPattern.Library.Properties;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Commands
+namespace NuPattern.Library.Commands
 {
     /// <summary>
     /// Creates a new instance of a pattern from another pattern toolkit.
     /// </summary>
-    [DisplayNameResource("InstantiateSolutionElementCommand_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
-    [DescriptionResource("InstantiateSolutionElementCommand_Description", typeof(Resources))]
+    [DisplayNameResource(@"InstantiateSolutionElementCommand_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"InstantiateSolutionElementCommand_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
-    public class InstantiateSolutionElementCommand : FeatureCommand
+    public class InstantiateSolutionElementCommand : Command
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<InstantiateSolutionElementCommand>();
 
@@ -26,8 +25,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
         /// Gets or sets the VSIX ID of the solution element to be added.
         /// </summary>
         [Required(AllowEmptyStrings = false)]
-        [DisplayNameResource("InstantiateSolutionElementCommand_ToolkitIdentifier_DisplayName", typeof(Resources))]
-        [DescriptionResource("InstantiateSolutionElementCommand_ToolkitIdentifier_Description", typeof(Resources))]
+        [DisplayNameResource(@"InstantiateSolutionElementCommand_ToolkitIdentifier_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"InstantiateSolutionElementCommand_ToolkitIdentifier_Description", typeof(Resources))]
         public string ToolkitIdentifier
         {
             get;
@@ -38,8 +37,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
         /// Gets or sets the name that will be used for the element in Solution Builder.
         /// </summary>
         [Required(AllowEmptyStrings = false)]
-        [DisplayNameResource("InstantiateSolutionElementCommand_InstanceName_DisplayName", typeof(Resources))]
-        [DescriptionResource("InstantiateSolutionElementCommand_InstanceName_Description", typeof(Resources))]
+        [DisplayNameResource(@"InstantiateSolutionElementCommand_InstanceName_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"InstantiateSolutionElementCommand_InstanceName_Description", typeof(Resources))]
         public string InstanceName
         {
             get;

@@ -1,0 +1,35 @@
+<#@ output extension=".gen.vstemplate" #>
+<#@ Include File="..\..\..\..\..\..\MasterVersion.gen.ttinclude" #>
+<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Type="Project" Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>MyTemplate1</Name>
+    <Description>A test template</Description>
+    <Icon>__TemplateIcon.ico</Icon>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>MyTemplate1</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <LocationField>Enabled</LocationField>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="MyTemplate1Project.gen.csproj" TargetFileName="MyTemplate1.csproj" ReplaceParameters="true">
+      <ProjectItem TargetFileName="Program.cs" ReplaceParameters="true">Program.cs</ProjectItem>
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem TargetFileName="AssemblyInfo.cs" ReplaceParameters="true">AssemblyInfo.cs</ProjectItem>
+      </Folder>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>NuPattern.VisualStudio.TemplateWizards, Version=<#=VersionInfo.TemplateWizardVersion #>, Culture=neutral, PublicKeyToken=<#=VersionInfo.AssemblyPublicKeyToken#></Assembly>
+    <FullClassName>NuPattern.VisualStudio.TemplateWizards.InstantiationTemplateWizard</FullClassName>
+  </WizardExtension>
+  <WizardExtension>
+    <Assembly>NuPattern.VisualStudio.TemplateWizards, Version=<#=VersionInfo.TemplateWizardVersion #>, Culture=neutral, PublicKeyToken=<#=VersionInfo.AssemblyPublicKeyToken#></Assembly>
+    <FullClassName>NuPattern.VisualStudio.TemplateWizards.ElementReplacementsTemplateWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

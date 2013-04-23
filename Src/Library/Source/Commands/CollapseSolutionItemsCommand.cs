@@ -2,22 +2,22 @@
 using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
+using NuPattern.Library.Properties;
+using NuPattern.Runtime;
+using NuPattern.VisualStudio.Solution;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Commands
+namespace NuPattern.Library.Commands
 {
     /// <summary>
     /// Collapses all solution items from the specified path.
     /// </summary>
-    [DisplayNameResource("CollapseSolutionItemsCommand_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_VisualStudio", typeof(Resources))]
-    [DescriptionResource("CollapseSolutionItemsCommand_Description", typeof(Resources))]
+    [DisplayNameResource(@"CollapseSolutionItemsCommand_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"CollapseSolutionItemsCommand_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_VisualStudio", typeof(Resources))]
     [CLSCompliant(false)]
-    public class CollapseSolutionItemsCommand : FeatureCommand
+    public class CollapseSolutionItemsCommand : Command
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<CollapseSolutionItemsCommand>();
         private const bool DefaultIncludeProjects = false;
@@ -46,8 +46,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
         /// Gets or sets whether to collapse projects.
         /// </summary>
         [DefaultValue(DefaultIncludeProjects)]
-        [DisplayNameResource("CollapseSolutionItemsCommand_IncludeProjects_DisplayName", typeof(Resources))]
-        [DescriptionResource("CollapseSolutionItemsCommand_IncludeProjects_Description", typeof(Resources))]
+        [DisplayNameResource(@"CollapseSolutionItemsCommand_IncludeProjects_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"CollapseSolutionItemsCommand_IncludeProjects_Description", typeof(Resources))]
         public virtual bool IncludeProjects
         {
             get;

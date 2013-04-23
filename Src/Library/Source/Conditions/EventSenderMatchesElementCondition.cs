@@ -2,21 +2,20 @@
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.Patterning.Runtime.Events;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
+using NuPattern.Library.Properties;
+using NuPattern.Runtime;
+using NuPattern.Runtime.Events;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Conditions
+namespace NuPattern.Library.Conditions
 {
     /// <summary>
     /// A <see cref="Condition"/> that evaluates to true if the <see cref="CurrentElement"/> equals the <see cref="Event"/> sender.
     /// </summary>
-    [DisplayNameResource("EventSenderMatchesElementCondition_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
-    [DescriptionResource("EventSenderMatchesElementCondition_Description", typeof(Resources))]
+    [DisplayNameResource(@"EventSenderMatchesElementCondition_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"EventSenderMatchesElementCondition_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class EventSenderMatchesElementCondition : Condition, IEventCondition
     {
@@ -85,7 +84,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Conditions
             var asElement = thing as IProductElement;
             if (asElement != null)
             {
-                return string.Format(CultureInfo.InvariantCulture, "{0}({1})",
+                return string.Format(CultureInfo.InvariantCulture, @"{0}({1})",
                     asElement.InstanceName, asElement.DefinitionName);
             }
             else
@@ -93,12 +92,12 @@ namespace Microsoft.VisualStudio.Patterning.Library.Conditions
                 var asInstance = thing as IInstanceBase;
                 if (asInstance != null)
                 {
-                    return string.Format(CultureInfo.InvariantCulture, "{0}",
+                    return string.Format(CultureInfo.InvariantCulture, @"{0}",
                         asInstance.DefinitionName);
                 }
                 else
                 {
-                    return string.Format(CultureInfo.InvariantCulture, ".NETType:{0}",
+                    return string.Format(CultureInfo.InvariantCulture, @".NETType:{0}",
                         thing.GetType().Name);
                 }
             }

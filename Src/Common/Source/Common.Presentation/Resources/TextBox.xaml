@@ -1,0 +1,35 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="VsVersionStyles.gen.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    
+    <ControlTemplate x:Key="TextBox.ErrorTemplate">
+        <StackPanel Orientation="Horizontal">
+            <AdornedElementPlaceholder />
+            <Image Margin="2,0,0,0" Source="ValidationError.png" />
+        </StackPanel>
+    </ControlTemplate>
+
+    <Style TargetType="TextBox">
+        <Setter Property="Background" Value="{StaticResource VsVersion.TextBox.Fill}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource VsVersion.TextBox.Border}"/>
+        <Setter Property="Foreground" Value="{StaticResource VsVersion.Controls.Text}"/>
+        <Setter Property="CaretBrush" Value="{StaticResource VsVersion.Controls.Text}"/>
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="MinHeight" Value="21" />
+        <Setter Property="Validation.ErrorTemplate" Value="{StaticResource TextBox.ErrorTemplate}" />
+        <Style.Triggers>
+            <Trigger Property="Validation.HasError" Value="true">
+                <Setter Property="ToolTip" Value="{Binding Path=(Validation.Errors)[0].ErrorContent,RelativeSource={x:Static RelativeSource.Self}}" />
+            </Trigger>
+            <Trigger Property="IsFocused" Value="true">
+                <Setter Property="Background" Value="{StaticResource VsVersion.TextBox.FocusedFill}"/>
+                <Setter Property="BorderBrush" Value="{StaticResource VsVersion.TextBox.FocusedBorder}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+</ResourceDictionary>

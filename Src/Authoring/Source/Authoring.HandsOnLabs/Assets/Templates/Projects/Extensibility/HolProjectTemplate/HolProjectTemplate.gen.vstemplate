@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Type="ProjectGroup" Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>Pattern Toolkit Hands-On Labs</Name>
+    <Description>Hands on Labs that guides you through creating and customizing your first Pattern Toolkit project.</Description>
+    <TemplateID>c3c73531a152-PatternToolkitHOLs</TemplateID>
+    <Icon>VsTemplateIconHOLProject.ico</Icon>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>Extensibility</ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>false</CreateNewFolder>
+    <DefaultName>PatternToolkitHandsOnLabs</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <LocationField>Enabled</LocationField>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem />
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>NuPattern.VisualStudio.TemplateWizards, Version=1.0.0.0, Culture=neutral, PublicKeyToken=24c7786d4a8b1a88</Assembly>
+    <FullClassName>NuPattern.VisualStudio.TemplateWizards.InstantiationTemplateWizard</FullClassName>
+  </WizardExtension>
+  <WizardExtension>
+    <Assembly>NuPattern.VisualStudio.TemplateWizards, Version=1.0.0.0, Culture=neutral, PublicKeyToken=24c7786d4a8b1a88</Assembly>
+    <FullClassName>NuPattern.VisualStudio.TemplateWizards.ElementReplacementsTemplateWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

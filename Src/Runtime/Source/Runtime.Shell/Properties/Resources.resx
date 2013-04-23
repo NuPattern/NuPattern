@@ -120,14 +120,46 @@
   <data name="CanNotCreateWindow" xml:space="preserve">
     <value>Can not create tool window.</value>
   </data>
-  <data name="ExplorerWindowTitle" xml:space="preserve">
-    <value>Solution Builder</value>
+  <data name="GuidanceBrowserToolWindow_WindowTitle" xml:space="preserve">
+    <value>Guidance Browser</value>
+  </data>
+  <data name="GuidanceExplorerToolWindow_WindowTitle" xml:space="preserve">
+    <value>Guidance Explorer</value>
+  </data>
+  <data name="RuntimeShellPackage_CheckFertInstalled_Enabled" xml:space="preserve">
+    <value>The following extension is currently installed and enabled: 
+    {0}.
+
+This extension is not compatible with the current version of the '{1}' extension. We recommend that you disable this extension for correct operation.
+
+To remedy this problem, open the 'Extension Manager' window in Visual Studio (Tools menu), disable the listed extension above, and restart Visual Studio.</value>
   </data>
   <data name="RuntimeShellPackage_DependencyNotAvailable" xml:space="preserve">
     <value>The dependency '{0}' could not be found in the repository.</value>
   </data>
   <data name="RuntimeShellPackage_DumpMefLogs" xml:space="preserve">
     <value>A MEF exception happened loading '{0}'. The MEF logs will be opened now for diagnostics.</value>
+  </data>
+  <data name="RuntimeShellPackage_OnAssemblyResolved_ResolvingAssembly" xml:space="preserve">
+    <value>Attempting to resolve partially named assembly '{0}'.</value>
+  </data>
+  <data name="RuntimeShellPackage_OnAssemblyResolved_ResolvingAssemblyFailed" xml:space="preserve">
+    <value>Partially named assembly '{0}', was not resolved to any Pattern Toolkit assembly loaded into the AppDomain.</value>
+  </data>
+  <data name="RuntimeShellPackage_OnAssemblyResolved_ResolvingAssemblyForLoadedAssembly" xml:space="preserve">
+    <value>Partially named assembly '{0}', was loaded into the current AppDomain.</value>
+  </data>
+  <data name="RuntimeShellPackage_OnAssemblyResolved_ResolvingAssemblyForToolkitAssembly" xml:space="preserve">
+    <value>Partially named assembly '{0}', is installed by an enabled Pattern Toolkit.</value>
+  </data>
+  <data name="RuntimeShellPackage_OnAssemblyResolved_ResolvingAssemblySucceeded" xml:space="preserve">
+    <value>Partially named assembly '{0}', was resolved to Pattern Toolkit assembly '{1}'.</value>
+  </data>
+  <data name="RuntimeShellPackage_OnAssemblyResolved_UnexpectedError" xml:space="preserve">
+    <value>Unexpected error resolving partially named assembly, the error was: {0}</value>
+  </data>
+  <data name="SolutionBuilderToolWindow_WindowTitle" xml:space="preserve">
+    <value>Solution Builder</value>
   </data>
   <data name="ToolkitReferencesFolderName" xml:space="preserve">
     <value>Pattern Toolkit References</value>
@@ -144,7 +176,7 @@
   <data name="TraceOptionsPageControl_SourceNameTitle" xml:space="preserve">
     <value>Source Name</value>
   </data>
-  <data name="TraceOutput_WindowTitle" xml:space="preserve">
-    <value>Pattern Toolkit Extensions</value>
+  <data name="VsIdleTaskHost_ErrorRegistration" xml:space="preserve">
+    <value>Failed to register task to perform on VS idle time.</value>
   </data>
 </root>

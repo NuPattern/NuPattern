@@ -1,9 +1,8 @@
 ﻿using System;
 using EnvDTE;
 using Microsoft.VisualStudio.Shell.Interop;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
+namespace NuPattern.Runtime.Shell
 {
     internal class ProductStateValidator : IDisposable
     {

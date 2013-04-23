@@ -1,12 +1,12 @@
 ﻿using System;
-using Microsoft.VisualStudio.Patterning.Extensibility.References;
-using Microsoft.VisualStudio.Patterning.Library.Commands;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Library.Commands;
+using NuPattern.Runtime;
+using NuPattern.Runtime.References;
+using NuPattern.VisualStudio.Solution;
 
-namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
+namespace NuPattern.Library.UnitTests.Commands
 {
     [TestClass]
     public class ActivateArtifactCommandSpec
@@ -17,19 +17,19 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
         public class GivenACommand
         {
             protected Mock<IProductElement> OwnerElement { get; set; }
-            protected Mock<IFxrUriReferenceService> UriService { get; set; }
+            protected Mock<IUriReferenceService> UriService { get; set; }
             protected Mock<ISolution> Solution { get; set; }
             protected ActivateArtifactCommand Command { get; set; }
 
             [TestInitialize]
             public virtual void Initialize()
             {
-                this.UriService = new Mock<IFxrUriReferenceService>();
+                this.UriService = new Mock<IUriReferenceService>();
                 this.OwnerElement = new Mock<IProductElement>();
                 this.OwnerElement
                     .Setup(x => x.Root)
                     .Returns(Mock.Of<IProduct>(p =>
-                        p.ProductState.GetService(typeof(IFxrUriReferenceService)) == this.UriService.Object));
+                        p.ProductState.GetService(typeof(IUriReferenceService)) == this.UriService.Object));
 
                 this.Solution = new Mock<ISolution>();
 
@@ -45,13 +45,13 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
         [TestClass]
         public class GivenACommandWithNoReferences : GivenACommand
         {
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenOpenIsFalse()
             {
                 Assert.False(this.Command.Open);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenArtifactLinkIsNull_ThenNotActivated()
             {
                 this.Command.Execute();
@@ -81,7 +81,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 this.UriService.Setup(service => service.Open(It.IsAny<IItemContainer>(), null));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenArtifactLinkNotResolved_ThenNotActivated()
             {
                 this.UriService.Setup(service => service.ResolveUri<IItemContainer>(new Uri("foo://"))).Returns((IItemContainer)null);
@@ -89,7 +89,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 this.Command.Execute();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenArtifactLinkResolvedAndNotOpen_ThenItemSelectedAndNotOpened()
             {
                 this.Command.Execute();
@@ -98,7 +98,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 this.UriService.Verify(service => service.Open(It.IsAny<IItemContainer>(), null), Times.Never());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenArtifactLinkResolvedAndOpen_ThenItemSelectedAndOpened()
             {
                 this.Command.Open = true;
@@ -135,7 +135,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 this.UriService.Setup(service => service.ResolveUri<IItemContainer>(new Uri("generated://bar/item"))).Returns(generatedItem.Object);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenNothingResolves_ThenNoItemsSelected()
             {
                 this.UriService.Setup(service => service.ResolveUri<IItemContainer>(new Uri("unfolded://foo/item"))).Returns((IItemContainer)null);
@@ -147,7 +147,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 this.generatedItem.Verify(container => container.Select(), Times.Never());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenAllResolves_ThenAllItemsSelected()
             {
                 this.Command.Execute();

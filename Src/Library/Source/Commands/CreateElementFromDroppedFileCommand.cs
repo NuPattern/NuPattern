@@ -4,11 +4,11 @@ using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Windows;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
+using NuPattern.Library.Properties;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Commands
+namespace NuPattern.Library.Commands
 {
     /// <summary>
     /// Creates a new instance of a child element for each dropped file.
@@ -29,8 +29,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
         /// The file extensions which are supported.
         /// </summary>
         [Required(AllowEmptyStrings = false)]
-        [DisplayNameResource("CreateElementFromDroppedFileCommand_Extension_DisplayName", typeof(Resources))]
-        [DescriptionResource("CreateElementFromDroppedFileCommand_Extension_Description", typeof(Resources))]
+        [DisplayNameResource(@"CreateElementFromDroppedFileCommand_Extension_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"CreateElementFromDroppedFileCommand_Extension_Description", typeof(Resources))]
         public virtual string Extension { get; set; }
 
         /// <summary>

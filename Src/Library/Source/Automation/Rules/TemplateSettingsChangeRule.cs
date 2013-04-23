@@ -1,41 +1,41 @@
-﻿using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Modeling;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+﻿using Microsoft.VisualStudio.Modeling;
+using NuPattern.Diagnostics;
+using NuPattern.Library.Properties;
+using NuPattern.VisualStudio;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
-	/// <summary>
-	/// Change rule for <see cref="TemplateSettings"/> domain class.
-	/// </summary>
-	[RuleOn(typeof(TemplateSettings), FireTime = TimeToFire.TopLevelCommit)]
-	public class TemplateSettingsChangeRule : ChangeRule
-	{
-		private static readonly ITraceSource tracer = Tracer.GetSourceFor<TemplateSettingsChangeRule>();
+    /// <summary>
+    /// Change rule for <see cref="TemplateSettings"/> domain class.
+    /// </summary>
+    [RuleOn(typeof(TemplateSettings), FireTime = TimeToFire.TopLevelCommit)]
+    internal class TemplateSettingsChangeRule : ChangeRule
+    {
+        private static readonly ITraceSource tracer = Tracer.GetSourceFor<TemplateSettingsChangeRule>();
 
-		/// <summary>
-		/// Handles the property change event for the settings.
-		/// </summary>
-		/// <param name="e">The event args.</param>
-		public override void ElementPropertyChanged(ElementPropertyChangedEventArgs e)
-		{
-			Guard.NotNull(() => e, e);
+        /// <summary>
+        /// Handles the property change event for the settings.
+        /// </summary>
+        /// <param name="e">The event args.</param>
+        public override void ElementPropertyChanged(ElementPropertyChangedEventArgs e)
+        {
+            Guard.NotNull(() => e, e);
 
-			if (e.DomainProperty.Id == TemplateSettings.SyncNameDomainPropertyId)
-			{
-				var settings = e.ModelElement as ITemplateSettings;
-				if (settings != null)
-				{
-					if (!e.ModelElement.Store.TransactionManager.CurrentTransaction.IsSerializing)
-					{
-						tracer.Shield(() =>
-						{
-							SyncNameExtension.EnsureSyncNameExtensionAutomation(settings.Owner);
-						},
-						Resources.TemplateSettingsChangeRule_ChangeHiddenFailed, settings.TemplateUri);
-					}
-				}
-			}
-		}
-	}
+            if (e.DomainProperty.Id == TemplateSettings.SyncNameDomainPropertyId)
+            {
+                var template = e.ModelElement as TemplateSettings;
+                if (template != null && template.Extends != null)
+                {
+                    if (!e.ModelElement.Store.TransactionManager.CurrentTransaction.IsSerializing)
+                    {
+                        tracer.Shield(() =>
+                        {
+                            SyncNameExtension.EnsureSyncNameExtensionAutomation(template.Owner);
+                        },
+                        Resources.TemplateSettingsChangeRule_ErrorSyncNameFailed, template.Name);
+                    }
+                }
+            }
+        }
+    }
 }

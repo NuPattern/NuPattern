@@ -1,0 +1,48 @@
+﻿<UserControl
+    x:Class="NuPattern.Runtime.Guidance.UI.Views.GuidanceExplorerView"
+    x:ClassModifier="internal"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cp="clr-namespace:NuPattern.Presentation;assembly=NuPattern.Presentation"
+    xmlns:views="clr-namespace:NuPattern.Runtime.Guidance.UI.Views"
+    Name="GuidanceWorkflowExplorer"
+    Background="{DynamicResource VsBrush.ToolWindowBackground}">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/NuPattern.Presentation;component/Resources/CommonStyles.xaml" />
+                <ResourceDictionary Source="/NuPattern.Presentation;component/Resources/CommandBar.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top" Style="{StaticResource CommandBar.Panel}">
+            <StackPanel Orientation="Horizontal" Margin="2">
+                <Button ToolTip="Expand All" Command="{Binding ExpandAllCommand}">
+                    <BitmapImage UriSource="../../Resources/CommandExpandAll.png" />
+                </Button>
+                <Button ToolTip="Collapse All" Command="{Binding CollapseAllCommand}">
+                    <BitmapImage UriSource="../../Resources/CommandCollapseAll.png" />
+                </Button>
+                <Separator />
+                <Button ToolTip="Refresh" Command="{Binding RefreshGraphCommand}">
+                    <BitmapImage UriSource="../../Resources/CommandRefresh.png" />
+                </Button>
+<!--
+                <Separator />
+                <Button ToolTip="Go To Focused Activity" Command="{Binding GoToFocusedCommand}">
+                    <BitmapImage UriSource="../../Resources/GoToFocused.png" />
+                </Button>
+-->
+        
+      </StackPanel>
+            <ComboBox
+                Margin="3,0,3,3"
+                HorizontalAlignment="Stretch"
+                ItemsSource="{Binding Workflows}"
+                SelectedItem="{Binding CurrentWorkflow}"
+                DisplayMemberPath="Name" />
+        </StackPanel>
+        <views:GuidanceWorkflowView DataContext="{Binding CurrentWorkflow}" />
+    </DockPanel>
+</UserControl>

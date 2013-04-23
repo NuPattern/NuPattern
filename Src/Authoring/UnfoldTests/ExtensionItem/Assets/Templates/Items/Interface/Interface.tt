@@ -1,5 +1,5 @@
-﻿<#@ output extension=".vstemplate" #>
-<#@ Include File="..\..\..\..\..\..\..\MasterVersion.ttinclude" #>
+﻿<#@ output extension=".gen.vstemplate" #>
+<#@ Include File="..\..\..\..\..\..\..\MasterVersion.gen.ttinclude" #>
 <?xml version="1.0" encoding="utf-8"?>
 <VSTemplate Type="Item" Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
   <TemplateData>
@@ -20,11 +20,11 @@
     <ProjectItem ReplaceParameters="true">Interface.cs</ProjectItem>
   </TemplateContent>
   <WizardExtension>
-    <Assembly>Microsoft.VisualStudio.Patterning.Library, PublicKeyToken=ecdd31353928a4a5</Assembly>
-    <FullClassName>Microsoft.VisualStudio.Patterning.Library.Automation.InstantiationTemplateWizard</FullClassName>
+    <Assembly>NuPattern.VisualStudio.TemplateWizards, Version=<#=VersionInfo.TemplateWizardVersion#>, Culture=neutral, PublicKeyToken=<#=VersionInfo.AssemblyPublicKeyToken#></Assembly>
+    <FullClassName>NuPattern.VisualStudio.TemplateWizards.InstantiationTemplateWizard</FullClassName>
   </WizardExtension>
   <WizardExtension>
-    <Assembly>Microsoft.VisualStudio.Patterning.Library, PublicKeyToken=ecdd31353928a4a5</Assembly>
-    <FullClassName>Microsoft.VisualStudio.Patterning.Library.Automation.ElementReplacementsWizard</FullClassName>
+    <Assembly>NuPattern.VisualStudio.TemplateWizards, Version=<#=VersionInfo.TemplateWizardVersion#>, Culture=neutral, PublicKeyToken=<#=VersionInfo.AssemblyPublicKeyToken#></Assembly>
+    <FullClassName>NuPattern.VisualStudio.TemplateWizards.ElementReplacementsTemplateWizard</FullClassName>
   </WizardExtension>
 </VSTemplate>

@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>3.7</ProductVersion>
+    <ProjectGuid>a49c2c09-8d28-4367-8e79-c75fe69f84be</ProjectGuid>
+    <SchemaVersion>2.0</SchemaVersion>
+    <OutputName>Authoring.Setup</OutputName>
+    <OutputType>Package</OutputType>
+    <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' AND '$(MSBuildExtensionsPath32)' != '' ">$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
+    <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' ">$(MSBuildExtensionsPath)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
+    <Name>Authoring.Setup</Name>
+  </PropertyGroup>
+  <PropertyGroup>
+    <BranchRoot>..\..\..\</BranchRoot>
+  </PropertyGroup>
+  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
+  <ItemGroup>
+    <WixExtension Include="WixUtilExtension">
+      <HintPath>$(WixExtDir)\WixUtilExtension.dll</HintPath>
+      <Name>WixUtilExtension</Name>
+    </WixExtension>
+    <WixExtension Include="WixVSExtension">
+      <HintPath>$(WixExtDir)\WixVSExtension.dll</HintPath>
+      <Name>WixVSExtension</Name>
+    </WixExtension>
+    <WixExtension Include="WixUIExtension">
+      <HintPath>$(WixExtDir)\WixUIExtension.dll</HintPath>
+      <Name>WixUIExtension</Name>
+    </WixExtension>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Product.wxs" />
+    <None Include="Variables.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Variables.gen.wxi</LastGenOutput>
+    </None>
+    <Content Include="Variables.gen.wxi">
+      <DependentUpon>Variables.tt</DependentUpon>
+    </Content>
+    <None Include="License.rtf" />
+    <None Include="Components.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Components.gen.wxs</LastGenOutput>
+    </None>
+    <Compile Include="Components.gen.wxs">
+      <DependentUpon>Components.tt</DependentUpon>
+    </Compile>
+    <Content Include="Diagnose MSI.bat" />
+    <Content Include="ResourceStrings.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ResourceStrings.gen.wxs</LastGenOutput>
+    </Content>
+    <EmbeddedResource Include="ResourceStrings.gen.wxl">
+      <DependentUpon>ResourceStrings.tt</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceStrings.wxl" />
+    <Content Include="Resources\Banner.bmp" />
+    <Content Include="Resources\DialogBackground.bmp" />
+    <Content Include="Resources\Icon.ico" />
+  </ItemGroup>
+  <Import Project="$(WixTargetsPath)" />
+  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>copy "!(TargetPath)" "$(ProjectDir)$(BranchRoot)Binaries\$(TargetFileName)"
+copy "$(ProjectDir)Diagnose MSI.bat" "$(ProjectDir)$(BranchRoot)Binaries\Diagnose MSI.bat"</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SuppressIces>ICE91</SuppressIces>
+    <SuppressValidation>False</SuppressValidation>
+  </PropertyGroup>
+  <!--
+	To modify your build process, add your task inside one of the targets below and uncomment it.
+	Other similar extension points exist, see Wix.targets.
+	<Target Name="BeforeBuild">
+	</Target>
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+</Project>

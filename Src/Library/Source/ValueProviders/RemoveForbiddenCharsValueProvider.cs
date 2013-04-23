@@ -1,21 +1,21 @@
 ﻿using System;
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
+using NuPattern.Library.Properties;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Library.ValueProviders
+namespace NuPattern.Library.ValueProviders
 {
     /// <summary>
     /// A custom value provider that is used to provide values at runtime for other types of configured automation.
     /// </summary>
-    [DisplayNameResource("RemoveForbiddenCharsExpressionValueProvider_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
-    [DescriptionResource("RemoveForbiddenCharsExpressionValueProvider_Description", typeof(Resources))]
+    [DisplayNameResource(@"RemoveForbiddenCharsExpressionValueProvider_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"RemoveForbiddenCharsExpressionValueProvider_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_General", typeof(Resources))]
     [CLSCompliant(false)]
-    public class RemoveForbiddenCharsExpressionValueProvider : Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.ValueProvider
+    public class RemoveForbiddenCharsExpressionValueProvider : ValueProvider
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<RemoveForbiddenCharsExpressionValueProvider>();
 
@@ -33,8 +33,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.ValueProviders
         /// Gets or sets the expression to evaluate.
         /// </summary>
         [Required(AllowEmptyStrings = false)]
-        [DisplayNameResource("RemoveForbiddenCharsExpressionValueProvider_Expression_DisplayName", typeof(Resources))]
-        [DescriptionResource("RemoveForbiddenCharsExpressionValueProvider_Expression_Description", typeof(Resources))]
+        [DisplayNameResource(@"RemoveForbiddenCharsExpressionValueProvider_Expression_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"RemoveForbiddenCharsExpressionValueProvider_Expression_Description", typeof(Resources))]
         public string Expression
         {
             get;
@@ -44,8 +44,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.ValueProviders
         /// <summary>
         /// Gets or sets the characters that are forbidden.
         /// </summary>
-        [DescriptionResource("RemoveForbiddenCharsExpressionValueProvider_ForbiddenChars_Description", typeof(Resources))]
-        [DisplayNameResource("RemoveForbiddenCharsExpressionValueProvider_ForbiddenChars_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"RemoveForbiddenCharsExpressionValueProvider_ForbiddenChars_Description", typeof(Resources))]
+        [DisplayNameResource(@"RemoveForbiddenCharsExpressionValueProvider_ForbiddenChars_DisplayName", typeof(Resources))]
         public string ForbiddenChars
         {
             get;

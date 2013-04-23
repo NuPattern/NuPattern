@@ -5,15 +5,7 @@
   <Import Project="BuildConfiguration.CSharp.targets" />
 
   <!-- CA settings for build configurations -->
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <RunCodeAnalysis>false</RunCodeAnalysis>
-    <StyleCopEnabled>false</StyleCopEnabled>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <RunCodeAnalysis>false</RunCodeAnalysis>
-    <StyleCopEnabled>false</StyleCopEnabled>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug With CA|AnyCPU' ">
+  <PropertyGroup>
     <RunCodeAnalysis>false</RunCodeAnalysis>
     <StyleCopEnabled>false</StyleCopEnabled>
   </PropertyGroup>

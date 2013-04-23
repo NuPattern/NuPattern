@@ -1,0 +1,423 @@
+﻿<#@ Assembly Name="NuPattern.Common.dll" #>
+<#@ Assembly Name="NuPattern.Runtime.Extensibility.dll" #>
+<#@ Assembly Name="NuPattern.Authoring.PatternToolkit.Automation.dll" #>
+<#@ Assembly Name="System.ComponentModel.Composition" #>
+<#@ Import Namespace="Microsoft.VisualStudio.Modeling" #>
+<#@ Import Namespace="NuPattern" #>
+<#@ Import Namespace="NuPattern.Runtime" #>
+<#@ Import Namespace="NuPattern.Runtime.CodeGen" #>
+<#@ Import Namespace="NuPattern.Runtime.ToolkitInterface" #>
+<#@ Import Namespace="NuPattern.Authoring.PatternToolkit.Automation" #>
+<#@ Import Namespace="NuPattern.Authoring.PatternToolkitLibrary" #>
+<#@ Import Namespace="System.Linq" #>
+<#@ Import Namespace="System.Collections.Generic" #>
+<#@ Import Namespace="System.ComponentModel" #>
+<#@ Import Namespace="System.Reflection" #>
+<#@ Include File="Header.t4include" #>
+<#@ Include File="Utilities.t4include" #>
+<#@ Include File="Constants.t4include" #><#+
+private void GenerateNamespaceBegin(IPatternToolkitLibrary library)
+{
+    WriteBlankLine();
+#>
+namespace <#=library.ToolkitProjectRootNamespace #>
+{
+<#+
+}
+
+private void GenerateNamespaceEnd()
+{
+#>
+}
+<#+
+}
+
+private void GenerateClassBegin(INamedElementInfo element, bool noImpl)
+{
+    Indent();
+
+    if (noImpl)
+    {
+#>
+public partial interface I<#=element.CodeIdentifier #> : IToolkitInterface
+{
+<#+
+    }
+    else
+    {
+#>
+internal partial class <#=element.CodeIdentifier #> : I<#=element.CodeIdentifier #>
+{
+<#+
+    }
+
+    UnIndent();
+}
+
+private void GenerateClassEnd()
+{
+    Indent();
+#>
+}
+<#+
+    UnIndent();
+}
+
+private void GenerateAutoGeneralizedInterfaceMethod(string typeString, bool noImpl)
+{
+    WriteBlankLine();
+    Indent();
+    Indent();
+#>
+/// <summary>
+/// Gets the generalized interface (<see cref="Runtime.I<#=typeString #>"/>) of this element.
+/// </summary>
+<#+
+
+    if (noImpl)
+    {
+#>
+Runtime.I<#=typeString #> As<#=typeString #>();
+<#+
+    }
+    else
+    {
+#>
+public virtual Runtime.I<#=typeString #> As<#=typeString #>()
+{
+<#+
+    Indent();
+
+    if (typeString == "Product" || typeString=="View")
+    {
+#>
+return this.target;
+<#+
+    }
+    else
+    {
+#>
+return this.As<Runtime.I<#=typeString #>>();
+<#+
+    }
+
+    UnIndent();
+#>
+}
+<#+
+    }
+
+    UnIndent();
+    UnIndent();
+}
+
+private void GenerateGenericGeneralizedInterfaceMethod()
+{
+    WriteBlankLine();
+    Indent();
+    Indent();
+#>
+/// <summary>
+/// Gets the specified generalized interface of this element, if possible.
+/// </summary>
+public virtual TGeneralizedInterface As<TGeneralizedInterface>() where TGeneralizedInterface : class
+{
+<#+
+    Indent();
+#>
+return this.target as TGeneralizedInterface;
+<#+
+    UnIndent();
+#>
+}
+<#+
+    UnIndent();
+    UnIndent();
+}
+
+private void GenerateDeleteMethod(bool noImpl)
+{
+    WriteBlankLine();
+    Indent();
+    Indent();
+#>
+/// <summary>
+/// Deletes this element.
+/// </summary>
+<#+
+    if (noImpl)
+    {
+#>
+void Delete();
+<#+
+    }
+    else
+    {
+#>
+public virtual void Delete()
+{
+<#+
+        Indent();
+#>
+this.target.Delete();
+<#+
+        UnIndent();
+#>
+}
+<#+
+    }
+
+    UnIndent();
+    UnIndent();
+}
+
+private void GenerateProductViews(IPatternInfo pattern, bool noImpl)
+{
+    foreach (var view in pattern.Views)
+    {
+        this.WriteBlankLine();
+        Indent();
+        Indent();
+        GenerateComments(view);
+
+        if (noImpl)
+        {
+#>
+I<#=view.CodeIdentifier #> <#=view.CodeIdentifier #> { get; }
+<#+
+        }
+        else
+        {
+#>
+public virtual I<#=view.CodeIdentifier #> <#=view.CodeIdentifier #>
+{
+<#+
+            Indent();
+#>
+get { return this.proxy.GetView(() => this.<#=view.CodeIdentifier #>, view => new <#=view.CodeIdentifier #>(view)); }
+<#+
+            UnIndent();
+#>
+}
+<#+
+        }
+
+        UnIndent();
+        UnIndent();
+    }
+}
+
+private void GenerateImplementationConstructors(string typeString, string proxyTypeString, INamedElementInfo element)
+{
+    WriteBlankLine();
+    Indent();
+    Indent();
+#>
+private Runtime.I<#=typeString #> target;
+private I<#=proxyTypeString #>Proxy<I<#=element.CodeIdentifier #>> proxy;
+<#+
+    UnIndent();
+    UnIndent();
+    WriteBlankLine();
+    Indent();
+    Indent();
+#>
+/// <summary>
+/// Creates a new instance of the <see cref="<#=element.CodeIdentifier#>"/> class.
+/// </summary>
+[ImportingConstructor]
+private <#=element.CodeIdentifier#>() { }
+<#+
+    UnIndent();
+    UnIndent();
+    WriteBlankLine();
+    Indent();
+    Indent();
+#>
+/// <summary>
+/// Creates a new instance of the <see cref="<#=element.CodeIdentifier #>"/> class.
+/// </summary>
+public <#=element.CodeIdentifier #>(Runtime.I<#=typeString #> target)
+{
+<#+
+    Indent();
+#>
+this.target = target;
+this.proxy = target.ProxyFor<I<#=element.CodeIdentifier #>>();
+OnCreated();
+<#+
+    UnIndent();
+#>
+}
+<#+
+    UnIndent();
+    UnIndent();
+    WriteBlankLine();
+    Indent();
+    Indent();
+#>
+/// <summary>
+/// When overridden, initializes the class.
+/// </summary>
+partial void OnCreated();
+<#+
+    UnIndent();
+    UnIndent();
+}
+
+private void GenerateToolkitCommentsAndAttributes(AttributeTargets target, NuPattern.Authoring.PatternToolkitLibrary.IPatternToolkitLibrary library, NuPattern.Authoring.PatternToolkit.IPatternToolkitInfo toolkitInfo, INamedElementInfo element)
+{
+    WriteBlankLine();
+    Indent();
+    GenerateComments(element);
+
+    switch (target)
+    {
+        case AttributeTargets.Class:
+#>
+[ToolkitInterfaceProxy(ExtensionId = "<#=toolkitInfo.Identifier #>", DefinitionId = "<#=element.Id #>", ProxyType = typeof(<#=element.CodeIdentifier #>))]
+<#+
+            break;
+
+        case AttributeTargets.Interface:
+#>
+[ToolkitInterface(ExtensionId = "<#=toolkitInfo.Identifier #>", DefinitionId = "<#=element.Id #>", ProxyType = typeof(<#=element.CodeIdentifier #>))]
+<#+
+            break;
+
+        default:
+            break;
+    }
+
+    UnIndent();
+    GenerateCodeGenAttributes(library, target);
+    GenerateCLSAttributes(element);
+}
+
+private void GenerateCodeGenAttributes(NuPattern.Authoring.PatternToolkitLibrary.IPatternToolkitLibrary library, AttributeTargets target)
+{
+    var excludeFromCodeCoverage = library.ExcludeFromCodeCoverage;
+
+    Indent();
+    switch (target)
+    {
+        case AttributeTargets.Class:
+#>
+[System.CodeDom.Compiler.GeneratedCode("<#=libraryToolkitName#>", "<#=libraryToolkitVersion #>")]
+<#+
+            if (excludeFromCodeCoverage)
+            {
+#>
+[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+<#+
+            }
+            break;
+
+        case AttributeTargets.Interface:
+#>
+[System.CodeDom.Compiler.GeneratedCode("<#=libraryToolkitName #>", "<#=libraryToolkitVersion #>")]
+<#+
+            break;
+    }
+
+    UnIndent();
+}
+
+private void GenerateComments(MemberInfo typeOrMember)
+{
+    var description = typeOrMember.GetCustomAttributes(true).OfType<DescriptionAttribute>().Select(attr => attr.Description).FirstOrDefault();
+    if (!string.IsNullOrEmpty(description))
+    {
+#>
+/// <summary>
+/// <#=description #>
+/// </summary>
+<#+
+    }
+    else
+    {
+#>
+/// <summary>
+/// Gets or sets the <#=typeOrMember.Name #> property.
+/// </summary>
+<#+
+        }
+}
+
+private void GenerateComments(INamedElementInfo element)
+{
+    if (!string.IsNullOrEmpty(element.Description))
+    {
+#>
+/// <summary>
+/// <#=element.Description #>
+/// </summary>
+[Description("<#=element.Description #>")]
+<#+
+    }
+    else
+    {
+#>
+/// <summary>
+/// <#=element.Description #>
+/// </summary>
+[Description("Description of <#=element.DisplayName #>")]
+<#+
+    }
+}
+
+private void GenerateUsings<TInfo, TRuntime>(ProductCodeGeneration<TInfo, TRuntime> codegen)
+    where TInfo : IPatternElementInfo
+    where TRuntime : IProductElement
+{
+    GenerateUsings(codegen.SafeImports);
+}
+
+private void GenerateUsings<TInfo, TRuntime>(ViewCodeGeneration<TInfo, TRuntime> codegen)
+    where TInfo : IViewInfo
+    where TRuntime : IView
+{
+    GenerateUsings(codegen.SafeImports);
+}
+
+private void GenerateUsings(IEnumerable<string> namespaces)
+{
+    Indent();
+
+    foreach (var ns in namespaces)
+    {
+#>
+using global::<#=ns #>;
+<#+
+    }
+#>
+using Runtime = global::NuPattern.Runtime;
+<#+
+    UnIndent();
+}
+
+private void GenerateCLSAttributes(NuPattern.Runtime.INamedElementInfo element)
+{
+    Indent();
+
+    // Find all variable properties in the model
+    var properties = element.GetProduct().GetAllProperties();
+
+    var propertyTypes = properties.Select(prop => prop.Type)
+        .Distinct<string>()
+    .Select(type => Type.GetType(type, false, true))
+    .Where(type => type != null);
+
+    // Check if any property types are not CLS compliant.
+    var isNotClsCompliant = propertyTypes
+        .Any(type => !type.IsClsCompliant());
+
+    if (isNotClsCompliant)
+    {
+#>
+[CLSCompliant(false)]
+<#+
+    }
+
+    UnIndent();
+}#>

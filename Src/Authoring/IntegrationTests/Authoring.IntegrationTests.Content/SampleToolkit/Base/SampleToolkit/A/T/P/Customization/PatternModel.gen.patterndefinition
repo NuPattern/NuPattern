@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<patternModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.3.0.0" Id="6a90ca99-d916-454d-961d-1b47ee941712" xmlns="http://schemas.microsoft.com/visualstudio/patterning/runtime/patternmodel">
+    <pattern Id="b3335b68-0efb-44da-8015-61df30fd64ec" name="Test">
+        <views>
+            <view Id="9ad12313-855b-4cb2-9169-10bc6e37bc09" name="DummyView" isDefault="true" diagramId="7ef2f305-e79b-4fcf-bd92-f6e172e95297">
+            </view>
+        </views>
+    </pattern>
+</patternModel>

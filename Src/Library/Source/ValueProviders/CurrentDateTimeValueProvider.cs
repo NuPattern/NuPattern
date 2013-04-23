@@ -1,17 +1,17 @@
 ﻿using System;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
+using NuPattern.Library.Properties;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Library.ValueProviders
+namespace NuPattern.Library.ValueProviders
 {
     /// <summary>
     /// A <see cref=" ValueProvider"/> that returns the current date and time.
     /// </summary>
-    [DisplayNameResource("CurrentDateTimeValueProvider_DisplayName", typeof(Resources))]
-    [DescriptionResource("CurrentDateTimeValueProvider_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_General", typeof(Resources))]
+    [DisplayNameResource(@"CurrentDateTimeValueProvider_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"CurrentDateTimeValueProvider_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_General", typeof(Resources))]
     [CLSCompliant(false)]
     public class CurrentDateTimeValueProvider : ValueProvider
     {

@@ -6,15 +6,15 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Microsoft.VisualStudio.Modeling;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
+using NuPattern.Modeling;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
     /// <summary>
     /// Clones a pattern schema model from a source to a target.
     /// </summary>
-    public class PatternModelCloner
+    internal class PatternModelCloner
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<PatternModelCloner>();
 
@@ -129,16 +129,16 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
             StringBuilder nameBuilder = new StringBuilder();
 
             nameBuilder.Insert(0, element.Name);
-            nameBuilder.Insert(0, ":");
+            nameBuilder.Insert(0, @":");
             nameBuilder.Insert(0, element.GetType().Name);
             var parent = DomainClassInfo.FindEmbeddingElement(element);
 
             while (parent != null && parent is NamedElementSchema)
             {
                 var namedParent = (NamedElementSchema)parent;
-                nameBuilder.Insert(0, ".");
+                nameBuilder.Insert(0, @".");
                 nameBuilder.Insert(0, namedParent.Name);
-                nameBuilder.Insert(0, ":");
+                nameBuilder.Insert(0, @":");
                 nameBuilder.Insert(0, namedParent.GetType().Name);
 
                 parent = DomainClassInfo.FindEmbeddingElement(parent);

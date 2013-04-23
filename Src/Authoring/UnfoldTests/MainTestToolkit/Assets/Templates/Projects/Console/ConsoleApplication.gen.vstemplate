@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Type="Project" Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{FAE04EC1-301F-11d3-BF4B-00C04F79EFBC}" ID="2320">Main Test</Name>
+    <Description Package="{FAE04EC1-301F-11d3-BF4B-00C04F79EFBC}" ID="2321">A Description of MainTest</Description>
+    <Icon Package="{FAE04EC1-301F-11d3-BF4B-00C04F79EFBC}" ID="4548" />
+    <ProjectType>CSharp</ProjectType>
+    <TemplateID>b1707c79361e-MainTest</TemplateID>
+    <SortOrder>12</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>Main Test</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="ConsoleApplicationProject.gen.csproj" ReplaceParameters="true" TargetFileName="ConsoleApplicationProject.csproj">
+      <ProjectItem TargetFileName="Properties\AssemblyInfo.cs" ReplaceParameters="true">AssemblyInfo.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" OpenInEditor="true">Program.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true">App.config</ProjectItem>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>NuPattern.VisualStudio.TemplateWizards, Version=1.0.0.0, Culture=neutral, PublicKeyToken=24c7786d4a8b1a88</Assembly>
+    <FullClassName>NuPattern.VisualStudio.TemplateWizards.InstantiationTemplateWizard</FullClassName>
+  </WizardExtension>
+  <WizardExtension>
+    <Assembly>NuPattern.VisualStudio.TemplateWizards, Version=1.0.0.0, Culture=neutral, PublicKeyToken=24c7786d4a8b1a88</Assembly>
+    <FullClassName>NuPattern.VisualStudio.TemplateWizards.ElementReplacementsTemplateWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

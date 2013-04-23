@@ -1,0 +1,76 @@
+﻿<#@ Include File="..\VsPackageInfo.ttinclude" #>
+<#@ output extension=".gen.cs" #>
+<#
+
+var commands = new[]
+    {
+        new ToolWindowInfo { Name = "SolutionBuilder", MenuGroupId = RuntimeShellPackageInfo.SolutionBuilder.MenuGroupId, MenuCommandId = RuntimeShellPackageInfo.SolutionBuilder.MenuCommandId, },
+        new ToolWindowInfo { Name = "GuidanceExplorer", MenuGroupId = RuntimeShellPackageInfo.GuidanceExplorer.MenuGroupId, MenuCommandId = RuntimeShellPackageInfo.GuidanceExplorer.MenuCommandId, },
+        new ToolWindowInfo { Name = "GuidanceBrowser", MenuGroupId = RuntimeShellPackageInfo.GuidanceBrowser.MenuGroupId, MenuCommandId = RuntimeShellPackageInfo.GuidanceBrowser.MenuCommandId, },
+    };
+#>
+using System;
+using NuPattern.Runtime.Shell.ToolWindows;
+using NuPattern.VisualStudio.Commands;
+
+namespace NuPattern.Runtime.Shell.Commands
+{
+<#
+    foreach (var command in commands)
+    {
+#>
+
+    /// <summary>
+    /// Provides a Visual Studio command to open the <#=command.Name#> tool window.
+    /// </summary>
+    internal class Open<#=command.Name#>MenuCommand : VsMenuCommand
+    {
+        internal static readonly Guid CommandGroup = new Guid("<#=command.MenuGroupId#>");
+        internal const int CommandId = <#=command.MenuCommandId#>;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Open<#=command.Name#>MenuCommand"/> class.
+        /// </summary>
+        /// <param name="toolWindow">The tool window.</param>
+        public Open<#=command.Name#>MenuCommand(IPackageToolWindow toolWindow)
+            : base(new Open<#=command.Name#>Command(toolWindow), CommandGroup, CommandId)
+        {
+        }
+
+        /// <summary>
+        /// Defines a command to open the <#=command.Name#> window.
+        /// </summary>
+        private class Open<#=command.Name#>Command : NuPattern.VisualStudio.Commands.ICommand
+        {
+            private IPackageToolWindow toolWindow;
+
+            /// <summary>
+            /// Initializes a new instance of the <see cref="Open<#=command.Name#>Command"/> class.
+            /// </summary>
+            /// <param name="toolWindow">The tool window.</param>
+            internal Open<#=command.Name#>Command(IPackageToolWindow toolWindow)
+            {
+                this.toolWindow = toolWindow;
+            }
+
+            /// <summary>
+            /// Executes the command.
+            /// </summary>
+            public void Execute()
+            {
+                this.toolWindow.ShowWindow<<#=command.Name#>ToolWindow>(true);
+            }
+        }
+    }
+<#
+    }
+#>
+}
+<#+
+struct ToolWindowInfo
+{
+    public string Name;
+    public string MenuGroupId;
+    public string MenuCommandId;
+}
+#>

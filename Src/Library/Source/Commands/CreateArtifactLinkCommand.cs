@@ -3,24 +3,23 @@ using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Extensibility.References;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
+using NuPattern.Library.Properties;
+using NuPattern.Runtime;
+using NuPattern.Runtime.References;
+using NuPattern.VisualStudio.Solution;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Commands
+namespace NuPattern.Library.Commands
 {
     /// <summary>
     /// Creates an artifact link between the owner element and the specified Items
     /// </summary>
-    [DisplayNameResource("CreateArtifactLinkCommand_DisplayName", typeof(Resources))]
-    [DescriptionResource("CreateArtifactLinkCommand_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
+    [DisplayNameResource(@"CreateArtifactLinkCommand_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"CreateArtifactLinkCommand_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
-    public class CreateArtifactLinkCommand : FeatureCommand
+    public class CreateArtifactLinkCommand : Command
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<CreateArtifactLinkCommand>();
 
@@ -29,7 +28,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
         /// </summary>
         [Required]
         [Import(AllowDefault = true)]
-        public IFxrUriReferenceService UriService { get; set; }
+        public IUriReferenceService UriService { get; set; }
 
         /// <summary>
         /// Gets or sets the current element.
@@ -49,8 +48,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
         /// The Items to link to the owner element.
         /// </summary>
         [Required]
-        [DisplayNameResource("CreateArtifactLinkCommand_Items_DisplayName", typeof(Resources))]
-        [DescriptionResource("CreateArtifactLinkCommand_Items_Description", typeof(Resources))]
+        [DisplayNameResource(@"CreateArtifactLinkCommand_Items_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"CreateArtifactLinkCommand_Items_Description", typeof(Resources))]
         public virtual IEnumerable<string> Items { get; set; }
 
         /// <summary>

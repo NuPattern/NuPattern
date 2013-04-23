@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Dsl xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="04739abb-263d-488f-b865-fed569a7b766" Description="The store of the state of all products in the solution." Name="ProductStateStore" DisplayName="Product State Store" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Store" MinorVersion="2" ProductName="Product State Store" CompanyName="The Outercurve Foundation" PackageGuid="93373818-600f-414b-8181-3a0cb79fa785" PackageNamespace="Microsoft.VisualStudio.Patterning.Runtime.Store" xmlns="http://schemas.microsoft.com/VisualStudio/2005/DslTools/DslDefinitionModel">
+<Dsl xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="04739abb-263d-488f-b865-fed569a7b766" Description="The store of the state of all products in the solution." Name="ProductStateStore" DisplayName="Product State Store" Namespace="NuPattern.Runtime.Store" AccessModifier="Assembly" MinorVersion="2" ProductName="Product State Store" CompanyName="NuPattern" PackageGuid="93373818-600f-414b-8181-3a0cb79fa785" PackageNamespace="NuPattern.Runtime.Store" xmlns="http://schemas.microsoft.com/VisualStudio/2005/DslTools/DslDefinitionModel">
   <Classes>
-    <DomainClass Id="567410f3-5e44-4211-8623-bd9ee337dd82" Description="The state of all products in the solution." Name="ProductState" DisplayName="Product State" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Store" HasCustomConstructor="true">
+    <DomainClass Id="567410f3-5e44-4211-8623-bd9ee337dd82" Description="The state of all products in the solution." Name="ProductState" DisplayName="Product State" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Store" HasCustomConstructor="true">
       <Notes>IsRoot</Notes>
       <ElementMergeDirectives>
         <ElementMergeDirective>
@@ -14,7 +14,7 @@
         </ElementMergeDirective>
       </ElementMergeDirectives>
     </DomainClass>
-    <DomainClass Id="9d160ca6-f94d-4cb7-956d-e2f537a0e33d" Description="A property of an element." Name="Property" DisplayName="Property" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Store" HasCustomConstructor="true">
+    <DomainClass Id="9d160ca6-f94d-4cb7-956d-e2f537a0e33d" Description="A property of an element." Name="Property" DisplayName="Property" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Store" HasCustomConstructor="true">
       <BaseClass>
         <DomainClassMoniker Name="InstanceBase" />
       </BaseClass>
@@ -26,22 +26,22 @@
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="4d1f8038-151c-461d-97cc-3eaf779f50eb" Description="A container for elements in a view." Name="Collection" DisplayName="Solution Element" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Store">
+    <DomainClass Id="4d1f8038-151c-461d-97cc-3eaf779f50eb" Description="A container for elements in a view." Name="Collection" DisplayName="Solution Element" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Store">
       <BaseClass>
         <DomainClassMoniker Name="AbstractElement" />
       </BaseClass>
     </DomainClass>
-    <DomainClass Id="375050fd-908d-47b2-9494-7626fee46113" Description="An element of a view." Name="Element" DisplayName="Solution Element" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Store">
+    <DomainClass Id="375050fd-908d-47b2-9494-7626fee46113" Description="An element of a view." Name="Element" DisplayName="Solution Element" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Store">
       <BaseClass>
         <DomainClassMoniker Name="AbstractElement" />
       </BaseClass>
     </DomainClass>
-    <DomainClass Id="ce0a63a4-80a0-4a07-b9d1-d97fd206a8f1" Description="An element within the product." Name="ProductElement" DisplayName="Product Element" InheritanceModifier="Abstract" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Store" HasCustomConstructor="true">
+    <DomainClass Id="ce0a63a4-80a0-4a07-b9d1-d97fd206a8f1" Description="An element within the product." Name="ProductElement" DisplayName="Product Element" InheritanceModifier="Abstract" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Store" HasCustomConstructor="true">
       <Notes>SchemaTypeName=PatternElementSchema</Notes>
       <Attributes>
         <ClrAttribute Name="System.ComponentModel.TypeDescriptionProvider">
           <Parameters>
-            <AttributeParameter Value="typeof(ProductElementTypeDescriptionProvider)" />
+            <AttributeParameter Value="typeof(NuPattern.Runtime.Store.Design.ProductElementTypeDescriptionProvider)" />
           </Parameters>
         </ClrAttribute>
       </Attributes>
@@ -78,7 +78,7 @@
         </ElementMergeDirective>
       </ElementMergeDirectives>
     </DomainClass>
-    <DomainClass Id="f7b1afaf-b90d-411b-9792-1b402d72dfaf" Description="A product instance in the solution." Name="Product" DisplayName="Product" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Store">
+    <DomainClass Id="f7b1afaf-b90d-411b-9792-1b402d72dfaf" Description="A product instance in the solution." Name="Product" DisplayName="Product" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Store">
       <Notes>SchemaTypeName=PatternSchema</Notes>
       <BaseClass>
         <DomainClassMoniker Name="ProductElement" />
@@ -118,7 +118,7 @@
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="f02be9bc-9733-4d6c-a35c-8460b2d6e310" Description="A view of a product instance." Name="View" DisplayName="View" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Store">
+    <DomainClass Id="f02be9bc-9733-4d6c-a35c-8460b2d6e310" Description="A view of a product instance." Name="View" DisplayName="View" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Store">
       <BaseClass>
         <DomainClassMoniker Name="InstanceBase" />
       </BaseClass>
@@ -133,7 +133,7 @@
         </ElementMergeDirective>
       </ElementMergeDirectives>
     </DomainClass>
-    <DomainClass Id="fb175123-6a49-496b-88b4-4c82c6d2e6ca" Description="A child collection or element." Name="AbstractElement" DisplayName="Abstract Element" InheritanceModifier="Abstract" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Store">
+    <DomainClass Id="fb175123-6a49-496b-88b4-4c82c6d2e6ca" Description="A child collection or element." Name="AbstractElement" DisplayName="Abstract Element" InheritanceModifier="Abstract" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Store">
       <BaseClass>
         <DomainClassMoniker Name="ProductElement" />
       </BaseClass>
@@ -148,7 +148,7 @@
         </ElementMergeDirective>
       </ElementMergeDirectives>
     </DomainClass>
-    <DomainClass Id="30b2207d-bb9a-456f-82ee-a116d74598ef" Description="An element instance." Name="InstanceBase" DisplayName="Instance Base" InheritanceModifier="Abstract" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Store">
+    <DomainClass Id="30b2207d-bb9a-456f-82ee-a116d74598ef" Description="An element instance." Name="InstanceBase" DisplayName="Instance Base" InheritanceModifier="Abstract" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Store">
       <Notes>SchemaTypeName=NamedElement</Notes>
       <Properties>
         <DomainProperty Id="d029965b-4622-4b05-853b-95cc6d163e0b" Description="The model element identifier in the owning definition." Name="DefinitionId" DisplayName="Definition Id" IsBrowsable="false" IsUIReadOnly="true">
@@ -182,7 +182,7 @@
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="3fcc5eb5-c492-48ba-84a1-9172012c8f5f" Description="A reference to external data or service." Name="Reference" DisplayName="Reference" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Store">
+    <DomainClass Id="3fcc5eb5-c492-48ba-84a1-9172012c8f5f" Description="A reference to external data or service." Name="Reference" DisplayName="Reference" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Store">
       <Notes>SkipInfoProperty=true</Notes>
       <Attributes>
         <ClrAttribute Name="System.ComponentModel.DefaultProperty">
@@ -211,7 +211,7 @@
     </DomainClass>
   </Classes>
   <Relationships>
-    <DomainRelationship Id="6ca5790c-e0a4-4393-ac78-85cc87abf147" Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElementHasProperties" Name="ProductElementHasProperties" DisplayName="Product Element Has Properties" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Store" IsEmbedding="true">
+    <DomainRelationship Id="6ca5790c-e0a4-4393-ac78-85cc87abf147" Description="Description for NuPattern.Runtime.Store.ProductElementHasProperties" Name="ProductElementHasProperties" DisplayName="Product Element Has Properties" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Store" IsEmbedding="true">
       <Source>
         <DomainRole Id="52b9fc10-fcc7-47d1-adb7-6dcbef1f4ce1" Description="The properties of this element." Name="ProductElement" DisplayName="Product Element" PropertyName="Properties" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Properties">
           <Attributes>
@@ -233,7 +233,7 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="a6909603-f601-479e-92ba-ee082713a25d" Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Store.ProductHasViews" Name="ProductHasViews" DisplayName="Product Has Views" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Store" IsEmbedding="true">
+    <DomainRelationship Id="a6909603-f601-479e-92ba-ee082713a25d" Description="Description for NuPattern.Runtime.Store.ProductHasViews" Name="ProductHasViews" DisplayName="Product Has Views" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Store" IsEmbedding="true">
       <Source>
         <DomainRole Id="75f3cd0f-aee1-462e-a9eb-637c969dd140" Description="The views of this product." Name="Product" DisplayName="Product" PropertyName="Views" Multiplicity="OneMany" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Views">
           <Attributes>
@@ -255,7 +255,7 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="c9108ec6-51cd-4a7e-8570-cb53cdd8d09a" Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Store.ViewHasElements" Name="ViewHasElements" DisplayName="View Has Elements" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Store" IsEmbedding="true">
+    <DomainRelationship Id="c9108ec6-51cd-4a7e-8570-cb53cdd8d09a" Description="Description for NuPattern.Runtime.Store.ViewHasElements" Name="ViewHasElements" DisplayName="View Has Elements" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Store" IsEmbedding="true">
       <Source>
         <DomainRole Id="9caaf0c1-dd84-4ea8-bdec-1c01dc20f062" Description="The child elements of this view." Name="View" DisplayName="View" PropertyName="Elements" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Elements">
           <Notes>Skip=true
@@ -279,7 +279,7 @@ SkipCreate=true</Notes>
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="f403a072-caab-432e-b178-fac3cd111c01" Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Store.ElementHasChildElements" Name="ElementHasChildElements" DisplayName="Element Has Child Elements" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Store" IsEmbedding="true">
+    <DomainRelationship Id="f403a072-caab-432e-b178-fac3cd111c01" Description="Description for NuPattern.Runtime.Store.ElementHasChildElements" Name="ElementHasChildElements" DisplayName="Element Has Child Elements" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Store" IsEmbedding="true">
       <Source>
         <DomainRole Id="b978b2db-5e97-4331-a9fc-c32bb129d2ca" Description="The child elements of this element." Name="ParentElement" DisplayName="Parent Element" PropertyName="Elements" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Elements">
           <Notes>Skip=true
@@ -303,7 +303,7 @@ SkipCreate=true</Notes>
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="6f7b5a1d-97f0-4816-a525-8dae64aa347b" Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateHasProducts" Name="ProductStateHasProducts" DisplayName="Product State Has Products" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Store" IsEmbedding="true">
+    <DomainRelationship Id="6f7b5a1d-97f0-4816-a525-8dae64aa347b" Description="Description for NuPattern.Runtime.Store.ProductStateHasProducts" Name="ProductStateHasProducts" DisplayName="Product State Has Products" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Store" IsEmbedding="true">
       <Source>
         <DomainRole Id="20d6306b-1643-4f42-ad13-c5808af02833" Description="The products in this solution." Name="ProductState" DisplayName="Product State" PropertyName="Products" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Products">
           <RolePlayer>
@@ -322,7 +322,7 @@ SkipCreate=true</Notes>
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="d33a9c43-9ba9-4e98-8841-72ec8355ee3a" Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Store.ElementHasExtensions" Name="ElementHasExtensions" DisplayName="Element Has Extensions" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Store" IsEmbedding="true">
+    <DomainRelationship Id="d33a9c43-9ba9-4e98-8841-72ec8355ee3a" Description="Description for NuPattern.Runtime.Store.ElementHasExtensions" Name="ElementHasExtensions" DisplayName="Element Has Extensions" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Store" IsEmbedding="true">
       <Source>
         <DomainRole Id="a38cf9ed-b2aa-4114-8287-8c3f388b642a" Description="The child extension products of this element." Name="AbstractElement" DisplayName="Abstract Element" PropertyName="ExtensionProducts" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Extension Products">
           <Notes>Skip=true
@@ -346,7 +346,7 @@ SkipCreate=true</Notes>
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="857a8e39-d8a4-4eba-a51c-c502c131831e" Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Store.ViewHasExtensionProducts" Name="ViewHasExtensionProducts" DisplayName="View Has Extension Products" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Store" IsEmbedding="true">
+    <DomainRelationship Id="857a8e39-d8a4-4eba-a51c-c502c131831e" Description="Description for NuPattern.Runtime.Store.ViewHasExtensionProducts" Name="ViewHasExtensionProducts" DisplayName="View Has Extension Products" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Store" IsEmbedding="true">
       <Source>
         <DomainRole Id="f88f4ae1-e5be-4f4b-92fb-1c899966ee99" Description="The child extension products of this view." Name="View" DisplayName="View" PropertyName="ExtensionProducts" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Extension Products">
           <Notes>Skip=true
@@ -370,7 +370,7 @@ SkipCreate=true</Notes>
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="3cf98e81-5f66-450b-a2f7-60e75e96a40a" Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElementHasReferences" Name="ProductElementHasReferences" DisplayName="Product Element Has References" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Store" IsEmbedding="true">
+    <DomainRelationship Id="3cf98e81-5f66-450b-a2f7-60e75e96a40a" Description="Description for NuPattern.Runtime.Store.ProductElementHasReferences" Name="ProductElementHasReferences" DisplayName="Product Element Has References" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Store" IsEmbedding="true">
       <Source>
         <DomainRole Id="5f1b080b-17dc-4d4a-9330-c289ebc0a510" Description="The references of this element." Name="ProductElement" DisplayName="Product Element" PropertyName="References" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="References">
           <RolePlayer>
@@ -397,7 +397,7 @@ SkipCreate=true</Notes>
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(ProductElementTypeDescriptor.ReferencesTypeConverter)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Store.Design.ProductElementTypeDescriptor.ReferencesTypeConverter)" />
               </Parameters>
             </ClrAttribute>
           </propertyAttributes>
@@ -430,7 +430,7 @@ SkipCreate=true</Notes>
     <ExternalType Name="Char" Namespace="System" />
     <ExternalType Name="Uri" Namespace="System" />
   </Types>
-  <XmlSerializationBehavior Name="ProductStateStoreSerializationBehavior" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Store">
+  <XmlSerializationBehavior Name="ProductStateStoreSerializationBehavior" Namespace="NuPattern.Runtime.Store">
     <ClassData>
       <XmlClassData TypeName="ProductState" MonikerAttributeName="" SerializeId="true" MonikerElementName="productStateMoniker" ElementName="productState" MonikerTypeName="ProductStateMoniker">
         <DomainClassMoniker Name="ProductState" />

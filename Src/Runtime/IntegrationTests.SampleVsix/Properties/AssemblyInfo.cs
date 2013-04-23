@@ -2,11 +2,11 @@
 using System.Reflection;
 using Microsoft.VisualStudio.ExtensibilityHosting;
 
-[assembly: AssemblyTitle("Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests.SampleVsix")]
+[assembly: AssemblyTitle("NuPattern.Runtime.IntegrationTests.SampleVsix")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 
 [assembly: CLSCompliant(false)]
 
-[assembly: VsCatalogName(Microsoft.VisualStudio.TeamArchitect.PowerTools.Constants.CatalogName)]
-[assembly: VsCatalogName("Microsoft.VisualStudio.Default")]
+[assembly: VsCatalogName(NuPattern.ComponentModel.Composition.Catalog.DefaultCatalogName)]
+[assembly: VsCatalogName(NuPattern.VisualStudio.Composition.Catalog.DefaultCatalogName)]

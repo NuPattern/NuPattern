@@ -1,10 +1,11 @@
 ﻿using System;
 using System.ComponentModel.Composition;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Library.Properties;
+using NuPattern.Runtime;
+using NuPattern.Runtime.Events;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Events
+namespace NuPattern.Library.Events
 {
     /// <summary>
     /// Exposes the event raised when the runtime state is saved.
@@ -16,9 +17,9 @@ namespace Microsoft.VisualStudio.Patterning.Library.Events
     /// <summary>
     /// Assumes there can only be one state opened at any given time.
     /// </summary>
-    [DisplayNameResource("OnProductStoreSavedEvent_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
-    [DescriptionResource("OnProductStoreSavedEvent_Description", typeof(Resources))]
+    [DisplayNameResource(@"OnProductStoreSavedEvent_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"OnProductStoreSavedEvent_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     [Event(typeof(IOnProductStoreSavedEvent))]
     [Export(typeof(IOnProductStoreSavedEvent))]
     [PartCreationPolicy(CreationPolicy.Shared)]
@@ -83,7 +84,6 @@ namespace Microsoft.VisualStudio.Patterning.Library.Events
         /// </summary>
         public IDisposable Subscribe(IObserver<IEvent<EventArgs>> observer)
         {
-            ;
             Guard.NotNull(() => observer, observer);
 
             return this.sourceEvent.Subscribe(observer);

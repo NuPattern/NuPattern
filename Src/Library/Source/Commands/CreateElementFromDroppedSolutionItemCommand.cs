@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
+using NuPattern.Library.Properties;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Commands
+namespace NuPattern.Library.Commands
 {
     /// <summary>
     /// Creates a new instance of a child element for each dropped solution item.
     /// </summary>
-    [DisplayNameResource("CreateElementFromDroppedSolutionItemCommand_DisplayName", typeof(Resources))]
-    [DescriptionResource("CreateElementFromDroppedSolutionItemCommand_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
+    [DisplayNameResource(@"CreateElementFromDroppedSolutionItemCommand_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"CreateElementFromDroppedSolutionItemCommand_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class CreateElementFromDroppedSolutionItemCommand : CreateElementFromDroppedFileCommand
     {

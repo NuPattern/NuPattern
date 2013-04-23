@@ -3,23 +3,22 @@ using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
+using NuPattern.Library.Properties;
+using NuPattern.Runtime;
+using NuPattern.VisualStudio.Solution;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Commands
+namespace NuPattern.Library.Commands
 {
     /// <summary>
     /// Command used to set a build action over a project item
     /// </summary>
-    [DisplayNameResource("SetBuildActionCommand_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
-    [DescriptionResource("SetBuildActionCommand_Description", typeof(Resources))]
+    [DisplayNameResource(@"SetBuildActionCommand_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"SetBuildActionCommand_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_VisualStudio", typeof(Resources))]
     [CLSCompliant(false)]
-    public class SetBuildActionCommand : FeatureCommand
+    public class SetBuildActionCommand : Command
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<SetBuildActionCommand>();
 
@@ -36,7 +35,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
         /// </summary>
         [Required]
         [Import(AllowDefault = true)]
-        public virtual IFxrUriReferenceService UriService { get; set; }
+        public virtual IUriReferenceService UriService { get; set; }
 
         /// <summary>
         /// Gets or sets the current element.
@@ -49,16 +48,16 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
         /// <summary>
         /// Gets or sets the target path.
         /// </summary>
-        [DisplayNameResource("SetBuildActionCommand_TargetPath_DisplayName", typeof(Resources))]
-        [DescriptionResource("SetBuildActionCommand_TargetPath_Description", typeof(Resources))]
+        [DisplayNameResource(@"SetBuildActionCommand_TargetPath_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"SetBuildActionCommand_TargetPath_Description", typeof(Resources))]
         public virtual string TargetPath { get; set; }
 
         /// <summary>
         /// Gets or sets the target path.
         /// </summary>
         [Required(AllowEmptyStrings = false)]
-        [DisplayNameResource("SetBuildActionCommand_BuildAction_DisplayName", typeof(Resources))]
-        [DescriptionResource("SetBuildActionCommand_BuildAction_Description", typeof(Resources))]
+        [DisplayNameResource(@"SetBuildActionCommand_BuildAction_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"SetBuildActionCommand_BuildAction_Description", typeof(Resources))]
         public virtual BuildAction BuildAction { get; set; }
 
         /// <summary>

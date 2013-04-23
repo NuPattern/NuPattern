@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Windows.Forms;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Runtime.Shell.Properties;
+using NuPattern.Runtime.Settings;
+using NuPattern.Runtime.Shell.Properties;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Shell.OptionPages
+namespace NuPattern.Runtime.Shell.OptionPages
 {
     /// <summary>
     /// Trace Options Page Control
@@ -64,12 +64,12 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell.OptionPages
         private void InitializeDropDowns()
         {
             this.RootSourceLevel.DataSource = new BindingSource(levels, null);
-            this.RootSourceLevel.DisplayMember = "Key";
-            this.RootSourceLevel.ValueMember = "Value";
+            this.RootSourceLevel.DisplayMember = @"Key";
+            this.RootSourceLevel.ValueMember = @"Value";
 
             this.cmbLevel.DataSource = new BindingSource(levels, null);
-            this.cmbLevel.DisplayMember = "Key";
-            this.cmbLevel.ValueMember = "Value";
+            this.cmbLevel.DisplayMember = @"Key";
+            this.cmbLevel.ValueMember = @"Value";
         }
 
         private void ClearInputControls()
@@ -106,8 +106,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell.OptionPages
             }
             else
             {
-                if (!Microsoft.VisualStudio.Patterning.Extensibility.DataFormats.IsValidCSharpIdentifier(this.txtSourceName.Text) &&
-                    !Microsoft.VisualStudio.Patterning.Extensibility.DataFormats.DesignTime.IsValidNamespaceIdentifier(this.txtSourceName.Text))
+                if (!NuPattern.VisualStudio.Solution.DataFormats.IsValidCSharpIdentifier(this.txtSourceName.Text) &&
+                    !NuPattern.VisualStudio.Solution.DataFormats.DesignTime.IsValidNamespaceIdentifier(this.txtSourceName.Text))
                 {
                     this.errorProvider.SetError(this.txtSourceName, Resources.TraceOptionsPageControl_SourceNameInvalid);
 

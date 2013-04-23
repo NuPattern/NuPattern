@@ -1,0 +1,39 @@
+﻿<#+
+/// <summary>
+/// Version information about this VS Package
+/// </summary>
+internal static class RuntimeShellPackageInfo
+{
+    public const string PackageGuid = "93373818-600f-414b-8181-3a0cb79fa785";
+    public const string OutputWindowTitle = "NuPattern Toolkit Extensions";
+    public const string OptionPageCategory = "NuPattern Toolkit Extensions";
+    public const string OptionPageSubCategoryTracing = "Tracing";
+
+    internal static class SolutionBuilder
+    {
+        public const string ToolWindowGuid = "c44b2e95-86f4-40dd-8fc8-bbc9725ea86b";
+        public const string ToolWindowIcon = "ToolWindowSolutionBuilder.bmp";
+        public const string MenuGroupId = "43649871-de44-4b36-8745-73b8ffd737b3";
+        public const string MenuCommandId = "0x0101";
+        public const string BitmapResourceId = "301";
+    }
+
+    internal static class GuidanceExplorer
+    {
+        public const string ToolWindowGuid = "6A2D1053-BEEB-4FDF-9FB0-133CE1FE6D25";
+        public const string ToolWindowIcon = "ToolWindowGuidanceExplorer.bmp";
+        public const string MenuGroupId = "86E00CF8-82FA-4C2B-A65D-CA5FEEDAB03F";
+        public const string MenuCommandId = "0x0102";
+        public const string BitmapResourceId = "302";
+    }
+
+    internal static class GuidanceBrowser
+    {
+        public const string ToolWindowGuid = "167f0a44-f79b-4007-a084-8ecc1457776e";
+        public const string ToolWindowIcon = "ToolWindowGuidanceBrowser.bmp";
+        public const string MenuGroupId = "678B7F72-E43F-46DE-AFFC-365896827954";
+        public const string MenuCommandId = "0x0103";
+        public const string BitmapResourceId = "303";
+    }
+}
+#>

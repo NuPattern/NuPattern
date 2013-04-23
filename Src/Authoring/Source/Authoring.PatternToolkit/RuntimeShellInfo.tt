@@ -1,0 +1,16 @@
+﻿<#@ include file="..\..\..\MasterVSIXInfo.gen.ttinclude" #>
+<#@ output extension=".gen.cs" #>
+
+namespace NuPattern.Authoring.PatternToolkit
+{
+    /// <summary>
+    /// Defines the constants used in the Runtime.Shell package.
+    /// </summary>
+    internal static class RuntimeShellInfo
+    {
+        /// <summary>
+        /// The GUID for this package.
+        /// </summary>
+        public const string VsixIdentifier = "<#=VsixInfo.PatternToolkitRuntime.Identifier#>";
+    }
+}

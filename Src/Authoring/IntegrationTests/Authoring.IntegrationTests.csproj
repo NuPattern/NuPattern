@@ -7,107 +7,114 @@
     <ProjectGuid>{4D526080-A897-4A58-B12A-87974ADC11EB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests</RootNamespace>
-    <AssemblyName>Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <RootNamespace>NuPattern.Authoring.IntegrationTests</RootNamespace>
+    <AssemblyName>NuPattern.Authoring.IntegrationTests</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <SccProjectName>
-    </SccProjectName>
-    <SccLocalPath>
-    </SccLocalPath>
-    <SccAuxPath>
-    </SccAuxPath>
-    <SccProvider>
-    </SccProvider>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\Authoring\</SolutionDir>
     <RestorePackages>true</RestorePackages>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+  <PropertyGroup>
+    <BranchRoot>..\..\</BranchRoot>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug With CA|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <DocumentationFile>
-    </DocumentationFile>
-  </PropertyGroup>
+  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
+  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.VsixProjects.gen.props" />
   <ItemGroup>
-    <Reference Include="envdte" />
-    <Reference Include="EnvDTE80, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.VisualStudio.Patterning.Library">
-      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Library.dll</HintPath>
+    <Reference Include="NuPattern.Library">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Library.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Patterning.Runtime.Interfaces">
-      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Runtime.Interfaces.dll</HintPath>
+    <Reference Include="NuPattern.Runtime.Extensibility">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Extensibility.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Patterning.Extensibility">
-      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Extensibility.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Patterning.Runtime.Schema">
-      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Runtime.Schema.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Shell.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.VisualStudio.OLE.Interop" />
-    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
-      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Shell.Interop" />
-    <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0" />
-    <Reference Include="Microsoft.VisualStudio.Shell.Interop.10.0" />
-    <Reference Include="Microsoft.VisualStudio.Shell.10.0" />
-    <Reference Include="Microsoft.VisualStudio.Shell.Interop.9.0, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Lib\Feature Extensions\Microsoft.VisualStudio.TeamArchitect.PowerTools.dll</HintPath>
+    <Reference Include="NuPattern.Common">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features">
-      <HintPath>..\..\..\Lib\Feature Extensions\Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll</HintPath>
+    <Reference Include="NuPattern.Presentation">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Presentation.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.TextManager.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-    <Reference Include="Microsoft.VisualStudio.TextTemplating.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.VisualStudio.TextTemplating.Modeling.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="NuPattern.VisualStudio">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.VisualStudio.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Moq">
       <HintPath>..\packages\Moq.4.0.10827\lib\NET40\Moq.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
-    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="Microsoft.VSSDK.TestHostFramework" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="WindowsBase" />
+    <Reference Include="EnvDTE">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\envdte.dll</HintPath>
+    </Reference>
+    <Reference Include="EnvDTE80">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\envdte80.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.ExtensionManager">
+      <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ExtensionManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix)">
+      <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix).dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams$(DslToolsVersionSuffix)">
+      <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk.Diagrams$(DslToolsVersionSuffix).dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Shell$(DslToolsVersionSuffix)">
+      <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk.Shell$(DslToolsVersionSuffix).dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell$(VsxVersionSuffix)">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.Shell$(VsxVersionSuffix).dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.Shell.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.Shell.Interop.8.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.9.0">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.Shell.Interop.9.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.10.0">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\10.0\Microsoft.VisualStudio.Shell.Interop.10.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TextTemplating.10.0" Condition="'$(TargetVsVersion)' == '10.0'">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\10.0\Microsoft.VisualStudio.TextTemplating.10.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TextTemplating.Modeling.10.0" Condition="'$(TargetVsVersion)' == '10.0'">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\10.0\Microsoft.VisualStudio.TextTemplating.Modeling.10.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TextManager.Interop">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.TextManager.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.OLE.Interop">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.OLE.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+      <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VSSDK.TestHostFramework">
+      <HintPath>$(BranchReferencesPath)\VSSDK\$(TargetVsVersion)\Microsoft.VSSDK.TestHostFramework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\..\Common\Helpers\Assertions.cs">
@@ -122,231 +129,286 @@
     <Compile Include="..\..\Common\Helpers\IntegrationTest.cs">
       <Link>IntegrationTest.cs</Link>
     </Compile>
-    <Compile Include="..\..\GlobalAssemblyInfo.cs">
-      <Link>Properties\GlobalAssemblyInfo.cs</Link>
+    <Compile Include="..\..\Common\Helpers\VsixPackagingSpec.cs">
+      <Link>VsixPackagingSpec.cs</Link>
+    </Compile>
+    <Compile Include="..\..\GlobalAssemblyInfo.gen.cs">
+      <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
     <Compile Include="Commands.cs" />
     <Compile Include="Commands\CreateGuidanceDocumentsCommandSpec.cs" />
+    <Compile Include="PatternModelDesign\SchemaUpgradeContextSpec.cs" />
+    <Compile Include="PatternToolkitLibraryVsixPackagingSpec.gen.cs">
+      <DependentUpon>PatternToolkitLibraryVsixPackagingSpec.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="CreateOnUnfoldSpec.cs" />
-    <Compile Include="VersionHelperSpec.cs" />
-    <Content Include="VersionTargetsSpec\ClassLibrary1\Class1.cs">
+    <Compile Include="PatternToolkitVsixPackagingSpec.gen.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PatternToolkitVsixPackagingSpec.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VersionTargetsSpec.cs" />
+    <None Include="Authoring.IntegrationTests.Content\SchemaUpgradeContext\OlderVersion.View1.patterndefinition.diagram">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Authoring.IntegrationTests.Content\SchemaUpgradeContext\OlderVersion.View2.patterndefinition.diagram">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Authoring.IntegrationTests.Content\SchemaUpgradeContext\CurrentVersion.gen.patterndefinition">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CurrentVersion.tt</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Authoring.IntegrationTests.Content\SchemaUpgradeContext\CurrentVersion.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>CurrentVersion.gen.patterndefinition</LastGenOutput>
+    </None>
+    <None Include="Authoring.IntegrationTests.Content\SampleToolkit\Tailored\SampleTailoring.gen.sln">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SampleTailoring.tt</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="Authoring.IntegrationTests.Content\VersionTargets\ClassLibrary1\Class1.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="VersionTargetsSpec\ClassLibrary1\Properties\AssemblyInfo.cs">
+    <Content Include="Authoring.IntegrationTests.Content\VersionTargets\ClassLibrary1\Properties\AssemblyInfo.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Compile Include="ToolkitSchemaSpec.cs" />
     <Compile Include="Guidance\TocGuidanceProcessorSpec.cs" />
-    <Content Include="SampleFactory\Base\SampleFactory\Assets\Templates\Projects\Customization\Assets\Templates\Projects\Customization\Customization.csproj">
+    <Content Include="Authoring.IntegrationTests.Content\SampleToolkit\Base\SampleToolkit\A\T\P\Customization\A\T\P\Customization\Customization.csproj">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="VersionTargetsSpec\ClassLibrary1\ClassLibrary1.csproj">
+    <Content Include="Authoring.IntegrationTests.Content\VersionTargets\ClassLibrary1\ClassLibrary1.csproj">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="VersionTargetsSpec\SimpleLibrarySolution.sln">
+    <Content Include="Authoring.IntegrationTests.Content\VersionTargets\SimpleLibrarySolution.sln">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="packages.config" />
-    <None Include="SampleFactory\Base\SampleFactory\Assets\Templates\Projects\Customization\Assets\Templates\Projects\Customization\Customization.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Customization.vstemplate</LastGenOutput>
+    <None Include="..\..\Binaries\$(TargetVSVersion)\$(PatternToolkitLibraryVsixFileName)">
+      <Link>Authoring.IntegrationTests.Content\$(PatternToolkitLibraryVsixFileName)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <Content Include="SampleFactory\Base\SampleFactory\Assets\Templates\Projects\Customization\Assets\Templates\Projects\Customization\Customization.vstemplate">
+    <None Include="..\..\Binaries\$(TargetVSVersion)\$(PatternToolkitVsixFileName)">
+      <Link>Authoring.IntegrationTests.Content\$(PatternToolkitVsixFileName)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Authoring.IntegrationTests.Content\SchemaUpgradeContext\OlderVersion.patterndefinition">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PatternToolkitLibraryVsixPackagingSpec.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>PatternToolkitLibraryVsixPackagingSpec.gen.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="PatternToolkitVsixPackagingSpec.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>PatternToolkitVsixPackagingSpec.gen.cs</LastGenOutput>
+    </None>
+    <None Include="Authoring.IntegrationTests.Content\SampleToolkit\Base\SampleToolkit\A\T\P\Customization\A\T\P\Customization\Customization.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Customization.gen.vstemplate</LastGenOutput>
+    </None>
+    <Content Include="Authoring.IntegrationTests.Content\SampleToolkit\Base\SampleToolkit\A\T\P\Customization\A\T\P\Customization\Customization.gen.vstemplate">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Customization.tt</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleFactory\Base\SampleFactory\Assets\Templates\Projects\Customization\Assets\Templates\Projects\Customization\source.vsixmanifest">
+    <Content Include="Authoring.IntegrationTests.Content\SampleToolkit\Base\SampleToolkit\A\T\P\Customization\A\T\P\Customization\source.vsixmanifest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleFactory\Base\SampleFactory\Assets\Templates\Projects\Customization\Customization.csproj">
+    <Content Include="Authoring.IntegrationTests.Content\SampleToolkit\Base\SampleToolkit\A\T\P\Customization\Customization.csproj">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="SampleFactory\Base\SampleFactory\Assets\Templates\Projects\Customization\Assets\Templates\Projects\Customization\PatternModel.patterndefinition">
+    <None Include="Authoring.IntegrationTests.Content\SampleToolkit\Base\SampleToolkit\A\T\P\Customization\A\T\P\Customization\PatternModel.gen.patterndefinition">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PatternModel.tt</DependentUpon>
     </None>
-    <None Include="SampleFactory\Base\SampleFactory\Assets\Templates\Projects\Customization\Customization.tt">
+    <None Include="Authoring.IntegrationTests.Content\SampleToolkit\Base\SampleToolkit\A\T\P\Customization\Customization.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Customization.vstemplate</LastGenOutput>
+      <LastGenOutput>Customization.gen.vstemplate</LastGenOutput>
     </None>
-    <Content Include="SampleFactory\Base\SampleFactory\Assets\Templates\Projects\Customization\Customization.vstemplate">
+    <Content Include="Authoring.IntegrationTests.Content\SampleToolkit\Base\SampleToolkit\A\T\P\Customization\Customization.gen.vstemplate">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Customization.tt</DependentUpon>
     </Content>
-    <Content Include="SampleFactory\Base\SampleFactory\Assets\Templates\Projects\Customization\source.vsixmanifest">
+    <Content Include="Authoring.IntegrationTests.Content\SampleToolkit\Base\SampleToolkit\A\T\P\Customization\source.vsixmanifest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleFactory\Base\SampleFactory\GeneratedCode\ComponentModel.cs">
+    <Content Include="Authoring.IntegrationTests.Content\SampleToolkit\Base\SampleToolkit\GeneratedCode\ComponentModel.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleFactory\Base\SampleFactory\Properties\AssemblyInfo.cs">
+    <Content Include="Authoring.IntegrationTests.Content\SampleToolkit\Base\SampleToolkit\Properties\AssemblyInfo.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleFactory\Tailored\SampleTailoring\GeneratedCode\PatternModel.cs">
+    <Content Include="Authoring.IntegrationTests.Content\SampleToolkit\Tailored\SampleTailoring\GeneratedCode\PatternModel.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleFactory\Tailored\SampleTailoring\Properties\AssemblyInfo.cs">
+    <Content Include="Authoring.IntegrationTests.Content\SampleToolkit\Tailored\SampleTailoring\Properties\AssemblyInfo.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Compile Include="FeatureExtensionSpec.cs" />
+    <Compile Include="GuidanceExtensionSpec.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Content Include="SampleFactory\Base\SampleFactory\Assets\Templates\Projects\Customization\Assets\Templates\Projects\Customization\Properties\AssemblyInfo.cs">
+    <Content Include="Authoring.IntegrationTests.Content\SampleToolkit\Base\SampleToolkit\A\T\P\Customization\A\T\P\Customization\Properties\AssemblyInfo.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleFactory\Base\SampleFactory\Assets\Templates\Projects\Customization\Properties\AssemblyInfo.cs">
+    <Content Include="Authoring.IntegrationTests.Content\SampleToolkit\Base\SampleToolkit\A\T\P\Customization\Properties\AssemblyInfo.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Compile Include="ProjectUnfoldingSpec.cs" />
-    <Content Include="SampleGuidanceDocs\EmptyDocument.doc">
+    <Content Include="Authoring.IntegrationTests.Content\SampleGuidanceDocs\EmptyDocument.doc">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleGuidanceDocs\NotStartingWithTitle.doc">
+    <Content Include="Authoring.IntegrationTests.Content\SampleGuidanceDocs\NotStartingWithTitle.doc">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleGuidanceDocs\JustTitleNoPages.doc">
+    <Content Include="Authoring.IntegrationTests.Content\SampleGuidanceDocs\JustTitleNoPages.doc">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleGuidanceDocs\SingleHeadlineSingleLine.doc">
+    <Content Include="Authoring.IntegrationTests.Content\SampleGuidanceDocs\SingleHeadlineSingleLine.doc">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleGuidanceDocs\MultipleTopLevelHeadlines.doc">
+    <Content Include="Authoring.IntegrationTests.Content\SampleGuidanceDocs\MultipleTopLevelHeadlines.doc">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleGuidanceDocs\TopLevelHeadlineTwoTopics.doc">
+    <Content Include="Authoring.IntegrationTests.Content\SampleGuidanceDocs\TopLevelHeadlineTwoTopics.doc">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleGuidanceDocs\ThreeTopLevelHeadlineVariousTopics.doc">
+    <Content Include="Authoring.IntegrationTests.Content\SampleGuidanceDocs\ThreeTopLevelHeadlineVariousTopics.doc">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleGuidanceDocs\TopLevelHeadlineWithSubTopics.doc">
+    <Content Include="Authoring.IntegrationTests.Content\SampleGuidanceDocs\TopLevelHeadlineWithSubTopics.doc">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleGuidanceDocs\TopLevelHeadlineTopLevelTopic.doc">
+    <Content Include="Authoring.IntegrationTests.Content\SampleGuidanceDocs\TopLevelHeadlineTopLevelTopic.doc">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleGuidanceDocs\TopLevelHeadlineTopLevelTopicWithSubTopics.doc">
+    <Content Include="Authoring.IntegrationTests.Content\SampleGuidanceDocs\TopLevelHeadlineTopLevelTopicWithSubTopics.doc">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleGuidanceDocs\SingleHeadlineNoContent.doc">
+    <Content Include="Authoring.IntegrationTests.Content\SampleGuidanceDocs\SingleHeadlineNoContent.doc">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleGuidanceDocs\TwoTopicsWithHyperlinksToThirdTopic.doc">
+    <Content Include="Authoring.IntegrationTests.Content\SampleGuidanceDocs\TwoTopicsWithHyperlinksToThirdTopic.doc">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleGuidanceDocs\SingleTopic.doc">
+    <Content Include="Authoring.IntegrationTests.Content\SampleGuidanceDocs\SingleTopic.doc">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleGuidanceDocs\MultipleTopLevelTopics.doc">
+    <Content Include="Authoring.IntegrationTests.Content\SampleGuidanceDocs\MultipleTopLevelTopics.doc">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleGuidanceDocs\TwoTopicsWithHyperlinkToContent.doc">
+    <Content Include="Authoring.IntegrationTests.Content\SampleGuidanceDocs\TwoTopicsWithHyperlinkToContent.doc">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleGuidanceDocs\OneHeadlineWithHyperlinkToTopic.doc">
+    <Content Include="Authoring.IntegrationTests.Content\SampleGuidanceDocs\OneHeadlineWithHyperlinkToTopic.doc">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="SampleGuidanceDocs\MultipleTopicsAndHeadlinesWithDuplicates.doc">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="SampleGuidanceDocs\MultipleHeadlinesAndTopics.doc">
+    <None Include="Authoring.IntegrationTests.Content\SampleGuidanceDocs\MultipleTopicsAndHeadlinesWithDuplicates.doc">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="VersionTargetsSpec\VersionTargets_Current.tt">
+    <None Include="Authoring.IntegrationTests.Content\SampleGuidanceDocs\MultipleHeadlinesAndTopics.doc">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Authoring.IntegrationTests.Content\VersionTargets\VersionTargets_Current.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>VersionTargets_Current.targets</LastGenOutput>
+      <LastGenOutput>VersionTargets_Current.gen.targets</LastGenOutput>
     </None>
-    <Content Include="VersionTargetsSpec\VersionTargets_Old.targets">
+    <Content Include="Authoring.IntegrationTests.Content\VersionTargets\VersionTargets_Old.targets">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="VersionTargetsSpec\VersionTargets_Current.targets">
+    <Content Include="Authoring.IntegrationTests.Content\VersionTargets\VersionTargets_Current.gen.targets">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>VersionTargets_Current.tt</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="StrongTypedAPISpec\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <CodeAnalysisDictionary Include="..\..\CodeAnalysis.Dictionary.xml">
       <Link>Properties\CodeAnalysis.Dictionary.xml</Link>
     </CodeAnalysisDictionary>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="SampleFactory\Base\SampleFactory.sln">
+    <Content Include="Authoring.IntegrationTests.Content\SampleToolkit\Base\SampleToolkit.sln">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleFactory\Base\SampleFactory\SampleFactory.csproj">
+    <Content Include="Authoring.IntegrationTests.Content\SampleToolkit\Base\SampleToolkit\SampleToolkit.csproj">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleFactory\Base\SampleFactory\source.extension.vsixmanifest">
+    <Content Include="Authoring.IntegrationTests.Content\SampleToolkit\Base\SampleToolkit\source.extension.vsixmanifest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleFactory\Tailored\SampleTailoring.sln">
+    <None Include="Authoring.IntegrationTests.Content\SampleToolkit\Tailored\SampleTailoring.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SampleTailoring.gen.sln</LastGenOutput>
+    </None>
+    <Content Include="Authoring.IntegrationTests.Content\SampleToolkit\Tailored\SampleTailoring\SampleTailoring.csproj">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleFactory\Tailored\SampleTailoring\SampleTailoring.csproj">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SampleFactory\Tailored\SampleTailoring\source.extension.vsixmanifest">
+    <Content Include="Authoring.IntegrationTests.Content\SampleToolkit\Tailored\SampleTailoring\source.extension.vsixmanifest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="SampleFactory\Base\SampleFactory\Assets\Templates\Projects\Customization\Assets\Templates\Projects\Customization\PatternModel.tt">
+    <None Include="Authoring.IntegrationTests.Content\SampleToolkit\Base\SampleToolkit\A\T\P\Customization\A\T\P\Customization\PatternModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>PatternModel.patterndefinition</LastGenOutput>
+      <LastGenOutput>PatternModel.gen.patterndefinition</LastGenOutput>
     </None>
-    <None Include="SampleFactory\Base\SampleFactory\Assets\Templates\Projects\Customization\PatternModel.patterndefinition">
+    <None Include="Authoring.IntegrationTests.Content\SampleToolkit\Base\SampleToolkit\A\T\P\Customization\PatternModel.gen.patterndefinition">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PatternModel.tt</DependentUpon>
     </None>
-    <None Include="SampleFactory\Base\SampleFactory\Assets\Templates\Projects\Customization\PatternModel.tt">
+    <None Include="Authoring.IntegrationTests.Content\SampleToolkit\Base\SampleToolkit\A\T\P\Customization\PatternModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>PatternModel.patterndefinition</LastGenOutput>
+      <LastGenOutput>PatternModel.gen.patterndefinition</LastGenOutput>
     </None>
-    <None Include="SampleFactory\Base\SampleFactory\PatternModel.patterndefinition">
+    <None Include="Authoring.IntegrationTests.Content\SampleToolkit\Base\SampleToolkit\PatternModel.gen.patterndefinition">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PatternModel.tt</DependentUpon>
     </None>
-    <None Include="SampleFactory\Base\SampleFactory\PatternModel.tt">
+    <None Include="Authoring.IntegrationTests.Content\SampleToolkit\Base\SampleToolkit\PatternModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>PatternModel.patterndefinition</LastGenOutput>
+      <LastGenOutput>PatternModel.gen.patterndefinition</LastGenOutput>
     </None>
-    <None Include="SampleFactory\Tailored\SampleTailoring\PatternModel.patterndefinition">
+    <None Include="Authoring.IntegrationTests.Content\SampleToolkit\Tailored\SampleTailoring\PatternModel.gen.patterndefinition">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PatternModel.tt</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="SampleFactory\Tailored\SampleTailoring\PatternModel.tt">
+    <None Include="Authoring.IntegrationTests.Content\SampleToolkit\Tailored\SampleTailoring\PatternModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>PatternModel.patterndefinition</LastGenOutput>
+      <LastGenOutput>PatternModel.gen.patterndefinition</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -357,17 +419,22 @@
       <Project>{67257A67-4ECB-4D70-92EE-445835343670}</Project>
       <Name>Authoring.Guidance</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Source\Authoring.Toolkit.Automation\Authoring.Toolkit.Automation.csproj">
-      <Project>{3CCD565D-D7A3-4AAE-8C6E-8E1B10FD77FE}</Project>
-      <Name>Authoring.Toolkit.Automation</Name>
+    <ProjectReference Include="..\Source\Authoring.PatternModelDesign.Shell\Authoring.PatternModelDesign.Shell.csproj">
+      <Project>{a999a0eb-246c-4b63-8bc1-405020026cab}</Project>
+      <Name>Authoring.PatternModelDesign.Shell</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Source\Authoring.Toolkit\Authoring.Toolkit.csproj">
+    <ProjectReference Include="..\Source\Authoring.PatternToolkit.Automation\Authoring.PatternToolkit.Automation.csproj">
+      <Project>{3CCD565D-D7A3-4AAE-8C6E-8E1B10FD77FE}</Project>
+      <Name>Authoring.PatternToolkit.Automation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Source\Authoring.PatternToolkit\Authoring.PatternToolkit.csproj">
       <Project>{0216A624-C5C5-4335-8361-F640B91B4DEA}</Project>
-      <Name>Authoring.Toolkit</Name>
+      <Name>Authoring.PatternToolkit</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <Import Project="..\Source\Authoring.Toolkit\Authoring.PatternToolkitVersion.targets" />
+  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.TestProjects.targets" />
+  <Import Project="$(BranchRoot)Common\Source\Versioning\Authoring.PatternToolkitVersion.gen.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
@@ -376,12 +443,8 @@
   </Target>
   -->
   <Target Name="AfterBuild">
-    <MSBuild Projects="$(OutDir)SampleFactory\Base\SampleFactory.sln" />
-    <MSBuild Projects="$(OutDir)SampleFactory\Tailored\SampleTailoring.sln" />
+    <MSBuild Projects="$(OutDir)Authoring.IntegrationTests.Content\SampleToolkit\Base\SampleToolkit.sln" />
+    <MSBuild Projects="$(OutDir)Authoring.IntegrationTests.Content\SampleToolkit\Tailored\SampleTailoring.gen.sln" />
   </Target>
-  <PropertyGroup>
-    <BranchRoot>..\..\</BranchRoot>
-  </PropertyGroup>
-  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.TestProjects.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
 </Project>

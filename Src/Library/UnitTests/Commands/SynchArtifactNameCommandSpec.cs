@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
-using Microsoft.VisualStudio.Patterning.Extensibility.References;
-using Microsoft.VisualStudio.Patterning.Library.Commands;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Diagnostics;
+using NuPattern.Library.Commands;
+using NuPattern.Runtime;
+using NuPattern.Runtime.Bindings;
+using NuPattern.Runtime.References;
+using NuPattern.VisualStudio.Solution;
 
-namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
+namespace NuPattern.Library.UnitTests.Commands
 {
     [TestClass]
     public class SynchArtifactNameCommandSpec
@@ -21,7 +21,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
         public class GivenACommand
         {
             protected Mock<IProductElement> OwnerElement { get; private set; }
-            protected Mock<IFxrUriReferenceService> UriService { get; private set; }
+            protected Mock<IUriReferenceService> UriService { get; private set; }
             protected SynchArtifactNameCommand Command { get; private set; }
             protected Mock<IServiceProvider> ServiceProvider { get; private set; }
             protected Mock<TraceListener> Listener { get; private set; }
@@ -29,12 +29,12 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
             [TestInitialize]
             public virtual void Initialize()
             {
-                this.UriService = new Mock<IFxrUriReferenceService>();
+                this.UriService = new Mock<IUriReferenceService>();
                 this.OwnerElement = new Mock<IProductElement>();
                 this.OwnerElement
                     .Setup(x => x.Root)
                     .Returns(Mock.Of<IProduct>(p =>
-                        p.ProductState.GetService(typeof(IFxrUriReferenceService)) == this.UriService.Object));
+                        p.ProductState.GetService(typeof(IUriReferenceService)) == this.UriService.Object));
 
                 this.ServiceProvider = new Mock<IServiceProvider>();
                 this.Listener = new Mock<TraceListener>();
@@ -54,7 +54,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 Tracer.RemoveListener(Tracer.GetSourceNameFor<SynchArtifactNameCommand>(), this.Listener.Object);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenReferenceEmpty_ThenDoNothing()
             {
                 this.OwnerElement.Setup(e => e.References).Returns(Enumerable.Empty<IReference>());
@@ -66,7 +66,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
         [TestClass]
         public class GivenACommandWithNonResolvableReference : GivenACommand
         {
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenReferenceNotResolved_ThenLogsWarning()
             {
                 Mock<IReference> reference = new Mock<IReference>();
@@ -114,7 +114,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 this.UriService.Setup(s => s.ResolveUri<IItemContainer>(It.IsAny<Uri>())).Returns(solutionItem.Object);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenReferenceIsSameName_ThenDoNothing()
             {
                 this.solutionItem.Setup(c => c.Name).Returns("TestElementName.cs");
@@ -122,7 +122,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 this.Command.Execute();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenVsItemRenamed()
             {
                 var projectItem = Mock.Get<EnvDTE.ProjectItem>(this.solutionItem.Object.As<EnvDTE.ProjectItem>());
@@ -132,7 +132,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 projectItem.VerifySet(pi => pi.Name = "TestElementName.cs", Times.Once());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenNameContainsInvalidFileChars_ThenVsItemRenamedWithRemovedChars()
             {
                 this.OwnerElement.Setup(ce => ce.InstanceName).Returns(@"Test:ElementName");
@@ -144,7 +144,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 projectItem.VerifySet(pi => pi.Name = "TestElementName.cs", Times.Once());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenItemAlreadyExists_ThenVsItemRenamedWithVerifiedName()
             {
                 var projectItem = Mock.Get<EnvDTE.ProjectItem>(this.solutionItem.Object.As<EnvDTE.ProjectItem>());
@@ -159,7 +159,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 projectItem.VerifySet(pi => pi.Name = "TestElementName1.cs", Times.Once());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenItemAlreadyExistsAndTargetFileNameHasNoExtension_ThenVsItemRenamedWithVerifiedName()
             {
                 var projectItem = Mock.Get<EnvDTE.ProjectItem>(this.solutionItem.Object.As<EnvDTE.ProjectItem>());
@@ -178,7 +178,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 projectItem.VerifySet(pi => pi.Name = "TestElementName1.cs", Times.Once());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenItemAlreadyExistsAndTargetFileNameHasExtension_ThenVsItemRenamedWithVerifiedName()
             {
                 var projectItem = Mock.Get<EnvDTE.ProjectItem>(this.solutionItem.Object.As<EnvDTE.ProjectItem>());
@@ -225,7 +225,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 this.UriService.Setup(s => s.ResolveUri<IItemContainer>(It.IsAny<Uri>())).Returns(solutionItem.Object);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenReferenceIsSameName_ThenDoNothing()
             {
                 this.solutionItem.Setup(c => c.Name).Returns("TestProductName");
@@ -233,7 +233,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 this.Command.Execute();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenVsProjectRenamed()
             {
                 var project = Mock.Get<EnvDTE.Project>(this.solutionItem.Object.As<EnvDTE.Project>());
@@ -243,7 +243,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 project.VerifySet(pi => pi.Name = "TestProductName", Times.Once());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenNameContainsInvalidFileChars_ThenVsItemRenamedWithRemovedChars()
             {
                 this.OwnerElement.Setup(ce => ce.InstanceName).Returns(@"Test:ProductName");
@@ -255,7 +255,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 project.VerifySet(pi => pi.Name = "TestProductName", Times.Once());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenItemAlreadyExists_ThenVsItemRenamedWithVerifiedName()
             {
                 var project = Mock.Get<EnvDTE.Project>(this.solutionItem.Object.As<EnvDTE.Project>());

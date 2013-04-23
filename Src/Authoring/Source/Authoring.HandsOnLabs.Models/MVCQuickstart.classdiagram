@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="6aba74e6-bbf0-4ad3-8c1b-6cd8a81bada3" name="MVCQuickstart" linkedPackageId="040862a2-6dfb-4592-ae01-db2f5b4ded21" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="0034bfd1-c683-4712-89e2-7078cae5a5e2">
+      <profileInstance Id="368a2998-c4d6-47dd-a4f4-9ad31b47644e" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="ba475a4a-998e-448c-9335-7d3dbfb5c1a4">
+      <profileInstance Id="dc629ca5-848d-4d0a-9036-5e855fd1ed68" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="aa676119-8c10-4d73-96df-6d24689b587f" name="Model" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5be791c6-5e7c-4399-be28-3560e3106ba8" />
+        <ownedAttributesInternal>
+          <property Id="b8a44a3c-431b-46b2-838a-7e1ffd17eeca" name="Property1" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0181fdb8-d99f-4cf5-90fc-086e9b31416a" />
+          </property>
+          <property Id="a6d824c3-fdd4-402e-9256-9670854527ac" name="Property2" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="cea2d46e-b67f-4f1d-a38b-8c416de47c71" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="1b25da1f-8a46-43c8-83f7-55c86ae0ff48" name="Method1" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f08eed5b-4566-4c19-b525-66e5b34df23d" />
+          </operation>
+          <operation Id="82bfd891-ff27-417b-ac8d-5612a6378a28" name="Method2" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="fb18450e-aa8e-43e9-b7b5-1e5eaa6f0662" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="45739278-4c22-4e19-a1a5-fd8c21bb9505" name="View" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b71b2669-991d-461a-9800-c952d4fc6b62" />
+        <suppliersInternal>
+          <dependency Id="7a2f827e-c149-467c-b645-ef8c9b9b54f1">
+            <classMoniker Id="aa676119-8c10-4d73-96df-6d24689b587f" LastKnownName="Model" />
+            <elementDefinition Id="978cdcf8-1003-401a-a578-3f5eba754804" />
+          </dependency>
+          <dependency Id="a722f1a7-2275-49e9-8a8f-e49048bbcbbf">
+            <classMoniker Id="8564e86e-7a68-4ddc-925b-8aab5102da22" LastKnownName="Data" />
+            <elementDefinition Id="ee9a9721-febe-4ad1-ac5a-ad9a618a9330" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="8915f6ef-b331-4139-92ec-85c774c703df" name="Controller" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="732e6770-135b-419c-a029-17237d68e746" />
+        <suppliersInternal>
+          <dependency Id="5379bf2f-7031-480d-95a3-76670ccb0907">
+            <classMoniker Id="aa676119-8c10-4d73-96df-6d24689b587f" LastKnownName="Model" />
+            <elementDefinition Id="333a08df-685e-42fd-aeb2-0ebeb2ec7f51" />
+          </dependency>
+          <dependency Id="01db27bc-a1b3-4ece-8e99-d9a24773d485">
+            <classMoniker Id="45739278-4c22-4e19-a1a5-fd8c21bb9505" LastKnownName="View" />
+            <elementDefinition Id="c14c5e0b-0b65-40f7-9665-0e9d550ccbad" />
+          </dependency>
+          <dependency Id="c4c2ab4e-160c-4cb2-8f51-81f76fbe01c3">
+            <classMoniker Id="8564e86e-7a68-4ddc-925b-8aab5102da22" LastKnownName="Data" />
+            <elementDefinition Id="1ed1dd33-20e1-410c-82bb-940d9e94f38f" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="888afb5b-9049-49c1-802a-e7ca71ef60dd" name="Action2" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ab38d4a3-ed70-4f40-8c1b-f4badca11ca9" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="fe5c8f64-a95e-4b68-b777-cf1f2cd5265c" direction="Return">
+                  <elementDefinition Id="ec3ea837-8cd2-4158-84cc-877598f996bc" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="1e998ac4-622c-4418-930b-a4d74d1cbcbd" LastKnownName="Data" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="f184c460-de2c-4d67-99aa-38d06cb14ff8" name="Action1" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c62ac92b-1749-4d05-995c-a8d3fcaddad4" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a67d1c34-ba9c-48f3-9e8f-d5c8735c5688" direction="Return" isUnique="false">
+                  <elementDefinition Id="009a9e48-2b88-407b-b980-92800314578d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f44de89c-895e-48c5-b828-b91d5e45dd34" LastKnownName="View" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="8564e86e-7a68-4ddc-925b-8aab5102da22" name="Data" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="7b2246e6-7fa8-4c90-abc9-e243e2376ca4" />
+        <ownedAttributesInternal>
+          <property Id="a8bf0b98-c6ff-45b1-a7cd-9a8bb59a2c8d" name="Field1" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="85a35e71-a3b8-4535-ad54-215e4d66badb" />
+          </property>
+          <property Id="bb7e1b6b-84e3-49c2-9e42-b442408724c7" name="Field2" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7ed0cc9b-2a6d-4105-be0b-3f553a6856cf" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="f44de89c-895e-48c5-b828-b91d5e45dd34" name="View" isAbstract="false" isLeaf="false" cachedFullName="Models::MVCQuickstart::View">
+        <elementDefinition Id="b71b2669-991d-461a-9800-c952d4fc6b62" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="1e998ac4-622c-4418-930b-a4d74d1cbcbd" name="Data" isAbstract="false" isLeaf="false" cachedFullName="Models::MVCQuickstart::Data">
+        <elementDefinition Id="7b2246e6-7fa8-4c90-abc9-e243e2376ca4" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="040862a2-6dfb-4592-ae01-db2f5b4ded21" name="Models">
+    <elementDefinition Id="d1a907a1-0e23-4e9f-8f75-02f4174f07a0" />
+  </package>
+</logicalClassDesignerModel>

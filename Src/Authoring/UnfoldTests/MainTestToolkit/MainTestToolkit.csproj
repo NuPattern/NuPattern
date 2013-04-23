@@ -11,86 +11,27 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MainTestToolkit</RootNamespace>
     <AssemblyName>MainTestToolkit</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <GeneratePkgDefFile>false</GeneratePkgDefFile>
-    <SccProjectName>
-    </SccProjectName>
-    <SccLocalPath>
-    </SccLocalPath>
-    <SccAuxPath>
-    </SccAuxPath>
-    <SccProvider>
-    </SccProvider>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\Authoring\</SolutionDir>
     <RestorePackages>true</RestorePackages>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+  <PropertyGroup>
+    <BranchRoot>..\..\..\</BranchRoot>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug With CA|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <DocumentationFile>
-    </DocumentationFile>
-  </PropertyGroup>
+  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
+  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.VsixProjects.gen.props" />
   <ItemGroup>
+		<Reference Include="NuPattern.Common">
+			<HintPath>$(PatternToolkitRuntime)\NuPattern.Common.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+    <Reference Include="NuPattern.VisualStudio">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.VisualStudio.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
     <Reference Include="System" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.ComponentModel.Composition" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Design" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Xaml" />
-    <Reference Include="PresentationCore" />
-    <Reference Include="PresentationFramework" />
-    <Reference Include="WindowsBase" />
-    <Reference Include="Microsoft.VisualStudio.Patterning.Runtime.Interfaces">
-      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Runtime.Interfaces.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Patterning.Common.Presentation">
-      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Common.Presentation.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Patterning.Extensibility">
-      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Extensibility.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.ExtensibilityHosting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(VS100COMNTOOLS)..\IDE\PrivateAssemblies\Microsoft.VisualStudio.ExtensibilityHosting.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features">
-      <HintPath>..\..\..\..\Lib\Feature Extensions\Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Lib\Feature Extensions\Microsoft.VisualStudio.TeamArchitect.PowerTools.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <CodeAnalysisDictionary Include="..\..\..\CodeAnalysis.Dictionary.xml">
@@ -100,28 +41,50 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <IncludeInVSIX>false</IncludeInVSIX>
     </Content>
+    <Content Include="Assets\Templates\Projects\Console\ConsoleApplicationProject.gen.csproj">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConsoleApplicationProject.tt</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Assets\Templates\Projects\Console\Program.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <IncludeInVSIX>false</IncludeInVSIX>
     </Content>
-    <Compile Include="..\..\..\GlobalAssemblyInfo.cs">
-      <Link>Properties\GlobalAssemblyInfo.cs</Link>
+    <Compile Include="..\..\..\GlobalAssemblyInfo.gen.cs">
+      <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Content Include="Assets\Templates\Projects\Console\ConsoleApplication.csproj">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <None Include="bfbc51a8-3ace-4c9f-851c-f918a123aac7.patterndefinition.diagram">
+      <DependentUpon>PatternModel.patterndefinition</DependentUpon>
+    </None>
+    <None Include="source.extension.vsixmanifest">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>source.extension.tt</DependentUpon>
+    </None>
+    <None Include="Assets\Templates\Projects\Console\ConsoleApplicationProject.tt">
       <IncludeInVSIX>false</IncludeInVSIX>
-    </Content>
-    <Content Include="..\..\..\Binaries\PatternToolkitManager.vsix">
-      <Link>PatternToolkitManager.vsix</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ConsoleApplicationProject.gen.csproj</LastGenOutput>
+    </None>
+    <Content Include="..\..\..\Binaries\$(TargetVSVersion)\$(RuntimeShellVsixFileName)">
+      <Link>$(RuntimeShellVsixFileName)</Link>
       <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Assets\Templates\Projects\Console\App.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Assets\Templates\Projects\Console\ConsoleApplication.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ConsoleApplication.vstemplate</LastGenOutput>
+      <LastGenOutput>ConsoleApplication.gen.vstemplate</LastGenOutput>
     </None>
-    <None Include="source.extension.vsixmanifest" />
-    <ProjectTemplate Include="Assets\Templates\Projects\Console\ConsoleApplication.vstemplate">
+    <None Include="source.extension.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>source.extension.vsixmanifest</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <ProjectTemplate Include="Assets\Templates\Projects\Console\ConsoleApplication.gen.vstemplate">
       <ItemGuid>af858aa1-5567-4174-901e-d0f91c7d721d</ItemGuid>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -132,10 +95,6 @@
     <EmbeddedResource Include="PatternModel.patterndefinition">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Content Include="Assets\Templates\Projects\Console\App.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>false</IncludeInVSIX>
-    </Content>
     <None Include="PatternTooling.toolingdesign">
       <ItemGuid>bff266ae-8585-46d4-b7da-ddd0b6acf975</ItemGuid>
       <SubType>Designer</SubType>
@@ -157,8 +116,9 @@
     <Folder Include="Properties\Schemas\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="..\..\Source\Authoring.Toolkit\Authoring.PatternToolkitVersion.targets" />
-  <Import Project="..\..\Source\Authoring.Toolkit\Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.targets"/>
+  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.TestProjects.targets" />
+  <Import Project="$(VsxTargetsPath)\Microsoft.VsSDK.targets" />
+  <Import Project="$(BranchRoot)Common\Source\Versioning\Authoring.PatternToolkitVersion.gen.targets" />
   <!-- Properties for VSSDK/DSL Targets -->
   <PropertyGroup>
     <RegisterOutputPackage>true</RegisterOutputPackage>
@@ -170,9 +130,5 @@
     <StartAction>Program</StartAction>
     <StartArguments>/rootsuffix Exp</StartArguments>
   </PropertyGroup>
-  <PropertyGroup>
-    <BranchRoot>..\..\..\</BranchRoot>
-  </PropertyGroup>
-  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.TestProjects.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
 </Project>

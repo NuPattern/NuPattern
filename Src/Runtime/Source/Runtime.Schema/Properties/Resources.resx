@@ -131,22 +131,22 @@
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="CustomizationFalseDisabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\Authoring\Source\ToolkitDesign.Shell\resources\customizationfalsedisabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\..\..\..\Images\customizationfalsedisabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CustomizationFalseEnabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\Authoring\Source\ToolkitDesign.Shell\resources\customizationfalseenabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\..\..\..\Images\customizationfalseenabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CustomizationInheritedDisabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\Authoring\Source\ToolkitDesign.Shell\resources\customizationinheriteddisabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\..\..\..\Images\customizationinheriteddisabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CustomizationInheritedEnabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\Authoring\Source\ToolkitDesign.Shell\resources\customizationinheritedenabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\..\..\..\Images\customizationinheritedenabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CustomizationTrueDisabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\Authoring\Source\ToolkitDesign.Shell\resources\customizationtruedisabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\..\..\..\Images\customizationtruedisabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CustomizationTrueEnabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\Authoring\Source\ToolkitDesign.Shell\resources\customizationtrueenabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\..\..\..\Images\customizationtrueenabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Default" xml:space="preserve">
     <value>Default</value>
@@ -158,7 +158,7 @@
     <value>General</value>
   </data>
   <data name="Inherited" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\Authoring\Source\ToolkitDesign.Shell\resources\inherited.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\..\..\..\Images\inherited.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="NamedIdentifier_DefaultDisplayName" xml:space="preserve">
     <value>&lt;unnamed&gt;</value>
@@ -340,12 +340,6 @@
   <data name="Cardinality_NoParentLinkFound" xml:space="preserve">
     <value>The element does not have a relationship to a containing parent, so the cardinality cannot be determined.</value>
   </data>
-  <data name="SchemaTypeDescriptionProvider_ConditionsEditorCaption" xml:space="preserve">
-    <value>Constraints Editor</value>
-  </data>
-  <data name="SchemaTypeDescriptionProvider_ValidatorEditorCaption" xml:space="preserve">
-    <value>Validation Rules Editor</value>
-  </data>
   <data name="HostedExtensionPointPropertyDescriptor_PropertiesWillBeDeleted" xml:space="preserve">
     <value>All existing variable properties will be cleared in order to host this Extension Point.</value>
   </data>
@@ -428,7 +422,7 @@
     <value>Applying tailoring rules to cloned pattern line.</value>
   </data>
   <data name="Validate_NamedElementIconDoesNotPointToAValidFile" xml:space="preserve">
-    <value>Element '{0}'  has an invalid value for the 'Icon' property. You must select an existing icon file from the solution.</value>
+    <value>Element '{0}'  has an invalid value for the 'Icon' property. You must select an existing icon file from the solution, or an icon resource in a referenced assembly of the project.</value>
   </data>
   <data name="Validate_NamedElementIconDoesNotPointToAValidFileCode" xml:space="preserve">
     <value>135</value>
@@ -525,5 +519,17 @@
   </data>
   <data name="Validate_ContainedElementInfoOrderGroupComparerIsUniqueToGroup" xml:space="preserve">
     <value>'{0}' has a different 'Order Group Comparer' than that of another sibling element, collection or extension point in the same 'Order Group'. You can only define one 'Order Group Comparer' for each 'Order Group'. You must either change the 'Order Group' to order using this comparer. Or you can clear the value 'Order Group Comparer', or select the same value as the other sibling elements, collections and extension points in the same 'Order Group'.</value>
+  </data>
+  <data name="SchemaImplementation_TransactionDescriptionCreate" xml:space="preserve">
+    <value>Creating new instance</value>
+  </data>
+  <data name="SchemaImplementation_TransactionDescriptionDelete" xml:space="preserve">
+    <value>Deleting instance</value>
+  </data>
+  <data name="PatternModelSerializationHelper_TransactionDescriptionLoadingModel" xml:space="preserve">
+    <value>Loading pattern model</value>
+  </data>
+  <data name="PatternModelSerializationHelper_TransactionDescriptionLoadingDiagram" xml:space="preserve">
+    <value>Loading Diagram</value>
   </data>
 </root>

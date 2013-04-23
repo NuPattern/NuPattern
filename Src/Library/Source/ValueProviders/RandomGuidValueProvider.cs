@@ -1,19 +1,19 @@
 ﻿using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
+using NuPattern.Library.Properties;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Library.ValueProviders
+namespace NuPattern.Library.ValueProviders
 {
     /// <summary>
     /// A <see cref=" ValueProvider"/> that returns a new randomly created GUID.
     /// </summary>
-    [DisplayNameResource("RandomGuidValueProvider_DisplayName", typeof(Resources))]
-    [DescriptionResource("RandomGuidValueProvider_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_General", typeof(Resources))]
+    [DisplayNameResource(@"RandomGuidValueProvider_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"RandomGuidValueProvider_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_General", typeof(Resources))]
     [CLSCompliant(false)]
     public class RandomGuidValueProvider : ValueProvider
     {
@@ -30,8 +30,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.ValueProviders
         /// <summary>
         /// The format of the returned guid.
         /// </summary>
-        [DisplayNameResource("RandomGuidValueProvider_Format_DisplayName", typeof(Resources))]
-        [DescriptionResource("RandomGuidValueProvider_Format_Description", typeof(Resources))]
+        [DisplayNameResource(@"RandomGuidValueProvider_Format_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"RandomGuidValueProvider_Format_Description", typeof(Resources))]
         [DefaultValue(GuidFormat.JustDigitsWithHyphens)]
         [Required]
         public GuidFormat Format { get; set; }

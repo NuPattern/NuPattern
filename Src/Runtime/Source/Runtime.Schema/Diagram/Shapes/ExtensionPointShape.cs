@@ -3,12 +3,12 @@ using System.Collections;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Diagrams;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Customizations for the <see cref="ExtensionPointShapeBase"/> class.
 	/// </summary>
-	public partial class ExtensionPointShapeBase
+	partial class ExtensionPointShapeBase
 	{
 		/// <summary>
 		/// Returns the list of elements valid at this time.
@@ -22,7 +22,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	/// <summary>
 	/// Customizations for the <see cref="ExtensionPointShape"/> class.
 	/// </summary>
-	public partial class ExtensionPointShape : ExtensionPointShapeBase, IDisposable
+	partial class ExtensionPointShape : ExtensionPointShapeBase, IDisposable
 	{
 		private SquaredBottomCornerShapeGeometry geometry = new SquaredBottomCornerShapeGeometry();
 

@@ -1,0 +1,44 @@
+﻿<#@ output extension=".gen.t4" #>
+<#@ Include File="..\..\..\..\..\..\..\MasterVersion.gen.ttinclude" #>
+\<#@ Template Inherits="NuPattern.Library.ModelElementTextTransformation" HostSpecific="True" \#>
+\<#@ ModelElement Type="NuPattern.Runtime.IProductElement" Processor="ModelElementProcessor" \#>
+\<#@ Output extension=".vstemplate" \#>
+\<#@ Assembly Name="NuPattern.Common.dll" \#>
+\<#@ Assembly Name="NuPattern.Runtime.Extensibility.dll" \#>
+\<#@ Assembly Name="NuPattern.Authoring.PatternToolkit.Automation.dll" \#>
+\<#@ Import Namespace="NuPattern.Runtime" \#>
+\<#@ Import Namespace="NuPattern.Runtime.ToolkitInterface" \#>
+\<#@ Import Namespace="NuPattern.Authoring.PatternToolkit" \#>
+\<#@ Import Namespace="System.Linq" \#>
+\<#
+IProjectTemplate template = ((IProductElement)this.Element).As<IProjectTemplate>();
+var fileName = template.InstanceName.Replace(" ", string.Empty);
+\#><?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+    <TemplateData>
+        <Name>\<#=template.InstanceName \#></Name>
+        <Description></Description>
+        <TemplateID>\<#=Guid.NewGuid() \#></TemplateID>
+        <ProjectType>CSharp</ProjectType>
+        <ProjectSubType></ProjectSubType>
+        <SortOrder>1000</SortOrder>
+        <CreateNewFolder>false</CreateNewFolder>
+        <DefaultName>\<#=fileName \#></DefaultName>
+        <ProvideDefaultName>true</ProvideDefaultName>
+        <LocationField>Enabled</LocationField>
+        <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+        <Icon>__TemplateIcon.ico</Icon>
+    </TemplateData>
+    <TemplateContent>
+        <Project File="\<#=fileName \#>.csproj" ReplaceParameters="true">
+            <Folder Name="Properties">
+                <ProjectItem ReplaceParameters="true">AssemblyInfo.cs</ProjectItem>
+            </Folder>
+            <ProjectItem ReplaceParameters="true">Content.cs</ProjectItem>
+        </Project>
+    </TemplateContent>
+    <WizardExtension>
+        <Assembly>NuPattern.VisualStudio.TemplateWizards, Version=<#=VersionInfo.TemplateWizardVersion#>, Culture=neutral, PublicKeyToken=<#=VersionInfo.AssemblyPublicKeyToken#></Assembly>
+        <FullClassName>NuPattern.VisualStudio.TemplateWizards.ElementReplacementsTemplateWizard</FullClassName>
+    </WizardExtension>
+</VSTemplate>

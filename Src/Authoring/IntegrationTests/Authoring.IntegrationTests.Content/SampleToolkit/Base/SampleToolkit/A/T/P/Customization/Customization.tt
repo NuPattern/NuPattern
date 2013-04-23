@@ -1,0 +1,34 @@
+<#@ output extension=".gen.vstemplate" #>
+<#@ Include File="..\..\..\..\..\..\..\..\..\..\MasterVersion.gen.ttinclude"#>
+<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>SampleToolkit Toolkit Customization</Name>
+    <Description>This is a new toolkit schema.</Description>
+    <TemplateID>SampleToolkitCustomization</TemplateID>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>Extensibility</ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>SampleToolkitCustomization</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon />
+    <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="Customization.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="source.extension.vsixmanifest">source.vsixmanifest</ProjectItem>
+      <ProjectItem ReplaceParameters="true" OpenInEditor="true" TargetFileName="PatternModel.patterndefinition">PatternModel.gen.patterndefinition</ProjectItem>
+      <Folder Name="Properties">
+        <ProjectItem ReplaceParameters="true">AssemblyInfo.cs</ProjectItem>
+      </Folder>
+      <!--<ProjectItem ReplaceParameters="true" TargetFileName="Template\Projects">Customization.vstemplate</ProjectItem>-->
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>NuPattern.VisualStudio.TemplateWizards, Version=<#=VersionInfo.TemplateWizardVersion#>, Culture=neutral, PublicKeyToken=<#=VersionInfo.AssemblyPublicKeyToken#></Assembly>
+    <FullClassName>NuPattern.VisualStudio.TemplateWizards.ReplacementTemplateWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

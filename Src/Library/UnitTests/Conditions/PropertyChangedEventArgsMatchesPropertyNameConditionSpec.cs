@@ -1,11 +1,10 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using Microsoft.VisualStudio.Patterning.Library.Conditions;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Library.Conditions;
 
-namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Conditions
+namespace NuPattern.Library.UnitTests.Conditions
 {
     [TestClass]
     public class PropertyChangedEventArgsMatchesPropertyNameConditionSpec
@@ -20,14 +19,14 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Conditions
             this.condition = new PropertyChangedEventArgsMatchesPropertyNameCondition();
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenChangedEventIsNull_ThenEvaluateFalse()
         {
             this.condition.PropertyName = "Foo";
             Assert.False(this.condition.Evaluate());
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenPropertyNameIsNull_ThenEvaluateFalse()
         {
             var mockEvent = new Mock<IEvent<PropertyChangedEventArgs>>();
@@ -36,7 +35,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Conditions
             Assert.Throws<ValidationException>(() => this.condition.Evaluate());
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenPropertyNameIsEmpty_ThenEvaluateThrows()
         {
             var mockEvent = new Mock<IEvent<PropertyChangedEventArgs>>();
@@ -46,7 +45,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Conditions
             Assert.Throws<ValidationException>(() => this.condition.Evaluate());
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenEventArgsMatchesPropertyName_ThenEvaluateReturnsTrue()
         {
             var mockEvent = new Mock<IEvent<PropertyChangedEventArgs>>();

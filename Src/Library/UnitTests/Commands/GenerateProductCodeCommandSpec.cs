@@ -3,21 +3,21 @@ using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Extensibility.References;
-using Microsoft.VisualStudio.Patterning.Library.Automation;
-using Microsoft.VisualStudio.Patterning.Library.Commands;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.Patterning.Runtime.Store;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using Moq.Protected;
+using NuPattern.Diagnostics;
+using NuPattern.Library.Automation;
+using NuPattern.Library.Commands;
+using NuPattern.Library.Properties;
+using NuPattern.Modeling;
+using NuPattern.Runtime;
+using NuPattern.Runtime.Bindings;
+using NuPattern.Runtime.References;
+using NuPattern.Runtime.Store;
+using NuPattern.VisualStudio.Solution;
 
-namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
+namespace NuPattern.Library.UnitTests.Commands
 {
     public class GenerateProductCodeCommandSpec
     {
@@ -34,7 +34,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
             protected IElement Element { get; private set; }
             protected ISolution Solution { get; private set; }
             protected Mock<IPatternManager> PatternManager { get; private set; }
-            protected Mock<IFxrUriReferenceService> UriService { get; private set; }
+            protected Mock<IUriReferenceService> UriService { get; private set; }
             protected Mock<ITemplate> Template { get; private set; }
             protected Mock<TraceListener> Listener { get; private set; }
             protected GenerateProductCodeCommand Command { get; private set; }
@@ -76,7 +76,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 };
 
                 this.PatternManager = new Mock<IPatternManager>();
-                this.UriService = new Mock<IFxrUriReferenceService>();
+                this.UriService = new Mock<IUriReferenceService>();
                 this.Listener = new Mock<TraceListener>();
 
                 this.Command = new Mock<GenerateProductCodeCommand> { CallBase = true }.Object;
@@ -114,7 +114,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 Tracer.RemoveListener(Tracer.GetSourceNameFor<SynchArtifactNameCommand>(), this.Listener.Object);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenPatternManagerIsNotOpen_ThenThrowsInvalidOperationException()
             {
                 Mock.Get(this.Command.PatternManager).Setup(x => x.IsOpen).Returns(false);
@@ -132,10 +132,10 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 base.Initialize();
 
                 this.PatternManager.Setup(x => x.IsOpen).Returns(true);
-                this.PatternManager.Setup(x => x.StoreFile).Returns("C:\\Foo" + Microsoft.VisualStudio.Patterning.Runtime.Constants.RuntimeStoreExtension);
+                this.PatternManager.Setup(x => x.StoreFile).Returns("C:\\Foo" + NuPattern.Runtime.StoreConstants.RuntimeStoreExtension);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenExecuting_ThenSetsModelElementToImportedModelInstance()
             {
                 Mock.Get(this.Command.PatternManager).Setup(x => x.IsOpen).Returns(true);
@@ -146,15 +146,15 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 Assert.Same(this.Product, Command.ModelElement);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenExecuting_ThenSetsModelFileToProductStoreFile()
             {
                 Command.Execute();
 
-                Assert.Equal("C:\\Foo" + Microsoft.VisualStudio.Patterning.Runtime.Constants.RuntimeStoreExtension, Command.ModelFile);
+                Assert.Equal("C:\\Foo" + NuPattern.Runtime.StoreConstants.RuntimeStoreExtension, Command.ModelFile);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenExecuting_ThenAddsArtifactReference()
             {
                 this.UriService
@@ -166,7 +166,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 Assert.Equal(1, this.Element.References.Count());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenExecuting_ThenSavesValueProvidedProperties()
             {
                 var prop = this.Product.CreateProperty(p =>
@@ -202,7 +202,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 this.reference.Tag = this.Command.Settings.Id.ToString();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenExistingFileResolvesAndSyncNameFalse_ThenCurrentFilenameAndLinkReused()
             {
                 var item = this.Solution.Traverse().OfType<IItem>().First(i => i.Name == "Bar.cs");
@@ -219,7 +219,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 Assert.Equal("solution://foo/bar", this.Element.References.First().Value);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenExistingFileNotResolvedAndSyncNameFalse_ThenNewFilenameAndReferenceCreated()
             {
                 this.UriService
@@ -233,7 +233,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 Assert.Equal("solution://folder/solution items/foo.cs", this.Element.References.First().Value);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenExistingFileResolvesAndSyncNameTrueAndFileNameDifferent_ThenFileRenamed()
             {
                 var parent = this.Solution.Traverse().OfType<IItem>().First().Parent;
@@ -266,7 +266,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 Assert.Equal("solution://foo/bar", this.Element.References.First().Value);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenExistingFileResolvesAndSyncNameTrueAndFileNameSame_ThenFileNotRenamed()
             {
                 var parent = this.Solution.Traverse().OfType<IItem>().First().Parent;

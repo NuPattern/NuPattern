@@ -1,64 +1,85 @@
 ﻿using System;
 using System.ComponentModel;
-using Microsoft.VisualStudio.Patterning.Library.Events;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Library.Events;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Events
+namespace NuPattern.Library.UnitTests.Events
 {
-	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable", Justification = "TestCleanup")]
-	[TestClass]
-	public class OnElementPropertyChangedEventSpec
-	{
-		private Mock<IProductElement> productElement;
-		private OnElementPropertyChangedEvent publisher;
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable", Justification = "TestCleanup")]
+    [TestClass]
+    public class OnElementPropertyChangedEventSpec
+    {
+        private Mock<IProductElement> current;
+        private OnElementPropertyChangedEvent publisher;
 
-		[TestInitialize]
-		public void Initialize()
-		{
-			this.productElement = new Mock<IProductElement>();
+        [TestInitialize]
+        public void Initialize()
+        {
+            this.current = new Mock<IProductElement>();
+            this.current.Setup(x => x.InstanceName).Returns("current");
 
-			this.publisher = new OnElementPropertyChangedEvent(this.productElement.Object);
-		}
+            this.publisher = new OnElementPropertyChangedEvent(this.current.Object);
+        }
 
-		[TestCleanup]
-		public void Cleanup()
-		{
-			this.publisher.Dispose();
-		}
+        [TestCleanup]
+        public void Cleanup()
+        {
+            this.publisher.Dispose();
+        }
 
-		[TestMethod]
-		public void WhenManagerOpenedThenPropertyChanged_ThenSubscriberIsNotified()
-		{
-			var subscriber = new Mock<ISubscriber>();
-			this.publisher.Subscribe(subscriber.Object.OnNext);
+        [TestMethod, TestCategory("Unit")]
+        public void WhenManagerOpenedThenPropertyChanged_ThenSubscriberIsNotified()
+        {
+            var subscriber = new Mock<ISubscriber>();
+            this.publisher.Subscribe(subscriber.Object.OnNext);
 
-			this.productElement.Raise(x => x.PropertyChanged += null, new PropertyChangedEventArgs("Foo"));
+            this.current.Raise(x => x.PropertyChanged += null, new PropertyChangedEventArgs("Foo"));
 
-			subscriber.Verify(x => x.OnNext(
-				It.Is<IEvent<PropertyChangedEventArgs>>(e => e.EventArgs.PropertyName == "Foo")));
-		}
+            subscriber.Verify(x => x.OnNext(
+                It.Is<IEvent<PropertyChangedEventArgs>>(e => e.EventArgs.PropertyName == "Foo")));
+        }
 
-		[TestMethod]
-		public void WhenDisposingSubscriptionThenPropertyChanged_ThenSubscriberIsNotNotified()
-		{
-			var subscriber = new Mock<ISubscriber>();
-			var subscription = this.publisher.Subscribe(subscriber.Object.OnNext);
+        [TestMethod, TestCategory("Unit")]
+        public void WhenManagerOpenedThenPropertyChangedForOtherElement_ThenSubscriberIsNotNotified()
+        {
+            var subscriber = new Mock<ISubscriber>();
+            this.publisher.Subscribe(subscriber.Object.OnNext);
 
-			subscription.Dispose();
+            var otherElement = new Mock<IProductElement>();
+            otherElement.Setup(x => x.InstanceName).Returns("other");
+            var otherPublisher = new OnElementPropertyChangedEvent(otherElement.Object);
+            otherPublisher.Subscribe(subscriber.Object.OnNext);
 
-			this.productElement.Raise(x => x.PropertyChanged += null, new PropertyChangedEventArgs("Foo"));
+            otherElement.Raise(x => x.PropertyChanged += null, new PropertyChangedEventArgs("Foo"));
 
-			subscriber.Verify(x => x.OnNext(It.IsAny<IEvent<PropertyChangedEventArgs>>()), Times.Never());
-		}
+            subscriber.Verify(x => x.OnNext(
+                It.Is<IEvent<PropertyChangedEventArgs>>(e => e.EventArgs.PropertyName == "Foo")));
 
-		public interface ISubscriber
-		{
-			[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures", Justification = "Intened design")]
-			void OnNext(IEvent<EventArgs> data);
-			void OnCompleted();
-			void OnError(Exception exception);
-		}
-	}
+            subscriber.Verify(x => x.OnNext(
+                It.Is<IEvent<PropertyChangedEventArgs>>(e => e.Sender == this.current)), Times.Never());
+        }
+
+        [TestMethod, TestCategory("Unit")]
+        public void WhenDisposingSubscriptionThenPropertyChanged_ThenSubscriberIsNotNotified()
+        {
+            var subscriber = new Mock<ISubscriber>();
+            var subscription = this.publisher.Subscribe(subscriber.Object.OnNext);
+
+            subscription.Dispose();
+
+            this.current.Raise(x => x.PropertyChanged += null, new PropertyChangedEventArgs("Foo"));
+
+            subscriber.Verify(x => x.OnNext(It.IsAny<IEvent<PropertyChangedEventArgs>>()), Times.Never());
+        }
+
+        public interface ISubscriber
+        {
+            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures", Justification = "Intened design")]
+            void OnNext(IEvent<EventArgs> data);
+            void OnCompleted();
+            void OnError(Exception exception);
+        }
+    }
 }

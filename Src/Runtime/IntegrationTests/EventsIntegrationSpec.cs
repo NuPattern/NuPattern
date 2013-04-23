@@ -1,62 +1,62 @@
 ﻿using System.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests.SampleVsix;
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.ComponentModel.Composition;
+using NuPattern.Runtime.Composition;
+using NuPattern.Runtime.IntegrationTests.SampleVsix;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
+namespace NuPattern.Runtime.IntegrationTests
 {
-	[TestClass]
-	public class EventsIntegrationSpec
-	{
-		internal static readonly IAssertion Assert = new Assertion();
+    [TestClass]
+    public class EventsIntegrationSpec
+    {
+        internal static readonly IAssertion Assert = new Assertion();
 
-		[TestClass]
-		public class GivenExportedSourcePublisherAndSubscriber
-		{
-			private IComponentModel globalContainer;
-			private IFeatureCompositionService compositionService;
+        [TestClass]
+        public class GivenExportedSourcePublisherAndSubscriber
+        {
+            private IComponentModel globalContainer;
+            private INuPatternCompositionService compositionService;
 
-			[TestInitialize]
-			public void Initialize()
-			{
-				this.globalContainer = VsIdeTestHostContext.ServiceProvider.GetService<SComponentModel, IComponentModel>();
-				this.compositionService = VsIdeTestHostContext.ServiceProvider.GetService<IFeatureCompositionService>();
-			}
+            [TestInitialize]
+            public void Initialize()
+            {
+                this.globalContainer = VsIdeTestHostContext.ServiceProvider.GetService<SComponentModel, IComponentModel>();
+                this.compositionService = VsIdeTestHostContext.ServiceProvider.GetService<INuPatternCompositionService>();
+            }
 
-			[HostType("VS IDE")]
-			[TestMethod]
-			public void WhenSourceRaised_ThenSubscriberNotified()
-			{
-				//// MefLogger.Log();
+            [HostType("VS IDE")]
+            [TestMethod, TestCategory("Integration")]
+            public void WhenSourceRaised_ThenSubscriberNotified()
+            {
+                //// MefLogger.Log();
 
-				var source = this.globalContainer.GetService<EventSource>();
-				var subscriber = this.globalContainer.GetService<EventSubscriber>();
+                var source = this.globalContainer.GetService<EventSource>();
+                var subscriber = this.globalContainer.GetService<EventSubscriber>();
 
-				Assert.Equal(0, subscriber.ChangedProperties.Count);
+                Assert.Equal(0, subscriber.ChangedProperties.Count);
 
-				source.RaisePropertyChanged("Foo");
+                source.RaisePropertyChanged("Foo");
 
-				Assert.Contains("Foo", subscriber.ChangedProperties);
+                Assert.Contains("Foo", subscriber.ChangedProperties);
 
-				source.RaisePropertyChanged("Bar");
+                source.RaisePropertyChanged("Bar");
 
-				Assert.Contains("Bar", subscriber.ChangedProperties);
-			}
+                Assert.Contains("Bar", subscriber.ChangedProperties);
+            }
 
-			[HostType("VS IDE")]
-			[TestMethod]
-			public void WhenRetrievingEventExportMetadata_ThenContainsDescription()
-			{
-				var info = this.compositionService
-					.GetExports<IObservableEvent, IFeatureComponentMetadata>()
-					.Where(x => x.Metadata.ExportingType == typeof(EventPublisher))
-					.First();
+            [HostType("VS IDE")]
+            [TestMethod, TestCategory("Integration")]
+            public void WhenRetrievingEventExportMetadata_ThenContainsDescription()
+            {
+                var info = this.compositionService
+                    .GetExports<IObservableEvent, IComponentMetadata>()
+                    .Where(x => x.Metadata.ExportingType == typeof(EventPublisher))
+                    .First();
 
-				Assert.Equal("Raised when the source property changes", info.Metadata.Description);
-			}
-		}
-	}
+                Assert.Equal("Raised when the source property changes", info.Metadata.Description);
+            }
+        }
+    }
 }

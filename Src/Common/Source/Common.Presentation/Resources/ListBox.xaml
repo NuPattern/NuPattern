@@ -1,0 +1,54 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="VsVersionStyles.gen.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+   
+    <ControlTemplate x:Key="ListBoxItem.Template"  TargetType="{x:Type ListBoxItem}">
+        <Border x:Name="ItemBorder" CornerRadius="2" BorderThickness="1" Margin="1,1,1,1">
+            <ContentPresenter />
+        </Border>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter TargetName="ItemBorder" Property="Background" Value="{StaticResource  VsVersion.ListBoxItem.HoverFill}"/>
+                <Setter TargetName="ItemBorder" Property="BorderBrush" Value="{StaticResource VsVersion.ListBoxItem.HoverBorder}"/>
+            </Trigger>
+            <Trigger Property="IsSelected" Value="true">
+                <Setter TargetName="ItemBorder" Property="Background" Value="{StaticResource VsVersion.ListBoxItem.SelectedFill}"/>
+                <Setter TargetName="ItemBorder" Property="BorderBrush" Value="{StaticResource VsVersion.ListBoxItem.SelectedBorder}"/>
+            </Trigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsSelected" Value="true"/>
+                    <Condition Property="Selector.IsSelectionActive" Value="false"/>
+                </MultiTrigger.Conditions>
+                <Setter TargetName="ItemBorder" Property="Background" Value="{StaticResource VsVersion.ListBoxItem.SelectedInactiveFill}"/>
+                <Setter TargetName="ItemBorder" Property="BorderBrush" Value="{StaticResource VsVersion.ListBoxItem.SelectedInactiveBorder}"/>
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsSelected" Value="true"/>
+                    <Condition Property="IsMouseOver" Value="true"/>
+                </MultiTrigger.Conditions>
+                <Setter TargetName="ItemBorder" Property="Background" Value="{StaticResource VsVersion.ListBoxItem.SelectedHoverFill}"/>
+                <Setter TargetName="ItemBorder" Property="BorderBrush" Value="{StaticResource VsVersion.ListBoxItem.SelectedHoverBorder}"/>
+            </MultiTrigger>
+            <Trigger Property="IsEnabled" Value="false">
+                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <Style TargetType="{x:Type ListBoxItem}">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="Template" Value="{StaticResource ListBoxItem.Template}" />
+    </Style>
+    
+    <Style TargetType="{x:Type ListBox}">
+        <Setter Property="Background" Value="{DynamicResource VsVersion.Controls.Fill}"/>
+        <Setter Property="Foreground" Value="{DynamicResource VsVersion.Controls.Text}"/>
+    </Style>
+</ResourceDictionary>

@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.VisualStudio.Patterning.Runtime;
+﻿using System.Collections.Generic;
+using NuPattern.Runtime.Bindings;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
-	public partial interface IDragDropSettings
-	{
-		/// <summary>
-		/// Gets the condition settings.
-		/// </summary>
-		IEnumerable<IBindingSettings> ConditionSettings { get; }
-	}
+    partial interface IDragDropSettings
+    {
+        /// <summary>
+        /// Gets the condition settings.
+        /// </summary>
+        IEnumerable<IBindingSettings> ConditionSettings { get; }
+    }
 }

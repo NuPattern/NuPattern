@@ -1,19 +1,19 @@
 ﻿using System;
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
+using NuPattern.Library.Properties;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Conditions
+namespace NuPattern.Library.Conditions
 {
     /// <summary>
     /// Condition to test if the element pattern is parented
     /// </summary>
-    [DisplayNameResource("ElementPatternIsParentedCondition_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
-    [DescriptionResource("ElementPatternIsParentedCondition_Description", typeof(Resources))]
+    [DisplayNameResource(@"ElementPatternIsParentedCondition_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"ElementPatternIsParentedCondition_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class ElementPatternIsParentedCondition : InvertableCondition
     {

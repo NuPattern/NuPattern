@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <Extern href="stdidcmd.h"/>
+  <Extern href="vsshlids.h"/>
+
+  <Commands package="guidRuntimeShellPkg">
+    <Buttons>
+      <Button guid="guidOpenSolutionBuilderCommand" id="cmdidOpenSolutionBuilderCommand" priority="0x0100" type="Button">
+        <Icon guid="guidOpenSolutionBuilderBitmap" id="bmpPic1" />
+        <Strings>
+          <CommandName>cmdidOpenSolutionBuilderCommand</CommandName>
+          <ButtonText>Solution Builder</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidOpenGuidanceExplorerCommand" id="cmdidOpenGuidanceExplorerCommand" priority="0x0101" type="Button">
+        <Icon guid="guidOpenGuidanceExplorerBitmap" id="bmpPic1" />
+        <Strings>
+          <CommandName>cmdidOpenGuidanceExplorerCommand</CommandName>
+          <ButtonText>Guidance Explorer</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidOpenGuidanceBrowserCommand" id="cmdidOpenGuidanceBrowserCommand" priority="0x0102" type="Button">
+        <Icon guid="guidOpenGuidanceBrowserBitmap" id="bmpPic1" />
+        <Strings>
+          <CommandName>cmdidOpenGuidanceBrowserCommand</CommandName>
+          <ButtonText>Guidance Browser</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+    <Bitmaps>
+      <Bitmap guid="guidOpenSolutionBuilderBitmap" href="..\..\..\Images\11.0\ToolWindowSolutionBuilder.bmp" usedList="bmpPic1" />
+      <Bitmap guid="guidOpenGuidanceExplorerBitmap" href="..\..\..\Images\11.0\ToolWindowGuidanceExplorer.bmp" usedList="bmpPic1" />
+      <Bitmap guid="guidOpenGuidanceBrowserBitmap" href="..\..\..\Images\11.0\ToolWindowGuidanceBrowser.bmp" usedList="bmpPic1" />
+    </Bitmaps>
+  </Commands>
+  <CommandPlacements>
+    <CommandPlacement guid="guidOpenSolutionBuilderCommand" id="cmdidOpenSolutionBuilderCommand" priority="0x0100">
+      <Parent guid="guidSHLMainMenu" id="IDG_VS_TOOLSB_NEWWINDOWS"/>
+    </CommandPlacement>
+
+    <CommandPlacement guid="guidOpenSolutionBuilderCommand" id="cmdidOpenSolutionBuilderCommand" priority="0x0100">
+      <Parent guid="guidSHLMainMenu" id="IDG_VS_VIEW_ORG_WINDOWS"/>
+    </CommandPlacement>
+    <CommandPlacement guid="guidOpenGuidanceExplorerCommand" id="cmdidOpenGuidanceExplorerCommand" priority="0x0101">
+      <Parent guid="guidSHLMainMenu" id="IDG_VS_WNDO_OTRWNDWS1"/>
+    </CommandPlacement>
+    <CommandPlacement guid="guidOpenGuidanceBrowserCommand" id="cmdidOpenGuidanceBrowserCommand" priority="0x0102">
+      <Parent guid="guidSHLMainMenu" id="IDG_VS_WNDO_OTRWNDWS1"/>
+    </CommandPlacement>
+  </CommandPlacements>
+  <KeyBindings>
+    <KeyBinding editor="guidVSStd97" guid="guidOpenSolutionBuilderCommand" id="cmdidOpenSolutionBuilderCommand" key1="W" mod1="Control" key2="H" mod2="Control" />
+    <KeyBinding editor="guidVSStd97" guid="guidOpenSolutionBuilderCommand" id="cmdidOpenSolutionBuilderCommand" key1="W" mod1="Control" key2="H" />
+  </KeyBindings>
+  <Symbols>
+    <GuidSymbol name="guidRuntimeShellPkg" value="{93373818-600f-414b-8181-3a0cb79fa785}" />
+    <GuidSymbol name="guidOpenSolutionBuilderCommand" value="{43649871-de44-4b36-8745-73b8ffd737b3}">
+      <IDSymbol name="cmdidOpenSolutionBuilderCommand" value="0x0101" />
+    </GuidSymbol>
+    <GuidSymbol name="guidOpenGuidanceExplorerCommand" value="{86E00CF8-82FA-4C2B-A65D-CA5FEEDAB03F}">
+      <IDSymbol name="cmdidOpenGuidanceExplorerCommand" value="0x0102" />
+    </GuidSymbol>
+    <GuidSymbol name="guidOpenGuidanceBrowserCommand" value="{678B7F72-E43F-46DE-AFFC-365896827954}">
+      <IDSymbol name="cmdidOpenGuidanceBrowserCommand" value="0x0103" />
+    </GuidSymbol>
+    <GuidSymbol name="guidOpenSolutionBuilderBitmap" value="{9e7810ed-4e56-488a-ba56-34dd8cdeff31}">
+      <IDSymbol name="bmpPic1" value="1"/>
+    </GuidSymbol>
+    <GuidSymbol name="guidOpenGuidanceExplorerBitmap" value="{2C37967A-7977-41FE-9BDA-393A045930C0}">
+      <IDSymbol name="bmpPic1" value="1"/>
+    </GuidSymbol>
+    <GuidSymbol name="guidOpenGuidanceBrowserBitmap" value="{E26EC598-E0C8-4461-B4D3-4C3BB8A8CD71}">
+      <IDSymbol name="bmpPic1" value="1"/>
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>

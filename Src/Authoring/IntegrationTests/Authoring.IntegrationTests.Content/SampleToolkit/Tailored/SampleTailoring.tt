@@ -1,0 +1,25 @@
+﻿<#@ output extension=".gen.sln" #>
+<#@ Include File="..\..\..\..\..\MasterVersion.gen.ttinclude"#>
+<#
+    var formatVersion = (VersionInfo.TargetVsVersion == "11.0") ? "12.00" : "11.00";
+    var vsVersion = (VersionInfo.TargetVsVersion == "11.0") ? "2012" : "2010";
+#>
+Microsoft Visual Studio Solution File, Format Version <#=formatVersion#>
+# Visual Studio <#=vsVersion#>
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleTailoring", "SampleTailoring\SampleTailoring.csproj", "{D1CF0FF4-E7A4-454D-8E74-8F773FA1029F}"
+EndProject
+Global
+    GlobalSection(SolutionConfigurationPlatforms) = preSolution
+        Debug|Any CPU = Debug|Any CPU
+        Release|Any CPU = Release|Any CPU
+    EndGlobalSection
+    GlobalSection(ProjectConfigurationPlatforms) = postSolution
+        {D1CF0FF4-E7A4-454D-8E74-8F773FA1029F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {D1CF0FF4-E7A4-454D-8E74-8F773FA1029F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {D1CF0FF4-E7A4-454D-8E74-8F773FA1029F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {D1CF0FF4-E7A4-454D-8E74-8F773FA1029F}.Release|Any CPU.Build.0 = Release|Any CPU
+    EndGlobalSection
+    GlobalSection(SolutionProperties) = preSolution
+        HideSolutionNode = FALSE
+    EndGlobalSection
+EndGlobal

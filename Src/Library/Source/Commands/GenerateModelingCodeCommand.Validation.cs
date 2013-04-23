@@ -3,16 +3,15 @@ using System.ComponentModel.Composition;
 using System.Globalization;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Validation;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Automation;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
+using NuPattern.Library.Automation;
+using NuPattern.Library.Properties;
+using NuPattern.Reflection;
+using NuPattern.Runtime;
+using NuPattern.VisualStudio.Solution;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Commands
+namespace NuPattern.Library.Commands
 {
     /// <summary>
     /// Validations for the <see cref="GenerateModelingCodeCommand"/> command
@@ -42,14 +41,15 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
 
             try
             {
-                var authoringUri = settings.GetOrCreatePropertyValue(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TemplateAuthoringUri), string.Empty);
-                if (!string.IsNullOrEmpty(authoringUri))
+                var authoringUriString = settings.GetPropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TemplateAuthoringUri));
+                if (!string.IsNullOrEmpty(authoringUriString))
                 {
-                    var uriService = serviceProvider.GetService<IFxrUriReferenceService>();
+                    var authoringUri = new Uri(authoringUriString);
+                    var uriService = serviceProvider.GetService<IUriReferenceService>();
                     IItem item = null;
                     try
                     {
-                        item = uriService.ResolveUri<IItemContainer>(new Uri(authoringUri)).As<IItem>();
+                        item = uriService.ResolveUri<IItemContainer>(authoringUri).As<IItem>();
                     }
                     catch (NotSupportedException)
                     {
@@ -62,6 +62,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
                         return;
                     }
 
+                    // Ensure file is configured as 'Content'
                     if (!(string.Equals(item.Data.ItemType, BuildAction.Content.ToString(), StringComparison.OrdinalIgnoreCase)))
                     {
                         context.LogError(
@@ -72,14 +73,49 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
                         Resources.Validate_GenerateModelingCodeCommandItemTypeShouldBeSetToContentCode, settingsElement as ModelElement);
                     }
 
+                    // Ensure file is 'IncludeInVSIX'
                     if (!(string.Equals(item.Data.IncludeInVSIX, Boolean.TrueString.ToUpperInvariant(), StringComparison.OrdinalIgnoreCase)))
                     {
-                        context.LogError(
-                        string.Format(
-                            CultureInfo.CurrentCulture,
-                            Resources.Validate_GenerateModelingCodeCommandIIncludeInVSIXShouldBeSetToTrue,
-                            settings.Name),
-                        Resources.Validate_GenerateModelingCodeCommandIIncludeInVSIXShouldBeSetToTrueCode, settingsElement as ModelElement);
+                        if (String.IsNullOrEmpty(item.Data.IncludeInVSIXAs))
+                        {
+                            context.LogError(
+                            string.Format(
+                                CultureInfo.CurrentCulture,
+                                Resources.Validate_GenerateModelingCodeCommandIIncludeInVSIXShouldBeSetToTrue,
+                                settings.Name),
+                            Resources.Validate_GenerateModelingCodeCommandIIncludeInVSIXShouldBeSetToTrueCode, settingsElement as ModelElement);
+                        }
+                        else
+                        {
+                            // Ensure the 'IncludeInVSIXAs' value matches TemplateUri value
+                            var templateUriString = settings.GetPropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TemplateUri));
+                            if (!String.IsNullOrEmpty(templateUriString))
+                            {
+                                var templateFilename = TextTemplateUri.ParseFileName(new Uri(templateUriString));
+                                if (!templateFilename.Equals(item.Data.IncludeInVSIXAs, StringComparison.OrdinalIgnoreCase))
+                                {
+                                    context.LogError(
+                                    string.Format(
+                                        CultureInfo.CurrentCulture,
+                                        Resources.Validate_GenerateModelingCodeCommandIIncludeInVSIXAsShouldBeSameAsFile,
+                                        settings.Name),
+                                    Resources.Validate_GenerateModelingCodeCommandIIncludeInVSIXAsShouldBeSameAsFileCode, settingsElement as ModelElement);
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        // Ensure not both 'IncludeInVSIX' and 'IncludeInVSIXAs'
+                        if (!String.IsNullOrEmpty(item.Data.IncludeInVSIXAs))
+                        {
+                            context.LogError(
+                            string.Format(
+                                CultureInfo.CurrentCulture,
+                                Resources.Validate_GenerateModelingCodeCommandIIncludeInVSIXDuplicate,
+                                settings.Name),
+                            Resources.Validate_GenerateModelingCodeCommandIIncludeInVSIXDuplicateCode, settingsElement as ModelElement);
+                        }
                     }
                 }
                 else
@@ -88,7 +124,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
                     return;
                 }
 
-                var targetFilename = settings.GetOrCreatePropertyValue(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetFileName), string.Empty);
+                var targetFilename = settings.GetPropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetFileName));
                 if (string.IsNullOrEmpty(targetFilename))
                 {
                     context.LogError(
@@ -100,7 +136,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
                 }
 
                 var isConfiguredOnProduct = ((settingsElement.Parent as IPatternSchema) != null);
-                var targetPath = settings.GetOrCreatePropertyValue(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetPath), string.Empty);
+                var targetPath = settings.GetPropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetPath));
                 if ((!string.IsNullOrEmpty(targetPath))
                     && (targetPath.StartsWith(PathResolver.ResolveArtifactLinkCharacter, StringComparison.OrdinalIgnoreCase))
                     && !isConfiguredOnProduct)

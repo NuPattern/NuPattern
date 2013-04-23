@@ -1,22 +1,23 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Globalization;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Library.Properties;
 
-namespace Microsoft.VisualStudio.Patterning.Library.ValidationRules
+namespace NuPattern.Library.ValidationRules
 {
     /// <summary>
     /// Specifies that a data field value in ASP.NET Dynamic Data must match the specified regular expression.
     /// </summary>
-    [DescriptionResource("PropertyRegularExpressionValidationRule_Description", typeof(Resources))]
-    [DisplayNameResource("PropertyRegularExpressionValidationRule_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"PropertyRegularExpressionValidationRule_Description", typeof(Resources))]
+    [DisplayNameResource(@"PropertyRegularExpressionValidationRule_DisplayName", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_General", typeof(Resources))]
     public class PropertyRegularExpressionValidationRule : PropertyAttributeValidationRule
     {
         /// <summary>
         /// Gets or sets the regular expression pattern.
         /// </summary>
-        [DescriptionResource("PropertyRegularExpressionValidationRule_PatternDescription", typeof(Resources))]
-        [DisplayNameResource("PropertyRegularExpressionValidationRule_PatternDisplayName", typeof(Resources))]
+        [DescriptionResource(@"PropertyRegularExpressionValidationRule_PatternDescription", typeof(Resources))]
+        [DisplayNameResource(@"PropertyRegularExpressionValidationRule_PatternDisplayName", typeof(Resources))]
         public string Pattern { get; set; }
 
         /// <summary>

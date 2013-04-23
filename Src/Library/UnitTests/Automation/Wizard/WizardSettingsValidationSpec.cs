@@ -1,11 +1,11 @@
 ﻿using Microsoft.VisualStudio.Modeling.Extensibility;
 using Microsoft.VisualStudio.Modeling.Validation;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Automation;
-using Microsoft.VisualStudio.Patterning.Runtime.Schema;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NuPattern.Library.Automation;
+using NuPattern.Modeling;
+using NuPattern.Runtime.Schema;
 
-namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Event
+namespace NuPattern.Library.UnitTests.Automation.Event
 {
     [TestClass]
     public class WizardSettingsValidationSpec
@@ -39,7 +39,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Event
                 this.store.Dispose();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenValidateTypeIdIsNotEmptyFails()
             {
                 this.settings.ValidateTypeNameNotEmpty(validationContext);
@@ -48,7 +48,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Event
                 Assert.True(validationContext.ValidationSubjects.IndexOf(this.settings) == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenTypeIsNotEmpty_ThenValidateTypeIdIsNotEmptySucceeds()
             {
                 this.settings.WithTransaction(setting => setting.TypeName = "foo");

@@ -4,20 +4,25 @@
   <!-- Include base build configuration settings (before overrides below) -->
   <Import Project="BuildConfiguration.CSharp.targets" />
 
-	<!-- Clear documentation file as it's not required for test classes -->
-	<PropertyGroup>
-		<DocumentationFile></DocumentationFile>
-		<CreateVsixContainer>false</CreateVsixContainer>
-		<!-- No check for CLS-compliant -->
+  <!-- Clear documentation file as it's not required for test classes -->
+  <PropertyGroup>
+    <DocumentationFile></DocumentationFile>
+    <CreateVsixContainer>false</CreateVsixContainer>
+    <!-- No check for CLS-compliant -->
     <NoWarn>3003</NoWarn>
-	</PropertyGroup>
+  </PropertyGroup>
+
+  <!-- VS2012 test settings -->
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug-VS2012' or '$(Configuration)' == 'Release-VS2012'">
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <!--<IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>-->
+  </PropertyGroup>
+
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="('$(Configuration)' == 'Debug-VS2012' or '$(Configuration)' == 'Release-VS2012') and Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
 
   <!-- CA settings for build configurations -->
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <CodeAnalysisRuleSet>$(BranchRoot)CodeAnalysis.TestProjects.ruleset</CodeAnalysisRuleSet>
-    <StyleCopOverrideSettingsFile>$(BranchRoot)SourceAnalysis.TestProjects.stylecop</StyleCopOverrideSettingsFile>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug With CA|AnyCPU' ">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release-VS2010|Any CPU' or '$(Configuration)|$(Platform)' == 'Release-VS2012|Any CPU' ">
     <CodeAnalysisRuleSet>$(BranchRoot)CodeAnalysis.TestProjects.ruleset</CodeAnalysisRuleSet>
     <StyleCopOverrideSettingsFile>$(BranchRoot)SourceAnalysis.TestProjects.stylecop</StyleCopOverrideSettingsFile>
   </PropertyGroup>

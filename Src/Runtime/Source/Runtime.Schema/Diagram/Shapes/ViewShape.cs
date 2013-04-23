@@ -4,15 +4,15 @@ using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Diagrams;
 using Microsoft.VisualStudio.Modeling.Diagrams.GraphObject;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Runtime.Schema.Properties;
+using NuPattern.Modeling;
+using NuPattern.Runtime.Schema.Properties;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
     /// <summary>
     /// Customizations for the <see cref="ViewShape"/> class.
     /// </summary>
-    public partial class ViewShape
+    partial class ViewShape
     {
         private const double ShapeMarginX = 0.25d;
         private const double ShapeMarginY = 0.25d;

@@ -1,57 +1,63 @@
-﻿using System.Diagnostics.CodeAnalysis;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Modeling.Validation;
+﻿using Microsoft.VisualStudio.Modeling.Validation;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign;
+using NuPattern.Authoring.WorkflowDesign;
+using NuPattern.Modeling;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.UnitTests
+namespace NuPattern.Authoring.UnitTests
 {
-	public partial class ProducedAssetSpec
-	{
-		private static ValidationContext validationContext;
+    [TestClass]
+    public class ProducedAssetValidationSpec
+    {
+        internal static readonly IAssertion Assert = new Assertion();
+        private static ValidationContext validationContext;
 
-		[SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable", Justification = "Test code")]
-		public partial class GivenAnProducedAsset
-		{
-			[TestInitialize]
-			public override void Initialize()
-			{
-				base.Initialize();
+        [TestClass]
+        public class GivenAnProducedAsset
+        {
+            private DslTestStore<WorkflowDesignDomainModel> store = new DslTestStore<WorkflowDesignDomainModel>();
+            private ProducedAsset asset;
 
-				validationContext = new ValidationContext(ValidationCategories.Save, this.Asset);
-			}
+            [TestInitialize]
+            public void InitializeContext()
+            {
+                this.store.TransactionManager.DoWithinTransaction(() =>
+                {
+                    this.asset = this.store.ElementFactory.CreateElement<ProducedAsset>();
+                });
+                validationContext = new ValidationContext(ValidationCategories.Save, this.asset);
+            }
 
-			[TestMethod]
-			public void WhenNoToolsAndNotFinal_ThenValidateProducedAssetNotIntermediateAndNotFinalFails()
-			{
-				this.Asset.WithTransaction(asset => asset.IsFinal = false);
+            [TestMethod, TestCategory("Unit")]
+            public void WhenNoToolsAndNotFinal_ThenValidateProducedAssetNotIntermediateAndNotFinalFails()
+            {
+                this.asset.WithTransaction(asset => asset.IsFinal = false);
 
-				this.Asset.ValidateProducedAssetNotIntermediateAndNotFinal(validationContext);
+                this.asset.ValidateProducedAssetNotIntermediateAndNotFinal(validationContext);
 
-				Assert.True(validationContext.CurrentViolations.Count == 1);
-			}
+                Assert.True(validationContext.CurrentViolations.Count == 1);
+            }
 
-			[TestMethod]
-			public void ThenValidateNameIsUniqueSucceeds()
-			{
-				this.Asset.ValidateNameIsUnique(validationContext);
+            [TestMethod, TestCategory("Unit")]
+            public void ThenValidateNameIsUniqueSucceeds()
+            {
+                this.asset.ValidateNameIsUnique(validationContext);
 
-				Assert.True(validationContext.CurrentViolations.Count == 0);
-			}
+                Assert.True(validationContext.CurrentViolations.Count == 0);
+            }
 
-			[TestMethod]
-			public void WhenSameNamedElementAddedToDesign_ThenValidateNameIsUniqueFails()
-			{
-				this.Asset.Store.TransactionManager.DoWithinTransaction(() =>
-				{
-					ProducedAsset asset2 = this.Asset.Store.ElementFactory.CreateElement<ProducedAsset>();
-					asset2.Name = this.Asset.Name;
-				});
-				this.Asset.ValidateNameIsUnique(validationContext);
+            [TestMethod, TestCategory("Unit")]
+            public void WhenSameNamedElementAddedToDesign_ThenValidateNameIsUniqueFails()
+            {
+                this.asset.Store.TransactionManager.DoWithinTransaction(() =>
+                {
+                    ProducedAsset asset2 = this.asset.Store.ElementFactory.CreateElement<ProducedAsset>();
+                    asset2.Name = this.asset.Name;
+                });
+                this.asset.ValidateNameIsUnique(validationContext);
 
-				Assert.True(validationContext.CurrentViolations.Count == 1);
-				Assert.True(validationContext.ValidationSubjects.IndexOf(this.Asset) == 0);
-			}
-		}
-	}
+                Assert.True(validationContext.CurrentViolations.Count == 1);
+                Assert.True(validationContext.ValidationSubjects.IndexOf(this.asset) == 0);
+            }
+        }
+    }
 }

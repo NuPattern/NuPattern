@@ -1,73 +1,72 @@
 ﻿<ResourceDictionary
-	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-	xmlns:vsfx="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.10.0"
-	xmlns:d="clr-namespace:Microsoft.VisualStudio.Patterning.Common.Presentation.Data">
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="clr-namespace:NuPattern.Presentation.Data">
+    
+    <d:DisabledImageConverter x:Key="DisabledImageConverter" />
+    <d:ImageConverter x:Key="ImageConverter" />
 
-	<d:GrayscaleImageConverter x:Key="GrayscaleImageConverter" />
-	<d:ImageConverter x:Key="ImageConverter" />
+    <ControlTemplate x:Key="CommandBar.Separator.Template" TargetType="Separator">
+        <Border
+            BorderThickness="1,0,0,0"
+            Margin="2,1"
+            Width="1"
+            BorderBrush="{DynamicResource VsBrush.CommandBarToolBarSeparator}"
+            Background="{DynamicResource VsBrush.CommandBarToolBarSeparator}" />
+    </ControlTemplate>
 
-	<ControlTemplate x:Key="CommandBar.Separator.Template" TargetType="Separator">
-		<Border
-			BorderThickness="1,0,0,0"
-			Margin="2,1"
-			Width="1"
-			BorderBrush="{StaticResource {x:Static vsfx:VsBrushes.CommandBarToolBarSeparatorKey}}"
-			Background="{StaticResource {x:Static vsfx:VsBrushes.CommandBarToolBarSeparatorKey}}" />
-	</ControlTemplate>
+    <Style x:Key="CommandBar.Separator" TargetType="Separator">
+        <Setter Property="Template" Value="{StaticResource CommandBar.Separator.Template}" />
+    </Style>
 
-	<Style x:Key="CommandBar.Separator" TargetType="Separator">
-		<Setter Property="Template" Value="{StaticResource CommandBar.Separator.Template}" />
-	</Style>
+    <ControlTemplate x:Key="CommandBar.Button.Template" TargetType="Button">
+        <Border Name="bd" BorderThickness="{TemplateBinding BorderThickness}" Padding="{TemplateBinding Padding}" BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+            <ContentPresenter x:Name="content" Content="{Binding Path=Content, RelativeSource={RelativeSource TemplatedParent},Converter={StaticResource ImageConverter}}" ContentTemplate="{TemplateBinding ContentTemplate}" ContentStringFormat="{TemplateBinding ContentStringFormat}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+        </Border>
+        <ControlTemplate.Triggers>
+            <Trigger Property="UIElement.IsMouseOver" Value="True">
+                <Setter TargetName="bd" Property="BorderBrush" Value="{DynamicResource VsBrush.CommandBarBorder}" />
+                <Setter TargetName="bd" Property="Background" Value="{DynamicResource VsBrush.CommandBarMouseOverBackgroundGradient}" />
+            </Trigger>
+            <Trigger Property="IsKeyboardFocused" Value="True">
+                <Setter TargetName="bd" Property="BorderBrush" Value="{DynamicResource VsBrush.CommandBarBorder}" />
+                <Setter TargetName="bd" Property="Background" Value="{DynamicResource VsBrush.CommandBarMouseOverBackgroundGradient}" />
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter TargetName="bd" Property="BorderBrush" Value="{DynamicResource VsBrush.CommandBarMouseDownBorder}" />
+                <Setter TargetName="bd" Property="Background" Value="{DynamicResource VsBrush.CommandBarMouseDownBackgroundGradient}" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrush}}" />
+                <Setter TargetName="content" Property="Content" Value="{Binding Path=Content, RelativeSource={RelativeSource TemplatedParent},Converter={StaticResource DisabledImageConverter}}" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
 
-	<ControlTemplate x:Key="CommandBar.Button.Template" TargetType="Button">
-		<Border Name="bd" BorderThickness="{TemplateBinding BorderThickness}" Padding="{TemplateBinding Padding}" BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
-			<ContentPresenter x:Name="content" Content="{Binding Path=Content, RelativeSource={RelativeSource TemplatedParent},Converter={StaticResource ImageConverter}}" ContentTemplate="{TemplateBinding ContentTemplate}" ContentStringFormat="{TemplateBinding ContentStringFormat}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
-		</Border>
-		<ControlTemplate.Triggers>
-			<Trigger Property="UIElement.IsMouseOver" Value="True">
-				<Setter TargetName="bd" Property="BorderBrush" Value="{StaticResource {x:Static vsfx:VsBrushes.CommandBarBorderKey}}" />
-				<Setter TargetName="bd" Property="Background" Value="{StaticResource {x:Static vsfx:VsBrushes.CommandBarMouseOverBackgroundGradientKey}}" />
-			</Trigger>
-			<Trigger Property="IsKeyboardFocused" Value="True">
-				<Setter TargetName="bd" Property="BorderBrush" Value="{StaticResource {x:Static vsfx:VsBrushes.CommandBarBorderKey}}" />
-				<Setter TargetName="bd" Property="Background" Value="{StaticResource {x:Static vsfx:VsBrushes.CommandBarMouseOverBackgroundGradientKey}}" />
-			</Trigger>
-			<Trigger Property="IsPressed" Value="True">
-				<Setter TargetName="bd" Property="BorderBrush" Value="{StaticResource {x:Static vsfx:VsBrushes.CommandBarMouseDownBorderKey}}" />
-				<Setter TargetName="bd" Property="Background" Value="{StaticResource {x:Static vsfx:VsBrushes.CommandBarMouseDownBackgroundGradientKey}}" />
-			</Trigger>
-			<Trigger Property="IsEnabled" Value="False">
-				<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
-				<Setter TargetName="content" Property="Content" Value="{Binding Path=Content, RelativeSource={RelativeSource TemplatedParent},Converter={StaticResource GrayscaleImageConverter}}" />
-			</Trigger>
-		</ControlTemplate.Triggers>
-	</ControlTemplate>
+    <Style x:Key="CommandBar.Button" TargetType="Button">
+        <Setter Property="Width" Value="22" />
+        <Setter Property="Height" Value="24" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Foreground" Value="{DynamicResource VsBrush.ButtonText}" />
+        <Setter Property="Padding" Value="2" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Background" Value="#00FFFFFF" />
+        <Setter Property="BorderBrush" Value="#00FFFFFF" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Template" Value="{StaticResource CommandBar.Button.Template}" />
+    </Style>
 
-	<Style x:Key="CommandBar.Button" TargetType="Button">
-		<Setter Property="Width" Value="22" />
-		<Setter Property="Height" Value="22" />
-		<Setter Property="SnapsToDevicePixels" Value="True" />
-		<Setter Property="Foreground" Value="{DynamicResource {x:Static vsfx:VsBrushes.ButtonTextKey}}" />
-		<Setter Property="Padding" Value="2" />
-		<Setter Property="BorderThickness" Value="1" />
-		<Setter Property="Background" Value="#00FFFFFF" />
-		<Setter Property="BorderBrush" Value="#00FFFFFF" />
-		<Setter Property="HorizontalAlignment" Value="Center" />
-		<Setter Property="VerticalAlignment" Value="Center" />
-		<Setter Property="HorizontalContentAlignment" Value="Center" />
-		<Setter Property="VerticalContentAlignment" Value="Center" />
-		<Setter Property="Template" Value="{StaticResource CommandBar.Button.Template}" />
-	</Style>
-
-	<Style x:Key="CommandBar.Panel" TargetType="Panel">
-		<Setter Property="HorizontalAlignment" Value="Stretch" />
-		<Setter Property="Background" Value="{DynamicResource {x:Static vsfx:VsBrushes.CommandBarGradientKey}}" />
-		<Setter Property="Margin" Value="0" />
-		<Style.Resources>
-			<Style TargetType="Button" BasedOn="{StaticResource CommandBar.Button}" />
-			<Style TargetType="Separator" BasedOn="{StaticResource CommandBar.Separator}" />
-		</Style.Resources>
-	</Style>
+    <Style x:Key="CommandBar.Panel" TargetType="Panel">
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="Background" Value="{DynamicResource VsBrush.CommandBarGradient}" />
+        <Setter Property="Margin" Value="0" />
+        <Style.Resources>
+            <Style TargetType="Button" BasedOn="{StaticResource CommandBar.Button}" />
+            <Style TargetType="Separator" BasedOn="{StaticResource CommandBar.Separator}" />
+        </Style.Resources>
+    </Style>
 
 </ResourceDictionary>

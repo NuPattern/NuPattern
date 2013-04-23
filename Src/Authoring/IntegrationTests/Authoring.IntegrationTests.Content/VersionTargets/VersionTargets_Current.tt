@@ -1,0 +1,8 @@
+﻿<#@ output extension=".gen.targets" #>
+<#@ Include File="..\..\..\..\MasterVersion.gen.ttinclude" #>
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PatternToolkitVersion><#=VersionInfo.AuthoringVSIXVersion #></PatternToolkitVersion>
+  </PropertyGroup>
+</Project>

@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Linq;
 using EnvDTE80;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.VsIde;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
+using NuPattern.Runtime;
+using NuPattern.VisualStudio.Solution;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
+namespace NuPattern.Authoring.IntegrationTests
 {
     public abstract class CreateOnUnfoldSpec : IntegrationTest
     {
@@ -36,7 +33,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
 
         public void ReferenceLinkIsAdded()
         {
-            var uriProvider = VsIdeTestHostContext.ServiceProvider.GetService<IFxrUriReferenceService>();
+            var uriProvider = VsIdeTestHostContext.ServiceProvider.GetService<IUriReferenceService>();
             var project = solution.Items.OfType<IProject>().First().Id;
             Assert.True(this.pattern.References.Any(r => r.Value == string.Format("solution://{0}/", project)));
         }
@@ -65,28 +62,28 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
         }
 
         [HostType("VS IDE")]
-        [TestMethod]
+        [TestMethod, TestCategory("Integration")]
         public void ThenSolutionItemExists()
         {
             Assert.True(solution.Items.Any(p => p.Name == instanceName));
         }
 
         [HostType("VS IDE")]
-        [TestMethod]
+        [TestMethod, TestCategory("Integration")]
         public void ThenPatternInstanceExists()
         {
             Assert.NotNull(pattern);
         }
 
         [HostType("VS IDE")]
-        [TestMethod]
+        [TestMethod, TestCategory("Integration")]
         public void ThenReferenceLinkIsAdded()
         {
             base.ReferenceLinkIsAdded();
         }
 
         [HostType("VS IDE")]
-        [TestMethod]
+        [TestMethod, TestCategory("Integration")]
         public void ThenSyncNamesWork()
         {
             base.SyncNamesWorks();
@@ -109,7 +106,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
         }
 
         [HostType("VS IDE")]
-        [TestMethod]
+        [TestMethod, TestCategory("Integration")]
         public void ThenSolutionItemExists()
         {
             Assert.True(solution.Items.Any(p => p.Name == instanceName));
@@ -121,7 +118,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
         }
 
         [HostType("VS IDE")]
-        [TestMethod]
+        [TestMethod, TestCategory("Integration")]
         public void ThenReferenceLinkIsAdded()
         {
             base.ReferenceLinkIsAdded();

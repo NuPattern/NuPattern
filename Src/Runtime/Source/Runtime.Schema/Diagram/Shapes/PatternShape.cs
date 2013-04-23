@@ -3,12 +3,12 @@ using System.Collections;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Diagrams;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
     /// <summary>
     /// Customizations for the <see cref=" PatternShapeBase"/> class.
     /// </summary>
-    public partial class PatternShapeBase
+    partial class PatternShapeBase
     {
         /// <summary>
         /// Returns the list of elements valid at this time.
@@ -35,7 +35,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
     /// <summary>
     /// Customizations for the <see cref=" PatternShape"/> class.
     /// </summary>
-    public partial class PatternShape : PatternShapeBase, IDisposable
+    partial class PatternShape : PatternShapeBase, IDisposable
     {
         /// <summary>
         /// The initial position of the shape.

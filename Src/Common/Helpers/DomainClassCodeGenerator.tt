@@ -5,7 +5,7 @@
 <#@ import namespace="System.Globalization" #>
 <#@ assembly name="System.Core" #>
 <#@ import namespace="System.Linq" #>
-<#@ output extension=".cs" #>
+<#@ output extension=".gen.cs" #>
 <#@ include file="Dsl\DomainClass.tt" #>
 <#@ include file="DomainProperty.tt" #>
 <#@ include file="Dsl\DomainRole.tt" #>
@@ -28,6 +28,6 @@ using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
 // Generate code for all the classes in this domain model
 foreach(DomainClass domainClass in this.DslLibrary.Classes)
 {
-	GenerateDomainClass(domainClass);
+    GenerateDomainClass(domainClass);
 }
 #>
