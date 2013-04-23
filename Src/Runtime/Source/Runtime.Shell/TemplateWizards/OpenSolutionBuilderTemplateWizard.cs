@@ -27,7 +27,7 @@ namespace NuPattern.Runtime.Shell.TemplateWizards
 
             if (package != null)
             {
-                package.AutoOpenSolutionBuilder();
+                package.AutoOpenToolWindows();
             }
         }
 
