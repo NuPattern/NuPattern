@@ -16,7 +16,7 @@ namespace NuPattern.Runtime
     /// </example>
     public class StoreEventBufferingScope : IDisposable
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<StoreEventBufferingScope>();
+        private static readonly ITracer tracer = Tracer.Get<StoreEventBufferingScope>();
         private static Stack<StoreEventBufferingScope> scopes = new Stack<StoreEventBufferingScope>(new StoreEventBufferingScope[] { null });
         private static bool RaisingEvents { get; set; }
 
@@ -35,7 +35,7 @@ namespace NuPattern.Runtime
 
             scopes.Push(this);
 
-            tracer.TraceVerbose(Resources.StoreEventBufferingScope_Initialized);
+            tracer.Verbose(Resources.StoreEventBufferingScope_Initialized);
         }
 
         /// <summary>
@@ -65,7 +65,7 @@ namespace NuPattern.Runtime
         public void Complete()
         {
             this.completed = true;
-            tracer.TraceVerbose(Resources.StoreEventBufferingScope_MarkedCompleted);
+            tracer.Verbose(Resources.StoreEventBufferingScope_MarkedCompleted);
         }
 
         /// <summary>
@@ -75,7 +75,7 @@ namespace NuPattern.Runtime
         {
             completed = false;
             this.IsCanceled = true;
-            tracer.TraceVerbose(Resources.StoreEventBufferingScope_MarkedCanceled);
+            tracer.Verbose(Resources.StoreEventBufferingScope_MarkedCanceled);
         }
 
         /// <summary>
@@ -100,7 +100,7 @@ namespace NuPattern.Runtime
         {
             if (this.IsCanceled)
             {
-                tracer.TraceVerbose(Resources.StoreEventBufferingScope_CancelledScopeIgnoringEvent);
+                tracer.Verbose(Resources.StoreEventBufferingScope_CancelledScopeIgnoringEvent);
             }
             else
             {
@@ -115,7 +115,7 @@ namespace NuPattern.Runtime
         {
             if (Current != null)
             {
-                tracer.TraceVerbose(Resources.StoreEventBufferingScope_BufferingEvent);
+                tracer.Verbose(Resources.StoreEventBufferingScope_BufferingEvent);
                 Current.AddEvent(raiseEvent);
             }
             else
@@ -158,7 +158,7 @@ namespace NuPattern.Runtime
 
                 if (this.IsCanceled)
                 {
-                    tracer.TraceVerbose(Resources.StoreEventBufferingScope_CancelledScopeIgnoringEvent);
+                    tracer.Verbose(Resources.StoreEventBufferingScope_CancelledScopeIgnoringEvent);
 
                     // If we have been cancelled, we don't waste time copying our events to the potential parent 
                     // scope as they will never be raised anyways.
@@ -167,7 +167,7 @@ namespace NuPattern.Runtime
                 {
                     if (Current != null)
                     {
-                        tracer.TraceVerbose(Resources.StoreEventBufferingScope_CompleteEnqueingOnParent);
+                        tracer.Verbose(Resources.StoreEventBufferingScope_CompleteEnqueingOnParent);
 
                         // There's another parent scope. Append our events to the 
                         // end of its queue for it to raise them later when it is itself 
@@ -176,7 +176,7 @@ namespace NuPattern.Runtime
                     }
                     else
                     {
-                        tracer.TraceVerbose(Resources.StoreEventBufferingScope_RaisingEvents);
+                        tracer.Verbose(Resources.StoreEventBufferingScope_RaisingEvents);
 
                         // We're the topmost scope, so we raise all buffered events now.
                         foreach (var raiseEvent in this.events)
@@ -195,7 +195,7 @@ namespace NuPattern.Runtime
                 }
                 else
                 {
-                    tracer.TraceVerbose(Resources.StoreEventBufferingScope_DisposingNonComplete);
+                    tracer.Verbose(Resources.StoreEventBufferingScope_DisposingNonComplete);
                 }
 
                 // Propagate cancellation flag upwards.

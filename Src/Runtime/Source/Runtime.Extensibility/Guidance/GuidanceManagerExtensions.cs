@@ -12,7 +12,7 @@ namespace NuPattern.Runtime.Guidance
     [CLSCompliant(false)]
     public static class GuidanceManagerExtensions
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<IGuidanceManager>();
+        private static readonly ITracer tracer = Tracer.Get<IGuidanceManager>();
 
         /// <summary>
         /// Gets whether the given guidance extension is installed in the system.
@@ -63,7 +63,7 @@ namespace NuPattern.Runtime.Guidance
             var toolWindows = provider.GetService<IGuidanceWindowsService>();
             if (toolWindows != null)
             {
-                tracer.TraceVerbose(Resources.GuidanceManagerExtensions_TraceShowingGuidanceWindows);
+                tracer.Verbose(Resources.GuidanceManagerExtensions_TraceShowingGuidanceWindows);
 
                 toolWindows.ShowGuidanceExplorer(provider);
                 toolWindows.ShowGuidanceBrowser(provider);
@@ -82,7 +82,7 @@ namespace NuPattern.Runtime.Guidance
             var registration = guidanceManager.InstalledGuidanceExtensions.First(e => e.ExtensionId == extensionId);
             if (registration == null)
             {
-                tracer.TraceError(Resources.GuidanceManagerExtensions_ErrorNoRegistration, extensionId);
+                tracer.Error(Resources.GuidanceManagerExtensions_ErrorNoRegistration, extensionId);
                 return;
             }
             else
@@ -120,7 +120,7 @@ namespace NuPattern.Runtime.Guidance
                 guidanceManager.ShowGuidanceWindows(provider);
             }
 
-            tracer.TraceInformation(Resources.GuidanceManagerExtensions_TraceActivation, instance.InstanceName);
+            tracer.Info(Resources.GuidanceManagerExtensions_TraceActivation, instance.InstanceName);
 
             // (workaround) Force a refresh of the active guidance extension in Guidance Explorer
             guidanceManager.ActiveGuidanceExtension = null;

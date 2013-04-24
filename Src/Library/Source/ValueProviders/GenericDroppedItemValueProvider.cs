@@ -18,7 +18,7 @@ namespace NuPattern.Library.ValueProviders
     [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     public class GenericDroppedItemValueProvider : ValueProvider
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<GenericDroppedItemValueProvider>();
+        private static readonly ITracer tracer = Tracer.Get<GenericDroppedItemValueProvider>();
 
         /// <summary>
         /// Gets or sets the drag arguments.
@@ -44,12 +44,12 @@ namespace NuPattern.Library.ValueProviders
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.GenericDroppedItemValueProvider_TraceInitial);
 
             var result = DragArgs.Data.GetData(Format);
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.GenericDroppedItemValueProvider_TraceEvaluation, string.Join(@";", DragArgs.Data.GetFormats()));
 
             return result;

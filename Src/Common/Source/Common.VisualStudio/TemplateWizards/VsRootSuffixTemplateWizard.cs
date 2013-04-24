@@ -17,7 +17,7 @@ namespace NuPattern.VisualStudio.TemplateWizards
     [CLSCompliant(false)]
     public class VsRootSuffixTemplateWizard : TemplateWizard
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<VsRootSuffixTemplateWizard>();
+        private static readonly ITracer tracer = Tracer.Get<VsRootSuffixTemplateWizard>();
 #if VSVER10
         private static string VsSettingsRegistryKey = @"Software\Microsoft\VisualStudio\10.0";
 #endif
@@ -50,7 +50,7 @@ namespace NuPattern.VisualStudio.TemplateWizards
 
                             replacementsDictionary.Add(@"$vsrootsuffix$", suffix);
 
-                            tracer.TraceInformation(Resources.VsRootSuffixTemplateWizard_RootSuffixDetermined, suffix);
+                            tracer.Info(Resources.VsRootSuffixTemplateWizard_RootSuffixDetermined, suffix);
                         }),
                     Resources.VsRootSuffixTemplateWizard_FailedToRetrieveRegistryRoot);
                 }

@@ -29,7 +29,7 @@ namespace NuPattern.VisualStudio.TemplateWizards
     [CLSCompliant(false)]
     public class ReplacementTemplateWizard : TemplateWizard
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<ReplacementTemplateWizard>();
+        private static readonly ITracer tracer = Tracer.Get<ReplacementTemplateWizard>();
 
         private const string ReplacementElementName = "Replacement";
         private const string ReplacementKeyName = "Key";
@@ -63,7 +63,7 @@ namespace NuPattern.VisualStudio.TemplateWizards
 
                 foreach (var replacement in additionalReplacements)
                 {
-                    tracer.TraceVerbose(Resources.ReplacementTemplateWizard_Replacing, replacement.Key, replacement.Value);
+                    tracer.Verbose(Resources.ReplacementTemplateWizard_Replacing, replacement.Key, replacement.Value);
                     replacementsDictionary[replacement.Key] = replacement.Value;
                 }
             }

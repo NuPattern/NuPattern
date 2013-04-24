@@ -16,7 +16,7 @@ namespace NuPattern.Library.ValueProviders
     [CLSCompliant(false)]
     public abstract class VsProjectPropertyValueProvider : ValueProvider
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<VsProjectPropertyValueProvider>();
+        private static readonly ITracer tracer = Tracer.Get<VsProjectPropertyValueProvider>();
 
         /// <summary>
         /// The element that owns this value provider.
@@ -69,13 +69,13 @@ namespace NuPattern.Library.ValueProviders
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.VsProjectPropertyValueProvider_TraceInitial, this.CurrentElement.InstanceName, this.ProjectPath);
 
             var resolver = new PathResolver(this.CurrentElement, this.UriService, path: (!String.IsNullOrEmpty(this.ProjectPath)) ? this.ProjectPath : String.Empty);
             if (!resolver.TryResolve())
             {
-                tracer.TraceError(
+                tracer.Error(
                     Resources.VsProjectPropertyValueProvider_TraceNotResolved, this.ProjectPath);
 
                 return string.Empty;
@@ -85,7 +85,7 @@ namespace NuPattern.Library.ValueProviders
 
             if (item == null)
             {
-                tracer.TraceWarning(
+                tracer.Warn(
                     Resources.VsProjectPropertyValueProvider_TraceNoItemFound, this.ProjectPath, resolver.Path);
 
                 return string.Empty;
@@ -97,14 +97,14 @@ namespace NuPattern.Library.ValueProviders
                     var project = (IProject)item;
                     var propValue = GetPropertyValue(project);
 
-                    tracer.TraceInformation(
+                    tracer.Info(
                         Resources.VsProjectPropertyValueProvider_TraceEvaluation, this.CurrentElement.InstanceName, this.ProjectPath, propValue);
 
                     return propValue;
                 }
                 else
                 {
-                    tracer.TraceWarning(
+                    tracer.Warn(
                         Resources.VsProjectPropertyValueProvider_TraceItemNotProject, this.ProjectPath, resolver.Path, item.Kind);
 
                     return string.Empty;

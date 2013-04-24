@@ -9,6 +9,6 @@ namespace NuPattern.Runtime.Schema
     [ValidationState(ValidationState.Enabled)]
     partial class CollectionSchema
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<CollectionSchema>();
+        private static readonly ITracer tracer = Tracer.Get<CollectionSchema>();
     }
 }

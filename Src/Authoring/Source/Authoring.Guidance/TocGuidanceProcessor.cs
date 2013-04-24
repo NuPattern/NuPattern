@@ -20,7 +20,7 @@ namespace NuPattern.Authoring.Guidance
     /// </summary>
     public class TocGuidanceProcessor : IGuidanceProcessor
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<TocGuidanceProcessor>();
+        private static readonly ITracer tracer = Tracer.Get<TocGuidanceProcessor>();
 
         /// <summary>
         /// File extension for guidance content files
@@ -280,7 +280,7 @@ namespace NuPattern.Authoring.Guidance
             catch (COMException ex)
             {
                 //Ignore error
-                tracer.TraceError(ex.Message);
+                tracer.Error(ex.Message);
             }
         }
 
@@ -356,7 +356,7 @@ namespace NuPattern.Authoring.Guidance
             // Remove r/o on disk if any, for master documents that are read-only on disk
             MakeFileWritable(documentPath);
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.TocGuidanceProcessor_TraceDocumentOpeningAsWritable, documentPath);
 
             // Try open read-write.
@@ -371,7 +371,7 @@ namespace NuPattern.Authoring.Guidance
             // Prepare any sub documents of master documents
             if (document.IsMasterDocument)
             {
-                tracer.TraceInformation(
+                tracer.Info(
                     Resources.TocGuidanceProcessor_TraceOpeningMasterSubdocuments, documentPath);
 
                 // Make all subdocuments readable on disk
@@ -393,7 +393,7 @@ namespace NuPattern.Authoring.Guidance
             var attributes = File.GetAttributes(documentPath);
             if ((attributes & FileAttributes.ReadOnly) == FileAttributes.ReadOnly)
             {
-                tracer.TraceInformation(
+                tracer.Info(
                     Resources.TocGuidanceProcessor_TraceDocumentReadOnlyRemoved, documentPath);
 
                 File.SetAttributes(documentPath, attributes & ~FileAttributes.ReadOnly);
@@ -469,7 +469,7 @@ namespace NuPattern.Authoring.Guidance
             var savedFilename = Path.ChangeExtension(pageFileName, ContentFileExtension);
 
             // Create new document
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.TocGuidanceProcessor_TraceTopicCreated, pageFileName);
 
             try
@@ -839,7 +839,7 @@ namespace NuPattern.Authoring.Guidance
 
         private static void AddAndTraceError(IList<DataAnnotations.ValidationResult> errors, string message)
         {
-            tracer.TraceWarning(
+            tracer.Warn(
                 message);
 
             errors.Add(new DataAnnotations.ValidationResult(message));

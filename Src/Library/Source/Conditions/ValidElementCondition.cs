@@ -19,7 +19,7 @@ namespace NuPattern.Library.Conditions
     [CLSCompliant(false)]
     public class ValidElementCondition : Condition
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<ValidElementCondition>();
+        private static readonly ITracer tracer = Tracer.Get<ValidElementCondition>();
 
         private const bool DefaultValidateDescendants = true;
 
@@ -60,7 +60,7 @@ namespace NuPattern.Library.Conditions
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.ValidElementCondition_TraceInitial, this.CurrentElement.InstanceName, this.ValidateDescendants);
 
             var instances = this.ValidateDescendants ? this.CurrentElement.Traverse().OfType<IInstanceBase>() : new[] { this.CurrentElement };
@@ -69,7 +69,7 @@ namespace NuPattern.Library.Conditions
 
             var result = this.PatternManager.Validate(elements);
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.ValidElementCondition_TraceEvaluation, this.CurrentElement.InstanceName, this.ValidateDescendants, result);
 
             return result;

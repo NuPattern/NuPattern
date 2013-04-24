@@ -31,7 +31,7 @@ namespace NuPattern.Library.Commands
         private const bool DefaultSantizeName = true;
         private const string DefaultTargetBuildAction = "";
         private const CopyToOutput DefaultTargetCopyToOutput = CopyToOutput.DoNotCopy;
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<GenerateModelingCodeCommand>();
+        private static readonly ITracer tracer = Tracer.Get<GenerateModelingCodeCommand>();
 
         // TODO: must be kept in sync with the PowerTools ModelingTextTransformation context keys.
         // Compatibility with PowerTools templates.
@@ -170,7 +170,7 @@ namespace NuPattern.Library.Commands
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.GenerateModelingCodeCommand_TraceInitial, this.ModelFile, this.ModelElement.Id, this.TemplateUri.OriginalString, this.TargetPath, this.TargetFileName, this.SanitizeName);
 
             var template = this.Template.Value;
@@ -186,7 +186,7 @@ namespace NuPattern.Library.Commands
             var targetContainer = this.Solution.FindOrCreate(resolver.Path);
             var elementReference = SerializeReference();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.GenerateModelingCodeCommand_TraceCreatedReference, elementReference);
 
             var elementType = this.ModelElement.GetType();
@@ -210,11 +210,11 @@ namespace NuPattern.Library.Commands
             {
                 solutionItemName = SanitizeItemName(solutionItemName);
 
-                tracer.TraceVerbose(
+                tracer.Verbose(
                     Resources.GenerateModelingCodeCommand_TraceSanitizedName, solutionItemName);
             }
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.GenerateModelingCodeCommand_TraceGeneratingItem, solutionItemName, targetContainer.GetLogicalPath());
 
             // If the template supports assigning parameters.

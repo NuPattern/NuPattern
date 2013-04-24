@@ -17,6 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Runtime.slnbldr = Runtime.slnbldr
 		Runtime.vs2012.guidancestate = Runtime.vs2012.guidancestate
 		Runtime.vs2012.testsettings = Runtime.vs2012.testsettings
+		Runtime.vs2012.vsmdi = Runtime.vs2012.vsmdi
 		..\SourceAnalysis.StyleCop = ..\SourceAnalysis.StyleCop
 		..\SourceAnalysis.TestProjects.StyleCop = ..\SourceAnalysis.TestProjects.StyleCop
 	EndProjectSection
@@ -159,6 +160,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.VisualStudio.TemplateWizards", "..\Common\Source\Common.VisualStudio.TemplateWizards\Common.VisualStudio.TemplateWizards.csproj", "{38C7DB3F-1D03-4F1A-AEFE-B17741938516}"
 EndProject
 Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Runtime.vs2012.vsmdi
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug-VS2010|Any CPU = Debug-VS2010|Any CPU
 		Debug-VS2010|Mixed Platforms = Debug-VS2010|Mixed Platforms

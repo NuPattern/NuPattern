@@ -14,7 +14,7 @@ namespace NuPattern.Library.Automation
     /// </summary>
     internal class CommandAutomation : AutomationExtension<ICommandSettings>
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<CommandAutomation>();
+        private static readonly ITracer tracer = Tracer.Get<CommandAutomation>();
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CommandAutomation"/> class.
@@ -82,15 +82,13 @@ namespace NuPattern.Library.Automation
 
             if (isValid)
             {
-                tracer.TraceVerbose(Resources.CommandAutomation_BindingEvaluatedTrue);
+                tracer.Verbose(Resources.CommandAutomation_BindingEvaluatedTrue);
                 this.CommandBinding.Value.Execute();
             }
             else
             {
-                tracer.TraceRecord(this, TraceEventType.Warning,
-                    this.CommandBinding.EvaluationResults,
-                    string.Format(CultureInfo.CurrentCulture,
-                        Resources.CommandAutomation_BindingEvaluatedFalse, this.Name));
+                tracer.Warn(Resources.CommandAutomation_BindingEvaluatedFalse,
+                    this.Name, ObjectDumper.ToString(this.CommandBinding.EvaluationResults, 5));
             }
         }
     }

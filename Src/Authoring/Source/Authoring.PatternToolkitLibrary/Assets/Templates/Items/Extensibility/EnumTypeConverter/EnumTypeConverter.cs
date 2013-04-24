@@ -15,7 +15,7 @@ namespace $rootnamespace$
     [CLSCompliant(false)]
     public class $safeitemname$ : StringConverter
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<$safeitemname$>();
+        private static readonly ITracer tracer = Tracer.Get<$safeitemname$>();
 
         /// <summary>
         /// Determines whether this converter supports standard values.
@@ -43,7 +43,7 @@ namespace $rootnamespace$
             try
             {
                 // Make initial trace statement for this converter
-                tracer.TraceInformation(
+                tracer.Info(
                     "Determining values for this converter");
 
                 // TODO: Implement code to fetch or calculate the returned values.
@@ -59,9 +59,9 @@ namespace $rootnamespace$
                 // var variableElement1 = currentElement.As<IVariableElement1>();
 
 
-                // TODO: Use tracer.TraceWarning() to note expected and recoverable errors
-                // TODO: Use tracer.TraceVerbose() to note internal execution logic decisions
-                // TODO: Use tracer.TraceInformation() to note key results of execution
+                // TODO: Use tracer.Warn() to note expected and recoverable errors
+                // TODO: Use tracer.Verbose() to note internal execution logic decisions
+                // TODO: Use tracer.Info() to note key results of execution
                 // TODO: Raise exceptions for all other errors
 
                 return new StandardValuesCollection(items);
@@ -70,7 +70,7 @@ namespace $rootnamespace$
             {
                 // TODO: Only catch expected exceptions that you can handle, and trace them before re-throwing.
                 // TODO: Remove this 'catch' if no expections are expected
-                tracer.TraceError(
+                tracer.Error(
                     ex, "Some error calculating or fetching values");
 
                 throw;

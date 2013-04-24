@@ -25,7 +25,7 @@ namespace NuPattern.Runtime.Shell
     /// </summary>
     internal class GuidanceRegistrationAdapter
     {
-        static readonly ITraceSource tracer = Tracer.GetSourceFor<GuidanceRegistrationAdapter>();
+        static readonly ITracer tracer = Tracer.Get<GuidanceRegistrationAdapter>();
         const string ManifestFilename = "extension.vsixmanifest";
 
         [Import(typeof(IExtensionManager))]
@@ -48,7 +48,7 @@ namespace NuPattern.Runtime.Shell
                 {
                     if (this.ExtensionManager == null)
                     {
-                        tracer.TraceError(Resources.GuidanceRegistrationAdapter_TraceExtensionManagerNotAvailable);
+                        tracer.Error(Resources.GuidanceRegistrationAdapter_TraceExtensionManagerNotAvailable);
                         yield break;
                     }
 
@@ -82,7 +82,7 @@ namespace NuPattern.Runtime.Shell
                             // Verify that both IDs match and issue a warning if they don't.
                             if (export.Metadata.ExtensionId != extension.Header.Identifier)
                             {
-                                tracer.TraceWarning(Resources.GuidanceRegistrationAdapter_TraceSkipIdMismatch,
+                                tracer.Warn(Resources.GuidanceRegistrationAdapter_TraceSkipIdMismatch,
                                     export.Metadata.ExtensionId, extension.Header.Identifier);
                                 continue;
                             }
@@ -100,7 +100,7 @@ namespace NuPattern.Runtime.Shell
                         }
                         else
                         {
-                            tracer.TraceWarning(Resources.GuidanceRegistrationAdapter_TraceMissingManifest,
+                            tracer.Warn(Resources.GuidanceRegistrationAdapter_TraceMissingManifest,
                                 extensionManifestFilename, export.Metadata.ExtensionId);
                             continue;
                         }

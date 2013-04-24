@@ -19,7 +19,7 @@ namespace NuPattern.Runtime.Guidance.UriProviders
     public class LaunchPointUriReferenceProvider : IUriReferenceProvider<ILaunchPoint>
     {
         private const string UriFormat = LaunchPointUri.HostFormat + "{ExtensionId}/{ExportId}";
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<LaunchPointUriReferenceProvider>();
+        private static readonly ITracer tracer = Tracer.Get<LaunchPointUriReferenceProvider>();
 
         private Dictionary<Uri, ILaunchPoint> launchPoints;
 
@@ -88,7 +88,7 @@ namespace NuPattern.Runtime.Guidance.UriProviders
                     ExportId = export.Metadata.Id,
                 }));
 
-                tracer.TraceVerbose(Resources.LaunchPointUriReferenceProvider_TraceRegisterLaunchPoint, uri);
+                tracer.Verbose(Resources.LaunchPointUriReferenceProvider_TraceRegisterLaunchPoint, uri);
                 this.launchPoints.Add(uri, launchPoint);
             }
         }

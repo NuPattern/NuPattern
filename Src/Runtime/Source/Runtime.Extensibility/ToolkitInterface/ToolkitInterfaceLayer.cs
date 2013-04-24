@@ -22,7 +22,7 @@ namespace NuPattern.Runtime.ToolkitInterface
     [CLSCompliant(false)]
     public static class ToolkitInterfaceLayer
     {
-        private static ITraceSource tracer = Tracer.GetSourceFor(typeof(ToolkitInterfaceLayer));
+        private static ITracer tracer = Tracer.Get(typeof(ToolkitInterfaceLayer));
         private static ThreadLocal<bool?> resolvingInstanceBaseAs = new ThreadLocal<bool?>();
 
         /// <summary>
@@ -473,7 +473,7 @@ namespace NuPattern.Runtime.ToolkitInterface
             var interfaceService = default(IToolkitInterfaceService);
             if (!canCache || (interfaceService = instance.Root.ProductState.TryGetService<IToolkitInterfaceService>()) == null)
             {
-                tracer.TraceWarning(Resources.ToolkitInterfaceLayer_ServiceUnavailable);
+                tracer.Warn(Resources.ToolkitInterfaceLayer_ServiceUnavailable);
                 return null;
             }
 
@@ -498,7 +498,7 @@ namespace NuPattern.Runtime.ToolkitInterface
                 }
                 catch (System.Reflection.TargetInvocationException tie)
                 {
-                    tracer.TraceError(tie.InnerException, Resources.ToolkitInterfaceLayer_TraceFailedInstantiation, proxyType);
+                    tracer.Error(tie.InnerException, Resources.ToolkitInterfaceLayer_TraceFailedInstantiation, proxyType);
                 }
             }
 

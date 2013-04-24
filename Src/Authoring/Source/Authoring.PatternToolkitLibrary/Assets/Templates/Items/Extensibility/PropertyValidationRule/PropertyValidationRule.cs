@@ -21,7 +21,7 @@ namespace $rootnamespace$
     [CLSCompliant(false)]
     public class $safeitemname$ : ValidationRule
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<$safeitemname$>();
+        private static readonly ITracer tracer = Tracer.Get<$safeitemname$>();
 
         /// <summary>
         /// Gets or sets a configurable property for this rule.
@@ -69,7 +69,7 @@ namespace $rootnamespace$
             this.ValidateObject();
 
             // Make initial trace statement for this rule
-            tracer.TraceInformation(
+            tracer.Info(
                 "Validating $safeitemname$ on property '{0}' of element '{1}' with AProperty '{2}'", this.CurrentProperty.DefinitionName, this.CurrentProperty.Owner.InstanceName, this.AProperty);
 
             // TODO: Implement provider automation code to determine the violations
@@ -78,12 +78,12 @@ namespace $rootnamespace$
                 "The value of property '{0}' for element '{1}' is not valid in some way. <Some prescriptive action to make it valid.>",
                 this.CurrentProperty.DefinitionName, this.CurrentProperty.Owner.InstanceName)));
 
-            // TODO: Use tracer.TraceWarning() to note expected and recoverable errors
-            // TODO: Use tracer.TraceVerbose() to note internal execution logic decisions
-            // TODO: Use tracer.TraceInformation() to note key results of execution
+            // TODO: Use tracer.Warn() to note expected and recoverable errors
+            // TODO: Use tracer.Verbose() to note internal execution logic decisions
+            // TODO: Use tracer.Info() to note key results of execution
             // TODO: Raise exceptions for all other errors
 
-            tracer.TraceInformation(
+            tracer.Info(
                 "Validated $safeitemname$ on property '{0}' of element '{1}' with AProperty '{2}', as '{3}'", this.CurrentProperty.DefinitionName, this.CurrentProperty.Owner.InstanceName, this.AProperty, !errors.Any());
 
             return errors;

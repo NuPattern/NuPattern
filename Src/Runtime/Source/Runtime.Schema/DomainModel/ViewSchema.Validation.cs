@@ -15,7 +15,7 @@ namespace NuPattern.Runtime.Schema
     [ValidationState(ValidationState.Enabled)]
     partial class ViewSchema
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<ViewSchema>();
+        private static readonly ITracer tracer = Tracer.Get<ViewSchema>();
 
         /// <summary>
         /// Validates if an view has a duplicate name (with another view).
@@ -37,7 +37,7 @@ namespace NuPattern.Runtime.Schema
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Resources.ValidationMethodFailed_Error,
                     Reflector<ViewSchema>.GetMethod(n => n.ValidateNameIsUnique(context)).Name);
@@ -63,7 +63,7 @@ namespace NuPattern.Runtime.Schema
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Resources.ValidationMethodFailed_Error,
                     Reflector<ViewSchema>.GetMethod(n => n.ValidateDefaultIsHidden(context)).Name);

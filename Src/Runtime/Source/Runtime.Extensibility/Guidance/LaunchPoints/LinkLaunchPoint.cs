@@ -2,7 +2,6 @@
 using System.Globalization;
 using System.Windows;
 using NuPattern.Diagnostics;
-using NuPattern.Runtime.Guidance.Diagnostics;
 using NuPattern.Runtime.Guidance.Workflow;
 using NuPattern.Runtime.Properties;
 
@@ -85,7 +84,7 @@ namespace NuPattern.Runtime.Guidance.LaunchPoints
                     this.BindingName));
             }
 
-            var tracer = GuidanceExtensionTracer.GetSourceFor(this, extension.ExtensionId, extension.InstanceName);
+            var tracer = Tracer.Get<LinkLaunchPoint>();
 
             using (tracer.StartActivity(Resources.LinkLaunchPoint_TraceExecute, BindingName))
             {

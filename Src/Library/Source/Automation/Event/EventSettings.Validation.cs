@@ -30,7 +30,7 @@ namespace NuPattern.Library.Automation
     [PartCreationPolicy(CreationPolicy.Shared)]
     internal class EventSettingsValidations
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<EventSettingsValidations>();
+        private static readonly ITracer tracer = Tracer.Get<EventSettingsValidations>();
 
         // We statically cache the lookups here.
         // TODO: this could be refactored into a separate global service.
@@ -99,7 +99,7 @@ namespace NuPattern.Library.Automation
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Resources.ValidationMethodFailed_Error,
                     Reflector<EventSettingsValidations>.GetMethod(n => n.ValidateCommandIdAndWizardIdIsNotEmpty(null, null)).Name);
@@ -139,7 +139,7 @@ namespace NuPattern.Library.Automation
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Properties.Resources.ValidationMethodFailed_Error,
                     Reflector<EventSettingsValidations>.GetMethod(n => n.ValidateCommandIdIsValid(null, null)).Name);
@@ -179,7 +179,7 @@ namespace NuPattern.Library.Automation
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Properties.Resources.ValidationMethodFailed_Error,
                     Reflector<EventSettingsValidations>.GetMethod(n => n.ValidateWizardIdIsValid(null, null)).Name);
@@ -215,7 +215,7 @@ namespace NuPattern.Library.Automation
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Resources.ValidationMethodFailed_Error,
                     Reflector<EventSettingsValidations>.GetMethod(n => n.ValidateEventIdIsNotEmpty(null, null)).Name);
@@ -252,7 +252,7 @@ namespace NuPattern.Library.Automation
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Properties.Resources.ValidationMethodFailed_Error,
                     Reflector<EventSettingsValidations>.GetMethod(n => n.ValidateCanResolveNonEmptyEventId(null, null)).Name);
@@ -290,7 +290,7 @@ namespace NuPattern.Library.Automation
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Properties.Resources.ValidationMethodFailed_Error,
                     Reflector<EventSettingsValidations>.GetMethod(n => n.ValidateConditionsTypeIsNotEmpty(null, null)).Name);
@@ -334,7 +334,7 @@ namespace NuPattern.Library.Automation
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Properties.Resources.ValidationMethodFailed_Error,
                     Reflector<EventSettingsValidations>.GetMethod(n => n.ValidateCanResolveNonEmptyConditionsType(null, null)).Name);

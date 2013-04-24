@@ -241,7 +241,8 @@
     <value>Failed to deserialize to an instance of {0} the serialized value: {1}</value>
   </data>
   <data name="ValueProviderBinding_FailedToEvaluate" xml:space="preserve">
-    <value>Value provider binding for property {0} on element {1} failed to evaluate.</value>
+    <value>Value provider binding for property {0} on element {1} failed to evaluate:
+{2}</value>
   </data>
   <data name="BindingCompositionService_FailedToInitialize" xml:space="preserve">
     <value>Failed to initialize root binding composition service.</value>

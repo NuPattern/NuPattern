@@ -15,7 +15,7 @@ namespace NuPattern.VisualStudio.TemplateWizards
     [CLSCompliant(false)]
     public class GuidGeneratorTemplateWizard : TemplateWizard
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<GuidGeneratorTemplateWizard>();
+        private static readonly ITracer tracer = Tracer.Get<GuidGeneratorTemplateWizard>();
 
         private const string NewGuidElementName = "NewGuid";
         private const string NewGuidKeyName = "Key";
@@ -48,7 +48,7 @@ namespace NuPattern.VisualStudio.TemplateWizards
 
                 foreach (var replacement in additionalReplacements)
                 {
-                    tracer.TraceVerbose(Resources.GuidGeneratorTemplateWizard_GeneratedNewGuid, replacement.Key);
+                    tracer.Verbose(Resources.GuidGeneratorTemplateWizard_GeneratedNewGuid, replacement.Key);
                     replacementsDictionary[replacement.Key] = replacement.Value;
                 }
             }

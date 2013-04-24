@@ -193,7 +193,8 @@
     <value>Element property {0}.{1} has type '{2}' which could not be loaded.</value>
   </data>
   <data name="PropertyPropertyDescriptor_ValueProviderBindingFailed" xml:space="preserve">
-    <value>Element property {0}.{1} has a configured binding for value provider {2} but the binding evaluation failed.</value>
+    <value>Element property {0}.{1} has a configured binding for value provider {2} but the binding evaluation failed:
+{3}.</value>
   </data>
   <data name="ValidationMethodFailed_Error" xml:space="preserve">
     <value>Validation rule '{0}' failed.</value>

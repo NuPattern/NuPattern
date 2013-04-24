@@ -17,7 +17,7 @@ namespace NuPattern.Library.Commands
     [CLSCompliant(false)]
     public abstract class CreateElementFromPickedFileCommand : CreateElementFromFileCommand
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<CreateElementFromPickedFileCommand>();
+        private static readonly ITracer tracer = Tracer.Get<CreateElementFromPickedFileCommand>();
 
         /// <summary>
         /// The file extensions which are supported.
@@ -49,7 +49,7 @@ namespace NuPattern.Library.Commands
         /// <returns></returns>
         protected override IEnumerable<string> GetFilePaths()
         {
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.CreateElementFromPickedFileCommand_TracePickingFiles, this.Extension, this.InitialDirectory, this.PickerTitle);
 
             // Set filter, multiselect, title

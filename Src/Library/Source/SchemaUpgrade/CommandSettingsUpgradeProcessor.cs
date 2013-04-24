@@ -15,7 +15,7 @@ namespace NuPattern.Library.SchemaUpgrade
     [SchemaUpgradeProcessorOptions(Order = 1100, TargetVersion = @"1.2.0.0")]
     internal class CommandSettingsUpgradeProcessor : IPatternModelSchemaUpgradeProcessor
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<CommandSettingsUpgradeProcessor>();
+        private static readonly ITracer tracer = Tracer.Get<CommandSettingsUpgradeProcessor>();
         private const string DefaultNamespace = SchemaConstants.DefaultNamespace;
         private static readonly XName CommandSettingsElementName = XName.Get(@"commandSettings", DefaultNamespace);
         private static readonly XName CommandSettingsPropertiesElementName = XName.Get(@"properties", DefaultNamespace);
@@ -51,7 +51,7 @@ namespace NuPattern.Library.SchemaUpgrade
                         .Distinct();
             if (commandSettings.Any())
             {
-                tracer.TraceInformation(Resources.CommandSettingsUpgradeProcessor_TraceDeserialize);
+                tracer.Info(Resources.CommandSettingsUpgradeProcessor_TraceDeserialize);
 
                 // Enumerate each <commandSettings> element
                 commandSettings.ForEach(cmdSettingsElement =>
@@ -64,7 +64,7 @@ namespace NuPattern.Library.SchemaUpgrade
                             var propSettingsElements = cmdPropsElement.Descendants(PropertySettingsElementName);
                             if (propSettingsElements.Any())
                             {
-                                tracer.TraceInformation(Resources.CommandSettingsUpgradeProcessor_TraceDeserializeCommandSettings, id);
+                                tracer.Info(Resources.CommandSettingsUpgradeProcessor_TraceDeserializeCommandSettings, id);
 
                                 var bindings = new List<IPropertyBindingSettings>();
                                 var processedPropertySettings = new List<XElement>();

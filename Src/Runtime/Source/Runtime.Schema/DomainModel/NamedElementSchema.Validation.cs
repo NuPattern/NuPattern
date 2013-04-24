@@ -16,7 +16,7 @@ namespace NuPattern.Runtime.Schema
     [ValidationState(ValidationState.Enabled)]
     abstract partial class NamedElementSchema
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<NamedElementSchema>();
+        private static readonly ITracer tracer = Tracer.Get<NamedElementSchema>();
 
         private static readonly string[] ReservedCodeIdentifiers = new[] 
         { 
@@ -48,7 +48,7 @@ namespace NuPattern.Runtime.Schema
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Properties.Resources.ValidationMethodFailed_Error,
                     Reflector<NamedElementSchema>.GetMethod(n => n.ValidateNameIsLegal(context)).Name);
@@ -74,7 +74,7 @@ namespace NuPattern.Runtime.Schema
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Properties.Resources.ValidationMethodFailed_Error,
                     Reflector<NamedElementSchema>.GetMethod(n => n.ValidateCodeIdentifierIsLegal(context)).Name);
@@ -129,7 +129,7 @@ namespace NuPattern.Runtime.Schema
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Properties.Resources.ValidationMethodFailed_Error,
                     Reflector<NamedElementSchema>.GetMethod(n => n.ValidateCodeIdentifierIsUnique(context)).Name);
@@ -155,7 +155,7 @@ namespace NuPattern.Runtime.Schema
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Properties.Resources.ValidationMethodFailed_Error,
                     Reflector<NamedElementSchema>.GetMethod(n => n.ValidateDisplayNameIsLegal(context)).Name);
@@ -182,7 +182,7 @@ namespace NuPattern.Runtime.Schema
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Properties.Resources.ValidationMethodFailed_Error,
                     Reflector<NamedElementSchema>.GetMethod(n => n.ValidateCodeIdentifierIsNotReserved(context)).Name);

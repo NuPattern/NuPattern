@@ -17,7 +17,7 @@ namespace NuPattern.Runtime.Schema
     /// </summary>
     internal class SchemaUpgradeContext : ISchemaUpgradeContext
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<SchemaUpgradeContext>();
+        private static readonly ITracer tracer = Tracer.Get<SchemaUpgradeContext>();
 
         internal const string UpgradedFileNameFormat = "{0}.{1}.backup";
         private const string DefaultNamespace = SchemaConstants.DefaultNamespace;
@@ -72,11 +72,11 @@ namespace NuPattern.Runtime.Schema
                 // Backup original file
                 File.Copy(this.SchemaFilePath, backupFilePath, true);
 
-                tracer.TraceInformation(ShellResources.SchemaUpgradeContext_TraceUpgradedBackup, fileName, this.SchemaVersion, backupFilePath);
+                tracer.Info(ShellResources.SchemaUpgradeContext_TraceUpgradedBackup, fileName, this.SchemaVersion, backupFilePath);
             }
             catch (Exception ex)
             {
-                tracer.TraceError(ShellResources.SchemaUpgradeContext_ErrorUpgradedBackup, this.SchemaFilePath, ex.Message);
+                tracer.Error(ShellResources.SchemaUpgradeContext_ErrorUpgradedBackup, this.SchemaFilePath, ex.Message);
                 throw;
             }
         }
@@ -90,7 +90,7 @@ namespace NuPattern.Runtime.Schema
             {
                 if (this.isDirty)
                 {
-                    tracer.TraceVerbose(ShellResources.SchemaUpgradeContext_TraceSaveDocument);
+                    tracer.Verbose(ShellResources.SchemaUpgradeContext_TraceSaveDocument);
 
                     // Save the schema document
                     SaveDocument(document, this.SchemaFilePath);
@@ -141,7 +141,7 @@ namespace NuPattern.Runtime.Schema
         {
             var serviceProvider = ServiceProvider.GlobalProvider;
 
-            tracer.TraceInformation(ShellResources.SchemaUpgradeContext_TraceSaveSchemaFile, filePath);
+            tracer.Info(ShellResources.SchemaUpgradeContext_TraceSaveSchemaFile, filePath);
 
             // Save file content
             VsHelper.CheckOut(filePath);
@@ -177,7 +177,7 @@ namespace NuPattern.Runtime.Schema
                 if (String.IsNullOrEmpty(currentVersionString) ||
                     !currentVersionString.Equals(newVersionString, StringComparison.Ordinal))
                 {
-                    tracer.TraceInformation(ShellResources.SchemaUpgradeContext_TraceUpgradeSchemaVersion, currentVersionString, newVersion);
+                    tracer.Info(ShellResources.SchemaUpgradeContext_TraceUpgradeSchemaVersion, currentVersionString, newVersion);
 
                     rootElement.Attribute(DslVersionAttributeName).Value = newVersionString;
                 }

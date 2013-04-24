@@ -18,7 +18,7 @@ namespace NuPattern.Runtime.UI.ViewModels
     {
         internal const string UsingGuidanceExtensionId = ShellConstants.VsixIdentifier;
 
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<SolutionBuilderViewModel>();
+        private static readonly ITracer tracer = Tracer.Get<SolutionBuilderViewModel>();
 
         private ProductElementViewModel currentNode;
         private IServiceProvider serviceProvider;

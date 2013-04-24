@@ -15,7 +15,7 @@ namespace NuPattern.VisualStudio.TemplateWizards
     [CLSCompliant(false)]
     public abstract class TemplateWizard : IDisposable, ITemplateWizard
     {
-        private ITraceSource tracer;
+        private ITracer tracer;
         private IDisposable activity;
 
         /// <summary>
@@ -23,7 +23,7 @@ namespace NuPattern.VisualStudio.TemplateWizards
         /// </summary>
         public TemplateWizard()
         {
-            this.tracer = Tracer.GetSourceFor<TemplateWizard>();
+            this.tracer = Tracer.Get<TemplateWizard>();
         }
 
         /// <summary>
@@ -138,7 +138,7 @@ namespace NuPattern.VisualStudio.TemplateWizards
             if (this.activity != null)
                 this.activity.Dispose();
 
-            this.tracer.TraceVerbose(Resources.TemplateWizard_Disposed, this.GetType().Name);
+            this.tracer.Verbose(Resources.TemplateWizard_Disposed, this.GetType().Name);
         }
     }
 }

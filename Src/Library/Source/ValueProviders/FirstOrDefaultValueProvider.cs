@@ -15,7 +15,7 @@ namespace NuPattern.Library.ValueProviders
     [CategoryResource(@"AutomationCategory_General", typeof(Resources))]
     public class FirstOrDefaultValueProvider : ValueProvider
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<FirstOrDefaultValueProvider>();
+        private static readonly ITracer tracer = Tracer.Get<FirstOrDefaultValueProvider>();
 
         /// <summary>
         /// Gets or sets the elements of the <see cref="IEnumerable{T}"/>
@@ -31,12 +31,12 @@ namespace NuPattern.Library.ValueProviders
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.FirstOrDefaultValueProvider_TraceInitial);
 
             if (this.Elements == null)
             {
-                tracer.TraceError(
+                tracer.Error(
                     Resources.FirstOrDefaultValueProvider_TraceNoElements);
 
                 return null;
@@ -44,7 +44,7 @@ namespace NuPattern.Library.ValueProviders
 
             var result = this.Elements.FirstOrDefault();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.FirstOrDefaultValueProvider_TraceEvaluation, result);
 
             return result;

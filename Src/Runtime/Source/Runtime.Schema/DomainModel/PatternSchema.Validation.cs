@@ -14,7 +14,7 @@ namespace NuPattern.Runtime.Schema
     [ValidationState(ValidationState.Enabled)]
     partial class PatternSchema
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<PatternSchema>();
+        private static readonly ITracer tracer = Tracer.Get<PatternSchema>();
 
         /// <summary>
         /// Validates if there is more than one default view.
@@ -33,7 +33,7 @@ namespace NuPattern.Runtime.Schema
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Resources.ValidationMethodFailed_Error,
                     Reflector<PatternSchema>.GetMethod(n => n.ValidateAtLeastOneView(context)).Name);
@@ -59,7 +59,7 @@ namespace NuPattern.Runtime.Schema
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Resources.ValidationMethodFailed_Error,
                     Reflector<PatternSchema>.GetMethod(n => n.ValidateSingleDefaultView(context)).Name);
@@ -85,7 +85,7 @@ namespace NuPattern.Runtime.Schema
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Resources.ValidationMethodFailed_Error,
                     Reflector<PatternSchema>.GetMethod(n => n.ValidateAtLeastOneVisibleView(context)).Name);
@@ -111,7 +111,7 @@ namespace NuPattern.Runtime.Schema
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Resources.ValidationMethodFailed_Error,
                     Reflector<PatternSchema>.GetMethod(n => n.ValidatePatternNotNamedDefault(context)).Name);

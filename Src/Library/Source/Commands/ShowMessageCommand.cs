@@ -18,7 +18,7 @@ namespace NuPattern.Library.Commands
     [CategoryResource(@"AutomationCategory_General", typeof(Resources))]
     public class ShowMessageCommand : Command
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<ShowMessageCommand>();
+        private static readonly ITracer tracer = Tracer.Get<ShowMessageCommand>();
 
         /// <summary>
         /// Gets the severity level of the message
@@ -51,7 +51,7 @@ namespace NuPattern.Library.Commands
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.ShowMessageCommand_TraceInitial, this.Message, this.Level);
 
             var message = String.IsNullOrEmpty(this.Message) ? Resources.ShowMessageCommand_DefaultMessage : this.Message;

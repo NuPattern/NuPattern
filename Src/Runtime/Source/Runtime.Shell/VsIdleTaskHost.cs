@@ -8,7 +8,7 @@ namespace NuPattern.Runtime.Shell
 {
     internal class VsIdleTaskHost : IDisposable
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<VsIdleTaskHost>();
+        private static readonly ITracer tracer = Tracer.Get<VsIdleTaskHost>();
         private IOleComponentManager componentManager;
         private HostComponent host;
         private uint componentId;
@@ -37,7 +37,7 @@ namespace NuPattern.Runtime.Shell
 
             if (this.componentManager.FRegisterComponent(this.host, info, out this.componentId) != 1)
             {
-                tracer.TraceError(Resources.VsIdleTaskHost_ErrorRegistration);
+                tracer.Error(Resources.VsIdleTaskHost_ErrorRegistration);
                 throw new InvalidOperationException(Resources.VsIdleTaskHost_ErrorRegistration);
             }
         }

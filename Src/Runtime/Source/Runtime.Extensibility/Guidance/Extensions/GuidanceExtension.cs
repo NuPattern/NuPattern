@@ -7,7 +7,6 @@ using System.Linq;
 using NuPattern.ComponentModel.Composition;
 using NuPattern.Diagnostics;
 using NuPattern.Runtime.Composition;
-using NuPattern.Runtime.Guidance.Diagnostics;
 using NuPattern.Runtime.Guidance.LaunchPoints;
 using NuPattern.Runtime.Guidance.Workflow;
 using NuPattern.Runtime.Properties;
@@ -76,10 +75,7 @@ namespace NuPattern.Runtime.Guidance.Extensions
         /// Gets the tracer for this component. Should not be used by other components, which 
         /// should get their own tracer.
         /// </summary>
-        /// <remarks>
-        /// See also <see cref="GuidanceExtensionTracer"/>.
-        /// </remarks>
-        protected internal virtual ITraceSource Trace { get; private set; }
+        protected internal virtual ITracer Trace { get; private set; }
 
         /// <summary>
         /// Gets the registration of this guidance extension.
@@ -115,7 +111,7 @@ namespace NuPattern.Runtime.Guidance.Extensions
                 this.guidanceManager = guidanceManager;
                 this.InstanceName = instanceName;
                 this.Registration = registration;
-                this.Trace = GuidanceExtensionTracer.GetSourceFor(this, registration.ExtensionId, instanceName);
+                this.Trace = Tracer.Get(this.GetType());
 
                 this.OnInstantiate();
 
@@ -158,7 +154,7 @@ namespace NuPattern.Runtime.Guidance.Extensions
             //
             this.guidanceManager = guidanceManager;
 
-            this.Trace = GuidanceExtensionTracer.GetSourceFor(this, registration.ExtensionId, instanceName);
+            this.Trace = Tracer.Get(this.GetType());
 
             this.GuidanceWorkflow = this.CreateWorkflow();
             if (this.GuidanceWorkflow != null)

@@ -20,7 +20,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
     [DescriptionResource("ShowViewCommand_Description", typeof(Resources))]
     public class ShowViewCommand : NuPattern.Runtime.Command
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<ShowViewCommand>();
+        private static readonly ITracer tracer = Tracer.Get<ShowViewCommand>();
 
         /// <summary>
         /// Gets or sets the service that resolves templates.
@@ -45,7 +45,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
 
             var patternModel = this.CurrentElement.Parent.Parent.AsElement();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.ShowViewCommand_TraceInitial, patternModel.InstanceName, this.CurrentElement.InstanceName);
 
             var reference = SolutionArtifactLinkReference.GetResolvedReferences(patternModel, this.UriService).FirstOrDefault();
@@ -66,21 +66,21 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
                             }
                             else
                             {
-                                tracer.TraceWarning(
+                                tracer.Warn(
                                     Resources.SetAsDefaultViewCommand_TraceViewNotFound, patternModel.InstanceName, viewReference.Host);
                             }
                         }, true);
                     }
                     else
                     {
-                        tracer.TraceWarning(
+                        tracer.Warn(
                             Resources.SetAsDefaultViewCommand_TraceReferenceNotFound, patternModel.InstanceName);
                     }
                 }
             }
             else
             {
-                tracer.TraceWarning(
+                tracer.Warn(
                     Resources.ShowViewCommand_TraceReferenceNotFound, patternModel.InstanceName);
             }
         }

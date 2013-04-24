@@ -25,7 +25,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
     [CLSCompliant(false)]
     public class SetManifestMSBuildCommand : NuPattern.Runtime.Command
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<SetManifestMSBuildCommand>();
+        private static readonly ITracer tracer = Tracer.Get<SetManifestMSBuildCommand>();
 
         private DTE dte;
 
@@ -68,7 +68,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.SetManifestMSBuildCommand_TraceInitial, this.CurrentElement.InstanceName);
 
             // Find  link to vsixmanifest

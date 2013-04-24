@@ -14,7 +14,7 @@ namespace $rootnamespace$
     [CLSCompliant(false)]
     public class $safeitemname$Validation : ICommandValidationRule
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<$safeitemname$Validation>();
+        private static readonly ITracer tracer = Tracer.Get<$safeitemname$Validation>();
 
         /// <summary>
         /// Called to validate the design-time settings on the custom command
@@ -39,7 +39,7 @@ namespace $rootnamespace$
             catch (Exception ex)
             {
                 // Make error trace statement for the failure
-                tracer.TraceError(
+                tracer.Error(
                     "Validation rule $safeitemname$Validation unexpectedly failed, error was: '{0}'", ex.Message);
                 throw;
             }

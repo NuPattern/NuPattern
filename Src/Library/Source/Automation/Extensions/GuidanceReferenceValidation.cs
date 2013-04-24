@@ -18,7 +18,7 @@ namespace NuPattern.Library.Automation
     /// </summary>
     internal class GuidanceReferenceValidation
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<GuidanceReferenceValidation>();
+        private static readonly ITracer tracer = Tracer.Get<GuidanceReferenceValidation>();
 
         /// <summary>
         /// Gets the feature manager.
@@ -54,7 +54,7 @@ namespace NuPattern.Library.Automation
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Properties.Resources.ValidationMethodFailed_Error,
                     Reflector<GuidanceReferenceValidation>.GetMethod(n => n.ValidateGuidanceReference(context, element)).Name);

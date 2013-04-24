@@ -24,7 +24,7 @@ namespace NuPattern.Library.Automation
     /// </summary>
     internal class WizardAutomation : AutomationExtension<IWizardSettings>, IWizardAutomationExtension
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<WizardAutomation>();
+        private static readonly ITracer tracer = Tracer.Get<WizardAutomation>();
 
         /// <summary>
         /// Initializes a new instance of the <see cref="WizardAutomation"/> class.

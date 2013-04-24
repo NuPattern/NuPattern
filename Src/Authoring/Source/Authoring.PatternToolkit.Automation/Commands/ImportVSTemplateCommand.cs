@@ -18,7 +18,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
     [CLSCompliant(false)]
     public class ImportVSTemplateCommand : CreateElementFromPickedWindowsFileCommand
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<ImportVSTemplateCommand>();
+        private static readonly ITracer tracer = Tracer.Get<ImportVSTemplateCommand>();
         private IWindowsFileImporter importer;
 
         /// <summary>

@@ -91,6 +91,8 @@
     <Compile Include="..\..\..\GlobalAssemblyInfo.gen.cs">
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
+    <Compile Include="Diagnostics\DelegateTraceFilter.cs" />
+    <Compile Include="Diagnostics\ActivityTextListener.cs" />
     <Compile Include="ISchemaResource.cs" />
     <Compile Include="IToolkitRepository.cs" />
     <Compile Include="Settings\IRuntimeSettings.cs" />
@@ -112,7 +114,6 @@
     <Compile Include="Settings\SettingsManager.cs" />
     <Compile Include="Settings\TracingSettingsMonitor.cs" />
     <Compile Include="Diagnostics\TraceOutputWindowManager.cs" />
-    <Compile Include="Diagnostics\TraceRecordTextListener.cs" />
     <Compile Include="SchemaReaderExtensions.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="InstalledToolkitAdapter.cs" />

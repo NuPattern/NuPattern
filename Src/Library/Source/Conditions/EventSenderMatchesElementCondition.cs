@@ -19,7 +19,7 @@ namespace NuPattern.Library.Conditions
     [CLSCompliant(false)]
     public class EventSenderMatchesElementCondition : Condition, IEventCondition
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<EventSenderMatchesElementCondition>();
+        private static readonly ITracer tracer = Tracer.Get<EventSenderMatchesElementCondition>();
 
         /// <summary>
         /// Gets or sets the current element which is matched against the <see cref="Event"/> sender.
@@ -40,7 +40,7 @@ namespace NuPattern.Library.Conditions
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.EventSenderMatchesElementCondition_TraceInitial);
 
             // Ensure the sender is an element
@@ -55,7 +55,7 @@ namespace NuPattern.Library.Conditions
             {
                 if (!(this.Event.Sender is IInstanceBase))
                 {
-                    tracer.TraceInformation(
+                    tracer.Info(
                         Resources.EventSenderMatchesElementCondition_TraceNotAnElementSource);
 
                     // Ignore condition, as sender is not any element
@@ -67,7 +67,7 @@ namespace NuPattern.Library.Conditions
                 }
             }
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.EventSenderMatchesElementCondition_TraceEvaluation,
                 GetObjectInstanceName(this.CurrentElement), GetObjectInstanceName(this.Event != null ? this.Event.Sender : null), result);
 

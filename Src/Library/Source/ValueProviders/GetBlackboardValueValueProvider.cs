@@ -14,7 +14,7 @@ namespace NuPattern.Library.ValueProviders
     [CategoryResource(@"AutomationCategory_Guidance", typeof(Resources))]
     public class GetBlackboardValueValueProvider : ValueProvider
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<GetBlackboardValueValueProvider>();
+        private static readonly ITracer tracer = Tracer.Get<GetBlackboardValueValueProvider>();
 
         /// <summary>
         /// Gets or sets the key.
@@ -30,12 +30,12 @@ namespace NuPattern.Library.ValueProviders
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.GetBlackboardValueValueProvider_TraceInitial, this.Key);
 
             var result = (BlackboardManager.Current.Get(Key));
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.GetBlackboardValueValueProvider_TraceEvaluation, this.Key, result);
 
             return result;

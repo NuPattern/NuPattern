@@ -13,7 +13,7 @@ namespace NuPattern.Library.Automation
     [ValidationState(ValidationState.Enabled)]
     partial class WizardSettings
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<WizardSettings>();
+        private static readonly ITracer tracer = Tracer.Get<WizardSettings>();
 
         /// <summary>
         /// Validates that the TypeId is not empty, and exists.
@@ -36,7 +36,7 @@ namespace NuPattern.Library.Automation
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Resources.ValidationMethodFailed_Error,
                     Reflector<WizardSettings>.GetMethod(n => n.ValidateTypeNameNotEmpty(context)).Name);

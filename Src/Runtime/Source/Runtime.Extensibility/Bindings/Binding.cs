@@ -9,7 +9,6 @@ using NuPattern.ComponentModel.Composition;
 using NuPattern.Diagnostics;
 using NuPattern.Runtime.Composition;
 using NuPattern.Runtime.Guidance;
-using NuPattern.Runtime.Guidance.Diagnostics;
 using NuPattern.Runtime.Properties;
 using NuPattern.Runtime.Validation;
 
@@ -21,8 +20,9 @@ namespace NuPattern.Runtime.Bindings
     /// <typeparam name="T"></typeparam>
     public class Binding<T> : IBinding<T> where T : class
     {
+        private static readonly ITracer tracer = Tracer.Get<Binding<T>>();
+
         private Dictionary<string, BindingResult> evaluationResults = new Dictionary<string, BindingResult>();
-        private ITraceSource tracer;
         private INuPatternCompositionService composition;
         private PropertyBinding[] propertyBindings;
         private Lazy<T, IComponentMetadata> lazyValue;
@@ -43,7 +43,6 @@ namespace NuPattern.Runtime.Bindings
             this.componentTypeId = componentTypeId;
             this.composition = composition;
             this.propertyBindings = propertyBindings;
-            this.InitializeTracer();
 
             ResolveComponentTypeId();
 
@@ -119,7 +118,7 @@ namespace NuPattern.Runtime.Bindings
         {
             if (GuidanceManagerSettings.VerboseBindingTracing)
             {
-                tracer.TraceVerbose(Resources.Binding_TraceEvaluate,
+                tracer.Verbose(Resources.Binding_TraceEvaluate,
                                     this.lazyValue == null ? this.ToString() : this.lazyValue.Metadata.Id, this);
             }
             this.evaluationResults.Clear();
@@ -183,7 +182,7 @@ namespace NuPattern.Runtime.Bindings
 
             if (GuidanceManagerSettings.VerboseBindingTracing)
             {
-                tracer.TraceData(TraceEventType.Verbose, 0, this);
+                tracer.Verbose(ObjectDumper.ToString(this, 5));
             }
 
             return evaluationResult;
@@ -234,22 +233,6 @@ namespace NuPattern.Runtime.Bindings
             }
 
             return result;
-        }
-
-        private void InitializeTracer()
-        {
-            var guidanceManager = composition.GetExportedValueOrDefault<IGuidanceManager>();
-            if (guidanceManager != null)
-            {
-                var registration = guidanceManager.FindGuidanceExtension(this.GetType());
-                if (registration != null)
-                {
-                    tracer = GuidanceExtensionTracer.GetSourceFor<Binding<T>>(registration.ExtensionId);
-                }
-            }
-
-            if (tracer == null)
-                tracer = Tracer.GetSourceFor<Binding<T>>();
         }
 
         private bool Validate()

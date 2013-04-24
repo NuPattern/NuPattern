@@ -11,7 +11,7 @@ namespace NuPattern.Runtime.Store
     [RuleOn(typeof(Product), FireTime = TimeToFire.LocalCommit)]
     internal class ProductAddRule : AddRule
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<ProductAddRule>();
+        private static readonly ITracer tracer = Tracer.Get<ProductAddRule>();
 
         /// <summary>
         /// Triggers this notification rule whether a <see cref="Product"/> is added.
@@ -32,7 +32,7 @@ namespace NuPattern.Runtime.Store
             }
             else
             {
-                tracer.TraceWarning(Properties.Resources.TracerWarning_ProductInfoNotFound, product.Id);
+                tracer.Warn(Properties.Resources.TracerWarning_ProductInfoNotFound, product.Id);
             }
         }
 
@@ -49,7 +49,7 @@ namespace NuPattern.Runtime.Store
                 }
             }
 
-            tracer.TraceWarning(Resources.TracerWarning_ToolkitInfoNotFound, product.ExtensionId, product.InstanceName);
+            tracer.Warn(Resources.TracerWarning_ToolkitInfoNotFound, product.ExtensionId, product.InstanceName);
 
             return null;
         }

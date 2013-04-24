@@ -30,7 +30,7 @@ namespace NuPattern.Library.Automation
     [PartCreationPolicy(CreationPolicy.Shared)]
     internal class MenuSettingsValidations
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<MenuSettingsValidations>();
+        private static readonly ITracer tracer = Tracer.Get<MenuSettingsValidations>();
 
         // We statically cache the lookups here.
         // TODO: this could be refactored into a separate global service.
@@ -99,7 +99,7 @@ namespace NuPattern.Library.Automation
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Resources.ValidationMethodFailed_Error,
                     Reflector<MenuSettingsValidations>.GetMethod(n => n.ValidateCommandIdAndWizardIdIsNotEmpty(null, null)).Name);
@@ -139,7 +139,7 @@ namespace NuPattern.Library.Automation
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Properties.Resources.ValidationMethodFailed_Error,
                     Reflector<MenuSettingsValidations>.GetMethod(n => n.ValidateCommandIdIsValid(null, null)).Name);
@@ -179,7 +179,7 @@ namespace NuPattern.Library.Automation
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Properties.Resources.ValidationMethodFailed_Error,
                     Reflector<MenuSettingsValidations>.GetMethod(n => n.ValidateWizardIdIsValid(null, null)).Name);
@@ -215,7 +215,7 @@ namespace NuPattern.Library.Automation
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Resources.ValidationMethodFailed_Error,
                     Reflector<MenuSettingsValidations>.GetMethod(n => n.ValidateTextIsNotEmpty(null, null)).Name);
@@ -250,7 +250,7 @@ namespace NuPattern.Library.Automation
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Resources.ValidationMethodFailed_Error,
                     Reflector<MenuSettingsValidations>.GetMethod(n => n.ValidateConditionsTypeIsNotEmpty(null, null)).Name);
@@ -294,7 +294,7 @@ namespace NuPattern.Library.Automation
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Properties.Resources.ValidationMethodFailed_Error,
                     Reflector<MenuSettingsValidations>.GetMethod(n => n.ValidateCanResolveNonEmptyConditionsType(null, null)).Name);
@@ -343,7 +343,7 @@ namespace NuPattern.Library.Automation
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Resources.ValidationMethodFailed_Error,
                     Reflector<MenuSettingsValidations>.GetMethod(n => n.ValidateIconIsEmptyOrValid(null, null)).Name);

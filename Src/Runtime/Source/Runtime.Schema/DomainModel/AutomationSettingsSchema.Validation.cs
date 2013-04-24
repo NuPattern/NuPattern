@@ -15,7 +15,7 @@ namespace NuPattern.Runtime.Schema
     [ValidationState(ValidationState.Enabled)]
     partial class AutomationSettingsSchema
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<AutomationSettingsSchema>();
+        private static readonly ITracer tracer = Tracer.Get<AutomationSettingsSchema>();
 
         /// <summary>
         /// Validates if an property has a duplicate name (with another property) in the current container.
@@ -47,7 +47,7 @@ namespace NuPattern.Runtime.Schema
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Resources.ValidationMethodFailed_Error,
                     Reflector<AutomationSettingsSchema>.GetMethod(n => n.ValidateNameIsUnique(context)).Name);

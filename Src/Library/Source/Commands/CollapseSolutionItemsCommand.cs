@@ -19,7 +19,7 @@ namespace NuPattern.Library.Commands
     [CLSCompliant(false)]
     public class CollapseSolutionItemsCommand : Command
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<CollapseSolutionItemsCommand>();
+        private static readonly ITracer tracer = Tracer.Get<CollapseSolutionItemsCommand>();
         private const bool DefaultIncludeProjects = false;
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace NuPattern.Library.Commands
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.CollapseSolutionItemsCommand_TraceInitial, this.IncludeProjects);
 
             var options = (this.IncludeProjects) ? CollapseOptions.All : CollapseOptions.All & ~(CollapseOptions.IncludeProjects);

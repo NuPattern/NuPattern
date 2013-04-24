@@ -16,7 +16,7 @@ namespace NuPattern.Runtime.Store
     [RuleOn(typeof(View), FireTime = TimeToFire.LocalCommit)]
     internal class ViewAddRule : AddRule
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<ViewAddRule>();
+        private static readonly ITracer tracer = Tracer.Get<ViewAddRule>();
 
         /// <summary>
         /// Triggers this notification rule whether a <see cref="Product"/> is added.
@@ -67,7 +67,7 @@ namespace NuPattern.Runtime.Store
             }
             else
             {
-                tracer.TraceWarning(Resources.ViewAddRule_TraceViewInfoLoadFailed, view.Id);
+                tracer.Warn(Resources.ViewAddRule_TraceViewInfoLoadFailed, view.Id);
             }
         }
 

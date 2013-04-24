@@ -25,7 +25,7 @@ namespace $rootnamespace$
     [Export(typeof(IOn$safeitemname$))]
     public class On$safeitemname$ : IOn$safeitemname$
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<On$safeitemname$>();
+        private static readonly ITracer tracer = Tracer.Get<On$safeitemname$>();
         private IObservable<IEvent<EventArgs>> sourceEvent;
 
         /// <summary>

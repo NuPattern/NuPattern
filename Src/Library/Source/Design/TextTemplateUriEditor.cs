@@ -28,7 +28,7 @@ namespace NuPattern.Library.Design
     internal class TextTemplateUriEditor : UITypeEditor
     {
         private const string FileExtension = ".tt;.t4";
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<TextTemplateUriEditor>();
+        private static readonly ITracer tracer = Tracer.Get<TextTemplateUriEditor>();
 
         /// <summary>
         /// Edits the specified object's value using the editor style indicated by the <see cref="M:System.Drawing.Design.UITypeEditor.GetEditStyle"/> method.
@@ -79,7 +79,7 @@ namespace NuPattern.Library.Design
             var manifest = selectedItem.GetToolkitManifest();
             var owningProject = selectedItem.Traverse(x => x.Parent, item => item.Kind == ItemKind.Project);
 
-            tracer.TraceInformation(Properties.Resources.TextTemplateUriEditor_TraceReadingManifest, manifest.GetLogicalPath());
+            tracer.Info(Properties.Resources.TextTemplateUriEditor_TraceReadingManifest, manifest.GetLogicalPath());
 
             string vsixId;
             try
@@ -88,7 +88,7 @@ namespace NuPattern.Library.Design
             }
             catch (Exception e)
             {
-                tracer.TraceError(e,
+                tracer.Error(e,
                     String.Format(CultureInfo.CurrentCulture, Properties.Resources.TextTemplateUriEditor_TraceReadingManifestFailed, manifest.GetLogicalPath()));
                 throw;
             }

@@ -20,7 +20,7 @@ namespace NuPattern.VisualStudio.TemplateWizards
     [CLSCompliant(false)]
     public class CoordinatorTemplateWizard : TemplateWizard
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<CoordinatorTemplateWizard>();
+        private static readonly ITracer tracer = Tracer.Get<CoordinatorTemplateWizard>();
 
         /// <summary>
         /// The expected element name under <c>WizardData</c> element in the .vstemplate 
@@ -146,11 +146,11 @@ namespace NuPattern.VisualStudio.TemplateWizards
                     }
                     catch (Exception de)
                     {
-                        tracer.TraceError(de, Resources.CoordinatorTemplateWizard_FailedToDispose, disposable.GetType().FullName);
+                        tracer.Error(de, Resources.CoordinatorTemplateWizard_FailedToDispose, disposable.GetType().FullName);
                     }
                 }
 
-                tracer.TraceError(e, Resources.CoordinatorTemplateWizard_TryFailed);
+                tracer.Error(e, Resources.CoordinatorTemplateWizard_TryFailed);
                 throw;
             }
         }
@@ -177,7 +177,7 @@ namespace NuPattern.VisualStudio.TemplateWizards
 
             foreach (var wizardElement in wizardElements.Where(element => !string.IsNullOrEmpty(element.Assembly) && !string.IsNullOrEmpty(element.TypeName)))
             {
-                tracer.TraceVerbose(Resources.CoordinatorTemplateWizard_LoadingWizardType, wizardElement.TypeName, wizardElement.Assembly);
+                tracer.Verbose(Resources.CoordinatorTemplateWizard_LoadingWizardType, wizardElement.TypeName, wizardElement.Assembly);
 
                 try
                 {
@@ -187,18 +187,18 @@ namespace NuPattern.VisualStudio.TemplateWizards
                     {
                         var type = asm.GetType(wizardElement.TypeName, true);
                         if (!typeof(IWizard).IsAssignableFrom(type))
-                            tracer.TraceError((string)Resources.CoordinatorTemplateWizard_NotIWizard, type.FullName);
+                            tracer.Error((string)Resources.CoordinatorTemplateWizard_NotIWizard, type.FullName);
                         else
                             this.wizards.Add((IWizard)Activator.CreateInstance(type));
                     }
                     catch (Exception te)
                     {
-                        tracer.TraceError(te, Resources.CoordinatorTemplateWizard_FailedToLoadType, wizardElement.TypeName, wizardElement.Assembly);
+                        tracer.Error(te, Resources.CoordinatorTemplateWizard_FailedToLoadType, wizardElement.TypeName, wizardElement.Assembly);
                     }
                 }
                 catch (Exception ae)
                 {
-                    tracer.TraceError(ae, Resources.CoordinatorTemplateWizard_FailedToLoadAssembly, wizardElement.Assembly);
+                    tracer.Error(ae, Resources.CoordinatorTemplateWizard_FailedToLoadAssembly, wizardElement.Assembly);
                 }
             }
         }

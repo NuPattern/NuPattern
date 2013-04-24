@@ -17,7 +17,7 @@ namespace NuPattern.Library.Conditions
     [CLSCompliant(false)]
     public class DropFileCondition : DropItemCondition
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<DropFileCondition>();
+        private static readonly ITracer tracer = Tracer.Get<DropFileCondition>();
 
         /// <summary>
         /// Gets or sets the file extension which can be dropped.
@@ -38,7 +38,7 @@ namespace NuPattern.Library.Conditions
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.DropFileCondition_TraceInitial, this.Extension);
 
             return base.Evaluate();
@@ -53,7 +53,7 @@ namespace NuPattern.Library.Conditions
             var draggedFiles = GetDraggedFiles();
             if (draggedFiles != null && draggedFiles.Any())
             {
-                tracer.TraceInformation(
+                tracer.Info(
                     Resources.DropFileCondition_TraceEvaluationManyFiles, this.Extension, draggedFiles.Count());
             }
 

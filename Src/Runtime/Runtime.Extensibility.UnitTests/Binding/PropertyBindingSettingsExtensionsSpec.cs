@@ -13,7 +13,7 @@ namespace NuPattern.Runtime.UnitTests.Binding
         internal static readonly IAssertion Assert = new Assertion();
 
         private IBindingFactory bindingFactory;
-        private ITraceSource tracer;
+        private ITracer tracer;
         private IDynamicBindingContext context;
         private IDynamicBinding<IValueProvider> binding;
         private IValueProvider valueProvider;
@@ -21,7 +21,7 @@ namespace NuPattern.Runtime.UnitTests.Binding
         [TestInitialize]
         public void Initialize()
         {
-            this.tracer = Mock.Of<ITraceSource>();
+            this.tracer = Mock.Of<ITracer>();
             this.context = Mock.Of<IDynamicBindingContext>();
             this.valueProvider = Mock.Of<IValueProvider>(vp => (string)vp.Evaluate() == "Foo");
 
@@ -61,7 +61,7 @@ namespace NuPattern.Runtime.UnitTests.Binding
 
             Assert.Throws<InvalidOperationException>(() => settings.Evaluate(this.bindingFactory, this.tracer));
             Mock.Get(this.tracer)
-                .Verify(x => x.TraceData(TraceEventType.Error, It.IsAny<int>(), It.IsAny<object>()));
+                .Verify(x => x.Trace(TraceEventType.Error, It.IsAny<string>(), It.IsAny<object[]>()));
         }
 
         [TestMethod, TestCategory("Unit")]

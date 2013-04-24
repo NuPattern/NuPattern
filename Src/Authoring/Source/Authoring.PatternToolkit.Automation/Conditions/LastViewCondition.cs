@@ -17,7 +17,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Conditions
     [DescriptionResource("LastViewCondition_Description", typeof(Resources))]
     public class LastViewCondition : NuPattern.Runtime.Condition
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<LastViewCondition>();
+        private static readonly ITracer tracer = Tracer.Get<LastViewCondition>();
 
         /// <summary>
         /// Gets or sets the current element.
@@ -34,14 +34,14 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Conditions
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.LastViewCondition_TraceInitial, this.CurrentElement.InstanceName);
 
             var views = this.CurrentElement.Parent.AsCollection(); //TODO: FIX
 
             var result = views.Elements.Count() > 1;
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.LastViewCondition_TraceEvaluation, this.CurrentElement.InstanceName, result);
 
             return result;

@@ -25,25 +25,25 @@ namespace NuPattern.IntegrationTests.VisualStudio
             [TestMethod, TestCategory("Integration")]
             public void WhenShieldingNullAction_ThenThrowsArgumentNullException()
             {
-                Assert.Throws<ArgumentNullException>(() => TraceSourceExtensions.ShieldUI(new Mock<ITraceSource>().Object, null, "foo"));
+                Assert.Throws<ArgumentNullException>(() => TraceSourceExtensions.ShieldUI(new Mock<ITracer>().Object, null, "foo"));
             }
 
             [TestMethod, TestCategory("Integration")]
             public void WhenShieldingNullMessage_ThenThrowsArgumentNullException()
             {
-                Assert.Throws<ArgumentNullException>(() => TraceSourceExtensions.ShieldUI(new Mock<ITraceSource>().Object, () => { }, null));
+                Assert.Throws<ArgumentNullException>(() => TraceSourceExtensions.ShieldUI(new Mock<ITracer>().Object, () => { }, null));
             }
 
             [TestMethod, TestCategory("Integration")]
             public void WhenShieldingEmptyMessage_ThenThrowsArgumentOutOfRangeException()
             {
-                Assert.Throws<ArgumentOutOfRangeException>(() => TraceSourceExtensions.ShieldUI(new Mock<ITraceSource>().Object, () => { }, string.Empty));
+                Assert.Throws<ArgumentOutOfRangeException>(() => TraceSourceExtensions.ShieldUI(new Mock<ITracer>().Object, () => { }, string.Empty));
             }
 
             [TestMethod, TestCategory("Integration")]
             public void WhenShieldingNullMessageArgs_ThenThrowsArgumentNullException()
             {
-                Assert.Throws<ArgumentNullException>(() => TraceSourceExtensions.ShieldUI(new Mock<ITraceSource>().Object, () => { }, "foo", null));
+                Assert.Throws<ArgumentNullException>(() => TraceSourceExtensions.ShieldUI(new Mock<ITracer>().Object, () => { }, "foo", null));
             }
         }
 
@@ -51,7 +51,7 @@ namespace NuPattern.IntegrationTests.VisualStudio
         [TestMethod, TestCategory("Integration")]
         public void WhenShieldedActionThrows_ThenExceptionIsLogged()
         {
-            var traceSource = new Mock<ITraceSource>();
+            var traceSource = new Mock<ITracer>();
 
             using (var purger = new DialogBoxPurger(0))
             {
@@ -64,7 +64,7 @@ namespace NuPattern.IntegrationTests.VisualStudio
                 }));
             }
 
-            traceSource.Verify(x => x.TraceError(
+            traceSource.Verify(x => x.Error(
                 It.Is<ArgumentException>(ex => ex.Message == "Foo"),
                 "Bar"),
                 Times.Once());

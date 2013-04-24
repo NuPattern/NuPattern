@@ -17,7 +17,7 @@ namespace NuPattern.Library.Commands
     [CLSCompliant(false)]
     public abstract class CreateElementFromItemCommand : Command
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<CreateElementFromItemCommand>();
+        private static readonly ITracer tracer = Tracer.Get<CreateElementFromItemCommand>();
 
         /// <summary>
         /// Gets or sets the URI service.
@@ -71,7 +71,7 @@ namespace NuPattern.Library.Commands
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.CreateElementFromItemCommand_TraceInitial, this.CurrentElement.InstanceName, this.ChildElementName);
 
             var childElementInfo = this.CurrentElement.EnsureChildContainer(this.ChildElementName);
@@ -80,7 +80,7 @@ namespace NuPattern.Library.Commands
             var items = GetItemIds();
             if (items != null && items.Any())
             {
-                tracer.TraceWarning(
+                tracer.Warn(
                     Resources.CreateElementFromItemCommand_TraceMatches, this.CurrentElement.InstanceName, items.Count());
 
                 items
@@ -92,7 +92,7 @@ namespace NuPattern.Library.Commands
                             // Get element instance name
                             var instanceName = GetElementNameFromItem(item);
 
-                            tracer.TraceInformation(
+                            tracer.Info(
                                 Resources.CreateElementFromItemCommand_TraceInstanceCreation, this.CurrentElement.InstanceName, this.ChildElementName, instanceName);
 
                             // Create a new instance of the named element
@@ -103,14 +103,14 @@ namespace NuPattern.Library.Commands
                                 InitializeCreatedElement(item, childElement);
                             }
 
-                            tracer.TraceInformation(
+                            tracer.Info(
                                 Resources.CreateElementFromItemCommand_TraceAddedChildElement, this.CurrentElement.InstanceName, this.ChildElementName, instanceName);
                         }
                     });
             }
             else
             {
-                tracer.TraceWarning(
+                tracer.Warn(
                     Resources.CreateElementFromItemCommand_TraceNoDataMatch, this.CurrentElement.InstanceName);
             }
         }

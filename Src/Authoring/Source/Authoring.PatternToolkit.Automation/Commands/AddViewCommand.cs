@@ -24,7 +24,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
     [DescriptionResource("AddViewCommand_Description", typeof(Resources))]
     public class AddViewCommand : NuPattern.Runtime.Command
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<AddViewCommand>();
+        private static readonly ITracer tracer = Tracer.Get<AddViewCommand>();
 
         /// <summary>
         /// Gets or sets the service that resolves templates.
@@ -49,7 +49,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
 
             var patternModel = this.CurrentElement.Parent.Parent.AsElement();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.AddViewCommand_TraceInitial, patternModel.InstanceName);
 
             var reference = SolutionArtifactLinkReference.GetResolvedReferences(patternModel, this.UriService).FirstOrDefault();
@@ -71,7 +71,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
                     //            var view = viewSchema as IViewSchema;
                     //            if (ViewArtifactLinkReference.GetReference(this.CurrentElement.AsElement()) == null)
                     //            {
-                    //                tracer.TraceInformation(
+                    //                tracer.Info(
                     //                    Resources.AddViewCommand_TraceAddingReference, patternModel.InstanceName);
 
                     //                ViewArtifactLinkReference.AddReference(this.CurrentElement.AsElement(), this.UriService.CreateUri(view));
@@ -112,7 +112,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
                     //                                vw.DiagramId = diagram.Id.ToString();
                     //                            });
 
-                    //                        tracer.TraceInformation(
+                    //                        tracer.Info(
                     //                            Resources.AddViewCommand_TraceAddingReference, patternModel.InstanceName);
 
                     //                        ViewArtifactLinkReference.AddReference(this.CurrentElement.AsElement(), this.UriService.CreateUri(view));
@@ -124,7 +124,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
             }
             else
             {
-                tracer.TraceWarning(
+                tracer.Warn(
                     Resources.AddViewCommand_TraceReferenceNotFound, patternModel.InstanceName);
             }
         }

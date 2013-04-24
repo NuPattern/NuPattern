@@ -17,7 +17,7 @@ namespace NuPattern.Library.Commands
     [CLSCompliant(false)]
     public class CreateElementFromPickedWindowsFileCommand : CreateElementFromPickedFileCommand
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<CreateElementFromPickedWindowsFileCommand>();
+        private static readonly ITracer tracer = Tracer.Get<CreateElementFromPickedWindowsFileCommand>();
         private IWindowsFileImporter importer;
 
         /// <summary>
@@ -35,7 +35,7 @@ namespace NuPattern.Library.Commands
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.CreateElementFromPickedWindowsFileCommand_TraceInitial, this.CurrentElement.InstanceName, this.ChildElementName, this.Extension);
 
             try

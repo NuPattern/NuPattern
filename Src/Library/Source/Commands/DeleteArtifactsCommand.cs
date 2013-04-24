@@ -30,7 +30,7 @@ namespace NuPattern.Library.Commands
     [CLSCompliant(false)]
     public class DeleteArtifactsCommand : Command
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<DeleteArtifactsCommand>();
+        private static readonly ITracer tracer = Tracer.Get<DeleteArtifactsCommand>();
         private ISolutionSelector selector;
 
         /// <summary>
@@ -105,14 +105,14 @@ namespace NuPattern.Library.Commands
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.DeleteArtifactsCommand_TraceInitial, this.CurrentElement.InstanceName, this.Action);
 
             // Verify whether there are any (valid) artifact links
             var artifactLinks = SolutionArtifactLinkReference.GetResolvedReferences(this.CurrentElement, this.UriReferenceService);
             if (artifactLinks == null || !artifactLinks.Any())
             {
-                tracer.TraceInformation(
+                tracer.Info(
                     Resources.DeleteArtifactsCommand_TraceNoLinks, this.CurrentElement.InstanceName);
                 return;
             }
@@ -127,7 +127,7 @@ namespace NuPattern.Library.Commands
                     var selectedLinks = PromptForSolutionItems(artifactLinks);
                     if (!selectedLinks.Any())
                     {
-                        tracer.TraceInformation(
+                        tracer.Info(
                             Resources.DeleteArtifactsCommand_TraceNoLinks, this.CurrentElement.InstanceName);
                         return;
                     }
@@ -148,14 +148,14 @@ namespace NuPattern.Library.Commands
                 var itemPath = al.GetLogicalPath();
                 try
                 {
-                    tracer.TraceInformation(
+                    tracer.Info(
                         Resources.DeleteArtifactsCommand_TraceDeleteSolutionItem, itemPath);
 
                     al.Delete();
                 }
                 catch (Exception ex)
                 {
-                    tracer.TraceError(
+                    tracer.Error(
                         Resources.DeleteArtifactsCommand_ErrorDeletingSolutionItem, itemPath, ex.Message);
                 }
             });

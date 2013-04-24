@@ -20,7 +20,7 @@ namespace NuPattern.Runtime.Guidance.UriProviders
     public class GuidanceContentUriReferenceProvider : IUriReferenceProvider<GuidanceContent>
     {
         private const string UriFormat = GuidanceContentUri.HostFormat + "{ExtensionId}/{Path}";
-        static readonly ITraceSource tracer = Tracer.GetSourceFor<GuidanceContentUriReferenceProvider>();
+        static readonly ITracer tracer = Tracer.Get<GuidanceContentUriReferenceProvider>();
 
         private IServiceProvider ServiceProvider { get; set; }
         private IGuidanceManager guidanceManager { get; set; }
@@ -49,7 +49,7 @@ namespace NuPattern.Runtime.Guidance.UriProviders
         /// </summary>
         public Uri CreateUri(GuidanceContent instance)
         {
-            tracer.TraceVerbose(Resources.GuidanceContentUriReferenceProvider_TraceCreateUri, instance.GuidanceExtensionId, instance.Path);
+            tracer.Verbose(Resources.GuidanceContentUriReferenceProvider_TraceCreateUri, instance.GuidanceExtensionId, instance.Path);
 
             var extension = this.guidanceManager.InstalledGuidanceExtensions
                 .FirstOrDefault(installedFeature => installedFeature.ExtensionId.Equals(instance.GuidanceExtensionId, StringComparison.InvariantCultureIgnoreCase));
@@ -64,7 +64,7 @@ namespace NuPattern.Runtime.Guidance.UriProviders
                 Path = path,
             }));
 
-            tracer.TraceVerbose(Resources.GuidanceContentUriReferenceProvider_TraceUriCreated, uri);
+            tracer.Verbose(Resources.GuidanceContentUriReferenceProvider_TraceUriCreated, uri);
 
             return uri;
         }
@@ -74,7 +74,7 @@ namespace NuPattern.Runtime.Guidance.UriProviders
         /// </summary>
         public GuidanceContent ResolveUri(Uri uri)
         {
-            tracer.TraceVerbose(Resources.GuidanceContentUriReferenceProvider_TraceResolvingUri, uri);
+            tracer.Verbose(Resources.GuidanceContentUriReferenceProvider_TraceResolvingUri, uri);
             var extensionId = uri.Host;
 
             if (extensionId == @"." && guidanceManager.ActiveGuidanceExtension != null)
@@ -91,7 +91,7 @@ namespace NuPattern.Runtime.Guidance.UriProviders
             if (!File.Exists(path))
                 throw new FileNotFoundException(string.Format(CultureInfo.CurrentCulture, Resources.GuidanceContentUriReferenceProvider_ErrorFileNotExist, path));
 
-            tracer.TraceVerbose(Resources.GuidanceContentUriReferenceProvider_TraceResolvedToPath, path);
+            tracer.Verbose(Resources.GuidanceContentUriReferenceProvider_TraceResolvedToPath, path);
             return new GuidanceContent(extensionId, path);
         }
 
@@ -100,7 +100,7 @@ namespace NuPattern.Runtime.Guidance.UriProviders
         /// </summary>
         public void Open(GuidanceContent instance)
         {
-            tracer.TraceVerbose(Resources.GuidanceContentUriReferenceProvider_TraceOpenUri, instance.Path);
+            tracer.Verbose(Resources.GuidanceContentUriReferenceProvider_TraceOpenUri, instance.Path);
             dynamic vs = this.ServiceProvider.GetService(typeof(EnvDTE.DTE));
 
             if (vs != null)

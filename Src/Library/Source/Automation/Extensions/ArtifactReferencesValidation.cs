@@ -17,7 +17,7 @@ namespace NuPattern.Library.Automation
     /// </summary>
     internal class ArtifactReferenceValidation
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<ArtifactReferenceValidation>();
+        private static readonly ITracer tracer = Tracer.Get<ArtifactReferenceValidation>();
 
         public const string UriSchemeName = "solution";
 
@@ -58,7 +58,7 @@ namespace NuPattern.Library.Automation
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Properties.Resources.ValidationMethodFailed_Error,
                     Reflector<ArtifactReferenceValidation>.GetMethod(n => n.ValidateArtifactReferences(context, element)).Name);

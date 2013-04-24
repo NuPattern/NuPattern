@@ -17,7 +17,7 @@ namespace NuPattern.Runtime.Design
     /// </summary>
     public class ImageUriEditor : UITypeEditor
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<ImageUriEditor>();
+        private static readonly ITracer tracer = Tracer.Get<ImageUriEditor>();
         private const string ImageExtension = @".ico;*.png;*.jpg";
         private Window currentWindow;
 

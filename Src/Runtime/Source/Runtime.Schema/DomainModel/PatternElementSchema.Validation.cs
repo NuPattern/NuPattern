@@ -14,7 +14,7 @@ namespace NuPattern.Runtime.Schema
     [ValidationState(ValidationState.Enabled)]
     partial class PatternElementSchema
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<PatternElementSchema>();
+        private static readonly ITracer tracer = Tracer.Get<PatternElementSchema>();
 
         [ValidationMethod(ValidationCategories.Save | ValidationCategories.Menu)]
         internal void ValidateValidationRulesTypeIsNotEmpty(ValidationContext context)
@@ -31,7 +31,7 @@ namespace NuPattern.Runtime.Schema
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Resources.ValidationMethodFailed_Error,
                     Reflector<PatternElementSchema>.GetMethod(n => n.ValidateValidationRulesTypeIsNotEmpty(context)).Name);
@@ -90,7 +90,7 @@ namespace NuPattern.Runtime.Schema
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Resources.ValidationMethodFailed_Error,
                     Reflector<PatternElementSchema>.GetMethod(n => n.ValidateIcon(context)).Name);

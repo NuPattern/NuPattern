@@ -15,7 +15,7 @@ namespace NuPattern.Runtime
     [PartCreationPolicy(CreationPolicy.Shared)]
     internal class InstalledToolkitAdapter
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<InstalledToolkitAdapter>();
+        private static readonly ITracer tracer = Tracer.Get<InstalledToolkitAdapter>();
 
         /// <summary>
         /// Initializes a new instance of the <see cref="InstalledToolkitAdapter"/> class.
@@ -64,7 +64,7 @@ namespace NuPattern.Runtime
                 if (Microsoft.VisualStudio.ErrorHandler.IsCriticalException(ex))
                     throw;
 
-                tracer.TraceWarning(Resources.InstalledToolkitAdapter_FailedToCreateRegistration, extension.InstallPath);
+                tracer.Warn(Resources.InstalledToolkitAdapter_FailedToCreateRegistration, extension.InstallPath);
                 return null;
             }
         }

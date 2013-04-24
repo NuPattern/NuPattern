@@ -16,7 +16,7 @@ namespace NuPattern.Library.Conditions
     [CLSCompliant(false)]
     public class DropSolutionItemCondition : DropFileCondition
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<DropSolutionItemCondition>();
+        private static readonly ITracer tracer = Tracer.Get<DropSolutionItemCondition>();
 
         /// <summary>
         /// Returns the solution items that can be dragged over the current element.
@@ -24,7 +24,7 @@ namespace NuPattern.Library.Conditions
         /// <returns></returns>
         protected override IEnumerable<string> GetDraggedFiles()
         {
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.DropSolutionItemCondition_TraceGettingFiles, this.Extension);
 
             var items = this.DragArgs.GetVSProjectItemsPaths();

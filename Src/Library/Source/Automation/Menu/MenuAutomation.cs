@@ -27,7 +27,7 @@ namespace NuPattern.Library.Automation
     /// </summary>
     internal class MenuAutomation : AutomationExtension<IMenuSettings>, IAutomationMenuCommand, ICommandStatus, INotifyPropertyChanged
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<MenuAutomation>();
+        private static readonly ITracer tracer = Tracer.Get<MenuAutomation>();
 
         private bool enabled;
         private string text;
@@ -169,7 +169,7 @@ namespace NuPattern.Library.Automation
                 }
                 catch (Exception e)
                 {
-                    tracer.TraceError(e, Resources.MenuAutomation_FailedToParseConditions, this.Name);
+                    tracer.Error(e, Resources.MenuAutomation_FailedToParseConditions, this.Name);
                     if (Microsoft.VisualStudio.ErrorHandler.IsCriticalException(e))
                     {
                         throw;
@@ -186,7 +186,7 @@ namespace NuPattern.Library.Automation
                     }
                     catch (Exception e)
                     {
-                        tracer.TraceError(e, Resources.MenuAutomation_FailedToParseCustomStatus, this.Name);
+                        tracer.Error(e, Resources.MenuAutomation_FailedToParseCustomStatus, this.Name);
                         if (Microsoft.VisualStudio.ErrorHandler.IsCriticalException(e))
                         {
                             throw;
@@ -219,7 +219,7 @@ namespace NuPattern.Library.Automation
                     this.QueryStatus(command);
                     if (!command.Enabled)
                     {
-                        tracer.TraceWarning(Resources.MenuAutomation_ConditionsPreventExecution, this.Name);
+                        tracer.Warn(Resources.MenuAutomation_ConditionsPreventExecution, this.Name);
                         return;
                     }
 
@@ -254,7 +254,7 @@ namespace NuPattern.Library.Automation
                 var wizardAutomation = this.ResolveAutomationReference<IWizardAutomationExtension>(this.Settings.WizardId);
                 if (wizardAutomation == null)
                 {
-                    tracer.TraceError(Resources.MenuAutomation_NoWizardFound, this.Settings.WizardId, this.Name);
+                    tracer.Error(Resources.MenuAutomation_NoWizardFound, this.Settings.WizardId, this.Name);
                     return false;
                 }
 
@@ -276,7 +276,7 @@ namespace NuPattern.Library.Automation
                 var commandAutomation = this.ResolveAutomationReference<IAutomationExtension>(this.Settings.CommandId);
                 if (commandAutomation == null)
                 {
-                    tracer.TraceWarning(Resources.MenuAutomation_NoCommandFound, this.Settings.CommandId, this.Name);
+                    tracer.Warn(Resources.MenuAutomation_NoCommandFound, this.Settings.CommandId, this.Name);
                     return false;
                 }
 
@@ -309,14 +309,10 @@ namespace NuPattern.Library.Automation
                 }
                 else
                 {
-                    tracer.TraceError(Resources.MenuAutomation_CustomStatusEvaluationFailed,
+                    tracer.Error(Resources.MenuAutomation_CustomStatusEvaluationFailed,
                         this.Name,
-                        new DictionaryTraceRecord(
-                            TraceEventType.Warning,
-                            typeof(EventAutomation).FullName,
-                            string.Format(CultureInfo.CurrentCulture,
-                                Resources.MenuAutomation_CustomStatusEvaluationFailed, this.Name, this.CommandStatus.UserMessage),
-                            this.CommandStatus.EvaluationResults));
+                        this.CommandStatus.UserMessage, 
+                        ObjectDumper.ToString(this.CommandStatus.EvaluationResults, 5));
                 }
             }
         }
@@ -332,31 +328,20 @@ namespace NuPattern.Library.Automation
 
                 if (!isBindingValid)
                 {
-                    tracer.TraceData(
-                        TraceEventType.Warning,
-                        0,
-                        new DictionaryTraceRecord(
-                            TraceEventType.Warning,
-                            typeof(MenuAutomation).FullName,
-                            string.Format(CultureInfo.CurrentCulture,
-                                Resources.MenuAutomation_ConditionBindingFailed, this.Name, binding.UserMessage),
-                            binding.EvaluationResults));
+                    tracer.Warn(Resources.MenuAutomation_ConditionBindingFailed, 
+                        this.Name, 
+                        binding.UserMessage,
+                        ObjectDumper.ToString(binding.EvaluationResults, 5));
                 }
                 else
                 {
                     isValid = binding.Value.Evaluate();
                     if (!isValid)
                     {
-                        tracer.TraceData(
-                            TraceEventType.Verbose,
-                            0,
-                            new DictionaryTraceRecord(
-                                TraceEventType.Verbose,
-                                typeof(MenuAutomation).FullName,
-                                string.Format(CultureInfo.CurrentCulture,
-                                    Resources.MenuAutomation_ConditionEvaluatedFalse,
-                                    binding.UserMessage),
-                                binding.EvaluationResults));
+                        tracer.Verbose(Resources.MenuAutomation_ConditionEvaluatedFalse,
+                            this.Name,
+                            binding.UserMessage,
+                            ObjectDumper.ToString(binding.EvaluationResults, 5));
                     }
                 }
 

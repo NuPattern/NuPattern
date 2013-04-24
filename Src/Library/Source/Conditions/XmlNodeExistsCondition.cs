@@ -23,7 +23,7 @@ namespace NuPattern.Library.Conditions
     [CLSCompliant(false)]
     public class XmlNodeExistsCondition : Condition
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<ValidElementCondition>();
+        private static readonly ITracer tracer = Tracer.Get<ValidElementCondition>();
 
         /// <summary>
         /// Creates a new instance of the <see cref="XmlNodeExistsCondition"/> class.
@@ -91,7 +91,7 @@ namespace NuPattern.Library.Conditions
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.XmlNodeExistsCondition_TraceInitial,
                     this.SourcePath, this.XmlPath);
 
@@ -101,14 +101,14 @@ namespace NuPattern.Library.Conditions
             var sourceItem = PathResolver.ResolveToSolutionItem<IItem>(this.CurrentElement, this.Solution, this.UriReferenceService, this.SourcePath);
             if (sourceItem == null)
             {
-                tracer.TraceError(
+                tracer.Error(
                     Resources.XmlNodeExistsCondition_ErrorNoSource, this.CurrentElement.InstanceName, this.SourcePath);
             }
             else
             {
                 // Resolve XmlPath
                 var xPath = ExpressionEvaluator.Evaluate(this.CurrentElement, this.XmlPath);
-                tracer.TraceInformation(
+                tracer.Info(
                     Resources.XmlNodeExistsCondition_TraceXPath,
                         this.XmlPath, xPath);
 
@@ -121,7 +121,7 @@ namespace NuPattern.Library.Conditions
                 }
                 catch (Exception)
                 {
-                    tracer.TraceError(
+                    tracer.Error(
                         Resources.XmlNodeExistsCondition_ErrorLoadXmlDoc, sourceFilePath);
                     throw;
                 }
@@ -135,7 +135,7 @@ namespace NuPattern.Library.Conditions
                 }
                 catch (XPathException)
                 {
-                    tracer.TraceError(
+                    tracer.Error(
                         Resources.XmlNodeExistsCondition_ErrorXPath, sourceFilePath, xPath);
                     throw;
                 }
@@ -147,14 +147,14 @@ namespace NuPattern.Library.Conditions
                     }
                     catch (Exception)
                     {
-                        tracer.TraceError(
+                        tracer.Error(
                             Resources.XmlNodeExistsCondition_ErrorCloseXmlDoc, sourceFilePath);
                         // Ignore exception on close
                     }
                 }
             }
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.XmlNodeExistsCondition_TraceEvaluation, this.SourcePath, this.XmlPath, result);
 
             return result;

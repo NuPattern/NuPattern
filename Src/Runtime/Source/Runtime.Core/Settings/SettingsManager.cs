@@ -22,7 +22,7 @@ namespace NuPattern.Runtime.Settings
         private const string SourceNames = "SourceNames";
         private const string RootSourceLevel = "RootSourceLevel";
 
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<SettingsManager>();
+        private static readonly ITracer tracer = Tracer.Get<SettingsManager>();
         private IServiceProvider serviceProvider;
 
         /// <summary>
@@ -129,7 +129,7 @@ namespace NuPattern.Runtime.Settings
                 }
                 else
                 {
-                    tracer.TraceWarning(Resources.SettingsManager_InvalidTraceLevel, value, sourceName);
+                    tracer.Warn(Resources.SettingsManager_InvalidTraceLevel, value, sourceName);
                 }
             }
 

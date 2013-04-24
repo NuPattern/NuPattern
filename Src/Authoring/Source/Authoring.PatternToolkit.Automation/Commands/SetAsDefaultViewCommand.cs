@@ -20,7 +20,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
     [DescriptionResource("SetAsDefaultViewCommand_Description", typeof(Resources))]
     public class SetAsDefaultViewCommand : NuPattern.Runtime.Command
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<SetAsDefaultViewCommand>();
+        private static readonly ITracer tracer = Tracer.Get<SetAsDefaultViewCommand>();
 
         /// <summary>
         /// Gets or sets the service that resolves templates.
@@ -45,7 +45,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
 
             var patternModel = this.CurrentElement.Parent.Parent.AsElement();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.SetAsDefaultViewCommand_TraceInitial, patternModel.InstanceName, this.CurrentElement.InstanceName);
 
             var reference = SolutionArtifactLinkReference.GetResolvedReferences(patternModel, this.UriService).FirstOrDefault();
@@ -66,21 +66,21 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
                                 }
                                 else
                                 {
-                                    tracer.TraceWarning(
+                                    tracer.Warn(
                                         Resources.SetAsDefaultViewCommand_TraceViewNotFound, patternModel.InstanceName, viewReference.Host);
                                 }
                             }, true);
                     }
                     else
                     {
-                        tracer.TraceWarning(
+                        tracer.Warn(
                             Resources.SetAsDefaultViewCommand_TraceReferenceNotFound, patternModel.InstanceName);
                     }
                 }
             }
             else
             {
-                tracer.TraceWarning(
+                tracer.Warn(
                     Resources.SetAsDefaultViewCommand_TraceReferenceNotFound, patternModel.InstanceName);
             }
         }

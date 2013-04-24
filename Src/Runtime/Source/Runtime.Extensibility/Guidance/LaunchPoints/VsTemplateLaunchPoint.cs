@@ -3,7 +3,6 @@ using System.Globalization;
 using System.Linq;
 using NuPattern.ComponentModel.Design;
 using NuPattern.Diagnostics;
-using NuPattern.Runtime.Guidance.Diagnostics;
 using NuPattern.Runtime.Properties;
 
 namespace NuPattern.Runtime.Guidance.LaunchPoints
@@ -105,7 +104,7 @@ namespace NuPattern.Runtime.Guidance.LaunchPoints
         protected void OnUnfoldTemplate(string bindingName)
         {
             var registration = this.GuidanceManager.FindGuidanceExtension(this.GetType());
-            var tracer = GuidanceExtensionTracer.GetSourceFor(this, registration.ExtensionId);
+            var tracer = Tracer.Get<VsTemplateLaunchPoint>();
 
             var extension = this.GuidanceManager.InstantiatedGuidanceExtensions.FirstOrDefault(f => f.ExtensionId == registration.ExtensionId);
             if (extension != null)

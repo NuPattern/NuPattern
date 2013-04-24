@@ -16,7 +16,7 @@ namespace NuPattern.Runtime.UI.ViewModels
         private const string IconEnabledPath = "../../Resources/NodeProductDefault.png";
         private const string IconUninstalledPath = "../../Resources/NodeProductVersionNotFound.png";
 
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<ProductViewModel>();
+        private static readonly ITracer tracer = Tracer.Get<ProductViewModel>();
 
         private MenuOptionViewModel viewsOption;
         private MenuOptionViewModel addOption;

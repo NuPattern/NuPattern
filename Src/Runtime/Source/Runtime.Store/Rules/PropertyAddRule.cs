@@ -12,7 +12,7 @@ namespace NuPattern.Runtime.Store
     [RuleOn(typeof(Property), FireTime = TimeToFire.LocalCommit)]
     internal class PropertyAddRule : AddRule
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<PropertyAddRule>();
+        private static readonly ITracer tracer = Tracer.Get<PropertyAddRule>();
 
         /// <summary>
         /// Triggers this notification rule whether a <see cref="Property"/> is added.
@@ -31,7 +31,7 @@ namespace NuPattern.Runtime.Store
             }
             else
             {
-                tracer.TraceWarning(Resources.TracerWarning_PropertyInfoNotFound, property.Id);
+                tracer.Warn(Resources.TracerWarning_PropertyInfoNotFound, property.Id);
             }
         }
 

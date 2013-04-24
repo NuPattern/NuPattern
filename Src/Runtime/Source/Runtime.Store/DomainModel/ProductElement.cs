@@ -19,7 +19,7 @@ namespace NuPattern.Runtime.Store
     {
         private IDynamicBinding<IValidationRule>[] validationBindings;
         private IDynamicBindingContext bindingContext;
-        private static ITraceSource tracer = Tracer.GetSourceFor<ProductElement>();
+        private static ITracer tracer = Tracer.Get<ProductElement>();
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ProductElement"/> class.
@@ -156,7 +156,7 @@ namespace NuPattern.Runtime.Store
                 }
                 catch (Exception ex)
                 {
-                    tracer.TraceError(ex, Resources.ProductElement_FailedToDisposeExtension);
+                    tracer.Error(ex, Resources.ProductElement_FailedToDisposeExtension);
                 }
             }
         }

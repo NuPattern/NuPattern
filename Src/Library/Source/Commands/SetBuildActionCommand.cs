@@ -20,7 +20,7 @@ namespace NuPattern.Library.Commands
     [CLSCompliant(false)]
     public class SetBuildActionCommand : Command
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<SetBuildActionCommand>();
+        private static readonly ITracer tracer = Tracer.Get<SetBuildActionCommand>();
 
         /// <summary>
         /// Gets or sets the solution.
@@ -67,7 +67,7 @@ namespace NuPattern.Library.Commands
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.SetBuildActionCommand_TraceInitial, this, CurrentElement.InstanceName, this.TargetPath, this.BuildAction);
 
             var resolver = new PathResolver(this.CurrentElement, this.UriService,
@@ -84,7 +84,7 @@ namespace NuPattern.Library.Commands
                 }
                 else
                 {
-                    tracer.TraceInformation(
+                    tracer.Info(
                         Resources.SetBuildActionCommand_TraceBuildAction, this, CurrentElement.InstanceName, this.BuildAction, item.GetLogicalPath());
 
                     item.Data.ItemType = BuildAction.ToString();

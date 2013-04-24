@@ -20,7 +20,7 @@ namespace NuPattern.Library.Automation
     /// </summary>
     internal class TemplateAutomation : AutomationExtension<ITemplateSettings>
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<EventAutomation>();
+        private static readonly ITracer tracer = Tracer.Get<EventAutomation>();
 
         private IDisposable eventSubscription;
 
@@ -160,7 +160,7 @@ namespace NuPattern.Library.Automation
                 var wizardAutomation = this.ResolveAutomationReference<IWizardAutomationExtension>(this.Settings.WizardId);
                 if (wizardAutomation == null)
                 {
-                    tracer.TraceError(Resources.TemplateAutomation_NoWizardFound, this.Settings.WizardId, this.Name);
+                    tracer.Error(Resources.TemplateAutomation_NoWizardFound, this.Settings.WizardId, this.Name);
                     return false;
                 }
 
@@ -182,7 +182,7 @@ namespace NuPattern.Library.Automation
                 var commandAutomation = this.ResolveAutomationReference<IAutomationExtension>(this.Settings.CommandId);
                 if (commandAutomation == null)
                 {
-                    tracer.TraceWarning(Resources.TemplateAutomation_NoCommandFound, this.Settings.CommandId, this.Name);
+                    tracer.Warn(Resources.TemplateAutomation_NoCommandFound, this.Settings.CommandId, this.Name);
                     return false;
                 }
 

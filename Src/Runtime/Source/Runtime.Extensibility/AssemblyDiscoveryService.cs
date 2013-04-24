@@ -13,7 +13,7 @@ namespace NuPattern.Runtime
     internal class AssemblyDiscoveryService : IAssemblyDiscoveryService
     {
         private ITypeDescriptorContext ownerContext;
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<AssemblyDiscoveryService>();
+        private static readonly ITracer tracer = Tracer.Get<AssemblyDiscoveryService>();
 
         public AssemblyDiscoveryService(ITypeDescriptorContext context)
         {
@@ -32,13 +32,13 @@ namespace NuPattern.Runtime
 
         private static IDictionary<string, IEnumerable<Assembly>> GetAssemblies(ITypeDescriptorContext context)
         {
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.AssemblyDiscoveryService_GetAssemblies_TraceInitial);
 
             var solution = context.GetService<ISolution>();
             if (solution == null)
             {
-                tracer.TraceInformation(
+                tracer.Info(
                     Resources.AssemblyDiscoveryService_GetAssemblies_TraceNoSolution);
 
                 return new Dictionary<string, IEnumerable<Assembly>>();
@@ -48,7 +48,7 @@ namespace NuPattern.Runtime
                 .SelectMany(p => p.GetAvailableTypes(typeof(object)).Select(t => t.Assembly))
                 .Distinct();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.AssemblyDiscoveryService_GetAssemblies_TraceAssembliesFound, assemblies.Count());
 
             return new Dictionary<string, IEnumerable<Assembly>> { { @"Types", assemblies } };

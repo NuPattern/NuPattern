@@ -17,7 +17,7 @@ namespace NuPattern.Runtime.Design
     /// </summary>
     public class IconEditor : UITypeEditor
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<IconEditor>();
+        private static readonly ITracer tracer = Tracer.Get<IconEditor>();
         private const string ImageExtension = ".gif;.jpg;.jpeg;.bmp;.png;.ico";
 
         /// <summary>

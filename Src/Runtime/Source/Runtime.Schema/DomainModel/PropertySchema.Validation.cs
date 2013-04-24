@@ -18,7 +18,7 @@ namespace NuPattern.Runtime.Schema
     [ValidationState(ValidationState.Enabled)]
     partial class PropertySchema
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<PropertySchema>();
+        private static readonly ITracer tracer = Tracer.Get<PropertySchema>();
 
         private static readonly string[] ReservedDisplayNames = new[] 
         { 
@@ -45,7 +45,7 @@ namespace NuPattern.Runtime.Schema
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Properties.Resources.ValidationMethodFailed_Error,
                     Reflector<PropertySchema>.GetMethod(n => n.ValidateTypeIsLegal(context)).Name);
@@ -71,7 +71,7 @@ namespace NuPattern.Runtime.Schema
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Properties.Resources.ValidationMethodFailed_Error,
                     Reflector<PropertySchema>.GetMethod(n => n.ValidateCategoryIsLegal(context)).Name);
@@ -110,7 +110,7 @@ namespace NuPattern.Runtime.Schema
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Properties.Resources.ValidationMethodFailed_Error,
                     Reflector<PropertySchema>.GetMethod(n => n.ValidateNameIsUnique(context)).Name);
@@ -134,7 +134,7 @@ namespace NuPattern.Runtime.Schema
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Properties.Resources.ValidationMethodFailed_Error,
                     Reflector<PropertySchema>.GetMethod(n => n.ValidateValidationRulesTypeIsNotEmpty(context)).Name);
@@ -158,7 +158,7 @@ namespace NuPattern.Runtime.Schema
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Properties.Resources.ValidationMethodFailed_Error,
                     Reflector<PropertySchema>.GetMethod(n => n.ValidateDefaultValueHasValueOrValueProvider(context)).Name);
@@ -182,7 +182,7 @@ namespace NuPattern.Runtime.Schema
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Properties.Resources.ValidationMethodFailed_Error,
                     Reflector<PropertySchema>.GetMethod(n => n.ValidateValueProviderOrDefaultValue(context)).Name);
@@ -209,7 +209,7 @@ namespace NuPattern.Runtime.Schema
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Properties.Resources.ValidationMethodFailed_Error,
                     Reflector<PropertySchema>.GetMethod(n => n.ValidateDisplayNameIsNotReserved(context)).Name);

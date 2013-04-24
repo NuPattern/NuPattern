@@ -1,0 +1,19 @@
+Find & Replace:
+
+ITraceSource            ->        ITracer
+Tracer.GetSourceFor<    ->        Tracer.Get<
+Tracer.GetSourceFor(    ->        Tracer.Get(
+
+
+.TraceError(            ->        .Error(
+.TraceWarning(          ->        .Warning(
+.TraceInformation(      ->        .Info(
+.TraceVerbose(          ->        .Verbose(
+
+// Add using NuPattern.Diagnostics;
+// where the Error/Info/Warning/Verbose/StartActivity calls don't compile.
+
+// Calls to Error/Warning/Info/Verbose/StartActivity may fail to compile with the following error:
+'NuPattern.Diagnostics.ITracer' has no applicable method named 'Info' but appears to have an extension method by that name. Extension methods cannot be dynamically dispatched. Consider casting the dynamic arguments or calling the extension method without the extension method syntax.	
+
+This can be fixed by making sure none of the parameters is a dynamic object.

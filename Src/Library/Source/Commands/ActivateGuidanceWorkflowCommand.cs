@@ -21,7 +21,7 @@ namespace NuPattern.Library.Commands
     [CLSCompliant(false)]
     public class ActivateGuidanceWorkflowCommand : Command
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<ActivateGuidanceWorkflowCommand>();
+        private static readonly ITracer tracer = Tracer.Get<ActivateGuidanceWorkflowCommand>();
 
         /// <summary>
         /// Gets or sets the current element.
@@ -51,34 +51,34 @@ namespace NuPattern.Library.Commands
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.ActivateGuidanceWorkCommand_TraceInitial, this.CurrentElement.InstanceName);
 
             // Get the guidance reference from current element
             var instanceName = this.CurrentElement.TryGetReference(ReferenceKindConstants.Guidance);
             if (!String.IsNullOrEmpty(instanceName))
             {
-                tracer.TraceVerbose(
+                tracer.Verbose(
                     Resources.ActivateGuidanceWorkCommand_TraceReferenceFound, this.CurrentElement.InstanceName, instanceName);
 
                 // Get associated feature (if exists in solution)
                 var featureInstance = GuidanceReference.GetResolvedReferences(this.CurrentElement, this.GuidanceManager).FirstOrDefault();
                 if (featureInstance != null)
                 {
-                    tracer.TraceInformation(
+                    tracer.Info(
                         Resources.ActivateGuidanceWorkCommand_TraceActivation, this.CurrentElement.InstanceName, instanceName);
 
                     this.GuidanceManager.ActivateGuidanceInstance(this.ServiceProvider, featureInstance);
                 }
                 else
                 {
-                    tracer.TraceWarning(
+                    tracer.Warn(
                         Resources.ActivateGuidanceWorkCommand_TraceGuidanceNotFound, instanceName);
                 }
             }
             else
             {
-                tracer.TraceWarning(
+                tracer.Warn(
                     Resources.ActivateGuidanceWorkCommand_TraceNoReference, this.CurrentElement.InstanceName);
             }
         }

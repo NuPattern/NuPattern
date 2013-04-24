@@ -17,7 +17,7 @@ namespace NuPattern.Runtime.Diagnostics
     /// </summary>
     internal sealed class TraceOutputWindowManager : IDisposable
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<TraceOutputWindowManager>();
+        private static readonly ITracer tracer = Tracer.Get<TraceOutputWindowManager>();
         private static readonly TraceFilter defaultFilter = new DelegateTraceFilter((cache, source, eventType, id) => true);
 
         private IServiceProvider serviceProvider;
@@ -69,7 +69,7 @@ namespace NuPattern.Runtime.Diagnostics
             // before shell initialization is completed, so that we don't 
             // miss anything.
             this.temporaryWriter = new StringWriter(CultureInfo.CurrentCulture);
-            this.listener = new TraceRecordTextListener(this.temporaryWriter, this.outputPaneTitle);
+            this.listener = new TextWriterTraceListener(this.temporaryWriter, this.outputPaneTitle);
             this.listener.IndentLevel = 4;
             this.listener.Filter = defaultFilter;
 
@@ -125,7 +125,7 @@ namespace NuPattern.Runtime.Diagnostics
 
             this.RemoveListenerFromSources();
 
-            this.listener = new TraceRecordTextListener(new OutputWindowTextWriter(this.outputWindowPane), this.outputPaneTitle);
+            this.listener = new ActivityTextListener(new OutputWindowTextWriter(this.outputWindowPane), this.outputPaneTitle);
             this.listener.IndentLevel = 4;
             this.listener.Filter = defaultFilter;
 
@@ -136,7 +136,7 @@ namespace NuPattern.Runtime.Diagnostics
         {
             foreach (var sourceName in this.traceSourceNames)
             {
-                Tracer.AddListener(sourceName, this.listener);
+                Tracer.Manager.AddListener(sourceName, this.listener);
             }
         }
 
@@ -144,7 +144,7 @@ namespace NuPattern.Runtime.Diagnostics
         {
             foreach (var sourceName in this.traceSourceNames)
             {
-                Tracer.RemoveListener(sourceName, this.listener);
+                Tracer.Manager.RemoveListener(sourceName, this.listener);
             }
         }
 

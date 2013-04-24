@@ -14,7 +14,7 @@ namespace NuPattern.Runtime.Store.Design
 {
     internal class PropertyPropertyDescriptor : PropertyDescriptor
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<PropertyPropertyDescriptor>();
+        private static readonly ITracer tracer = Tracer.Get<PropertyPropertyDescriptor>();
 
         private Property property;
         private Type type;
@@ -103,17 +103,11 @@ namespace NuPattern.Runtime.Store.Design
                 }
                 else if (!bindingFailureReported)
                 {
-                    tracer.TraceRecord(this, TraceEventType.Warning,
-                        new
-                        {
-                            BindingResults = this.ValueProviderBinding.EvaluationResults
-                        },
-                        string.Format(
-                            CultureInfo.CurrentCulture,
-                            Resources.PropertyPropertyDescriptor_ValueProviderBindingFailed,
-                            this.property.Info.Parent.Name,
-                            this.property.Info.Name,
-                            this.property.Info.ValueProvider.TypeId));
+                    tracer.Warn(Resources.PropertyPropertyDescriptor_ValueProviderBindingFailed, 
+                        this.property.Info.Parent.Name,
+                        this.property.Info.Name,
+                        this.property.Info.ValueProvider.TypeId,
+                        ObjectDumper.ToString(this.ValueProviderBinding.EvaluationResults, 5));
 
                     bindingFailureReported = true;
                 }
@@ -151,7 +145,7 @@ namespace NuPattern.Runtime.Store.Design
                         else
                         {
                             // TODO: should we trace the binding results or is it done already by the feature runtime?
-                            tracer.TraceWarning(Resources.ElementMapper_DefaultValueProviderBindingFailed,
+                            tracer.Warn(Resources.ElementMapper_DefaultValueProviderBindingFailed,
                                 this.property.Owner.DefinitionName, this.property.DefinitionName, this.property.Info.DefaultValue.ValueProvider.TypeId);
                         }
                     }
@@ -231,7 +225,7 @@ namespace NuPattern.Runtime.Store.Design
                         else
                         {
                             // TODO: should we trace the binding results or is it done already by the feature runtime?
-                            tracer.TraceWarning(Resources.ElementMapper_DefaultValueProviderBindingFailed,
+                            tracer.Warn(Resources.ElementMapper_DefaultValueProviderBindingFailed,
                                 this.property.Owner.DefinitionName, this.property.DefinitionName, this.property.Info.DefaultValue.ValueProvider.TypeId);
                         }
                     }
@@ -295,7 +289,7 @@ namespace NuPattern.Runtime.Store.Design
                     var factory = this.property.Store.GetService<IBindingFactory>();
                     if (factory == null)
                     {
-                        tracer.TraceWarning(string.Format(
+                        tracer.Warn(string.Format(
                             CultureInfo.CurrentCulture,
                             Resources.Validation_RequiredServiceMissing,
                             typeof(IBindingFactory)));

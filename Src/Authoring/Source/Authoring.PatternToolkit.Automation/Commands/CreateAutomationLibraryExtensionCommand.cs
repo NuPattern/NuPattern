@@ -18,7 +18,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
     [CLSCompliant(false)]
 	public class CreateAutomationLibraryExtensionCommand : NuPattern.Runtime.Command
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<CreateAutomationLibraryExtensionCommand>();
+        private static readonly ITracer tracer = Tracer.Get<CreateAutomationLibraryExtensionCommand>();
 
         /// <summary>
         /// Gets or sets the current element.
@@ -36,7 +36,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
             {
                 this.ValidateObject();
 
-                tracer.TraceInformation(
+                tracer.Info(
                     Resources.CreateAutomationLibraryExtensionCommand_TraceInital, this.CurrentElement.InstanceName);
 
                 // Create Automation Library
@@ -46,7 +46,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
                     var instanceName = collection.Info.ExtensionPoints
                             .FirstOrDefault(e => e.Name == typeof(AutomationLibrary).Name).DisplayName;
 
-                    tracer.TraceInformation(
+                    tracer.Info(
                         Resources.CreateAutomationLibraryExtensionCommand_TraceCreatingInstance, this.CurrentElement.InstanceName, instanceName);
 
                     this.CurrentElement.CreateAutomationLibrary(

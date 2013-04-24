@@ -21,7 +21,7 @@ namespace NuPattern.Library.Conditions
     public class ElementPropertyExistsCondition : Condition
     {
         private const bool DefaultMustHaveValue = false;
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<ElementPropertyExistsCondition>();
+        private static readonly ITracer tracer = Tracer.Get<ElementPropertyExistsCondition>();
 
         /// <summary>
         /// Creates a new instance of the <see cref="ElementPropertyExistsCondition"/> class.
@@ -62,7 +62,7 @@ namespace NuPattern.Library.Conditions
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.ElementPropertyExistsCondition_TraceInitial, this.CurrentElement.InstanceName, this.PropertyName, this.MustHaveValue);
 
             var property = this.CurrentElement.Properties.FirstOrDefault(
@@ -71,13 +71,13 @@ namespace NuPattern.Library.Conditions
             {
                 var result = this.MustHaveValue ? !string.IsNullOrEmpty(property.RawValue) : true;
 
-                tracer.TraceInformation(
+                tracer.Info(
                     Resources.ElementPropertyExistsCondition_TraceEvaluation, this.CurrentElement.InstanceName, this.PropertyName, this.MustHaveValue, result);
 
                 return result;
             }
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.ElementPropertyExistsCondition_TraceNoProperty, this.PropertyName, this.CurrentElement.Info.Name);
 
             return false;

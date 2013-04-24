@@ -12,7 +12,7 @@ namespace NuPattern.Runtime.Guidance.Workflow
     [DisplayNameResource(@"GuidanceNode_GuidanceAction_DisplayName", typeof(Resources))]
     public class GuidanceAction : ConditionalNode, IGuidanceAction
     {
-        //private static readonly ITraceSource tracer = Tracer.GetSourceFor<Node>();
+        //private static readonly ITracer tracer = Tracer.Get<Node>();
 
         private bool hasBlockingPredecessor;
 

@@ -17,7 +17,7 @@ namespace NuPattern.Library.ValueProviders
     [CLSCompliant(false)]
     public class ElementPropertyValueProvider : ValueProvider
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<ElementPropertyValueProvider>();
+        private static readonly ITracer tracer = Tracer.Get<ElementPropertyValueProvider>();
 
         /// <summary>
         /// Gets or sets the name of the property of the current pattern/element to read.
@@ -41,7 +41,7 @@ namespace NuPattern.Library.ValueProviders
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Properties.Resources.ElementPropertyValueProvider_TraceInitial, this.PropertyName, this.CurrentElement);
 
             return new PropertyEvaluator().Evaluate(this.CurrentElement, this.PropertyName);

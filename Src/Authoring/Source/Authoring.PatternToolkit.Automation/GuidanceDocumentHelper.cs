@@ -21,13 +21,13 @@ namespace NuPattern.Authoring.PatternToolkit.Automation
         /// <remarks>
         /// Returns the first artifact link with a *.doc extension of the current element.
         /// </remarks>
-        public static string GetDocumentPath(ITraceSource tracer, IProductElement element, IUriReferenceService uriService)
+        public static string GetDocumentPath(ITracer tracer, IProductElement element, IUriReferenceService uriService)
         {
             // Return path of first reference
             var references = SolutionArtifactLinkReference.GetResolvedReferences(element, uriService);
             if (!references.Any())
             {
-                tracer.TraceWarning(String.Format(CultureInfo.CurrentCulture,
+                tracer.Warn(String.Format(CultureInfo.CurrentCulture,
                     Resources.GuidanceDocumentPathProvider_NoLinksFound, element.InstanceName));
                 return string.Empty;
             }
@@ -36,13 +36,13 @@ namespace NuPattern.Authoring.PatternToolkit.Automation
                 var reference = references.FirstOrDefault(r => r.PhysicalPath.EndsWith(GuidanceDocumentExtension));
                 if (reference == null)
                 {
-                    tracer.TraceWarning(String.Format(CultureInfo.CurrentCulture,
+                    tracer.Warn(String.Format(CultureInfo.CurrentCulture,
                         Resources.GuidanceDocumentPathProvider_NoDocumentLinkFound, element.InstanceName));
                     return string.Empty;
                 }
                 else
                 {
-                    tracer.TraceInformation(String.Format(CultureInfo.CurrentCulture,
+                    tracer.Info(String.Format(CultureInfo.CurrentCulture,
                         Resources.GuidanceDocumentPathProvider_LinkFound, element.InstanceName, reference.PhysicalPath));
                     return reference.PhysicalPath;
                 }

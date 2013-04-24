@@ -26,7 +26,7 @@ namespace NuPattern.Runtime.UnitTests.Settings
                 this.manager = new Mock<ISettingsManager>();
                 this.monitor = new TracingSettingsMonitor(this.manager.Object);
 
-                this.source = Tracer.GetOrCreateUnderlyingSource("Foo");
+                this.source = Tracer.Manager.GetSource("Foo");
                 this.source.Switch.Level = SourceLevels.Off;
             }
 
@@ -66,7 +66,7 @@ namespace NuPattern.Runtime.UnitTests.Settings
             [TestInitialize]
             public void Initialize()
             {
-                this.source = Tracer.GetOrCreateUnderlyingSource("Foo");
+                this.source = Tracer.Manager.GetSource("Foo");
                 this.source.Switch.Level = SourceLevels.Off;
 
                 this.manager = new Mock<ISettingsManager>();
@@ -88,7 +88,7 @@ namespace NuPattern.Runtime.UnitTests.Settings
             [TestMethod, TestCategory("Unit")]
             public void WhenConstructed_ThenDefaultSourceLevelIsApplied()
             {
-                var defaultSource = Tracer.GetOrCreateUnderlyingSource(TracingSettings.DefaultRootSourceName);
+                var defaultSource = Tracer.Manager.GetSource(TracingSettings.DefaultRootSourceName);
 
                 Assert.Equal(TracingSettings.DefaultRootSourceLevel, defaultSource.Switch.Level);
             }
@@ -112,7 +112,7 @@ namespace NuPattern.Runtime.UnitTests.Settings
 
                 this.manager.Raise(x => x.SettingsChanged += null, new ChangedEventArgs<IRuntimeSettings>(new RuntimeSettings(), setting));
 
-                var source = Tracer.GetOrCreateUnderlyingSource("Foo");
+                var source = Tracer.Manager.GetSource("Foo");
 
                 Assert.True(source.Listeners.Cast<TraceListener>().OfType<DefaultTraceListener>().Any());
             }
@@ -125,7 +125,7 @@ namespace NuPattern.Runtime.UnitTests.Settings
 
                 this.manager.Raise(x => x.SettingsChanged += null, new ChangedEventArgs<IRuntimeSettings>(new RuntimeSettings(), setting));
 
-                var defaultSource = Tracer.GetOrCreateUnderlyingSource(TracingSettings.DefaultRootSourceName);
+                var defaultSource = Tracer.Manager.GetSource(TracingSettings.DefaultRootSourceName);
 
                 Assert.Equal(SourceLevels.ActivityTracing, defaultSource.Switch.Level);
             }

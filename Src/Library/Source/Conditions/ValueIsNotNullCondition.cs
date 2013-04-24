@@ -14,7 +14,7 @@ namespace NuPattern.Library.Conditions
     [CategoryResource(@"AutomationCategory_General", typeof(Resources))]
     public class ValueIsNotNullCondition : Condition
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<ValueIsNotNullCondition>();
+        private static readonly ITracer tracer = Tracer.Get<ValueIsNotNullCondition>();
 
         /// <summary>
         /// Gets or sets the value.
@@ -31,12 +31,12 @@ namespace NuPattern.Library.Conditions
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.ValueIsNotNullCondition_TraceInitial, this.Value);
 
             var result = (Value != null);
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.ValueIsNotNullCondition_TraceEvaluation, this.Value, result);
 
             return result;

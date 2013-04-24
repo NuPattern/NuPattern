@@ -14,7 +14,7 @@ namespace NuPattern.Runtime.UI
     /// </summary>
     internal class SolutionPicker : ISolutionPicker
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<SolutionPicker>();
+        private static readonly ITracer tracer = Tracer.Get<SolutionPicker>();
 
         /// <summary>
         /// Creates a new instance of the <see cref="SolutionPicker"/> class.

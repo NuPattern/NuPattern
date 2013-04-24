@@ -19,7 +19,7 @@ namespace NuPattern.Library.Automation
     [ValidationState(ValidationState.Enabled)]
     partial class TemplateSettings
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<TemplateSettings>();
+        private static readonly ITracer tracer = Tracer.Get<TemplateSettings>();
 
         [ValidationMethod(ValidationCategories.Menu | ValidationCategories.Save)]
         internal void ValidateAll(ValidationContext context)
@@ -63,7 +63,7 @@ namespace NuPattern.Library.Automation
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Properties.Resources.ValidationMethodFailed_Error,
                     Reflector<TemplateSettings>.GetMethod(n => n.ValidateCommandIdIsValid(context)).Name);
@@ -97,7 +97,7 @@ namespace NuPattern.Library.Automation
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Properties.Resources.ValidationMethodFailed_Error,
                     Reflector<TemplateSettings>.GetMethod(n => n.ValidateWizardIdIsValid(context)).Name);
@@ -135,7 +135,7 @@ namespace NuPattern.Library.Automation
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Resources.ValidationMethodFailed_Error,
                     Reflector<TemplateSettings>.GetMethod(n => n.ValidateNoInstantiationOnProductOnly(context)).Name);
@@ -167,7 +167,7 @@ namespace NuPattern.Library.Automation
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Resources.ValidationMethodFailed_Error,
                     Reflector<TemplateSettings>.GetMethod(n => n.ValidateNoAutomationWithNoInstantiation(context)).Name);
@@ -199,7 +199,7 @@ namespace NuPattern.Library.Automation
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Resources.ValidationMethodFailed_Error,
                     Reflector<TemplateSettings>.GetMethod(n => n.ValidateOwnerIsPattern(context)).Name);
@@ -236,7 +236,7 @@ namespace NuPattern.Library.Automation
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Resources.ValidationMethodFailed_Error,
                     Reflector<TemplateSettings>.GetMethod(n => n.ValidateOwnerNotHaveUnfoldCommandWithSameTemplate(context)).Name);

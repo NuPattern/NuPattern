@@ -16,7 +16,7 @@ namespace NuPattern.Library.ValueProviders
     [CLSCompliant(false)]
     public class ProjectNameValueProvider : VsProjectPropertyValueProvider
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<ProjectNameValueProvider>();
+        private static readonly ITracer tracer = Tracer.Get<ProjectNameValueProvider>();
 
         /// <summary>
         /// Evaluates this provider.
@@ -25,7 +25,7 @@ namespace NuPattern.Library.ValueProviders
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.ProjectNameValueProvider_TraceInitial, this.CurrentElement.InstanceName, this.ProjectPath);
 
             return base.Evaluate();
@@ -41,7 +41,7 @@ namespace NuPattern.Library.ValueProviders
 
             var result = project.Name;
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.ProjectNameValueProvider_TraceEvaluation, this.CurrentElement.InstanceName, this.ProjectPath, result);
 
             return result;

@@ -18,7 +18,7 @@ namespace NuPattern.Library.ValueProviders
     [CLSCompliant(false)]
     public class ProjectGuidValueProvider : VsProjectPropertyValueProvider
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<ProjectGuidValueProvider>();
+        private static readonly ITracer tracer = Tracer.Get<ProjectGuidValueProvider>();
 
         /// <summary>
         /// Creates a new instance of the <see cref="RandomGuidValueProvider"/> class.
@@ -49,7 +49,7 @@ namespace NuPattern.Library.ValueProviders
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.ProjectGuidValueProvider_TraceInitial, this.CurrentElement.InstanceName, this.ProjectPath, this.Format);
 
             return base.Evaluate();
@@ -68,7 +68,7 @@ namespace NuPattern.Library.ValueProviders
             {
                 var result = new Guid(guidString).ToString(GuidHelper.GetFormat(this.Format));
 
-                tracer.TraceInformation(
+                tracer.Info(
                     Resources.ProjectGuidValueProvider_TraceEvaluation, this.CurrentElement.InstanceName, this.ProjectPath, result);
 
                 return result;

@@ -16,7 +16,7 @@ namespace NuPattern.Library.Commands
     [CLSCompliant(false)]
     public class ActivateArtifactCommand : ActivateSolutionItemsCommand
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<ActivateArtifactCommand>();
+        private static readonly ITracer tracer = Tracer.Get<ActivateArtifactCommand>();
 
         /// <summary>
         /// Executes the activation behavior.
@@ -25,7 +25,7 @@ namespace NuPattern.Library.Commands
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.ActivateArtifactCommand_TraceInitial, this.CurrentElement.InstanceName, this.Open);
 
             base.Execute();

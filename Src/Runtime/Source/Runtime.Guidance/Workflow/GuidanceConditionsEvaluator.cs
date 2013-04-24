@@ -12,7 +12,7 @@ namespace NuPattern.Runtime.Guidance.Workflow
         private const string DebugToken = @"DebugTrace";
         private const string DebugWithBindingsToken = @"DebugTraceWithBindings";
         private const string TraceToken = @"Trace";
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<GuidanceConditionsEvaluator>();
+        private static readonly ITracer tracer = Tracer.Get<GuidanceConditionsEvaluator>();
         public static bool TraceStateChanges = false;
 
         private IGuidanceManager guidanceManager;
@@ -64,7 +64,7 @@ namespace NuPattern.Runtime.Guidance.Workflow
                 if (queuedExtensions.Count == 0 && queuedActions.Count == 0)
                 {
                     if (TraceStateChanges)
-                        tracer.TraceVerbose(Resources.GuidanceConditionsEvaluator_TraceEvaluationHeader,
+                        tracer.Verbose(Resources.GuidanceConditionsEvaluator_TraceEvaluationHeader,
                             currentExtensionInstance.InstanceName,
                             @"Workflow");
                     EnqueueAll<IGuidanceExtension>(queuedExtensions, this.guidanceManager.InstantiatedGuidanceExtensions);
@@ -140,7 +140,7 @@ namespace NuPattern.Runtime.Guidance.Workflow
                 //    !(node is Merge))
                 if (TraceStateChanges &&
                     node.State != NodeState.Blocked)
-                    tracer.TraceVerbose(Resources.GuidanceConditionsEvaluator_TraceBlockState,
+                    tracer.Verbose(Resources.GuidanceConditionsEvaluator_TraceBlockState,
                         currentExtensionInstance.InstanceName,
                         node.Name);
                 node.SetState(NodeState.Blocked, false);
@@ -180,7 +180,7 @@ namespace NuPattern.Runtime.Guidance.Workflow
                 //    !(node is Merge))
                 if (TraceStateChanges &&
                     node.State != postConditionsState)
-                    tracer.TraceVerbose(Resources.GuidanceConditionsEvaluator_TraceStateToPostConditions + postConditionsState.ToString() + @" '{0}.{1}'.",
+                    tracer.Verbose(Resources.GuidanceConditionsEvaluator_TraceStateToPostConditions + postConditionsState.ToString() + @" '{0}.{1}'.",
                         currentExtensionInstance.InstanceName,
                         node.Name);
                 node.SetState(postConditionsState, false);

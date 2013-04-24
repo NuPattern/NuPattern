@@ -18,7 +18,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
     [CLSCompliant(false)]
     public class AddFromDroppedVSTemplateCommand : CreateElementFromDroppedWindowsFileCommand
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<AddFromDroppedVSTemplateCommand>();
+        private static readonly ITracer tracer = Tracer.Get<AddFromDroppedVSTemplateCommand>();
         private IWindowsFileImporter importer;
 
         /// <summary>

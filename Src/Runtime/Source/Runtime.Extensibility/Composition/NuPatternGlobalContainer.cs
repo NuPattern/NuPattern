@@ -22,7 +22,7 @@ namespace NuPattern.Runtime.Composition
     // that prevents us from using CompositionContainer as a contract type 
     // but with a different contract name.
     {
-        static readonly ITraceSource tracer = Tracer.GetSourceFor<NuPatternGlobalContainer>();
+        static readonly ITracer tracer = Tracer.Get<NuPatternGlobalContainer>();
 
         /// <summary>
         /// Contract name of the exported global container.
@@ -40,14 +40,14 @@ namespace NuPattern.Runtime.Composition
             var globalComponentModel = (IComponentModel)Package.GetGlobalService(typeof(SComponentModel));
             if (globalComponentModel == null)
             {
-                tracer.TraceWarning(Resources.NuPatternGlobalContainer_TraceNoComponentModelService);
+                tracer.Warn(Resources.NuPatternGlobalContainer_TraceNoComponentModelService);
             }
             else
             {
                 var catalog = globalComponentModel.GetCatalog(NuPattern.ComponentModel.Composition.Catalog.DefaultCatalogName);
                 if (catalog == null)
                 {
-                    tracer.TraceWarning(Resources.NuPatternGlobalContainer_TraceNoComponentModel, NuPattern.ComponentModel.Composition.Catalog.DefaultCatalogName);
+                    tracer.Warn(Resources.NuPatternGlobalContainer_TraceNoComponentModel, NuPattern.ComponentModel.Composition.Catalog.DefaultCatalogName);
                 }
                 else
                 {
@@ -79,7 +79,7 @@ namespace NuPattern.Runtime.Composition
                     }
                     catch (Exception ex)
                     {
-                        tracer.TraceError(ex, Resources.NuPatternGlobalContainer_TraceFailedContainerInitialization);
+                        tracer.Error(ex, Resources.NuPatternGlobalContainer_TraceFailedContainerInitialization);
                         throw;
                     }
                 }

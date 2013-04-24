@@ -12,7 +12,7 @@ namespace NuPattern.Library.Design
     /// </summary>
     internal class GuidanceInstanceNameTypeConverter : TypeConverter
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<GuidanceInstanceNameTypeConverter>();
+        private static readonly ITracer tracer = Tracer.Get<GuidanceInstanceNameTypeConverter>();
 
         /// <summary>
         /// Returns <see langword="true"/> if there's a <see cref="IGuidanceManager"/> service available 
@@ -28,7 +28,7 @@ namespace NuPattern.Library.Design
             }
             else
             {
-                tracer.TraceWarning(Resources.ServiceUnavailable, typeof(IGuidanceManager));
+                tracer.Warn(Resources.ServiceUnavailable, typeof(IGuidanceManager));
                 return false;
             }
         }

@@ -16,7 +16,7 @@ namespace NuPattern.Runtime.Schema
     /// </summary>
     internal class PatternModelCloner
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<PatternModelCloner>();
+        private static readonly ITracer tracer = Tracer.Get<PatternModelCloner>();
 
         /// <summary>
         /// Initializes a new instance of the <see cref="PatternModelCloner"/> class.
@@ -66,9 +66,9 @@ namespace NuPattern.Runtime.Schema
         [SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Not Applicable")]
         public void Clone()
         {
-            tracer.TraceInformation(string.Format(CultureInfo.InvariantCulture, Properties.Resources.PatternModelCloner_PatternModelCloning, this.SourcePatternModel.Id));
+            tracer.Info(string.Format(CultureInfo.InvariantCulture, Properties.Resources.PatternModelCloner_PatternModelCloning, this.SourcePatternModel.Id));
 
-            tracer.TraceInformation(Properties.Resources.PatternModelCloner_EstablishingPatternModelInheritance);
+            tracer.Info(Properties.Resources.PatternModelCloner_EstablishingPatternModelInheritance);
 
             this.TargetPatternModel.Store.TransactionManager.DoWithinTransaction(
                 () => this.TargetPatternModel.BaseVersion = this.SourceVersion.ToString());
@@ -79,11 +79,11 @@ namespace NuPattern.Runtime.Schema
 
                 this.TargetPatternModel.Store.TransactionManager.DoWithinTransaction(() =>
                 {
-                    tracer.TraceInformation(Properties.Resources.PatternModelCloner_CloningViews);
+                    tracer.Info(Properties.Resources.PatternModelCloner_CloningViews);
 
                     foreach (var view in this.SourcePatternModel.Pattern.Views)
                     {
-                        tracer.TraceInformation(string.Format(CultureInfo.InvariantCulture, Properties.Resources.PatternModelCloner_CloningView, view.Name));
+                        tracer.Info(string.Format(CultureInfo.InvariantCulture, Properties.Resources.PatternModelCloner_CloningView, view.Name));
 
                         PatternModelSerializationHelper.CreatePatternModelSchemaDiagram(
                             serializationResult,
@@ -95,18 +95,18 @@ namespace NuPattern.Runtime.Schema
 
                 if (this.SourcePatternModel.Pattern != null)
                 {
-                    tracer.TraceInformation(Properties.Resources.PatternModelCloner_CloningProduct);
+                    tracer.Info(Properties.Resources.PatternModelCloner_CloningProduct);
 
                     CopyElementGraph(this.TargetPatternModel.Store, this.TargetPatternModel, this.SourcePatternModel.Pattern);
                 }
 
-                tracer.TraceInformation(Properties.Resources.PatternModelCloner_EstablishingElementInheritance);
+                tracer.Info(Properties.Resources.PatternModelCloner_EstablishingElementInheritance);
 
                 this.SetNamedElementBaseIdentifiers();
             }
             else
             {
-                tracer.TraceWarning(Properties.Resources.PatternModelCloner_PatternSchemaNotFound);
+                tracer.Warn(Properties.Resources.PatternModelCloner_PatternSchemaNotFound);
             }
         }
 
@@ -116,7 +116,7 @@ namespace NuPattern.Runtime.Schema
 
             var elementOperations = new ElementOperations(targetStore, targetStore.DefaultPartition);
 
-            tracer.TraceVerbose(string.Format(CultureInfo.InvariantCulture,
+            tracer.Verbose(string.Format(CultureInfo.InvariantCulture,
                 Properties.Resources.PatternModelCloner_CloningElement, element.Id));
             elementOperations.Copy(dataObject, new List<ModelElement> { element });
 
@@ -166,7 +166,7 @@ namespace NuPattern.Runtime.Schema
 
                     if (namedElement != null && string.IsNullOrEmpty(namedElement.BaseId))
                     {
-                        tracer.TraceVerbose(string.Format(CultureInfo.InvariantCulture,
+                        tracer.Verbose(string.Format(CultureInfo.InvariantCulture,
                             Properties.Resources.PatternModelCloner_EstablishElementInheritance, ConstructHierarchyName(namedElement)));
 
                         namedElement.BaseId = sourceHierarchyName.Value;

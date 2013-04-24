@@ -17,7 +17,7 @@ namespace NuPattern.Library.ValueProviders
     [CLSCompliant(false)]
     public class CurrentStoreFileValueProvider : ValueProvider
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<CurrentStoreFileValueProvider>();
+        private static readonly ITracer tracer = Tracer.Get<CurrentStoreFileValueProvider>();
 
         /// <summary>
         /// The pattern manager.
@@ -37,14 +37,14 @@ namespace NuPattern.Library.ValueProviders
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.CurrentStoreFileValueProvider_TraceInitial);
 
             if (this.PatternManager.IsOpen)
             {
                 var result = this.PatternManager.StoreFile;
 
-                tracer.TraceInformation(
+                tracer.Info(
                     Resources.CurrentStoreFileValueProvider_TraceEvaluation, result);
 
                 return result;

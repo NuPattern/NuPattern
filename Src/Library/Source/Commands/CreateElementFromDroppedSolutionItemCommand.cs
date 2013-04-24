@@ -16,14 +16,14 @@ namespace NuPattern.Library.Commands
     [CLSCompliant(false)]
     public class CreateElementFromDroppedSolutionItemCommand : CreateElementFromDroppedFileCommand
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<CreateElementFromDroppedSolutionItemCommand>();
+        private static readonly ITracer tracer = Tracer.Get<CreateElementFromDroppedSolutionItemCommand>();
 
         /// <summary>
         /// Returns the files from the dragged data.
         /// </summary>
         protected override IEnumerable<string> GetFilePaths()
         {
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.CreateElementFromDroppedSolutionItemCommand_TraceGettingFiles, this.Extension);
 
             var items = this.DragArgs.GetVSProjectItemsPaths();

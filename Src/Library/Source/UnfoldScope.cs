@@ -14,7 +14,7 @@ namespace NuPattern.Library
     [CLSCompliant(false)]
     public class UnfoldScope : MarshalByRefObject, IDisposable
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<UnfoldScope>();
+        private static readonly ITracer tracer = Tracer.Get<UnfoldScope>();
         private static Stack<UnfoldScope> scopes = new Stack<UnfoldScope>(new UnfoldScope[] { null });
 
         private bool disposed;
@@ -36,7 +36,7 @@ namespace NuPattern.Library
             this.templateUri = templateUri;
             this.Automation = originatingAutomation;
             this.ReferenceTag = artifactReferenceTag;
-            tracer.TraceVerbose(Resources.UnfoldScope_Initialized, templateUri);
+            tracer.Verbose(Resources.UnfoldScope_Initialized, templateUri);
         }
 
         /// <summary>

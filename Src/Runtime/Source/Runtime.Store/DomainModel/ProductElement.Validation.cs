@@ -5,6 +5,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
 using Microsoft.VisualStudio.Modeling.Validation;
+using NuPattern.Diagnostics;
 using NuPattern.Reflection;
 using NuPattern.Runtime.Store.Properties;
 using NuPattern.Runtime.ToolkitInterface;
@@ -54,7 +55,7 @@ namespace NuPattern.Runtime.Store
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Resources.ValidationMethodFailed_Error,
                     Reflector<ProductElement>.GetMethod(n => n.ValidateValidationBindings(context)).Name);
@@ -135,7 +136,7 @@ namespace NuPattern.Runtime.Store
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Resources.ValidationMethodFailed_Error,
                     Reflector<ProductElement>.GetMethod(n => n.ValidateInstanceNameIsLegal(context)).Name);

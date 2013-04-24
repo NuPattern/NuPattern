@@ -13,7 +13,7 @@ namespace NuPattern.Runtime.Schema
     [ValidationState(ValidationState.Enabled)]
     partial class CustomizableElementSchemaBase
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<CustomizableElementSchemaBase>();
+        private static readonly ITracer tracer = Tracer.Get<CustomizableElementSchemaBase>();
 
         /// <summary>
         /// Validates if an element does not have any modifications to its policy that are explicitly overridden by its customization state.
@@ -40,7 +40,7 @@ namespace NuPattern.Runtime.Schema
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Resources.ValidationMethodFailed_Error,
                     Reflector<CustomizableElementSchemaBase>.GetMethod(n => n.ValidateCustomizedSettingsOverriddenByCustomizableState(context)).Name);
@@ -70,7 +70,7 @@ namespace NuPattern.Runtime.Schema
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Resources.ValidationMethodFailed_Error,
                     Reflector<CustomizableElementSchemaBase>.GetMethod(n => n.ValidateCustomizedStateWithNoCustomizableSettings(context)).Name);
@@ -112,7 +112,7 @@ namespace NuPattern.Runtime.Schema
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Properties.Resources.ValidationMethodFailed_Error,
                     Reflector<CustomizableElementSchemaBase>.GetMethod(n => n.ValidateCustomizableStateRedundant(context)).Name);

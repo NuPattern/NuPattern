@@ -33,7 +33,7 @@ namespace NuPattern.Runtime.UriProviders
     [CLSCompliant(false)]
     public class TextTemplateUriProvider : IUriReferenceProvider<ITemplate>
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<TextTemplateUriProvider>();
+        private static readonly ITracer tracer = Tracer.Get<TextTemplateUriProvider>();
 
         /// <summary>
         /// The host to use in a uri that is resolved relative to the current solution.
@@ -117,7 +117,7 @@ namespace NuPattern.Runtime.UriProviders
             var segments = uri.GetComponents(UriComponents.Path, UriFormat.Unescaped).Split(Path.AltDirectorySeparatorChar);
             if (segments.Length < 2)
             {
-                tracer.TraceWarning(Resources.TextTemplateUriProvider_TraceInvalidExtensionRelative, uri);
+                tracer.Warn(Resources.TextTemplateUriProvider_TraceInvalidExtensionRelative, uri);
                 return null;
             }
 
@@ -125,12 +125,12 @@ namespace NuPattern.Runtime.UriProviders
             var extension = uriService.Value.ResolveUri<IInstalledExtension>(vsixUri);
             if (extension == null)
             {
-                tracer.TraceWarning(Resources.TextTemplateUriProvider_ExtensionNotFound,
+                tracer.Warn(Resources.TextTemplateUriProvider_ExtensionNotFound,
                     uri, uri.Segments[0]);
                 return null;
             }
 
-            tracer.TraceInformation(Resources.TextTemplateUriProvider_TraceExtensionPath, uri, extension.InstallPath);
+            tracer.Info(Resources.TextTemplateUriProvider_TraceExtensionPath, uri, extension.InstallPath);
 
             var fileInfo = new FileInfo(Path.Combine(
                 new[] { extension.InstallPath }
@@ -139,7 +139,7 @@ namespace NuPattern.Runtime.UriProviders
 
             if (!fileInfo.Exists)
             {
-                tracer.TraceWarning(Resources.TextTemplateUriProvider_TraceTemplateNotFound, fileInfo.FullName, uri);
+                tracer.Warn(Resources.TextTemplateUriProvider_TraceTemplateNotFound, fileInfo.FullName, uri);
                 return null;
             }
 

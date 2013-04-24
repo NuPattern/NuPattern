@@ -18,7 +18,7 @@ namespace NuPattern.Library.ValueProviders
     [CLSCompliant(false)]
     public class SolutionNameValueProvider : ValueProvider
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<SolutionNameValueProvider>();
+        private static readonly ITracer tracer = Tracer.Get<SolutionNameValueProvider>();
 
         /// <summary>
         /// The current solution.
@@ -38,12 +38,12 @@ namespace NuPattern.Library.ValueProviders
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.SolutionNameValueProvider_TraceInitial);
 
             var result = this.Solution.Name;
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.SolutionNameValueProvider_TraceEvaluation, result);
 
             return result;

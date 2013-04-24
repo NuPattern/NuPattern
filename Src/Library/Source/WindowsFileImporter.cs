@@ -15,7 +15,7 @@ namespace NuPattern.Library
     [CLSCompliant(false)]
     public class WindowsFileImporter : IWindowsFileImporter
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<WindowsFileImporter>();
+        private static readonly ITracer tracer = Tracer.Get<WindowsFileImporter>();
         private ISolution solution;
         private IUriReferenceService uriService;
         private IProductElement currentElement;
@@ -81,7 +81,7 @@ namespace NuPattern.Library
             var uniqueName = EnsureItemNameUniqueInTargetContainer(filePath);
             if (!uniqueName.Equals(filePath, StringComparison.OrdinalIgnoreCase))
             {
-                tracer.TraceVerbose(
+                tracer.Verbose(
                     Resources.WindowsFileImporter_TraceRenamingAddedFile, filePath, uniqueName);
 
                 // Update added filename
@@ -91,7 +91,7 @@ namespace NuPattern.Library
             // Add file to the solution
             var addedFile = this.TargetContainer.Add(filePath, this.AddedItems[filePath], true, false);
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.WindowsFileImporter_TraceImportComplete, filePath, this.currentElement.InstanceName, addedFile.GetLogicalPath());
 
             return true;
@@ -110,7 +110,7 @@ namespace NuPattern.Library
                 var addedItem = this.TargetContainer.Find<IItemContainer>(filename).FirstOrDefault();
                 if (addedItem == null)
                 {
-                    tracer.TraceError(
+                    tracer.Error(
                         Resources.WindowsFileImporter_TraceAddedItemNotFound, filename, TargetContainer.GetLogicalPath());
                     return null;
                 }
@@ -151,7 +151,7 @@ namespace NuPattern.Library
                     Resources.WindowsFileImporter_ErrorTargetPathResolvedFailed, this.targetPath));
             }
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.WindowsFileImporter_TraceTargetContainer, this.TargetContainer.GetLogicalPath());
         }
     }

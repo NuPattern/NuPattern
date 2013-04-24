@@ -16,7 +16,7 @@ namespace NuPattern.Runtime.Store
 {
     partial class Property
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<Property>();
+        private static readonly ITracer tracer = Tracer.Get<Property>();
 
         private IDynamicBinding<IValidationRule>[] validationBindings;
         private IDynamicBindingContext bindingContext;

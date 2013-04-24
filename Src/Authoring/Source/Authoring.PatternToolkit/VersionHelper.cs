@@ -37,24 +37,24 @@ namespace NuPattern.Authoring.PatternToolkit
         /// <summary>
         /// Synchronizes the targets file on disk with targets file in this version of the toolkit.
         /// </summary>
-        internal static void SyncTargets(ITraceSource tracer, TargetsInfo targetsInfo)
+        internal static void SyncTargets(ITracer tracer, TargetsInfo targetsInfo)
         {
             try
             {
-                tracer.TraceInformation(Resources.AuthoringPackage_TraceSyncTargetsInitial);
+                tracer.Info(Resources.AuthoringPackage_TraceSyncTargetsInitial);
 
                 //Write updated targets file
                 WriteUpdatedTargets(tracer, targetsInfo);
             }
             catch (Exception ex)
             {
-                tracer.TraceError(ex, Resources.AuthoringPackage_FailedSyncTargets);
+                tracer.Error(ex, Resources.AuthoringPackage_FailedSyncTargets);
             }
         }
 
-        private static void WriteUpdatedTargets(ITraceSource tracer, TargetsInfo targetsInfo)
+        private static void WriteUpdatedTargets(ITracer tracer, TargetsInfo targetsInfo)
         {
-            tracer.TraceInformation(Resources.AuthoringPackage_TraceSyncTargetsWritingNewTargets, targetsInfo.TargetsPath, targetsInfo.ToolkitVersion);
+            tracer.Info(Resources.AuthoringPackage_TraceSyncTargetsWritingNewTargets, targetsInfo.TargetsPath, targetsInfo.ToolkitVersion);
 
             //Delete file if exists
             if (File.Exists(targetsInfo.TargetsPath))

@@ -10,7 +10,7 @@ namespace NuPattern.Runtime.Store
     /// </summary>
     internal static class PropertyTypeLoader
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor(typeof(PropertyTypeLoader));
+        private static readonly ITracer tracer = Tracer.Get(typeof(PropertyTypeLoader));
 
         /// <summary>
         /// Tries to load the property type, and logs a warning for the failure if it can't.
@@ -24,7 +24,7 @@ namespace NuPattern.Runtime.Store
 
             if (type == null)
             {
-                tracer.TraceWarning(string.Format(
+                tracer.Warn(string.Format(
                     CultureInfo.CurrentCulture,
                     Resources.PropertyTypeLoader_FailedToLoadPropertyType,
                     info.Parent.Name,
