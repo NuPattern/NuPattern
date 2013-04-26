@@ -17,7 +17,7 @@ namespace NuPattern.Library.Conditions
     [CLSCompliant(false)]
     public class ElementPatternIsParentedCondition : InvertableCondition
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<ElementPatternIsParentedCondition>();
+        private static readonly ITracer tracer = Tracer.Get<ElementPatternIsParentedCondition>();
 
         /// <summary>
         /// Gets or sets the current pattern element.
@@ -33,12 +33,12 @@ namespace NuPattern.Library.Conditions
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.ElementPatternIsParentedCondition_TraceInitial, this.CurrentPattern.InstanceName);
 
             var result = this.CurrentPattern.IsProductParented();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.ElementPatternIsParentedCondition_TraceEvaluation, this.CurrentPattern.InstanceName, result);
 
             return result;

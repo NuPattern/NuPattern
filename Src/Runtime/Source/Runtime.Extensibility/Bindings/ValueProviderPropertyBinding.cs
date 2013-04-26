@@ -8,7 +8,7 @@ namespace NuPattern.Runtime.Bindings
     /// </summary>
     public class ValueProviderPropertyBinding : PropertyBinding
     {
-        private readonly ITraceSource tracer;
+        private readonly ITracer tracer;
 
         /// <summary>
         /// Creates a new instance of the <see cref="ValueProviderPropertyBinding"/> class.
@@ -17,7 +17,7 @@ namespace NuPattern.Runtime.Bindings
             : base(propertyName)
         {
             this.Binding = binding;
-            this.tracer = Tracer.GetSourceFor(this.GetType());
+            this.tracer = Tracer.Get(this.GetType());
         }
 
         /// <summary>
@@ -38,7 +38,7 @@ namespace NuPattern.Runtime.Bindings
             }
             else
             {
-                tracer.TraceError(Resources.ValueProviderPropertyBinding_TraceFailedEvaluation,
+                tracer.Error(Resources.ValueProviderPropertyBinding_TraceFailedEvaluation,
                                   target, this.PropertyName, ObjectDumper.ToString(this.Binding.EvaluationResults, 5));
             }
         }

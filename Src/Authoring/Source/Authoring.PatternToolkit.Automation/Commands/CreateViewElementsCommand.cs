@@ -20,7 +20,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
     [DescriptionResource("CreateViewElementsCommand_Description", typeof(Resources))]
     public class CreateViewElementsCommand : NuPattern.Runtime.Command
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<CreateViewElementsCommand>();
+        private static readonly ITracer tracer = Tracer.Get<CreateViewElementsCommand>();
 
         /// <summary>
         /// Gets or sets the service that resolves templates.
@@ -43,7 +43,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.CreateViewElementsCommand_TraceInitial, this.CurrentElement.InstanceName);
 
             var reference = SolutionArtifactLinkReference.GetResolvedReferences(this.CurrentElement.AsElement(), this.UriService).FirstOrDefault();
@@ -57,7 +57,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
                             patternModel.Pattern.Views.ForEach(v =>
                             {
                                 var viewName = ((INamedElementSchema)v).Name;
-                                tracer.TraceInformation(
+                                tracer.Info(
                                     Resources.CreateViewElementsCommand_TraceCreatingView, this.CurrentElement.InstanceName, viewName);
 
                                 this.CurrentElement.Views.CreateViewModel(viewName);
@@ -67,7 +67,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
             }
             else
             {
-                tracer.TraceWarning(
+                tracer.Warn(
                     Resources.CreateViewElementsCommand_TraceReferenceNotFound, this.CurrentElement.InstanceName);
             }
         }

@@ -15,7 +15,7 @@ namespace NuPattern.Library.Commands
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1702:CompoundWordsShouldBeCasedCorrectly", MessageId = "VsTemplate"), CommandValidationRule(typeof(UnfoldVsTemplateCommand))]
     public class UnfoldVsTemplateCommandValidation : ICommandValidationRule
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<UnfoldVsTemplateCommandValidation>();
+        private static readonly ITracer tracer = Tracer.Get<UnfoldVsTemplateCommandValidation>();
 
         /// <summary>
         /// Called when validations are needed for the command
@@ -43,7 +43,7 @@ namespace NuPattern.Library.Commands
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Resources.ValidationMethodFailed_Error,
                     Reflector<TemplateValidator>.GetMethod(n => n.ValidateCommandSettings(null)).Name);

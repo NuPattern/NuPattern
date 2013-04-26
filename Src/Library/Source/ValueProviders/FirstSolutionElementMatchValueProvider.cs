@@ -17,7 +17,7 @@ namespace NuPattern.Library.ValueProviders
     [CategoryResource(@"AutomationCategory_VisualStudio", typeof(Resources))]
     public class FirstSolutionElementMatchValueProvider : ValueProvider
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<FirstSolutionElementMatchValueProvider>();
+        private static readonly ITracer tracer = Tracer.Get<FirstSolutionElementMatchValueProvider>();
 
         /// <summary>
         /// Gets the solution
@@ -40,12 +40,12 @@ namespace NuPattern.Library.ValueProviders
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.FirstSolutionElementMatchValueProvider_TraceInitial, this.PathExpression);
 
             var result = Solution.Find(PathExpression).FirstOrDefault();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.FirstSolutionElementMatchValueProvider_TraceEvaluation, this.PathExpression, result.GetLogicalPath());
 
             return result;

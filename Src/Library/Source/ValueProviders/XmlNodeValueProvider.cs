@@ -23,7 +23,7 @@ namespace NuPattern.Library.ValueProviders
     [CLSCompliant(false)]
     public class XmlNodeValueProvider : ValueProvider
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<SolutionNameValueProvider>();
+        private static readonly ITracer tracer = Tracer.Get<SolutionNameValueProvider>();
 
         /// <summary>
         /// Creates a new instance of the <see cref="XmlNodeValueProvider"/> class.
@@ -91,7 +91,7 @@ namespace NuPattern.Library.ValueProviders
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.XmlNodeValueProvider_TraceInitial,
                     this.SourcePath, this.XmlPath);
 
@@ -101,14 +101,14 @@ namespace NuPattern.Library.ValueProviders
             var sourceItem = PathResolver.ResolveToSolutionItem<IItem>(this.CurrentElement, this.Solution, this.UriReferenceService, this.SourcePath);
             if (sourceItem == null)
             {
-                tracer.TraceError(
+                tracer.Error(
                     Resources.XmlNodeValueProvider_ErrorNoSource, this.CurrentElement.InstanceName, this.SourcePath);
             }
             else
             {
                 // Resolve XmlPath
                 var xPath = ExpressionEvaluator.Evaluate(this.CurrentElement, this.XmlPath);
-                tracer.TraceInformation(
+                tracer.Info(
                     Resources.XmlNodeValueProvider_TraceXPath,
                         this.XmlPath, xPath);
 
@@ -122,7 +122,7 @@ namespace NuPattern.Library.ValueProviders
                 }
                 catch (Exception)
                 {
-                    tracer.TraceError(
+                    tracer.Error(
                         Resources.XmlNodeValueProvider_ErrorLoadXmlDoc, sourceFilePath);
                     throw;
                 }
@@ -138,13 +138,13 @@ namespace NuPattern.Library.ValueProviders
                     }
                     else
                     {
-                        tracer.TraceError(
+                        tracer.Error(
                             Resources.XmlNodeValueProvider_ErrorSearchNodeNotFound, sourceLogicalPath, xPath);
                     }
                 }
                 catch (XPathException)
                 {
-                    tracer.TraceError(
+                    tracer.Error(
                         Resources.XmlNodeValueProvider_ErrorXPath, sourceFilePath, xPath);
                     throw;
                 }
@@ -156,14 +156,14 @@ namespace NuPattern.Library.ValueProviders
                     }
                     catch (Exception)
                     {
-                        tracer.TraceError(
+                        tracer.Error(
                             Resources.XmlNodeValueProvider_ErrorCloseXmlDoc, sourceFilePath);
                         // Ignore exception on close
                     }
                 }
             }
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.XmlNodeValueProvider_TraceEvaluation, this.CurrentElement.InstanceName, this.SourcePath, this.XmlPath, result);
 
             return result;

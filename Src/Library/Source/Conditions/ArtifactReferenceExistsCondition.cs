@@ -19,7 +19,7 @@ namespace NuPattern.Library.Conditions
     [CLSCompliant(false)]
     public class ArtifactReferenceExistsCondition : Condition
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<ArtifactReferenceExistsCondition>();
+        private static readonly ITracer tracer = Tracer.Get<ArtifactReferenceExistsCondition>();
 
         /// <summary>
         /// Gets or sets the current element.
@@ -35,12 +35,12 @@ namespace NuPattern.Library.Conditions
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.ArtifactReferenceExistsCondition_TraceInitial, this.CurrentElement.InstanceName);
 
             var result = SolutionArtifactLinkReference.GetReferences(this.CurrentElement).Any();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.ArtifactReferenceExistsCondition_TraceEvaluation, this.CurrentElement.InstanceName, result);
 
             return result;

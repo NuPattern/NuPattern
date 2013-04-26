@@ -17,7 +17,7 @@ namespace NuPattern.Library.Conditions
     [CLSCompliant(false)]
     public class StringValueEqualsCondition : Condition
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<StringValueEqualsCondition>();
+        private static readonly ITracer tracer = Tracer.Get<StringValueEqualsCondition>();
 
         /// <summary>
         /// Creates a new instance of the <see cref="StringValueEqualsCondition"/> class.
@@ -62,12 +62,12 @@ namespace NuPattern.Library.Conditions
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.StringValueEqualsCondition_TraceInitial, this.LeftValue, this.RightValue, this.ComparisonKind);
 
             var result = string.Equals(this.LeftValue, this.RightValue, this.ComparisonKind);
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.StringValueEqualsCondition_TraceEvaluation, this.LeftValue, this.RightValue, this.ComparisonKind, result);
 
             return result;

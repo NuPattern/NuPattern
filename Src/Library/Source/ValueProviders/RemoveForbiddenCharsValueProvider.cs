@@ -17,7 +17,7 @@ namespace NuPattern.Library.ValueProviders
     [CLSCompliant(false)]
     public class RemoveForbiddenCharsExpressionValueProvider : ValueProvider
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<RemoveForbiddenCharsExpressionValueProvider>();
+        private static readonly ITracer tracer = Tracer.Get<RemoveForbiddenCharsExpressionValueProvider>();
 
         /// <summary>
         /// Gets the current element in the pattern model upon which this ValueProvider is configured.
@@ -62,13 +62,13 @@ namespace NuPattern.Library.ValueProviders
             var productElement = this.CurrentElement as IProductElement;
             var elementName = (productElement != null) ? productElement.InstanceName : this.CurrentElement.Info.DisplayName;
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.RemoveForbiddenCharsExpressionValueProvider_TraceInitial, this.Expression, this.ForbiddenChars, elementName);
 
             var result = ExpressionEvaluator.Evaluate(this.CurrentElement, this.Expression);
             if (result == null)
             {
-                tracer.TraceWarning(
+                tracer.Warn(
                     Resources.RemoveForbiddenCharsExpressionValueProvider_TraceResolvedNullExpression, this.Expression, elementName);
             }
             else
@@ -84,7 +84,7 @@ namespace NuPattern.Library.ValueProviders
                 }
             }
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.RemoveForbiddenCharsExpressionValueProvider_TraceEvaluation, this.Expression, this.ForbiddenChars, elementName, result);
 
             return result;

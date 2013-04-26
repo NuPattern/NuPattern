@@ -17,7 +17,7 @@ namespace NuPattern.Runtime.Store
     [RuleOn(typeof(ProductElement), FireTime = TimeToFire.TopLevelCommit)]
     internal class ProductElementAddRule : AddRule
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<ProductElementAddRule>();
+        private static readonly ITracer tracer = Tracer.Get<ProductElementAddRule>();
 
         /// <summary>
         /// Adds the runtime automation extensions.
@@ -30,10 +30,10 @@ namespace NuPattern.Runtime.Store
 
             if (owner.Info != null)
             {
-                tracer.TraceData(
-                    TraceEventType.Verbose,
-                    Resources.ProductElementAddRule_InitializingEventId,
-                    owner);
+                //tracer.TraceData(
+                //    TraceEventType.Verbose,
+                //    Resources.ProductElementAddRule_InitializingEventId,
+                //    owner);
 
                 // Try to retrieve the interface layer proxy.
                 var layer = owner.GetInterfaceLayer();
@@ -83,10 +83,10 @@ namespace NuPattern.Runtime.Store
                     }
                 }
 
-                tracer.TraceData(
-                    TraceEventType.Verbose,
-                    Resources.ProductElementAddRule_InitializedEventId,
-                    owner);
+                //tracer.TraceData(
+                //    TraceEventType.Verbose,
+                //    Resources.ProductElementAddRule_InitializedEventId,
+                //    owner);
             }
 
             base.ElementAdded(e);

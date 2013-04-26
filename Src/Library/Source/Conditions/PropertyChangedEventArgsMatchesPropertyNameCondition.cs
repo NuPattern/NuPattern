@@ -18,7 +18,7 @@ namespace NuPattern.Library.Conditions
     [CLSCompliant(false)]
     public class PropertyChangedEventArgsMatchesPropertyNameCondition : Condition, IEventCondition
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<PropertyChangedEventArgsMatchesPropertyNameCondition>();
+        private static readonly ITracer tracer = Tracer.Get<PropertyChangedEventArgsMatchesPropertyNameCondition>();
 
         /// <summary>
         /// Gets or sets the name of the property to filter for changes.
@@ -54,12 +54,12 @@ namespace NuPattern.Library.Conditions
             if (propertyChangedArgs == null)
                 return false;
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.PropertyChangedEventArgsMatchesPropertyNameCondition_TraceInitial, this.PropertyName);
 
             var result = propertyChangedArgs.PropertyName == this.PropertyName;
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.PropertyChangedEventArgsMatchesPropertyNameCondition_TraceEvaluate, this.PropertyName, result);
 
             return result;

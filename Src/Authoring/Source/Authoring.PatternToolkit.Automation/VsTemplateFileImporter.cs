@@ -17,7 +17,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation
     /// </summary>
     internal class VsTemplateFileImporter : WindowsFileImporter
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<VsTemplateFileImporter>();
+        private static readonly ITracer tracer = Tracer.Get<VsTemplateFileImporter>();
         internal static string TemplateFileExtension = ".zip";
         private static string VsTemplateExtension = ".vstemplate";
         private static string UserExportedTemplatesPath = "My Exported Templates";
@@ -61,7 +61,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation
             // Clean up temp folder
             if (Directory.Exists(tempFolderPath))
             {
-                tracer.TraceInformation(
+                tracer.Info(
                     Resources.VsTemplateFileImporter_TraceDeleteTempFolder, tempFolderPath);
 
                 try
@@ -98,7 +98,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation
                 var uniqueName = base.EnsureItemNameUniqueInTargetContainer(filename);
                 if (!uniqueName.Equals(filename, StringComparison.OrdinalIgnoreCase))
                 {
-                    tracer.TraceInformation(
+                    tracer.Info(
                         Resources.VsTemplateFileImporter_TraceRenamingTempUnzipFolder, filename, uniqueName);
 
                     // Move things around
@@ -117,7 +117,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation
                     var oldFilename = Path.GetFileNameWithoutExtension(templateFile.Name);
                     if (!oldFilename.Equals(filename, StringComparison.OrdinalIgnoreCase))
                     {
-                        tracer.TraceInformation(
+                        tracer.Info(
                             Resources.VsTemplateFileImporter_TraceRenamingTempVsTemplate, TemplateFileExtension, oldFilename, filename);
 
                         templateFile.MoveTo(Path.Combine(unzipFolderPath, Path.ChangeExtension(filename, VsTemplateExtension)));
@@ -131,7 +131,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation
                     // Set Build action to all items to 'None'
                     foreach (var item in folder.Traverse().OfType<IItem>())
                     {
-                        tracer.TraceInformation(
+                        tracer.Info(
                             Resources.VsTemplateFileImporter_TraceResetItemProps, item.Name);
 
                         item.Data.CopyToOutputDirectory = (int)CopyToOutput.DoNotCopy;
@@ -141,7 +141,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation
                     }
                 }
 
-                tracer.TraceInformation(
+                tracer.Info(
                     Resources.VsTemplateFileImporter_TraceAddFilesComplete, filename, this.currentElement.InstanceName, folder.GetLogicalPath());
 
                 return true;
@@ -164,7 +164,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation
                 var templateItemFolder = this.TargetContainer.Find<IFolder>(folderName).FirstOrDefault();
                 if (templateItemFolder == null)
                 {
-                    tracer.TraceError(
+                    tracer.Error(
                         Resources.VsTemplateFileImporter_TraceProjectFolderNotFound, folderName, TargetContainer.GetLogicalPath());
                     return null;
                 }
@@ -174,13 +174,13 @@ namespace NuPattern.Authoring.PatternToolkit.Automation
                     var templateFile = templateItemFolder.Find<IItem>("*" + VsTemplateExtension).FirstOrDefault();
                     if (templateFile == null)
                     {
-                        tracer.TraceError(
+                        tracer.Error(
                             Resources.VsTemplateFileImporter_TraceVsTemplateFileNotFound, VsTemplateExtension, templateItemFolder.GetLogicalPath());
                         return null;
                     }
                     else
                     {
-                        tracer.TraceInformation(
+                        tracer.Info(
                             Resources.VsTemplateFileImporter_TraceVsTemplateFound, templateFile.GetLogicalPath());
 
                         return templateFile as IItemContainer;
@@ -223,7 +223,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation
             var compressor = new ZipFileDecompressor(sourceZipFile);
             try
             {
-                tracer.TraceInformation(
+                tracer.Info(
                     Resources.VsTemplateFileImporter_TraceUnzipTemplateFile, sourceZipFile, unzipFolderPath);
 
                 compressor.UncompressToFolder(unzipFolderPath, true);
@@ -231,7 +231,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation
             }
             catch (ZipException ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     Resources.VsTemplateFileImporter_TraceFailedToUnzipToLocation,
                     sourceZipFile, this.currentElement.InstanceName, unzipFolderPath, ex.Message);
                 return false;

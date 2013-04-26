@@ -16,7 +16,7 @@ namespace NuPattern.Runtime.Bindings
         /// Evaluates the specified property binding or throws if it cannot be evaluated.
         /// </summary>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", MessageId = "2"), System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", MessageId = "1"), System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", MessageId = "0")]
-        public static string Evaluate(this IPropertyBindingSettings settings, IBindingFactory bindingFactory, ITraceSource tracer, Action<IDynamicBindingContext> contextInitializer = null)
+        public static string Evaluate(this IPropertyBindingSettings settings, IBindingFactory bindingFactory, ITracer tracer, Action<IDynamicBindingContext> contextInitializer = null)
         {
             string result;
 
@@ -39,13 +39,10 @@ namespace NuPattern.Runtime.Bindings
                         var failMessage = string.Format(CultureInfo.CurrentCulture,
                             Resources.ValueProviderBinding_FailedToEvaluate,
                             settings.Name,
-                            settings.Name);
+                            settings.Name,
+                            ObjectDumper.ToString(binding.EvaluationResults, 5));
 
-                        tracer.TraceData(TraceEventType.Error, 0, new DictionaryTraceRecord(
-                            TraceEventType.Error,
-                            typeof(PropertyBindingSettingsExtensions).FullName,
-                            failMessage,
-                            binding.EvaluationResults));
+                        tracer.Error(failMessage);
 
                         throw new InvalidOperationException(failMessage);
                     }

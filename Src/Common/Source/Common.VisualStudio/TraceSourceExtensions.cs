@@ -10,7 +10,7 @@ using NuPattern.VisualStudio.Properties;
 namespace NuPattern.VisualStudio
 {
     /// <summary>
-    /// Provides tracing extensions on top of <see cref="ITraceSource"/>.
+    /// Provides tracing extensions on top of <see cref="ITracer"/>.
     /// </summary>
     public static class TraceSourceExtensions
     {
@@ -19,7 +19,7 @@ namespace NuPattern.VisualStudio
         /// and logging them to the <paramref name="traceSource"/> with the given <paramref name="errorMessage"/> message.
         /// </summary>
         [CLSCompliant(false)]
-        public static Exception ShieldUI(this ITraceSource traceSource, Action action, string errorMessage)
+        public static Exception ShieldUI(this ITracer traceSource, Action action, string errorMessage)
         {
             Guard.NotNullOrEmpty(() => errorMessage, errorMessage);
 
@@ -32,7 +32,7 @@ namespace NuPattern.VisualStudio
         /// </summary>
         [DebuggerStepThrough]
         [CLSCompliant(false)]
-        public static Exception ShieldUI(this ITraceSource traceSource, Action action, string format, params string[] args)
+        public static Exception ShieldUI(this ITracer traceSource, Action action, string format, params string[] args)
         {
             Guard.NotNull(() => traceSource, traceSource);
             Guard.NotNull(() => action, action);
@@ -47,7 +47,7 @@ namespace NuPattern.VisualStudio
         /// and logging them to the <paramref name="traceSource"/> with the given <paramref name="errorMessage"/> message.
         /// </summary>
         [CLSCompliant(false)]
-        public static Exception Shield(this ITraceSource traceSource, Action action, string errorMessage)
+        public static Exception Shield(this ITracer traceSource, Action action, string errorMessage)
         {
             Guard.NotNullOrEmpty(() => errorMessage, errorMessage);
 
@@ -60,7 +60,7 @@ namespace NuPattern.VisualStudio
         /// </summary>
         [DebuggerStepThrough]
         [CLSCompliant(false)]
-        public static Exception Shield(this ITraceSource traceSource, Action action, string format, params string[] args)
+        public static Exception Shield(this ITracer traceSource, Action action, string format, params string[] args)
         {
             Guard.NotNull(() => traceSource, traceSource);
             Guard.NotNull(() => action, action);
@@ -71,7 +71,7 @@ namespace NuPattern.VisualStudio
         }
 
         [DebuggerStepThrough]
-        private static Exception DoShield(this ITraceSource traceSource, Action action, string format, bool showUI, params string[] args)
+        private static Exception DoShield(this ITracer traceSource, Action action, string format, bool showUI, params string[] args)
         {
             try
             {
@@ -96,7 +96,7 @@ namespace NuPattern.VisualStudio
                         message = format;
                     }
 
-                    traceSource.TraceError(ex, message);
+                    traceSource.Error(ex, message);
 
                     if (showUI)
                     {

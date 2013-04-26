@@ -28,7 +28,7 @@ namespace NuPattern.Library.Commands
     [CLSCompliant(false)]
     public class AggregatorCommand : Command
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<AggregatorCommand>();
+        private static readonly ITracer tracer = Tracer.Get<AggregatorCommand>();
 
         /// <summary>
         /// Gets or sets the command reference list.
@@ -85,12 +85,12 @@ namespace NuPattern.Library.Commands
 
                             if (commandAutomation == null)
                             {
-                                tracer.TraceWarning(
+                                tracer.Warn(
                                     Resources.AggregatorCommand_TraceNoCommandFound, this.CurrentElement.InstanceName, reference.CommandId);
                                 continue;
                             }
 
-                            tracer.TraceInformation(
+                            tracer.Info(
                                 Resources.AggregatorCommand_TraceExecutingCommand, this.CurrentElement.InstanceName, commandAutomation.Name);
 
                             try

@@ -19,7 +19,7 @@ namespace $rootnamespace$
     [CLSCompliant(false)]
     public class $safeitemname$ : TypeConverter
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<$safeitemname$>();
+        private static readonly ITracer tracer = Tracer.Get<$safeitemname$>();
     
         /// <summary>
         /// Determines if this converter can convert from the source type.

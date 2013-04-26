@@ -21,7 +21,7 @@ namespace NuPattern.Library.Commands
     [CLSCompliant(false)]
     public class SaveArtifactCommand : Command
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<SaveArtifactCommand>();
+        private static readonly ITracer tracer = Tracer.Get<SaveArtifactCommand>();
 
         /// <summary>
         /// Gets or sets the current element.
@@ -45,7 +45,7 @@ namespace NuPattern.Library.Commands
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.SaveArtifactCommand_TraceInitial, this, CurrentElement.InstanceName);
 
             var items = SolutionArtifactLinkReference.GetResolvedReferences(this.CurrentElement, this.UriReferenceService)
@@ -54,14 +54,14 @@ namespace NuPattern.Library.Commands
             {
                 try
                 {
-                    tracer.TraceInformation(
+                    tracer.Info(
                         Resources.SaveArtifactCommand_TraceSave, this.CurrentElement.InstanceName, item.GetLogicalPath());
 
                     item.Save();
                 }
                 catch (Exception e)
                 {
-                    tracer.TraceWarning(
+                    tracer.Warn(
                         Resources.SaveArtifactCommand_TraceSaveFailed, this.CurrentElement.InstanceName, item.GetLogicalPath(), e);
                 }
             }

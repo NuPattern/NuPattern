@@ -26,7 +26,7 @@ namespace NuPattern.Runtime.UI.ViewModels
         private static readonly string deleteIconPath = @"pack://application:,,,/" + assemblyName + @";component/Resources/CommandRemove.png";
         private static readonly string propertiesIconPath = @"pack://application:,,,/" + assemblyName + @";component/Resources/CommandProperties.png";
 
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<ProductElementViewModel>();
+        private static readonly ITracer tracer = Tracer.Get<ProductElementViewModel>();
 
         private bool isEditing;
         private bool isExpanded;

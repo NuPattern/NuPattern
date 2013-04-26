@@ -10,7 +10,7 @@ namespace NuPattern.Runtime.Store
     partial class Product
     {
         private static string ToolkitInfoElementId = @"c00ddfa6-b949-4c7c-b8b9-f46b8e3ccf1e";
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<Product>();
+        private static readonly ITracer tracer = Tracer.Get<Product>();
         private IView currentView;
 
         /// <summary>
@@ -30,7 +30,7 @@ namespace NuPattern.Runtime.Store
                     return new ProductToolkitInfo(proxy);
                 }
 
-                tracer.TraceWarning(Resources.Product_ToolkitInfoIsNull);
+                tracer.Warn(Resources.Product_ToolkitInfoIsNull);
                 return null;
             }
         }

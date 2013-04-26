@@ -18,7 +18,7 @@ namespace NuPattern.Library.Conditions
     [CLSCompliant(false)]
     public class ElementReferenceExistsCondition : Condition
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<ElementReferenceExistsCondition>();
+        private static readonly ITracer tracer = Tracer.Get<ElementReferenceExistsCondition>();
 
         /// <summary>
         /// Gets or sets the kind of reference to verify.
@@ -42,12 +42,12 @@ namespace NuPattern.Library.Conditions
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.ElementReferenceExistsCondition_TraceInitial, this.CurrentElement.InstanceName, this.Kind);
 
             var result = (this.CurrentElement.References.FirstOrDefault(reference => reference.Kind.Equals(this.Kind, StringComparison.OrdinalIgnoreCase)) != null);
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.ElementReferenceExistsCondition_TraceEvaluation, this.CurrentElement.InstanceName, this.Kind, result);
 
             return result;

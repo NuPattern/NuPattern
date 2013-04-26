@@ -17,7 +17,7 @@ namespace NuPattern.Library.ValueProviders
     [CLSCompliant(false)]
     public class ExpressionValueProvider : ValueProvider
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<ExpressionValueProvider>();
+        private static readonly ITracer tracer = Tracer.Get<ExpressionValueProvider>();
 
         /// <summary>
         /// Gets the current element in the pattern model upon which this ValueProvider is configured.
@@ -51,18 +51,18 @@ namespace NuPattern.Library.ValueProviders
             var productElement = this.CurrentElement as IProductElement;
             var elementName = (productElement != null) ? productElement.InstanceName : this.CurrentElement.Info.DisplayName;
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.ExpressionValueProvider_TraceInitial, this.Expression, elementName);
 
             var result = ExpressionEvaluator.Evaluate(this.CurrentElement, this.Expression);
 
             if (result == null)
             {
-                tracer.TraceWarning(
+                tracer.Warn(
                     Resources.ExpressionValueProvider_TraceResolvedNullExpression, this.Expression, elementName);
             }
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.ExpressionValueProvider_TraceEvaluation, this.Expression, elementName, result);
 
             return result;

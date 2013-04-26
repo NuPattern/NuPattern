@@ -23,7 +23,7 @@ namespace NuPattern.Library.Automation
     /// </summary>
     internal class EventAutomation : AutomationExtension<IEventSettings>
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<EventAutomation>();
+        private static readonly ITracer tracer = Tracer.Get<EventAutomation>();
 
         private IDisposable eventSubscription;
 
@@ -73,7 +73,7 @@ namespace NuPattern.Library.Automation
 
                 if (sourceEvent == null)
                 {
-                    tracer.TraceWarning(Resources.EventAutomation_NoEventFound, this.Settings.EventId, this.Name);
+                    tracer.Warn(Resources.EventAutomation_NoEventFound, this.Settings.EventId, this.Name);
                 }
                 else
                 {
@@ -93,7 +93,7 @@ namespace NuPattern.Library.Automation
                 }
                 catch (Exception e)
                 {
-                    tracer.TraceError(e, Resources.EventAutomation_FailedToParseConditions, this.Name);
+                    tracer.Error(e, Resources.EventAutomation_FailedToParseConditions, this.Name);
                     if (Microsoft.VisualStudio.ErrorHandler.IsCriticalException(e))
                     {
                         throw;
@@ -160,7 +160,7 @@ namespace NuPattern.Library.Automation
                     }
                     else
                     {
-                        tracer.TraceVerbose(Resources.EventAutomation_ConditionsPreventExecution, this.Name);
+                        tracer.Verbose(Resources.EventAutomation_ConditionsPreventExecution, this.Name);
                     }
                 },
                 Resources.EventAutomation_FailedToExecute, this.Name);
@@ -178,7 +178,7 @@ namespace NuPattern.Library.Automation
                 var wizardAutomation = this.ResolveAutomationReference<IWizardAutomationExtension>(this.Settings.WizardId);
                 if (wizardAutomation == null)
                 {
-                    tracer.TraceError(Resources.MenuAutomation_NoWizardFound, this.Settings.WizardId, this.Name);
+                    tracer.Error(Resources.MenuAutomation_NoWizardFound, this.Settings.WizardId, this.Name);
                     return false;
                 }
 
@@ -200,7 +200,7 @@ namespace NuPattern.Library.Automation
                 var commandAutomation = this.ResolveAutomationReference<IAutomationExtension>(this.Settings.CommandId);
                 if (commandAutomation == null)
                 {
-                    tracer.TraceWarning(Resources.EventAutomation_NoCommandFound, this.Settings.CommandId, this.Name);
+                    tracer.Warn(Resources.EventAutomation_NoCommandFound, this.Settings.CommandId, this.Name);
                     return false;
                 }
 
@@ -218,15 +218,8 @@ namespace NuPattern.Library.Automation
 
                 if (!binding.Evaluate(context))
                 {
-                    tracer.TraceData(
-                        TraceEventType.Warning,
-                        0,
-                        new DictionaryTraceRecord(
-                            TraceEventType.Verbose,
-                            typeof(EventAutomation).FullName,
-                            string.Format(CultureInfo.CurrentCulture,
-                                Resources.EventAutomation_ConditionBindingFailed, this.Name, binding.UserMessage),
-                            binding.EvaluationResults));
+                    tracer.Warn(Resources.EventAutomation_ConditionBindingFailed,
+                        this.Name, binding.UserMessage, ObjectDumper.ToString(binding.EvaluationResults, 5));
 
                     return InvalidBindingCondition.Instance;
                 }

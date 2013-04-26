@@ -20,7 +20,7 @@ namespace NuPattern.Library.Commands
     [CLSCompliant(false)]
     public abstract class CreateElementFromFileCommand : CreateElementFromItemCommand
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<CreateElementFromFileCommand>();
+        private static readonly ITracer tracer = Tracer.Get<CreateElementFromFileCommand>();
         private const bool DefaultSyncName = true;
 
         /// <summary>
@@ -96,7 +96,7 @@ namespace NuPattern.Library.Commands
             var solutionItem = GetItemInSolution(itemId);
             if (solutionItem != null)
             {
-                tracer.TraceInformation(
+                tracer.Info(
                     Resources.CreateElementFromFileCommand_TraceAddingReference, this.CurrentElement.InstanceName, childElement.InstanceName, solutionItem.GetLogicalPath());
 
                 // Create artifact link

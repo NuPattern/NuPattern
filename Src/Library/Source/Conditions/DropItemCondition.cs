@@ -15,7 +15,7 @@ namespace NuPattern.Library.Conditions
     [CLSCompliant(false)]
     public abstract class DropItemCondition : Condition
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<DropItemCondition>();
+        private static readonly ITracer tracer = Tracer.Get<DropItemCondition>();
 
         /// <summary>
         /// Gets or sets the drag arguments
@@ -35,7 +35,7 @@ namespace NuPattern.Library.Conditions
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.DropItemCondition_TraceInitial);
 
             //Get draggable items
@@ -46,7 +46,7 @@ namespace NuPattern.Library.Conditions
             }
             else
             {
-                tracer.TraceInformation(
+                tracer.Info(
                     Resources.DropItemCondition_TraceEvaluationNoItems);
 
                 return false;

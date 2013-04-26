@@ -19,7 +19,7 @@ namespace NuPattern.Library.Commands
     [CommandValidationRule(typeof(GenerateModelingCodeCommand))]
     public class GenerateModelingCodeCommandValidation : ICommandValidationRule
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<UnfoldVsTemplateCommandValidation>();
+        private static readonly ITracer tracer = Tracer.Get<UnfoldVsTemplateCommandValidation>();
 
         [Import(typeof(SVsServiceProvider))]
         internal IServiceProvider serviceProvider
@@ -151,7 +151,7 @@ namespace NuPattern.Library.Commands
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Resources.ValidationMethodFailed_Error,
                     Reflector<GenerateModelingCodeCommandValidation>.GetMethod(n => n.Validate(null, null, null)).Name);

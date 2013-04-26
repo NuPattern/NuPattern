@@ -29,7 +29,7 @@ namespace NuPattern.Library.Design
     /// </devdoc>
     internal class VsTemplateUriEditor : UITypeEditor
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<VsTemplateUriEditor>();
+        private static readonly ITracer tracer = Tracer.Get<VsTemplateUriEditor>();
         private const string FileExtension = ".vstemplate";
 
         /// <summary>

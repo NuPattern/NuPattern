@@ -20,7 +20,7 @@ namespace NuPattern.Runtime.UriProviders
     /// </remarks>
     internal class TextTemplate : ITemplate
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<TextTemplate>();
+        private static readonly ITracer tracer = Tracer.Get<TextTemplate>();
         private static readonly Regex AssemblyRegex = new Regex(@"(?<=<#@\s?assembly name="".*)%TemplatePath%", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         private ITextTemplating templating;
@@ -116,11 +116,11 @@ namespace NuPattern.Runtime.UriProviders
 
         private class TemplateCallback : ITextTemplatingCallback
         {
-            private ITraceSource tracer;
+            private ITracer tracer;
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
             private string templateFile;
 
-            public TemplateCallback(ITraceSource tracer, string templateFile)
+            public TemplateCallback(ITracer tracer, string templateFile)
             {
                 this.tracer = tracer;
                 this.templateFile = templateFile;
@@ -136,11 +136,11 @@ namespace NuPattern.Runtime.UriProviders
                 // template service is already doing this for us.
                 if (warning)
                 {
-                    this.tracer.TraceWarning(Resources.TextTemplate_WarningCallback, message, line, column);
+                    this.tracer.Warn(Resources.TextTemplate_WarningCallback, message, line, column);
                 }
                 else
                 {
-                    this.tracer.TraceError(Resources.TextTemplate_ErrorCallback, message, line, column);
+                    this.tracer.Error(Resources.TextTemplate_ErrorCallback, message, line, column);
                 }
             }
 

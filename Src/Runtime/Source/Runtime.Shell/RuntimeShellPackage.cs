@@ -76,7 +76,7 @@ namespace NuPattern.Runtime.Shell
     [ProvideDirectiveProcessor(typeof(ModelElementDirectiveProcessor), ModelElementDirectiveProcessor.ProcessorName, Constants.LibraryDirectiveProcessorDescription)]
     public sealed class RuntimeShellPackage : Package
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<RuntimeShellPackage>();
+        private static readonly ITracer tracer = Tracer.Get<RuntimeShellPackage>();
         private const int IdleTimeout = 5000;
         private const int GuidanceEvalTimeGovernor = 1; // In Seconds
         private static readonly Guid OutputPaneGuid = new Guid(Constants.VsOutputWindowPaneId);
@@ -414,7 +414,7 @@ namespace NuPattern.Runtime.Shell
                         Constants.FertVsixIdentifiers.Contains(ext.Header.Identifier, StringComparer.OrdinalIgnoreCase));
                 if (fertExtension != null)
                 {
-                    tracer.TraceError(
+                    tracer.Error(
                         Resources.RuntimeShellPackage_CheckFertInstalled_Enabled,
                         fertExtension.Header.Name,
                         Constants.ProductName);
@@ -499,7 +499,7 @@ namespace NuPattern.Runtime.Shell
                     var name = new AssemblyName(args.Name);
                     if (name.Version == null || name.CultureInfo == null)
                     {
-                        tracer.TraceInformation(
+                        tracer.Info(
                             Resources.RuntimeShellPackage_OnAssemblyResolved_ResolvingAssembly, args.Name);
 
                         var componentModel = ServiceProvider.GlobalProvider.GetService<SComponentModel, IComponentModel>();
@@ -514,7 +514,7 @@ namespace NuPattern.Runtime.Shell
                                                    select appDomainAssembly;
                             if (loadedAssemblies.Any())
                             {
-                                tracer.TraceInformation(
+                                tracer.Info(
                                     Resources.RuntimeShellPackage_OnAssemblyResolved_ResolvingAssemblyForLoadedAssembly, args.Name);
 
                                 // Get install paths of all (enabled) toolkits
@@ -539,7 +539,7 @@ namespace NuPattern.Runtime.Shell
                                                             select toolkitAssembly;
                                     if (toolkitAssemblies.Any())
                                     {
-                                        tracer.TraceInformation(
+                                        tracer.Info(
                                             Resources.RuntimeShellPackage_OnAssemblyResolved_ResolvingAssemblyForToolkitAssembly, args.Name);
 
                                         if (name.KeyPair != null)
@@ -572,12 +572,12 @@ namespace NuPattern.Runtime.Shell
 
                         if (assembly == null)
                         {
-                            tracer.TraceInformation(
+                            tracer.Info(
                             Resources.RuntimeShellPackage_OnAssemblyResolved_ResolvingAssemblyFailed, args.Name);
                         }
                         else
                         {
-                            tracer.TraceInformation(
+                            tracer.Info(
                             Resources.RuntimeShellPackage_OnAssemblyResolved_ResolvingAssemblySucceeded, args.Name, assembly.GetName().FullName);
                         }
                     }
@@ -585,7 +585,7 @@ namespace NuPattern.Runtime.Shell
             }
             catch (Exception ex)
             {
-                tracer.TraceInformation(
+                tracer.Info(
                     Resources.RuntimeShellPackage_OnAssemblyResolved_UnexpectedError, ex.Message);
 
                 throw;

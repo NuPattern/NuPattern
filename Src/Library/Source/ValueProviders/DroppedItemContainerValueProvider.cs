@@ -20,7 +20,7 @@ namespace NuPattern.Library.ValueProviders
     [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     public class DroppedItemContainerValueProvider : ValueProvider
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<DroppedItemContainerValueProvider>();
+        private static readonly ITracer tracer = Tracer.Get<DroppedItemContainerValueProvider>();
 
         /// <summary>
         /// Gets or sets the drag arguments.
@@ -38,14 +38,14 @@ namespace NuPattern.Library.ValueProviders
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.DroppedItemContainerValueProvider_TraceInitial);
 
             List<string> paths = new List<string>();
             paths.AddRange(DragArgs.GetVSProjectItemsPaths());
             paths.AddRange(DragArgs.GetVSProjectsPaths());
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.DroppedItemContainerValueProvider_TraceEvaluation, string.Join(@";", paths.ToArray<string>()));
 
             return paths;

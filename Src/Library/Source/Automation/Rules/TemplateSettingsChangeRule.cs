@@ -11,7 +11,7 @@ namespace NuPattern.Library.Automation
     [RuleOn(typeof(TemplateSettings), FireTime = TimeToFire.TopLevelCommit)]
     internal class TemplateSettingsChangeRule : ChangeRule
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<TemplateSettingsChangeRule>();
+        private static readonly ITracer tracer = Tracer.Get<TemplateSettingsChangeRule>();
 
         /// <summary>
         /// Handles the property change event for the settings.

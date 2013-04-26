@@ -16,7 +16,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.ValueProviders
     [CLSCompliant(false)]
     public class GuidanceDocumentPathProvider : NuPattern.Runtime.ValueProvider
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<GuidanceDocumentPathProvider>();
+        private static readonly ITracer tracer = Tracer.Get<GuidanceDocumentPathProvider>();
 
         /// <summary>
         /// Gets the current element.
@@ -46,12 +46,12 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.ValueProviders
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.GuidanceDocumentPathProvider_TraceInitial, this.CurrentElement.InstanceName);
 
             var result = GuidanceDocumentHelper.GetDocumentPath(tracer, this.CurrentElement, this.UriReferenceService);
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.GuidanceDocumentPathProvider_TraceEvaluation, this.CurrentElement.InstanceName, result);
 
             return result;

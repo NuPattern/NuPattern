@@ -142,7 +142,8 @@
     <value>Add New Wizard</value>
   </data>
   <data name="CommandAutomation_BindingEvaluatedFalse" xml:space="preserve">
-    <value>Command {0} is missing required inputs and will not be executed.</value>
+    <value>Command {0} is missing required inputs and will not be executed:
+{1}.</value>
   </data>
   <data name="CommandAutomation_BindingEvaluatedTrue" xml:space="preserve">
     <value>Command binding successfully evaluated.</value>
@@ -231,7 +232,8 @@ Evaluation results:
 {1}</value>
   </data>
   <data name="MenuAutomation_CustomStatusEvaluationFailed" xml:space="preserve">
-    <value>Evaluation of custom menu command status for menu automation '{0}' failed.</value>
+    <value>Evaluation of custom menu command status for menu automation '{0}' failed: {1}
+{2}.</value>
   </data>
   <data name="MenuAutomation_FailedToParseConditions" xml:space="preserve">
     <value>Failed to reload conditions configured for menu automation '{0}':
@@ -1774,9 +1776,8 @@ Please open and make a note of the updates that were automatically made to the *
     <value>Resolved expression'{0}' on element '{1}', to null. The expression maybe invalid or may resolve to the wrong element in the element's ancestry. Note: If accessing the pattern element in the model from the current element, remember to include the current view as the previous ancestor to the pattern from the current element also.</value>
   </data>
   <data name="EventAutomation_ConditionBindingFailed" xml:space="preserve">
-    <value>Failed to bind condition: '{0}'.
-Evaluation results:
-{1}</value>
+    <value>Failed to bind condition '{0}': {1}
+{2}</value>
   </data>
   <data name="ActivateElementSolutionItemCommand_Description" xml:space="preserve">
     <value>'Opens' or 'Selects' a single associated artifact for the referenced target element.</value>
@@ -1864,12 +1865,12 @@ Evaluation results:
     <value>The destination folder already exists at '{0}', and no overwrite, copy skipped.</value>
   </data>
   <data name="MenuAutomation_ConditionBindingFailed" xml:space="preserve">
-    <value>Condition binding failed: '{0}'.
-Evaluation results:
-{1}</value>
+    <value>Condition binding '{0}' failed: {1}.
+{2}.</value>
   </data>
   <data name="MenuAutomation_ConditionEvaluatedFalse" xml:space="preserve">
-    <value>Condition '{0}' evaluated to false with the following configuration:</value>
+    <value>Condition '{0}' evaluated to false: {1}
+{2}.</value>
   </data>
   <data name="ActivateOrInstantiateSharedGuidanceWorkflowCommand_Description" xml:space="preserve">
     <value>Activates a shared instance of a guidance workflow, or instantiates it, if it does not yet exist.</value>

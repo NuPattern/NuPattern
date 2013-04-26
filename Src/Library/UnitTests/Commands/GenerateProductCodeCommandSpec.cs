@@ -103,15 +103,15 @@ namespace NuPattern.Library.UnitTests.Commands
 
                 Mock.Get(this.Command).Protected().Setup<string>("SerializeReference").Returns("foo://bar");
 
-                Tracer.AddListener(Tracer.GetSourceNameFor<GenerateProductCodeCommand>(), this.Listener.Object);
-                Tracer.GetOrCreateUnderlyingSource(Tracer.GetSourceNameFor<GenerateProductCodeCommand>()).Switch.Level = SourceLevels.All;
+                Tracer.Manager.AddListener(typeof(GenerateProductCodeCommand).FullName, this.Listener.Object);
+                Tracer.Manager.GetSource(typeof(GenerateProductCodeCommand).FullName).Switch.Level = SourceLevels.All;
             }
 
             [TestCleanup]
             public void Cleanup()
             {
                 this.Store.Dispose();
-                Tracer.RemoveListener(Tracer.GetSourceNameFor<SynchArtifactNameCommand>(), this.Listener.Object);
+                Tracer.Manager.RemoveListener(typeof(SynchArtifactNameCommand).FullName, this.Listener.Object);
             }
 
             [TestMethod, TestCategory("Unit")]

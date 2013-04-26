@@ -18,7 +18,7 @@ namespace NuPattern.Library.Commands
     [CLSCompliant(false)]
     public class RunVsCommandCommand : Command
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<RunVsCommandCommand>();
+        private static readonly ITracer tracer = Tracer.Get<RunVsCommandCommand>();
 
         /// <summary>
         /// Gets or sets the solution.
@@ -42,7 +42,7 @@ namespace NuPattern.Library.Commands
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.RunVsCommandCommand_TraceInitial, this.CommandName);
 
             this.Solution.RunCommand(this.CommandName);

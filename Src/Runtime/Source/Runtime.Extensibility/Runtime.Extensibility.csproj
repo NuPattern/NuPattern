@@ -180,8 +180,6 @@
     <Compile Include="Guidance\CommandBindingExtensions.cs" />
     <Compile Include="Guidance\DefaultGuidanceInstanceLocator.cs" />
     <Compile Include="Guidance\DefaultQueryStatusStrategy.cs" />
-    <Compile Include="Guidance\Diagnostics\GuidanceExtensionTracer.cs" />
-    <Compile Include="Guidance\Diagnostics\GuidanceExtensionTraceRecord.cs" />
     <Compile Include="Guidance\Extensions\BlackboardGuidanceExtension.cs" />
     <Compile Include="Guidance\Extensions\BlackboardManager.cs" />
     <Compile Include="Guidance\Extensions\BlackboardWorkflowBinder.cs" />

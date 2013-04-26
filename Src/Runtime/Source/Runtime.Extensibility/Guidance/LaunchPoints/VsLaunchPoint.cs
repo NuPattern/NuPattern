@@ -4,7 +4,6 @@ using System.Globalization;
 using Microsoft.VisualStudio.Modeling.ExtensionEnablement;
 using Microsoft.VisualStudio.Shell;
 using NuPattern.Diagnostics;
-using NuPattern.Runtime.Guidance.Diagnostics;
 using NuPattern.Runtime.Properties;
 
 namespace NuPattern.Runtime.Guidance.LaunchPoints
@@ -92,7 +91,7 @@ namespace NuPattern.Runtime.Guidance.LaunchPoints
                 commandBindingForEval.Evaluate();
             }
 
-            var tracer = GuidanceExtensionTracer.GetSourceFor(this, extension.ExtensionId, extension.InstanceName);
+            var tracer = Tracer.Get(extension.GetType());
 
             using (tracer.StartActivity(Resources.VsLaunchPoint_TraceExecute, BindingName))
             {
@@ -113,11 +112,9 @@ namespace NuPattern.Runtime.Guidance.LaunchPoints
             }
             else
             {
-                var tracer = extension != null ?
-                    GuidanceExtensionTracer.GetSourceFor<VsLaunchPoint>(extension.ExtensionId) :
-                    Tracer.GetSourceFor<VsLaunchPoint>();
+                var tracer = Tracer.Get<VsLaunchPoint>();
 
-                tracer.TraceWarning(Resources.VsLaunchPoint_TraceNotEnabled, launchPoint);
+                tracer.Warn(Resources.VsLaunchPoint_TraceNotEnabled, launchPoint);
             }
         }
 

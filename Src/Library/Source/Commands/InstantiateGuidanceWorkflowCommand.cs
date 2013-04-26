@@ -26,7 +26,7 @@ namespace NuPattern.Library.Commands
     {
         private const bool DefaultActivateOnInstantiation = true;
         private const bool DefaultSharedInstance = false;
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<InstantiateGuidanceWorkflowCommand>();
+        private static readonly ITracer tracer = Tracer.Get<InstantiateGuidanceWorkflowCommand>();
 
         /// <summary>
         /// Initializes a new instance of the <see cref="InstantiateGuidanceWorkflowCommand"/> class.
@@ -99,7 +99,7 @@ namespace NuPattern.Library.Commands
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.InstantiateGuidanceWorkflowCommand_TraceInitial,
                 this.CurrentElement.InstanceName, this.ExtensionId, this.DefaultInstanceName, this.SharedInstance, this.ActivateOnInstantiation);
 
@@ -120,7 +120,7 @@ namespace NuPattern.Library.Commands
                     // Activate shared feature
                     if (this.ActivateOnInstantiation)
                     {
-                        tracer.TraceInformation(
+                        tracer.Info(
                             Resources.InstantiateGuidanceWorkflowCommand_TraceActivateShared, this.CurrentElement.InstanceName, instanceName);
 
                         this.GuidanceManager.ActivateGuidanceInstance(this.ServiceProvider, sharedInstance);
@@ -134,18 +134,18 @@ namespace NuPattern.Library.Commands
                     {
                         instanceName = this.GuidanceManager.GetUniqueInstanceName(this.DefaultInstanceName);
 
-                        tracer.TraceVerbose(
+                        tracer.Verbose(
                             Resources.InstantiateGuidanceWorkflowCommand_TraceCreateUniqueInstanceName, this.CurrentElement.InstanceName, instanceName);
                     }
 
-                    tracer.TraceInformation(
+                    tracer.Info(
                         Resources.InstantiateGuidanceWorkflowCommand_TraceInstantiateNew, this.CurrentElement.InstanceName, this.ExtensionId, instanceName);
 
                     // Instantiate the feature and activate it.
                     var feature = this.GuidanceManager.Instantiate(this.ExtensionId, instanceName);
                     if (this.ActivateOnInstantiation)
                     {
-                        tracer.TraceInformation(
+                        tracer.Info(
                             Resources.InstantiateGuidanceWorkflowCommand_TraceActivateNew, this.CurrentElement.InstanceName, instanceName);
 
                         this.GuidanceManager.ActivateGuidanceInstance(this.ServiceProvider, feature);
@@ -154,7 +154,7 @@ namespace NuPattern.Library.Commands
                     instanceName = feature.InstanceName;
                 }
 
-                tracer.TraceInformation(
+                tracer.Info(
                     Resources.InstantiateGuidanceWorkflowCommand_TraceAddingReference, this.CurrentElement.InstanceName, instanceName);
 
                 // Add the Guidance reference
@@ -162,7 +162,7 @@ namespace NuPattern.Library.Commands
             }
             else
             {
-                tracer.TraceWarning(
+                tracer.Warn(
                     Resources.InstantiateGuidanceWorkflowCommand_TraceWorkflowNotFound, this.CurrentElement.InstanceName, this.ExtensionId);
             }
         }

@@ -39,8 +39,8 @@ namespace NuPattern.Library.UnitTests.Commands
                 this.ServiceProvider = new Mock<IServiceProvider>();
                 this.Listener = new Mock<TraceListener>();
 
-                Tracer.AddListener(Tracer.GetSourceNameFor<SynchArtifactNameCommand>(), this.Listener.Object);
-                Tracer.GetOrCreateUnderlyingSource(Tracer.GetSourceNameFor<SynchArtifactNameCommand>()).Switch.Level = SourceLevels.All;
+                Tracer.Manager.AddListener(typeof(SynchArtifactNameCommand).FullName, this.Listener.Object);
+                Tracer.Manager.GetSource(typeof(SynchArtifactNameCommand).FullName).Switch.Level = SourceLevels.All;
 
                 this.Command = new SynchArtifactNameCommand();
                 this.Command.CurrentElement = this.OwnerElement.Object;
@@ -51,7 +51,7 @@ namespace NuPattern.Library.UnitTests.Commands
             [TestCleanup]
             public virtual void Cleanup()
             {
-                Tracer.RemoveListener(Tracer.GetSourceNameFor<SynchArtifactNameCommand>(), this.Listener.Object);
+                Tracer.Manager.RemoveListener(typeof(SynchArtifactNameCommand).FullName, this.Listener.Object);
             }
 
             [TestMethod, TestCategory("Unit")]
@@ -79,7 +79,7 @@ namespace NuPattern.Library.UnitTests.Commands
                 this.Command.Execute();
 
                 this.Listener.Verify(x => x.TraceEvent(It.IsAny<TraceEventCache>(),
-                    Tracer.GetSourceNameFor<SynchArtifactNameCommand>(),
+                    typeof(SynchArtifactNameCommand).FullName,
                     TraceEventType.Warning,
                     It.IsAny<int>(),
                     It.IsAny<string>(),

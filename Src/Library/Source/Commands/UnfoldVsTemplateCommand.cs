@@ -39,7 +39,7 @@ namespace NuPattern.Library.Commands
         private const bool DefaultSyncName = false;
         private const bool DefaultSanitizeName = true;
         private const string DefaultTag = "";
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<UnfoldVsTemplateCommand>();
+        private static readonly ITracer tracer = Tracer.Get<UnfoldVsTemplateCommand>();
 
         /// <summary>
         /// Creates a new instance of the <see cref="UnfoldVsTemplateCommand"/> class.
@@ -202,11 +202,11 @@ namespace NuPattern.Library.Commands
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.UnfoldVsTemplateCommand_TraceInitial,
                 this.CurrentElement.InstanceName, this.TemplateUri, this.TargetPath, this.TargetFileName, this.SanitizeName, this.SyncName);
 
-            tracer.TraceData(TraceEventType.Verbose, Resources.UnfoldVsTemplateCommand_StartedEvent, this.CurrentElement);
+            //tracer.TraceData(TraceEventType.Verbose, Resources.UnfoldVsTemplateCommand_StartedEvent, this.CurrentElement);
 
             var tag = new ReferenceTag
             {
@@ -247,7 +247,7 @@ namespace NuPattern.Library.Commands
                 var templateUri = new Uri(settings.TemplateUri);
 
                 // Resolve the designtime template
-                tracer.TraceVerbose(
+                tracer.Verbose(
                     Resources.UnfoldVsTemplateCommand_TraceResolvingTemplateUri, owner, settings.TemplateUri.ToString());
                 var template = uriService.TryResolveUri<ITemplate>(templateUri);
                 if (template == null)
@@ -258,7 +258,7 @@ namespace NuPattern.Library.Commands
                 }
 
                 // Resolve the vstemplate
-                tracer.TraceVerbose(
+                tracer.Verbose(
                     Resources.UnfoldVsTemplateCommand_TraceResolvingVsTemplateUri, owner, templateUri);
                 var vsTemplate = uriService.ResolveUri<IVsTemplate>(templateUri);
 
@@ -321,7 +321,7 @@ namespace NuPattern.Library.Commands
 
                     if (!fromWizard)
                     {
-                        tracer.TraceInformation(
+                        tracer.Info(
                             Resources.UnfoldVsTemplateCommand_TraceAddReference, owner);
 
                         SolutionArtifactLinkReference
@@ -338,7 +338,7 @@ namespace NuPattern.Library.Commands
             }
             catch (WizardBackoutException) //cancel the unfold if wizard backout
             {
-                tracer.TraceInformation(
+                tracer.Info(
                     Resources.UnfoldVsTemplateCommand_TraceWizardCancelled);
                 owner.Delete();
                 eventScope.Dispose();
@@ -346,7 +346,7 @@ namespace NuPattern.Library.Commands
             }
             catch (COMException comEx)
             {
-                tracer.TraceError(
+                tracer.Error(
                     comEx, Resources.UnfoldVsTemplateCommand_TraceCOMException, owner.InstanceName, settings.TemplateUri);
                 owner.Delete();
                 eventScope.Dispose();
@@ -361,7 +361,7 @@ namespace NuPattern.Library.Commands
             }
             catch (Exception ex) //cancel the unfold if another unexpected exception happened
             {
-                tracer.TraceInformation(
+                tracer.Info(
                     Resources.UnfoldVsTemplateCommand_TraceUnexpectedException, owner.InstanceName, settings.TemplateUri);
                 owner.Delete();
                 eventScope.Dispose();

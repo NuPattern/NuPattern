@@ -15,7 +15,7 @@ namespace NuPattern.VisualStudio.TemplateWizards
     [CLSCompliant(false)]
     public class CustomToolRunnerTemplateWizard : TemplateWizard
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<CustomToolRunnerTemplateWizard>();
+        private static readonly ITracer tracer = Tracer.Get<CustomToolRunnerTemplateWizard>();
 
         /// <summary>
         /// Runs custom wizard logic when a project has finished generating.
@@ -59,7 +59,7 @@ namespace NuPattern.VisualStudio.TemplateWizards
 
                                     if (projectItem != null)
                                     {
-                                        tracer.TraceInformation(Resources.CustomToolRunnerTemplateWizard_RunningCustomTool, item.Data.CustomTool, item.GetLogicalPath());
+                                        tracer.Info(Resources.CustomToolRunnerTemplateWizard_RunningCustomTool, ((object)item.Data.CustomTool).ToString(), item.GetLogicalPath());
                                         projectItem.RunCustomTool();
                                     }
                                 }

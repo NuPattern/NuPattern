@@ -19,7 +19,7 @@ namespace NuPattern.Library.ValueProviders
     [CLSCompliant(false)]
     public class ReferencedSolutionItemPathValueProvider : ValueProvider
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<ReferencedSolutionItemPathValueProvider>();
+        private static readonly ITracer tracer = Tracer.Get<ReferencedSolutionItemPathValueProvider>();
 
         /// <summary>
         /// Gets the current element.
@@ -60,7 +60,7 @@ namespace NuPattern.Library.ValueProviders
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.ReferencedSolutionItemPathValueProvider_TraceInitial, this.CurrentElement.InstanceName, this.Extension);
 
             var extension = this.Extension
@@ -78,14 +78,14 @@ namespace NuPattern.Library.ValueProviders
             {
                 var result = item.PhysicalPath;
 
-                tracer.TraceInformation(
+                tracer.Info(
                     Resources.ReferencedSolutionItemPathValueProvider_TraceEvaluation, this.CurrentElement.InstanceName, this.Extension, result);
 
                 return result;
             }
             else
             {
-                tracer.TraceWarning(
+                tracer.Warn(
                     Resources.ReferencedSolutionItemPathValueProvider_TraceNoFile, this.CurrentElement.InstanceName, this.Extension);
                 return null;
             }

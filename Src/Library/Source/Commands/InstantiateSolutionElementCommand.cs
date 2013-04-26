@@ -19,7 +19,7 @@ namespace NuPattern.Library.Commands
     [CLSCompliant(false)]
     public class InstantiateSolutionElementCommand : Command
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<InstantiateSolutionElementCommand>();
+        private static readonly ITracer tracer = Tracer.Get<InstantiateSolutionElementCommand>();
 
         /// <summary>
         /// Gets or sets the VSIX ID of the solution element to be added.
@@ -63,7 +63,7 @@ namespace NuPattern.Library.Commands
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.InstantiateSolutionElementCommand_TraceInitial,
                     this.ToolkitIdentifier, this.InstanceName);
 
@@ -80,7 +80,7 @@ namespace NuPattern.Library.Commands
 
             this.PatternManager.CreateProduct(toolkitInfo, this.InstanceName);
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.InstantiateSolutionElementCommand_TraceInstantiated, this.ToolkitIdentifier, this.InstanceName);
         }
     }

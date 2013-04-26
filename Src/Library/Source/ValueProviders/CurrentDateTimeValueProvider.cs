@@ -15,7 +15,7 @@ namespace NuPattern.Library.ValueProviders
     [CLSCompliant(false)]
     public class CurrentDateTimeValueProvider : ValueProvider
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<CurrentDateTimeValueProvider>();
+        private static readonly ITracer tracer = Tracer.Get<CurrentDateTimeValueProvider>();
 
         /// <summary>
         /// Evaluates this provider.
@@ -24,12 +24,12 @@ namespace NuPattern.Library.ValueProviders
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.CurrentDateTimeValueProvider_TraceInitial);
 
             var result = DateTime.Now;
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.CurrentDateTimeValueProvider_TraceEvaluation, result);
 
             return result;

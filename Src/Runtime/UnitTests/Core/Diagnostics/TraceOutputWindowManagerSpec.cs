@@ -16,8 +16,8 @@ namespace NuPattern.Runtime.UnitTests.Diagnostics
         public class GivenAManagerAndOutputWindow
         {
             private const string PaneTitle = "Foo";
-            private static readonly string SourceName = Tracer.GetSourceNameFor<TraceOutputWindowManagerSpec>();
-            private static readonly ITraceSource TraceSource = Tracer.GetSourceFor<TraceOutputWindowManagerSpec>();
+            private static readonly string SourceName = typeof(TraceOutputWindowManagerSpec).FullName;
+            private static readonly ITracer TraceSource = Tracer.Get<TraceOutputWindowManagerSpec>();
 
             private Mock<IServiceProvider> serviceProvider;
             private Mock<IVsOutputWindowPane> outputPane;
@@ -64,9 +64,9 @@ namespace NuPattern.Runtime.UnitTests.Diagnostics
             [TestMethod, TestCategory("Unit")]
             public void WhenShellInitializedAndExistingTraces_ThenWritesToOutputPane()
             {
-                var trace = Tracer.GetOrCreateUnderlyingSource(SourceName);
+                var trace = Tracer.Manager.GetSource(SourceName);
                 trace.Switch.Level = System.Diagnostics.SourceLevels.All;
-                TraceSource.TraceInformation("Hello");
+                TraceSource.Info("Hello");
 
                 this.outputPane.Verify(x => x.OutputStringThreadSafe(It.IsAny<string>()), Times.Never());
 
@@ -82,9 +82,9 @@ namespace NuPattern.Runtime.UnitTests.Diagnostics
 
                 this.traceManager.Dispose();
 
-                var trace = Tracer.GetOrCreateUnderlyingSource(SourceName);
+                var trace = Tracer.Manager.GetSource(SourceName);
                 trace.Switch.Level = System.Diagnostics.SourceLevels.All;
-                TraceSource.TraceInformation("Hello");
+                TraceSource.Info("Hello");
 
                 this.outputPane.Verify(x => x.OutputStringThreadSafe(It.IsAny<string>()), Times.Never());
             }
@@ -95,16 +95,16 @@ namespace NuPattern.Runtime.UnitTests.Diagnostics
             {
                 // TODO: continue to investigate what's wrong with this!!!
                 // Seems something weird in the underlying Tracer functionality :(
-                var name = Tracer.GetSourceNameFor<TraceTestClass>();
-                var trace = Tracer.GetOrCreateUnderlyingSource(name);
+                var name = typeof(TraceTestClass).FullName;
+                var trace = Tracer.Manager.GetSource(name);
                 trace.Switch.Level = System.Diagnostics.SourceLevels.All;
 
                 this.shellEvents.Raise(x => x.ShellInitialized += null, EventArgs.Empty);
                 this.traceManager.SetTraceSourceNames(new[] { name });
 
-                var source = Tracer.GetSourceFor<TraceTestClass>();
+                var source = Tracer.Get<TraceTestClass>();
 
-                source.TraceInformation("Hello");
+                source.Info("Hello");
 
                 this.outputPane.Verify(x => x.OutputStringThreadSafe(It.Is<string>(s => s.Contains("Hello"))));
             }
@@ -112,14 +112,14 @@ namespace NuPattern.Runtime.UnitTests.Diagnostics
             [TestMethod, TestCategory("Unit")]
             public void WhenTraceSourcesSet_ThenNoLongerTracesInitialSource()
             {
-                var name = Tracer.GetSourceNameFor<TraceTestClass>();
+                var name = typeof(TraceTestClass).FullName;
 
                 this.shellEvents.Raise(x => x.ShellInitialized += null, EventArgs.Empty);
                 this.traceManager.SetTraceSourceNames(new[] { name });
 
-                var trace = Tracer.GetOrCreateUnderlyingSource(SourceName);
+                var trace = Tracer.Manager.GetSource(SourceName);
                 trace.Switch.Level = System.Diagnostics.SourceLevels.All;
-                TraceSource.TraceInformation("Hello");
+                TraceSource.Info("Hello");
 
                 this.outputPane.Verify(x => x.OutputStringThreadSafe(It.IsAny<string>()), Times.Never());
             }

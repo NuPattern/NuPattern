@@ -11,7 +11,7 @@ namespace NuPattern.Runtime.Schema
 {
     partial class AbstractElementSchema
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<ElementSchema>();
+        private static readonly ITracer tracer = Tracer.Get<ElementSchema>();
 
         /// <summary>
         /// Validates if an element or collection has a duplicate name (with another element) within the owner.
@@ -45,7 +45,7 @@ namespace NuPattern.Runtime.Schema
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Resources.ValidationMethodFailed_Error,
                     Reflector<AbstractElementSchema>.GetMethod(n => n.ValidateNameIsUnique(context)).Name);
@@ -96,7 +96,7 @@ namespace NuPattern.Runtime.Schema
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Resources.ValidationMethodFailed_Error,
                     Reflector<AbstractElementSchema>.GetMethod(n => n.ValidateNameIsUnique(context)).Name);

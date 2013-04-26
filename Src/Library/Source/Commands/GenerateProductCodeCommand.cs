@@ -31,7 +31,7 @@ namespace NuPattern.Library.Commands
         private const bool DefaultSyncName = false;
         private const string DefaultTag = "";
         private const string DefaultTargetFileName = "{InstanceName}";
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<GenerateProductCodeCommand>();
+        private static readonly ITracer tracer = Tracer.Get<GenerateProductCodeCommand>();
 
         /// <summary>
         /// Creates a new instance fo the <see cref="GenerateProductCodeCommand"/> class.
@@ -114,7 +114,7 @@ namespace NuPattern.Library.Commands
         /// </summary>
         public override void Execute()
         {
-            tracer.TraceData(TraceEventType.Verbose, Resources.GenerateProductCodeCommand_StartedEvent, this.CurrentElement);
+            //tracer.TraceData(TraceEventType.Verbose, Resources.GenerateProductCodeCommand_StartedEvent, this.CurrentElement);
 
             // Note: we are NOT doing this.ValidateObject() thing here as we are setting the base class 
             // properties ourselves. This will be a problem if this is automatically validated by the runtime.
@@ -125,7 +125,7 @@ namespace NuPattern.Library.Commands
 
                 this.ModelFile = this.PatternManager.StoreFile;
 
-                tracer.TraceInformation(
+                tracer.Info(
                     Resources.GenerateProductCodeCommand_TraceModelFile, this.ModelFile);
             }
 
@@ -152,13 +152,13 @@ namespace NuPattern.Library.Commands
                     this.TargetPath = existingArtifact.Parent.GetLogicalPath();
                     this.TargetFileName = existingArtifact.Name;
 
-                    tracer.TraceVerbose(
+                    tracer.Verbose(
                         Resources.GenerateProductCodeCommand_Trace_ExistingArtifactUsed, existingArtifact.GetLogicalPath());
                 }
                 else
                 {
                     // Otherwise, we'll use the configured path and filename.
-                    tracer.TraceInformation(Resources.GenerateProductCodeCommand_Trace_ExistingArtifactUriNotFound, existingArtifactLink);
+                    tracer.Info(Resources.GenerateProductCodeCommand_Trace_ExistingArtifactUriNotFound, existingArtifactLink);
                 }
             }
 
@@ -180,7 +180,7 @@ namespace NuPattern.Library.Commands
             // If an item was generated
             if (this.GeneratedItem != null)
             {
-                tracer.TraceVerbose(
+                tracer.Verbose(
                     Resources.GenerateProductCodeCommand_Trace_GeneratedArtifact, this.GeneratedItem.GetLogicalPath());
 
                 // Add new artifact link
@@ -200,7 +200,7 @@ namespace NuPattern.Library.Commands
                             Id = this.Settings.Id
                         });
 
-                    tracer.TraceVerbose(
+                    tracer.Verbose(
                         Resources.GenerateProductCodeCommand_Trace_NewArtifactLinkAdded, newLink);
                 }
                 else
@@ -216,7 +216,7 @@ namespace NuPattern.Library.Commands
                         var reference = this.CurrentElement.References.First(r => GetIdFromReferenceTag(r) == Settings.Id);
                         SolutionArtifactLinkReference.SetReference(reference, newLink);
 
-                        tracer.TraceVerbose(
+                        tracer.Verbose(
                             Resources.GenerateProductCodeCommand_Trace_UpdatedExistingArtifactLink, newLink);
                     }
                     else
@@ -244,13 +244,13 @@ namespace NuPattern.Library.Commands
                                     : this.GeneratedItem.Name,
                                 StringComparison.OrdinalIgnoreCase))
                             {
-                                tracer.TraceInformation(
+                                tracer.Info(
                                     Resources.GenerateProductCodeCommand_TraceRenameSolutionItem, this.GeneratedItem.Name, proposedItemName);
 
                                 var uiService = (IVsUIShell)this.ServiceProvider.GetService(typeof(IVsUIShell));
                                 var newItemName = this.GeneratedItem.Rename(proposedItemName, true, uiService);
 
-                                tracer.TraceInformation(
+                                tracer.Info(
                                     Resources.GenerateProductCodeCommand_TraceSolutionItemRenamed, this.GeneratedItem.Name, newItemName);
                             }
                         }

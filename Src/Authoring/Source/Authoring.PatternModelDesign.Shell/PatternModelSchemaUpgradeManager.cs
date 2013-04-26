@@ -14,7 +14,7 @@ namespace NuPattern.Runtime.Schema
     [Export(typeof(IPatternModelSchemaUpgradeManager))]
     internal class PatternModelSchemaUpgradeManager : IPatternModelSchemaUpgradeManager
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<PatternModelSchemaUpgradeManager>();
+        private static readonly ITracer tracer = Tracer.Get<PatternModelSchemaUpgradeManager>();
 
         /// <summary>
         /// Executes the upgrade.
@@ -24,7 +24,7 @@ namespace NuPattern.Runtime.Schema
         {
             Guard.NotNull(() => context, context);
 
-            tracer.TraceInformation(ShellResources.PatternModelSchemaUpgradeManager_TraceExecute, context.SchemaFilePath);
+            tracer.Info(ShellResources.PatternModelSchemaUpgradeManager_TraceExecute, context.SchemaFilePath);
 
             TraceSourceExtensions.Shield(tracer, () =>
             {
@@ -38,7 +38,7 @@ namespace NuPattern.Runtime.Schema
                     upgradeProcessors
                         .ForEach(proc =>
                             {
-                                tracer.TraceVerbose(
+                                tracer.Verbose(
                                     ShellResources.PatternModelSchemaUpgradeManager_TraceFoundUpgradeRule,
                                     proc.Value.GetType(), proc.Metadata.TargetVersion, proc.Metadata.Order);
                             });
@@ -66,7 +66,7 @@ namespace NuPattern.Runtime.Schema
 
                         if (processorsToExecute.Any())
                         {
-                            tracer.TraceVerbose(
+                            tracer.Verbose(
                                 ShellResources.PatternModelSchemaUpgradeManager_TraceExecuteUpgradeProcessors, previousVersion, currentVersion);
 
                             // Initialize document
@@ -80,14 +80,14 @@ namespace NuPattern.Runtime.Schema
                                 {
                                     try
                                     {
-                                        tracer.TraceInformation(ShellResources.PatternModelSchemaUpgradeManager_TraceExecuteUpgradeRule,
+                                        tracer.Info(ShellResources.PatternModelSchemaUpgradeManager_TraceExecuteUpgradeRule,
                                             proc.GetType(), previousVersion);
 
                                         proc.ProcessSchema(document);
                                     }
                                     catch (Exception ex)
                                     {
-                                        tracer.TraceError(ShellResources.PatternModelSchemaUpgradeManager_ErrorUpgradeRuleFailed,
+                                        tracer.Error(ShellResources.PatternModelSchemaUpgradeManager_ErrorUpgradeRuleFailed,
                                             proc.GetType(), ex.Message);
                                         throw;
                                     }

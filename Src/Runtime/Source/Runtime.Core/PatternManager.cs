@@ -34,7 +34,7 @@ namespace NuPattern.Runtime
     [SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable", Justification = "Disposed automatically by the underlying state when closed. Cannot dispose earlier 'cause that deletes the errors from the error list.")]
     internal class PatternManager : IPatternManager
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<PatternManager>();
+        private static readonly ITracer tracer = Tracer.Get<PatternManager>();
         private const string DslVersionAttribute = "dslVersion";
 
         private IServiceProvider serviceProvider;
@@ -215,7 +215,7 @@ namespace NuPattern.Runtime
                 }
 
                 this.StoreFile = storeFile;
-                tracer.TraceData(TraceEventType.Verbose, Resources.PatternManager_OpeningStoreEventId, storeFile);
+                //tracer.TraceData(TraceEventType.Verbose, Resources.PatternManager_OpeningStoreEventId, storeFile);
 
                 if (autoCreate && (!File.Exists(storeFile) || new FileInfo(storeFile).Length == 0))
                     storeFile = CreateEmptyStateFile(storeFile);
@@ -259,16 +259,16 @@ namespace NuPattern.Runtime
 
                         this.RaiseIsOpenChanged();
 
-                        tracer.TraceInformation(Resources.PatternManager_OpenedStore, this.StoreFile);
-                        tracer.TraceData(TraceEventType.Verbose, Resources.PatternManager_OpenedStoreEventId, storeFile);
+                        tracer.Info(Resources.PatternManager_OpenedStore, this.StoreFile);
+                        //tracer.TraceData(TraceEventType.Verbose, Resources.PatternManager_OpenedStoreEventId, storeFile);
                     }
                     else
                     {
                         this.messageService.ShowError(
                                 Properties.Resources.PatternManager_FailedToOpenStore);
 
-                        tracer.TraceError(Properties.Resources.PatternManager_DeSerializationFailed, this.StoreFile);
-                        result.ForEach(msg => tracer.TraceWarning(msg.ToString()));
+                        tracer.Error(Properties.Resources.PatternManager_DeSerializationFailed, this.StoreFile);
+                        result.ForEach(msg => tracer.Warn(msg.ToString()));
                     }
                 }
             }
@@ -284,11 +284,11 @@ namespace NuPattern.Runtime
                 throw new InvalidOperationException(Resources.PatternManager_SaveInvalidIfNotOpen);
             }
 
-            tracer.TraceData(TraceEventType.Verbose, Resources.PatternManager_SavingStoreEventId, StoreFile);
+            //tracer.TraceData(TraceEventType.Verbose, Resources.PatternManager_SavingStoreEventId, StoreFile);
             this.SaveModel(this.productStore, this.StoreFile);
             this.productStore.RaiseSaved();
             this.StoreSaved(this, new ValueEventArgs<IProductState>(this.productStore));
-            tracer.TraceData(TraceEventType.Verbose, Resources.PatternManager_SavedStoreEventId, StoreFile);
+            //tracer.TraceData(TraceEventType.Verbose, Resources.PatternManager_SavedStoreEventId, StoreFile);
         }
 
         /// <summary>
@@ -428,7 +428,7 @@ namespace NuPattern.Runtime
             Guard.NotNullOrEmpty(() => targetName, targetName);
             Guard.NotNullOrEmpty(() => sourceFile, sourceFile);
 
-            tracer.TraceVerbose(Resources.PatternManager_TraceAddingFileToSolution, targetParent.PhysicalPath, targetName);
+            tracer.Verbose(Resources.PatternManager_TraceAddingFileToSolution, targetParent.PhysicalPath, targetName);
 
             // BUGFIX: FBRT does not checkout the file if it exists in the 'Solution Items' directory,
             //	as the path of the 'Solution Items' folder is the path of the solution.
@@ -553,9 +553,9 @@ namespace NuPattern.Runtime
             var element = e.Value as IProductElement;
             if (element != null)
             {
-                tracer.TraceData(TraceEventType.Verbose, Resources.PatternManager_ElementInstantiatingEventId, element);
+                //tracer.TraceData(TraceEventType.Verbose, Resources.PatternManager_ElementInstantiatingEventId, element);
                 this.ElementInstantiated(this, new ValueEventArgs<IProductElement>(element));
-                tracer.TraceData(TraceEventType.Verbose, Resources.PatternManager_ElementInstantiatedEventId, element);
+                //tracer.TraceData(TraceEventType.Verbose, Resources.PatternManager_ElementInstantiatedEventId, element);
             }
         }
 
@@ -564,9 +564,9 @@ namespace NuPattern.Runtime
             var element = e.Value as IProductElement;
             if (element != null)
             {
-                tracer.TraceData(TraceEventType.Verbose, Resources.PatternManager_ElementCreatingEventId, element);
+                //tracer.TraceData(TraceEventType.Verbose, Resources.PatternManager_ElementCreatingEventId, element);
                 this.ElementCreated(this, new ValueEventArgs<IProductElement>(element));
-                tracer.TraceData(TraceEventType.Verbose, Resources.PatternManager_ElementCreatedEventId, element);
+                //tracer.TraceData(TraceEventType.Verbose, Resources.PatternManager_ElementCreatedEventId, element);
             }
         }
 
@@ -575,9 +575,9 @@ namespace NuPattern.Runtime
             var element = e.Value as IProductElement;
             if (element != null)
             {
-                tracer.TraceData(TraceEventType.Verbose, Resources.PatternManager_ElementLoadingEventId, element);
+                //tracer.TraceData(TraceEventType.Verbose, Resources.PatternManager_ElementLoadingEventId, element);
                 this.ElementLoaded(this, new ValueEventArgs<IProductElement>(element));
-                tracer.TraceData(TraceEventType.Verbose, Resources.PatternManager_ElementLoadedEventId, element);
+                //tracer.TraceData(TraceEventType.Verbose, Resources.PatternManager_ElementLoadedEventId, element);
             }
         }
 
@@ -604,7 +604,7 @@ namespace NuPattern.Runtime
                     tx.Commit();
                 }
 
-                tracer.TraceVerbose(Resources.PatternManager_TraceSavingDefaultEmptyState, fileName);
+                tracer.Verbose(Resources.PatternManager_TraceSavingDefaultEmptyState, fileName);
                 savedFile = this.SaveModel(emptyStore, fileName);
             }
 
@@ -634,13 +634,13 @@ namespace NuPattern.Runtime
 
                 if (itemParent == null)
                 {
-                    tracer.TraceVerbose(Resources.PatternManager_TraceSavingDefaultEmptyState, fileName);
+                    tracer.Verbose(Resources.PatternManager_TraceSavingDefaultEmptyState, fileName);
 
                     // Default to SolutionItems.
                     itemParent = this.solution.Items.OfType<ISolutionFolder>().FirstOrDefault(x => x.IsSolutionItemsFolder());
                     if (itemParent == null)
                     {
-                        tracer.TraceVerbose(Resources.PatternManager_SaveNoSolutionItems);
+                        tracer.Verbose(Resources.PatternManager_SaveNoSolutionItems);
                         itemParent = this.solution.CreateSolutionFolder(SolutionExtensions.SolutionItemsFolderName);
                     }
                 }

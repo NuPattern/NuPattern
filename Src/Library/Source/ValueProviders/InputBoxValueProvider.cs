@@ -16,7 +16,7 @@ namespace NuPattern.Library.ValueProviders
     [CategoryResource(@"AutomationCategory_General", typeof(Resources))]
     public class InputBoxValueProvider : ValueProvider
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<InputBoxValueProvider>();
+        private static readonly ITracer tracer = Tracer.Get<InputBoxValueProvider>();
 
         /// <summary>
         /// Gets or sets the message
@@ -46,12 +46,12 @@ namespace NuPattern.Library.ValueProviders
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.InputBoxValueProvider_TraceInitial, this.Message, this.DefaultValue);
 
             var result = this.MessageService.PromptInput(this.Message, this.DefaultValue);
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.InputBoxValueProvider_TraceEvaluation, this.Message, this.DefaultValue, result);
 
             return result;

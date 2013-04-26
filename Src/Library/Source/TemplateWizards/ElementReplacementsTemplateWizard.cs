@@ -16,7 +16,7 @@ namespace NuPattern.Library.TemplateWizards
     [CLSCompliant(false)]
     public class ElementReplacementsTemplateWizard : TemplateWizard
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor(typeof(ElementReplacementsTemplateWizard));
+        private static readonly ITracer tracer = Tracer.Get(typeof(ElementReplacementsTemplateWizard));
 
         /// <summary>
         /// Runs custom wizard logic at the beginning of a template wizard run.
@@ -32,10 +32,10 @@ namespace NuPattern.Library.TemplateWizards
                     ProductElementDictionaryConverter.Convert(UnfoldScope.Current.Automation.Owner)
                     .ToDictionary(e => string.Format(CultureInfo.InvariantCulture, @"${0}$", e.Key), e => e.Value));
 
-                tracer.TraceVerbose(Resources.ElementReplacementWizard_TracerTitle);
+                tracer.Verbose(Resources.ElementReplacementWizard_TracerTitle);
                 foreach (var item in replacementsDictionary)
                 {
-                    tracer.TraceVerbose(@"	{0}:'{1}'", item.Key, item.Value);
+                    tracer.Verbose(@"	{0}:'{1}'", item.Key, item.Value);
                 }
             }
         }

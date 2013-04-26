@@ -27,7 +27,7 @@ namespace NuPattern.Library.Commands
     [CLSCompliant(false)]
     public class TransformTemplatesCommand : NuPattern.Runtime.Command
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<TransformTemplatesCommand>();
+        private static readonly ITracer tracer = Tracer.Get<TransformTemplatesCommand>();
 
         private const string CustomToolName = "TextTemplatingFileGenerator";
 
@@ -123,7 +123,7 @@ namespace NuPattern.Library.Commands
 
                     if ((attributes & FileAttributes.ReadOnly) == FileAttributes.ReadOnly)
                     {
-                        tracer.TraceInformation(
+                        tracer.Info(
                             Resources.TransformTemplatesCommand_TraceReadOnly, item.GetLogicalPath());
 
                         return;
@@ -148,7 +148,7 @@ namespace NuPattern.Library.Commands
                                 Properties.Resources.TransformTemplatesCommand_TraceError, item.GetLogicalPath(), e.Message);
                 }
 
-                tracer.TraceInformation(message);
+                tracer.Info(message);
                 this.StatusBar.DisplayMessage(message);
             }
         }

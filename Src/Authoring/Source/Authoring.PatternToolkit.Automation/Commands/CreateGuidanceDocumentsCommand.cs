@@ -26,7 +26,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
     {
         private const string ProjectExtension = ".csproj";
         private const string GeneratedFileExtensionFilter = "*" + TocGuidanceProcessor.ContentFileExtension;
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<CreateGuidanceDocumentsCommand>();
+        private static readonly ITracer tracer = Tracer.Get<CreateGuidanceDocumentsCommand>();
         private IGuidanceProcessor processor;
 
         /// <summary>
@@ -99,7 +99,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.CreateGuidanceDocumentsCommand_TraceInitial, this.CurrentElement.InstanceName);
 
             // Get guidance document path
@@ -113,14 +113,14 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
             }
 
             // Validate document first
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.CreateGuidanceDocumentsCommand_TraceValidatingDocument, documentFilePath);
 
             this.ErrorList.Clear(documentFilePath);
             var errors = this.processor.ValidateDocument();
             if (errors.Any())
             {
-                tracer.TraceInformation(
+                tracer.Info(
                     Resources.CreateGuidanceDocumentsCommand_TraceDocumentValidationFailed, documentFilePath, errors.Count());
 
                 this.ErrorList.AddRange(documentFilePath, errors);
@@ -138,12 +138,12 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
             try
             {
                 // Generate documents to temporary location
-                tracer.TraceInformation(
+                tracer.Info(
                     Resources.CreateGuidanceDocumentsCommand_TraceTempGeneration, tempPath);
 
                 var generatedFiles = this.processor.GenerateWorkflowDocuments(tempPath);
 
-                tracer.TraceInformation(
+                tracer.Info(
                     Resources.CreateGuidanceDocumentsCommand_TraceSyncingDocuments, tempPath, container.GetLogicalPath());
 
                 // Rationalize generated documents with project container
@@ -159,7 +159,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
         {
             var targetContainerPath = targetContainer.GetLogicalPath();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.CreateGuidanceDocumentsCommand_TraceAddingExcludedFiles, targetContainer.GetLogicalPath());
 
             // Ensure that all (*.MHT) files on the disk are included the targetContainer
@@ -170,14 +170,14 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
                 if (projectItem == null)
                 {
                     // Add existing file to project (SCC handles the 'Add' automatically)
-                    tracer.TraceInformation(
+                    tracer.Info(
                         Resources.CreateGuidanceDocumentsCommand_TraceAddingExcludedFile, targetContainerFile, targetContainerPath);
 
                     targetContainer.Add(targetContainerFile);
                 }
             }
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.CreateGuidanceDocumentsCommand_TraceAddingNewFiles, targetContainer.GetLogicalPath());
 
             // Copy all generated files to project (overwrite existing)
@@ -188,7 +188,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
                 if (targetContainerItem == null)
                 {
                     // Add new file to project (SCC Handles the 'Add' automatically)
-                    tracer.TraceInformation(
+                    tracer.Info(
                         Resources.CreateGuidanceDocumentsCommand_TraceAddingNewFile, generatedFileName, targetContainerPath);
 
                     targetContainer.Add(Path.Combine(sourceFolderPath, generatedFileName));
@@ -196,7 +196,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
                 else
                 {
                     // SCC 'Checkout' existing file (or make writable), and copy file to disk location
-                    tracer.TraceInformation(
+                    tracer.Info(
                         Resources.CreateGuidanceDocumentsCommand_TraceOverwriteExistingFile, generatedFileName, targetContainerPath);
 
                     targetContainerItem.Checkout();
@@ -217,7 +217,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
                 else
                 {
                     // Ensure build properties
-                    tracer.TraceInformation(
+                    tracer.Info(
                         Resources.CreateGuidanceDocumentsCommand_TraceSettingBuildAction, targetContainerItem.Name, targetContainerPath);
 
                     targetContainerItem.Data.ItemType = BuildAction.Content.ToString();
@@ -225,14 +225,14 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
                 }
             }
 
-            tracer.TraceInformation(
+            tracer.Info(
             Resources.CreateGuidanceDocumentsCommand_TraceDeleteSuperfluousFiles, targetContainer.GetLogicalPath());
 
             if (itemsToDelete.Any())
             {
                 foreach (var item in itemsToDelete)
                 {
-                    tracer.TraceInformation(
+                    tracer.Info(
                         Resources.CreateGuidanceDocumentsCommand_TraceDeleteSuperfluousFile, item, targetContainerPath);
 
                     var itemToDelete = targetContainer.Find<IItem>(item).FirstOrDefault();
@@ -272,7 +272,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
             var projectContainer = project.Find(this.CurrentElement.ProjectContentPath).FirstOrDefault();
             if (projectContainer == null)
             {
-                tracer.TraceInformation(
+                tracer.Info(
                     Resources.CreateGuidanceDocumentsCommand_TraceContentFolderCreating, project.Name, this.CurrentElement.ProjectContentPath);
 
                 projectContainer = project.CreateFolderPath(this.CurrentElement.ProjectContentPath) as IItemContainer;
@@ -300,7 +300,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
                 // Try to wait for any process that maybe locking the generated documents to end.
                 for (var count = 0; count < 10; count++)
                 {
-                    tracer.TraceWarning(
+                    tracer.Warn(
                         Resources.CreateGuidanceDocumentsCommand_TraceTryDeleteGeneratedDocuments, path);
 
                     System.Threading.Thread.Sleep(1000);
@@ -320,7 +320,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
                     }
                 }
 
-                tracer.TraceError(
+                tracer.Error(
                     Resources.CreateGuidanceDocumentsCommand_TraceDeleteGeneratedDocumentsFailed, path);
             }
         }

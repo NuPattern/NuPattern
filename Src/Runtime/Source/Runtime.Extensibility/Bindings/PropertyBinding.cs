@@ -12,7 +12,7 @@ namespace NuPattern.Runtime.Bindings
     /// </summary>
     public abstract class PropertyBinding
     {
-        private readonly ITraceSource tracer;
+        private readonly ITracer tracer;
 
         /// <summary>
         /// Creates a new instance of a <see cref="PropertyBinding"/> class.
@@ -21,7 +21,7 @@ namespace NuPattern.Runtime.Bindings
         protected PropertyBinding(string propertyName)
         {
             this.PropertyName = propertyName;
-            this.tracer = Tracer.GetSourceFor(this.GetType());
+            this.tracer = Tracer.Get(this.GetType());
         }
 
         /// <summary>
@@ -60,7 +60,7 @@ namespace NuPattern.Runtime.Bindings
                                 Resources.PropertyBinding_PropertyNotCompatible,
                                 ObjectDumper.ToString(value, 5), target, this.PropertyName, property.PropertyType, property.Converter);
 
-                            tracer.TraceError(message);
+                            tracer.Error(message);
                             throw new ArgumentException(message);
                         }
                     }
@@ -70,7 +70,7 @@ namespace NuPattern.Runtime.Bindings
                             Resources.PropertyBinding_TracePropertyCustomNotCompatible,
                             ObjectDumper.ToString(value, 5), target, this.PropertyName, property.PropertyType);
 
-                        tracer.TraceError(message);
+                        tracer.Error(message);
                         throw new ArgumentException(message);
                     }
                 }
@@ -82,7 +82,7 @@ namespace NuPattern.Runtime.Bindings
             else
             {
                 var message = string.Format(CultureInfo.CurrentCulture, Resources.PropertyBinding_TracePropertyNotFound, target, this.PropertyName);
-                tracer.TraceError(message);
+                tracer.Error(message);
                 throw new ArgumentException(message);
             }
         }

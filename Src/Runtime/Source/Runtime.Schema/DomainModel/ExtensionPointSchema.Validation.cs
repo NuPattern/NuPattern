@@ -15,7 +15,7 @@ namespace NuPattern.Runtime.Schema
     [ValidationState(ValidationState.Enabled)]
     partial class ExtensionPointSchema
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<ExtensionPointSchema>();
+        private static readonly ITracer tracer = Tracer.Get<ExtensionPointSchema>();
 
         /// <summary>
         /// Validates if an extension point has a duplicate name (with another element) within the owner.
@@ -48,7 +48,7 @@ namespace NuPattern.Runtime.Schema
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Resources.ValidationMethodFailed_Error,
                     Reflector<ExtensionPointSchema>.GetMethod(n => n.ValidateNameIsUnique(context)).Name);
@@ -100,7 +100,7 @@ namespace NuPattern.Runtime.Schema
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Resources.ValidationMethodFailed_Error,
                     Reflector<AbstractElementSchema>.GetMethod(n => n.ValidateNameIsUnique(context)).Name);

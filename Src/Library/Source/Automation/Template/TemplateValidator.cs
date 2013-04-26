@@ -17,7 +17,7 @@ namespace NuPattern.Library.Automation.Template
     internal class TemplateValidator
     {
         private UnfoldVsTemplateCommand.UnfoldVsTemplateSettings settings;
-        private ITraceSource tracer;
+        private ITracer tracer;
         private ValidationContext context;
         private string name;
         private IServiceProvider serviceProvider;
@@ -30,7 +30,7 @@ namespace NuPattern.Library.Automation.Template
             this.serviceProvider = serviceProvider;
         }
 
-        public void ValidateTemplateSettings(ITraceSource tracer)
+        public void ValidateTemplateSettings(ITracer tracer)
         {
             this.tracer = tracer;
             this.ValidateAssociatedArtifactConfiguration();
@@ -40,7 +40,7 @@ namespace NuPattern.Library.Automation.Template
             this.ValidateTemplateUriIsNotEmpty();
         }
 
-        public void ValidateCommandSettings(ITraceSource tracer)
+        public void ValidateCommandSettings(ITracer tracer)
         {
             this.tracer = tracer;
             this.ValidateAssociatedArtifactConfiguration();
@@ -67,7 +67,7 @@ namespace NuPattern.Library.Automation.Template
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Resources.ValidationMethodFailed_Error,
                     Reflector<TemplateValidator>.GetMethod(n => n.ValidateNoTwoTLPsInElement()).Name);
@@ -96,7 +96,7 @@ namespace NuPattern.Library.Automation.Template
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Resources.ValidationMethodFailed_Error,
                     Reflector<TemplateValidator>.GetMethod(n => n.ValidateTemplateUriIsNotEmpty()).Name);
@@ -240,7 +240,7 @@ namespace NuPattern.Library.Automation.Template
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Resources.ValidationMethodFailed_Error,
                     Reflector<TemplateValidator>.GetMethod(n => n.ValidateAuthoringUriIsValidAndTemplateIsConfiguredCorrectly(true)).Name);
@@ -291,7 +291,7 @@ namespace NuPattern.Library.Automation.Template
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Resources.ValidationMethodFailed_Error,
                     Reflector<TemplateValidator>.GetMethod(n => n.ValidateAssociatedArtifactConfiguration()).Name);

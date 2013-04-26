@@ -16,7 +16,7 @@ namespace NuPattern.Library.Commands
     [CLSCompliant(false)]
     public abstract class CreateElementFromDroppedFileCommand : CreateElementFromFileCommand
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<CreateElementFromDroppedFileCommand>();
+        private static readonly ITracer tracer = Tracer.Get<CreateElementFromDroppedFileCommand>();
 
         /// <summary>
         /// Gets or sets the drag arguments
@@ -39,7 +39,7 @@ namespace NuPattern.Library.Commands
         /// <returns></returns>
         protected override IEnumerable<string> GetFilePaths()
         {
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.CreateElementFromDroppedFileCommand_TraceGettingFiles, this.Extension);
 
             var items = this.DragArgs.GetWindowsFilePaths();

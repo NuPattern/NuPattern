@@ -15,7 +15,7 @@ namespace NuPattern.Library.Commands
     [CategoryResource(@"AutomationCategory_Guidance", typeof(Resources))]
     public class SetBlackboardValueCommand : Command
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<SetBlackboardValueCommand>();
+        private static readonly ITracer tracer = Tracer.Get<SetBlackboardValueCommand>();
 
         /// <summary>
         /// Gets or sets the key.
@@ -40,7 +40,7 @@ namespace NuPattern.Library.Commands
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.SetBlackboardValueCommand_TraceInitial, this.Key, this.Value);
 
             BlackboardManager.Current.Set(Key, Value);

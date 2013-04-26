@@ -199,13 +199,13 @@
     <value>Loading guidance extensions from solution state</value>
   </data>
   <data name="GuidanceManager_TraceInitializeExtension" xml:space="preserve">
-    <value>Initializing existing guidance extension</value>
+    <value>Initializing existing guidance extension '{0}' (Id: '{1}').</value>
   </data>
   <data name="GuidanceManager_TraceFailedExtensionInitialization" xml:space="preserve">
     <value>Failed to initialize guidance extension</value>
   </data>
   <data name="GuidanceManager_TraceInstantiateExtension" xml:space="preserve">
-    <value>Instantiating guidance extension</value>
+    <value>Instantiating guidance extension '{0}' (Id: '{1}').</value>
   </data>
   <data name="GuidanceManager_TraceFailedInstantiate" xml:space="preserve">
     <value>Failed to instantiate guidance extension</value>

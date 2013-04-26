@@ -22,7 +22,7 @@ namespace NuPattern.Library.Commands
     {
         private const bool DefaultValidateDescendants = true;
 
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<ValidateElementCommand>();
+        private static readonly ITracer tracer = Tracer.Get<ValidateElementCommand>();
 
         /// <summary>
         /// Initializes a new instance fo the <see cref="ValidateElementCommand"/> class.
@@ -62,7 +62,7 @@ namespace NuPattern.Library.Commands
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.ValidateElementCommand_TraceInitial, this.CurrentElement.InstanceName, this.ValidateDescendants);
 
             var instances = this.ValidateDescendants ? this.CurrentElement.Traverse().OfType<IInstanceBase>() : new[] { this.CurrentElement };
@@ -71,7 +71,7 @@ namespace NuPattern.Library.Commands
 
             var result = this.PatternManager.Validate(elements);
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.ValidateElementCommand_TraceResult, this.CurrentElement.InstanceName, this.ValidateDescendants, result);
         }
     }

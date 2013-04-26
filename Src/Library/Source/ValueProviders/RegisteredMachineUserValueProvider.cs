@@ -21,7 +21,7 @@ namespace NuPattern.Library.ValueProviders
         private const string RegKey = @"SOFTWARE\Microsoft\Windows NT\CurrentVersion";
         private const string RegKeyValue = @"RegisteredOrganization";
 
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<RegisteredMachineUserValueProvider>();
+        private static readonly ITracer tracer = Tracer.Get<RegisteredMachineUserValueProvider>();
         private IRegistryReader reader;
 
         /// <summary>
@@ -53,13 +53,13 @@ namespace NuPattern.Library.ValueProviders
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.RegisteredMachineUserValueProvider_TraceInitial, RegKey, RegKeyValue);
 
             var value = this.reader.ReadValue();
             if (value == null)
             {
-                tracer.TraceWarning(
+                tracer.Warn(
                     Resources.RegisteredMachineUserValueProvider_TraceNoValue, RegKey, RegKeyValue);
                 return string.Empty;
             }
@@ -74,7 +74,7 @@ namespace NuPattern.Library.ValueProviders
                     value = value.ToString();
                 }
 
-                tracer.TraceInformation(
+                tracer.Info(
                     Resources.RegisteredMachineUserValueProvider_TraceEvaluation, RegKey, RegKeyValue, value);
                 return value.ToString();
             }

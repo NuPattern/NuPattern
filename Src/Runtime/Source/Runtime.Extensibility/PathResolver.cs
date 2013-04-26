@@ -15,7 +15,7 @@ namespace NuPattern.Runtime
     [CLSCompliant(false)]
     public class PathResolver
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor(typeof(PathResolver));
+        private static readonly ITracer tracer = Tracer.Get(typeof(PathResolver));
         private const string SafeDirSeparator = "``";
         private const int SafeDirCount = 8;
 
@@ -74,7 +74,7 @@ namespace NuPattern.Runtime
             }
             catch (Exception ex)
             {
-                tracer.TraceError(ex.ToString());
+                tracer.Error(ex.ToString());
                 return false;
             }
         }
@@ -82,10 +82,10 @@ namespace NuPattern.Runtime
         /// <summary>
         /// Resolves the current element paths and filename.
         /// </summary>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters", MessageId = "Features.Diagnostics.ITraceSource.TraceVerbose(System.String)")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters", MessageId = "Features.Diagnostics.ITracer.Verbose(System.String)")]
         public void Resolve(Func<IItemContainer, bool> artifactReferenceFilter = null)
         {
-            tracer.TraceVerbose(
+            tracer.Verbose(
                 Resources.PathResolver_TraceResolveInitial, Path ?? string.Empty, FileName ?? string.Empty);
 
             if (artifactReferenceFilter == null)
@@ -95,14 +95,14 @@ namespace NuPattern.Runtime
 
             if (!string.IsNullOrEmpty(this.Path))
             {
-                tracer.TraceVerbose(
+                tracer.Verbose(
                     Resources.PathResolver_TraceResolveApplyingExpression, this.Path, ((IProductElement)this.Context).InstanceName);
 
                 var evaluatedPath = ExpressionEvaluator.Evaluate(this.Context, this.Path);
 
                 if (string.IsNullOrEmpty(evaluatedPath))
                 {
-                    tracer.TraceVerbose(
+                    tracer.Verbose(
                         Resources.PathResolver_TraceResolveFailedExpressionEvaluation);
 
                     throw new InvalidOperationException(string.Format(
@@ -112,7 +112,7 @@ namespace NuPattern.Runtime
                 }
 
                 evaluatedPath = PathResolver.Normalize(evaluatedPath);
-                tracer.TraceVerbose(
+                tracer.Verbose(
                     Resources.PathResolver_TraceResolveEvaluatedPath, evaluatedPath);
 
                 // Ensure item name does not contain any invalid file chars
@@ -121,26 +121,26 @@ namespace NuPattern.Runtime
                     evaluatedPath = DataFormats.MakeValidSolutionPathName(evaluatedPath);
                 }
 
-                tracer.TraceVerbose(Resources.PathResolver_TraceEvaluatedPath, this.Path, evaluatedPath);
+                tracer.Verbose(Resources.PathResolver_TraceEvaluatedPath, this.Path, evaluatedPath);
 
                 evaluatedPath = evaluatedPath.Trim('\\');
 
                 this.Path = evaluatedPath;
             }
 
-            tracer.TraceVerbose(
+            tracer.Verbose(
                 Resources.PathResolver_TraceResolvePath, this.Path ?? string.Empty);
 
             if (!string.IsNullOrEmpty(this.FileName))
             {
-                tracer.TraceVerbose(
+                tracer.Verbose(
                     Resources.PathResolver_TraceResolveApplyingExpression, this.FileName, ((IProductElement)this.Context).InstanceName);
 
                 var evaluatedName = ExpressionEvaluator.Evaluate(this.Context, this.FileName);
 
                 if (string.IsNullOrEmpty(evaluatedName))
                 {
-                    tracer.TraceVerbose(
+                    tracer.Verbose(
                         Resources.PathResolver_TraceResolveFailedExpressionEvaluation);
 
                     throw new InvalidOperationException(string.Format(
@@ -149,7 +149,7 @@ namespace NuPattern.Runtime
                         this.FileName));
                 }
 
-                tracer.TraceVerbose(
+                tracer.Verbose(
                     Resources.PathResolver_TraceResolveEvaluatedFileName2, evaluatedName);
 
                 // Ensure item name does not contain any invalid file chars
@@ -158,13 +158,13 @@ namespace NuPattern.Runtime
                     evaluatedName = DataFormats.MakeValidSolutionItemName(evaluatedName);
                 }
 
-                tracer.TraceInformation(
+                tracer.Info(
                     Resources.PathResolver_TraceEvaluatedFileName, this.FileName, evaluatedName);
 
                 this.FileName = evaluatedName;
             }
 
-            tracer.TraceVerbose(
+            tracer.Verbose(
                 Resources.PathResolver_TraceResolveResolvedFileName, this.FileName ?? string.Empty);
         }
 
@@ -270,14 +270,14 @@ namespace NuPattern.Runtime
             if (productElement == null)
                 return;
 
-            tracer.TraceVerbose(
+            tracer.Verbose(
                 Resources.PathResolver_TraceResolveLinkInPathResolvingElement, productElement.InstanceName);
 
             var pathToResolve = this.Path;
 
             if (string.IsNullOrEmpty(pathToResolve))
             {
-                tracer.TraceVerbose(
+                tracer.Verbose(
                     Resources.PathResolver_TraceResolveLinkInPathDefaulting, ResolveArtifactLinkCharacter);
                 pathToResolve = ResolveArtifactLinkCharacter;
             }
@@ -290,7 +290,7 @@ namespace NuPattern.Runtime
 
                 ThrowIfNoAncestorWithLink(productElement, ancestorWithArtifactLink, this.Path);
 
-                tracer.TraceVerbose(
+                tracer.Verbose(
                     Resources.PathResolver_TraceResolveLinkInPathUsiingElementReference, ancestorWithArtifactLink.InstanceName);
 
                 this.Path = ResolveRelativeTargetPath(ancestorWithArtifactLink, pathToResolve, artifactReferenceFilter);
@@ -302,7 +302,7 @@ namespace NuPattern.Runtime
                 ThrowIfNoRelativeParent(parentWithArtifactLink, this.Path);
                 ThrowIfNoLinkOnParent(parentWithArtifactLink, this.Path);
 
-                tracer.TraceVerbose(
+                tracer.Verbose(
                     Resources.PathResolver_TraceResolveLinkInPathUsiingElementReference, parentWithArtifactLink.InstanceName);
 
                 this.Path = ResolveRelativeTargetPath(parentWithArtifactLink, pathToResolve, artifactReferenceFilter);
@@ -322,7 +322,7 @@ namespace NuPattern.Runtime
                     {
                         parentWithArtifactLink = parentWithArtifactLink.GetParentAutomation();
 
-                        tracer.TraceVerbose(
+                        tracer.Verbose(
                             Resources.PathResolver_TraceLocateParentResolvingElement, part, parentWithArtifactLink.InstanceName);
 
                         if (parentWithArtifactLink == null)
@@ -376,9 +376,9 @@ namespace NuPattern.Runtime
 
             result = System.IO.Path.Combine(targetItem.GetLogicalPath(), result);
 
-            tracer.TraceVerbose(Resources.PathResolver_TraceResolvedArtifactLink, oldPath, result);
+            tracer.Verbose(Resources.PathResolver_TraceResolvedArtifactLink, oldPath, result);
 
-            tracer.TraceVerbose(
+            tracer.Verbose(
                 Resources.PathResolver_TraceLocateParentUsingRelativePath, result);
 
             return result;
@@ -388,7 +388,7 @@ namespace NuPattern.Runtime
         {
             if (targetItem == null)
             {
-                tracer.TraceVerbose(
+                tracer.Verbose(
                     Resources.PathResolver_TraceInvalidArtifactLink, parentWithArtifactLink.InstanceName);
 
                 throw new InvalidOperationException(string.Format(
@@ -399,12 +399,12 @@ namespace NuPattern.Runtime
             }
         }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters", MessageId = "Features.Diagnostics.ITraceSource.TraceVerbose(System.String)")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters", MessageId = "Features.Diagnostics.ITracer.Verbose(System.String)")]
         private static void ThrowIfNoLinkOnParent(IProductElement context, string path)
         {
             if (string.IsNullOrEmpty(context.TryGetReference(ReferenceKindConstants.ArtifactLink)))
             {
-                tracer.TraceVerbose(
+                tracer.Verbose(
                     Resources.PathResolver_TraceInvalidParentArtifactLink);
 
                 throw new InvalidOperationException(string.Format(
@@ -415,12 +415,12 @@ namespace NuPattern.Runtime
             }
         }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters", MessageId = "Features.Diagnostics.ITraceSource.TraceVerbose(System.String)")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters", MessageId = "Features.Diagnostics.ITracer.Verbose(System.String)")]
         private static void ThrowIfNoRelativeParent(IProductElement context, string path)
         {
             if (context == null)
             {
-                tracer.TraceVerbose(
+                tracer.Verbose(
                     Resources.PathResolver_TraceNoParent);
 
                 throw new InvalidOperationException(string.Format(
@@ -430,12 +430,12 @@ namespace NuPattern.Runtime
             }
         }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters", MessageId = "Features.Diagnostics.ITraceSource.TraceVerbose(System.String)")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters", MessageId = "Features.Diagnostics.ITracer.Verbose(System.String)")]
         private static void ThrowIfNoAncestorWithLink(IProductElement context, IProductElement ancestor, string path)
         {
             if (ancestor == null)
             {
-                tracer.TraceVerbose(
+                tracer.Verbose(
                     Resources.PathResolver_TraceNoAncestor);
 
                 throw new InvalidOperationException(string.Format(

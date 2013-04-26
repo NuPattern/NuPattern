@@ -19,7 +19,7 @@ namespace NuPattern.Runtime.Bindings
     public class DynamicBinding<T> : Binding<T>, IDynamicBinding<T>
         where T : class
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<DynamicBinding<T>>();
+        private static readonly ITracer tracer = Tracer.Get<DynamicBinding<T>>();
 
         private INuPatternCompositionService originalComposition;
 
@@ -109,7 +109,7 @@ namespace NuPattern.Runtime.Bindings
 
                 foreach (var result in results)
                 {
-                    tracer.TraceError(Resources.DynamicBinding_TraceFailedDynamicBinding, this.ComponentTypeId, property.Name, result.ErrorMessage);
+                    tracer.Error(Resources.DynamicBinding_TraceFailedDynamicBinding, this.ComponentTypeId, property.Name, result.ErrorMessage);
                     evaluationResult = false;
                 }
             }

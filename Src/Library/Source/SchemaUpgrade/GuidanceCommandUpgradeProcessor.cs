@@ -19,7 +19,7 @@ namespace NuPattern.Library.SchemaUpgrade
     [SchemaUpgradeProcessorOptions(Order = 1200, TargetVersion = @"1.2.0.0")]
     internal class GuidanceCommandUpgradeProcessor : IPatternModelSchemaUpgradeProcessor
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<GuidanceCommandUpgradeProcessor>();
+        private static readonly ITracer tracer = Tracer.Get<GuidanceCommandUpgradeProcessor>();
         private const string DefaultNamespace = SchemaConstants.DefaultNamespace;
         private static readonly XName CommandSettingsElementName = XName.Get(@"commandSettings", DefaultNamespace);
         private static readonly XName CommandSettingsPropertiesElementName = XName.Get(@"properties", DefaultNamespace);
@@ -53,7 +53,7 @@ namespace NuPattern.Library.SchemaUpgrade
                         .Distinct();
             if (commandSettings.Any())
             {
-                tracer.TraceInformation(Resources.GuidanceCommandUpgradeProcessor_TraceDeserialize);
+                tracer.Info(Resources.GuidanceCommandUpgradeProcessor_TraceDeserialize);
 
                 // Enumerate each <commandSettings> element
                 commandSettings.ForEach(cmdSettingsElement =>

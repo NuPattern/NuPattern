@@ -13,7 +13,7 @@ namespace NuPattern.Presentation
     /// </remarks>
     public class CommonUserControl : UserControl
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor(typeof(CommonUserControl));
+        private static readonly ITracer tracer = Tracer.Get(typeof(CommonUserControl));
 
         /// <summary>
         /// Creates a new instance of the <see cref="CommonDialogWindow"/> class.
@@ -21,7 +21,7 @@ namespace NuPattern.Presentation
         public CommonUserControl()
             : base()
         {
-            tracer.TraceVerbose(Properties.Resources.CommonDialogWindow_TraceResourcesLoaded);
+            tracer.Verbose(Properties.Resources.CommonDialogWindow_TraceResourcesLoaded);
         }
     }
 }

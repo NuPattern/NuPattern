@@ -20,7 +20,7 @@ namespace NuPattern.Library.ValidationRules
     [CategoryResource(@"AutomationCategory_General", typeof(Resources))]
     public class PropertyStringValueForbiddenCharsValidationRule : ValidationRule
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<PropertyStringValueForbiddenCharsValidationRule>();
+        private static readonly ITracer tracer = Tracer.Get<PropertyStringValueForbiddenCharsValidationRule>();
 
         /// <summary>
         /// Gets or sets the characters that are forbidden.
@@ -54,7 +54,7 @@ namespace NuPattern.Library.ValidationRules
 
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.PropertyStringValueForbiddenCharsValidationRule_TraceInitial, this.CurrentProperty.DefinitionName, this.ForbiddenChars);
 
             if (this.CurrentProperty.Info.Type.Equals(typeof(string).FullName, StringComparison.OrdinalIgnoreCase))
@@ -73,7 +73,7 @@ namespace NuPattern.Library.ValidationRules
                 }
             }
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.PropertyStringValueForbiddenCharsValidationRule_TraceEvaluation, this.CurrentProperty.DefinitionName, this.ForbiddenChars, !errors.Any());
 
             return errors;

@@ -59,7 +59,7 @@ namespace NuPattern.Runtime.UI.ViewModels
                     { Reflector<IMenuCommand>.GetProperty(x => x.Enabled).Name, (vm, m) => vm.IsEnabled = m.Enabled }
                 };
 
-            private static ITraceSource tracer = Tracer.GetSourceFor<AutomationCommand>();
+            private static ITracer tracer = Tracer.Get<AutomationCommand>();
 
             private MenuOptionViewModel parent;
             private IAutomationExtension automation;
@@ -103,7 +103,7 @@ namespace NuPattern.Runtime.UI.ViewModels
                 }
                 catch (Exception e)
                 {
-                    tracer.TraceError(e, Resources.AutomationCommand_QueryStatusFailed);
+                    tracer.Error(e, Resources.AutomationCommand_QueryStatusFailed);
                     return false;
                 }
                 finally

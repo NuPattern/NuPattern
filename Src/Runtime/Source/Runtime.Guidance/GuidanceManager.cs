@@ -11,7 +11,6 @@ using System.Xml;
 using NuPattern.Diagnostics;
 using NuPattern.Reflection;
 using NuPattern.Runtime.Composition;
-using NuPattern.Runtime.Guidance.Diagnostics;
 using NuPattern.Runtime.Guidance.Extensions;
 using NuPattern.Runtime.Guidance.Properties;
 
@@ -23,6 +22,8 @@ namespace NuPattern.Runtime.Guidance
     [Export(typeof(IGuidanceManager))]
     internal class GuidanceManager : IGuidanceManager
     {
+        private static readonly ITracer tracer = Tracer.Get<GuidanceManager>();
+
         private const string ExtensionsDir = @"Extensions";
         private const string ExtensionsFileFilter = @"*.vsixmanifest";
         private const string ExtensionManifestFileName = @"source.extension.vsixmanifest";
@@ -179,7 +180,7 @@ namespace NuPattern.Runtime.Guidance
             RaisePropertyChanged(x => x.IsOpened);
 
 
-            using (new TraceActivity(Resources.GuidanceManager_TraceOpenFromSolutionState, Tracer.GetSourceFor<GuidanceManager>()))
+            using (tracer.StartActivity(Resources.GuidanceManager_TraceOpenFromSolutionState))
             {
                 // Ignore guidance extensions that are not installed.
                 var availableSolutionExtensions = solutionState
@@ -213,8 +214,7 @@ namespace NuPattern.Runtime.Guidance
 
                 foreach (var extension in availableSolutionExtensions)
                 {
-                    var extensionTracer = GuidanceExtensionTracer.GetSourceFor(this, extension.State.ExtensionId, extension.State.InstanceName);
-                    using (new TraceActivity(Resources.GuidanceManager_TraceInitializeExtension, extensionTracer))
+                    using (tracer.StartActivity(Resources.GuidanceManager_TraceInitializeExtension, extension.State.InstanceName, extension.State.ExtensionId))
                     {
                         try
                         {
@@ -232,7 +232,7 @@ namespace NuPattern.Runtime.Guidance
                         }
                         catch (Exception ex)
                         {
-                            extensionTracer.TraceError(ex, Resources.GuidanceManager_TraceFailedExtensionInitialization);
+                            tracer.Error(ex, Resources.GuidanceManager_TraceFailedExtensionInitialization);
                         }
                     }
                 }
@@ -253,9 +253,7 @@ namespace NuPattern.Runtime.Guidance
             Guard.NotNullOrEmpty(() => extensionId, extensionId);
             Guard.NotNullOrEmpty(() => instanceName, instanceName);
 
-            var extensionTracer = GuidanceExtensionTracer.GetSourceFor(this, extensionId, instanceName);
-
-            using (new TraceActivity(Resources.GuidanceManager_TraceInstantiateExtension, extensionTracer))
+            using (tracer.StartActivity(Resources.GuidanceManager_TraceInstantiateExtension, instanceName, extensionId))
             {
                 try
                 {
@@ -303,7 +301,7 @@ namespace NuPattern.Runtime.Guidance
                 }
                 catch (Exception ex)
                 {
-                    extensionTracer.TraceError(ex, Resources.GuidanceManager_TraceFailedInstantiate);
+                    tracer.Error(ex, Resources.GuidanceManager_TraceFailedInstantiate);
                     throw;
                 }
             }
@@ -314,8 +312,7 @@ namespace NuPattern.Runtime.Guidance
             Guard.NotNullOrEmpty(() => extensionId, extensionId);
             Guard.NotNullOrEmpty(() => instanceName, instanceName);
 
-            var extensionTracer = GuidanceExtensionTracer.GetSourceFor(this, extensionId, instanceName);
-            using (new TraceActivity(Resources.GuidanceManager_TraceInstantiateExtension, extensionTracer))
+            using (tracer.StartActivity(Resources.GuidanceManager_TraceInstantiateExtension, instanceName, extensionId))
             {
                 try
                 {
@@ -345,7 +342,7 @@ namespace NuPattern.Runtime.Guidance
                 }
                 catch (Exception ex)
                 {
-                    extensionTracer.TraceError(ex, Resources.GuidanceManager_TraceFailedInstantiate);
+                    tracer.Error(ex, Resources.GuidanceManager_TraceFailedInstantiate);
                     throw;
                 }
             }
@@ -499,8 +496,7 @@ namespace NuPattern.Runtime.Guidance
             var extension = instantiatedGuidanceExtensions.FirstOrDefault(f => f.Item1.InstanceName == instanceName);
             if (extension != null)
             {
-                var tracer = GuidanceExtensionTracer.GetSourceFor(this, extension.Item1.ExtensionId, instanceName);
-                using (new TraceActivity(Resources.GuidanceManager_TraceFinishExtension, tracer))
+                using (tracer.StartActivity(Resources.GuidanceManager_TraceFinishExtension, instanceName, extension.Item1.ExtensionId))
                 {
                     try
                     {
@@ -508,7 +504,7 @@ namespace NuPattern.Runtime.Guidance
                     }
                     catch (Exception ex)
                     {
-                        tracer.TraceWarning(Resources.GuidanceManager_TraceFailedFinish, ex);
+                        tracer.Warn(Resources.GuidanceManager_TraceFailedFinish, ex);
                     }
 
                     var disposable = extension.Item1 as IDisposable;
@@ -520,7 +516,7 @@ namespace NuPattern.Runtime.Guidance
                     InstantiatedExtensionsChanged(this, EventArgs.Empty);
                     RaisePropertyChanged(x => x.InstantiatedGuidanceExtensions);
 
-                    tracer.TraceInformation(Resources.GuidanceManager_TraceFinishCOmplete);
+                    tracer.Info(Resources.GuidanceManager_TraceFinishCOmplete);
                 }
             }
         }

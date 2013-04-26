@@ -1,6 +1,5 @@
 ﻿using System;
 using NuPattern.Diagnostics;
-using NuPattern.Runtime.Guidance.Diagnostics;
 using NuPattern.Runtime.Guidance.Workflow;
 
 namespace NuPattern.Runtime.Guidance.Extensions
@@ -13,7 +12,7 @@ namespace NuPattern.Runtime.Guidance.Extensions
     internal class BlackboardWorkflowBinder
     {
 
-        private readonly ITraceSource tracer;
+        private readonly ITracer tracer;
         private readonly IGuidanceWorkflow guidanceWorkflow;
         private IGuidanceExtension feature;
 
@@ -25,7 +24,7 @@ namespace NuPattern.Runtime.Guidance.Extensions
         public BlackboardWorkflowBinder(IGuidanceExtension feature, IGuidanceWorkflow guidanceWorkflow)
         {
 
-            this.tracer = GuidanceExtensionTracer.GetSourceFor<BlackboardWorkflowBinder>(feature.ExtensionId, feature.InstanceName);
+            this.tracer = Tracer.Get<BlackboardWorkflowBinder>();
             this.guidanceWorkflow = guidanceWorkflow;
 
             this.feature = feature;

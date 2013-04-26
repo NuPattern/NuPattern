@@ -29,7 +29,7 @@ namespace NuPattern.Library.Automation
     [PartCreationPolicy(CreationPolicy.Shared)]
     internal class CommandSettingsValidations
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<CommandSettingsValidations>();
+        private static readonly ITracer tracer = Tracer.Get<CommandSettingsValidations>();
 
         // We statically cache the lookups here.
         // TODO: this could be refactored into a separate global service.
@@ -93,7 +93,7 @@ namespace NuPattern.Library.Automation
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Resources.ValidationMethodFailed_Error,
                     Reflector<CommandSettingsValidations>.GetMethod(n => n.ValidateTypeIsNotEmpty(null, null)).Name);

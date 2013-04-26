@@ -23,7 +23,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
     [DescriptionResource("DeleteViewCommand_Description", typeof(Resources))]
     public class DeleteViewCommand : NuPattern.Runtime.Command
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<DeleteViewCommand>();
+        private static readonly ITracer tracer = Tracer.Get<DeleteViewCommand>();
 
         /// <summary>
         /// Gets or sets the service that resolves templates.
@@ -48,7 +48,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
 
             var patternModel = this.CurrentElement.Parent.Parent.AsElement();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.DeleteViewCommand_TraceInitial, patternModel.InstanceName, this.CurrentElement.InstanceName);
 
             var reference = SolutionArtifactLinkReference.GetResolvedReferences(patternModel, this.UriService).FirstOrDefault();
@@ -66,7 +66,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
                             var view = pm.Pattern.GetView(new Guid(viewReference.Host));
                             if (view != null)
                             {
-                                tracer.TraceInformation(Resources.DeleteViewCommand_TraceDeletingView, patternModel.InstanceName, reference.Name);
+                                tracer.Info(Resources.DeleteViewCommand_TraceDeletingView, patternModel.InstanceName, reference.Name);
 
                                 if (pm.Pattern.DeleteView(new Guid(viewReference.Host)))
                                 {
@@ -78,21 +78,21 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
                             }
                             else
                             {
-                                tracer.TraceWarning(
+                                tracer.Warn(
                                     Resources.SetAsDefaultViewCommand_TraceViewNotFound, patternModel.InstanceName, viewReference.Host);
                             }
                         }, true);
                     }
                     else
                     {
-                        tracer.TraceWarning(
+                        tracer.Warn(
                             Resources.SetAsDefaultViewCommand_TraceReferenceNotFound, patternModel.InstanceName);
                     }
                 }
             }
             else
             {
-                tracer.TraceWarning(
+                tracer.Warn(
                     Resources.DeleteViewCommand_TraceReferenceNotFound, patternModel.InstanceName);
             }
         }

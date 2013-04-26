@@ -25,7 +25,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
     [CLSCompliant(false)]
     public class ValidatePatternModelCommand : NuPattern.Runtime.Command
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<ValidatePatternModelCommand>();
+        private static readonly ITracer tracer = Tracer.Get<ValidatePatternModelCommand>();
 
         private DTE dte;
 
@@ -75,7 +75,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.ValidatePatternModelCommand_TraceInitial, this.CurrentElement.InstanceName, this.TargetPath);
 
             var resolver = new PathResolver(this.CurrentElement, this.UriService,
@@ -89,19 +89,19 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
 
                 if (itemContainer != null)
                 {
-                    tracer.TraceInformation(
+                    tracer.Info(
                         Resources.ValidatePatternModelCommand_TraceValidating, this.CurrentElement.InstanceName, itemContainer.PhysicalPath);
 
                     if (!PatternModelDocHelper.ValidateDocument(itemContainer.PhysicalPath))
                     {
-                        tracer.TraceInformation(
+                        tracer.Info(
                             Resources.ValidatePatternModelCommand_TraceOpeningForResolution, this.CurrentElement.InstanceName, itemContainer.Name);
                     }
                 }
             }
             else
             {
-                tracer.TraceWarning(
+                tracer.Warn(
                     Resources.ValidatePatternModelCommand_TraceDesignerNotFound, this.CurrentElement.InstanceName);
             }
         }

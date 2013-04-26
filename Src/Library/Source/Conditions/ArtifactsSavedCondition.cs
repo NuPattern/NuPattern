@@ -20,7 +20,7 @@ namespace NuPattern.Library.Conditions
     [CLSCompliant(false)]
     public class ArtifactsSavedCondition : Condition
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<ArtifactsSavedCondition>();
+        private static readonly ITracer tracer = Tracer.Get<ArtifactsSavedCondition>();
 
         /// <summary>
         /// Gets or sets the current element.
@@ -43,7 +43,7 @@ namespace NuPattern.Library.Conditions
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.ArtifactsSavedCondition_TraceInitial, this.CurrentElement.InstanceName);
 
             var solutionItems = SolutionArtifactLinkReference.GetResolvedReferences(this.CurrentElement, this.UriReferenceService).ToList();
@@ -58,7 +58,7 @@ namespace NuPattern.Library.Conditions
                     {
                         if (!projectItem.Saved)
                         {
-                            tracer.TraceInformation(
+                            tracer.Info(
                                 Resources.ArtifactsSavedCondition_TraceEvaluatedNotSaved, projectItem.Name, this.CurrentElement.InstanceName);
 
                             return false;
@@ -67,7 +67,7 @@ namespace NuPattern.Library.Conditions
                 }
             }
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.ArtifactsSavedCondition_TraceEvaluatedAllSaved, this.CurrentElement.InstanceName);
 
             return true;

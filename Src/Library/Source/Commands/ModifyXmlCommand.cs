@@ -24,7 +24,7 @@ namespace NuPattern.Library.Commands
     [CLSCompliant(false)]
     public class ModifyXmlCommand : Command
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<ModifyXmlCommand>();
+        private static readonly ITracer tracer = Tracer.Get<ModifyXmlCommand>();
 
         /// <summary>
         /// Creates a new instance of the <see cref="ModifyXmlCommand"/> class.
@@ -116,7 +116,7 @@ namespace NuPattern.Library.Commands
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.ModifyXmlCommand_TraceInitial,
                     this.SourcePath, this.XmlPath, this.Action, this.NewValue);
 
@@ -124,7 +124,7 @@ namespace NuPattern.Library.Commands
             var sourceItem = PathResolver.ResolveToSolutionItem<IItem>(this.CurrentElement, this.Solution, this.UriReferenceService, this.SourcePath);
             if (sourceItem == null)
             {
-                tracer.TraceError(
+                tracer.Error(
                     Resources.ModifyXmlCommand_ErrorNoSource, this.CurrentElement.InstanceName, this.SourcePath);
                 return;
             }
@@ -132,13 +132,13 @@ namespace NuPattern.Library.Commands
             {
                 // Resolve XmlPath
                 var xPath = ExpressionEvaluator.Evaluate(this.CurrentElement, this.XmlPath);
-                tracer.TraceInformation(
+                tracer.Info(
                     Resources.ModifyXmlCommand_TraceXPath,
                         this.XmlPath, xPath);
 
                 // Resolve NewValue
                 var newValue = ExpressionEvaluator.Evaluate(this.CurrentElement, this.NewValue);
-                tracer.TraceInformation(
+                tracer.Info(
                     Resources.ModifyXmlCommand_TraceNewValue,
                         this.NewValue, newValue);
 
@@ -154,7 +154,7 @@ namespace NuPattern.Library.Commands
                 }
                 catch (Exception)
                 {
-                    tracer.TraceError(
+                    tracer.Error(
                         Resources.ModifyXmlCommand_ErrorLoadXmlDoc, sourceFilePath);
                     throw;
                 }
@@ -207,7 +207,7 @@ namespace NuPattern.Library.Commands
                             }
                             catch (Exception)
                             {
-                                tracer.TraceError(
+                                tracer.Error(
                                     Resources.ModifyXmlCommand_ErrorSaveXmlDoc, sourceFilePath);
                                 // Ignore exception on save, let the user save the changes in VS manually
                             }
@@ -215,7 +215,7 @@ namespace NuPattern.Library.Commands
                     }
                     else
                     {
-                        tracer.TraceError(
+                        tracer.Error(
                             Resources.ModifyXmlCommand_ErrorUpdateNodeNotFound, sourceLogicalPath, xPath);
 
                         // Report error to user
@@ -226,7 +226,7 @@ namespace NuPattern.Library.Commands
                 }
                 catch (XPathException)
                 {
-                    tracer.TraceError(
+                    tracer.Error(
                         Resources.ModifyXmlCommand_ErrorXPath, sourceFilePath, xPath);
                     throw;
                 }

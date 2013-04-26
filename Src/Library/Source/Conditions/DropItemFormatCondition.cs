@@ -17,7 +17,7 @@ namespace NuPattern.Library.Conditions
     [CLSCompliant(false)]
     public class DropItemFormatCondition : Condition
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<DropItemFormatCondition>();
+        private static readonly ITracer tracer = Tracer.Get<DropItemFormatCondition>();
 
         /// <summary>
         /// Gets or sets the current element.
@@ -41,12 +41,12 @@ namespace NuPattern.Library.Conditions
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.DropItemFormatCondition_TraceInitial, this.Format);
 
             var result = DragArgs.Data.GetDataPresent(Format);
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.DropItemFormatCondition_TraceEvaluation, this.Format, result);
 
             return result;

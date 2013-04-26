@@ -15,7 +15,7 @@ namespace NuPattern.VisualStudio.TemplateWizards
     [CLSCompliant(false)]
     public class SolutionNameGetTemplateWizard : TemplateWizard
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<SolutionNameGetTemplateWizard>();
+        private static readonly ITracer tracer = Tracer.Get<SolutionNameGetTemplateWizard>();
 
         private const string SolutionNameKey = "$solutionname$";
         private const string SafeSolutionNameKey = "$safesolutionname$";
@@ -36,7 +36,7 @@ namespace NuPattern.VisualStudio.TemplateWizards
 
             if (contextSolutionName != null)
             {
-                tracer.TraceVerbose(Resources.SolutionNameTemplateWizard_ContextSolutionName, contextSolutionName);
+                tracer.Verbose(Resources.SolutionNameTemplateWizard_ContextSolutionName, contextSolutionName);
 
                 replacementsDictionary[SolutionNameKey] = (string)contextSolutionName;
 

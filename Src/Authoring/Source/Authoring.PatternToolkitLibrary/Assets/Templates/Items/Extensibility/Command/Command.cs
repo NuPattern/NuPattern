@@ -18,7 +18,7 @@ namespace $rootnamespace$
     [CLSCompliant(false)]
     public class $safeitemname$ : NuPattern.Runtime.Command
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<$safeitemname$>();
+        private static readonly ITracer tracer = Tracer.Get<$safeitemname$>();
 
         /// <summary>
         /// Gets or sets a configurable property for this command.
@@ -64,13 +64,13 @@ namespace $rootnamespace$
             this.ValidateObject();
 
             // Make initial trace statement for this command
-            tracer.TraceInformation(
+            tracer.Info(
                 "Executing $safeitemname$ on current element '{0}' with AProperty '{1}'", this.CurrentElement.InstanceName, this.AProperty);
 
             // TODO: Implement command automation code
-            // TODO: Use tracer.TraceWarning() to note expected and recoverable errors
-            // TODO: Use tracer.TraceVerbose() to note internal execution logic decisions
-            // TODO: Use tracer.TraceInformation() to note key results of execution
+            // TODO: Use tracer.Warn() to note expected and recoverable errors
+            // TODO: Use tracer.Verbose() to note internal execution logic decisions
+            // TODO: Use tracer.Info() to note key results of execution
             // TODO: Raise exceptions for all other errors
         }
     }

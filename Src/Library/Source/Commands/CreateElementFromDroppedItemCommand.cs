@@ -13,7 +13,7 @@ namespace NuPattern.Library.Commands
     public abstract class CreateElementFromDroppedItemCommand : CreateElementFromItemCommand
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<CreateElementFromDroppedItemCommand>();
+        private static readonly ITracer tracer = Tracer.Get<CreateElementFromDroppedItemCommand>();
 
         /// <summary>
         /// Gets or sets the drag arguments

@@ -26,7 +26,7 @@ namespace NuPattern.Library.TemplateWizards
     [CLSCompliant(false)]
     public class InstantiationTemplateWizard : TemplateWizard
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<InstantiationTemplateWizard>();
+        private static readonly ITracer tracer = Tracer.Get<InstantiationTemplateWizard>();
 
         private const string ProjectNameKey = "$projectname$";
         private const string ItemNameKey = "$itemname$";
@@ -325,7 +325,7 @@ namespace NuPattern.Library.TemplateWizards
                 }
                 else
                 {
-                    tracer.TraceWarning(Properties.Resources.InstantiationTemplateWizard_CantCreateUri, createdItem.GetLogicalPath());
+                    tracer.Warn(Properties.Resources.InstantiationTemplateWizard_CantCreateUri, createdItem.GetLogicalPath());
                 }
             }
 

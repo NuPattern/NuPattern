@@ -19,7 +19,7 @@ namespace NuPattern.Runtime.Guidance
     [Export(typeof(IProjectTypeProvider))]
     internal class ProjectTypeProvider : IProjectTypeProvider
     {
-        static readonly ITraceSource tracer = Tracer.GetSourceFor<ProjectTypeProvider>();
+        static readonly ITracer tracer = Tracer.Get<ProjectTypeProvider>();
 
         List<Type> availableTypes = new List<Type>();
         bool initialized;
@@ -79,7 +79,7 @@ namespace NuPattern.Runtime.Guidance
 
             try
             {
-                tracer.TraceVerbose(Resources.ProjectTypeProvider_TraceLoadTypes);
+                tracer.Verbose(Resources.ProjectTypeProvider_TraceLoadTypes);
                 loadingTypes = true;
 
                 this.availableTypes.Clear();
@@ -89,7 +89,7 @@ namespace NuPattern.Runtime.Guidance
                     var hierarchy = project.As<IVsHierarchy>();
                     if (hierarchy != null)
                     {
-                        tracer.TraceVerbose(Resources.ProjectTypeProvider_TraceLoadProjectTypes, project.Name);
+                        tracer.Verbose(Resources.ProjectTypeProvider_TraceLoadProjectTypes, project.Name);
                         var typeDiscoveryService = dynamicTypeService.GetTypeDiscoveryService(hierarchy);
                         string currentProjectAssemblyName;
 

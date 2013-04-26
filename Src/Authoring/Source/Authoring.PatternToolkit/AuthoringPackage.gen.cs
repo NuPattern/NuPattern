@@ -11,7 +11,7 @@ namespace NuPattern.Authoring.PatternToolkit
     /// </summary>
     public partial class AuthoringPackage : Package
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<AuthoringPackage>();
+        private static readonly ITracer tracer = Tracer.Get<AuthoringPackage>();
         internal static string CurrentToolkitVersion = "1.3.20.0";
         private static string MsBuildPath = @"%localappdata%\Microsoft\MSBuild\NuPattern\NuPattern Toolkit Builder";
         private static string TargetsFilename = "NuPattern.Authoring.PatternToolkitVersion.targets";

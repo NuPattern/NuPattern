@@ -21,7 +21,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.ValidationRules
     [CLSCompliant(false)]
     public class ValidateGuidanceDocument : ValidationRule
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<ValidateGuidanceDocument>();
+        private static readonly ITracer tracer = Tracer.Get<ValidateGuidanceDocument>();
         private IGuidanceProcessor processor;
 
         /// <summary>
@@ -66,7 +66,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.ValidationRules
 
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.ValidateGuidanceDocument_TraceInitial, this.CurrentElement.InstanceName);
 
             // Get guidance document path
@@ -82,7 +82,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.ValidationRules
             // Validate document
             errors.AddRange(this.processor.ValidateDocument());
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.ValidateGuidanceDocument_TraceValidation, this.CurrentElement.InstanceName, !errors.Any());
 
             return errors;

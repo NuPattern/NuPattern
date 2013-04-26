@@ -20,7 +20,7 @@ namespace NuPattern.Library.SchemaUpgrade
     [SchemaUpgradeProcessorOptions(Order = 1200, TargetVersion = @"1.2.0.0")]
     internal class AggregatorCommandUpgradeProcessor : IPatternModelSchemaUpgradeProcessor
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<CommandSettingsUpgradeProcessor>();
+        private static readonly ITracer tracer = Tracer.Get<CommandSettingsUpgradeProcessor>();
         private const string DefaultNamespace = SchemaConstants.DefaultNamespace;
         private static readonly XName CommandSettingsElementName = XName.Get(@"commandSettings", DefaultNamespace);
         private static readonly XName CommandSettingsPropertiesElementName = XName.Get(@"properties", DefaultNamespace);
@@ -51,7 +51,7 @@ namespace NuPattern.Library.SchemaUpgrade
                         .Distinct();
             if (commandSettings.Any())
             {
-                tracer.TraceInformation(Resources.AggregatorCommandUpgradeProcessor_TraceDeserialize);
+                tracer.Info(Resources.AggregatorCommandUpgradeProcessor_TraceDeserialize);
 
                 // Enumerate each <commandSettings> element
                 commandSettings.ForEach(cmdSettingsElement =>
@@ -83,7 +83,7 @@ namespace NuPattern.Library.SchemaUpgrade
                                                     var referenceStrings = existingBinding.Value.Split(new[] { CommandReferenceDelimitier }, StringSplitOptions.RemoveEmptyEntries);
                                                     if (referenceStrings.Any())
                                                     {
-                                                        tracer.TraceInformation(Resources.AggregatorCommandUpgradeProcessor_TraceDeserializeCommandSettings, id);
+                                                        tracer.Info(Resources.AggregatorCommandUpgradeProcessor_TraceDeserializeCommandSettings, id);
 
                                                         // Convert to command references
                                                         var references = new List<CommandReference>();

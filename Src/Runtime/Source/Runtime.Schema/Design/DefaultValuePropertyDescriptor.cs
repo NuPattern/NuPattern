@@ -10,7 +10,7 @@ namespace NuPattern.Runtime.Schema.Design
 {
     internal class DefaultValuePropertyDescriptor : PropertyDescriptor
     {
-        private static ITraceSource tracer = Tracer.GetSourceFor<DefaultValuePropertyDescriptor>();
+        private static ITracer tracer = Tracer.Get<DefaultValuePropertyDescriptor>();
         private PropertySchema schema;
         private Type propertyType;
 
@@ -64,14 +64,14 @@ namespace NuPattern.Runtime.Schema.Design
         public override void SetValue(object component, object value)
         {
             //Ignore setting value at this level
-            tracer.TraceVerbose(
+            tracer.Verbose(
                 Resources.DefaultValueDescriptor_TraceSetValue, this.schema.Owner.Name, this.Name);
         }
 
         public override void ResetValue(object component)
         {
             // Reset both Value and ValueProvider
-            tracer.TraceVerbose(
+            tracer.Verbose(
                 Resources.DefaultValueDescriptor_TraceResetValue, this.schema.Owner.Name, this.Name);
 
             this.schema.DefaultValue.Reset();

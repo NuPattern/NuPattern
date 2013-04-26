@@ -21,7 +21,7 @@ namespace NuPattern.VisualStudio.TemplateWizards
         private const string Link = "Link";
         private const string FixedLink = "FixedLink";
 
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<FixLinkPathTemplateWizard>();
+        private static readonly ITracer tracer = Tracer.Get<FixLinkPathTemplateWizard>();
 
         private DTE dte;
 
@@ -80,7 +80,7 @@ namespace NuPattern.VisualStudio.TemplateWizards
                                                     item.Include = fixedLink.Value;
                                                     fixedLink.Value = string.Empty;
 
-                                                    tracer.TraceVerbose(Resources.FixLinkPathTemplateWizard_LinkFixed, item.Label, fixedLink.Value);
+                                                    tracer.Verbose(Resources.FixLinkPathTemplateWizard_LinkFixed, item.Label, fixedLink.Value);
                                                 }
 
                                                 // TODO: Remove fixed link (cant do this, collection is readonly)

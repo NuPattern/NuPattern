@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling.Validation;
+using NuPattern.Diagnostics;
 using NuPattern.Reflection;
 using NuPattern.Runtime.Store.Properties;
 using NuPattern.Runtime.Validation;
@@ -50,7 +51,7 @@ namespace NuPattern.Runtime.Store
             }
             catch (Exception ex)
             {
-                tracer.TraceError(
+                tracer.Error(
                     ex,
                     Resources.ValidationMethodFailed_Error,
                     Reflector<Property>.GetMethod(n => n.ValidateInstance(context)).Name);

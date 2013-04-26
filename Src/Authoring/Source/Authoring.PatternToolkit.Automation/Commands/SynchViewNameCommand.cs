@@ -21,7 +21,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
     [DescriptionResource("SynchViewNameCommand_Description", typeof(Resources))]
     public class SynchViewNameCommand : NuPattern.Runtime.Command
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<SynchViewNameCommand>();
+        private static readonly ITracer tracer = Tracer.Get<SynchViewNameCommand>();
 
         /// <summary>
         /// Gets or sets the service that resolves templates.
@@ -46,7 +46,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
 
             var patternModel = this.CurrentElement.Parent.Parent.AsElement();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.SyncViewNameCommand_TraceInitial, patternModel.InstanceName, this.CurrentElement.InstanceName);
 
             var reference = SolutionArtifactLinkReference.GetResolvedReferences(patternModel, this.UriService).FirstOrDefault();
@@ -67,21 +67,21 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
                                 }
                                 else
                                 {
-                                    tracer.TraceWarning(
+                                    tracer.Warn(
                                         Resources.SetAsDefaultViewCommand_TraceViewNotFound, patternModel.InstanceName, viewReference.Host);
                                 }
                             }, false);
                     }
                     else
                     {
-                        tracer.TraceWarning(
+                        tracer.Warn(
                             Resources.SetAsDefaultViewCommand_TraceReferenceNotFound, patternModel.InstanceName);
                     }
                 }
             }
             else
             {
-                tracer.TraceWarning(
+                tracer.Warn(
                     Resources.SyncViewNameCommand_TraceReferenceNotFound, patternModel.InstanceName);
             }
         }

@@ -23,7 +23,7 @@ namespace NuPattern.Library.Commands
     [CLSCompliant(false)]
     public class CopyFolderCommand : Command
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<CopyFolderCommand>();
+        private static readonly ITracer tracer = Tracer.Get<CopyFolderCommand>();
         private const bool DefaultOverwriteIfExists = true;
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace NuPattern.Library.Commands
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.CopyFolderCommand_TraceInitial, this.SourcePath, this.DestinationPath, this.OverwriteIfExists);
 
             var sourcePath = Environment.ExpandEnvironmentVariables(this.SourcePath);
@@ -87,19 +87,19 @@ namespace NuPattern.Library.Commands
 
             if (!Directory.Exists(sourcePath))
             {
-                tracer.TraceError(
+                tracer.Error(
                     Resources.CopyFolderCommand_TraceSourceNotFound, this.SourcePath);
                 return;
             }
 
             if (!Directory.Exists(destinationPath))
             {
-                tracer.TraceInformation(
+                tracer.Info(
                     Resources.CopyFolderCommand_TraceDestinationNotFound, this.DestinationPath);
 
                 FileSystem.CreateDirectory(destinationPath);
 
-                tracer.TraceInformation(
+                tracer.Info(
                     Resources.CopyFolderCommand_TraceCopying, this.SourcePath, this.DestinationPath);
 
                 FileSystem.CopyDirectory(sourcePath, destinationPath, UIOption.AllDialogs, UICancelOption.ThrowException);
@@ -108,14 +108,14 @@ namespace NuPattern.Library.Commands
             {
                 if (this.OverwriteIfExists)
                 {
-                    tracer.TraceInformation(
+                    tracer.Info(
                         Resources.CopyFolderCommand_TraceCopying, this.SourcePath, this.DestinationPath);
 
                     FileSystem.CopyDirectory(sourcePath, destinationPath, UIOption.AllDialogs, UICancelOption.ThrowException);
                 }
                 else
                 {
-                    tracer.TraceInformation(
+                    tracer.Info(
                         Resources.CopyFolderCommand_TraceDestinationExistsNoOverwrite, this.DestinationPath);
                 }
             }

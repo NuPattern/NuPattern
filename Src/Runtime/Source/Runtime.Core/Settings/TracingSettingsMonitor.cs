@@ -68,13 +68,13 @@ namespace NuPattern.Runtime.Settings
         {
             if (HasSettings(settings))
             {
-                Tracer.GetOrCreateUnderlyingSource(TracingSettings.DefaultRootSourceName).Switch.Level = settings.Tracing.RootSourceLevel;
+                Tracer.Manager.GetSource(TracingSettings.DefaultRootSourceName).Switch.Level = settings.Tracing.RootSourceLevel;
 
                 if (settings.Tracing.TraceSources != null)
                 {
                     foreach (var setting in settings.Tracing.TraceSources)
                     {
-                        var source = Tracer.GetOrCreateUnderlyingSource(setting.SourceName);
+                        var source = Tracer.Manager.GetSource(setting.SourceName);
                         source.Listeners.Add(new DefaultTraceListener());
                         source.Switch.Level = setting.LoggingLevel;
                     }
@@ -86,11 +86,11 @@ namespace NuPattern.Runtime.Settings
         {
             if (HasSettings(settings) && settings.Tracing.TraceSources != null)
             {
-                Tracer.GetOrCreateUnderlyingSource(TracingSettings.DefaultRootSourceName).Switch.Level = TracingSettings.DefaultRootSourceLevel;
+                Tracer.Manager.GetSource(TracingSettings.DefaultRootSourceName).Switch.Level = TracingSettings.DefaultRootSourceLevel;
 
                 foreach (var setting in settings.Tracing.TraceSources)
                 {
-                    var source = Tracer.GetOrCreateUnderlyingSource(setting.SourceName);
+                    var source = Tracer.Manager.GetSource(setting.SourceName);
                     source.Switch.Level = SourceLevels.Off;
                 }
             }

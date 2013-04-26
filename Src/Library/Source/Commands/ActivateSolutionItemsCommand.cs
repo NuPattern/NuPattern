@@ -20,7 +20,7 @@ namespace NuPattern.Library.Commands
     public abstract class ActivateSolutionItemsCommand : Command
     {
         private const bool DefaultOpen = false;
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<ActivateSolutionItemsCommand>();
+        private static readonly ITracer tracer = Tracer.Get<ActivateSolutionItemsCommand>();
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ActivateSolutionItemsCommand"/> class.
@@ -67,7 +67,7 @@ namespace NuPattern.Library.Commands
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.ActivateSolutionItemsCommand_TraceInitial, this.CurrentElement.InstanceName, this.Open);
 
             var items = GetSolutionItems();
@@ -77,7 +77,7 @@ namespace NuPattern.Library.Commands
             }
             else
             {
-                tracer.TraceWarning(
+                tracer.Warn(
                     Resources.ActivateSolutionItemsCommand_TraceNoItems, this.CurrentElement.InstanceName);
             }
         }
@@ -98,7 +98,7 @@ namespace NuPattern.Library.Commands
 
             if (items.Any())
             {
-                tracer.TraceVerbose(
+                tracer.Verbose(
                     Resources.ActivateSolutionItemsCommand_TraceOpeningSolutionExplorer);
 
                 // Ensure Solution Explorer is visible (Solution Explorer ensures item is visible)
@@ -111,7 +111,7 @@ namespace NuPattern.Library.Commands
                         // Open the item
                         if (this.Open)
                         {
-                            tracer.TraceInformation(
+                            tracer.Info(
                                 Resources.ActivateSolutionItemsCommand_TraceOpeningItem, this.CurrentElement.InstanceName, item.GetLogicalPath());
 
                             this.UriReferenceService.Open(item);
@@ -119,12 +119,12 @@ namespace NuPattern.Library.Commands
                     }
                     catch (Exception e)
                     {
-                        tracer.TraceWarning(
+                        tracer.Warn(
                             Resources.ActivateSolutionItemsCommand_TraceOpenFailed, item.GetLogicalPath(), this.CurrentElement.InstanceName, e.Message);
                     }
                 }
 
-                tracer.TraceInformation(
+                tracer.Info(
                     Resources.ActivateSolutionItemsCommand_TraceSelectingAllItems, this.CurrentElement.InstanceName);
 
                 // Select items

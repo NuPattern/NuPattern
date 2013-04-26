@@ -16,7 +16,7 @@ namespace NuPattern.Library.ValueProviders
     [CLSCompliant(false)]
     public class RootNamespaceValueProvider : VsProjectPropertyValueProvider
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<RootNamespaceValueProvider>();
+        private static readonly ITracer tracer = Tracer.Get<RootNamespaceValueProvider>();
 
         /// <summary>
         /// Evaluates this provider.
@@ -25,7 +25,7 @@ namespace NuPattern.Library.ValueProviders
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.RootNamespaceValueProvider_TraceInitial, this.CurrentElement.InstanceName, this.ProjectPath);
 
             return base.Evaluate();
@@ -39,9 +39,9 @@ namespace NuPattern.Library.ValueProviders
         {
             Guard.NotNull(() => project, project);
 
-            var result = project.Data.RootNamespace;
+            var result = (string)project.Data.RootNamespace;
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.RootNamespaceValueProvider_TraceEvaluation, this.CurrentElement.InstanceName, this.ProjectPath, result);
 
             return result;

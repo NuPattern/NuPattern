@@ -25,7 +25,7 @@ namespace NuPattern.Library.Commands
     [CLSCompliant(false)]
     public class SynchArtifactNameCommand : Command
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<SynchArtifactNameCommand>();
+        private static readonly ITracer tracer = Tracer.Get<SynchArtifactNameCommand>();
         internal const string FilteredReferenceTagValue = "FilteredByTag";
 
         /// <summary>
@@ -67,7 +67,7 @@ namespace NuPattern.Library.Commands
             {
                 this.ValidateObject();
 
-                tracer.TraceInformation(
+                tracer.Info(
                     Resources.SynchArtifactNameCommand_TraceInitial, this.CurrentElement.InstanceName, this.ReferenceTag);
 
                 if (!string.IsNullOrEmpty(this.ReferenceTag) && this.ReferenceTag != FilteredReferenceTagValue)
@@ -90,7 +90,7 @@ namespace NuPattern.Library.Commands
                             var solutionItem = this.UriReferenceService.TryResolveUri<IItemContainer>(referenceUri);
                             if (solutionItem == null)
                             {
-                                tracer.TraceWarning(
+                                tracer.Warn(
                                     Resources.SynchArtifactNameCommand_TraceFailedToResolveReference, referenceUri, this.CurrentElement.InstanceName);
                                 continue;
                             }
@@ -118,18 +118,18 @@ namespace NuPattern.Library.Commands
                                     proposedItemName = Path.GetFileNameWithoutExtension(resolver.FileName);
                                 }
 
-                                tracer.TraceInformation(
+                                tracer.Info(
                                     Resources.SynchArtifactNameCommand_TraceRenameSolutionItem, solutionItem.Name, proposedItemName);
 
                                 var uiService = (IVsUIShell)this.ServiceProvider.GetService(typeof(IVsUIShell));
                                 var newItemName = solutionItem.Rename(proposedItemName, true, uiService);
 
-                                tracer.TraceInformation(
+                                tracer.Info(
                                     Resources.SynchArtifactNameCommand_TraceSolutionItemRenamed, solutionItem.Name, newItemName);
                             }
                             else
                             {
-                                tracer.TraceInformation(
+                                tracer.Info(
                                     Resources.SynchArtifactNameCommand_TraceItemIgnoredSameName, solutionItem.Name);
                             }
                         }
@@ -138,7 +138,7 @@ namespace NuPattern.Library.Commands
             }
             catch (Exception)
             {
-                tracer.TraceError(
+                tracer.Error(
                     Resources.SynchArtifactNameCommand_TraceFailedSync, this.CurrentElement.InstanceName);
                 throw;
             }

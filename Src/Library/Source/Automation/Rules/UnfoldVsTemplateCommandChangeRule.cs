@@ -13,7 +13,7 @@ namespace NuPattern.Library.Automation
     [RuleOn(typeof(CommandSettings), FireTime = TimeToFire.TopLevelCommit)]
     internal class UnfoldVsTemplateCommandChangeRule : ChangeRule
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<UnfoldVsTemplateCommandChangeRule>();
+        private static readonly ITracer tracer = Tracer.Get<UnfoldVsTemplateCommandChangeRule>();
 
         /// <summary>
         /// Handles the property change event for the settings.

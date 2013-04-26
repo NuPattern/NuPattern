@@ -21,7 +21,7 @@ namespace NuPattern.Library.Commands
     [CLSCompliant(false)]
     public class CreateArtifactLinkCommand : Command
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<CreateArtifactLinkCommand>();
+        private static readonly ITracer tracer = Tracer.Get<CreateArtifactLinkCommand>();
 
         /// <summary>
         /// Gets or sets the URI reference service.
@@ -60,12 +60,12 @@ namespace NuPattern.Library.Commands
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.CreateArtifactLinkCommand_TraceInitial, this.CurrentElement.InstanceName);
 
             foreach (var item in Solution.Traverse().Where(t => !string.IsNullOrEmpty(t.PhysicalPath) && Items.Contains(t.PhysicalPath.ToLowerInvariant())))
             {
-                tracer.TraceInformation(
+                tracer.Info(
                     Resources.CreateArtifactLinkCommand_TraceCreateLink, this.CurrentElement.InstanceName, item.GetLogicalPath());
 
                 SolutionArtifactLinkReference.AddReference(this.CurrentElement, UriService.CreateUri(item));

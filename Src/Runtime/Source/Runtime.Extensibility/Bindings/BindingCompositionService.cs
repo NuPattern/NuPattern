@@ -18,7 +18,7 @@ namespace NuPattern.Runtime.Bindings
     [Export(typeof(IBindingCompositionService))]
     internal class BindingCompositionService : IBindingCompositionService
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<BindingCompositionService>();
+        private static readonly ITracer tracer = Tracer.Get<BindingCompositionService>();
 
         private IServiceProvider serviceProvider;
         private IComponentModel componentModel;
@@ -91,7 +91,7 @@ namespace NuPattern.Runtime.Bindings
             }
             catch (Exception ex)
             {
-                tracer.TraceError(ex, Resources.BindingCompositionService_FailedToInitialize);
+                tracer.Error(ex, Resources.BindingCompositionService_FailedToInitialize);
                 throw;
             }
 

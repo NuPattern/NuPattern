@@ -21,7 +21,7 @@ namespace NuPattern.Library.Commands
     [CLSCompliant(false)]
     public class ActivateElementSolutionItemCommand : ActivateSolutionItemsCommand
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<ActivateElementSolutionItemCommand>();
+        private static readonly ITracer tracer = Tracer.Get<ActivateElementSolutionItemCommand>();
 
         /// <summary>
         /// Gets or sets the target path.
@@ -45,7 +45,7 @@ namespace NuPattern.Library.Commands
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.ActivateElementSolutionItemCommand_TraceInitial, this.CurrentElement.InstanceName, this.Open, this.TargetPath, this.TargetFileName);
 
             base.Execute();

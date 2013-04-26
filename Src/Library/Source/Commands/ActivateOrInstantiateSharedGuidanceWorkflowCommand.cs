@@ -23,7 +23,7 @@ namespace NuPattern.Library.Commands
     [CLSCompliant(false)]
     public class ActivateOrInstantiateSharedGuidanceWorkflowCommand : Command
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<ActivateOrInstantiateSharedGuidanceWorkflowCommand>();
+        private static readonly ITracer tracer = Tracer.Get<ActivateOrInstantiateSharedGuidanceWorkflowCommand>();
 
         /// <summary>
         /// Gets or sets the feature id.
@@ -64,7 +64,7 @@ namespace NuPattern.Library.Commands
         {
             this.ValidateObject();
 
-            tracer.TraceInformation(
+            tracer.Info(
                 Resources.ActivateOrInstantiateSharedGuidanceWorkflowCommand_TraceInitial, this.ExtensionId);
 
             // Ensure the feature type exists
@@ -75,7 +75,7 @@ namespace NuPattern.Library.Commands
                 // Show the guidance windows
                 if (this.ServiceProvider != null)
                 {
-                    tracer.TraceVerbose(
+                    tracer.Verbose(
                         Resources.ActivateOrInstantiateSharedGuidanceWorkflowCommand_TraceShowingGuidanceExplorer);
 
                     this.GuidanceManager.ShowGuidanceWindows(this.ServiceProvider);
@@ -88,14 +88,14 @@ namespace NuPattern.Library.Commands
                     // Create a default name
                     var instanceName = this.GuidanceManager.GetUniqueInstanceName(featureRegistration.DefaultName);
 
-                    tracer.TraceInformation(
+                    tracer.Info(
                         Resources.ActivateOrInstantiateSharedGuidanceWorkflowCommand_TraceInstantiate, this.ExtensionId, instanceName);
 
                     // Instantiate the feature
                     featureInstance = this.GuidanceManager.Instantiate(this.ExtensionId, instanceName);
                 }
 
-                tracer.TraceInformation(
+                tracer.Info(
                         Resources.ActivateOrInstantiateSharedGuidanceWorkflowCommand_TraceActivate, featureInstance.InstanceName);
 
                 // Activate feature
@@ -103,7 +103,7 @@ namespace NuPattern.Library.Commands
             }
             else
             {
-                tracer.TraceError(
+                tracer.Error(
                     Resources.ActivateOrInstantiateSharedGuidanceWorkflowCommand_TraceWorkflowNotFound, this.ExtensionId);
             }
         }

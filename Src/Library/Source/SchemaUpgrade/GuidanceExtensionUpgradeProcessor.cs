@@ -15,7 +15,7 @@ namespace NuPattern.Library.SchemaUpgrade
     [SchemaUpgradeProcessorOptions(Order = 1200, TargetVersion = @"1.2.0.0")]
     internal class GuidanceExtensionUpgradeProcessor : IPatternModelSchemaUpgradeProcessor
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<GuidanceExtensionUpgradeProcessor>();
+        private static readonly ITracer tracer = Tracer.Get<GuidanceExtensionUpgradeProcessor>();
         private const string DefaultNamespace = SchemaConstants.DefaultNamespace;
         private static readonly XName GuidanceExtensionElementName = XName.Get(@"guidanceExtension", DefaultNamespace);
         private const string GuidanceFeatureIdPropertyName = @"guidanceFeatureId";
@@ -42,7 +42,7 @@ namespace NuPattern.Library.SchemaUpgrade
                         .Distinct();
             if (extensionSettings.Any())
             {
-                tracer.TraceInformation(Resources.GuidanceExtensionUpgradeProcessor_TraceDeserialize);
+                tracer.Info(Resources.GuidanceExtensionUpgradeProcessor_TraceDeserialize);
 
                 // Enumerate each <guidanceExtension> element
                 extensionSettings.ForEach(extensionElement =>

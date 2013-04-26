@@ -17,7 +17,7 @@ namespace NuPattern.VisualStudio.TemplateWizards
     [CLSCompliant(false)]
     public class OpenDesignerTemplateWizard : TemplateWizard
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<OpenDesignerTemplateWizard>();
+        private static readonly ITracer tracer = Tracer.Get<OpenDesignerTemplateWizard>();
 
         private ISolution solution;
         private string projectName;
@@ -61,7 +61,7 @@ namespace NuPattern.VisualStudio.TemplateWizards
 
                     if (item != null)
                     {
-                        tracer.TraceVerbose(Resources.OpenDesignerTemplateWizard_OpeningDesigner, this.designerFileName);
+                        tracer.Verbose(Resources.OpenDesignerTemplateWizard_OpeningDesigner, this.designerFileName);
 
                         var window = item.As<ProjectItem>().Open();
                         window.Visible = true;
@@ -69,7 +69,7 @@ namespace NuPattern.VisualStudio.TemplateWizards
                     }
                     else
                     {
-                        tracer.TraceWarning(Resources.OpenDesignerTemplateWizard_DesignerItemNotFound, this.designerFileName);
+                        tracer.Warn(Resources.OpenDesignerTemplateWizard_DesignerItemNotFound, this.designerFileName);
                     }
                 });
             }
@@ -90,7 +90,7 @@ namespace NuPattern.VisualStudio.TemplateWizards
             var dte = (automationObject as DTE);
 
             if (!replacementsDictionary.TryGetValue(@"$patterndefinition$", out this.designerFileName))
-                tracer.TraceWarning(Resources.OpenDesignerTemplateWizard_DesignerItemNotFound);
+                tracer.Warn(Resources.OpenDesignerTemplateWizard_DesignerItemNotFound);
 
             using (var serviceProvider = new ServiceProvider((Microsoft.VisualStudio.OLE.Interop.IServiceProvider)dte))
             {

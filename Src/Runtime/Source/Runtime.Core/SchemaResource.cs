@@ -16,7 +16,7 @@ namespace NuPattern.Runtime
     /// </summary>
     internal class SchemaResource : ISchemaResource
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<SchemaResource>();
+        private static readonly ITracer tracer = Tracer.Get<SchemaResource>();
         internal const string AssemblyFileProperty = "AssemblyFile";
 
         private Assembly schemaAssembly;
@@ -60,7 +60,7 @@ namespace NuPattern.Runtime
                     assemblyName.Name + @"." + this.ResourceName,
                     this.AssemblyPath);
 
-                tracer.TraceError(message);
+                tracer.Error(message);
                 throw new InvalidOperationException(message);
             }
         }
@@ -95,7 +95,7 @@ namespace NuPattern.Runtime
                     assemblyName.Name + @"." + this.ResourceName,
                     this.AssemblyPath);
 
-                tracer.TraceError(message);
+                tracer.Error(message);
                 throw new InvalidOperationException(message);
             }
 
