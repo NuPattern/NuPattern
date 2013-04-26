@@ -1,0 +1,8 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ Include File="..\..\..\MasterVersion.gen.ttinclude"#>
+<#@ Include File="..\..\..\MasterVSIXInfo.gen.ttinclude"#>
+<#@ output extension=".pkgdef" #>
+[$RootKey$\TextTemplating]
+[$RootKey$\TextTemplating\DirectiveProcessors]
+[$RootKey$\TextTemplating\DirectiveProcessors\PatternModelDirectiveProcessor]
+"Assembly"="NuPattern.Runtime.Schema, Version=<#=VsixInfo.PatternToolkitBuilder.Version#>, Culture=neutral, PublicKeyToken=<#=VersionInfo.AssemblyPublicKeyToken#>"

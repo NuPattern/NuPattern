@@ -38,6 +38,7 @@ string vsPackageAssembly = "NuPattern.Authoring.PatternModelDesign.Shell";
     </References>
     <Content>
         <VsPackage>|<#=VsPackageProject#>;PkgdefProjectOutputGroup|</VsPackage>
+        <VsPackage>Registry.pkgdef</VsPackage>
         <MefComponent>|<#=VsPackageProject#>|</MefComponent>
         <ProjectTemplate>Templates\Projects</ProjectTemplate>
         <ItemTemplate>Templates\Items</ItemTemplate>

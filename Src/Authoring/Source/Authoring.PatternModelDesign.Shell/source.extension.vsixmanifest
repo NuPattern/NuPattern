@@ -25,6 +25,7 @@
     </References>
     <Content>
         <VsPackage>|Authroing.PatternModelDesign.Shell;PkgdefProjectOutputGroup|</VsPackage>
+        <VsPackage>Registry.pkgdef</VsPackage>
         <MefComponent>|Authroing.PatternModelDesign.Shell|</MefComponent>
         <ProjectTemplate>Templates\Projects</ProjectTemplate>
         <ItemTemplate>Templates\Items</ItemTemplate>
