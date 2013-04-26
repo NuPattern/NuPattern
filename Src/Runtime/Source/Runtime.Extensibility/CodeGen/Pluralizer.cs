@@ -8,7 +8,8 @@ namespace NuPattern.Runtime.CodeGen
     /// </summary>
     public static class Pluralizer
     {
-        private static readonly PluralizationService service = PluralizationService.CreateService(CultureInfo.CurrentCulture);
+        private const string UsEnglishCulture = @"en-US";
+        private static readonly PluralizationService service = PluralizationService.CreateService(CultureInfo.GetCultureInfo(UsEnglishCulture));
 
         /// <summary>
         /// Pluralizes the given word.
