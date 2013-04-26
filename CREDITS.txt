@@ -22,13 +22,11 @@ Website:      http://msdn.microsoft.com/en-us/library/bb166441(VS.80).aspx
 Copyright:    Copyright (c) 2010 Microsoft
 License:      MS-PL
 
-
 Visual Studio Visualization & Modeling SDK
 ----- 
 Website:      http://archive.msdn.microsoft.com/vsvmsdk
 Copyright:    Copyright (c) 2010 Microsoft
 License:      MSDN CODE GALLERY BINARY LICENSE
-
 
 Enterprise Library
 ----
@@ -48,7 +46,7 @@ Website:      http://mef.codeplex.com
 Copyright:    Copyright (c) Microsoft Corporation
 License:      MS-PL
 
-NuGet 1.6
+NuGet 2.2
 ----- 
 Website:      http://nuget.codeplex.com 
 Copyright:    Copyright (c) 2010 Outercurve Foundation
@@ -65,3 +63,9 @@ Json.NET 4.5.10
 Website:      http://json.codeplex.com/
 Copyright:    Copyright (c) 2007 James Newton-King
 License:      MIT
+
+NetFx
+-----
+WebSite:      http://netfx.codeplex.com/
+Copyright:    Copyright (c) 2010, NETFx All rights reserved.
+License:      BSD

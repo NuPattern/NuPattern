@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VsSDK.IntegrationTestLibrary;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
@@ -53,7 +54,7 @@ namespace NuPattern.IntegrationTests.VisualStudio
         {
             var traceSource = new Mock<ITracer>();
 
-            using (var purger = new DialogBoxPurger(0))
+            using (new DialogBoxPurger(0))
             {
                 UIThreadInvoker.Invoke((Action)(() =>
                 {
@@ -64,7 +65,7 @@ namespace NuPattern.IntegrationTests.VisualStudio
                 }));
             }
 
-            traceSource.Verify(x => x.Error(
+            traceSource.Verify(x => x.Trace(TraceEventType.Error,
                 It.Is<ArgumentException>(ex => ex.Message == "Foo"),
                 "Bar"),
                 Times.Once());
