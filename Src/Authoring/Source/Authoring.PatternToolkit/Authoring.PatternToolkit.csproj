@@ -940,7 +940,7 @@
       <DependentUpon>ToolkitCreationWizard.xaml</DependentUpon>
     </Compile>
     <Compile Include="GeneratedCode\Guidance\GuidanceWorkflow.gen.cs">
-      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Element/C:\Projects\CodePlex\NuPattern\Sprint20\Src\Authoring\Authoring.slnbldr%252fb05cc972-cb01-4a17-9627-cf110c7b376c</SourceModelReference>
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Element/C:\Projects\CodePlex\NuPattern\origin\Src\Authoring\Authoring.slnbldr%252fb05cc972-cb01-4a17-9627-cf110c7b376c</SourceModelReference>
       <ItemGuid>963aeb3b-af3f-4a89-ad89-63a71b77335f</ItemGuid>
     </Compile>
     <Compile Include="GlobalSuppressions.cs" />
