@@ -154,7 +154,6 @@ namespace NuPattern.Runtime.Schema
 		DebuggingLogicalViewEditor = Constants.PatternModelEditorFactoryId,
 		DesignerLogicalViewEditor = Constants.PatternModelEditorFactoryId,
 		TextLogicalViewEditor = Constants.PatternModelEditorFactoryId)]
-	[global::Microsoft.VisualStudio.TextTemplating.VSHost.ProvideDirectiveProcessor(typeof(global::NuPattern.Runtime.Schema.PatternModelDirectiveProcessor), global::NuPattern.Runtime.Schema.PatternModelDirectiveProcessor.PatternModelDirectiveProcessorName, "A directive processor that provides access to PatternModel files")]
 	[global::System.Runtime.InteropServices.Guid(Constants.PatternModelPackageId)]
 	internal sealed partial class PatternModelPackage : PatternModelPackageBase
 	{

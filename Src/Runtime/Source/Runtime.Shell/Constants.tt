@@ -34,9 +34,14 @@ namespace NuPattern.Runtime.Shell
         public const string ProductStateStoreDirectiveProcessorDescription = @"Provides access to the solution builder store.";
 
         /// <summary>
+        /// Description for the runtime store T4 process
+        /// </summary>
+        public const string PatternModelDirectiveProcessorDescription = @"Provides access to pattern model element information.";
+
+        /// <summary>
         /// Description for the library T4 process
         /// </summary>
-        public const string LibraryDirectiveProcessorDescription = @"Provides access to pattern model element information.";
+        public const string LibraryDirectiveProcessorDescription = @"Provides access to pattern model automation extension information.";
 
         /// <summary>
         /// Id of the Visual Studio OutputPane window.

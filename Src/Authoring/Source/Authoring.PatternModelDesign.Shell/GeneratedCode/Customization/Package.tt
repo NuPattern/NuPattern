@@ -30,7 +30,6 @@ namespace <#= CodeGenerationUtilities.GetPackageNamespace(this.Dsl) #>
 		DebuggingLogicalViewEditor = Constants.<#= dslName #>EditorFactoryId,
 		DesignerLogicalViewEditor = Constants.<#= dslName #>EditorFactoryId,
 		TextLogicalViewEditor = Constants.<#= dslName #>EditorFactoryId)]
-	[global::Microsoft.VisualStudio.TextTemplating.VSHost.ProvideDirectiveProcessor(typeof(global::<#= this.Dsl.Namespace #>.<#= directiveName #>DirectiveProcessor), global::<#= this.Dsl.Namespace #>.<#= directiveName #>DirectiveProcessor.<#= directiveName #>DirectiveProcessorName, "A directive processor that provides access to <#= directiveName #> files")]
 	[global::System.Runtime.InteropServices.Guid(Constants.<#= dslName #>PackageId)]
 	internal sealed partial class <#= dslName #>Package : <#= dslName #>PackageBase
 	{

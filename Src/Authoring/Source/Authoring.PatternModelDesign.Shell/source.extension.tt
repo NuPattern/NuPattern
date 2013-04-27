@@ -8,7 +8,7 @@
     Note that the these project name variables represent the VS Project 
     names. They need to be updated if those projects are renamed in the Solution.
 ***************************************************************************/
-string VsPackageProject = "Authroing.PatternModelDesign.Shell";
+string VsPackageProject = "Authoring.PatternModelDesign.Shell";
 string vsPackageAssembly = "NuPattern.Authoring.PatternModelDesign.Shell";
 #>
 <?xml version="1.0" encoding="utf-8"?>
@@ -38,7 +38,6 @@ string vsPackageAssembly = "NuPattern.Authoring.PatternModelDesign.Shell";
     </References>
     <Content>
         <VsPackage>|<#=VsPackageProject#>;PkgdefProjectOutputGroup|</VsPackage>
-        <VsPackage>Registry.pkgdef</VsPackage>
         <MefComponent>|<#=VsPackageProject#>|</MefComponent>
         <ProjectTemplate>Templates\Projects</ProjectTemplate>
         <ItemTemplate>Templates\Items</ItemTemplate>

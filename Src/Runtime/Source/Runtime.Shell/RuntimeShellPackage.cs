@@ -27,6 +27,7 @@ using NuPattern.Runtime.Diagnostics;
 using NuPattern.Runtime.Guidance;
 using NuPattern.Runtime.Guidance.LaunchPoints;
 using NuPattern.Runtime.Guidance.Workflow;
+using NuPattern.Runtime.Schema;
 using NuPattern.Runtime.Settings;
 using NuPattern.Runtime.Shell.Commands;
 using NuPattern.Runtime.Shell.OptionPages;
@@ -53,7 +54,9 @@ namespace NuPattern.Runtime.Shell
     [ProvideToolWindow(typeof(SolutionBuilderToolWindow), Window = ToolWindowGuids.Toolbox, Orientation = ToolWindowOrientation.Right, Style = VsDockStyle.Tabbed)]
     [ProvideToolWindow(typeof(GuidanceExplorerToolWindow), Window = Constants.SolutionBuilderToolWindowGuid, Orientation = ToolWindowOrientation.Bottom, Style = VsDockStyle.Linked)]
     [ProvideToolWindow(typeof(GuidanceBrowserToolWindow), Window = ToolWindowGuids.TaskList, Style = VsDockStyle.Tabbed)]
+    [ProvideDirectiveProcessor(typeof(ModelElementDirectiveProcessor), ModelElementDirectiveProcessor.ProcessorName, Constants.LibraryDirectiveProcessorDescription)]
     [ProvideDirectiveProcessor(typeof(ProductStateStoreDirectiveProcessor), ProductStateStoreDirectiveProcessor.ProductStateStoreDirectiveProcessorName, Constants.ProductStateStoreDirectiveProcessorDescription)]
+    [ProvideDirectiveProcessor(typeof(PatternModelDirectiveProcessor), PatternModelDirectiveProcessor.PatternModelDirectiveProcessorName, Constants.PatternModelDirectiveProcessorDescription)]
     [Microsoft.VisualStudio.Modeling.Shell.ProvideBindingPath]
     [Guid(Constants.RuntimeShellPkgGuid)]
     [CLSCompliant(false)]
@@ -73,7 +76,6 @@ namespace NuPattern.Runtime.Shell
     [ProvideService(typeof(IBindingCompositionService), ServiceName = @"IBindingCompositionService")]
     [ProvideService(typeof(IToolkitInterfaceService), ServiceName = @"IToolkitInferfaceService")]
     [ProvideOptionPage(typeof(TraceOptionsPage), Constants.SettingsName, @"TraceOptionsPage", 17131, 21356, true)]
-    [ProvideDirectiveProcessor(typeof(ModelElementDirectiveProcessor), ModelElementDirectiveProcessor.ProcessorName, Constants.LibraryDirectiveProcessorDescription)]
     public sealed class RuntimeShellPackage : Package
     {
         private static readonly ITracer tracer = Tracer.Get<RuntimeShellPackage>();
