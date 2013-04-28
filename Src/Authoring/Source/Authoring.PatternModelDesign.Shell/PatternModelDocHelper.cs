@@ -1,4 +1,11 @@
-﻿using Microsoft.VisualStudio.Modeling.Validation;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using Microsoft.VisualStudio.Modeling;
+using Microsoft.VisualStudio.Modeling.Diagrams;
+using Microsoft.VisualStudio.Modeling.Shell;
+using Microsoft.VisualStudio.Modeling.Validation;
+using NuPattern.Modeling;
 
 namespace NuPattern.Runtime.Schema
 {
@@ -28,6 +35,58 @@ namespace NuPattern.Runtime.Schema
                 }, true);
 
             return valid;
+        }
+
+
+        /// <summary>
+        /// Creates a new view digram for the pattern model.
+        /// </summary>
+        /// <param name="patternModel">The pattern model</param>
+        /// <param name="docData">The document window data</param>
+        /// <returns></returns>
+        public static Guid CreateNewViewDiagram(PatternModelSchema patternModel, ModelingDocData docData)
+        {
+            Guard.NotNull(() => patternModel, patternModel);
+            Guard.NotNull(() => docData, docData);
+
+            // Create a new diagram file
+            var docView = docData.DocViews.FirstOrDefault() as SingleDiagramDocView;
+            PatternModelSchemaDiagram diagram = null;
+            patternModel.Store.TransactionManager.DoWithinTransaction(() =>
+            {
+                diagram = PatternModelSerializationHelper.CreatePatternModelSchemaDiagram(
+                    new SerializationResult(),
+                    patternModel.Store.DefaultPartition,
+                    patternModel.Store.GetRootElement(),
+                    string.Empty);
+            });
+            if (diagram != null)
+            {
+                SetCurrentDiagram(docView, diagram, patternModel.Pattern);
+
+                FixUpDiagram(patternModel, patternModel.Pattern, diagram.Id.ToString(),
+                    PresentationViewsSubject.GetPresentation(patternModel.Pattern).OfType<ShapeElement>());
+
+                return diagram.Id;
+            }
+
+            return Guid.Empty;
+        }
+
+        private static void SetCurrentDiagram(SingleDiagramDocView docview, PatternModelSchemaDiagram diagram, PatternSchema pattern)
+        {
+            docview.Diagram = diagram;
+
+            pattern.WithTransaction(prod => prod.CurrentDiagramId = diagram.Id.ToString());
+        }
+
+        private static void FixUpDiagram(ModelElement root, ModelElement child, string diagramId, IEnumerable<ShapeElement> shapes)
+        {
+            if (shapes.Count() == 0 ||
+                !shapes.Any(shape => ((PatternModelSchemaDiagram)shape.Diagram).Id.ToString().Equals(diagramId, StringComparison.OrdinalIgnoreCase)))
+            {
+                root.Store.TransactionManager.DoWithinTransaction(() => Diagram.FixUpDiagram(root, child));
+            }
         }
     }
 }

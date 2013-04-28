@@ -16,7 +16,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
     [CategoryResource("AutomationCategory_PatternToolkitAuthoring", typeof(Resources))]
     [DescriptionResource("CreateAutomationLibraryExtensionCommand_Description", typeof(Resources))]
     [CLSCompliant(false)]
-	public class CreateAutomationLibraryExtensionCommand : NuPattern.Runtime.Command
+    public class CreateAutomationLibraryExtensionCommand : NuPattern.Runtime.Command
     {
         private static readonly ITracer tracer = Tracer.Get<CreateAutomationLibraryExtensionCommand>();
 

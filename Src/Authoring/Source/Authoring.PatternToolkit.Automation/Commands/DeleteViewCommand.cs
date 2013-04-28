@@ -2,7 +2,6 @@
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using Microsoft.VisualStudio.Shell;
 using NuPattern.Authoring.PatternToolkit.Automation.Properties;
 using NuPattern.Authoring.PatternToolkit.Automation.UriProviders;
 using NuPattern.ComponentModel.Design;
@@ -51,8 +50,8 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
             tracer.Info(
                 Resources.DeleteViewCommand_TraceInitial, patternModel.InstanceName, this.CurrentElement.InstanceName);
 
+            // Ensure the pattern model file exists
             var reference = SolutionArtifactLinkReference.GetResolvedReferences(patternModel, this.UriService).FirstOrDefault();
-
             if (reference != null)
             {
                 using (tracer.StartActivity(Resources.DeleteViewCommand_DeletingView, patternModel, this.CurrentElement.InstanceName))
@@ -60,7 +59,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
                     var viewReference = ViewArtifactLinkReference.GetReferences(this.CurrentElement.AsElement()).FirstOrDefault();
                     if (viewReference != null)
                     {
-                        ViewSchemaHelper.WithPatternModel(reference.PhysicalPath, pm =>
+                        ViewSchemaHelper.WithPatternModel(reference.PhysicalPath, (pm, docData) =>
                         {
                             // Delete the view
                             var view = pm.Pattern.GetView(new Guid(viewReference.Host));
