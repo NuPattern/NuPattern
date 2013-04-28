@@ -1,0 +1,3 @@
+Send all assemblies from Processed\Unsigned\* to be signed.
+
+Place signed assemblies in the Processed\Signed\* directories (using same structure)

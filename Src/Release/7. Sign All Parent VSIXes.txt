@@ -1,0 +1,3 @@
+Send all parent VSIXes from Processed\Unsigned\* to be signed.
+
+Place signed VSIXes in the Processed\Signed\* directories (using same structure)
