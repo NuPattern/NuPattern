@@ -2,7 +2,6 @@
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using Microsoft.VisualStudio.Shell;
 using NuPattern.Authoring.PatternToolkit.Automation.Properties;
 using NuPattern.Authoring.PatternToolkit.Automation.UriProviders;
 using NuPattern.ComponentModel.Design;
@@ -10,6 +9,7 @@ using NuPattern.Diagnostics;
 using NuPattern.Runtime;
 using NuPattern.Runtime.References;
 using NuPattern.Runtime.Schema;
+using NuPattern.Runtime.ToolkitInterface;
 using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
@@ -51,8 +51,8 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
             tracer.Info(
                 Resources.DeleteViewCommand_TraceInitial, patternModel.InstanceName, this.CurrentElement.InstanceName);
 
+            // Ensure the pattern model file exists
             var reference = SolutionArtifactLinkReference.GetResolvedReferences(patternModel, this.UriService).FirstOrDefault();
-
             if (reference != null)
             {
                 using (tracer.StartActivity(Resources.DeleteViewCommand_DeletingView, patternModel, this.CurrentElement.InstanceName))
@@ -60,9 +60,9 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
                     var viewReference = ViewArtifactLinkReference.GetReferences(this.CurrentElement.AsElement()).FirstOrDefault();
                     if (viewReference != null)
                     {
-                        ViewSchemaHelper.WithPatternModel(reference.PhysicalPath, pm =>
+                        ViewSchemaHelper.WithPatternModel(reference.PhysicalPath, (pm, docData) =>
                         {
-                            // Delete the view
+                            // Delete the view in the DSL
                             var view = pm.Pattern.GetView(new Guid(viewReference.Host));
                             if (view != null)
                             {
@@ -70,10 +70,8 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
 
                                 if (pm.Pattern.DeleteView(new Guid(viewReference.Host)))
                                 {
-                                    // Delete the element
-                                    this.CurrentElement.Delete();
-
-                                    DeleteView(reference, view);
+                                    // Delete the diagram file
+                                    DeleteViewDiagram(reference, view);
                                 }
                             }
                             else
@@ -97,7 +95,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
             }
         }
 
-        private void DeleteView(IItemContainer parentItem, IViewSchema viewSchema)
+        private void DeleteViewDiagram(IItemContainer parentItem, IViewSchema viewSchema)
         {
             var path = GetDiagramFileName(parentItem, viewSchema);
             var childItem = parentItem.Items.FirstOrDefault(i => i.PhysicalPath == path);

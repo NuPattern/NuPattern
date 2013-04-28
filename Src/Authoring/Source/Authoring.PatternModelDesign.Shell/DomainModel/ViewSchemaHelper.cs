@@ -13,7 +13,7 @@ namespace NuPattern.Runtime.Schema
         /// Opens the pattern model from the given file in the solution, and executes the given action.
         /// </summary>
         /// <returns></returns>
-        public static void WithPatternModel(string patternModelFilePath, Action<IPatternModelSchema> action, bool leaveOpen = true)
+        public static void WithPatternModel(string patternModelFilePath, Action<IPatternModelSchema, ModelingDocData> action, bool leaveOpen = true)
         {
             Guard.NotNullOrEmpty(() => patternModelFilePath, patternModelFilePath);
             Guard.NotNull(() => action, action);
@@ -25,7 +25,7 @@ namespace NuPattern.Runtime.Schema
                         var patternModelSchema = docData.Store.GetRootElement();
                         if (patternModelSchema != null)
                         {
-                            action(patternModelSchema);
+                            action(patternModelSchema, docData);
                         }
                     }
                 }, leaveOpen);
@@ -80,7 +80,7 @@ namespace NuPattern.Runtime.Schema
         }
 
         /// <summary>
-        /// Deletes the view from teh current pattern.
+        /// Deletes the view from the current pattern.
         /// </summary>
         public static bool DeleteView(this IPatternSchema pattern, Guid defaultViewId)
         {
@@ -103,6 +103,32 @@ namespace NuPattern.Runtime.Schema
             }
 
             return false;
+        }
+
+        /// <summary>
+        /// Creates a new view in the current pattern.
+        /// </summary>
+        public static IViewSchema CreateNewViewDiagram(this IPatternModelSchema patternModel, ModelingDocData docData, string name)
+        {
+            Guard.NotNull(() => patternModel, patternModel);
+            Guard.NotNull(() => docData, docData);
+            Guard.NotNull(() => name, name);
+
+            // Create a new diagram
+            var diagramId = PatternModelDocHelper.CreateNewViewDiagram(patternModel as PatternModelSchema, docData);
+
+            // Create a new view
+            IViewSchema view = null;
+            if (diagramId != Guid.Empty)
+            {
+                view = patternModel.Pattern.CreateViewSchema(vw =>
+                {
+                    ((INamedElementSchema)vw).Name = name;
+                    vw.DiagramId = diagramId.ToString();
+                });
+            }
+
+            return view;
         }
 
         private static void SetOtherViewAsDefault(IPatternSchema pattern, IViewSchema viewSchema)

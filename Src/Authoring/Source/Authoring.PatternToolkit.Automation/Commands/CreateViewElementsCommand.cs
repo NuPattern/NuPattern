@@ -12,7 +12,7 @@ using NuPattern.Runtime.Schema;
 namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
 {
     /// <summary>
-    /// Command to create all views for the current pattern.
+    /// Command to create all views from the current pattern, when first created.
     /// </summary>
     [CLSCompliant(false)]
     [DisplayNameResource("CreateViewElementsCommand_DisplayName", typeof(Resources))]
@@ -46,15 +46,15 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
             tracer.Info(
                 Resources.CreateViewElementsCommand_TraceInitial, this.CurrentElement.InstanceName);
 
+            // Ensure the pattern model file exists
             var reference = SolutionArtifactLinkReference.GetResolvedReferences(this.CurrentElement.AsElement(), this.UriService).FirstOrDefault();
-
             if (reference != null)
             {
                 using (tracer.StartActivity(Resources.CreateViewElementsCommand_TraceAddingViews, this.CurrentElement.InstanceName))
                 {
-                    ViewSchemaHelper.WithPatternModel(reference.PhysicalPath, patternModel =>
+                    ViewSchemaHelper.WithPatternModel(reference.PhysicalPath, (pm, docData) =>
                         {
-                            patternModel.Pattern.Views.ForEach(v =>
+                            pm.Pattern.Views.ForEach(v =>
                             {
                                 var viewName = ((INamedElementSchema)v).Name;
                                 tracer.Info(

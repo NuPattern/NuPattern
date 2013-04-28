@@ -48,8 +48,8 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
             tracer.Info(
                 Resources.SetAsDefaultViewCommand_TraceInitial, patternModel.InstanceName, this.CurrentElement.InstanceName);
 
+            // Ensure the pattern model file exists
             var reference = SolutionArtifactLinkReference.GetResolvedReferences(patternModel, this.UriService).FirstOrDefault();
-
             if (reference != null)
             {
                 using (tracer.StartActivity(Resources.SetAsDefaultViewCommand_TraceSettingAsDefault, patternModel.InstanceName, this.CurrentElement.InstanceName))
@@ -57,7 +57,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
                     var viewReference = ViewArtifactLinkReference.GetReferences(this.CurrentElement.AsElement()).FirstOrDefault();
                     if (viewReference != null)
                     {
-                        ViewSchemaHelper.WithPatternModel(reference.PhysicalPath, pm =>
+                        ViewSchemaHelper.WithPatternModel(reference.PhysicalPath, (pm, docData) =>
                             {
                                 var view = pm.Pattern.GetView(new Guid(viewReference.Host));
                                 if (view != null)

@@ -5,6 +5,8 @@ using System.Linq;
 using NuPattern.Authoring.PatternToolkit.Automation.Properties;
 using NuPattern.ComponentModel.Design;
 using NuPattern.Diagnostics;
+using NuPattern.Runtime;
+using NuPattern.Runtime.ToolkitInterface;
 
 namespace NuPattern.Authoring.PatternToolkit.Automation.Conditions
 {
@@ -24,7 +26,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Conditions
         /// </summary>
         [Required]
         [Import(AllowDefault = true)]
-        public IViewModel CurrentElement { get; set; }
+        public IProductElement CurrentElement { get; set; }
 
         /// <summary>
         /// Evaluate if the view has more than one element
@@ -37,9 +39,9 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Conditions
             tracer.Info(
                 Resources.LastViewCondition_TraceInitial, this.CurrentElement.InstanceName);
 
-            var views = this.CurrentElement.Parent.AsCollection(); //TODO: FIX
+            var view = this.CurrentElement.As<IViewModel>();
 
-            var result = views.Elements.Count() > 1;
+            var result = view.Parent.ViewModels.Count() > 1;
 
             tracer.Info(
                 Resources.LastViewCondition_TraceEvaluation, this.CurrentElement.InstanceName, result);
