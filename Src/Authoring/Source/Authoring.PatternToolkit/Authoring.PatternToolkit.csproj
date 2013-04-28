@@ -1262,6 +1262,12 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\Source\Versioning\Versioning.csproj">
+      <Project>{ae530c9b-34b7-416f-8477-15b8257cdac0}</Project>
+      <Name>Versioning</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <Private>False</Private>
+    </ProjectReference>
     <ProjectReference Include="..\Authoring.Guidance\Authoring.Guidance.csproj">
       <Project>{67257A67-4ECB-4D70-92EE-445835343670}</Project>
       <Name>Authoring.Guidance</Name>

@@ -22,11 +22,11 @@
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.VsixProjects.gen.props" />
   <ItemGroup>
-		<Reference Include="NuPattern.Common">
-			<HintPath>$(PatternToolkitRuntime)\NuPattern.Common.dll</HintPath>
-			<Private>false</Private>
-		</Reference>
-		<Reference Include="NuPattern.Library">
+    <Reference Include="NuPattern.Common">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Common.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="NuPattern.Library">
       <HintPath>$(PatternToolkitRuntime)\NuPattern.Library.dll</HintPath>
       <Private>False</Private>
     </Reference>
@@ -409,6 +409,12 @@
     <Folder Include="Assets\Wizards\Pages\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\Source\Versioning\Versioning.csproj">
+      <Project>{ae530c9b-34b7-416f-8477-15b8257cdac0}</Project>
+      <Name>Versioning</Name>
+      <Private>False</Private>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
     <ProjectReference Include="..\Authoring.PatternToolkit.Automation\Authoring.PatternToolkit.Automation.csproj">
       <Project>{3CCD565D-D7A3-4AAE-8C6E-8E1B10FD77FE}</Project>
       <Name>Authoring.PatternToolkit.Automation</Name>

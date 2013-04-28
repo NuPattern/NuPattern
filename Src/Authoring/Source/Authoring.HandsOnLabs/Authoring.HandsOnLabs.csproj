@@ -418,6 +418,12 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\Source\Versioning\Versioning.csproj">
+      <Project>{ae530c9b-34b7-416f-8477-15b8257cdac0}</Project>
+      <Name>Versioning</Name>
+      <Private>False</Private>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
     <ProjectReference Include="..\Authoring.HandsOnLabs.Automation\Authoring.HandsOnLabs.Automation.csproj">
       <Name>Authoring.HandsOnLabs.Automation</Name>
       <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup</IncludeOutputGroupsInVSIX>

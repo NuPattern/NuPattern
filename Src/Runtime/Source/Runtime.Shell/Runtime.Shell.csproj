@@ -469,6 +469,12 @@
       <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bDocumentationProjectOutputGroup</IncludeOutputGroupsInVSIX>
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup</IncludeOutputGroupsInVSIXLocalOnly>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\Common\Source\Versioning\Versioning.csproj">
+      <Project>{ae530c9b-34b7-416f-8477-15b8257cdac0}</Project>
+      <Name>Versioning</Name>
+      <Private>False</Private>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
     <ProjectReference Include="..\Runtime.Extensibility.Serialization\Runtime.Extensibility.Serialization.csproj">
       <Project>{B2B1ED0A-60E0-4A5C-822A-605527663E0B}</Project>
       <Name>Runtime.Extensibility.Serialization</Name>
