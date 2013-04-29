@@ -114,7 +114,7 @@
     <Compile Include="DomainModel\ProductElement.Validation.cs">
       <DependentUpon>ProductElement.cs</DependentUpon>
     </Compile>
-    <Compile Include="Design\PropertyDescriptor.cs">
+    <Compile Include="Design\PropertyPropertyDescriptor.cs">
     </Compile>
     <Compile Include="Design\PropertyUnavailableDescriptor.cs">
     </Compile>

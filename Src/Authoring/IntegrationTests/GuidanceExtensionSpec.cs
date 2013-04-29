@@ -10,19 +10,19 @@ namespace NuPattern.Authoring.IntegrationTests
     public class GuidanceExtensionSpec
     {
         internal static readonly IAssertion Assert = new Assertion();
-        private IGuidanceManager featureManager;
+        private IGuidanceManager guidanceManager;
 
         [TestInitialize]
         public void InitializeContext()
         {
-            this.featureManager = (IGuidanceManager)VsIdeTestHostContext.ServiceProvider.GetService(typeof(IGuidanceManager));
+            this.guidanceManager = (IGuidanceManager)VsIdeTestHostContext.ServiceProvider.GetService(typeof(IGuidanceManager));
         }
 
         [HostType("VS IDE")]
         [TestMethod, TestCategory("Integration")]
         public void ThenGuidanceExtensionIsInstalled()
         {
-            var registrations = this.featureManager.InstalledGuidanceExtensions;
+            var registrations = this.guidanceManager.InstalledGuidanceExtensions;
             var feature = registrations.FirstOrDefault(registration => registration.ExtensionId == AuthoringToolkitInfo.VsixIdentifier);
 
             Assert.NotNull(feature);
