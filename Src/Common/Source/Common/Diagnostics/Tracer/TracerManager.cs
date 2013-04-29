@@ -61,14 +61,6 @@ namespace NuPattern.Diagnostics
         }
 
         /// <summary>
-        /// Gets the underlying <see cref="TraceSource"/> for the given name.
-        /// </summary>
-        public TraceSource GetSource(string name)
-        {
-            return this.GetOrAdd(name, sourceName => CreateSource(sourceName));
-        }
-
-        /// <summary>
         /// Adds a listener to the source with the given <paramref name="sourceName"/>.
         /// </summary>
         public void AddListener(string sourceName, TraceListener listener)
