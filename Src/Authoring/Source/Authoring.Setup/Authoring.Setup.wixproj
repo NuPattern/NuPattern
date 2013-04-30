@@ -6,7 +6,7 @@
     <ProductVersion>3.7</ProductVersion>
     <ProjectGuid>a49c2c09-8d28-4367-8e79-c75fe69f84be</ProjectGuid>
     <SchemaVersion>2.0</SchemaVersion>
-    <OutputName>Authoring.Setup</OutputName>
+    <OutputName>NuPatternToolkitBuilderAndLabs</OutputName>
     <OutputType>Package</OutputType>
     <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' AND '$(MSBuildExtensionsPath32)' != '' ">$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
     <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' ">$(MSBuildExtensionsPath)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
@@ -75,6 +75,10 @@ copy "$(ProjectDir)Diagnose MSI.bat" "$(ProjectDir)$(BranchRoot)Binaries\Diagnos
   <PropertyGroup>
     <SuppressIces>ICE91</SuppressIces>
     <SuppressValidation>False</SuppressValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug-VS2012|x86' ">
+    <WixVariables>
+    </WixVariables>
   </PropertyGroup>
   <!--
 	To modify your build process, add your task inside one of the targets below and uncomment it.
