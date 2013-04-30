@@ -20,7 +20,7 @@ IF %errorlevel% neq 0 GOTO :error
 
 REM Copy MSI back to Unsigned
 CD /d %~dp0
-XCOPY /s /f /r ..\Binaries\*.msi Processed\Unsigned
+XCOPY /s /f /r /y ..\Binaries\*.msi Processed\Unsigned
 
 
 ECHO Built MSI can be found in the 'UnSigned' directory.
