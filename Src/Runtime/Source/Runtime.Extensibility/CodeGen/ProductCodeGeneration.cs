@@ -35,9 +35,6 @@ namespace NuPattern.Runtime.CodeGen
             this.AddTypes(GetUsedTypesFromVariableProperties(element));
             this.AddUsedTypes(typeof(TInfo));
             this.AddUsedTypes(typeof(TRuntime));
-            // Force ComponentModel and Drawing.Design to be there always.
-            base.TypeNameMap[typeof(ArrayConverter).FullName] = typeof(ArrayConverter).FullName;
-            base.TypeNameMap[typeof(UITypeEditor).FullName] = typeof(UITypeEditor).FullName;
         }
 
         /// <summary>

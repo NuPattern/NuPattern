@@ -400,16 +400,20 @@ namespace NuPattern.Runtime.CodeGen
                 .Select(arg => arg.TypedValue.ArgumentType.FullName));
 
             // Add the namespaces of all constructor arguments that are typeof(..)
-            usedTypes = usedTypes.Concat(customAttributes
-                .SelectMany(data => data.ConstructorArguments)
-                .Where(arg => arg.ArgumentType == typeof(Type))
-                .Select(arg => ((Type)arg.Value).FullName));
+            usedTypes = usedTypes.Concat(
+                from attr in customAttributes
+                from arg in attr.ConstructorArguments
+                where arg.ArgumentType == typeof(Type)
+                let type = (Type)arg.Value
+                select type.FullName + ", " + type.Assembly.GetName().Name);
 
             // Add the namespaces of all named arguments that are typeof(..)
-            usedTypes = usedTypes.Concat(customAttributes
-                .SelectMany(data => data.NamedArguments)
-                .Where(arg => arg.TypedValue.ArgumentType == typeof(Type))
-                .Select(arg => ((Type)arg.TypedValue.Value).FullName));
+            usedTypes = usedTypes.Concat(
+                from attr in customAttributes
+                from arg in attr.NamedArguments
+                where arg.TypedValue.ArgumentType == typeof(Type)
+                let type = (Type)arg.TypedValue.Value
+                select type.FullName + ", " + type.Assembly.GetName().Name);
 
             return usedTypes;
         }

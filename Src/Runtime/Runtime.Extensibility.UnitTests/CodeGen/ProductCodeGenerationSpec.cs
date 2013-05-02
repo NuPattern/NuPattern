@@ -27,6 +27,7 @@ namespace NuPattern.Runtime.UnitTests.CodeGen
                         Mocks.Of<IPropertyInfo>().First(p => p.Type == "System.Boolean" && p.TypeConverterTypeName == "System.ComponentModel.StringConverter, System"), 
                         Mocks.Of<IPropertyInfo>().First(p => p.Type == "System.Int32" && p.TypeConverterTypeName == "NuPattern.StringConverter, Microsoft"), 
                         Mocks.Of<IPropertyInfo>().First(p => p.Type == "System.Boolean" && p.EditorTypeName == "System.ComponentModel.UIEditor, System"), 
+                        Mocks.Of<IPropertyInfo>().First(p => p.Type == "System.String" && p.EditorTypeName == "System.ComponentModel.Design.MultilineStringEditor, System.Design"), 
                     });
 
                 this.element = mockElement.Object;
@@ -42,10 +43,22 @@ namespace NuPattern.Runtime.UnitTests.CodeGen
                 Assert.Equal("UIEditor", codegen.TypeNameMap["System.ComponentModel.UIEditor, System"], "Unique type name should be in simple form.");
                 Assert.Equal("System.ComponentModel.StringConverter", codegen.TypeNameMap["System.ComponentModel.StringConverter, System"], "Duplicated type name should exist in full form.");
                 Assert.Equal("NuPattern.StringConverter", codegen.TypeNameMap["NuPattern.StringConverter, Microsoft"], "Duplicated type name should exist in full form.");
+                Assert.Equal("MultilineStringEditor", codegen.TypeNameMap["System.ComponentModel.Design.MultilineStringEditor, System.Design"]);
 
                 Assert.True(codegen.SafeImports.Contains("System"));
                 Assert.True(codegen.SafeImports.Contains("System.ComponentModel"));
+                Assert.True(codegen.SafeImports.Contains("System.ComponentModel.Design"));
                 Assert.False(codegen.SafeImports.Contains("NuPattern"));
+            }
+
+            [TestMethod, TestCategory("Unit")]
+            public void WhenBuildingTypeMap_ThenAlwaysContainsSystemDrawing()
+            {
+                var codegen = new ProductCodeGeneration<IElementInfo, IElement>(this.element);
+                codegen.EndInit();
+
+                Assert.Equal("UITypeEditor", codegen.TypeNameMap["System.Drawing.Design.UITypeEditor, System.Drawing"], "Unique type name should be in simple form.");
+                Assert.True(codegen.SafeImports.Contains("System.Drawing.Design"));
             }
 
             [TestMethod, TestCategory("Unit")]
