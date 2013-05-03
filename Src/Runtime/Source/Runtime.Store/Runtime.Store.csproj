@@ -108,6 +108,7 @@
     <Compile Include="ElementContainerImplementation.cs" />
     <Compile Include="DomainModel\InstanceBase.cs" />
     <Compile Include="DomainModel\ProductExtensions.cs" />
+    <Compile Include="ProductStateModelReader.cs" />
     <Compile Include="ProductToolkitInfo.cs" />
     <Compile Include="DomainModel\Property.cs" />
     <Compile Include="DomainModel\ProductElement.cs" />
@@ -183,7 +184,7 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
-    <Compile Include="GeneratedCode\DirectiveProcessor.gen.cs">
+    <Compile Include="GeneratedCode\Customization\DirectiveProcessor.gen.cs">
       <DependentUpon>DirectiveProcessor.tt</DependentUpon>
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -261,7 +262,7 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Diagram.gen.cs</LastGenOutput>
     </None>
-    <None Include="GeneratedCode\DirectiveProcessor.tt">
+    <None Include="GeneratedCode\Customization\DirectiveProcessor.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>DirectiveProcessor.gen.cs</LastGenOutput>
     </None>

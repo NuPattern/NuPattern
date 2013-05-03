@@ -1,0 +1,6 @@
+<#
+	string directiveName = this.Dsl.Name;
+    string modelReader = "ProductStateModelReader";
+#>
+<#@ Include File="..\..\..\..\..\Common\Helpers\ModelDirectiveProcessor.tt" #>
+<#@ Dsl processor="DslDirectiveProcessor"  requires="fileName='..\..\DslDefinition.dsl'" #>

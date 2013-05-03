@@ -127,12 +127,18 @@
     <Compile Include="DomainModel\CustomizableElementSchemaExtensions.cs" />
     <Compile Include="DomainModel\ContainingLinkSchemaExtensions.cs" />
     <Compile Include="DomainModel\ElementSchemaContainerExtensions.cs" />
+    <Compile Include="GeneratedCode\Customization\DirectiveProcessor.gen.cs">
+      <DependentUpon>DirectiveProcessor.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="ModelElementExtensions.cs" />
     <Compile Include="DomainModel\AbstractElementSchema.cs" />
     <Compile Include="DomainModel\AbstractElementSchema.Validation.cs">
       <DependentUpon>AbstractElementSchema.cs</DependentUpon>
     </Compile>
     <Compile Include="DomainModel\PatternModelSchema.cs" />
+    <Compile Include="PatternModelReader.cs" />
     <Compile Include="PropertyValueProviderBindingSettings.cs" />
     <Compile Include="DomainModel\ExtensionPointSchema.Validation.cs">
       <DependentUpon>ExtensionPointSchema.cs</DependentUpon>
@@ -149,6 +155,10 @@
     <None Include="AdapterManager.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>AdapterManager.gen.cs</LastGenOutput>
+    </None>
+    <None Include="GeneratedCode\Customization\DirectiveProcessor.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DirectiveProcessor.gen.cs</LastGenOutput>
     </None>
     <None Include="GeneratedCode\Customization\PropertyTracking.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -334,11 +344,6 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
-    <Compile Include="GeneratedCode\DirectiveProcessor.gen.cs">
-      <DependentUpon>DirectiveProcessor.tt</DependentUpon>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-    </Compile>
     <Compile Include="GeneratedCode\DomainClasses.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -413,10 +418,6 @@
     <None Include="GeneratedCode\Diagram.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Diagram.gen.cs</LastGenOutput>
-    </None>
-    <None Include="GeneratedCode\DirectiveProcessor.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>DirectiveProcessor.gen.cs</LastGenOutput>
     </None>
     <None Include="GeneratedCode\DomainRelationships.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

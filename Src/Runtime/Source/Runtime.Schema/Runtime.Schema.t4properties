@@ -6,5 +6,10 @@
       <PropertyName>Host</PropertyName>
       <Value>VisualStudio</Value>
     </TransformationPropertyValue>
+    <TransformationPropertyValue>
+      <FileName>GeneratedCode\Customization\DirectiveProcessor.tt</FileName>
+      <PropertyName>Host</PropertyName>
+      <Value>VisualStudio</Value>
+    </TransformationPropertyValue>
   </Values>
 </TransformationPropertyValues>
