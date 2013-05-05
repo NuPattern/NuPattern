@@ -107,6 +107,7 @@
     <Compile Include="Automation\Extensions\ArtifactReferencesValidation.cs" />
     <Compile Include="Commands\SetBlackboardValueCommand.cs" />
     <Compile Include="Commands\ShowMessageCommand.cs" />
+    <Compile Include="Conditions\DropSolutionProjectCondition.cs" />
     <Compile Include="Conditions\StringNotNullOrEmptyCondition.cs" />
     <Compile Include="Conditions\ValueIsNotNullCondition.cs" />
     <Compile Include="Design\AssociatedArtifactsTypeConverter.cs" />

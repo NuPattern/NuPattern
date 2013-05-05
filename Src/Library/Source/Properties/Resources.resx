@@ -2445,4 +2445,13 @@ Select the related solution items to delete and press 'OK', or press 'Cancel' to
   <data name="CreateElementFromPickedFileCommand_FilterFormat" xml:space="preserve">
     <value>(*{0})|*{0}</value>
   </data>
+  <data name="DropSolutionProjectCondition_Description" xml:space="preserve">
+    <value>Used to verify that the current dragged data includes one or more solution projects, optionally of the specified file extensions (if any).</value>
+  </data>
+  <data name="DropSolutionProjectCondition_DisplayName" xml:space="preserve">
+    <value>Dropped Items are Solution Projects</value>
+  </data>
+  <data name="DropSolutionProjectCondition_TraceGettingFiles" xml:space="preserve">
+    <value>Determining if dragged data contains any projects, with extensions '{0}'</value>
+  </data>
 </root>

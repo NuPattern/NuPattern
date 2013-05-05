@@ -1883,6 +1883,33 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Used to verify that the current dragged data includes one or more solution projects, optionally of the specified file extensions (if any)..
+        /// </summary>
+        internal static string DropSolutionProjectCondition_Description {
+            get {
+                return ResourceManager.GetString("DropSolutionProjectCondition_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dropped Items are Solution Projects.
+        /// </summary>
+        internal static string DropSolutionProjectCondition_DisplayName {
+            get {
+                return ResourceManager.GetString("DropSolutionProjectCondition_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Determining if dragged data contains any projects, with extensions &apos;{0}&apos;.
+        /// </summary>
+        internal static string DropSolutionProjectCondition_TraceGettingFiles {
+            get {
+                return ResourceManager.GetString("DropSolutionProjectCondition_TraceGettingFiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Used to verify if the pattern (parent of the current element) is parented within another pattern..
         /// </summary>
         internal static string ElementPatternIsParentedCondition_Description {
