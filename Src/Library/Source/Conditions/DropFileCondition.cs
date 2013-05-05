@@ -24,7 +24,7 @@ namespace NuPattern.Library.Conditions
         /// </summary>
         [DisplayNameResource(@"DropFileCondition_Extension_DisplayName", typeof(Resources))]
         [DescriptionResource(@"DropFileCondition_Extension_Description", typeof(Resources))]
-        [Required(AllowEmptyStrings = false)]
+        //[Required(AllowEmptyStrings = false)]
         public virtual string Extension
         {
             get;
