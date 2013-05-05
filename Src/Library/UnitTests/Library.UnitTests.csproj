@@ -103,6 +103,7 @@
     <Compile Include="Automation\Menu\ImageUriEditorSpec.cs" />
     <Compile Include="Automation\Menu\MenuAutomationSpec.cs" />
     <Compile Include="Automation\Menu\MenuSettingsValidationSpec.cs" />
+    <Compile Include="Conditions\DragDropHelpersSpec.cs" />
     <Compile Include="Design\ProductElementDictionaryConverterSpec.cs" />
     <Compile Include="Automation\Template\TemplateAutomationSpec.cs" />
     <Compile Include="Automation\Template\TemplateSettingsValidationSpec.cs" />
@@ -127,7 +128,6 @@
     <Compile Include="Conditions\ArtifactReferenceExistsConditionSpec.cs" />
     <Compile Include="Conditions\ArtifactsSavedConditionSpec.cs" />
     <Compile Include="Conditions\EventSenderMatchesElementConditionConditionSpec.cs" />
-    <Compile Include="Conditions\DropSolutionItemConditionSpec.cs" />
     <Compile Include="Conditions\ElementReferenceExistsConditionSpec.cs" />
     <Compile Include="Conditions\ElementPropertyExistsConditionSpec.cs" />
     <Compile Include="Conditions\XmlNodeExistsConditionSpec.cs" />
