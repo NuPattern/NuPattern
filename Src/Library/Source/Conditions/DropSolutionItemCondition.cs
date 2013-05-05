@@ -28,12 +28,18 @@ namespace NuPattern.Library.Conditions
                 Resources.DropSolutionItemCondition_TraceGettingFiles, this.Extension);
 
             var items = this.DragArgs.GetVSProjectItemsPaths();
-            if (items.Any())
+            if (!items.Any())
+            {
+                return Enumerable.Empty<string>();
+            }
+
+            // NOTE: we don't assume an extension has been specified.
+            if (!string.IsNullOrEmpty(this.Extension))
             {
                 return items.GetPathsEndingWithExtensions(this.Extension);
             }
 
-            return Enumerable.Empty<string>();
+            return items;
         }
     }
 }

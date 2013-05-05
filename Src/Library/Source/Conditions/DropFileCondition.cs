@@ -68,16 +68,18 @@ namespace NuPattern.Library.Conditions
         protected virtual IEnumerable<string> GetDraggedFiles()
         {
             var items = this.DragArgs.GetWindowsFilePaths();
-            if (items.Any())
+            if (!items.Any())
             {
-                var matchingFiles = items.GetPathsEndingWithExtensions(this.Extension);
-                if (matchingFiles.Any())
-                {
-                    return matchingFiles;
-                }
+                return Enumerable.Empty<string>();
             }
 
-            return Enumerable.Empty<string>();
+            // NOTE: we don't assume an extension has been specified.
+            if (!string.IsNullOrEmpty(this.Extension))
+            {
+                return items.GetPathsEndingWithExtensions(this.Extension);
+            }
+
+            return items;
         }
 
     }
