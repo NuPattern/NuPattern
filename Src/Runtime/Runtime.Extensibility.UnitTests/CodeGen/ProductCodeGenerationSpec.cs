@@ -57,7 +57,7 @@ namespace NuPattern.Runtime.UnitTests.CodeGen
                 var codegen = new ProductCodeGeneration<IElementInfo, IElement>(this.element);
                 codegen.EndInit();
 
-                Assert.Equal("UITypeEditor", codegen.TypeNameMap["System.Drawing.Design.UITypeEditor, System.Drawing"], "Unique type name should be in simple form.");
+                Assert.Equal("UITypeEditor", codegen.TypeNameMap["System.Drawing.Design.UITypeEditor"], "Unique type name should be in simple form.");
                 Assert.True(codegen.SafeImports.Contains("System.Drawing.Design"));
             }
 

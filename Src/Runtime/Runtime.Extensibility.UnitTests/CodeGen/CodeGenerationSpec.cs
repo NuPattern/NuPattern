@@ -220,6 +220,7 @@ namespace NuPattern.Runtime.UnitTests.CodeGen
             var codegen = new CodeGeneration();
 
             codegen.AddUsedTypes(typeof(Foo));
+            //codegen.EndInit();
 
             Assert.True(codegen.TypeNameMap.ContainsKey(typeof(TypeConverterAttribute).FullName));
             Assert.True(codegen.TypeNameMap.ContainsKey(typeof(BarAttribute).FullName));
@@ -237,6 +238,20 @@ namespace NuPattern.Runtime.UnitTests.CodeGen
             codegen.EndInit();
 
             Assert.Equal("Bar", codegen.GetTypeName("Foo.Bar, Foo"));
+            Assert.True(codegen.SafeImports.Contains("Foo"));
+        }
+
+        [TestMethod, TestCategory("Unit")]
+        public void WhenTypeMapContainsFullNameAndAssemblyQualified_ThenAddsUsingAndSimplifiesBoth()
+        {
+            var codegen = new CodeGeneration();
+
+            codegen.AddType("Foo.Bar, Foo");
+            codegen.AddType("Foo.Bar");
+            codegen.EndInit();
+
+            Assert.Equal("Bar", codegen.GetTypeName("Foo.Bar, Foo"));
+            Assert.Equal("Bar", codegen.GetTypeName("Foo.Bar"));
             Assert.True(codegen.SafeImports.Contains("Foo"));
         }
 

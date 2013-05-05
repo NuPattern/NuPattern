@@ -260,6 +260,10 @@ namespace NuPattern.Runtime.CodeGen
             // already been added above
             var allSimpleTypeNames = this.TypeNameMap.Keys
                 .Where(type => !IsFullGenericType(type))
+                // Filter out duplicates caused by simultaneous 
+                // presence of keys with the assembly name and 
+                // without it.
+                .Distinct(new SelectorEqualityComparer<string, string>(type => ToFullName(type)))
                 .Select(type => ToSimpleName(type))
                 .ToList();
 
@@ -362,15 +366,30 @@ namespace NuPattern.Runtime.CodeGen
             return fullName;
         }
 
+        /// <summary>
+        /// Extracts the type name without namespace or assembly.
+        /// </summary>
         private static string ToSimpleName(string type)
         {
-            var simpleTypeName = type;
-            if (simpleTypeName.IndexOf(',') != -1)
-                simpleTypeName = simpleTypeName.Substring(0, simpleTypeName.IndexOf(','));
+            if (type.IndexOf('.') == -1)
+                return type;
 
-            simpleTypeName = simpleTypeName.Substring(simpleTypeName.LastIndexOf('.') + 1);
+            var fullName = ToFullName(type);
 
-            return simpleTypeName;
+            return fullName.Substring(fullName.LastIndexOf('.') + 1);
+        }
+
+        /// <summary>
+        /// Extracts the full type name including its namespace, 
+        /// but not its assembly.
+        /// </summary>
+        private static string ToFullName(string type)
+        {
+            var fullName = type;
+            if (fullName.IndexOf(',') != -1)
+                fullName = fullName.Substring(0, fullName.IndexOf(','));
+
+            return fullName;
         }
 
         /// <summary>
@@ -405,7 +424,7 @@ namespace NuPattern.Runtime.CodeGen
                 from arg in attr.ConstructorArguments
                 where arg.ArgumentType == typeof(Type)
                 let type = (Type)arg.Value
-                select type.FullName + ", " + type.Assembly.GetName().Name);
+                select type.FullName);
 
             // Add the namespaces of all named arguments that are typeof(..)
             usedTypes = usedTypes.Concat(
@@ -413,7 +432,7 @@ namespace NuPattern.Runtime.CodeGen
                 from arg in attr.NamedArguments
                 where arg.TypedValue.ArgumentType == typeof(Type)
                 let type = (Type)arg.TypedValue.Value
-                select type.FullName + ", " + type.Assembly.GetName().Name);
+                select type.FullName);
 
             return usedTypes;
         }

@@ -4,6 +4,21 @@ using System.Collections.Generic;
 namespace NuPattern
 {
     /// <summary>
+    /// Factory class for <see cref="SelectorEqualityComparer{TSource, TResult}"/>.
+    /// </summary>
+    public static class SelectorEqualityComparer
+    {
+        /// <summary>
+        /// Creates a comparer from the given selector function, typically inferring 
+        /// automatically the generic parameters from the received function.
+        /// </summary>
+        public static SelectorEqualityComparer<TSource, TResult> Create<TSource, TResult>(Func<TSource, TResult> selector)
+        {
+            return new SelectorEqualityComparer<TSource, TResult>(selector);
+        }
+    }
+
+    /// <summary>
     /// Allows comparisons (and Distinct in linq) by using 
     /// a simple selector function that projects a value 
     /// from a source, to use for comparison.
