@@ -34,8 +34,6 @@ namespace NuPattern.Library.Conditions
             }
 
             // NOTE: we don't assume an extension has been specified.
-            // For this to work, we need another change on the DropFileCondition 
-            // to make the Extension property non-required.
             if (!string.IsNullOrEmpty(this.Extension))
             {
                 return projects.GetPathsEndingWithExtensions(this.Extension);
