@@ -11,7 +11,7 @@ namespace NuPattern.Runtime.UI.ViewModels
     /// <summary>
     /// Provides a view model for a pattern instance in the solution builder view.
     /// </summary>
-    internal class ProductViewModel : ProductElementViewModel
+    internal class ProductViewModel : ProductElementViewModel, NuPattern.Runtime.UI.ViewModels.IProductViewModel
     {
         private const string IconEnabledPath = "../../Resources/NodeProductDefault.png";
         private const string IconUninstalledPath = "../../Resources/NodeProductVersionNotFound.png";

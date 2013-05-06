@@ -179,5 +179,10 @@ namespace NuPattern.Library.Commands
         {
             get { return internalSettings.Classification; }
         }
+
+        public Microsoft.VisualStudio.Modeling.Store Store
+        {
+            get { throw new NotImplementedException(); }
+        }
     }
 }

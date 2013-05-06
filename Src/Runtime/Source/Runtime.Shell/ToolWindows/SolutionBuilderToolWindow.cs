@@ -16,7 +16,8 @@ namespace NuPattern.Runtime.Shell.ToolWindows
     /// <summary>
     /// Provides the Pattern Explorer tool window.
     /// </summary>
-    internal partial class SolutionBuilderToolWindow
+    [CLSCompliant (false)]
+    public partial class SolutionBuilderToolWindow
     {
         private const string VisibilitySetting = "FirstTimeInitialization";
         private const string SolutionBuilderAutoOpenedSetting = "SolutionBuilderAutoOpened";
@@ -36,6 +37,9 @@ namespace NuPattern.Runtime.Shell.ToolWindows
         [Import(typeof(SVsServiceProvider))]
         private IServiceProvider ServiceProvider { get; set; }
 
+        /// <summary>
+        /// OnToolWindowCreated method
+        /// </summary>
         public override void OnToolWindowCreated()
         {
             base.OnToolWindowCreated();
@@ -44,6 +48,9 @@ namespace NuPattern.Runtime.Shell.ToolWindows
             this.viewModel.CurrentNodeChanged += this.OnCurrentNodeChanged;
         }
 
+        /// <summary>
+        /// Initialize method
+        /// </summary>
         protected override void Initialize()
         {
             base.Initialize();

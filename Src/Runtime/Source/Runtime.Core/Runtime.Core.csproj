@@ -136,7 +136,13 @@
     <Compile Include="UI\ProductPicker.xaml.cs">
       <DependentUpon>ProductPicker.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UI\ViewModels\IElementViewModel.cs" />
     <Compile Include="UI\ViewModels\InstalledToolkitInfo.cs" />
+    <Compile Include="UI\ViewModels\IProductElementViewModel.cs" />
+    <Compile Include="UI\ViewModels\IProductViewModel.cs" />
+    <Compile Include="UI\ViewModels\ISolutionBuilderContext.cs" />
+    <Compile Include="UI\ViewModels\ISolutionBuilderViewModel.cs" />
+    <Compile Include="UI\ViewModels\ISolutionBuilderViewModel1.cs" />
     <Compile Include="UI\ViewModels\SolutionPickerBaseViewModel.cs" />
     <Compile Include="UI\ViewModels\SolutionSelectorViewModel.cs" />
     <Compile Include="UI\Views\SolutionSelectorView.xaml.cs">

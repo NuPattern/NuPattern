@@ -7,7 +7,6 @@ namespace NuPattern.Runtime
     /// <summary>
     /// Defines contracts to manage patterns in an instance of Visual Studio.
     /// </summary>
-    [CLSCompliant(false)]
     public interface IPatternManager : INotifyPropertyChanged
     {
         /// <summary>

@@ -1,13 +1,15 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using NuPattern.Presentation;
+using System;
 
 namespace NuPattern.Runtime.UI.ViewModels
 {
     /// <summary>
     /// Defines behavior for dynamic menu options.
     /// </summary>
-    internal class MenuOptionViewModel : ViewModel
+    [CLSCompliant(false)]
+    public class MenuOptionViewModel : ViewModel
     {
         private const long DefaultSortOrder = 100;
 

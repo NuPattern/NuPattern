@@ -1,11 +1,13 @@
-﻿using Microsoft.VisualStudio.Shell;
+﻿using System;
+using Microsoft.VisualStudio.Shell;
 
 namespace NuPattern.Runtime.Shell.ToolWindows
 {
     /// <summary>
     /// Provides a service interface to access a tool window in this package.
     /// </summary>
-    internal interface IPackageToolWindow
+    [CLSCompliant(false)]
+    public interface IPackageToolWindow
     {
         /// <summary>
         /// Shows the window.

@@ -7,7 +7,7 @@ namespace NuPattern.Runtime.UI.ViewModels
     /// <summary>
     /// Defines a view model for a <see cref="IAbstractElement"/>.
     /// </summary>
-    internal class ElementViewModel : ProductElementViewModel
+    internal class ElementViewModel : ProductElementViewModel, NuPattern.Runtime.UI.ViewModels.IElementViewModel
     {
         internal const string IconPathFormat = "../../Resources/" + "Node{0}.png"; // element images stored as resource with prefix
 

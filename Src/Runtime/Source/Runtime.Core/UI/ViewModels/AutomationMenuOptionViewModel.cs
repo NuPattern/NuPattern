@@ -15,7 +15,8 @@ namespace NuPattern.Runtime.UI.ViewModels
     /// <summary>
     /// The view model for an automation menu.
     /// </summary>
-    internal class AutomationMenuOptionViewModel : MenuOptionViewModel
+    [CLSCompliant(false)]
+    public class AutomationMenuOptionViewModel : MenuOptionViewModel
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="AutomationMenuOptionViewModel"/> class.

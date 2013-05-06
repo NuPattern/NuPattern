@@ -14,7 +14,7 @@ namespace NuPattern.Runtime.UI.ViewModels
     /// <summary>
     /// Provides a view model for the solution builder
     /// </summary>
-    internal partial class SolutionBuilderViewModel : ViewModel
+    internal partial class SolutionBuilderViewModel : ViewModel, ISolutionBuilderViewModel
     {
         internal const string UsingGuidanceExtensionId = ShellConstants.VsixIdentifier;
 
@@ -132,6 +132,17 @@ namespace NuPattern.Runtime.UI.ViewModels
         /// <summary>
         /// Gets the current node in the pattern explorer tree view.
         /// </summary>
+        public IProductElementViewModel CurrentNodeViewModel
+        {
+            get
+            {
+                return this.CurrentNode;
+            }
+        }
+
+        /// <summary>
+        /// Gets the current node in the pattern explorer tree view.
+        /// </summary>
         public ProductElementViewModel CurrentNode
         {
             get
@@ -196,6 +207,14 @@ namespace NuPattern.Runtime.UI.ViewModels
                     this.OnPropertyChanged(() => this.IsStateOpened);
                 }
             }
+        }
+
+        /// <summary>
+        /// Gets the pattern nodes.
+        /// </summary>
+        public ObservableCollection<IProductElementViewModel> NodesViewModel
+        {
+            get { return new ObservableCollection<IProductElementViewModel>(this.Nodes); }
         }
 
         /// <summary>
@@ -370,7 +389,7 @@ namespace NuPattern.Runtime.UI.ViewModels
 
         private void OnElementDeleted(object sender, ValueEventArgs<IProductElement> e)
         {
-            var element = this.Nodes.Traverse(x => x.Nodes).FirstOrDefault(x => x.Model == e.Value);
+            var element = (ProductElementViewModel)this.Nodes.Traverse(x => x.Nodes).FirstOrDefault(x => x.Model == e.Value);
             if (element != null)
             {
                 if (element.ParentNode == null) // Product at the top level

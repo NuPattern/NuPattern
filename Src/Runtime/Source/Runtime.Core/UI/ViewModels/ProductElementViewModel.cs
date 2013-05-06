@@ -20,7 +20,7 @@ namespace NuPattern.Runtime.UI.ViewModels
     /// <summary>
     /// Base view model for <see cref="ProductElement"/> elements.
     /// </summary>
-    internal abstract class ProductElementViewModel : ViewModel<IProductElement>, IEditableObject
+    internal abstract class ProductElementViewModel : ViewModel<IProductElement>, IEditableObject, NuPattern.Runtime.UI.ViewModels.IProductElementViewModel
     {
         private static readonly string assemblyName = typeof(ProductElementViewModel).Assembly.GetName().Name;
         private static readonly string deleteIconPath = @"pack://application:,,,/" + assemblyName + @";component/Resources/CommandRemove.png";
@@ -68,6 +68,15 @@ namespace NuPattern.Runtime.UI.ViewModels
         /// Gets the extension point to instanciate.
         /// </summary>
         public System.Windows.Input.ICommand AddExtensionCommand { get; private set; }
+
+
+        /// <summary>
+        /// Gets the solution builder context.
+        /// </summary>
+        public ISolutionBuilderContext ContextViewModel
+        {
+            get { return this.Context; }
+        }
 
         /// <summary>
         /// Gets the solution builder context.
@@ -168,6 +177,14 @@ namespace NuPattern.Runtime.UI.ViewModels
         public new IProductElement Model
         {
             get { return (IProductElement)base.Model; }
+        }
+
+        /// <summary>
+        /// Gets the child nodes.
+        /// </summary>
+        public ObservableCollection<IProductElementViewModel> NodesViewModel 
+        { 
+            get { return new ObservableCollection<IProductElementViewModel> (this.Nodes); } 
         }
 
         /// <summary>

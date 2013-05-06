@@ -8,7 +8,7 @@ namespace NuPattern.Runtime.UI.ViewModels
     /// <summary>
     /// Defines the needed classes for the <see cref="SolutionBuilderViewModel"/>.
     /// </summary>
-    internal class SolutionBuilderContext
+    internal class SolutionBuilderContext : NuPattern.Runtime.UI.ViewModels.ISolutionBuilderContext
     {
         /// <summary>
         /// Gets the binding factory.

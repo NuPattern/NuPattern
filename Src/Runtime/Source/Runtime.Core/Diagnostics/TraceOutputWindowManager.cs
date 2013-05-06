@@ -15,7 +15,7 @@ namespace NuPattern.Runtime.Diagnostics
     /// <summary>
     ///  Manages the output of trace messages to an output window pane.
     /// </summary>
-    internal sealed class TraceOutputWindowManager : IDisposable
+    public sealed class TraceOutputWindowManager : IDisposable
     {
         private static readonly ITracer tracer = Tracer.Get<TraceOutputWindowManager>();
         private static readonly TraceFilter defaultFilter = new DelegateTraceFilter((cache, source, eventType, id) => true);

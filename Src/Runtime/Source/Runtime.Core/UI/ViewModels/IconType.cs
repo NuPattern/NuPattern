@@ -3,7 +3,7 @@
     /// <summary>
     /// Defines the icon type to be used in the <see cref="MenuOptionViewModel"/>.
     /// </summary>
-    internal enum IconType
+    public enum IconType
     {
         /// <summary>
         /// The element does not have an icon.
