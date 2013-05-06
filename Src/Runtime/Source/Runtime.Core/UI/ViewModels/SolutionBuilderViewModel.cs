@@ -389,7 +389,7 @@ namespace NuPattern.Runtime.UI.ViewModels
 
         private void OnElementDeleted(object sender, ValueEventArgs<IProductElement> e)
         {
-            var element = (ProductElementViewModel)this.Nodes.Traverse(x => x.Nodes).FirstOrDefault(x => x.Model == e.Value);
+            var element = this.Nodes.Traverse(x => x.Nodes).FirstOrDefault(x => x.Model == e.Value);
             if (element != null)
             {
                 if (element.ParentNode == null) // Product at the top level

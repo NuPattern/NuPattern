@@ -182,7 +182,7 @@ namespace NuPattern.Library.Commands
 
         public Microsoft.VisualStudio.Modeling.Store Store
         {
-            get { throw new NotImplementedException(); }
+            get { return internalSettings.Store; }
         }
     }
 }
