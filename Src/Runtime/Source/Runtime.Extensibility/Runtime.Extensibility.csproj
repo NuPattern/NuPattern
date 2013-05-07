@@ -145,6 +145,7 @@
     <Compile Include="UI\ViewModels\IProductViewModel.cs" />
     <Compile Include="UI\ViewModels\ISolutionBuilderContext.cs" />
     <Compile Include="UI\ViewModels\ISolutionBuilderViewModel.cs" />
+    <Compile Include="UI\ViewModels\MenuOptionViewModel.cs" />
     <Compile Include="Validation\DataAnnotationsValidator.cs" />
     <Compile Include="Bindings\Design\DesignCollectionConverter.cs" />
     <Compile Include="Bindings\Design\DesignComponentTypeDescriptor.cs" />

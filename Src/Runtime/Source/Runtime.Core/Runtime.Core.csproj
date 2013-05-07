@@ -178,7 +178,6 @@
     </Compile>
     <Compile Include="UI\ViewModels\ElementViewModel.cs" />
     <Compile Include="UI\ViewModels\AutomationMenuOptionViewModel.cs" />
-    <Compile Include="UI\ViewModels\MenuOptionViewModel.cs" />
     <Compile Include="UI\ViewModels\SolutionBuilderContext.cs" />
     <Compile Include="UI\Views\AddNewNodeView.xaml.cs">
       <DependentUpon>AddNewNodeView.xaml</DependentUpon>
