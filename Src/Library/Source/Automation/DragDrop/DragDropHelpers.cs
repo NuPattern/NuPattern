@@ -59,10 +59,12 @@ namespace NuPattern.Library
                     stream.Position = 0;
                     using (var reader = new StreamReader(stream, Encoding.Unicode))
                     {
-                        return reader.ReadToEnd()
-                            .Split('\0')
-                            .Where(s => s.StartsWith(@"{", StringComparison.OrdinalIgnoreCase))
-                            .Select(p => GetProperCasedName(string.Concat(p.Split('|')[2], p.Split('|')[1])));
+                        return from data in reader.ReadToEnd().Split('\0')
+                               where data.IndexOf('{') != -1
+                               let paths = data.Substring(data.IndexOf('{'))
+                               let parts = paths.Split('|')
+                               let path = Path.Combine(parts[2], Path.GetFileName(parts[1]))
+                               select GetProperCasedName(path);
                     }
                 }
             }
