@@ -34,6 +34,16 @@ namespace NuPattern.Runtime.UI.ViewModels
         bool IsEnabled { get; set; }
 
         /// <summary>
+        /// Gets or sets the group.
+        /// </summary>
+        int GroupIndex { get; set; }
+
+        /// <summary>
+        /// Gets or sets the sort order.
+        /// </summary>
+        long SortOrder { get; set; }
+
+        /// <summary>
         /// Gets the data for the menu
         /// </summary>
         object Data { get; set; }
