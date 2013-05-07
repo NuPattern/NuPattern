@@ -68,6 +68,7 @@ namespace NuPattern.Runtime.Shell.ToolWindows
             {
                 PatternManager = this.PatternManager,
                 UserMessageService = this.UserMessageService,
+                BindingFactory = this.BindingFactory,
                 NewProductDialogFactory = ctx => shell.CreateDialog<AddNewProductView>(ctx),
                 NewNodeDialogFactory = ctx => shell.CreateDialog<AddNewNodeView>(ctx),
                 ShowProperties = this.ShowProperties

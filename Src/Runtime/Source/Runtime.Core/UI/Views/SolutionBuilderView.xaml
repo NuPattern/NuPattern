@@ -198,7 +198,7 @@
             </TreeView.Resources>
 
             <TreeView.ItemTemplate>
-                <HierarchicalDataTemplate ItemsSource="{Binding TopLevelNodes, Converter={StaticResource TreeViewItemOrderingConverter}, ConverterParameter=Model.InstanceOrder}">
+                <HierarchicalDataTemplate ItemsSource="{Binding ChildNodes, Converter={StaticResource TreeViewItemOrderingConverter}, ConverterParameter=Model.InstanceOrder}">
                     <StackPanel Name="panel" Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,1">
                         <Image Source="{Binding Converter={StaticResource ItemIconWithDefault}}" SnapsToDevicePixels="True" Width="16" Height="16" Margin="0,0,1,0" Focusable="False" />
 
