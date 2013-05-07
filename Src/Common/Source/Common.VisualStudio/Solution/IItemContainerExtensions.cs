@@ -234,7 +234,7 @@ namespace NuPattern.VisualStudio.Solution
 
         private static IEnumerable<IItemContainer> FindMatch(this IEnumerable<IItemContainer> items, string currentPath, Regex matchPath)
         {
-            foreach (var item in items)
+            foreach (var item in items.Where(i => i.Kind != ItemKind.Unknown))
             {
                 var path = Path.Combine(currentPath, item.Name);
 
