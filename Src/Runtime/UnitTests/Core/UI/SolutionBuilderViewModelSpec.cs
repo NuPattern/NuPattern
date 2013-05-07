@@ -189,7 +189,7 @@ namespace NuPattern.Runtime.UnitTests.UI
 
                 this.target.AddNewProductCommand.Execute(null);
 
-                Assert.Equal(0, this.target.Nodes.Count());
+                Assert.Equal(0, this.target.TopLevelNodes.Count());
             }
 
             [TestMethod, TestCategory("Unit")]
@@ -218,17 +218,17 @@ namespace NuPattern.Runtime.UnitTests.UI
                 this.target.AddNewProductCommand.Execute(null);
 
                 this.patternManager.Verify(p => p.CreateProduct(It.IsAny<IInstalledToolkitInfo>(), It.IsAny<string>(), true), Times.Once());
-                Assert.Equal(1, this.target.Nodes.Count());
+                Assert.Equal(1, this.target.TopLevelNodes.Count());
             }
 
             [TestMethod, TestCategory("Unit")]
             public void WhenAddingProductInStore_ThenAddsProductToProducts()
             {
-                Assert.Equal(0, this.target.Nodes.Count());
+                Assert.Equal(0, this.target.TopLevelNodes.Count());
 
                 this.patternManager.Object.CreateProduct(new Mock<IInstalledToolkitInfo>().Object, "Foo");
 
-                Assert.Equal(1, this.target.Nodes.Count());
+                Assert.Equal(1, this.target.TopLevelNodes.Count());
             }
 
             [TestMethod, TestCategory("Unit")]
@@ -297,7 +297,7 @@ namespace NuPattern.Runtime.UnitTests.UI
             [TestMethod, TestCategory("Unit")]
             public void WhenInitializing_ThenLoadProducts()
             {
-                Assert.Equal(2, this.target.Nodes.Count());
+                Assert.Equal(2, this.target.TopLevelNodes.Count());
             }
 
             [TestMethod, TestCategory("Unit")]
@@ -306,7 +306,7 @@ namespace NuPattern.Runtime.UnitTests.UI
                 var propertyChangedRaised = false;
                 var eventRaised = false;
 
-                this.target.Nodes.ElementAt(0).IsSelected = true;
+                this.target.TopLevelNodes.ElementAt(0).IsSelected = true;
                 this.target.PropertyChanged += (s, e) =>
                 {
                     if (e.PropertyName == Reflect<SolutionBuilderViewModel>.GetProperty(x => x.CurrentNode).Name)
@@ -315,7 +315,7 @@ namespace NuPattern.Runtime.UnitTests.UI
                     }
                 };
                 this.target.CurrentNodeChanged += (s, e) => eventRaised = true;
-                this.target.Nodes.ElementAt(1).IsSelected = true;
+                this.target.TopLevelNodes.ElementAt(1).IsSelected = true;
 
                 Assert.True(propertyChangedRaised);
                 Assert.True(eventRaised);
@@ -327,7 +327,7 @@ namespace NuPattern.Runtime.UnitTests.UI
                 var propertyChangedRaised = false;
                 var eventRaised = false;
 
-                this.target.Nodes.First().IsSelected = true;
+                this.target.TopLevelNodes.First().IsSelected = true;
                 this.target.PropertyChanged += (s, e) =>
                 {
                     if (e.PropertyName == Reflect<SolutionBuilderViewModel>.GetProperty(x => x.CurrentNode).Name)
@@ -336,7 +336,7 @@ namespace NuPattern.Runtime.UnitTests.UI
                     }
                 };
                 this.target.CurrentNodeChanged += (s, e) => eventRaised = true;
-                this.target.Nodes.First().IsSelected = true;
+                this.target.TopLevelNodes.First().IsSelected = true;
 
                 Assert.False(propertyChangedRaised);
                 Assert.False(eventRaised);
@@ -345,11 +345,11 @@ namespace NuPattern.Runtime.UnitTests.UI
             [TestMethod, TestCategory("Unit")]
             public void WhenRemovingProductFromStore_ThenRemovesProductFromProducts()
             {
-                Assert.Equal(2, this.target.Nodes.Count());
+                Assert.Equal(2, this.target.TopLevelNodes.Count());
 
-                this.patternManager.Object.DeleteProduct(this.target.Nodes.Cast<ProductViewModel>().First().Model);
+                this.patternManager.Object.DeleteProduct(this.target.TopLevelNodes.Cast<ProductViewModel>().First().Data);
 
-                Assert.Equal(1, this.target.Nodes.Count());
+                Assert.Equal(1, this.target.TopLevelNodes.Count());
             }
 
             [TestMethod, TestCategory("Unit")]
@@ -366,7 +366,7 @@ namespace NuPattern.Runtime.UnitTests.UI
                 this.patternManager.SetupGet(p => p.IsOpen).Returns(false);
                 this.patternManager.Raise(e => e.IsOpenChanged += null, EventArgs.Empty);
 
-                Assert.Equal(0, this.target.Nodes.Count());
+                Assert.Equal(0, this.target.TopLevelNodes.Count());
             }
 
             [TestMethod, TestCategory("Unit")]
@@ -387,7 +387,7 @@ namespace NuPattern.Runtime.UnitTests.UI
             [TestMethod, TestCategory("Unit")]
             public void WhenDeletingNodeAndCurrentNodeIsSelected_ThenCanDeleteNodeReturnsTrue()
             {
-                this.target.Nodes.First().IsSelected = true;
+                this.target.TopLevelNodes.First().IsSelected = true;
 
                 Assert.True(this.target.DeleteCommand.CanExecute(null));
             }
@@ -401,7 +401,7 @@ namespace NuPattern.Runtime.UnitTests.UI
             [TestMethod, TestCategory("Unit")]
             public void WhenBeginingEditNodeAndCurrentNodeIsSelected_ThenCanBeginEditNodeReturnsTrue()
             {
-                this.target.Nodes.First().IsSelected = true;
+                this.target.TopLevelNodes.First().IsSelected = true;
 
                 Assert.True(this.target.BeginEditCommand.CanExecute(null));
             }
@@ -409,8 +409,8 @@ namespace NuPattern.Runtime.UnitTests.UI
             [TestMethod, TestCategory("Unit")]
             public void WhenBeginingEdition_ThenSetsIsEditingToTrue()
             {
-                var product = this.target.Nodes.Cast<ProductViewModel>().First();
-                var productMock = Mock.Get(product.Model);
+                var product = this.target.TopLevelNodes.Cast<ProductViewModel>().First();
+                var productMock = Mock.Get(product.Data);
                 product.IsSelected = true;
 
                 this.target.BeginEditCommand.Execute(null);
@@ -433,7 +433,7 @@ namespace NuPattern.Runtime.UnitTests.UI
             [TestMethod, TestCategory("Unit")]
             public void WhenEndingEditNodeAndCurrentNodeDoesNotEditing_ThenCanEndEditNodeReturnsFalse()
             {
-                this.target.Nodes.First().IsSelected = true;
+                this.target.TopLevelNodes.First().IsSelected = true;
 
                 Assert.False(this.target.EndEditCommand.CanExecute(null));
             }
@@ -441,7 +441,7 @@ namespace NuPattern.Runtime.UnitTests.UI
             [TestMethod, TestCategory("Unit")]
             public void WhenCancelingEditNodeAndCurrentNodeDoesNotEditing_ThenCanCancelEditNodeReturnsFalse()
             {
-                this.target.Nodes.First().IsSelected = true;
+                this.target.TopLevelNodes.First().IsSelected = true;
 
                 Assert.False(this.target.CancelEditCommand.CanExecute(null));
             }
@@ -449,7 +449,7 @@ namespace NuPattern.Runtime.UnitTests.UI
             [TestMethod, TestCategory("Unit")]
             public void WhenEndingEditNodeAndCurrentNodeIsEditing_ThenCanEndEditNodeReturnsTrue()
             {
-                this.target.Nodes.First().IsSelected = true;
+                this.target.TopLevelNodes.First().IsSelected = true;
                 this.target.BeginEditCommand.Execute(null);
 
                 Assert.True(this.target.EndEditCommand.CanExecute(null));
@@ -458,7 +458,7 @@ namespace NuPattern.Runtime.UnitTests.UI
             [TestMethod, TestCategory("Unit")]
             public void WhenCancelingEditNodeAndCurrentNodeIsEditing_ThenCanCancelEditNodeReturnsTrue()
             {
-                this.target.Nodes.First().IsSelected = true;
+                this.target.TopLevelNodes.First().IsSelected = true;
                 this.target.BeginEditCommand.Execute(null);
 
                 Assert.True(this.target.CancelEditCommand.CanExecute(null));
@@ -467,7 +467,7 @@ namespace NuPattern.Runtime.UnitTests.UI
             [TestMethod, TestCategory("Unit")]
             public void WhenEndingEdition_ThenSetsIsEditingToFalse()
             {
-                var productViewModel = this.target.Nodes.First();
+                var productViewModel = this.target.TopLevelNodes.First();
                 productViewModel.IsSelected = true;
                 this.target.BeginEditCommand.Execute(null);
 
@@ -480,7 +480,7 @@ namespace NuPattern.Runtime.UnitTests.UI
             [TestMethod, TestCategory("Unit")]
             public void WhenCancelingEdition_ThenSetsIsEditingToFalse()
             {
-                var productViewModel = this.target.Nodes.First();
+                var productViewModel = this.target.TopLevelNodes.First();
                 productViewModel.IsSelected = true;
                 this.target.BeginEditCommand.Execute(null);
 
@@ -498,7 +498,7 @@ namespace NuPattern.Runtime.UnitTests.UI
             [TestMethod, TestCategory("Unit")]
             public void WhenActivatingNodeAndCurrentNodeIsSelected_ThenCanActivateNodeReturnsTrue()
             {
-                this.target.Nodes.First().IsSelected = true;
+                this.target.TopLevelNodes.First().IsSelected = true;
 
                 Assert.True(this.target.ActivateCommand.CanExecute(null));
             }
@@ -506,38 +506,38 @@ namespace NuPattern.Runtime.UnitTests.UI
             [TestMethod, TestCategory("Unit")]
             public void WhenActivatingNode_ThenInvokesPatternManagerActivateElement()
             {
-                var element = this.target.Nodes.First();
+                var element = this.target.TopLevelNodes.First();
                 element.IsSelected = true;
 
                 this.target.ActivateCommand.Execute(null);
 
-                this.patternManager.Verify(x => x.ActivateElement(element.Model), Times.Once());
+                this.patternManager.Verify(x => x.ActivateElement(element.Data), Times.Once());
             }
 
             [TestMethod, TestCategory("Unit")]
             public void WhenAddingElementToView_ThenAddsTheElement()
             {
-                var product = this.target.Nodes.First();
-                var view = ((ProductViewModel)product).CurrentView;
+                var product = this.target.TopLevelNodes.First();
+                var view = ((ProductViewModel)product).CurrentViewData;
                 SetupCreateElement(this.patternManager.Object, view);
 
-                Assert.Equal(2, product.Nodes.Count);
+                Assert.Equal(2, product.ChildNodes.Count);
 
                 view.CreateElement();
 
-                Assert.Equal(3, product.Nodes.Count);
+                Assert.Equal(3, product.ChildNodes.Count);
             }
 
             [TestMethod, TestCategory("Unit")]
             public void WhenAddingCollectionToView_ThenAddsTheCollection()
             {
-                var product = this.target.Nodes.First();
-                var view = ((ProductViewModel)product).CurrentView;
+                var product = this.target.TopLevelNodes.First();
+                var view = ((ProductViewModel)product).CurrentViewData;
                 SetupCreateCollection(this.patternManager.Object, view);
 
                 view.CreateCollection();
 
-                Assert.Equal(3, product.Nodes.Count);
+                Assert.Equal(3, product.ChildNodes.Count);
             }
         }
 

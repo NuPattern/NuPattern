@@ -1,11 +1,9 @@
-using System;
 
 namespace NuPattern.Runtime.Bindings
 {
     /// <summary>
     /// A binding that allows passing dynamic values at runtime.
     /// </summary>
-    [CLSCompliant(false)]
     public interface IDynamicBinding<T> : IBinding<T>
         where T : class
     {

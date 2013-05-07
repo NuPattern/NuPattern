@@ -1,5 +1,6 @@
 ﻿<cp:CommonDialogWindow
     x:Class="NuPattern.Runtime.UI.Views.AddNewNodeView"
+    x:ClassModifier="internal"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:cp="clr-namespace:NuPattern.Presentation;assembly=NuPattern.Presentation"

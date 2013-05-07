@@ -68,7 +68,6 @@ namespace NuPattern.Runtime.Shell.ToolWindows
             {
                 PatternManager = this.PatternManager,
                 UserMessageService = this.UserMessageService,
-                BindingFactory = this.BindingFactory,
                 NewProductDialogFactory = ctx => shell.CreateDialog<AddNewProductView>(ctx),
                 NewNodeDialogFactory = ctx => shell.CreateDialog<AddNewNodeView>(ctx),
                 ShowProperties = this.ShowProperties
@@ -155,7 +154,7 @@ namespace NuPattern.Runtime.Shell.ToolWindows
 
         private void OnCurrentNodeChanged(object sender, EventArgs e)
         {
-            SelectItem(this.viewModel.CurrentNode == null ? new object[0] : new[] { this.viewModel.CurrentNode.Model });
+            SelectItem(this.viewModel.CurrentNode == null ? new object[0] : new[] { this.viewModel.CurrentNode.Data });
         }
 
         private void SelectItem(object[] selectedObjects)

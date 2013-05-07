@@ -20,10 +20,10 @@ namespace NuPattern.Runtime.UI.ViewModels
 
         private static readonly ITracer tracer = Tracer.Get<SolutionBuilderViewModel>();
 
-        private ProductElementViewModel currentNode;
+        private IProductElementViewModel currentNode;
         private IServiceProvider serviceProvider;
         private ISolutionEvents solutionListener;
-        private SolutionBuilderContext context;
+        private ISolutionBuilderContext context;
         private bool isStateOpened;
         private bool isSolutionOpened;
 
@@ -32,7 +32,7 @@ namespace NuPattern.Runtime.UI.ViewModels
         /// </summary>
         /// <param name="context">The pattern explorer context.</param>
         /// <param name="serviceProvider">The service provider.</param>
-        public SolutionBuilderViewModel(SolutionBuilderContext context, IServiceProvider serviceProvider)
+        public SolutionBuilderViewModel(ISolutionBuilderContext context, IServiceProvider serviceProvider)
         {
             Guard.NotNull(() => context, context);
             Guard.NotNull(() => serviceProvider, serviceProvider);
@@ -48,7 +48,7 @@ namespace NuPattern.Runtime.UI.ViewModels
             this.isSolutionOpened = this.solutionListener.IsSolutionOpened;
             this.isStateOpened = this.context.PatternManager.IsOpen || this.isSolutionOpened;
 
-            this.Nodes = new ObservableCollection<ProductElementViewModel>();
+            this.TopLevelNodes = new ObservableCollection<IProductElementViewModel>();
             if (this.IsStateOpened)
             {
                 this.Refresh();
@@ -132,7 +132,7 @@ namespace NuPattern.Runtime.UI.ViewModels
         /// <summary>
         /// Gets the current node in the pattern explorer tree view.
         /// </summary>
-        public IProductElementViewModel CurrentNodeViewModel
+        public IProductElementViewModel CurrentElement
         {
             get
             {
@@ -143,7 +143,7 @@ namespace NuPattern.Runtime.UI.ViewModels
         /// <summary>
         /// Gets the current node in the pattern explorer tree view.
         /// </summary>
-        public ProductElementViewModel CurrentNode
+        public IProductElementViewModel CurrentNode
         {
             get
             {
@@ -212,20 +212,11 @@ namespace NuPattern.Runtime.UI.ViewModels
         /// <summary>
         /// Gets the pattern nodes.
         /// </summary>
-        public ObservableCollection<IProductElementViewModel> NodesViewModel
-        {
-            get { return new ObservableCollection<IProductElementViewModel>(this.Nodes); }
-        }
-
-        /// <summary>
-        /// Gets the pattern nodes.
-        /// </summary>
-        public ObservableCollection<ProductElementViewModel> Nodes { get; private set; }
-
+        public ObservableCollection<IProductElementViewModel> TopLevelNodes { get; private set; }
 
         private void ActivateNode()
         {
-            this.context.PatternManager.ActivateElement(this.currentNode.Model);
+            this.context.PatternManager.ActivateElement(this.currentNode.Data);
         }
 
         private void AddNewProduct()
@@ -259,7 +250,7 @@ namespace NuPattern.Runtime.UI.ViewModels
             }
         }
 
-        internal void BeginEditNode()
+        public void BeginEditNode()
         {
             var view = this.GetEditableCollectionView();
             if (view != null)
@@ -282,7 +273,7 @@ namespace NuPattern.Runtime.UI.ViewModels
             }
         }
 
-        internal bool CanBeginEditNode()
+        public bool CanBeginEditNode()
         {
             return this.currentNode != null && !this.currentNode.IsEditing;
         }
@@ -315,7 +306,7 @@ namespace NuPattern.Runtime.UI.ViewModels
 
         private void ChangeIsExpanded(bool isExpanded)
         {
-            foreach (var node in this.Nodes.Cast<ProductElementViewModel>().Traverse(n => n.Nodes))
+            foreach (var node in this.TopLevelNodes.Cast<IProductElementViewModel>().Traverse(n => n.ChildNodes))
             {
                 node.IsExpanded = isExpanded;
             }
@@ -327,7 +318,7 @@ namespace NuPattern.Runtime.UI.ViewModels
             {
                 IsExpanded = true
             };
-            if (parent.Model.Info != null)
+            if (parent.Data.Info != null)
             {
                 parent.RenderHierarchyRecursive();
             }
@@ -344,10 +335,10 @@ namespace NuPattern.Runtime.UI.ViewModels
         {
             if (this.currentNode.ParentNode == null)
             {
-                return CollectionViewSource.GetDefaultView(this.Nodes) as IEditableCollectionView;
+                return CollectionViewSource.GetDefaultView(this.TopLevelNodes) as IEditableCollectionView;
             }
 
-            return CollectionViewSource.GetDefaultView(this.currentNode.ParentNode.Nodes) as IEditableCollectionView;
+            return CollectionViewSource.GetDefaultView(this.currentNode.ParentNode.ChildNodes) as IEditableCollectionView;
         }
 
         private T GetService<T>()
@@ -366,8 +357,8 @@ namespace NuPattern.Runtime.UI.ViewModels
             this.AddNewProductCommand = new RelayCommand(this.AddNewProduct, () => this.IsSolutionOpened);
             this.GuidanceCommand = new RelayCommand(this.ShowGuidance, this.CanShowGuidance);
             this.SaveCommand = new RelayCommand(this.context.PatternManager.Save, () => this.context.PatternManager.IsOpen);
-            this.ExpandAllCommand = new RelayCommand(() => this.ChangeIsExpanded(true), () => this.Nodes.Count > 0);
-            this.CollapseAllCommand = new RelayCommand(() => this.ChangeIsExpanded(false), () => this.Nodes.Count > 0);
+            this.ExpandAllCommand = new RelayCommand(() => this.ChangeIsExpanded(true), () => this.TopLevelNodes.Count > 0);
+            this.CollapseAllCommand = new RelayCommand(() => this.ChangeIsExpanded(false), () => this.TopLevelNodes.Count > 0);
             this.CreateNewSolutionCommand = new RelayCommand(this.CreateNewSolution, this.CanShowCreateNewSolution);
             this.HomePageCommand = new RelayCommand(this.NavigateToHomePage, () => true);
 
@@ -389,16 +380,16 @@ namespace NuPattern.Runtime.UI.ViewModels
 
         private void OnElementDeleted(object sender, ValueEventArgs<IProductElement> e)
         {
-            var element = this.Nodes.Traverse(x => x.Nodes).FirstOrDefault(x => x.Model == e.Value);
+            var element = this.TopLevelNodes.Traverse(x => x.ChildNodes).FirstOrDefault(x => x.Data == e.Value);
             if (element != null)
             {
                 if (element.ParentNode == null) // Product at the top level
                 {
-                    this.Nodes.Remove(element);
+                    this.TopLevelNodes.Remove(element);
                 }
                 else
                 {
-                    element.ParentNode.Nodes.Remove(element);
+                    element.ParentNode.ChildNodes.Remove(element);
                 }
             }
         }
@@ -407,9 +398,9 @@ namespace NuPattern.Runtime.UI.ViewModels
         {
             if (e.Value.Parent != null)
             {
-                var parent = this.Nodes
-                    .Traverse(x => x.Nodes)
-                    .FirstOrDefault(x => x.ElementContainer == e.Value.Parent);
+                var parent = this.TopLevelNodes
+                    .Traverse(x => x.ChildNodes)
+                    .FirstOrDefault(x => x.ElementContainerData == e.Value.Parent);
                 if (parent != null)
                 {
                     parent.Reorder();
@@ -422,7 +413,7 @@ namespace NuPattern.Runtime.UI.ViewModels
                 if (product != null)
                 {
                     this.Reorder();
-                    this.Nodes.Add(new ProductViewModel(product, this.context)
+                    this.TopLevelNodes.Add(new ProductViewModel(product, this.context)
                     {
                         IsExpanded = true,
                         IsSelected = true
@@ -440,7 +431,7 @@ namespace NuPattern.Runtime.UI.ViewModels
             else
             {
                 this.CurrentNode = null;
-                this.Nodes.Clear();
+                this.TopLevelNodes.Clear();
             }
 
             this.IsStateOpened = this.IsStateOpened || this.IsSolutionOpened;
@@ -461,11 +452,11 @@ namespace NuPattern.Runtime.UI.ViewModels
         /// <summary>
         /// Reorders all top level nodes
         /// </summary>
-        internal void Reorder()
+        public void Reorder()
         {
             // Fetching the Products property reorders products automatically
             var products = this.context.PatternManager.Products;
-            this.OnPropertyChanged(() => this.Nodes);
+            this.OnPropertyChanged(() => this.TopLevelNodes);
         }
 
         /// <summary>
@@ -474,13 +465,13 @@ namespace NuPattern.Runtime.UI.ViewModels
         internal void Refresh()
         {
             this.CurrentNode = null;
-            this.Nodes.Clear();
-            this.Nodes.AddRange(this.context.PatternManager.Products.Select(p => this.CreateViewModel(p)));
+            this.TopLevelNodes.Clear();
+            this.TopLevelNodes.AddRange(this.context.PatternManager.Products.Select(p => this.CreateViewModel(p)));
         }
 
-        internal void Select(IProductElement element)
+        public void Select(IProductElement element)
         {
-            var selection = this.Nodes.FirstOrDefault(x => x.Model == element);
+            var selection = this.TopLevelNodes.FirstOrDefault(x => x.Data == element);
             if (selection != null)
             {
                 selection.IsSelected = true;

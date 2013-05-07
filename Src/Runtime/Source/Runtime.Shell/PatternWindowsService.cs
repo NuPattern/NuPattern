@@ -2,6 +2,7 @@
 using System.ComponentModel.Composition;
 using Microsoft.VisualStudio.Shell;
 using NuPattern.Runtime.Shell.ToolWindows;
+using NuPattern.Runtime.UI.ViewModels;
 
 namespace NuPattern.Runtime.Shell
 {
@@ -31,7 +32,7 @@ namespace NuPattern.Runtime.Shell
         }
 
         /// <summary>
-        /// TODO: this method needs replacing with a better way to place buttons on the toolbar of solution builder.
+        /// TODO: this method needs replacing with one that return void, and a better way to place buttons on the toolbar of solution builder.
         /// </summary>
         public ToolWindowPane ShowSolutionBuilder(IServiceProvider serviceProvider)
         {
@@ -41,9 +42,9 @@ namespace NuPattern.Runtime.Shell
         }
 
         /// <summary>
-        /// TODO: this method needs replacing with better way to get accecss to the ViewModel so that toolkits can customize how nodes are displayed.
+        /// TODO: this method needs deleting with better way to get accecss to the ViewModel so that toolkits can customize how nodes are displayed.
         /// </summary>
-        public Presentation.ViewModel GetSolutionBuilderViewModel(IServiceProvider serviceProvider)
+        public ISolutionBuilderViewModel GetSolutionBuilderViewModel(IServiceProvider serviceProvider)
         {
             Guard.NotNull(() => serviceProvider, serviceProvider);
             var packageToolWindow = serviceProvider.GetService<IPackageToolWindow>();

@@ -13,8 +13,7 @@ namespace NuPattern.Runtime.UI.ViewModels
     /// <summary>
     /// Provides a view model to create a new node.
     /// </summary>
-    [CLSCompliant(false)]
-    public class AddNewNodeViewModel : ValidationViewModel
+    internal class AddNewNodeViewModel : ValidationViewModel
     {
         private string instanceName;
         private IEnumerable<IProductElement> sibilings;

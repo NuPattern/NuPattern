@@ -297,9 +297,9 @@ namespace NuPattern.Runtime.UnitTests.UI
             {
             }
 
-            internal override IElementContainer ElementContainer
+            public override IElementContainer ElementContainerData
             {
-                get { return (TElement)base.Model; }
+                get { return (TElement)base.Data; }
             }
 
             protected override bool CanCreateAddMenu(IPatternElementInfo info)
@@ -334,9 +334,9 @@ namespace NuPattern.Runtime.UnitTests.UI
             {
             }
 
-            internal override IElementContainer ElementContainer
+            public override IElementContainer ElementContainerData
             {
-                get { return (TElement)base.Model; }
+                get { return (TElement)base.Data; }
             }
 
             protected override bool CanCreateAddMenu(IPatternElementInfo info)

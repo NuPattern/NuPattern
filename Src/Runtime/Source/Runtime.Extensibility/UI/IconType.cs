@@ -1,7 +1,7 @@
-﻿namespace NuPattern.Runtime.UI.ViewModels
+﻿namespace NuPattern.Runtime.UI
 {
     /// <summary>
-    /// Defines the icon type to be used in the <see cref="MenuOptionViewModel"/>.
+    /// Defines the icon type.
     /// </summary>
     public enum IconType
     {

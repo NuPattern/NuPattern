@@ -10,8 +10,7 @@ namespace NuPattern.Runtime.UI.ViewModels
     /// <summary>
     /// Provides the functionality to offer custom error information that a user interface can bind to.
     /// </summary>
-    [CLSCompliant(false)]
-    public abstract class ValidationViewModel : ViewModel, IDataErrorInfo
+    internal abstract class ValidationViewModel : ViewModel, IDataErrorInfo
     {
         private Dictionary<string, Tuple<PropertyDescriptor, ValidationAttribute[]>> validators;
 
