@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.Modeling;
-using NuPattern.Runtime.Bindings;
+﻿using NuPattern.Runtime.Bindings;
 
 namespace NuPattern.Library.Automation
 {
@@ -8,9 +7,12 @@ namespace NuPattern.Library.Automation
     /// </summary>
     public partial interface ICommandSettings : IBindingSettings
     {
-        /// <summary>
-        /// Store property
-        /// </summary>
-        Store Store { get; }
+    }
+
+    /// <summary>
+    /// Wrapper for ICommandSettings used in chaining.
+    /// </summary>
+    internal interface ICommandSettings<T> : ICommandSettings
+    {
     }
 }

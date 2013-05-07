@@ -103,6 +103,7 @@
     <Compile Include="..\..\GlobalAssemblyInfo.gen.cs">
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
+    <Compile Include="Automation\Command\CommandSettingsDelegator.cs" />
     <Compile Include="Automation\Extensions\ArtifactExtension.cs" />
     <Compile Include="Automation\Extensions\ArtifactReferencesValidation.cs" />
     <Compile Include="Commands\SetBlackboardValueCommand.cs" />
