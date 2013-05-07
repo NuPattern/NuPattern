@@ -1005,6 +1005,15 @@ namespace NuPattern.Runtime.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Trace pane with ID &apos;{0}&apos;, has already been created..
+        /// </summary>
+        internal static string TraceOutputWindowManager_ErrorDuplicateTraceId {
+            get {
+                return ResourceManager.GetString("TraceOutputWindowManager_ErrorDuplicateTraceId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed to create output window pane &apos;{0}&apos;..
         /// </summary>
         internal static string TraceOutputWindowManager_FailedToCreateWindowPane {

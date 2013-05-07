@@ -93,6 +93,7 @@
     </Compile>
     <Compile Include="Diagnostics\DelegateTraceFilter.cs" />
     <Compile Include="Diagnostics\ActivityTextListener.cs" />
+    <Compile Include="Diagnostics\TraceOutputWindowManager.cs" />
     <Compile Include="ISchemaResource.cs" />
     <Compile Include="IToolkitRepository.cs" />
     <Compile Include="Settings\IRuntimeSettings.cs" />
@@ -113,7 +114,7 @@
     <Compile Include="ProductStoreValidationController.cs" />
     <Compile Include="Settings\SettingsManager.cs" />
     <Compile Include="Settings\TracingSettingsMonitor.cs" />
-    <Compile Include="Diagnostics\TraceOutputWindowManager.cs" />
+    <Compile Include="Diagnostics\TraceOutputWindowPane.cs" />
     <Compile Include="SchemaReaderExtensions.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="InstalledToolkitAdapter.cs" />

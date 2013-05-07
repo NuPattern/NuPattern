@@ -106,6 +106,7 @@
     <Compile Include="..\..\GlobalAssemblyInfo.gen.cs">
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
+    <Compile Include="Core\Diagnostics\TraceOutputWindowManagerSpec.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Core\UriProviders\RuntimeElementUriProviderSpec.cs" />
     <Compile Include="Store\DomainModel\PatternElementValidationSpec.cs" />
@@ -126,7 +127,7 @@
     <Compile Include="Store\DomainModel\ProductElementSpec.cs" />
     <Compile Include="Store\DomainModel\PropertySpec.cs" />
     <Compile Include="Store\DomainModel\ViewSpec.cs" />
-    <Compile Include="Core\Diagnostics\TraceOutputWindowManagerSpec.cs" />
+    <Compile Include="Core\Diagnostics\TraceOutputWindowPaneSpec.cs" />
     <Compile Include="Core\Settings\TracingSettingsMonitorSpec.cs" />
     <Compile Include="Core\UI\AddNewProductViewModelSpec.cs" />
     <Compile Include="Core\UI\AutomationMenuOptionViewModelSpec.cs" />
