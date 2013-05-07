@@ -6,8 +6,7 @@ namespace NuPattern.Runtime.Shell.ToolWindows
     /// <summary>
     /// Provides a service interface to access a tool window in this package.
     /// </summary>
-    [CLSCompliant(false)]
-    public interface IPackageToolWindow
+    internal interface IPackageToolWindow
     {
         /// <summary>
         /// Shows the window.

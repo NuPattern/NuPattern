@@ -74,6 +74,10 @@
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\10.0\Microsoft.VisualStudio.Shell.Interop.10.0.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.11.0" Condition="'$(TargetVsVersion)' == '11.0'">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\11.0\Microsoft.VisualStudio.Shell.Interop.11.0.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualStudio.Shell$(VsxVersionSuffix)">
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.Shell$(VsxVersionSuffix).dll</HintPath>
@@ -208,7 +212,7 @@
     <Compile Include="Guidance\GuidanceInstantiation.cs" />
     <Compile Include="Guidance\GuidanceManagerSettings.cs" />
     <Compile Include="Guidance\IGuidanceInstanceLocator.cs" />
-    <Compile Include="Guidance\IGuidanceWindowsService.cs" />
+    <Compile Include="IPatternWindows.cs" />
     <Compile Include="Guidance\ILaunchPoint.cs" />
     <Compile Include="Guidance\IQueryStatusStrategy.cs" />
     <Compile Include="Guidance\IGuidanceExtensionPersistState.cs" />

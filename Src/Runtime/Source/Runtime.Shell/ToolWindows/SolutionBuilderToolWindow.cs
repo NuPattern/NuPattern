@@ -16,8 +16,7 @@ namespace NuPattern.Runtime.Shell.ToolWindows
     /// <summary>
     /// Provides the Pattern Explorer tool window.
     /// </summary>
-    [CLSCompliant (false)]
-    public partial class SolutionBuilderToolWindow
+    internal partial class SolutionBuilderToolWindow
     {
         private const string VisibilitySetting = "FirstTimeInitialization";
         private const string SolutionBuilderAutoOpenedSetting = "SolutionBuilderAutoOpened";
@@ -37,9 +36,6 @@ namespace NuPattern.Runtime.Shell.ToolWindows
         [Import(typeof(SVsServiceProvider))]
         private IServiceProvider ServiceProvider { get; set; }
 
-        /// <summary>
-        /// OnToolWindowCreated method
-        /// </summary>
         public override void OnToolWindowCreated()
         {
             base.OnToolWindowCreated();
@@ -49,8 +45,13 @@ namespace NuPattern.Runtime.Shell.ToolWindows
         }
 
         /// <summary>
-        /// Initialize method
+        /// TODO: remove this and provide a way to display custom views in SolutionBuilder.
         /// </summary>
+        internal SolutionBuilderViewModel ViewModel
+        {
+            get { return this.viewModel; }
+        }
+
         protected override void Initialize()
         {
             base.Initialize();

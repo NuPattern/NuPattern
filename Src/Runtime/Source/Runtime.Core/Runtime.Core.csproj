@@ -142,7 +142,6 @@
     <Compile Include="UI\ViewModels\IProductViewModel.cs" />
     <Compile Include="UI\ViewModels\ISolutionBuilderContext.cs" />
     <Compile Include="UI\ViewModels\ISolutionBuilderViewModel.cs" />
-    <Compile Include="UI\ViewModels\ISolutionBuilderViewModel1.cs" />
     <Compile Include="UI\ViewModels\SolutionPickerBaseViewModel.cs" />
     <Compile Include="UI\ViewModels\SolutionSelectorViewModel.cs" />
     <Compile Include="UI\Views\SolutionSelectorView.xaml.cs">

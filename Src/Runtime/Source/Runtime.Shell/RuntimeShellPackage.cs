@@ -66,7 +66,7 @@ namespace NuPattern.Runtime.Shell
     [ProvideService(typeof(IExtensionManager), ServiceName = @"IExtensionManager")]
     [ProvideService(typeof(IGuidanceManager), ServiceName = @"IGuidanceManager")]
     [ProvideService(typeof(INuPatternCompositionService), ServiceName = @"INuPatternCompositionService")]
-    [ProvideService(typeof(IGuidanceWindowsService), ServiceName = @"IGuidanceWindowsService")]
+    [ProvideService(typeof(IPatternWindows), ServiceName = @"IGuidanceWindowsService")]
     [ProvideService(typeof(INuPatternProjectTypeProvider), ServiceName = @"INuPatternProjectTypeProvider")]
     [ProvideService(typeof(IPatternManager), ServiceName = @"IPatternManager")]
     [ProvideService(typeof(IPackageToolWindow), ServiceName = @"IPackageToolWindow")]
@@ -104,7 +104,7 @@ namespace NuPattern.Runtime.Shell
         [Import]
         private IExtensionManager ExtensionManager { get; set; }
         [Import]
-        private IGuidanceWindowsService GuidanceWindowsService { get; set; }
+        private IPatternWindows GuidanceWindowsService { get; set; }
         [ImportMany(typeof(ILaunchPoint))]
         private IEnumerable<Lazy<ILaunchPoint>> LaunchPoints { get; set; }
         [Import]
@@ -271,7 +271,7 @@ namespace NuPattern.Runtime.Shell
             serviceContainer.AddService(typeof(IExtensionManager), new ServiceCreatorCallback((c, s) => this.ExtensionManager), true);
             serviceContainer.AddService(typeof(IGuidanceManager), new ServiceCreatorCallback((c, s) => this.GuidanceManager), true);
             serviceContainer.AddService(typeof(INuPatternCompositionService), new ServiceCreatorCallback((c, s) => this.CompositionService), true);
-            serviceContainer.AddService(typeof(IGuidanceWindowsService), new ServiceCreatorCallback((c, s) => this.GuidanceWindowsService), true);
+            serviceContainer.AddService(typeof(IPatternWindows), new ServiceCreatorCallback((c, s) => this.GuidanceWindowsService), true);
             serviceContainer.AddService(typeof(RuntimeShellPackage), this, true);
             serviceContainer.AddService(typeof(IPackageToolWindow), new PackageToolWindow(this), true);
             serviceContainer.AddService(typeof(IPatternManager), new ServiceCreatorCallback((s, t) => this.PatternManager), true);

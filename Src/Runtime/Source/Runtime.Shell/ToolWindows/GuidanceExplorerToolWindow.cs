@@ -139,32 +139,6 @@ namespace NuPattern.Runtime.Shell.ToolWindows
             }
         }
 
-        /// <summary>
-        /// Opens the window, if not already opened.
-        /// </summary>
-        internal static void OpenWindow(IServiceProvider serviceProvider)
-        {
-            Guard.NotNull(() => serviceProvider, serviceProvider);
-
-            var packageToolWindow = serviceProvider.GetService<IPackageToolWindow>();
-            packageToolWindow.ShowWindow<GuidanceExplorerToolWindow>(true);
-        }
-
-        /// <summary>
-        /// Hides the window, if it was automatically opened.
-        /// </summary>
-        internal static void HideWindow(IServiceProvider serviceProvider)
-        {
-            Guard.NotNull(() => serviceProvider, serviceProvider);
-
-            var packageToolWindow = serviceProvider.GetService<IPackageToolWindow>();
-
-            if (packageToolWindow.IsWindowVisible<GuidanceExplorerToolWindow>())
-            {
-                packageToolWindow.HideWindow<GuidanceExplorerToolWindow>();
-            }
-        }
-
         private void OnCurrentNodeChanged(object sender, NodeChangedEventArgs e)
         {
             var currentAction = this.viewModel.CurrentWorkflow == null ? null : this.viewModel.CurrentWorkflow.Model.FocusedAction;
