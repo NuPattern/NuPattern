@@ -73,7 +73,7 @@ namespace NuPattern.Library.ValueProviders
                 Resources.VsProjectPropertyValueProvider_TraceInitial, this.CurrentElement.InstanceName, this.ProjectPath);
 
             var resolver = new PathResolver(this.CurrentElement, this.UriService, path: (!String.IsNullOrEmpty(this.ProjectPath)) ? this.ProjectPath : String.Empty);
-            if (!resolver.TryResolve())
+            if (!resolver.TryResolve(i => i.Kind == ItemKind.Project))
             {
                 tracer.Error(
                     Resources.VsProjectPropertyValueProvider_TraceNotResolved, this.ProjectPath);
