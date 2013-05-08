@@ -2454,4 +2454,10 @@ Select the related solution items to delete and press 'OK', or press 'Cancel' to
   <data name="DropSolutionProjectCondition_TraceGettingFiles" xml:space="preserve">
     <value>Determining if dragged data contains any projects, with extensions '{0}'</value>
   </data>
+  <data name="AssociateDroppedArtifacts_Description" xml:space="preserve">
+    <value>Associates the dropped solution artifacts with the current element.</value>
+  </data>
+  <data name="AssociateDroppedArtifacts_DisplayName" xml:space="preserve">
+    <value>Associate dropped artifacts with element</value>
+  </data>
 </root>

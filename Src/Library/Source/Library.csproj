@@ -105,6 +105,7 @@
     </Compile>
     <Compile Include="Automation\Extensions\ArtifactExtension.cs" />
     <Compile Include="Automation\Extensions\ArtifactReferencesValidation.cs" />
+    <Compile Include="Commands\AssociateDroppedArtifacts.cs" />
     <Compile Include="Commands\SetBlackboardValueCommand.cs" />
     <Compile Include="Commands\ShowMessageCommand.cs" />
     <Compile Include="Conditions\DropSolutionProjectCondition.cs" />

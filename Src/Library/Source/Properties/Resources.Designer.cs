@@ -692,6 +692,24 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Associates the dropped solution artifacts with the current element..
+        /// </summary>
+        internal static string AssociateDroppedArtifacts_Description {
+            get {
+                return ResourceManager.GetString("AssociateDroppedArtifacts_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Associate dropped artifacts with element.
+        /// </summary>
+        internal static string AssociateDroppedArtifacts_DisplayName {
+            get {
+                return ResourceManager.GetString("AssociateDroppedArtifacts_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Pattern Automation.
         /// </summary>
         internal static string AutomationCategory_Automation {
