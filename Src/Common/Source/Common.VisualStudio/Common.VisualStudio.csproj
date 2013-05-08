@@ -189,7 +189,16 @@
     <Compile Include="Solution\VsItemContainerExtensions.cs" />
     <Compile Include="Solution\VsItemDynamicProperties.cs" />
     <Compile Include="Solution\VsItemTemplate.cs" />
+    <Compile Include="Solution\VsProject.AllConfigurationsProperties.cs">
+      <DependentUpon>VsProject.cs</DependentUpon>
+    </Compile>
     <Compile Include="Solution\VsProject.cs" />
+    <Compile Include="Solution\VsProject.SpecificConfigurationAndPlatformProperties.cs">
+      <DependentUpon>VsProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Solution\VsProject.SpecificConfigurationProperties.cs">
+      <DependentUpon>VsProject.cs</DependentUpon>
+    </Compile>
     <Compile Include="Solution\VsProjectExtensions.cs" />
     <Compile Include="Solution\VsProjectReference.cs" />
     <Compile Include="Solution\VsProjectReferences.cs" />
@@ -270,6 +279,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Solution\Templates\runxsd.bat" />
+    <Compile Include="Solution\VsProject.SpecificPlatformProperties.cs">
+      <DependentUpon>VsProject.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -203,6 +203,7 @@
     <Compile Include="ValueProviders\FirstSolutionElementMatchValueProvider.cs" />
     <Compile Include="ValueProviders\GetBlackboardValueValueProvider.cs" />
     <Compile Include="ValueProviders\InputBoxValueProvider.cs" />
+    <Compile Include="ValueProviders\ProjectPropertyValueProvider.cs" />
     <Compile Include="WindowsFileImporter.cs" />
     <Compile Include="XmlNamespace.cs" />
     <Compile Include="Commands\InstantiateSolutionElementCommand.cs" />

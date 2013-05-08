@@ -4015,6 +4015,60 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Optional configuration (i.e. Debug, Release) to retrieve the property for..
+        /// </summary>
+        internal static string ProjectPropertyValueProvider_Configuration_Description {
+            get {
+                return ResourceManager.GetString("ProjectPropertyValueProvider_Configuration_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Configuration.
+        /// </summary>
+        internal static string ProjectPropertyValueProvider_Configuration_DisplayName {
+            get {
+                return ResourceManager.GetString("ProjectPropertyValueProvider_Configuration_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Retrieves the value of an arbitrary property from a project..
+        /// </summary>
+        internal static string ProjectPropertyValueProvider_Description {
+            get {
+                return ResourceManager.GetString("ProjectPropertyValueProvider_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Project Property.
+        /// </summary>
+        internal static string ProjectPropertyValueProvider_DisplayName {
+            get {
+                return ResourceManager.GetString("ProjectPropertyValueProvider_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Optional platform (i.e. AnyCPU, x86) to retrieve the property for..
+        /// </summary>
+        internal static string ProjectPropertyValueProvider_Platform_Description {
+            get {
+                return ResourceManager.GetString("ProjectPropertyValueProvider_Platform_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Platform.
+        /// </summary>
+        internal static string ProjectPropertyValueProvider_Platform_DisplayName {
+            get {
+                return ResourceManager.GetString("ProjectPropertyValueProvider_Platform_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Optional project platform to retrieve the property from..
         /// </summary>
         internal static string ProjectPropertyValueProvider_ProjectPlatform_Description {
@@ -4029,6 +4083,24 @@ namespace NuPattern.Library.Properties {
         internal static string ProjectPropertyValueProvider_ProjectPlatform_DisplayName {
             get {
                 return ResourceManager.GetString("ProjectPropertyValueProvider_ProjectPlatform_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name of the property to retrieve..
+        /// </summary>
+        internal static string ProjectPropertyValueProvider_Property_Description {
+            get {
+                return ResourceManager.GetString("ProjectPropertyValueProvider_Property_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Property.
+        /// </summary>
+        internal static string ProjectPropertyValueProvider_Property_DisplayName {
+            get {
+                return ResourceManager.GetString("ProjectPropertyValueProvider_Property_DisplayName", resourceCulture);
             }
         }
         

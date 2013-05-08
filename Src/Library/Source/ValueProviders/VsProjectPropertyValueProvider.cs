@@ -96,7 +96,7 @@ namespace NuPattern.Library.ValueProviders
                 {
                     var project = (IProject)item;
                     var propValue = GetPropertyValue(project);
-
+                    
                     tracer.Info(
                         Resources.VsProjectPropertyValueProvider_TraceEvaluation, this.CurrentElement.InstanceName, this.ProjectPath, propValue);
 

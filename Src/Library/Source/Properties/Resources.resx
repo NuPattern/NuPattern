@@ -2460,4 +2460,28 @@ Select the related solution items to delete and press 'OK', or press 'Cancel' to
   <data name="AssociateDroppedArtifacts_DisplayName" xml:space="preserve">
     <value>Associate dropped artifacts with element</value>
   </data>
+  <data name="ProjectPropertyValueProvider_Configuration_Description" xml:space="preserve">
+    <value>Optional configuration (i.e. Debug, Release) to retrieve the property for.</value>
+  </data>
+  <data name="ProjectPropertyValueProvider_Configuration_DisplayName" xml:space="preserve">
+    <value>Configuration</value>
+  </data>
+  <data name="ProjectPropertyValueProvider_Description" xml:space="preserve">
+    <value>Retrieves the value of an arbitrary property from a project.</value>
+  </data>
+  <data name="ProjectPropertyValueProvider_DisplayName" xml:space="preserve">
+    <value>Project Property</value>
+  </data>
+  <data name="ProjectPropertyValueProvider_Platform_Description" xml:space="preserve">
+    <value>Optional platform (i.e. AnyCPU, x86) to retrieve the property for.</value>
+  </data>
+  <data name="ProjectPropertyValueProvider_Platform_DisplayName" xml:space="preserve">
+    <value>Platform</value>
+  </data>
+  <data name="ProjectPropertyValueProvider_Property_Description" xml:space="preserve">
+    <value>Name of the property to retrieve.</value>
+  </data>
+  <data name="ProjectPropertyValueProvider_Property_DisplayName" xml:space="preserve">
+    <value>Property</value>
+  </data>
 </root>

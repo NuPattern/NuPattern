@@ -102,6 +102,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime.IntegrationTests", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.IntegrationTests", "..\Common\IntegrationTests\Common.IntegrationTests.csproj", "{30CFE347-2CCA-4F54-8DAA-7CE639EA8A8F}"
 	ProjectSection(ProjectDependencies) = postProject
+		{D3E93083-99C9-4186-95B5-339A822C63EE} = {D3E93083-99C9-4186-95B5-339A822C63EE}
 		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
 	EndProjectSection
 EndProject
