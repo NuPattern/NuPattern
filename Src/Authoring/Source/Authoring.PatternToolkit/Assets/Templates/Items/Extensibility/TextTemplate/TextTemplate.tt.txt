@@ -14,17 +14,17 @@
 // See: http://msdn.microsoft.com/en-us/library/bb126445.aspx for general help with T4 templates
 
 // TODO: Change the extension in the < Output > directive above to output the file type you need. 
-//	By default this template generates a C# code file.
+// By default this template generates a C# code file.
     
 // TODO: Replace IMyPattern in the lines below with the CodeIdentifier of the pattern element upon which this template is configured.
 // Note: this could be the root pattern element, or any other element in your pattern model. 
-//	Each element has its own interface using the CodeIdentifier property, preceeded with a captial I
+// Each element has its own interface using the CodeIdentifier property, preceeded with a captial I
     
     var currentElement = (IProductElement)this.Element;
     var pattern = currentElement.As<IMyPattern>();
     
 // TODO: If this template is configured on the root pattern element, then to navigate to a collection or element in your pattern model,
-//	you must navigate through the current view.
+// you must navigate through the current view.
 
     var defaultView = pattern.DefaultView;
     var anElement = defaultView.VariableElement1;
