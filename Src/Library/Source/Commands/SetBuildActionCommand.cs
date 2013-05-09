@@ -72,7 +72,10 @@ namespace NuPattern.Library.Commands
 
             var resolver = new PathResolver(this.CurrentElement, this.UriService,
                 this.TargetPath, this.CurrentElement.InstanceName);
-            resolver.Resolve();
+            // Since we assume below that the resolved path needs to be an item, 
+            // we should explicitly filter for that when resolving, just in case 
+            // there's more than one artifact link reference that matches.
+            resolver.Resolve(i => i.Kind == ItemKind.Item);
 
             if (!string.IsNullOrEmpty(resolver.Path))
             {
