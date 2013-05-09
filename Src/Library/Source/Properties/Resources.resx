@@ -2484,4 +2484,25 @@ Select the related solution items to delete and press 'OK', or press 'Cancel' to
   <data name="ProjectPropertyValueProvider_Property_DisplayName" xml:space="preserve">
     <value>Property</value>
   </data>
+  <data name="ItemPropertyValueProvider_ItemPath_Description" xml:space="preserve">
+    <value>The path to the item in the current solution to be read. i.e. ..\~, navigates up to the parent element, and traverses the first artifact link found on the parent element over to an item in the solution or project.  See guidance documentation for more example paths and details.</value>
+  </data>
+  <data name="ItemPropertyValueProvider_ItemPath_DisplayName" xml:space="preserve">
+    <value>Item Path</value>
+  </data>
+  <data name="ItemPropertyValueProvider_TraceEvaluation" xml:space="preserve">
+    <value>Evaluated property of item for current element '{0}', using item path '{1}', as '{2}'.</value>
+  </data>
+  <data name="ItemPropertyValueProvider_TraceInitial" xml:space="preserve">
+    <value>Evaluating property of item for current element '{0}', using item path '{1}'.</value>
+  </data>
+  <data name="ItemPropertyValueProvider_TraceNotItem" xml:space="preserve">
+    <value>Item path '{0}' from current element evaluated to '{1}' but it resolved to a solution item of type '{2}', not to an item.</value>
+  </data>
+  <data name="ItemPropertyValueProvider_TraceNoItemFound" xml:space="preserve">
+    <value>Item path '{0}' from current element evaluated to '{1}' but could not be resolved to a solution item.</value>
+  </data>
+  <data name="ItemPropertyValueProvider_TraceNotResolved" xml:space="preserve">
+    <value>Item path '{0}' from current element could not be resolved.</value>
+  </data>
 </root>

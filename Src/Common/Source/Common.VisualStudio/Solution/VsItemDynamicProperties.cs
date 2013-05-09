@@ -42,6 +42,27 @@ namespace NuPattern.VisualStudio.Solution
             return true;
         }
 
+        public override bool TryGetIndex(GetIndexBinder binder, object[] indexes, out object result)
+        {
+            if (indexes.Length == 1 && indexes[0] is string)
+            {
+                result = GetValue((string)indexes[0]);
+                return true;
+            }
+
+            return base.TryGetIndex(binder, indexes, out result);
+        }
+
+        public override bool TrySetIndex(SetIndexBinder binder, object[] indexes, object value)
+        {
+            if (indexes.Length == 1 && indexes[0] is string)
+            {
+                return SetValue((string)indexes[0], value);
+            }
+
+            return base.TrySetIndex(binder, indexes, value);
+        }
+
         public object GetValue(string name)
         {
             string value = null;
@@ -126,6 +147,7 @@ namespace NuPattern.VisualStudio.Solution
         {
             get { return this.debugPropertiesSnapshot.Value; }
         }
+
         private string GetProperties()
         {
             try

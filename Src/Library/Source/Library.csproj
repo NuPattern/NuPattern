@@ -199,6 +199,7 @@
     <Compile Include="Commands\GenerateProductCodeCommand.Validation.cs">
       <DependentUpon>GenerateProductCodeCommand.cs</DependentUpon>
     </Compile>
+    <Compile Include="ValueProviders\ItemPropertyValueProvider.cs" />
     <Compile Include="ValueProviders\FirstOrDefaultValueProvider.cs" />
     <Compile Include="ValueProviders\FirstSolutionElementMatchValueProvider.cs" />
     <Compile Include="ValueProviders\GetBlackboardValueValueProvider.cs" />

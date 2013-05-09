@@ -103,6 +103,7 @@
     </Content>
     <Compile Include="VisualStudio\Events\ShellEventsSpec.cs" />
     <Compile Include="VisualStudio\Events\SolutionEventsSpec.cs" />
+    <Compile Include="VisualStudio\Solution\VsItemSpec.cs" />
     <Compile Include="VisualStudio\Solution\DteExtensionsSpec.cs" />
     <Compile Include="VisualStudio\Misc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

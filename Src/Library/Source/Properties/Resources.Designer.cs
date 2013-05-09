@@ -3408,6 +3408,69 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The path to the item in the current solution to be read. i.e. ..\~, navigates up to the parent element, and traverses the first artifact link found on the parent element over to an item in the solution or project.  See guidance documentation for more example paths and details..
+        /// </summary>
+        internal static string ItemPropertyValueProvider_ItemPath_Description {
+            get {
+                return ResourceManager.GetString("ItemPropertyValueProvider_ItemPath_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Item Path.
+        /// </summary>
+        internal static string ItemPropertyValueProvider_ItemPath_DisplayName {
+            get {
+                return ResourceManager.GetString("ItemPropertyValueProvider_ItemPath_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Evaluated property of item for current element &apos;{0}&apos;, using item path &apos;{1}&apos;, as &apos;{2}&apos;..
+        /// </summary>
+        internal static string ItemPropertyValueProvider_TraceEvaluation {
+            get {
+                return ResourceManager.GetString("ItemPropertyValueProvider_TraceEvaluation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Evaluating property of item for current element &apos;{0}&apos;, using item path &apos;{1}&apos;..
+        /// </summary>
+        internal static string ItemPropertyValueProvider_TraceInitial {
+            get {
+                return ResourceManager.GetString("ItemPropertyValueProvider_TraceInitial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Item path &apos;{0}&apos; from current element evaluated to &apos;{1}&apos; but could not be resolved to a solution item..
+        /// </summary>
+        internal static string ItemPropertyValueProvider_TraceNoItemFound {
+            get {
+                return ResourceManager.GetString("ItemPropertyValueProvider_TraceNoItemFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Item path &apos;{0}&apos; from current element evaluated to &apos;{1}&apos; but it resolved to a solution item of type &apos;{2}&apos;, not to an item..
+        /// </summary>
+        internal static string ItemPropertyValueProvider_TraceNotItem {
+            get {
+                return ResourceManager.GetString("ItemPropertyValueProvider_TraceNotItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Item path &apos;{0}&apos; from current element could not be resolved..
+        /// </summary>
+        internal static string ItemPropertyValueProvider_TraceNotResolved {
+            get {
+                return ResourceManager.GetString("ItemPropertyValueProvider_TraceNotResolved", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Condition binding &apos;{0}&apos; failed: {1}.
         ///{2}..
         /// </summary>
