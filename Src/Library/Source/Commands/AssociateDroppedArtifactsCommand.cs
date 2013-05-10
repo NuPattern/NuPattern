@@ -20,13 +20,13 @@ namespace NuPattern.Library.Commands
     /// items in the solution, creates Uris for them using the <see cref="UriService"/> 
     /// and adds those references (if they don't exist already) to the current element.
     /// </summary>
-    [DisplayNameResource(@"AssociateDroppedArtifacts_DisplayName", typeof(Resources))]
-    [DescriptionResource(@"AssociateDroppedArtifacts_Description", typeof(Resources))]
+    [DisplayNameResource(@"AssociateDroppedArtifactsCommand_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"AssociateDroppedArtifactsCommand_Description", typeof(Resources))]
     [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
-    public class AssociateDroppedArtifacts : Command
+    public class AssociateDroppedArtifactsCommand : Command
     {
-        private static readonly ITracer tracer = Tracer.Get<AssociateDroppedArtifacts>();
+        private static readonly ITracer tracer = Tracer.Get<AssociateDroppedArtifactsCommand>();
 
         /// <summary>
         /// Gets or sets the drag event argument.
@@ -60,6 +60,8 @@ namespace NuPattern.Library.Commands
         public override void Execute()
         {
             this.ValidateObject();
+
+            tracer.Info(Resources.AssociateDroppedArtifactsCommand_TraceInitial, this.CurrentElement.InstanceName);
 
             var paths = new HashSet<string>(
                 ((IEnumerable<string>)new DroppedItemContainerValueProvider { DragArgs = this.DragArgs }.Evaluate())

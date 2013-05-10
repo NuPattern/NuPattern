@@ -20,8 +20,6 @@ namespace NuPattern.VisualStudio.Solution
     [DebuggerDisplay(@"{AllProperties}")]
     internal class VsItemDynamicProperties : DynamicObject
     {
-        private static readonly TraceSource tracer = new TraceSource(typeof(VsItemDynamicProperties).FullName);
-
         IHierarchyNode node;
         Lazy<string> debugPropertiesSnapshot;
 

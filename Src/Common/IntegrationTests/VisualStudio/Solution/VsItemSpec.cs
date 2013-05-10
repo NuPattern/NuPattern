@@ -1,13 +1,11 @@
-﻿namespace NuPattern.IntegrationTests.VisualStudio.Solution
-{
-    using System;
-    using System.Collections;
-    using System.IO;
-    using System.Linq;
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-    using Microsoft.VSSDK.Tools.VsIdeTesting;
-    using NuPattern.VisualStudio.Solution;
+﻿using System.IO;
+using System.Linq;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.VSSDK.Tools.VsIdeTesting;
+using NuPattern.VisualStudio.Solution;
 
+namespace NuPattern.IntegrationTests.VisualStudio.Solution
+{
     [TestClass]
     [DeploymentItem(@"Common.IntegrationTests.Content\\Sample", "Common.IntegrationTests.Content\\VsItemSpec")]
     public class VsItemSpec : IntegrationTest

@@ -188,7 +188,7 @@ namespace NuPattern.VisualStudio.Solution
 
                         var configPlatforms = from config in ((IEnumerable)project.As<EnvDTE.Project>().ConfigurationManager.ConfigurationRowNames).OfType<string>()
                                               from platform in ((IEnumerable)project.As<EnvDTE.Project>().ConfigurationManager.PlatformNames).OfType<string>()
-                                              select config + BuildConfigurationSeparator + platform.Replace(" ", string.Empty);
+                                              select config + BuildConfigurationSeparator + platform.Replace(@" ", string.Empty);
 
                         var configPlatform = configPlatforms.FirstOrDefault(x => x == index);
                         if (configPlatform != null)

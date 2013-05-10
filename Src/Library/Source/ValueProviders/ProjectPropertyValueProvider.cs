@@ -1,8 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
 using NuPattern.ComponentModel.Design;
-using NuPattern.Diagnostics;
 using NuPattern.Library.Properties;
 using NuPattern.VisualStudio.Solution;
 
@@ -18,11 +16,7 @@ namespace NuPattern.Library.ValueProviders
     [CLSCompliant(false)]
     public class ProjectPropertyValueProvider : VsProjectPropertyValueProvider
     {
-        /// <summary>
-        /// Equals the string "|".
-        /// </summary>
         private const string BuildConfigurationSeparator = "|";
-        private static readonly ITracer tracer = Tracer.Get<ProjectPropertyValueProvider>();
 
         /// <summary>
         /// Gets or sets the expression to evaluate.

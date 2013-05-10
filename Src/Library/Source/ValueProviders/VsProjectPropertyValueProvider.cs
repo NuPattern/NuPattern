@@ -54,9 +54,9 @@ namespace NuPattern.Library.ValueProviders
         /// <summary>
         /// The project path.
         /// </summary>
-        [DisplayNameResource(@"VsProjectPropertyValueProvider_ProjectPath_DisplayName", typeof(Resources))]
-        [DescriptionResource(@"VsProjectPropertyValueProvider_ProjectPath_Description", typeof(Resources))]
-        public virtual string ProjectPath
+        [DisplayNameResource(@"VsProjectPropertyValueProvider_TargetPath_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"VsProjectPropertyValueProvider_TargetPath_Description", typeof(Resources))]
+        public virtual string TargetPath
         {
             get;
             set;
@@ -70,13 +70,13 @@ namespace NuPattern.Library.ValueProviders
             this.ValidateObject();
 
             tracer.Info(
-                Resources.VsProjectPropertyValueProvider_TraceInitial, this.CurrentElement.InstanceName, this.ProjectPath);
+                Resources.VsProjectPropertyValueProvider_TraceInitial, this.CurrentElement.InstanceName, this.TargetPath);
 
-            var resolver = new PathResolver(this.CurrentElement, this.UriService, path: (!String.IsNullOrEmpty(this.ProjectPath)) ? this.ProjectPath : String.Empty);
+            var resolver = new PathResolver(this.CurrentElement, this.UriService, path: (!String.IsNullOrEmpty(this.TargetPath)) ? this.TargetPath : String.Empty);
             if (!resolver.TryResolve(i => i.Kind == ItemKind.Project))
             {
                 tracer.Error(
-                    Resources.VsProjectPropertyValueProvider_TraceNotResolved, this.ProjectPath);
+                    Resources.VsProjectPropertyValueProvider_TraceNotResolved, this.TargetPath);
 
                 return string.Empty;
             }
@@ -86,7 +86,7 @@ namespace NuPattern.Library.ValueProviders
             if (item == null)
             {
                 tracer.Warn(
-                    Resources.VsProjectPropertyValueProvider_TraceNoItemFound, this.ProjectPath, resolver.Path);
+                    Resources.VsProjectPropertyValueProvider_TraceNoItemFound, this.TargetPath, resolver.Path);
 
                 return string.Empty;
             }
@@ -96,16 +96,16 @@ namespace NuPattern.Library.ValueProviders
                 {
                     var project = (IProject)item;
                     var propValue = GetPropertyValue(project);
-                    
+
                     tracer.Info(
-                        Resources.VsProjectPropertyValueProvider_TraceEvaluation, this.CurrentElement.InstanceName, this.ProjectPath, propValue);
+                        Resources.VsProjectPropertyValueProvider_TraceEvaluation, this.CurrentElement.InstanceName, this.TargetPath, propValue);
 
                     return propValue;
                 }
                 else
                 {
                     tracer.Warn(
-                        Resources.VsProjectPropertyValueProvider_TraceItemNotProject, this.ProjectPath, resolver.Path, item.Kind);
+                        Resources.VsProjectPropertyValueProvider_TraceItemNotProject, this.TargetPath, resolver.Path, item.Kind);
 
                     return string.Empty;
                 }

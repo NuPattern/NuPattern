@@ -1,9 +1,9 @@
 MIME-Version: 1.0
-Content-Type: multipart/related; boundary="----=_NextPart_01CE3FB8.E6F43720"
+Content-Type: multipart/related; boundary="----=_NextPart_01CE4DCE.67F934B0"
 
 This document is a Single File Web Page, also known as a Web Archive file.  If you are seeing this message, your browser or editor doesn't support Web Archive files.  Please download a browser that supports Web Archive, such as Windows® Internet Explorer®.
 
-------=_NextPart_01CE3FB8.E6F43720
+------=_NextPart_01CE4DCE.67F934B0
 Content-Location: file:///C:/A10244F3/Commands.htm
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/html; charset="windows-1252"
@@ -27,14 +27,14 @@ xmlns=3D"http://www.w3.org/TR/REC-html40">
   <o:LastAuthor>Jezz</o:LastAuthor>
   <o:Revision>1</o:Revision>
   <o:TotalTime>0</o:TotalTime>
-  <o:Created>2013-04-22T12:24:00Z</o:Created>
-  <o:LastSaved>2013-04-22T12:24:00Z</o:LastSaved>
+  <o:Created>2013-05-10T10:33:00Z</o:Created>
+  <o:LastSaved>2013-05-10T10:33:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
-  <o:Words>577</o:Words>
-  <o:Characters>3294</o:Characters>
-  <o:Lines>27</o:Lines>
+  <o:Words>594</o:Words>
+  <o:Characters>3387</o:Characters>
+  <o:Lines>28</o:Lines>
   <o:Paragraphs>7</o:Paragraphs>
-  <o:CharactersWithSpaces>3864</o:CharactersWithSpaces>
+  <o:CharactersWithSpaces>3974</o:CharactersWithSpaces>
   <o:Version>14.00</o:Version>
  </o:DocumentProperties>
  <o:OfficeDocumentSettings>
@@ -2578,9 +2578,8 @@ text .5pt;
 e-height:
   normal'><span lang=3DEN-US>Creates a new guidance workflow, with an optio=
 nal
-  default name, and optionally makes the guidance the currently selected wo=
-rkflow
-  in the 'Guidance Explorer' window.<o:p></o:p></span></p>
+  default name, and optionally makes the guidance the currently selected
+  workflow in the 'Guidance Explorer' window.<o:p></o:p></span></p>
   </td>
  </tr>
  <tr style=3D'mso-yfti-irow:12;height:13.2pt'>
@@ -2691,6 +2690,32 @@ olid windowtext .5pt;
   padding:0cm 5.4pt 0cm 5.4pt;height:13.2pt'>
   <p class=3DMsoNormal align=3Dright style=3D'margin-bottom:0cm;margin-bott=
 om:.0001pt;
+  text-align:right;line-height:normal'><span lang=3DEN-US>Associate Dropped
+  Artifacts with Element<o:p></o:p></span></p>
+  </td>
+  <td width=3D743 nowrap valign=3Dtop style=3D'width:557.2pt;border-top:non=
+e;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid =
+windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid window=
+text .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:1=
+3.2pt'>
+  <p class=3DMsoNormal style=3D'margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:
+  normal'><span lang=3DEN-US>Associates the dropped solution artifacts with=
+ the
+  current element.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style=3D'mso-yfti-irow:17;height:13.2pt'>
+  <td width=3D263 nowrap valign=3Dtop style=3D'width:197.2pt;border:solid w=
+indowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:s=
+olid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.2pt'>
+  <p class=3DMsoNormal align=3Dright style=3D'margin-bottom:0cm;margin-bott=
+om:.0001pt;
   text-align:right;line-height:normal'><span lang=3DEN-US>Creates Artifact =
 Links
   to Solution Items<o:p></o:p></span></p>
@@ -2710,7 +2735,7 @@ of the
   given Items.<o:p></o:p></span></p>
   </td>
  </tr>
- <tr style=3D'mso-yfti-irow:17;height:13.2pt'>
+ <tr style=3D'mso-yfti-irow:18;height:13.2pt'>
   <td width=3D263 nowrap valign=3Dtop style=3D'width:197.2pt;border:solid w=
 indowtext 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:s=
@@ -2738,7 +2763,7 @@ an
   artifact link to the solution item.<o:p></o:p></span></p>
   </td>
  </tr>
- <tr style=3D'mso-yfti-irow:18;height:13.2pt'>
+ <tr style=3D'mso-yfti-irow:19;height:13.2pt'>
   <td width=3D263 nowrap valign=3Dtop style=3D'width:197.2pt;border:solid w=
 indowtext 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:s=
@@ -2746,9 +2771,8 @@ olid windowtext .5pt;
   padding:0cm 5.4pt 0cm 5.4pt;height:13.2pt'>
   <p class=3DMsoNormal align=3Dright style=3D'margin-bottom:0cm;margin-bott=
 om:.0001pt;
-  text-align:right;line-height:normal'><span lang=3DEN-US>Creates New Child=
- Element
-  From Dropped File from Windows Explorer<o:p></o:p></span></p>
+  text-align:right;line-height:normal'><span lang=3DEN-US>Creates New Child
+  Element From Dropped File from Windows Explorer<o:p></o:p></span></p>
   </td>
   <td width=3D743 nowrap valign=3Dtop style=3D'width:557.2pt;border-top:non=
 e;
@@ -2768,7 +2792,7 @@ dds
   link to the solution item.<o:p></o:p></span></p>
   </td>
  </tr>
- <tr style=3D'mso-yfti-irow:19;height:13.2pt'>
+ <tr style=3D'mso-yfti-irow:20;height:13.2pt'>
   <td width=3D263 nowrap valign=3Dtop style=3D'width:197.2pt;border:solid w=
 indowtext 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:s=
@@ -2797,7 +2821,7 @@ the
   solution item.<o:p></o:p></span></p>
   </td>
  </tr>
- <tr style=3D'mso-yfti-irow:20;height:13.2pt'>
+ <tr style=3D'mso-yfti-irow:21;height:13.2pt'>
   <td width=3D263 nowrap valign=3Dtop style=3D'width:197.2pt;border:solid w=
 indowtext 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:s=
@@ -2825,7 +2849,7 @@ the
   associated artifacts to delete.<o:p></o:p></span></p>
   </td>
  </tr>
- <tr style=3D'mso-yfti-irow:21;height:13.2pt'>
+ <tr style=3D'mso-yfti-irow:22;height:13.2pt'>
   <td width=3D263 nowrap valign=3Dtop style=3D'width:197.2pt;border:solid w=
 indowtext 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:s=
@@ -2848,12 +2872,11 @@ text .5pt;
   <p class=3DMsoNormal style=3D'margin-bottom:0cm;margin-bottom:.0001pt;lin=
 e-height:
   normal'><span lang=3DEN-US>Generates code for the current pattern element=
- by
-  transforming a text template (also known as a T4 template).<o:p></o:p></s=
-pan></p>
+ by transforming
+  a text template (also known as a T4 template).<o:p></o:p></span></p>
   </td>
  </tr>
- <tr style=3D'mso-yfti-irow:22;height:13.2pt'>
+ <tr style=3D'mso-yfti-irow:23;height:13.2pt'>
   <td width=3D263 nowrap valign=3Dtop style=3D'width:197.2pt;border:solid w=
 indowtext 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:s=
@@ -2878,7 +2901,7 @@ e-height:
   Solution Builder window.<o:p></o:p></span></p>
   </td>
  </tr>
- <tr style=3D'mso-yfti-irow:23;height:13.2pt'>
+ <tr style=3D'mso-yfti-irow:24;height:13.2pt'>
   <td width=3D263 nowrap valign=3Dtop style=3D'width:197.2pt;border:solid w=
 indowtext 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:s=
@@ -2904,7 +2927,7 @@ e-height:
 .<o:p></o:p></span></p>
   </td>
  </tr>
- <tr style=3D'mso-yfti-irow:24;height:13.2pt'>
+ <tr style=3D'mso-yfti-irow:25;height:13.2pt'>
   <td width=3D263 nowrap valign=3Dtop style=3D'width:197.2pt;border:solid w=
 indowtext 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:s=
@@ -2933,7 +2956,7 @@ ed
   'RootNamespace' properties of the project.<o:p></o:p></span></p>
   </td>
  </tr>
- <tr style=3D'mso-yfti-irow:25;height:13.2pt'>
+ <tr style=3D'mso-yfti-irow:26;height:13.2pt'>
   <td width=3D263 nowrap valign=3Dtop style=3D'width:197.2pt;border:solid w=
 indowtext 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:s=
@@ -2959,7 +2982,7 @@ late)
   for the current element.<o:p></o:p></span></p>
   </td>
  </tr>
- <tr style=3D'mso-yfti-irow:26;height:13.2pt'>
+ <tr style=3D'mso-yfti-irow:27;height:13.2pt'>
   <td width=3D263 nowrap valign=3Dtop style=3D'width:197.2pt;border:solid w=
 indowtext 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:s=
@@ -2984,7 +3007,7 @@ e-height:
   element, and optionally for all its descendants.<o:p></o:p></span></p>
   </td>
  </tr>
- <tr style=3D'mso-yfti-irow:27;height:13.2pt'>
+ <tr style=3D'mso-yfti-irow:28;height:13.2pt'>
   <td width=3D263 nowrap valign=3Dtop style=3D'width:197.2pt;border:solid w=
 indowtext 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:s=
@@ -3005,7 +3028,7 @@ text .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:1=
 3.2pt'></td>
  </tr>
- <tr style=3D'mso-yfti-irow:28;height:13.2pt'>
+ <tr style=3D'mso-yfti-irow:29;height:13.2pt'>
   <td width=3D263 nowrap valign=3Dtop style=3D'width:197.2pt;border:solid w=
 indowtext 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:s=
@@ -3031,7 +3054,7 @@ e-height:
   projects.<o:p></o:p></span></p>
   </td>
  </tr>
- <tr style=3D'mso-yfti-irow:29;height:13.2pt'>
+ <tr style=3D'mso-yfti-irow:30;height:13.2pt'>
   <td width=3D263 nowrap valign=3Dtop style=3D'width:197.2pt;border:solid w=
 indowtext 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:s=
@@ -3058,7 +3081,7 @@ Studio
   IDE.<o:p></o:p></span></p>
   </td>
  </tr>
- <tr style=3D'mso-yfti-irow:30;height:13.2pt'>
+ <tr style=3D'mso-yfti-irow:31;height:13.2pt'>
   <td width=3D263 nowrap valign=3Dtop style=3D'width:197.2pt;border:solid w=
 indowtext 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:s=
@@ -3084,7 +3107,7 @@ e-height:
 tem.<o:p></o:p></span></p>
   </td>
  </tr>
- <tr style=3D'mso-yfti-irow:31;mso-yfti-lastrow:yes;height:13.2pt'>
+ <tr style=3D'mso-yfti-irow:32;mso-yfti-lastrow:yes;height:13.2pt'>
   <td width=3D263 nowrap valign=3Dtop style=3D'width:197.2pt;border:solid w=
 indowtext 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:s=
@@ -3122,7 +3145,7 @@ e-height:
 
 </html>
 
-------=_NextPart_01CE3FB8.E6F43720
+------=_NextPart_01CE4DCE.67F934B0
 Content-Location: file:///C:/A10244F3/Commands_files/themedata.thmx
 Content-Transfer-Encoding: base64
 Content-Type: application/vnd.ms-officetheme
@@ -3183,7 +3206,7 @@ AAAAAAAAANYCAAB0aGVtZS90aGVtZS90aGVtZTEueG1sUEsBAi0AFAAGAAgAAAAhAA3RkJ+2AAAA
 GwEAACcAAAAAAAAAAAAAAAAAsgkAAHRoZW1lL3RoZW1lL19yZWxzL3RoZW1lTWFuYWdlci54bWwu
 cmVsc1BLBQYAAAAABQAFAF0BAACtCgAAAAA=
 
-------=_NextPart_01CE3FB8.E6F43720
+------=_NextPart_01CE4DCE.67F934B0
 Content-Location: file:///C:/A10244F3/Commands_files/colorschememapping.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml
@@ -3193,7 +3216,7 @@ Content-Type: text/xml
  bg1=3D"lt1" tx1=3D"dk1" bg2=3D"lt2" tx2=3D"dk2" accent1=3D"accent1" accent=
 2=3D"accent2" accent3=3D"accent3" accent4=3D"accent4" accent5=3D"accent5" a=
 ccent6=3D"accent6" hlink=3D"hlink" folHlink=3D"folHlink"/>
-------=_NextPart_01CE3FB8.E6F43720
+------=_NextPart_01CE4DCE.67F934B0
 Content-Location: file:///C:/A10244F3/Commands_files/filelist.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml; charset="utf-8"
@@ -3204,4 +3227,4 @@ Content-Type: text/xml; charset="utf-8"
  <o:File HRef=3D"colorschememapping.xml"/>
  <o:File HRef=3D"filelist.xml"/>
 </xml>
-------=_NextPart_01CE3FB8.E6F43720--
+------=_NextPart_01CE4DCE.67F934B0--

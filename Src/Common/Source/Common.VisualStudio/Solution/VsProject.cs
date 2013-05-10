@@ -10,9 +10,6 @@ namespace NuPattern.VisualStudio.Solution
 {
     internal partial class VsProject : HierarchyItem, IProject
     {
-        /// <summary>
-        /// Equals the string "|".
-        /// </summary>
         private const string BuildConfigurationSeparator = @"|";
 
         // For testing

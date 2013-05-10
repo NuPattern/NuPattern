@@ -50,7 +50,7 @@ namespace NuPattern.Library.ValueProviders
             this.ValidateObject();
 
             tracer.Info(
-                Resources.ProjectGuidValueProvider_TraceInitial, this.CurrentElement.InstanceName, this.ProjectPath, this.Format);
+                Resources.ProjectGuidValueProvider_TraceInitial, this.CurrentElement.InstanceName, this.TargetPath, this.Format);
 
             return base.Evaluate();
         }
@@ -69,7 +69,7 @@ namespace NuPattern.Library.ValueProviders
                 var result = new Guid(guidString).ToString(GuidHelper.GetFormat(this.Format));
 
                 tracer.Info(
-                    Resources.ProjectGuidValueProvider_TraceEvaluation, this.CurrentElement.InstanceName, this.ProjectPath, result);
+                    Resources.ProjectGuidValueProvider_TraceEvaluation, this.CurrentElement.InstanceName, this.TargetPath, result);
 
                 return result;
             }
