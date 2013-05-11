@@ -75,7 +75,7 @@
         </Reference>
         <Reference Include="Microsoft.VisualStudio.Shell.Immutable.10.0" />
         <Reference Include="Microsoft.VisualStudio.ExtensibilityHosting, Version=<#=VersionInfo.TargetVsVersion#>.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-            <SpecificVersion>False</SpecificVersion>
+            <SpecificVersion>True</SpecificVersion>
         </Reference>
         <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.<#=VersionInfo.TargetVsVersion#>" />
         <Reference Include="System" />
