@@ -1688,11 +1688,11 @@ Please open and make a note of the updates that were automatically made to the *
   <data name="RootNamespaceValueProvider_TraceEvaluation" xml:space="preserve">
     <value>Evaluated root namespace of project for current element '{0}', using project path '{1}', as '{2}'.</value>
   </data>
-  <data name="VsProjectPropertyValueProvider_TargetPath_Description" xml:space="preserve">
+  <data name="VsProjectPropertyValueProvider_ProjectPath_Description" xml:space="preserve">
     <value>The path to the project in the current solution to be read. i.e. ..\~, navigates up to the parent element, and traverses the first artifact link found on the parent element over to a project in the solution.  See guidance documentation for more example paths and details.</value>
   </data>
-  <data name="VsProjectPropertyValueProvider_TargetPath_DisplayName" xml:space="preserve">
-    <value>Target Path</value>
+  <data name="VsProjectPropertyValueProvider_ProjectPath_DisplayName" xml:space="preserve">
+    <value>Project Path</value>
   </data>
   <data name="VsProjectPropertyValueProvider_TraceEvaluation" xml:space="preserve">
     <value>Evaluated property of project for current element '{0}', using project path '{1}', as '{2}'.</value>
@@ -2484,11 +2484,11 @@ Select the related solution items to delete and press 'OK', or press 'Cancel' to
   <data name="ProjectPropertyValueProvider_Property_DisplayName" xml:space="preserve">
     <value>Property</value>
   </data>
-  <data name="ItemPropertyValueProvider_TargetPath_Description" xml:space="preserve">
+  <data name="ItemPropertyValueProvider_ItemPath_Description" xml:space="preserve">
     <value>The path to the item in the current solution to be read. i.e. ..\~, navigates up to the parent element, and traverses the first artifact link found on the parent element over to an item in the solution or project.  See guidance documentation for more example paths and details.</value>
   </data>
-  <data name="ItemPropertyValueProvider_TargetPath_DisplayName" xml:space="preserve">
-    <value>Target Path</value>
+  <data name="ItemPropertyValueProvider_ItemPath_DisplayName" xml:space="preserve">
+    <value>Item Path</value>
   </data>
   <data name="ItemPropertyValueProvider_TraceEvaluation" xml:space="preserve">
     <value>Evaluated property of item for current element '{0}', using item path '{1}', as '{2}'.</value>

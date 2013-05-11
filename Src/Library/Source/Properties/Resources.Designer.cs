@@ -3437,18 +3437,18 @@ namespace NuPattern.Library.Properties {
         /// <summary>
         ///   Looks up a localized string similar to The path to the item in the current solution to be read. i.e. ..\~, navigates up to the parent element, and traverses the first artifact link found on the parent element over to an item in the solution or project.  See guidance documentation for more example paths and details..
         /// </summary>
-        internal static string ItemPropertyValueProvider_TargetPath_Description {
+        internal static string ItemPropertyValueProvider_ItemPath_Description {
             get {
-                return ResourceManager.GetString("ItemPropertyValueProvider_TargetPath_Description", resourceCulture);
+                return ResourceManager.GetString("ItemPropertyValueProvider_ItemPath_Description", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Target Path.
+        ///   Looks up a localized string similar to Item Path.
         /// </summary>
-        internal static string ItemPropertyValueProvider_TargetPath_DisplayName {
+        internal static string ItemPropertyValueProvider_ItemPath_DisplayName {
             get {
-                return ResourceManager.GetString("ItemPropertyValueProvider_TargetPath_DisplayName", resourceCulture);
+                return ResourceManager.GetString("ItemPropertyValueProvider_ItemPath_DisplayName", resourceCulture);
             }
         }
         
@@ -6789,18 +6789,18 @@ namespace NuPattern.Library.Properties {
         /// <summary>
         ///   Looks up a localized string similar to The path to the project in the current solution to be read. i.e. ..\~, navigates up to the parent element, and traverses the first artifact link found on the parent element over to a project in the solution.  See guidance documentation for more example paths and details..
         /// </summary>
-        internal static string VsProjectPropertyValueProvider_TargetPath_Description {
+        internal static string VsProjectPropertyValueProvider_ProjectPath_Description {
             get {
-                return ResourceManager.GetString("VsProjectPropertyValueProvider_TargetPath_Description", resourceCulture);
+                return ResourceManager.GetString("VsProjectPropertyValueProvider_ProjectPath_Description", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Target Path.
+        ///   Looks up a localized string similar to Project Path.
         /// </summary>
-        internal static string VsProjectPropertyValueProvider_TargetPath_DisplayName {
+        internal static string VsProjectPropertyValueProvider_ProjectPath_DisplayName {
             get {
-                return ResourceManager.GetString("VsProjectPropertyValueProvider_TargetPath_DisplayName", resourceCulture);
+                return ResourceManager.GetString("VsProjectPropertyValueProvider_ProjectPath_DisplayName", resourceCulture);
             }
         }
         

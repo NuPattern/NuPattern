@@ -26,7 +26,7 @@ namespace NuPattern.Library.ValueProviders
             this.ValidateObject();
 
             tracer.Info(
-                Resources.ProjectNameValueProvider_TraceInitial, this.CurrentElement.InstanceName, this.TargetPath);
+                Resources.ProjectNameValueProvider_TraceInitial, this.CurrentElement.InstanceName, this.ProjectPath);
 
             return base.Evaluate();
         }
@@ -42,7 +42,7 @@ namespace NuPattern.Library.ValueProviders
             var result = project.Name;
 
             tracer.Info(
-                Resources.ProjectNameValueProvider_TraceEvaluation, this.CurrentElement.InstanceName, this.TargetPath, result);
+                Resources.ProjectNameValueProvider_TraceEvaluation, this.CurrentElement.InstanceName, this.ProjectPath, result);
 
             return result;
         }
