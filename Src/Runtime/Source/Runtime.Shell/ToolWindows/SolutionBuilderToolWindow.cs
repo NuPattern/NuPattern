@@ -44,6 +44,14 @@ namespace NuPattern.Runtime.Shell.ToolWindows
             this.viewModel.CurrentNodeChanged += this.OnCurrentNodeChanged;
         }
 
+        /// <summary>
+        /// TODO: remove this and provide a way to display custom views in SolutionBuilder.
+        /// </summary>
+        internal SolutionBuilderViewModel ViewModel
+        {
+            get { return this.viewModel; }
+        }
+
         protected override void Initialize()
         {
             base.Initialize();
@@ -147,7 +155,7 @@ namespace NuPattern.Runtime.Shell.ToolWindows
 
         private void OnCurrentNodeChanged(object sender, EventArgs e)
         {
-            SelectItem(this.viewModel.CurrentNode == null ? new object[0] : new[] { this.viewModel.CurrentNode.Model });
+            SelectItem(this.viewModel.CurrentNode == null ? new object[0] : new[] { this.viewModel.CurrentNode.Data });
         }
 
         private void SelectItem(object[] selectedObjects)

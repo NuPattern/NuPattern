@@ -6,48 +6,48 @@ using NuPattern.VisualStudio;
 namespace NuPattern.Runtime.UI.ViewModels
 {
     /// <summary>
-    /// Defines the needed classes for the <see cref="SolutionBuilderViewModel"/>.
+    /// Defines the context for Solution Builder view
     /// </summary>
-    internal class SolutionBuilderContext : NuPattern.Runtime.UI.ViewModels.ISolutionBuilderContext
+    public interface ISolutionBuilderContext
     {
         /// <summary>
         /// Gets the binding factory.
         /// </summary>
-        public IBindingFactory BindingFactory { get; internal set; }
+        IBindingFactory BindingFactory { get; }
 
         /// <summary>
         /// Gets or sets the view model.
         /// </summary>
-        public ISolutionBuilderViewModel ViewModel { get; set; }
+        ISolutionBuilderViewModel ViewModel { get; set; }
 
         /// <summary>
         /// Gets the pattern manager.
         /// </summary>
-        public IPatternManager PatternManager { get; internal set; }
+        IPatternManager PatternManager { get; }
 
         /// <summary>
         /// Gets the set selected action.
         /// </summary>
-        public Action<IProductElementViewModel> SetSelected { get; set; }
+        Action<IProductElementViewModel> SetSelected { get; set; }
 
         /// <summary>
         /// Gets the show properties action.
         /// </summary>
-        public Action ShowProperties { get; internal set; }
+        Action ShowProperties { get; }
 
         /// <summary>
         /// Gets the new pattern dialog factory.
         /// </summary>
-        public Func<object, IDialogWindow> NewProductDialogFactory { get; internal set; }
+        Func<object, IDialogWindow> NewProductDialogFactory { get; }
 
         /// <summary>
         /// Gets the new node dialog factory.
         /// </summary>
-        public Func<object, IDialogWindow> NewNodeDialogFactory { get; internal set; }
+        Func<object, IDialogWindow> NewNodeDialogFactory { get; }
 
         /// <summary>
         /// Gets the user message service.
         /// </summary>
-        public IUserMessageService UserMessageService { get; internal set; }
+        IUserMessageService UserMessageService { get; }
     }
 }

@@ -11,7 +11,7 @@ namespace NuPattern.Runtime.UI.ViewModels
     /// <summary>
     /// Provides a view model for a pattern instance in the solution builder view.
     /// </summary>
-    internal class ProductViewModel : ProductElementViewModel
+    internal class ProductViewModel : ProductElementViewModel, NuPattern.Runtime.UI.ViewModels.IProductViewModel
     {
         private const string IconEnabledPath = "../../Resources/NodeProductDefault.png";
         private const string IconUninstalledPath = "../../Resources/NodeProductVersionNotFound.png";
@@ -25,7 +25,7 @@ namespace NuPattern.Runtime.UI.ViewModels
         /// Initializes a new instance of the <see cref="ProductViewModel"/> class.
         /// </summary>
         [SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", MessageId = "0")]
-        public ProductViewModel(IProduct product, SolutionBuilderContext context)
+        public ProductViewModel(IProduct product, ISolutionBuilderContext context)
             : base(product, context)
         {
             this.InitializeCommands();
@@ -52,20 +52,20 @@ namespace NuPattern.Runtime.UI.ViewModels
         /// <summary>
         /// Gets the current view.
         /// </summary>
-        public IView CurrentView
+        public IView CurrentViewData
         {
             get
             {
-                return this.Model.CurrentView;
+                return this.Data.CurrentView;
             }
 
             private set
             {
-                if (this.Model.CurrentView != value)
+                if (this.Data.CurrentView != value)
                 {
-                    this.Model.CurrentView = value;
+                    this.Data.CurrentView = value;
 
-                    this.OnPropertyChanged(() => this.CurrentView);
+                    this.OnPropertyChanged(() => this.CurrentViewData);
                 }
             }
         }
@@ -81,18 +81,18 @@ namespace NuPattern.Runtime.UI.ViewModels
         /// <summary>
         /// Gets the underlying model.
         /// </summary>
-        public new IProduct Model
+        public new IProduct Data
         {
-            get { return (IProduct)base.Model; }
+            get { return (IProduct)base.Data; }
         }
 
         /// <summary>
         /// Gets the element container. It is the place where the children are added.
         /// </summary>
         /// <value></value>
-        internal override IElementContainer ElementContainer
+        public override IElementContainer ElementContainerData
         {
-            get { return this.CurrentView; }
+            get { return this.CurrentViewData; }
         }
 
         /// <summary>
@@ -105,11 +105,11 @@ namespace NuPattern.Runtime.UI.ViewModels
                 if (this.Context.UserMessageService.PromptWarning(string.Format(
                     CultureInfo.CurrentCulture,
                     Resources.SolutionBuilder_ConfirmDelete,
-                    this.Model.InstanceName)))
+                    this.Data.InstanceName)))
                 {
 
                     var ex = tracer.Shield(
-                        () => this.Context.PatternManager.DeleteProduct(this.Model),
+                        () => this.Context.PatternManager.DeleteProduct(this.Data),
                         Resources.ProductViewModel_FailedToDeleteProduct);
 
                     if (ex != null)
@@ -126,14 +126,14 @@ namespace NuPattern.Runtime.UI.ViewModels
         {
             if (!this.HasSingleView)
             {
-                var views = this.Model.Views
+                var views = this.Data.Views
                     .Where(x => x.Info != null)
                     .OrderBy(v => v.Info.DisplayName)
                     .Select(v =>
                         new MenuOptionViewModel(v.Info.DisplayName, this.ChangeViewCommand)
                         {
-                            Model = v,
-                            IsSelected = (v == this.Model.CurrentView),
+                            Data = v,
+                            IsSelected = (v == this.Data.CurrentView),
                             IconType = IconType.SingleSelect,
                             IsVisible = v.Info.IsVisible,
                         });
@@ -155,13 +155,13 @@ namespace NuPattern.Runtime.UI.ViewModels
                 previousOption.IsSelected = false;
             }
 
-            var selectedOption = this.viewsOption.MenuOptions.FirstOrDefault(o => o.Model == view);
+            var selectedOption = this.viewsOption.MenuOptions.FirstOrDefault(o => o.Data == view);
             if (selectedOption != null)
             {
                 selectedOption.IsSelected = true;
-                this.CurrentView = view;
+                this.CurrentViewData = view;
 
-                this.Nodes.Clear();
+                this.ChildNodes.Clear();
                 this.RenderHierarchyRecursive();
                 this.RefreshAddMenuOptions();
             }

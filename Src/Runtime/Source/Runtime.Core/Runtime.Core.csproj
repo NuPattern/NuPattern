@@ -93,6 +93,7 @@
     </Compile>
     <Compile Include="Diagnostics\DelegateTraceFilter.cs" />
     <Compile Include="Diagnostics\ActivityTextListener.cs" />
+    <Compile Include="Diagnostics\TraceOutputWindowManager.cs" />
     <Compile Include="ISchemaResource.cs" />
     <Compile Include="IToolkitRepository.cs" />
     <Compile Include="Settings\IRuntimeSettings.cs" />
@@ -113,7 +114,7 @@
     <Compile Include="ProductStoreValidationController.cs" />
     <Compile Include="Settings\SettingsManager.cs" />
     <Compile Include="Settings\TracingSettingsMonitor.cs" />
-    <Compile Include="Diagnostics\TraceOutputWindowManager.cs" />
+    <Compile Include="Diagnostics\TraceOutputWindowPane.cs" />
     <Compile Include="SchemaReaderExtensions.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="InstalledToolkitAdapter.cs" />
@@ -177,8 +178,6 @@
     </Compile>
     <Compile Include="UI\ViewModels\ElementViewModel.cs" />
     <Compile Include="UI\ViewModels\AutomationMenuOptionViewModel.cs" />
-    <Compile Include="UI\ViewModels\IconType.cs" />
-    <Compile Include="UI\ViewModels\MenuOptionViewModel.cs" />
     <Compile Include="UI\ViewModels\SolutionBuilderContext.cs" />
     <Compile Include="UI\Views\AddNewNodeView.xaml.cs">
       <DependentUpon>AddNewNodeView.xaml</DependentUpon>

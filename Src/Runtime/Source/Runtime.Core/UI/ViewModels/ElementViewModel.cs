@@ -7,7 +7,7 @@ namespace NuPattern.Runtime.UI.ViewModels
     /// <summary>
     /// Defines a view model for a <see cref="IAbstractElement"/>.
     /// </summary>
-    internal class ElementViewModel : ProductElementViewModel
+    internal class ElementViewModel : ProductElementViewModel, NuPattern.Runtime.UI.ViewModels.IElementViewModel
     {
         internal const string IconPathFormat = "../../Resources/" + "Node{0}.png"; // element images stored as resource with prefix
 
@@ -15,7 +15,7 @@ namespace NuPattern.Runtime.UI.ViewModels
         /// Initializes a new instance of the <see cref="ElementViewModel"/> class.
         /// </summary>
         [SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", MessageId = "0")]
-        public ElementViewModel(IAbstractElement element, SolutionBuilderContext context)
+        public ElementViewModel(IAbstractElement element, ISolutionBuilderContext context)
             : base(element, context)
         {
             // Initialize default value for icon path
@@ -30,17 +30,17 @@ namespace NuPattern.Runtime.UI.ViewModels
         /// <summary>
         /// Gets the underlying model.
         /// </summary>
-        public new IAbstractElement Model
+        public new IAbstractElement Data
         {
-            get { return (IAbstractElement)base.Model; }
+            get { return (IAbstractElement)base.Data; }
         }
 
         /// <summary>
         /// Gets the element container. It is the place where the children are added.
         /// </summary>
-        internal override IElementContainer ElementContainer
+        public override IElementContainer ElementContainerData
         {
-            get { return this.Model; }
+            get { return this.Data; }
         }
 
         /// <summary>
@@ -50,12 +50,12 @@ namespace NuPattern.Runtime.UI.ViewModels
         /// <remarks>You can delete any element instance as long as you have a way to mnaully recreate it (i.e. AllowAddNew = true).</remarks>
         protected override bool CanDeleteInstance()
         {
-            var info = this.Model.Info;
+            var info = this.Data.Info;
 
             switch (info.Cardinality)
             {
                 case Cardinality.OneToMany:
-                    var parent = this.ElementContainer.Parent as IElementContainer;
+                    var parent = this.ElementContainerData.Parent as IElementContainer;
                     if (parent != null)
                     {
                         if (parent.Elements.Count(e => e.Info == info) > 1)

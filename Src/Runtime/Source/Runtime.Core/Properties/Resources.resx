@@ -452,4 +452,7 @@ The two values must match. Skipping guidance extension registration. Please cont
     <value>Could not locate vsix manifest file from location inferred from the exported guidance extension assembly location: {0}.
 Skipping guidance extension type with identifier {1}.</value>
   </data>
+  <data name="TraceOutputWindowManager_ErrorDuplicateTraceId" xml:space="preserve">
+    <value>Trace pane with ID '{0}', has already been created.</value>
+  </data>
 </root>

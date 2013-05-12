@@ -60,7 +60,7 @@ namespace NuPattern.Runtime.Guidance
             Guard.NotNull(() => guidanceManager, guidanceManager);
             Guard.NotNull(() => provider, provider);
 
-            var toolWindows = provider.GetService<IGuidanceWindowsService>();
+            var toolWindows = provider.GetService<IPatternWindows>();
             if (toolWindows != null)
             {
                 tracer.Verbose(Resources.GuidanceManagerExtensions_TraceShowingGuidanceWindows);

@@ -131,7 +131,7 @@
     </Compile>
     <Compile Include="GuidanceRegistration.cs" />
     <Compile Include="GuidanceRegistrationAdapter.cs" />
-    <Compile Include="GuidanceWindowsService.cs" />
+    <Compile Include="PatternWindowsService.cs" />
     <Compile Include="ToolWindows\GuidanceBrowserToolWindow.cs" />
     <Compile Include="ToolWindows\GuidanceExplorerToolWindow.cs" />
     <Compile Include="GeneratedCode\Guidance\GuidanceWorkflow.gen.cs">

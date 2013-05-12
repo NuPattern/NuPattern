@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using NuPattern.Presentation;
 
@@ -7,7 +8,8 @@ namespace NuPattern.Runtime.UI.ViewModels
     /// <summary>
     /// Defines behavior for dynamic menu options.
     /// </summary>
-    internal class MenuOptionViewModel : ViewModel
+    [CLSCompliant(false)]
+    public class MenuOptionViewModel : ViewModel, IMenuOptionViewModel
     {
         private const long DefaultSortOrder = 100;
 
@@ -29,7 +31,7 @@ namespace NuPattern.Runtime.UI.ViewModels
             this.Caption = caption;
             this.GroupIndex = 0;
             this.SortOrder = DefaultSortOrder;
-            this.MenuOptions = new ObservableCollection<MenuOptionViewModel>();
+            this.MenuOptions = new ObservableCollection<IMenuOptionViewModel>();
             this.MenuOptions.CollectionChanged += (s, e) => this.SetEnabledDefault();
         }
 
@@ -70,9 +72,9 @@ namespace NuPattern.Runtime.UI.ViewModels
         public System.Windows.Input.ICommand Command { get; protected set; }
 
         /// <summary>
-        /// Gets or sets the model.
+        /// Gets or sets the data for the menu.
         /// </summary>
-        public object Model { get; set; }
+        public object Data { get; set; }
 
         /// <summary>
         /// Gets or sets the group.
@@ -216,7 +218,7 @@ namespace NuPattern.Runtime.UI.ViewModels
         /// Gets the menu options.
         /// </summary>
         /// <value>The menu options.</value>
-        public ObservableCollection<MenuOptionViewModel> MenuOptions { get; private set; }
+        public ObservableCollection<IMenuOptionViewModel> MenuOptions { get; private set; }
 
         private void SetEnabledDefault()
         {

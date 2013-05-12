@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.Shell;
+﻿using System;
+using Microsoft.VisualStudio.Shell;
 
 namespace NuPattern.Runtime.Shell.ToolWindows
 {

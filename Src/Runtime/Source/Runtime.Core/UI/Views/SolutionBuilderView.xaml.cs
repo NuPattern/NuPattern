@@ -78,7 +78,7 @@ namespace NuPattern.Runtime.UI.Views
                     if (viewModel == null)
                         return;
 
-                    var dragData = new DataObject(@"VSPAT", viewModel.Model);
+                    var dragData = new DataObject(@"VSPAT", viewModel.Data);
                     DragDrop.DoDragDrop(treeViewItem, dragData, DragDropEffects.Move);
                 }
             }
@@ -101,7 +101,7 @@ namespace NuPattern.Runtime.UI.Views
 
             if (ElementDragEnter != null)
             {
-                ElementDragEnter(((ProductElementViewModel)(((TreeViewItem)sender).DataContext)).Model, e);
+                ElementDragEnter(((ProductElementViewModel)(((TreeViewItem)sender).DataContext)).Data, e);
             }
 
             effects = e.Effects;
@@ -114,7 +114,7 @@ namespace NuPattern.Runtime.UI.Views
 
             if (ElementDragEnter != null)
             {
-                ElementDragEnter(((ProductElementViewModel)(((TreeViewItem)sender).DataContext)).Model, e);
+                ElementDragEnter(((ProductElementViewModel)(((TreeViewItem)sender).DataContext)).Data, e);
             }
         }
 
@@ -125,7 +125,7 @@ namespace NuPattern.Runtime.UI.Views
 
             if (ElementDragLeave != null)
             {
-                ElementDragLeave(((ProductElementViewModel)(((TreeViewItem)sender).DataContext)).Model, e);
+                ElementDragLeave(((ProductElementViewModel)(((TreeViewItem)sender).DataContext)).Data, e);
             }
         }
 
@@ -133,7 +133,7 @@ namespace NuPattern.Runtime.UI.Views
         {
             if (ElementDrop != null)
             {
-                ElementDrop(((ProductElementViewModel)(((TreeViewItem)sender).DataContext)).Model, e);
+                ElementDrop(((ProductElementViewModel)(((TreeViewItem)sender).DataContext)).Data, e);
             }
             e.Handled = true;
         }

@@ -8,4 +8,11 @@ namespace NuPattern.Library.Automation
     public partial interface ICommandSettings : IBindingSettings
     {
     }
+
+    /// <summary>
+    /// Wrapper for ICommandSettings used in chaining.
+    /// </summary>
+    internal interface ICommandSettings<T> : ICommandSettings
+    {
+    }
 }

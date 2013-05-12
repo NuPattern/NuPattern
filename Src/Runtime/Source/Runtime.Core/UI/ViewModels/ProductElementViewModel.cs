@@ -20,7 +20,7 @@ namespace NuPattern.Runtime.UI.ViewModels
     /// <summary>
     /// Base view model for <see cref="ProductElement"/> elements.
     /// </summary>
-    internal abstract class ProductElementViewModel : ViewModel<IProductElement>, IEditableObject
+    internal abstract class ProductElementViewModel : ViewModel<IProductElement>, IEditableObject, NuPattern.Runtime.UI.ViewModels.IProductElementViewModel
     {
         private static readonly string assemblyName = typeof(ProductElementViewModel).Assembly.GetName().Name;
         private static readonly string deleteIconPath = @"pack://application:,,,/" + assemblyName + @";component/Resources/CommandRemove.png";
@@ -37,14 +37,14 @@ namespace NuPattern.Runtime.UI.ViewModels
         /// Initializes a new instance of the <see cref="ProductElementViewModel"/> class.
         /// </summary>
         [SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", MessageId = "0", Justification = "Base class validates")]
-        protected ProductElementViewModel(IProductElement model, SolutionBuilderContext context)
+        protected ProductElementViewModel(IProductElement model, ISolutionBuilderContext context)
             : base(model)
         {
             Guard.NotNull(() => context, context);
 
             this.Context = context;
-            this.Nodes = new ObservableCollection<ProductElementViewModel>();
-            this.MenuOptions = new ObservableCollection<MenuOptionViewModel>();
+            this.ChildNodes = new ObservableCollection<IProductElementViewModel>();
+            this.MenuOptions = new ObservableCollection<IMenuOptionViewModel>();
 
             this.InitializeCommands();
             this.CreateStandardMenuOptions();
@@ -53,7 +53,7 @@ namespace NuPattern.Runtime.UI.ViewModels
 
             if (model.Info != null)
             {
-                this.Nodes.CollectionChanged += this.OnNodesCollectionChanged;
+                this.ChildNodes.CollectionChanged += this.OnNodesCollectionChanged;
 
                 this.CreateAutomationMenuOptions();
             }
@@ -72,7 +72,7 @@ namespace NuPattern.Runtime.UI.ViewModels
         /// <summary>
         /// Gets the solution builder context.
         /// </summary>
-        public SolutionBuilderContext Context { get; private set; }
+        public ISolutionBuilderContext Context { get; private set; }
 
         /// <summary>
         /// Gets the delete command.
@@ -157,8 +157,7 @@ namespace NuPattern.Runtime.UI.ViewModels
                     if (value)
                     {
                         this.Context.SetSelected(this);
-                    }
-                }
+                    }                }
             }
         }
 
@@ -171,19 +170,27 @@ namespace NuPattern.Runtime.UI.ViewModels
         }
 
         /// <summary>
+        /// Gets the underlying model.
+        /// </summary>
+        public IProductElement Data
+        {
+            get { return this.Model; }
+        }
+
+        /// <summary>
         /// Gets the child nodes.
         /// </summary>
-        public ObservableCollection<ProductElementViewModel> Nodes { get; private set; }
+        public ObservableCollection<IProductElementViewModel> ChildNodes { get; private set; }
 
         /// <summary>
         /// Gets the menu options.
         /// </summary>
-        public ObservableCollection<MenuOptionViewModel> MenuOptions { get; private set; }
+        public ObservableCollection<IMenuOptionViewModel> MenuOptions { get; private set; }
 
         /// <summary>
         /// Gets the parent node.
         /// </summary>
-        public ProductElementViewModel ParentNode { get; private set; }
+        public IProductElementViewModel ParentNode { get; private set; }
 
         /// <summary>
         /// Gets the show properties command.
@@ -193,7 +200,7 @@ namespace NuPattern.Runtime.UI.ViewModels
         /// <summary>
         /// Gets the element container. It is the place where the children are added.
         /// </summary>
-        internal abstract IElementContainer ElementContainer { get; }
+        public abstract IElementContainer ElementContainerData { get; }
 
         /// <summary>
         /// Begins an edit on an object.
@@ -272,7 +279,7 @@ namespace NuPattern.Runtime.UI.ViewModels
                         default:
                             //case Cardinality.OneToOne:
                             //case Cardinality.ZeroToOne:
-                            return (this.ElementContainer.Elements.Count(e => e.Info == abstractElementInfo) == 0);
+                            return (this.ElementContainerData.Elements.Count(e => e.Info == abstractElementInfo) == 0);
                     }
                 }
             }
@@ -304,16 +311,16 @@ namespace NuPattern.Runtime.UI.ViewModels
             if (this.Context.UserMessageService.PromptWarning(string.Format(
                 CultureInfo.CurrentCulture,
                 Resources.SolutionBuilder_ConfirmDelete,
-                this.Model.InstanceName)))
+                this.Data.InstanceName)))
             {
                 var ex = NuPattern.VisualStudio.TraceSourceExtensions.Shield(tracer,
-                    () => this.Model.Delete(),
+                    () => this.Data.Delete(),
                     Resources.ProductViewModel_FailedToDeleteProduct);
 
                 if (ex != null)
                     this.Context.UserMessageService.ShowError(ex.Message);
                 else if (this.ParentNode != null)
-                    this.ParentNode.Nodes.Remove(this);
+                    this.ParentNode.ChildNodes.Remove(this);
             }
         }
 
@@ -323,13 +330,13 @@ namespace NuPattern.Runtime.UI.ViewModels
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate", Justification = "Not appropriate.")]
         protected IEnumerable<MenuOptionViewModel> GetCurrentAddOptions()
         {
-            return this.ElementContainer.Info.Elements
+            return this.ElementContainerData.Info.Elements
                 .Where(e => CanCreateAddMenu(e))
                 .Select(e => new MenuOptionViewModel(e.DisplayName, this.AddElementCommand)
                 {
-                    Model = e
+                    Data = e
                 })
-                .Concat(this.GetExtensionsMenuOptions(this.ElementContainer.Info.ExtensionPoints))
+                .Concat(this.GetExtensionsMenuOptions(this.ElementContainerData.Info.ExtensionPoints))
                 .OrderBy(m => m.Caption);
         }
 
@@ -337,7 +344,7 @@ namespace NuPattern.Runtime.UI.ViewModels
         {
             var info = state.ExtensionPoint;
             var extensionId = info.RequiredExtensionPointId;
-            var extensions = this.ElementContainer.Extensions;
+            var extensions = this.ElementContainerData.Extensions;
 
             if ((info.Cardinality != Cardinality.OneToOne &&
                  info.Cardinality != Cardinality.ZeroToOne) ||
@@ -352,7 +359,7 @@ namespace NuPattern.Runtime.UI.ViewModels
         private void CreateAutomationMenuOptions()
         {
             this.MenuOptions.AddRange(
-                this.Model.AutomationExtensions
+                this.Data.AutomationExtensions
                     .Where(a => a is IAutomationMenuCommand)
                     .Select(a => new AutomationMenuOptionViewModel(a))
                     .OrderBy(o => o.Caption));
@@ -386,29 +393,42 @@ namespace NuPattern.Runtime.UI.ViewModels
                 });
         }
 
-        private void AddProductElement(IPatternElementInfo info)
+        public string AddNewElement(IPatternElementInfo info)
         {
-            tracer.ShieldUI(
-                () =>
+            var instanceName = string.Empty;
+
+            tracer.ShieldUI(() =>
                 {
                     var viewModel = this.CreateNewNodeViewModel(info);
                     var view = this.Context.NewNodeDialogFactory(viewModel);
                     if (view.ShowDialog().GetValueOrDefault())
                     {
+                        instanceName = viewModel.InstanceName;
+                    }
+                }, Resources.ProductElementViewModel_ElementCreationFailed, info.DisplayName);
+
+            return instanceName;
+        }
+
+        private void AddProductElement(IPatternElementInfo info)
+        {
+            tracer.ShieldUI(() =>
+                {
+                    var instanceName = AddNewElement(info);
+                    if (!String.IsNullOrEmpty(instanceName))
+                    {
                         using (new MouseCursor(System.Windows.Input.Cursors.Wait))
                         {
-                            var element = Factory.CreateElement(this.ElementContainer, info, viewModel.InstanceName);
+                            var element = Factory.CreateElement(this.ElementContainerData, info, instanceName);
                             this.Select(element);
                         }
                     }
-                },
-                Resources.ProductElementViewModel_ElementCreationFailed,
-                info.DisplayName);
+                }, Resources.ProductElementViewModel_ElementCreationFailed, info.DisplayName);
         }
 
         private AddNewNodeViewModel CreateNewNodeViewModel(IPatternElementInfo info)
         {
-            return new AddNewNodeViewModel(this.Nodes.Select(x => x.Model), info, this.Context.UserMessageService);
+            return new AddNewNodeViewModel(this.ChildNodes.Select(x => x.Data), info, this.Context.UserMessageService);
         }
 
         private IEnumerable<MenuOptionViewModel> GetExtensionsMenuOptions(IEnumerable<IExtensionPointInfo> extensions)
@@ -420,7 +440,7 @@ namespace NuPattern.Runtime.UI.ViewModels
                         .Select(info =>
                             new MenuOptionViewModel(info.Schema.Pattern.DisplayName, this.AddExtensionCommand)
                             {
-                                Model = new ExtensionState(info.Schema.Pattern, e, this.Context.BindingFactory)
+                                Data = new ExtensionState(info.Schema.Pattern, e, this.Context.BindingFactory)
                             })));
         }
 
@@ -460,9 +480,9 @@ namespace NuPattern.Runtime.UI.ViewModels
             }
         }
 
-        private void Select(IProductElement element)
+        public void Select(IProductElement element)
         {
-            var selection = this.Nodes.FirstOrDefault(x => x.Model == element);
+            var selection = this.ChildNodes.FirstOrDefault(x => x.Data == element);
             if (selection != null)
             {
                 selection.IsSelected = true;
@@ -516,11 +536,11 @@ namespace NuPattern.Runtime.UI.ViewModels
             {
                 if (this.ParentNode != null)
                 {
-                    this.ParentNode.Select(this.Model);
+                    this.ParentNode.Select(this.Data);
                 }
                 else
                 {
-                    this.Context.ViewModel.Select(this.Model);
+                    this.Context.ViewModel.Select(this.Data);
                 }
             }
         }
@@ -528,11 +548,11 @@ namespace NuPattern.Runtime.UI.ViewModels
         /// <summary>
         /// Reorders the child nodes
         /// </summary>
-        internal void Reorder()
+        public void Reorder()
         {
             // Fetching the AllElements property reorders elements automatically
-            var elements = this.ElementContainer.AllElements;
-            this.OnPropertyChanged(() => this.Nodes);
+            var elements = this.ElementContainerData.AllElements;
+            this.OnPropertyChanged(() => this.ChildNodes);
         }
 
         /// <summary>
@@ -540,7 +560,7 @@ namespace NuPattern.Runtime.UI.ViewModels
         /// </summary>
         internal void Refresh()
         {
-            this.Nodes.Clear();
+            this.ChildNodes.Clear();
             this.RenderHierarchyRecursive();
         }
 
@@ -549,14 +569,18 @@ namespace NuPattern.Runtime.UI.ViewModels
         /// </summary>
         internal void RenderHierarchyRecursive()
         {
-            this.AddChildNodes(this.ElementContainer.AllElements);
-            foreach (var element in this.Nodes)
+            this.AddChildNodes(this.ElementContainerData.AllElements);
+            foreach (var element in this.ChildNodes)
             {
-                element.RenderHierarchyRecursive();
+                var e = element as ProductElementViewModel;
+                if (e != null)
+                {
+                    e.RenderHierarchyRecursive();
+                }
             }
         }
 
-        internal void AddChildNodes(IEnumerable<IProductElement> elements)
+        public void AddChildNodes(IEnumerable<IProductElement> elements)
         {
             // Filter out invisible abstract elements (only)
             var visibleNodes = from e in elements
@@ -570,11 +594,11 @@ namespace NuPattern.Runtime.UI.ViewModels
 
             tracer.ShieldUI(() =>
             {
-                this.Nodes.AddRange(
+                this.ChildNodes.AddRange(
                     visibleNodes.Select(x => Factory.CreateViewModel(x, this.Context)));
             },
                 Resources.SolutionBuilderViewModel_FailedToRenderElements,
-                this.Model.InstanceName);
+                this.Data.InstanceName);
         }
 
 
@@ -629,26 +653,26 @@ namespace NuPattern.Runtime.UI.ViewModels
 
             #region ViewModel factories
 
-            private static readonly KeyValuePair<Type, Func<IProductElement, SolutionBuilderContext, ProductElementViewModel>>[] vmFactories = new[]
+            private static readonly KeyValuePair<Type, Func<IProductElement, ISolutionBuilderContext, ProductElementViewModel>>[] vmFactories = new[]
             {
-                new KeyValuePair<Type, Func<IProductElement, SolutionBuilderContext, ProductElementViewModel>>(
+                new KeyValuePair<Type, Func<IProductElement, ISolutionBuilderContext, ProductElementViewModel>>(
                     typeof(IAbstractElement),
                     (e, ctx) => new ElementViewModel((IAbstractElement)e, ctx)),
 
-                new KeyValuePair<Type, Func<IProductElement, SolutionBuilderContext, ProductElementViewModel>>(
+                new KeyValuePair<Type, Func<IProductElement, ISolutionBuilderContext, ProductElementViewModel>>(
                     typeof(IProduct),
                     (e, ctx) => new ProductViewModel((IProduct)e, ctx))
             };
 
             #endregion
 
-            internal static ProductElementViewModel CreateViewModel(IProductElement child, SolutionBuilderContext ctx)
+            internal static ProductElementViewModel CreateViewModel(IProductElement child, ISolutionBuilderContext ctx)
             {
                 var factory = FindFactory(child);
                 return factory(child, ctx).With(vm => vm.IsExpanded = true);
             }
 
-            private static Func<IProductElement, SolutionBuilderContext, ProductElementViewModel> FindFactory(IProductElement element)
+            private static Func<IProductElement, ISolutionBuilderContext, ProductElementViewModel> FindFactory(IProductElement element)
             {
                 return vmFactories.Where(f => f.Key.IsAssignableFrom(element.GetType())).Select(f => f.Value).First();
             }

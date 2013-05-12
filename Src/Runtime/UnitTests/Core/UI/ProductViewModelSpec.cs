@@ -116,7 +116,7 @@ namespace NuPattern.Runtime.UnitTests.UI
 
                 var target = new ProductViewModel(product, this.ctx);
 
-                Assert.Equal(0, target.Nodes.Count);
+                Assert.Equal(0, target.ChildNodes.Count);
             }
 
             [TestMethod, TestCategory("Unit")]
@@ -216,7 +216,7 @@ namespace NuPattern.Runtime.UnitTests.UI
             [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewInstance_ThenExposesModel()
             {
-                Assert.Same(this.product, this.target.Model);
+                Assert.Same(this.product, this.target.Data);
             }
 
             [TestMethod, TestCategory("Unit")]
@@ -264,13 +264,13 @@ namespace NuPattern.Runtime.UnitTests.UI
                 Assert.True(this.target.MenuOptions
                         .First(o => o.Caption == Resources.ProductViewModel_ViewsMenuText)
                         .MenuOptions
-                        .All(o => o.Caption == ((IView)o.Model).Info.DisplayName));
+                        .All(o => o.Caption == ((IView)o.Data).Info.DisplayName));
             }
 
             [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewInstance_ThenDefaultViewIsSelectedAsCurrentView()
             {
-                Assert.Same(this.product.Views.ElementAt(1), this.target.CurrentView);
+                Assert.Same(this.product.Views.ElementAt(1), this.target.CurrentViewData);
             }
 
             [TestMethod, TestCategory("Unit")]
@@ -280,12 +280,12 @@ namespace NuPattern.Runtime.UnitTests.UI
                     .First(o => o.Caption == Resources.ProductViewModel_ViewsMenuText)
                     .MenuOptions
                     .First(o => !o.IsSelected && o.IsVisible)
-                    .Model;
+                    .Data;
 
                 this.target.ChangeViewCommand.Execute(view);
 
-                Assert.Equal(1, this.target.Nodes.Count);
-                Assert.Contains(this.target.CurrentView.AllElements.ElementAt(0), this.target.Nodes.Select(n => n.Model));
+                Assert.Equal(1, this.target.ChildNodes.Count);
+                Assert.Contains(this.target.CurrentViewData.AllElements.ElementAt(0), this.target.ChildNodes.Select(n => n.Data));
             }
 
             [TestMethod, TestCategory("Unit")]
@@ -306,7 +306,7 @@ namespace NuPattern.Runtime.UnitTests.UI
                     .First(o => o.Caption == Resources.ProductViewModel_ViewsMenuText)
                     .MenuOptions
                     .First(o => !o.IsSelected && o.IsVisible)
-                    .Model;
+                    .Data;
 
                 this.target.ChangeViewCommand.Execute(view);
 
@@ -319,31 +319,31 @@ namespace NuPattern.Runtime.UnitTests.UI
                 var addOption = this.target.MenuOptions
                     .First(o => o.Caption == Resources.ProductElementViewModel_AddMenuText);
                 var info = addOption.MenuOptions
-                    .Select(o => o.Model)
+                    .Select(o => o.Data)
                     .OfType<IElementInfo>()
                     .Last(e => e.Cardinality == Cardinality.ZeroToMany && e.IsVisible);
 
                 this.target.AddElementCommand.Execute(info);
 
-                Mock.Get(this.target.CurrentView)
+                Mock.Get(this.target.CurrentViewData)
                     .Verify(x => x.CreateElement(It.IsAny<Action<IElement>>(), It.IsAny<bool>()), Times.Once());
             }
 
             [TestMethod, TestCategory("Unit")]
             public void WhenAddingNewCollection_ThenCreateCollectionInStore()
             {
-                SolutionBuilderViewModelSpec.SetupCreateCollection(this.patternManager, this.target.CurrentView);
+                SolutionBuilderViewModelSpec.SetupCreateCollection(this.patternManager, this.target.CurrentViewData);
 
                 var addOption = this.target.MenuOptions
                     .First(o => o.Caption == Resources.ProductElementViewModel_AddMenuText);
                 var info = addOption.MenuOptions
-                    .Select(o => o.Model)
+                    .Select(o => o.Data)
                     .OfType<ICollectionInfo>()
                     .Last(e => e.Cardinality == Cardinality.ZeroToMany && e.IsVisible);
 
                 this.target.AddElementCommand.Execute(info);
 
-                Mock.Get(this.target.CurrentView)
+                Mock.Get(this.target.CurrentViewData)
                     .Verify(x => x.CreateCollection(It.IsAny<Action<ICollection>>(), It.IsAny<bool>()), Times.Once());
             }
 

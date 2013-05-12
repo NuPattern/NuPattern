@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using NuPattern.Presentation;
 
+
 namespace NuPattern.Runtime.UI.Views
 {
     /// <summary>

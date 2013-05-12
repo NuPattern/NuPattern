@@ -1,132 +1,67 @@
 ﻿using System;
-using Microsoft.VisualStudio.Shell.Interop;
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using NuPattern.Diagnostics;
 using NuPattern.Runtime.Diagnostics;
 using NuPattern.VisualStudio;
 
-namespace NuPattern.Runtime.UnitTests.Diagnostics
+namespace NuPattern.Runtime.UnitTests.Core.Diagnostics
 {
     [TestClass]
     public class TraceOutputWindowManagerSpec
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable", Justification = "Test")]
+        internal static readonly IAssertion Assert = new Assertion();
+
         [TestClass]
-        public class GivenAManagerAndOutputWindow
+        public class GivenNoContext
         {
-            private const string PaneTitle = "Foo";
-            private static readonly string SourceName = typeof(TraceOutputWindowManagerSpec).FullName;
-            private static readonly ITracer TraceSource = Tracer.Get<TraceOutputWindowManagerSpec>();
-
-            private Mock<IServiceProvider> serviceProvider;
-            private Mock<IVsOutputWindowPane> outputPane;
-            private Mock<IShellEvents> shellEvents;
-            private Mock<IVsOutputWindow> outputWindow;
-
-            private TraceOutputWindowManager traceManager;
-            private Guid paneId = Guid.NewGuid();
+            private TraceOutputWindowManager manager;
 
             [TestInitialize]
-            public virtual void Initialize()
+            public void InitializeContext()
             {
-                this.serviceProvider = new Mock<IServiceProvider>();
-                this.outputPane = new Mock<IVsOutputWindowPane>();
-                this.outputWindow = new Mock<IVsOutputWindow>();
-                this.shellEvents = new Mock<IShellEvents>();
-
-                var pane = this.outputPane.Object;
-
-                this.serviceProvider.Setup(x => x.GetService(typeof(SVsOutputWindow))).Returns(this.outputWindow.Object);
-                this.outputWindow.Setup(x => x.GetPane(ref this.paneId, out pane)).Returns(0);
-
-                this.traceManager = new TraceOutputWindowManager(this.serviceProvider.Object, this.shellEvents.Object, this.paneId, PaneTitle, SourceName);
+                this.manager = new TraceOutputWindowManager(Mock.Of<IServiceProvider>(), Mock.Of<IShellEvents>());
             }
 
             [TestMethod, TestCategory("Unit")]
-            public void WhenCreated_ThenDoesNotCreateOutputWindow()
+            public void ThenNoTracePanes()
             {
-                var pane = this.outputPane.Object;
-
-                this.outputWindow.Verify(x => x.GetPane(ref this.paneId, out pane), Times.Never());
+                Assert.Equal(0, this.manager.TracePanes.Count());
             }
 
             [TestMethod, TestCategory("Unit")]
-            public void WhenShellInitialized_ThenOutputWindowIsInitialized()
+            public void WhenCreatePaneWithNullTitle_ThenThrows()
             {
-                var pane = this.outputPane.Object;
-
-                this.shellEvents.Raise(x => x.ShellInitialized += null, EventArgs.Empty);
-
-                this.outputWindow.Verify(x => x.GetPane(ref this.paneId, out pane));
+                Assert.Throws<ArgumentNullException>(() =>
+                    this.manager.CreateTracePane(Guid.NewGuid(), null, new[] { "Foo" }));
             }
 
             [TestMethod, TestCategory("Unit")]
-            public void WhenShellInitializedAndExistingTraces_ThenWritesToOutputPane()
+            public void WhenCreatePaneWithNullSources_ThenThrows()
             {
-                var trace = Tracer.Manager.GetSource(SourceName);
-                trace.Switch.Level = System.Diagnostics.SourceLevels.All;
-                TraceSource.Info("Hello");
-
-                this.outputPane.Verify(x => x.OutputStringThreadSafe(It.IsAny<string>()), Times.Never());
-
-                this.shellEvents.Raise(x => x.ShellInitialized += null, EventArgs.Empty);
-
-                this.outputPane.Verify(x => x.OutputStringThreadSafe(It.Is<string>(s => s.Contains("Hello"))));
+                Assert.Throws<ArgumentNullException>(() =>
+                    this.manager.CreateTracePane(Guid.NewGuid(), "Foo", null));
             }
 
             [TestMethod, TestCategory("Unit")]
-            public void WhenDisposed_ThenNoMoreTracesAreWritten()
+            public void WhenCreatePaneWithASource_ThenTracePaneCreated()
             {
-                this.shellEvents.Raise(x => x.ShellInitialized += null, EventArgs.Empty);
+                var traceId = Guid.NewGuid();
+                this.manager.CreateTracePane(traceId, "Foo", new[] { "Source1" });
 
-                this.traceManager.Dispose();
-
-                var trace = Tracer.Manager.GetSource(SourceName);
-                trace.Switch.Level = System.Diagnostics.SourceLevels.All;
-                TraceSource.Info("Hello");
-
-                this.outputPane.Verify(x => x.OutputStringThreadSafe(It.IsAny<string>()), Times.Never());
-            }
-
-            [Ignore]
-            [TestMethod, TestCategory("Unit")]
-            public void WhenTraceSourcesSet_ThenAddsNewTracerToOutput()
-            {
-                // TODO: continue to investigate what's wrong with this!!!
-                // Seems something weird in the underlying Tracer functionality :(
-                var name = typeof(TraceTestClass).FullName;
-                var trace = Tracer.Manager.GetSource(name);
-                trace.Switch.Level = System.Diagnostics.SourceLevels.All;
-
-                this.shellEvents.Raise(x => x.ShellInitialized += null, EventArgs.Empty);
-                this.traceManager.SetTraceSourceNames(new[] { name });
-
-                var source = Tracer.Get<TraceTestClass>();
-
-                source.Info("Hello");
-
-                this.outputPane.Verify(x => x.OutputStringThreadSafe(It.Is<string>(s => s.Contains("Hello"))));
+                Assert.Equal(1, this.manager.TracePanes.Count());
+                Assert.Equal(traceId, this.manager.TracePanes.First().TracePaneId);
             }
 
             [TestMethod, TestCategory("Unit")]
-            public void WhenTraceSourcesSet_ThenNoLongerTracesInitialSource()
+            public void WhenCreatePaneWithDuplicateTraceId_ThenThrows()
             {
-                var name = typeof(TraceTestClass).FullName;
+                var traceId = Guid.NewGuid();
+                this.manager.CreateTracePane(traceId, "Foo", new[] { "Source1" });
 
-                this.shellEvents.Raise(x => x.ShellInitialized += null, EventArgs.Empty);
-                this.traceManager.SetTraceSourceNames(new[] { name });
-
-                var trace = Tracer.Manager.GetSource(SourceName);
-                trace.Switch.Level = System.Diagnostics.SourceLevels.All;
-                TraceSource.Info("Hello");
-
-                this.outputPane.Verify(x => x.OutputStringThreadSafe(It.IsAny<string>()), Times.Never());
+                Assert.Throws<InvalidOperationException>(() =>
+                    this.manager.CreateTracePane(traceId, "Foo", new[] { "Source1" }));
             }
         }
-    }
-
-    public class TraceTestClass
-    {
     }
 }

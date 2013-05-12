@@ -85,7 +85,7 @@ namespace NuPattern.Runtime.UnitTests.UI
             [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewInstance_ThenExposesModel()
             {
-                Assert.Same(this.element, this.target.Model);
+                Assert.Same(this.element, this.target.Data);
             }
 
             [TestMethod, TestCategory("Unit")]
@@ -97,9 +97,9 @@ namespace NuPattern.Runtime.UnitTests.UI
             [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewInstance_ThenRenderChildNodes()
             {
-                Assert.Equal(2, this.target.Nodes.Count);
-                Assert.Contains(this.element.AllElements.ElementAt(0), this.target.Nodes.Select(n => n.Model));
-                Assert.Contains(this.element.AllElements.ElementAt(1), this.target.Nodes.Select(n => n.Model));
+                Assert.Equal(2, this.target.ChildNodes.Count);
+                Assert.Contains(this.element.AllElements.ElementAt(0), this.target.ChildNodes.Select(n => n.Data));
+                Assert.Contains(this.element.AllElements.ElementAt(1), this.target.ChildNodes.Select(n => n.Data));
             }
 
             [TestMethod, TestCategory("Unit")]
@@ -127,13 +127,13 @@ namespace NuPattern.Runtime.UnitTests.UI
                 var addMenuOptions = this.target.MenuOptions
                     .First(o => o.Caption == Resources.ProductElementViewModel_AddMenuText)
                     .MenuOptions;
-                var info = addMenuOptions.Select(o => o.Model)
+                var info = addMenuOptions.Select(o => o.Data)
                     .OfType<IElementInfo>()
                     .Last(e => e.Cardinality == Cardinality.ZeroToMany);
 
                 this.target.AddElementCommand.Execute(info);
 
-                Mock.Get(this.target.Model)
+                Mock.Get(this.target.Data)
                     .Verify(x => x.CreateElement(It.IsAny<Action<IElement>>(), It.IsAny<bool>()), Times.Once());
             }
 
@@ -143,20 +143,20 @@ namespace NuPattern.Runtime.UnitTests.UI
                 var addMenuOptions = this.target.MenuOptions
                     .First(o => o.Caption == Resources.ProductElementViewModel_AddMenuText)
                     .MenuOptions;
-                var info = addMenuOptions.Select(o => o.Model)
+                var info = addMenuOptions.Select(o => o.Data)
                     .OfType<ICollectionInfo>()
                     .Last(e => e.Cardinality == Cardinality.ZeroToMany);
 
                 this.target.AddElementCommand.Execute(info);
 
-                Mock.Get(this.target.Model)
+                Mock.Get(this.target.Data)
                     .Verify(x => x.CreateCollection(It.IsAny<Action<ICollection>>(), It.IsAny<bool>()), Times.Once());
             }
 
             [TestMethod, TestCategory("Unit")]
             public void WhenDelete_ThenPromptsConfirmation()
             {
-                var toDelete = this.target.Nodes.OfType<ElementViewModel>().First();
+                var toDelete = this.target.ChildNodes.OfType<ElementViewModel>().First();
 
                 toDelete.DeleteCommand.Execute(null);
 
@@ -167,12 +167,12 @@ namespace NuPattern.Runtime.UnitTests.UI
             [TestMethod, TestCategory("Unit")]
             public void WhenExecutingDelete_ThenDeletesElementAndRemoveNodeFromNodesParent()
             {
-                var toDelete = this.target.Nodes.OfType<ElementViewModel>().First();
+                var toDelete = this.target.ChildNodes.OfType<ElementViewModel>().First();
 
                 toDelete.DeleteCommand.Execute(null);
 
-                Assert.False(this.target.Nodes.Contains(toDelete));
-                Mock.Get((ICollection)toDelete.Model).Verify(e => e.Delete(), Times.Once());
+                Assert.False(this.target.ChildNodes.Contains(toDelete));
+                Mock.Get((ICollection)toDelete.Data).Verify(e => e.Delete(), Times.Once());
             }
         }
 

@@ -1,4 +1,5 @@
-﻿using System.Runtime.InteropServices;
+﻿using System;
+using System.Runtime.InteropServices;
 using Microsoft.VisualStudio.Shell;
 using NuPattern.Runtime.Shell.Properties;
 
@@ -19,6 +20,32 @@ namespace NuPattern.Runtime.Shell.ToolWindows
             this.BitmapResourceID = 301;
             this.BitmapIndex = 0;
         }
+
+        /// <summary>
+        /// Opens the window, if not already opened.
+        /// </summary>
+        internal static SolutionBuilderToolWindow OpenWindow(IServiceProvider serviceProvider)
+        {
+            Guard.NotNull(() => serviceProvider, serviceProvider);
+
+            var packageToolWindow = serviceProvider.GetService<IPackageToolWindow>();
+            return packageToolWindow.ShowWindow<SolutionBuilderToolWindow>(true);
+        }
+
+        /// <summary>
+        /// Hides the window, if it was automatically opened.
+        /// </summary>
+        internal static void HideWindow(IServiceProvider serviceProvider)
+        {
+            Guard.NotNull(() => serviceProvider, serviceProvider);
+
+            var packageToolWindow = serviceProvider.GetService<IPackageToolWindow>();
+
+            if (packageToolWindow.IsWindowVisible<SolutionBuilderToolWindow>())
+            {
+                packageToolWindow.HideWindow<SolutionBuilderToolWindow>();
+            }
+        }
     }
 
     [Guid("6A2D1053-BEEB-4FDF-9FB0-133CE1FE6D25")]
@@ -35,6 +62,32 @@ namespace NuPattern.Runtime.Shell.ToolWindows
             this.BitmapResourceID = 302;
             this.BitmapIndex = 0;
         }
+
+        /// <summary>
+        /// Opens the window, if not already opened.
+        /// </summary>
+        internal static GuidanceExplorerToolWindow OpenWindow(IServiceProvider serviceProvider)
+        {
+            Guard.NotNull(() => serviceProvider, serviceProvider);
+
+            var packageToolWindow = serviceProvider.GetService<IPackageToolWindow>();
+            return packageToolWindow.ShowWindow<GuidanceExplorerToolWindow>(true);
+        }
+
+        /// <summary>
+        /// Hides the window, if it was automatically opened.
+        /// </summary>
+        internal static void HideWindow(IServiceProvider serviceProvider)
+        {
+            Guard.NotNull(() => serviceProvider, serviceProvider);
+
+            var packageToolWindow = serviceProvider.GetService<IPackageToolWindow>();
+
+            if (packageToolWindow.IsWindowVisible<GuidanceExplorerToolWindow>())
+            {
+                packageToolWindow.HideWindow<GuidanceExplorerToolWindow>();
+            }
+        }
     }
 
     [Guid("167f0a44-f79b-4007-a084-8ecc1457776e")]
@@ -50,6 +103,32 @@ namespace NuPattern.Runtime.Shell.ToolWindows
 
             this.BitmapResourceID = 303;
             this.BitmapIndex = 0;
+        }
+
+        /// <summary>
+        /// Opens the window, if not already opened.
+        /// </summary>
+        internal static GuidanceBrowserToolWindow OpenWindow(IServiceProvider serviceProvider)
+        {
+            Guard.NotNull(() => serviceProvider, serviceProvider);
+
+            var packageToolWindow = serviceProvider.GetService<IPackageToolWindow>();
+            return packageToolWindow.ShowWindow<GuidanceBrowserToolWindow>(true);
+        }
+
+        /// <summary>
+        /// Hides the window, if it was automatically opened.
+        /// </summary>
+        internal static void HideWindow(IServiceProvider serviceProvider)
+        {
+            Guard.NotNull(() => serviceProvider, serviceProvider);
+
+            var packageToolWindow = serviceProvider.GetService<IPackageToolWindow>();
+
+            if (packageToolWindow.IsWindowVisible<GuidanceBrowserToolWindow>())
+            {
+                packageToolWindow.HideWindow<GuidanceBrowserToolWindow>();
+            }
         }
     }
 }

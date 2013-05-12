@@ -9,6 +9,7 @@ var commands = new[]
         new ToolWindowInfo { Name = "GuidanceBrowser", BitmapResourceId = RuntimeShellPackageInfo.GuidanceBrowser.BitmapResourceId, ToolWindowGuid = RuntimeShellPackageInfo.GuidanceBrowser.ToolWindowGuid, },
     };
 #>
+using System;
 using System.Runtime.InteropServices;
 using Microsoft.VisualStudio.Shell;
 using NuPattern.Runtime.Shell.Properties;
@@ -33,6 +34,32 @@ namespace NuPattern.Runtime.Shell.ToolWindows
 
             this.BitmapResourceID = <#=command.BitmapResourceId#>;
             this.BitmapIndex = 0;
+        }
+
+        /// <summary>
+        /// Opens the window, if not already opened.
+        /// </summary>
+        internal static <#=command.Name#>ToolWindow OpenWindow(IServiceProvider serviceProvider)
+        {
+            Guard.NotNull(() => serviceProvider, serviceProvider);
+
+            var packageToolWindow = serviceProvider.GetService<IPackageToolWindow>();
+            return packageToolWindow.ShowWindow<<#=command.Name#>ToolWindow>(true);
+        }
+
+        /// <summary>
+        /// Hides the window, if it was automatically opened.
+        /// </summary>
+        internal static void HideWindow(IServiceProvider serviceProvider)
+        {
+            Guard.NotNull(() => serviceProvider, serviceProvider);
+
+            var packageToolWindow = serviceProvider.GetService<IPackageToolWindow>();
+
+            if (packageToolWindow.IsWindowVisible<<#=command.Name#>ToolWindow>())
+            {
+                packageToolWindow.HideWindow<<#=command.Name#>ToolWindow>();
+            }
         }
     }
 <#

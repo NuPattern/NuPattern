@@ -66,7 +66,7 @@ namespace NuPattern.Runtime.Shell
     [ProvideService(typeof(IExtensionManager), ServiceName = @"IExtensionManager")]
     [ProvideService(typeof(IGuidanceManager), ServiceName = @"IGuidanceManager")]
     [ProvideService(typeof(INuPatternCompositionService), ServiceName = @"INuPatternCompositionService")]
-    [ProvideService(typeof(IGuidanceWindowsService), ServiceName = @"IGuidanceWindowsService")]
+    [ProvideService(typeof(IPatternWindows), ServiceName = @"IGuidanceWindowsService")]
     [ProvideService(typeof(INuPatternProjectTypeProvider), ServiceName = @"INuPatternProjectTypeProvider")]
     [ProvideService(typeof(IPatternManager), ServiceName = @"IPatternManager")]
     [ProvideService(typeof(IPackageToolWindow), ServiceName = @"IPackageToolWindow")]
@@ -75,20 +75,19 @@ namespace NuPattern.Runtime.Shell
     [ProvideService(typeof(IBindingFactory), ServiceName = @"IBindingFactory")]
     [ProvideService(typeof(IBindingCompositionService), ServiceName = @"IBindingCompositionService")]
     [ProvideService(typeof(IToolkitInterfaceService), ServiceName = @"IToolkitInferfaceService")]
+    [ProvideService(typeof(ITraceOutputWindowManager), ServiceName = @"ITraceOutputWindowManager")]
     [ProvideOptionPage(typeof(TraceOptionsPage), Constants.SettingsName, @"TraceOptionsPage", 17131, 21356, true)]
     public sealed class RuntimeShellPackage : Package
     {
         private static readonly ITracer tracer = Tracer.Get<RuntimeShellPackage>();
         private const int IdleTimeout = 5000;
         private const int GuidanceEvalTimeGovernor = 1; // In Seconds
-        private static readonly Guid OutputPaneGuid = new Guid(Constants.VsOutputWindowPaneId);
         private ProductStateValidator productStateValidator;
         private VsIdleTaskHost idleTaskHost;
         private bool showWindows = false;
 
         [SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields", Justification = "Not sure if it's OK to leave this container unreferenced by anyone.")]
         private TracingSettingsMonitor tracingMonitor;
-        private TraceOutputWindowManager traceOutputWindowManager;
 
 #pragma warning disable 0649
         [Import]
@@ -104,7 +103,7 @@ namespace NuPattern.Runtime.Shell
         [Import]
         private IExtensionManager ExtensionManager { get; set; }
         [Import]
-        private IGuidanceWindowsService GuidanceWindowsService { get; set; }
+        private IPatternWindows GuidanceWindowsService { get; set; }
         [ImportMany(typeof(ILaunchPoint))]
         private IEnumerable<Lazy<ILaunchPoint>> LaunchPoints { get; set; }
         [Import]
@@ -125,6 +124,8 @@ namespace NuPattern.Runtime.Shell
         private IUserMessageService UserMessageService { get; set; }
         [Import]
         private IToolkitInterfaceService ToolkitInterfaceService { get; set; }
+        [Import]
+        private ITraceOutputWindowManager TraceOutputWindowManager { get; set; }
 #pragma warning restore 0649
 
 #if VSVER11
@@ -185,7 +186,7 @@ namespace NuPattern.Runtime.Shell
             this.tracingMonitor = new TracingSettingsMonitor(this.SettingsManager);
 
             var sourceNames = GetConfiguredSourceNames(this.SettingsManager.Read());
-            this.traceOutputWindowManager = new TraceOutputWindowManager(this, this.ShellEvents, OutputPaneGuid, Constants.OutputWindowTitle, sourceNames.ToArray());
+            this.TraceOutputWindowManager.CreateTracePane(new Guid(Constants.VsOutputWindowPaneId), Constants.OutputWindowTitle, sourceNames.ToArray());
 
             // Monitor setting changes to refresh output window.
             this.SettingsManager.SettingsChanged += this.OnSettingsChanged;
@@ -220,11 +221,6 @@ namespace NuPattern.Runtime.Shell
                 if (this.tracingMonitor != null)
                 {
                     this.tracingMonitor.Dispose();
-                }
-
-                if (this.traceOutputWindowManager != null)
-                {
-                    this.traceOutputWindowManager.Dispose();
                 }
 
                 if (this.productStateValidator != null)
@@ -271,7 +267,7 @@ namespace NuPattern.Runtime.Shell
             serviceContainer.AddService(typeof(IExtensionManager), new ServiceCreatorCallback((c, s) => this.ExtensionManager), true);
             serviceContainer.AddService(typeof(IGuidanceManager), new ServiceCreatorCallback((c, s) => this.GuidanceManager), true);
             serviceContainer.AddService(typeof(INuPatternCompositionService), new ServiceCreatorCallback((c, s) => this.CompositionService), true);
-            serviceContainer.AddService(typeof(IGuidanceWindowsService), new ServiceCreatorCallback((c, s) => this.GuidanceWindowsService), true);
+            serviceContainer.AddService(typeof(IPatternWindows), new ServiceCreatorCallback((c, s) => this.GuidanceWindowsService), true);
             serviceContainer.AddService(typeof(RuntimeShellPackage), this, true);
             serviceContainer.AddService(typeof(IPackageToolWindow), new PackageToolWindow(this), true);
             serviceContainer.AddService(typeof(IPatternManager), new ServiceCreatorCallback((s, t) => this.PatternManager), true);
@@ -280,6 +276,7 @@ namespace NuPattern.Runtime.Shell
             serviceContainer.AddService(typeof(IUserMessageService), new ServiceCreatorCallback((s, t) => this.UserMessageService), true);
             serviceContainer.AddService(typeof(IBindingFactory), new ServiceCreatorCallback((s, t) => this.BindingFactory), true);
             serviceContainer.AddService(typeof(IBindingCompositionService), new ServiceCreatorCallback((s, t) => this.BindingComposition), true);
+            serviceContainer.AddService(typeof(ITraceOutputWindowManager), new ServiceCreatorCallback((s, t) => this.TraceOutputWindowManager), true);
             serviceContainer.AddService(typeof(IToolkitInterfaceService), new ServiceCreatorCallback((s, t) => this.ToolkitInterfaceService), true);
         }
 
@@ -387,7 +384,11 @@ namespace NuPattern.Runtime.Shell
         private void OnSettingsChanged(object sender, ChangedEventArgs<IRuntimeSettings> e)
         {
             var sourceNames = GetConfiguredSourceNames(e.NewValue);
-            this.traceOutputWindowManager.SetTraceSourceNames(sourceNames);
+            var tracePane = this.TraceOutputWindowManager.TracePanes.FirstOrDefault(tp => tp.TracePaneId == new Guid(Constants.VsOutputWindowPaneId));
+            if (tracePane != null)
+            {
+                tracePane.SetTraceSourceNames(sourceNames);
+            }
         }
 
         private void InitializeCommands()

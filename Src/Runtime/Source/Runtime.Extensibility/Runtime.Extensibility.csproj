@@ -74,6 +74,10 @@
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\10.0\Microsoft.VisualStudio.Shell.Interop.10.0.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.11.0" Condition="'$(TargetVsVersion)' == '11.0'">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\11.0\Microsoft.VisualStudio.Shell.Interop.11.0.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualStudio.Shell$(VsxVersionSuffix)">
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.Shell$(VsxVersionSuffix).dll</HintPath>
@@ -126,12 +130,22 @@
     <Compile Include="Bindings\BindingCompositionService.cs" />
     <Compile Include="Bindings\BindingFactory.cs" />
     <Compile Include="Bindings\BindingPropertyDescriptor.cs" />
+    <Compile Include="Diagnostics\ITracePane.cs" />
+    <Compile Include="Diagnostics\ITraceOutputWindowManager.cs" />
     <Compile Include="SolutionUri.cs" />
     <Compile Include="Guidance\CommandBinding.cs" />
     <Compile Include="Guidance\Workflow\NodeType.cs" />
     <Compile Include="LaunchPointUri.cs" />
     <Compile Include="GuidanceContentUri.cs" />
     <Compile Include="PackUri.cs" />
+    <Compile Include="UI\IconType.cs" />
+    <Compile Include="UI\ViewModels\IElementViewModel.cs" />
+    <Compile Include="UI\ViewModels\IMenuOptionViewModel.cs" />
+    <Compile Include="UI\ViewModels\IProductElementViewModel.cs" />
+    <Compile Include="UI\ViewModels\IProductViewModel.cs" />
+    <Compile Include="UI\ViewModels\ISolutionBuilderContext.cs" />
+    <Compile Include="UI\ViewModels\ISolutionBuilderViewModel.cs" />
+    <Compile Include="UI\ViewModels\MenuOptionViewModel.cs" />
     <Compile Include="Validation\DataAnnotationsValidator.cs" />
     <Compile Include="Bindings\Design\DesignCollectionConverter.cs" />
     <Compile Include="Bindings\Design\DesignComponentTypeDescriptor.cs" />
@@ -208,7 +222,7 @@
     <Compile Include="Guidance\GuidanceInstantiation.cs" />
     <Compile Include="Guidance\GuidanceManagerSettings.cs" />
     <Compile Include="Guidance\IGuidanceInstanceLocator.cs" />
-    <Compile Include="Guidance\IGuidanceWindowsService.cs" />
+    <Compile Include="IPatternWindows.cs" />
     <Compile Include="Guidance\ILaunchPoint.cs" />
     <Compile Include="Guidance\IQueryStatusStrategy.cs" />
     <Compile Include="Guidance\IGuidanceExtensionPersistState.cs" />

@@ -1,165 +1,78 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
+using System.ComponentModel.Composition;
 using System.Globalization;
-using System.IO;
 using System.Linq;
-using Microsoft.VisualStudio.Shell.Interop;
-using NuPattern.Diagnostics;
+using Microsoft.VisualStudio.Shell;
 using NuPattern.Runtime.Properties;
 using NuPattern.VisualStudio;
-using NuPattern.VisualStudio.Diagnostics;
 
 namespace NuPattern.Runtime.Diagnostics
 {
     /// <summary>
-    ///  Manages the output of trace messages to an output window pane.
+    /// Implments the <see cref="ITraceOutputWindowManager"/> services.
     /// </summary>
-    internal sealed class TraceOutputWindowManager : IDisposable
+    [Export(typeof(ITraceOutputWindowManager))]
+    internal class TraceOutputWindowManager : ITraceOutputWindowManager, IDisposable
     {
-        private static readonly ITracer tracer = Tracer.Get<TraceOutputWindowManager>();
-        private static readonly TraceFilter defaultFilter = new DelegateTraceFilter((cache, source, eventType, id) => true);
-
+        private ICollection<TraceOutputWindowPane> tracePanes;
         private IServiceProvider serviceProvider;
-        private Guid outputPaneGuid;
-        private IVsOutputWindowPane outputWindowPane;
-        private TraceListener listener;
-        private StringWriter temporaryWriter;
         private IShellEvents shellEvents;
-        private string[] traceSourceNames;
-        private string outputPaneTitle;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="TraceOutputWindowManager"/> class.
+        /// Creates a new instance of the <see cref="TraceOutputWindowManager"/> class.
         /// </summary>
-        /// <param name="serviceProvider">The service provider.</param>
-        /// <param name="shellEvents">The shell events.</param>
-        /// <param name="outputPaneId">The output pane GUID, which must be unique and remain constant for a given pane.</param>
-        /// <param name="outputPaneTitle">The output pane title.</param>
-        /// <param name="traceSourceName">The name of the trace source to write to the output window pane.</param>
-        public TraceOutputWindowManager(IServiceProvider serviceProvider, IShellEvents shellEvents, Guid outputPaneId, string outputPaneTitle, string traceSourceName)
-            : this(serviceProvider, shellEvents, outputPaneId, outputPaneTitle, new[] { traceSourceName })
+        [ImportingConstructor]
+        public TraceOutputWindowManager(
+            [Import(typeof(SVsServiceProvider))] IServiceProvider serviceProvider,
+            [Import(typeof(IShellEvents))] IShellEvents shellEvents)
         {
+            this.tracePanes = new List<TraceOutputWindowPane>();
+            this.serviceProvider = serviceProvider;
+            this.shellEvents = shellEvents;
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="TraceOutputWindowManager"/> class.
+        /// Creates a new trace pane.
         /// </summary>
-        /// <param name="serviceProvider">The service provider.</param>
-        /// <param name="shellEvents">The shell events.</param>
-        /// <param name="outputPaneId">The output pane GUID, which must be unique and remain constant for a given pane.</param>
-        /// <param name="outputPaneTitle">The output pane title.</param>
-        /// <param name="traceSourceNames">The names of the trace sources to write to the output window pane.</param>
-        public TraceOutputWindowManager(IServiceProvider serviceProvider, IShellEvents shellEvents, Guid outputPaneId, string outputPaneTitle, params string[] traceSourceNames)
+        /// <param name="traceId">The identifier of the trace pane</param>
+        /// <param name="title">The title to display for the  trace pane</param>
+        /// <param name="traceSourceNames">The names of the sources to display in this trace window</param>
+        public ITracePane CreateTracePane(Guid traceId, string title, IEnumerable<string> traceSourceNames)
         {
-            Guard.NotNull(() => serviceProvider, serviceProvider);
-            Guard.NotNull(() => shellEvents, shellEvents);
-            Guard.NotNullOrEmpty(() => outputPaneTitle, outputPaneTitle);
+            Guard.NotNullOrEmpty(() => title, title);
             Guard.NotNull(() => traceSourceNames, traceSourceNames);
 
-            this.serviceProvider = serviceProvider;
-            this.outputPaneGuid = outputPaneId;
-            this.outputPaneTitle = outputPaneTitle;
-            this.traceSourceNames = traceSourceNames;
-            this.shellEvents = shellEvents;
+            if (this.tracePanes.Any(tp => tp.TracePaneId == traceId))
+            {
+                throw new InvalidOperationException(string.Format(CultureInfo.CurrentCulture, Resources.TraceOutputWindowManager_ErrorDuplicateTraceId, traceId));
+            }
 
-            this.shellEvents.ShellInitialized += this.OnShellInitialized;
+            // Add tracer pane
+            var tracePane = new TraceOutputWindowPane(this.serviceProvider, this.shellEvents, traceId, title,
+                                                      traceSourceNames.ToArray());
+            this.tracePanes.Add(tracePane);
 
-            // Create a temporary writer that buffers events that happen 
-            // before shell initialization is completed, so that we don't 
-            // miss anything.
-            this.temporaryWriter = new StringWriter(CultureInfo.CurrentCulture);
-            this.listener = new TextWriterTraceListener(this.temporaryWriter, this.outputPaneTitle);
-            this.listener.IndentLevel = 4;
-            this.listener.Filter = defaultFilter;
-
-            this.AddListenerToSources();
+            return tracePane;
         }
 
         /// <summary>
-        /// Gets or sets the trace source names that will be logged to the output window pane.
-        /// </summary>
-        public void SetTraceSourceNames(IEnumerable<string> traceSources)
-        {
-            Guard.NotNull(() => traceSources, traceSources);
-
-            this.RemoveListenerFromSources();
-            this.traceSourceNames = traceSources.ToArray();
-            this.AddListenerToSources();
-        }
-
-        /// <summary>
-        /// Cleans resources used by the manager.
+        /// Disposes this instance.
         /// </summary>
         public void Dispose()
         {
-            this.shellEvents.Dispose();
-            if (this.listener != null)
+            if (this.tracePanes != null)
             {
-                this.RemoveListenerFromSources();
-                this.listener.Dispose();
-                this.listener = null;
-            }
-
-            if (this.temporaryWriter != null)
-            {
-                this.temporaryWriter.Dispose();
+                this.tracePanes.ForEach(tp => tp.Dispose());
             }
         }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "We dispose the listener, which disposes the internal writer.")]
-        private void OnShellInitialized(object sender, EventArgs args)
+        /// <summary>
+        /// Gets the trace panes.
+        /// </summary>
+        public IEnumerable<ITracePane> TracePanes
         {
-            this.EnsureOutputWindow();
-
-            // Replace temporary listener with the proper one, populating the 
-            // output window from the temporary buffer.
-            var tempLog = this.temporaryWriter.ToString();
-
-            if (!string.IsNullOrEmpty(tempLog))
-            {
-                Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(this.outputWindowPane.OutputStringThreadSafe(this.temporaryWriter.ToString()));
-            }
-
-            this.temporaryWriter = null;
-
-            this.RemoveListenerFromSources();
-
-            this.listener = new ActivityTextListener(new OutputWindowTextWriter(this.outputWindowPane), this.outputPaneTitle);
-            this.listener.IndentLevel = 4;
-            this.listener.Filter = defaultFilter;
-
-            this.AddListenerToSources();
-        }
-
-        private void AddListenerToSources()
-        {
-            foreach (var sourceName in this.traceSourceNames)
-            {
-                Tracer.Manager.AddListener(sourceName, this.listener);
-            }
-        }
-
-        private void RemoveListenerFromSources()
-        {
-            foreach (var sourceName in this.traceSourceNames)
-            {
-                Tracer.Manager.RemoveListener(sourceName, this.listener);
-            }
-        }
-
-        private void EnsureOutputWindow()
-        {
-            if (this.outputWindowPane == null)
-            {
-                var outputWindow = (IVsOutputWindow)this.serviceProvider.GetService(typeof(SVsOutputWindow));
-                tracer.ShieldUI(() =>
-                {
-                    Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(outputWindow.CreatePane(ref this.outputPaneGuid, this.outputPaneTitle, 1, 1));
-                    Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(outputWindow.GetPane(ref this.outputPaneGuid, out this.outputWindowPane));
-                },
-                Resources.TraceOutput_FailedToCreateOutputWindow);
-            }
+            get { return this.tracePanes; }
         }
     }
 }
