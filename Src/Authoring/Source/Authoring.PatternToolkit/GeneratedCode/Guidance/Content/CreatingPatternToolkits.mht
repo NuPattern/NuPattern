@@ -1,9 +1,9 @@
 MIME-Version: 1.0
-Content-Type: multipart/related; boundary="----=_NextPart_01CE3FB8.59509A30"
+Content-Type: multipart/related; boundary="----=_NextPart_01CE50A7.91DA81E0"
 
 This document is a Single File Web Page, also known as a Web Archive file.  If you are seeing this message, your browser or editor doesn't support Web Archive files.  Please download a browser that supports Web Archive, such as Windows® Internet Explorer®.
 
-------=_NextPart_01CE3FB8.59509A30
+------=_NextPart_01CE50A7.91DA81E0
 Content-Location: file:///C:/A4F732F3/CreatingPatternToolkits.htm
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/html; charset="windows-1252"
@@ -36,14 +36,14 @@ w\:* {behavior:url(#default#VML);}
   <o:LastAuthor>Jezz</o:LastAuthor>
   <o:Revision>1</o:Revision>
   <o:TotalTime>0</o:TotalTime>
-  <o:Created>2013-04-22T12:20:00Z</o:Created>
-  <o:LastSaved>2013-04-22T12:20:00Z</o:LastSaved>
+  <o:Created>2013-05-14T01:33:00Z</o:Created>
+  <o:LastSaved>2013-05-14T01:33:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
-  <o:Words>448</o:Words>
-  <o:Characters>2557</o:Characters>
-  <o:Lines>21</o:Lines>
+  <o:Words>375</o:Words>
+  <o:Characters>2139</o:Characters>
+  <o:Lines>17</o:Lines>
   <o:Paragraphs>5</o:Paragraphs>
-  <o:CharactersWithSpaces>3000</o:CharactersWithSpaces>
+  <o:CharactersWithSpaces>2509</o:CharactersWithSpaces>
   <o:Version>14.00</o:Version>
  </o:DocumentProperties>
  <o:OfficeDocumentSettings>
@@ -2378,16 +2378,15 @@ margin-left:0cm;mso-add-space:auto;background:#F2DBDB;mso-background-themec=
 olor:
 accent2;mso-background-themetint:51'><b style=3D'mso-bidi-font-weight:norma=
 l'><span
-lang=3DEN-US>IMPORTANT</span></b><span lang=3DEN-US>: You must install the =
-<a
-href=3D"http://visualstudiogallery.msdn.microsoft.com/24b0eb25-352f-45d8-8b=
-2a-bdc7637d80ad">‘NuPattern
-Toolkit Builder Labs VS2010’</a> or <a
-href=3D"http://visualstudiogallery.msdn.microsoft.com/fc1c204f-9035-4ec0-99=
-98-8e48af023f5b">‘NuPattern
-Toolkit Builder Labs VS2012’</a><span style=3D'mso-spacerun:yes'> 
-</span>extension from the Visual Studio Gallery first before you can create=
- the
+lang=3DEN-US>IMPORTANT</span></b><span lang=3DEN-US>: You must have first i=
+nstalled
+the ‘<b style=3D'mso-bidi-font-weight:normal'>NuPattern Toolkit Builder Lab=
+s’</b>
+extension <a
+href=3D"http://visualstudiogallery.msdn.microsoft.com/332f060b-2352-41c9-b8=
+dc-95d8ad21329b">from
+the installer on the Visual Studio Gallery</a> first before you can create =
+the
 labs.<o:p></o:p></span></p>
 
 </div>
@@ -2488,13 +2487,10 @@ ew Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Hands-On Labs within this Visual Studio solution, <a
 href=3D"launchpoint://9f6dc301-6f66-4d21-9f9c-b37412b162f6/InstantiateHolTo=
 olkit">click
-this link</a> (VS2010) or<span style=3D'mso-spacerun:yes'>  </span><a
-href=3D"launchpoint://9f6dc301-6f66-4d21-9f9c-b37412b162f6/InstantiateHolTo=
-olkit">click
-this link</a> (VS2012) which will add the labs project to your solution in =
-the
-‘Solution Builder’ window.<span style=3D'mso-spacerun:yes'>  </span><o:p></=
-o:p></span></p>
+this link</a> which will add the labs project to your solution in the ‘Solu=
+tion
+Builder’ window.<span style=3D'mso-spacerun:yes'>  </span><o:p></o:p></span=
+></p>
 
 <div style=3D'mso-element:para-border-div;border:solid windowtext 1.0pt;
 padding:6.0pt 4.0pt 6.0pt 4.0pt;mso-border-shadow:yes;background:#FFFFCC;
@@ -2506,15 +2502,10 @@ margin-left:0cm;mso-add-space:auto;background:#FFFFCC'><b style=3D'mso-bidi=
 -font-weight:
 normal'><span lang=3DEN-US>Note: </span></b><span lang=3DEN-US>The link abo=
 ve will
-not work if you haven’t already installed the <a
-href=3D"http://visualstudiogallery.msdn.microsoft.com/24b0eb25-352f-45d8-8b=
-2a-bdc7637d80ad">‘Pattern
-Toolkit Builder Labs VS2010’</a> or <a
-href=3D"http://visualstudiogallery.msdn.microsoft.com/fc1c204f-9035-4ec0-99=
-98-8e48af023f5b">‘Pattern
-Toolkit Builder Labs VS2012’</a> extension first.<b style=3D'mso-bidi-font-=
-weight:
-normal'><o:p></o:p></b></span></p>
+not work if you haven’t already installed the ‘<b style=3D'mso-bidi-font-we=
+ight:
+normal'>NuPattern Toolkit Builder Labs’</b> extension first.<b
+style=3D'mso-bidi-font-weight:normal'><o:p></o:p></b></span></p>
 
 </div>
 
@@ -2613,7 +2604,7 @@ Workflow Explorer’</a> window.<o:p></o:p></span></p>
 
 </html>
 
-------=_NextPart_01CE3FB8.59509A30
+------=_NextPart_01CE50A7.91DA81E0
 Content-Location: file:///C:/A4F732F3/CreatingPatternToolkits_files/themedata.thmx
 Content-Transfer-Encoding: base64
 Content-Type: application/vnd.ms-officetheme
@@ -2674,7 +2665,7 @@ AAAAAAAAANYCAAB0aGVtZS90aGVtZS90aGVtZTEueG1sUEsBAi0AFAAGAAgAAAAhAA3RkJ+2AAAA
 GwEAACcAAAAAAAAAAAAAAAAAsgkAAHRoZW1lL3RoZW1lL19yZWxzL3RoZW1lTWFuYWdlci54bWwu
 cmVsc1BLBQYAAAAABQAFAF0BAACtCgAAAAA=
 
-------=_NextPart_01CE3FB8.59509A30
+------=_NextPart_01CE50A7.91DA81E0
 Content-Location: file:///C:/A4F732F3/CreatingPatternToolkits_files/colorschememapping.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml
@@ -2684,7 +2675,7 @@ Content-Type: text/xml
  bg1=3D"lt1" tx1=3D"dk1" bg2=3D"lt2" tx2=3D"dk2" accent1=3D"accent1" accent=
 2=3D"accent2" accent3=3D"accent3" accent4=3D"accent4" accent5=3D"accent5" a=
 ccent6=3D"accent6" hlink=3D"hlink" folHlink=3D"folHlink"/>
-------=_NextPart_01CE3FB8.59509A30
+------=_NextPart_01CE50A7.91DA81E0
 Content-Location: file:///C:/A4F732F3/CreatingPatternToolkits_files/image001.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -2880,7 +2871,7 @@ qtXDvYtqMWcDh6qRqWrh379//+nTp1NSUtLT0/Pyci9duvTnn/+Tr3lq7wUDtUAyutqHgJppW62+
 z1P7ugTzWBUCJSUlsMhp3rzFCy80btiw0eOPOz1a53H48MG16zeM+P8f5KJz7boC7z8AAAAASUVO
 RK5CYIJ=
 
-------=_NextPart_01CE3FB8.59509A30
+------=_NextPart_01CE50A7.91DA81E0
 Content-Location: file:///C:/A4F732F3/CreatingPatternToolkits_files/image002.jpg
 Content-Transfer-Encoding: base64
 Content-Type: image/jpeg
@@ -3002,7 +2993,7 @@ YuMg/wDTTn/63FVodF1c2ybp7pXjjJQPdf8ALTepydvUYB6+tdbRRcVjk49F1S2NtDaq0UUd28ru
 twTuBkDcgnoVJGPWpbjSNRGkadbW6ATQpKGdZduwlGCkH6sK6eii4zk7+e8tbS2jtWb5pZVkO1GJ
 wfViP0rB8YAjSrbdncZAT0HO0+nFdmkMctvIZI0crLJjcoOPmNch41A+wxDHAlHH4GnD4hPY/9n=
 
-------=_NextPart_01CE3FB8.59509A30
+------=_NextPart_01CE50A7.91DA81E0
 Content-Location: file:///C:/A4F732F3/CreatingPatternToolkits_files/image003.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -4583,7 +4574,7 @@ u1VXpRQIAhCAAAQgAAEIQAACEIAABDB2aQMQgAAEIAABCEAAAhCAAAQgUHUEMHarrkopEAQgAAEI
 QAACEIAABCAAAQh0F4Ld/7oKEhCAAAQgAAEIQAACEIAABCAAgaohEP70UNWUhoJAAAIQgAAEIAAB
 CEAAAhCAAAQCAv8fDSxOvSAVGIwAAAAASUVORK5CYIJ=
 
-------=_NextPart_01CE3FB8.59509A30
+------=_NextPart_01CE50A7.91DA81E0
 Content-Location: file:///C:/A4F732F3/CreatingPatternToolkits_files/image004.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -5839,7 +5830,7 @@ JxtWa0cyGsZNLsotxkkxANiBSVMnY8z4sS679FVOAaWfd21Sb2m5a7lfi5Rvet7pedfz550Lcr3E
 eF8bKmmgrGHizdzRyKoLPkdfoCWgJaAloCWgJaAl0CwBAq8lVOKjzd4wvblsOZZVPoYmocPSRUtA
 S0BLQEtAS0BL4MpIgKBbuXEN/j/6GmuP2mvtIgAAAABJRU5ErkJggk==
 
-------=_NextPart_01CE3FB8.59509A30
+------=_NextPart_01CE50A7.91DA81E0
 Content-Location: file:///C:/A4F732F3/CreatingPatternToolkits_files/filelist.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml; charset="utf-8"
@@ -5854,4 +5845,4 @@ Content-Type: text/xml; charset="utf-8"
  <o:File HRef=3D"image004.png"/>
  <o:File HRef=3D"filelist.xml"/>
 </xml>
-------=_NextPart_01CE3FB8.59509A30--
+------=_NextPart_01CE50A7.91DA81E0--
