@@ -20,6 +20,38 @@ XCOPY /s /f /r ..\Binaries\\*.vsix Processed\Unsigned\VSIXes
 IF %errorlevel% neq 0 GOTO :error
 
 
+REM Re-compress all VSIXes
+CD Processed\Unsigned\VSIXes
+
+CD 10.0
+
+for /f "delims=" %%a in ('dir /s/b *.vsix') do (
+"%ProgramFiles%\7-Zip\7z.exe" x -tzip "%%a" -o%%~na
+IF %errorlevel% neq 0 GOTO :error
+DEL %%a
+"%ProgramFiles%\7-Zip\7z.exe" a -tzip %%~na.vsix ".\%%~na\*" -mx9
+IF %errorlevel% neq 0 GOTO :error
+RMDIR /s /q %%~na
+IF %errorlevel% neq 0 GOTO :error
+)
+CD..
+
+CD 11.0
+
+for /f "delims=" %%a in ('dir /s/b *.vsix') do (
+"%ProgramFiles%\7-Zip\7z.exe" x -tzip "%%a" -o%%~na
+IF %errorlevel% neq 0 GOTO :error
+DEL %%a
+"%ProgramFiles%\7-Zip\7z.exe" a -tzip %%~na.vsix ".\%%~na\*" -mx9
+IF %errorlevel% neq 0 GOTO :error
+RMDIR /s /q %%~na
+IF %errorlevel% neq 0 GOTO :error
+)
+CD..
+
+REM CD ..\..\..\
+
+
 ECHO VSIXes Harvested Successfully!
 COLOR 0A
 PAUSE
