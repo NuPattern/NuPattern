@@ -1,3 +1,7 @@
-Send all parent VSIXes from Processed\Unsigned\* to be signed.
+Send only parent VSIXes from Processed\Unsigned\VSIXes\* to be signed.
+PatternToolkitBuilder.vsix
 
-Place signed VSIXes in the Processed\Signed\* directories (using same structure)
+They will be authenticode signed.
+
+
+The signed VSIXes should be placed in the Processed\Signed\VSIXes* directories (using same structure as they were sent to be signed)

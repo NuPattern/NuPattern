@@ -1,0 +1,7 @@
+Send only MSI from Processed\Unsigned\* to be signed.
+NuPatternToolkitBuilderAndLabs.msi
+
+It will be authenticode signed.
+
+
+The signed MSI should be placed in the Processed\Signed* directory

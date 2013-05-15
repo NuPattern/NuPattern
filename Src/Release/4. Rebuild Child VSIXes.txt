@@ -1,6 +1,0 @@
-Copy assemblies from Processed\Signed\* back into the VSIX archives in Processed/Unsigned
-
-Enumerate through each assembly file in each VSIX archive, and copy the assembly file from Processed\Signed back into the archive
-
-
-Recompress the VSIX files with max compression

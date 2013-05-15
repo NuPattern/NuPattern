@@ -5,7 +5,7 @@ CD /d %~dp0
 
 
 REM Copy Built VSIXes
-XCOPY /s /f /r /y Processed\Signed\\*.vsix ..\Binaries
+XCOPY /s /f /r /y "Processed\Signed\VSIXes\*.vsix" "..\Binaries"
 IF %errorlevel% neq 0 GOTO :error
 
 
