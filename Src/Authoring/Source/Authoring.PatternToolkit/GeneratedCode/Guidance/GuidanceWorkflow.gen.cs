@@ -22,7 +22,7 @@ namespace NuPattern.Authoring.PatternToolkit.Guidance
 	/// </summary>
 	[CLSCompliant(false)]
 	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Builder", "1.3.20.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Builder", "1.3.21.0")]
 	public partial class ProcessWorkflow : GuidanceWorkflow
 	{
 		/// <summary>
@@ -1822,7 +1822,7 @@ namespace NuPattern.Authoring.PatternToolkit.Guidance
 	[PartCreationPolicy(CreationPolicy.NonShared)]
 	[CLSCompliant(false)]
 	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Builder", "1.3.20.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Builder", "1.3.21.0")]
 	public partial class GuidanceExtension : BlackboardGuidanceExtension<ProcessWorkflow>
 	{
 		/// <summary>

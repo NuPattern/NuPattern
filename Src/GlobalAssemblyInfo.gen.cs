@@ -9,8 +9,8 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTrademark("NuPattern")]
 [assembly: AssemblyCulture("")]
 
-[assembly: AssemblyVersion("1.3.20.0")]
-[assembly: AssemblyFileVersion("1.3.20.0")]
+[assembly: AssemblyVersion("1.3.21.0")]
+[assembly: AssemblyFileVersion("1.3.21.0")]
 
 [assembly: ReliabilityContract(Consistency.MayCorruptProcess, Cer.None)]
 [assembly: ComVisible(false)]

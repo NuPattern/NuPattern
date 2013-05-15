@@ -84,9 +84,6 @@
     <None Include="..\..\..\Versioning Instructions.docx">
       <Link>Docs\Versioning Instructions.docx</Link>
     </None>
-    <None Include="..\..\..\VSGalleryInfo.docx">
-      <Link>Docs\VSGalleryInfo.docx</Link>
-    </None>
     <None Include="..\..\..\BuildConfiguration.CSharp.VsixProjects.tt">
       <Link>BuildConfiguration.CSharp.VsixProjects.tt</Link>
       <Generator>TextTemplatingFileGenerator</Generator>

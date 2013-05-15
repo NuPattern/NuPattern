@@ -24,7 +24,7 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 	/// </summary>
 	[Description("A custom automation command that executes some automation.")]
 	[ToolkitInterface(ExtensionId = "97bd7ab2-964b-43f1-8a08-be6db68b018b", DefinitionId = "5a6b3a47-aabf-4f51-bd30-0737f6d4bbbe", ProxyType = typeof(Command))]
-	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.20.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.21.0")]
 	public partial interface ICommand : IToolkitInterface
 	{
 
@@ -99,7 +99,7 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 	/// </summary>
 	[Description("A custom condition that is evaluated to determine if automation executes.")]
 	[ToolkitInterface(ExtensionId = "97bd7ab2-964b-43f1-8a08-be6db68b018b", DefinitionId = "2d022abe-eaf9-4366-843a-a9d262ef4b00", ProxyType = typeof(Condition))]
-	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.20.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.21.0")]
 	public partial interface ICondition : IToolkitInterface
 	{
 
@@ -174,7 +174,7 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 	/// </summary>
 	[Description("A custom event that can trigger some automation.")]
 	[ToolkitInterface(ExtensionId = "97bd7ab2-964b-43f1-8a08-be6db68b018b", DefinitionId = "d937c559-01f8-43ad-bac8-f580013fdd8a", ProxyType = typeof(Event))]
-	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.20.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.21.0")]
 	public partial interface IEvent : IToolkitInterface
 	{
 
@@ -249,7 +249,7 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 	/// </summary>
 	[Description("A custom type converter that can be used to define a dropdown of values for a variable property.")]
 	[ToolkitInterface(ExtensionId = "97bd7ab2-964b-43f1-8a08-be6db68b018b", DefinitionId = "8d45d1e8-2551-4539-8449-ff3e0962d5f5", ProxyType = typeof(EnumTypeConverter))]
-	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.20.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.21.0")]
 	public partial interface IEnumTypeConverter : IToolkitInterface
 	{
 
@@ -324,7 +324,7 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 	/// </summary>
 	[Description("Description for PatternToolkitLibrary.Development.TypeConverters.DataTypeConverter")]
 	[ToolkitInterface(ExtensionId = "97bd7ab2-964b-43f1-8a08-be6db68b018b", DefinitionId = "4caa371c-0404-4dcd-ba61-457962baaa53", ProxyType = typeof(DataTypeConverter))]
-	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.20.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.21.0")]
 	public partial interface IDataTypeConverter : IToolkitInterface
 	{
 
@@ -399,7 +399,7 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 	/// </summary>
 	[Description("A custom type picker editor that displays a filtered list of types found in the current solution.")]
 	[ToolkitInterface(ExtensionId = "97bd7ab2-964b-43f1-8a08-be6db68b018b", DefinitionId = "4a6d1cc8-3845-4b08-b2b1-e27a1a6e9c9f", ProxyType = typeof(TypePickerEditor))]
-	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.20.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.21.0")]
 	public partial interface ITypePickerEditor : IToolkitInterface
 	{
 
@@ -474,7 +474,7 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 	/// </summary>
 	[Description("A custom editor that provides a custom GUI to configure the value of a variable property.")]
 	[ToolkitInterface(ExtensionId = "97bd7ab2-964b-43f1-8a08-be6db68b018b", DefinitionId = "27b16755-4f3e-43a6-80ee-38cad4dec8ab", ProxyType = typeof(UIEditor))]
-	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.20.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.21.0")]
 	public partial interface IUIEditor : IToolkitInterface
 	{
 
@@ -549,7 +549,7 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 	/// </summary>
 	[Description("A custom element validation rule for verifying an element.")]
 	[ToolkitInterface(ExtensionId = "97bd7ab2-964b-43f1-8a08-be6db68b018b", DefinitionId = "ab7af436-f1f6-4d3e-b78d-f90a5f81d636", ProxyType = typeof(ElementValidationRule))]
-	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.20.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.21.0")]
 	public partial interface IElementValidationRule : IToolkitInterface
 	{
 
@@ -624,7 +624,7 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 	/// </summary>
 	[Description("A custom property validation rule for verifying a property.")]
 	[ToolkitInterface(ExtensionId = "97bd7ab2-964b-43f1-8a08-be6db68b018b", DefinitionId = "ffa532c8-f334-4bda-b9de-cb208f6d2a81", ProxyType = typeof(PropertyValidationRule))]
-	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.20.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.21.0")]
 	public partial interface IPropertyValidationRule : IToolkitInterface
 	{
 
@@ -699,7 +699,7 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 	/// </summary>
 	[Description("A custom value provider that returns the calculated value for a variable property.")]
 	[ToolkitInterface(ExtensionId = "97bd7ab2-964b-43f1-8a08-be6db68b018b", DefinitionId = "835cd8dc-4fb1-4d60-94a9-c73342788a16", ProxyType = typeof(ValueProvider))]
-	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.20.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.21.0")]
 	public partial interface IValueProvider : IToolkitInterface
 	{
 
@@ -774,7 +774,7 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 	/// </summary>
 	[Description("A custom comparer used for ordering elements.")]
 	[ToolkitInterface(ExtensionId = "97bd7ab2-964b-43f1-8a08-be6db68b018b", DefinitionId = "001bcf68-8971-4b8a-8a5a-68fc41fec446", ProxyType = typeof(ElementOrderingComparer))]
-	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.20.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.21.0")]
 	public partial interface IElementOrderingComparer : IToolkitInterface
 	{
 
