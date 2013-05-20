@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+    <ItemGroup>
+        <ProjectToBuild Include="Src\Runtime\Runtime.vs2012.sln">
+            <Properties>Configuration=Release-VS2012</Properties>
+        </ProjectToBuild>
+        <ProjectToBuild Include="Src\Authoring\Authoring.vs2012.sln">
+            <Properties>Configuration=Release-VS2012</Properties>
+        </ProjectToBuild>
+        <ProjectToBuild Include="Src\Runtime\Runtime.vs2010.sln">
+            <Properties>Configuration=Release-VS2010</Properties>
+        </ProjectToBuild>
+        <ProjectToBuild Include="Src\Authoring\Authoring.vs2010.sln">
+            <Properties>Configuration=Release-VS2010</Properties>
+        </ProjectToBuild>
+    </ItemGroup>
+    <Target Name="Build">
+        <MSBuild Projects="@(ProjectToBuild)"
+                 ContinueOnError="false"
+                 BuildInParallel="false"
+                 StopOnFirstFailure="true"
+                 Targets="Rebuild" />
+    </Target>
+</Project>
