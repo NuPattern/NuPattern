@@ -27,6 +27,7 @@
         <ProjectItem ReplaceParameters="false" TargetFileName="ToolkitIcon.png">VsixIconPatternToolkitProjectTemplate.png</ProjectItem>
         <ProjectItem ReplaceParameters="false" TargetFileName="PatternIcon.png">PatternNodeDefault.png</ProjectItem>
       </Folder>
+      <ProjectItem ReplaceParameters="true">BindingPath.pkgdef</ProjectItem>
     </Project>
   </TemplateContent>
   <WizardExtension>

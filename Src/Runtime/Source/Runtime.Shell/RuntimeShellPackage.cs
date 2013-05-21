@@ -140,12 +140,6 @@ namespace NuPattern.Runtime.Shell
         {
             base.Initialize();
 
-#if VSVER11
-            //Register global assembly resolver
-            AppDomain.CurrentDomain.AssemblyResolve += this.assemblyResolve;
-            isResolveAssemblyRunningOnThisThread = true;
-#endif
-
             //Import all services
             var componentModel = this.GetService<SComponentModel, IComponentModel>();
             try

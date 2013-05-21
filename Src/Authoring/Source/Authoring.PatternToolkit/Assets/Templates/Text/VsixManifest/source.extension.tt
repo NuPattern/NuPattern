@@ -54,5 +54,6 @@
         <CustomExtension Type="NuPattern.Toolkit.PatternModel" AssemblyFile="\\\<#=assemblyName\\\#>.dll">\\\<#=rootNamespace\\\#>.PatternModel.patterndefinition</CustomExtension>
         <ItemTemplate>Assets\Templates\Items</ItemTemplate>
         <ProjectTemplate>Assets\Templates\Projects</ProjectTemplate>
+        <VsPackage>BindingPath.pkgdef</VsPackage>
     </Content>
 </Vsix>

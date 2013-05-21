@@ -109,6 +109,9 @@
         <Content Include="Resources\ToolkitIcon.png">
             <IncludeInVSIX>True</IncludeInVSIX>
         </Content>
+        <Content Include="BindingPath.pkgdef">
+            <IncludeInVSIX>true</IncludeInVSIX>
+        </Content>
         <Resource Include="Resources\PatternIcon.png"/>
         <Content Include="NuPatternToolkitManager.vsix">
             <Visible>false</Visible>
@@ -120,8 +123,8 @@
     <ItemGroup>
         <ProjectReference Include="..\$projectname$.Automation\$projectname$.Automation.csproj">
             <Name>$projectname$.Automation</Name>
-      <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup</IncludeOutputGroupsInVSIX>
-      <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup</IncludeOutputGroupsInVSIXLocalOnly>
+            <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup</IncludeOutputGroupsInVSIX>
+            <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup</IncludeOutputGroupsInVSIXLocalOnly>
         </ProjectReference>
     </ItemGroup>
     <ItemGroup>
