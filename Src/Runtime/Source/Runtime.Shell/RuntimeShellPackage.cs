@@ -8,7 +8,6 @@ using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using System.Reflection;
 using System.Runtime.InteropServices;
 using Microsoft.ComponentModel.Composition.Diagnostics;
 using Microsoft.VisualStudio.ComponentModelHost;
@@ -18,9 +17,7 @@ using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VisualStudio.TextTemplating.VSHost;
 using NuPattern.ComponentModel.Composition;
 using NuPattern.Diagnostics;
-using NuPattern.IO;
 using NuPattern.Library;
-using NuPattern.Reflection;
 using NuPattern.Runtime.Bindings;
 using NuPattern.Runtime.Composition;
 using NuPattern.Runtime.Diagnostics;
@@ -128,11 +125,6 @@ namespace NuPattern.Runtime.Shell
         private ITraceOutputWindowManager TraceOutputWindowManager { get; set; }
 #pragma warning restore 0649
 
-#if VSVER11
-        private ResolveEventHandler assemblyResolve = OnAssemblyResolve;
-        [ThreadStatic]
-        private static bool isResolveAssemblyRunningOnThisThread = false;
-#endif
         /// <summary>
         /// Called when the VSPackage is loaded by Visual Studio.
         /// </summary>
@@ -236,13 +228,6 @@ namespace NuPattern.Runtime.Shell
                     this.SolutionEvents.SolutionOpened -= OnSolutionOpened;
                     this.SolutionEvents.SolutionClosed -= OnSolutionClosed;
                 }
-#if VSVER11
-                isResolveAssemblyRunningOnThisThread = false;
-                if (this.assemblyResolve != null)
-                {
-                    AppDomain.CurrentDomain.AssemblyResolve -= this.assemblyResolve;
-                }
-#endif
             }
         }
 
@@ -472,124 +457,5 @@ namespace NuPattern.Runtime.Shell
             this.idleTaskHost = new VsIdleTaskHost(this, conditionsEvaluator.EvaluateGraphs, TimeSpan.FromSeconds(GuidanceEvalTimeGovernor));
             this.idleTaskHost.Start(TimeSpan.FromMilliseconds(IdleTimeout));
         }
-
-#if VSVER11
-        /// <summary>
-        /// Finds toolkit assemblies (in the current AppDomain) that are loaded with a partial name.
-        /// A partial name omits either the Version, Culture or PublicKeyToken.
-        /// Runtime loads many types dynamically using methods such as Type.GetType(string) with partial names, which aids versioning migrations.
-        /// VS2012 for some reason does not resolve assemblies with partial names unless the assemblies are signed.
-        /// </summary>
-        private static Assembly OnAssemblyResolve(object sender, ResolveEventArgs args)
-        {
-            //TODO: Why do we get called twice to resolve any assembly, despite the fact that we resolved it the first time?
-
-            Assembly assembly = null;
-
-            try
-            {
-                // Only process events from the thread that started it, not any other thread
-                if (isResolveAssemblyRunningOnThisThread)
-                {
-                    // Determine if lost assembly has a partial name 
-                    // (only these are the ones that cause VS2012 difficulty in resolving)
-                    var name = new AssemblyName(args.Name);
-                    if (name.Version == null || name.CultureInfo == null)
-                    {
-                        tracer.Info(
-                            Resources.RuntimeShellPackage_OnAssemblyResolved_ResolvingAssembly, args.Name);
-
-                        var componentModel = ServiceProvider.GlobalProvider.GetService<SComponentModel, IComponentModel>();
-                        var patternManager = componentModel.GetService<IPatternManager>();
-                        if (patternManager != null)
-                        {
-                            // Match assemblies with lost name from loaded AppDomain assemblies
-                            var loadedAssemblies = from appDomainAssembly
-                                                         in ((AppDomain)sender).GetAssemblies()
-                                                   let assemblyName = appDomainAssembly.GetName()
-                                                   where assemblyName.Name.Equals(args.Name, StringComparison.OrdinalIgnoreCase)
-                                                   select appDomainAssembly;
-                            if (loadedAssemblies.Any())
-                            {
-                                tracer.Info(
-                                    Resources.RuntimeShellPackage_OnAssemblyResolved_ResolvingAssemblyForLoadedAssembly, args.Name);
-
-                                // Get install paths of all (enabled) toolkits
-                                var installedExtensionDirs = from installedToolkit
-                                                                 in patternManager.InstalledToolkits
-                                                             where installedToolkit.Extension.State == EnabledState.Enabled
-                                                             select new DirectoryInfo(installedToolkit.Extension.InstallPath);
-                                if (installedExtensionDirs.Any())
-                                {
-                                    // Match only (physical) assemblies installed by toolkits (by highest version)
-                                    var comparer = new DirectoryInfoComparer();
-                                    var toolkitAssemblies = from toolkitAssembly
-                                                                in loadedAssemblies
-                                                            let location = toolkitAssembly.Location
-                                                            where !toolkitAssembly.IsDynamic
-                                                                && !String.IsNullOrEmpty(location)
-                                                                && File.Exists(location)
-                                                            let assemblyName = toolkitAssembly.GetName()
-                                                            let assemblyVersion = assemblyName.Version
-                                                            where installedExtensionDirs.Contains(Directory.GetParent(location), comparer)
-                                                            orderby (assemblyVersion != null) ? assemblyVersion.ToString(4) : new Version().ToString(4) descending
-                                                            select toolkitAssembly;
-                                    if (toolkitAssemblies.Any())
-                                    {
-                                        tracer.Info(
-                                            Resources.RuntimeShellPackage_OnAssemblyResolved_ResolvingAssemblyForToolkitAssembly, args.Name);
-
-                                        if (name.KeyPair != null)
-                                        {
-                                            var publicKeyToken = name.GetPublicKeyTokenString();
-
-                                            // Match latest version by PublicKeyToken
-                                            var signedAssemblies = from signedAssembly
-                                                           in toolkitAssemblies
-                                                                   let assemblyName = signedAssembly.GetName()
-                                                                   let assemblyVersion = assemblyName.Version
-                                                                   where assemblyName.KeyPair != null
-                                                                   where assemblyName.GetPublicKeyTokenString().Equals(publicKeyToken, StringComparison.OrdinalIgnoreCase)
-                                                                   orderby (assemblyVersion != null) ? assemblyVersion.ToString(4) : new Version().ToString(4) descending
-                                                                   select signedAssembly;
-                                            if (signedAssemblies.Any())
-                                            {
-                                                assembly = signedAssemblies.FirstOrDefault();
-                                            }
-                                        }
-                                        else
-                                        {
-                                            // Match latest version
-                                            assembly = toolkitAssemblies.FirstOrDefault();
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-                        if (assembly == null)
-                        {
-                            tracer.Info(
-                            Resources.RuntimeShellPackage_OnAssemblyResolved_ResolvingAssemblyFailed, args.Name);
-                        }
-                        else
-                        {
-                            tracer.Info(
-                            Resources.RuntimeShellPackage_OnAssemblyResolved_ResolvingAssemblySucceeded, args.Name, assembly.GetName().FullName);
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                tracer.Info(
-                    Resources.RuntimeShellPackage_OnAssemblyResolved_UnexpectedError, ex.Message);
-
-                throw;
-            }
-
-            return assembly;
-        }
-#endif
     }
 }
