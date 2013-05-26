@@ -88,6 +88,7 @@
       <Link>BuildConfiguration.CSharp.VsixProjects.tt</Link>
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>BuildConfiguration.CSharp.VsixProjects.gen.props</LastGenOutput>
+      <SubType>Designer</SubType>
     </None>
     <None Include="Authoring.PatternToolkitVersion.gen.targets">
       <DependentUpon>Authoring.PatternToolkitVersion.tt</DependentUpon>
