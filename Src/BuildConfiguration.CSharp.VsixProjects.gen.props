@@ -23,7 +23,13 @@
     <PatternToolkitVsixFileName>NuPatternToolkitBuilder.vsix</PatternToolkitVsixFileName>
     <PatternToolkitLibraryVsixFileName>NuPatternToolkitLibrary.vsix</PatternToolkitLibraryVsixFileName>
     <HandsOnLabsVsixFileName>NuPatternToolkitBuilderLabs.vsix</HandsOnLabsVsixFileName>
-  
-</PropertyGroup>
-  
+  </PropertyGroup>
+
+  <!-- VSSDK properties -->
+  <PropertyGroup>
+    <VsSDKInstall>$(VsxTargetsPath)</VsSDKInstall>
+    <VsSDKIncludes>$(VsSDKInstall)\inc</VsSDKIncludes>
+    <VsSDKToolsPath>$(VsSDKInstall)\bin</VsSDKToolsPath>
+    <VsixSchemaPath>$(VsSDKInstall)\schemas\VSIXManifestSchema.xsd</VsixSchemaPath>
+  </PropertyGroup>
 </Project>

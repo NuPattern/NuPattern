@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <!-- Configure Variables for VSSDK Tasks -->
+  <UsingTask TaskName="SetVsSDKEnvironmentVariables" TaskFactory="CodeTaskFactory" AssemblyName="Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <ParameterGroup>
+      <ProjectDirectory Required="true" />
+    </ParameterGroup>
+    <Task>
+      <Code Type="Fragment" Language="cs">
+        System.Environment.SetEnvironmentVariable("VsSDKToolsPath", System.IO.Path.GetFullPath(ProjectDirectory + @"\bin"));
+      </Code>
+    </Task>
+  </UsingTask>
+  
+  <Target Name="SetVsSDKEnvironmentVariables" BeforeTargets="FindSDKInstallation">
+    <SetVsSDKEnvironmentVariables ProjectDirectory="$(ProjectDir)$(VsxTargetsPath)" />
+  </Target>
+
+  <!-- Include VSSDK targets -->
+  <Import Project="$(ProjectDir)$(VsxTargetsPath)\Microsoft.VsSDK.targets" />
+</Project>

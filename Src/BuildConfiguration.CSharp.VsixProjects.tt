@@ -25,7 +25,13 @@
     <PatternToolkitVsixFileName><#=VsixInfo.PatternToolkitBuilder.VsixFileName #></PatternToolkitVsixFileName>
     <PatternToolkitLibraryVsixFileName><#=VsixInfo.PatternToolkitLibrary.VsixFileName #></PatternToolkitLibraryVsixFileName>
     <HandsOnLabsVsixFileName><#=VsixInfo.PatternToolkitHol.VsixFileName #></HandsOnLabsVsixFileName>
-  
-</PropertyGroup>
-  
+  </PropertyGroup>
+
+  <!-- VSSDK properties -->
+  <PropertyGroup>
+    <VsSDKInstall>$(VsxTargetsPath)</VsSDKInstall>
+    <VsSDKIncludes>$(VsSDKInstall)\inc</VsSDKIncludes>
+    <VsSDKToolsPath>$(VsSDKInstall)\bin</VsSDKToolsPath>
+    <VsixSchemaPath>$(VsSDKInstall)\schemas\VSIXManifestSchema.xsd</VsixSchemaPath>
+  </PropertyGroup>
 </Project>

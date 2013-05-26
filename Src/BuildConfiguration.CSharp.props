@@ -15,6 +15,14 @@
     <MinimumVisualStudioVersion>$(VisualStudioVersion)</MinimumVisualStudioVersion>
     <BranchReferencesPath>$(BranchRoot)..\Lib</BranchReferencesPath>
   </PropertyGroup>
+
+  <!-- Common Assembly Properties -->
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>$(BranchRoot)Outercurve.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>true</DelaySign>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
       
   <!-- Targets for References -->
   <PropertyGroup>

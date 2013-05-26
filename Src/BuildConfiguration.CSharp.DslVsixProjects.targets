@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
+  <PropertyGroup>
+    <!-- Prevent loading of TextTemplating.targets in BuildConfiguration.CSharp.targets, which will done by DSLTools.targets below -->
+    <ImportT4Targets>false</ImportT4Targets>
+  </PropertyGroup>
+
   <!-- Include base build configuration settings (before overrides below) -->
   <Import Project="BuildConfiguration.CSharp.targets" />
 
   <!-- Include VSIX targets -->
   <Import Project="BuildConfiguration.CSharp.VsixProjects.targets.include" />
+
+  <!-- Include DSL targets -->
+  <Import Project="BuildConfiguration.CSharp.DslProjects.targets.include" />
 </Project>

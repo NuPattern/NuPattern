@@ -9,48 +9,6 @@
   <!-- Include base build configuration settings (before overrides below) -->
   <Import Project="BuildConfiguration.CSharp.targets" />
 
-  <PropertyGroup>
-    <!-- Use only DSLTools T4 files for current version of VS. Removes dependency on VMSDK being installed -->
-    <DslIncludeSourceDir>$(BranchRoot)..\Lib\VMSDK\$(TargetVsVersion)\TextTemplates</DslIncludeSourceDir>
-    <!-- Sub folder of project to copy DSLTools T4 include files. Override this in the individual project file if needed -->
-    <DslIncludeTargetDir Condition="'$(DslIncludeTargetDir)' == ''">DslIncludeTemp</DslIncludeTargetDir>
-    <!-- Set T4 processor to include only DSLTools T4 files for current version of VS -->
-    <IncludeFolders>$(ProjectDir)$(DslIncludeSourceDir)\</IncludeFolders>
-    <BeforeTransform>OnBeforeTransform</BeforeTransform>
-  </PropertyGroup>
-  <ItemGroup>
-    <!-- Required for DSLTools T4 templates -->
-    <T4ParameterValues Include="ProjectDefaultNamespace">
-      <Value>$(RootNamespace)</Value>
-    </T4ParameterValues>
-    <!-- Override for DSLTools T4 templates -->
-    <T4ParameterValues Include="GeneratedResourceFile">
-      <Value>DomainModelResx.gen</Value>
-    </T4ParameterValues>
-  </ItemGroup>
-  
-  <!-- Include (modified) DSL Tools targets, which includes TextTemplating.targets -->
-  <Import Project="$(ProjectDir)$(DslTargetsPath)\Microsoft.DSLTools.targets" />
-
-  <!-- Copy DSLTools T4 include files to sub-folder of Project Folder, only if not already existing -->
-  <ItemGroup>
-    <DslIncludeFiles Include="$(DslIncludeSourceDir)\**\*.tt"/>
-  </ItemGroup>
-  <!-- Ensures that the DSLTools T4 include files are copied to the project before transforming -->
-  <Target Name="OnBeforeTransform" Condition="!exists('$(ProjectDir)\$(DslIncludeTargetDir)')">
-    <Message Importance="High" Text="Copying DSLTools T4 includes from '$(DslIncludeSourceDir)' to project directory -&gt; '$(DslIncludeTargetDir)'"/>
-    <Copy
-      SourceFiles="@(DslIncludeFiles)"
-      DestinationFolder="$(ProjectDir)\$(DslIncludeTargetDir)\%(RecursiveDir)"
-      OverwriteReadOnlyFiles="true"/>
-  </Target>
-
-  <!-- Force a removal of T4 include files from Project Folder on Rebuild -->
-  <PropertyGroup>
-    <RebuildDependsOn>CleanDslIncludeFiles;$(RebuildDependsOn)</RebuildDependsOn>
-  </PropertyGroup>
-  <Target Name="CleanDslIncludeFiles">
-    <Message Importance="High" Text="Removing copied DSLTools T4 includes from project directory -&gt; '$(DslIncludeTargetDir)'"/>
-    <RemoveDir ContinueOnError="true" Directories="$(ProjectDir)\$(DslIncludeTargetDir)"/>
-  </Target>
+  <!-- Include DSL targets -->
+  <Import Project="BuildConfiguration.CSharp.DslProjects.targets.include" />
 </Project>

@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
-  <!-- Common Assembly Properties -->
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>$(BranchRoot)Outercurve.snk</AssemblyOriginatorKeyFile>
-    <SignAssembly>true</SignAssembly>
-    <DelaySign>true</DelaySign>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <CommonTargetsImported>true</CommonTargetsImported>
   </PropertyGroup>
 
   <!-- CA settings for build configurations -->
@@ -28,7 +24,7 @@
     <StyleCopOverrideSettingsFile>$(BranchRoot)SourceAnalysis.stylecop</StyleCopOverrideSettingsFile>
     <StyleCopTreatErrorsAsWarnings>false</StyleCopTreatErrorsAsWarnings>
   </PropertyGroup>
-
+  
   <!-- Verifies that the correct solution configuration is selected -->
   <Target Name="VerifyTargetBuildConfiguration" BeforeTargets="BeforeBuild">
     <Message
@@ -51,7 +47,8 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- Paths for DirectiveProcessor dependency assemblies -->
-    <T4ReferencePath Include="$(ProjectDir)$(BranchRoot)..\Lib\VMSDK\$(TargetVsVersion)\" />
+    <T4ReferencePath Condition="'$(TargetVsVersion)' == '10.0'" Include="$(ProjectDir)$(BranchRoot)..\Lib\VMSDK\10.0\TextTemplating\v10.0\" />
+    <T4ReferencePath Condition="'$(TargetVsVersion)' == '11.0'" Include="$(ProjectDir)$(BranchRoot)..\Lib\VMSDK\11.0\MSBuild\TextTemplating\" />
     <T4ReferencePath Include="$(ProjectDir)$(BranchRoot)..\Lib\VisualStudio\" />
     <T4ReferencePath Include="$(ProjectDir)$(BranchRoot)..\Lib\VisualStudio\$(TargetVsVersion)\" />
     <!-- Parameters for MSBUILD transforms -->
