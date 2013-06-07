@@ -184,15 +184,20 @@ namespace NuPattern.Runtime.UI.Views
         private static T FindAncestor<T>(DependencyObject current)
             where T : DependencyObject
         {
-            do
+            try
             {
-                if (current is T)
+                do
                 {
-                    return (T)current;
+                    if (current is T)
+                    {
+                        return (T)current;
+                    }
+                    current = VisualTreeHelper.GetParent(current);
                 }
-                current = VisualTreeHelper.GetParent(current);
+                while (current != null);
             }
-            while (current != null);
+            catch (InvalidOperationException) { }
+
             return null;
         }
     }
