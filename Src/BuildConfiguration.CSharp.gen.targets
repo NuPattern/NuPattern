@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <CommonTargetsImported>true</CommonTargetsImported>
+  </PropertyGroup>
+
+  <!-- CA settings for build configurations -->
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug-VS2010' or '$(Configuration)' == 'Debug-VS2012' ">
+    <!-- XML documentation errors should be fixed always -->
+    <DocumentationFile>$(OutDir)\$(TargetName).xml</DocumentationFile>
+    <WarningsAsErrors>1570;1573;1574;1591;1658;1711;1734;1735;</WarningsAsErrors>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <StyleCopEnabled>false</StyleCopEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release-VS2010' or '$(Configuration)' == 'Release-VS2012' ">
+    <!-- XML documentation generation should be turned on always -->
+    <DocumentationFile>$(OutDir)\$(TargetName).xml</DocumentationFile>
+    <DefineConstants>$(DefineConstants);CODE_ANALYSIS</DefineConstants>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>$(BranchRoot)CodeAnalysis.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
+    <StyleCopEnabled>false</StyleCopEnabled>
+    <StyleCopOverrideSettingsFile>$(BranchRoot)SourceAnalysis.stylecop</StyleCopOverrideSettingsFile>
+    <StyleCopTreatErrorsAsWarnings>false</StyleCopTreatErrorsAsWarnings>
+  </PropertyGroup>
+  
+  <!-- Verifies that the correct solution configuration is selected -->
+  <Target Name="VerifyTargetBuildConfiguration">
+    <Message
+      Importance="normal"
+      Text="Verifying Build Configuration is appropriate for this version of Visual Studio."/>
+    <Error Condition="(('$(Configuration)' == 'Debug-VS2010' or '$(Configuration)' == 'Release-VS2010') and '$(VisualStudioVersion)' != '10.0')"
+           Text="The current solution build configuration '$(Configuration)' is only valid in Visual Studio 2010. You must change the solution build configuration to match this version of Visual Studio."/>
+    <Error Condition="(('$(Configuration)' == 'Debug-VS2012' or '$(Configuration)' == 'Release-VS2012') and '$(VisualStudioVersion)' != '11.0')"
+           Text="The current solution build configuration '$(Configuration)' is only valid in Visual Studio 2012. You must change the solution build configuration to match this version of Visual Studio."/>
+  </Target>
+
+	<Target Name="VerifyDelaySignSkipVerification" Condition="'$(DelaySign)' == 'true'">
+		<PropertyGroup>
+			<SkipVerificationKey>$([MSBuild]::GetRegistryValueFromView('HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\StrongName\Verification\*,24c7786d4a8b1a88', '', 'empty', RegistryView.Registry32, RegistryView.Registry64))</SkipVerificationKey>
+		</PropertyGroup>
+
+		<Message
+			Importance="normal"
+			Text="Verifying 'Skip Strong Name Verifcation' configured for building (DelaySigned) NuPattern assemblies"/>
+
+		<Error Condition="'$(SkipVerificationKey)'=='empty'"
+					 Text="'Skip Strong Name Verification' has not been configured for building NuPattern assemblies. Please run 'sn.exe -Vr *,24c7786d4a8b1a88', as 'Administrator' in the VS Command prompt, to skip verification for all NuPattern assemblies. See 'Developer Notes' for more details (https://nupattern.codeplex.com/wikipage?title=Developer%20Notes&amp;referringTitle=Documentation)."/>
+	</Target>
+  
+  <!-- Tool includes -->
+  <!--<Import Project="$(MSBuildExtensionsPath)\Microsoft\StyleCop\v4.3\Microsoft.StyleCop.targets" />-->
+  
+  <!-- Include T4 MSBUILD support for all T4 files -->
+  <PropertyGroup>
+    <TransformOnBuild>true</TransformOnBuild>
+    <!-- Turn off default T4 MSBUILD settings, so that we can fully control the templates to include, and which assembly dependencies to use in the transform -->
+    <IncludeDslT4Settings>false</IncludeDslT4Settings>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- Paths for DirectiveProcessor dependency assemblies -->
+    <T4ReferencePath Condition="'$(TargetVsVersion)' == '10.0'" Include="$(ProjectDir)$(BranchRoot)..\Lib\VMSDK\10.0\TextTemplating\v10.0\" />
+    <T4ReferencePath Condition="'$(TargetVsVersion)' == '11.0'" Include="$(ProjectDir)$(BranchRoot)..\Lib\VMSDK\11.0\MSBuild\TextTemplating\" />
+    <T4ReferencePath Include="$(ProjectDir)$(BranchRoot)..\Lib\VisualStudio\" />
+    <T4ReferencePath Include="$(ProjectDir)$(BranchRoot)..\Lib\VisualStudio\$(TargetVsVersion)\" />
+    <!-- Parameters for MSBUILD transforms -->
+    <T4ParameterValues Include="VsVer">
+      <Value>$(TargetVsVersion)</Value>
+    </T4ParameterValues>
+    <!-- Directive Processors for MSBUILD Transforms -->
+    <DirectiveProcessor Include="DslDirectiveProcessor" >
+      <Class>Microsoft.VisualStudio.Modeling.DslDefinition.DslDirectiveProcessor</Class>
+      <CodeBase>$(ProjectDir)$(BranchRoot)..\Lib\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk.DslDefinition$(VsxVersionSuffix).dll</CodeBase>
+    </DirectiveProcessor>
+  </ItemGroup>
+  <Import Condition="'$(ImportT4Targets)'!='false'" Project="$(ProjectDir)$(T4TargetsPath)\Microsoft.TextTemplating.targets" />
+
+  <!-- Remove T4 Tracking files so that we force a full transform on Rebuild -->
+  <ItemGroup>
+    <T4TrackingFilesToDelete Condition="'$(PlatformName)' == '' or '$(PlatformName)' == 'AnyCPU'" Include="$(ProjectDir)obj\$(ConfigurationName)\**\T4Transform*.tlog"/>
+    <T4TrackingFilesToDelete Condition="'$(PlatformName)' != '' and '$(PlatformName)' != 'AnyCPU'" Include="$(ProjectDir)obj\$(PlatformName)\$(ConfigurationName)\**\T4Transform*.tlog"/>
+  </ItemGroup>
+  <Target Name="CleanT4TrackingFiles">
+    <Message Importance="High" Text="Removing T4 tracking data to force a full transform"/>
+    <Delete Files="@(T4TrackingFilesToDelete)" ContinueOnError="true"/>
+  </Target>
+
+	<PropertyGroup>
+		<!-- Insert our targets in normal build processes -->
+		<BuildDependsOn>VerifyTargetBuildConfiguration;VerifyDelaySignSkipVerification;$(BuildDependsOn)</BuildDependsOn>
+		<RebuildDependsOn>CleanT4TrackingFiles;$(RebuildDependsOn)</RebuildDependsOn>
+	</PropertyGroup>
+  
+  <!-- 
+        Include items in VSIX using alternative file name.
+        
+        If you need to include a file in a VSIX but need its filename changed in the VSIX (e.g. for a generated file),
+        The item must be of type <Content>
+        Add the property <IncludeInVSIXAs>newname.extension</IncludeInVSIXAs>
+        The item will appear in the VSIX in the same folder structure as in the project.
+        You can optionally override the destination folder in the VSIX by specifying the property <VSIXSubPath>newpath</VSIXSubPath>
+  -->
+  <PropertyGroup>
+    <GetVsixSourceItemsDependsOn>$(GetVsixSourceItemsDependsOn);IncludeFilesInVsixAs</GetVsixSourceItemsDependsOn>
+  </PropertyGroup>
+  <Target Name="IncludeFilesInVsixAs" Condition="'@(Content.IncludeInVSIXAs)'!=''">
+    <!-- Copy item with 'As' name to target dir as it would be packaged in the VSIX -->
+    <Message
+      Condition="'%(Content.IncludeInVSIXAs)'!=''"
+      Importance="high"
+      Text="Adding file: '%(Content.RelativeDir)%(Content.Filename)%(Content.Extension)' to VSIX as: '%(Content.IncludeInVSIXAs)'"/>
+    <!-- Copy Project Files -->
+    <Copy
+      Condition="'%(Content.IncludeInVSIXAs)'!='' AND '%(Content.VSIXSubPath)'=='' AND '%(Content.Link)' == ''" 
+      SourceFiles="@(Content)"
+      DestinationFiles="$(TargetDir)%(Content.RelativeDir)%(Content.IncludeInVSIXAs)" />
+    <!-- Copy Linked Files -->
+    <Copy
+      Condition="'%(Content.IncludeInVSIXAs)'!='' AND '%(Content.VSIXSubPath)'=='' AND '%(Content.Link)' != ''"
+      SourceFiles="@(Content)"
+      DestinationFiles="$(TargetDir)$([System.IO.Path]::GetDirectoryName(%(Content.Link)))\%(Content.IncludeInVSIXAs)" />
+    <!-- Copy Project/Linked SubPathed Files -->
+    <Copy
+      Condition="'%(Content.IncludeInVSIXAs)'!='' AND '%(Content.VSIXSubPath)'!=''"
+      SourceFiles="@(Content)"
+      DestinationFiles="$(TargetDir)%(Content.VSIXSubPath)\%(Content.IncludeInVSIXAs)" />
+
+    <ItemGroup>
+      <!-- Add Project Files -->
+      <VSIXSourceItem 
+        Condition="'%(Content.IncludeInVSIXAs)'!='' AND '%(Content.VSIXSubPath)'=='' AND '%(Content.Link)' == ''"
+        Include="$(TargetDir)%(Content.RelativeDir)%(Content.IncludeInVSIXAs)" >
+        <VSIXSubPath>%(Content.RelativeDir)</VSIXSubPath>
+      </VSIXSourceItem>
+      <!-- Add Linked Files -->
+      <VSIXSourceItem 
+        Condition="'%(Content.IncludeInVSIXAs)'!='' AND '%(Content.VSIXSubPath)'=='' AND '%(Content.Link)' != ''"
+        Include="$(TargetDir)$([System.IO.Path]::GetDirectoryName(%(Content.Link)))\%(Content.IncludeInVSIXAs)">
+        <VSIXSubPath>$([System.IO.Path]::GetDirectoryName(%(Content.Link)))</VSIXSubPath>
+      </VSIXSourceItem>
+      <!-- Add Project/Linked SubPathed Files -->
+      <VSIXSourceItem
+        Condition="'%(Content.IncludeInVSIXAs)'!='' AND '%(Content.VSIXSubPath)'!=''"
+        Include="$(TargetDir)%(Content.VSIXSubPath)\%(Content.IncludeInVSIXAs)">
+        <VSIXSubPath>%(Content.VSIXSubPath)</VSIXSubPath>
+      </VSIXSourceItem>
+    </ItemGroup>
+  </Target>
+</Project>

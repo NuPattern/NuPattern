@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <!-- Include base build configuration settings (before overrides below) -->
-  <Import Project="BuildConfiguration.CSharp.targets" />
+  <Import Project="BuildConfiguration.CSharp.gen.targets" />
 
   <!-- Include DSL targets -->
   <Import Project="BuildConfiguration.CSharp.DslProjects.targets.include" />

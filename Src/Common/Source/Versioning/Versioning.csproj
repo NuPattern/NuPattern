@@ -19,9 +19,6 @@
   </PropertyGroup>
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="..\..\..\GlobalAssemblyInfo.NoVersion.gen.cs">
       <Link>GlobalAssemblyInfo.NoVersion.gen.cs</Link>
       <AutoGen>True</AutoGen>
@@ -100,6 +97,18 @@
       <LastGenOutput>Authoring.PatternToolkitVersion.gen.targets</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
+    <None Include="..\..\..\BuildConfiguration.CSharp.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <Link>BuildConfiguration.CSharp.tt</Link>
+      <LastGenOutput>BuildConfiguration.CSharp.gen.targets</LastGenOutput>
+    </None>
+    <None Include="..\..\..\BuildConfiguration.CSharp.gen.targets">
+      <Link>BuildConfiguration.CSharp.VsixProjects.gen.targets</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BuildConfiguration.CSharp.tt</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
     <None Include="NuPattern.Authoring.PatternToolkit.gen.targets">
       <DependentUpon>NuPattern.Authoring.PatternToolkit.tt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -117,7 +126,10 @@
       <Link>SigningKeys\Signing Key Info.txt</Link>
     </Content>
   </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.targets" />
+  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.gen.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
 </Project>

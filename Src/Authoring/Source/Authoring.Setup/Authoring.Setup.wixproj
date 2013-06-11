@@ -64,7 +64,7 @@
     <Content Include="Resources\Icon.ico" />
   </ItemGroup>
   <Import Project="$(WixTargetsPath)" />
-  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.targets" />
+  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.gen.targets" />
   <PropertyGroup>
     <PreBuildEvent />
   </PropertyGroup>

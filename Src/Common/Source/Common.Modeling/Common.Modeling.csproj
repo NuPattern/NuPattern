@@ -117,6 +117,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.targets" />
+  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.gen.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
 </Project>

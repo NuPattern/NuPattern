@@ -1,3 +1,5 @@
+﻿<#@ output extension=".gen.targets" #>
+<#@ Include File="MasterVersion.gen.ttinclude" #>
 <?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
@@ -26,15 +28,28 @@
   </PropertyGroup>
   
   <!-- Verifies that the correct solution configuration is selected -->
-  <Target Name="VerifyTargetBuildConfiguration" BeforeTargets="BeforeBuild">
+  <Target Name="VerifyTargetBuildConfiguration">
     <Message
       Importance="normal"
-      Text="Verifying solution build configuration..."/>
+      Text="Verifying Build Configuration is appropriate for this version of Visual Studio."/>
     <Error Condition="(('$(Configuration)' == 'Debug-VS2010' or '$(Configuration)' == 'Release-VS2010') and '$(VisualStudioVersion)' != '10.0')"
            Text="The current solution build configuration '$(Configuration)' is only valid in Visual Studio 2010. You must change the solution build configuration to match this version of Visual Studio."/>
     <Error Condition="(('$(Configuration)' == 'Debug-VS2012' or '$(Configuration)' == 'Release-VS2012') and '$(VisualStudioVersion)' != '11.0')"
            Text="The current solution build configuration '$(Configuration)' is only valid in Visual Studio 2012. You must change the solution build configuration to match this version of Visual Studio."/>
   </Target>
+
+	<Target Name="VerifyDelaySignSkipVerification" Condition="'$(DelaySign)' == 'true'">
+		<PropertyGroup>
+			<SkipVerificationKey>$([MSBuild]::GetRegistryValueFromView('HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\StrongName\Verification\*,<#=VersionInfo.AssemblyPublicKeyToken#>', '', 'empty', RegistryView.Registry32, RegistryView.Registry64))</SkipVerificationKey>
+		</PropertyGroup>
+
+		<Message
+			Importance="normal"
+			Text="Verifying 'Skip Strong Name Verifcation' configured for building (DelaySigned) NuPattern assemblies"/>
+
+		<Error Condition="'$(SkipVerificationKey)'=='empty'"
+					 Text="'Skip Strong Name Verification' has not been configured for building NuPattern assemblies. Please run 'sn.exe -Vr *,<#=VersionInfo.AssemblyPublicKeyToken#>', as 'Administrator' in the VS Command prompt, to skip verification for all NuPattern assemblies. See 'Developer Notes' for more details (https://nupattern.codeplex.com/wikipage?title=Developer%20Notes&amp;referringTitle=Documentation)."/>
+	</Target>
   
   <!-- Tool includes -->
   <!--<Import Project="$(MSBuildExtensionsPath)\Microsoft\StyleCop\v4.3\Microsoft.StyleCop.targets" />-->
@@ -64,9 +79,6 @@
   <Import Condition="'$(ImportT4Targets)'!='false'" Project="$(ProjectDir)$(T4TargetsPath)\Microsoft.TextTemplating.targets" />
 
   <!-- Remove T4 Tracking files so that we force a full transform on Rebuild -->
-  <PropertyGroup>
-    <RebuildDependsOn>CleanT4TrackingFiles;$(RebuildDependsOn)</RebuildDependsOn>
-  </PropertyGroup>
   <ItemGroup>
     <T4TrackingFilesToDelete Condition="'$(PlatformName)' == '' or '$(PlatformName)' == 'AnyCPU'" Include="$(ProjectDir)obj\$(ConfigurationName)\**\T4Transform*.tlog"/>
     <T4TrackingFilesToDelete Condition="'$(PlatformName)' != '' and '$(PlatformName)' != 'AnyCPU'" Include="$(ProjectDir)obj\$(PlatformName)\$(ConfigurationName)\**\T4Transform*.tlog"/>
@@ -75,6 +87,12 @@
     <Message Importance="High" Text="Removing T4 tracking data to force a full transform"/>
     <Delete Files="@(T4TrackingFilesToDelete)" ContinueOnError="true"/>
   </Target>
+
+	<PropertyGroup>
+		<!-- Insert our targets in normal build processes -->
+		<BuildDependsOn>VerifyTargetBuildConfiguration;VerifyDelaySignSkipVerification;$(BuildDependsOn)</BuildDependsOn>
+		<RebuildDependsOn>CleanT4TrackingFiles;$(RebuildDependsOn)</RebuildDependsOn>
+	</PropertyGroup>
   
   <!-- 
         Include items in VSIX using alternative file name.
