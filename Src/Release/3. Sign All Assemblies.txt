@@ -1,6 +1,0 @@
-Send all assemblies from Processed\Unsigned\Assemblies\* to be signed.
-
-They will be strong name signed and authenticode signed.
-
-
-The signed assemblies should be placed in the Processed\Signed\Assemblies* directories (using same structure as they were sent to be signed)
