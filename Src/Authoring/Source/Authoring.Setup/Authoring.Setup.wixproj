@@ -73,12 +73,8 @@
 copy "$(ProjectDir)Diagnose MSI.bat" "$(ProjectDir)$(BranchRoot)Binaries\Diagnose MSI.bat"</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <SuppressIces>ICE91</SuppressIces>
+    <SuppressIces>ICE91;ICE03</SuppressIces>
     <SuppressValidation>False</SuppressValidation>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug-VS2012|x86' ">
-    <WixVariables>
-    </WixVariables>
   </PropertyGroup>
   <!--
 	To modify your build process, add your task inside one of the targets below and uncomment it.
