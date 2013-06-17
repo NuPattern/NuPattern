@@ -29,6 +29,7 @@
             </StatusBar.Items>
         </StatusBar>
         <ui:GuidanceBrowser
+            Background="{DynamicResource VsBrush.ToolWindowBackground}"
             Source="{Binding Link}"
             Command="{Binding NavigationCommand}"
             CommandParameter="{Binding CurrentLink, RelativeSource={x:Static RelativeSource.Self}}" />

@@ -3,7 +3,6 @@
     x:ClassModifier="internal"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:cp="clr-namespace:NuPattern.Presentation;assembly=NuPattern.Presentation"
     xmlns:ui="clr-namespace:NuPattern.Runtime.Guidance.UI"
     xmlns:viewModels="clr-namespace:NuPattern.Runtime.Guidance.UI.ViewModels"
     Name="GuidanceWorkflowExplorer"
@@ -19,51 +18,12 @@
         </ResourceDictionary>
     </UserControl.Resources>
 
+    
     <Grid>
         <Grid.Resources>
             <ui:EnumToDescriptionValueConverter x:Key="EnumToDescriptionValueConverter" />
             <ui:NodeStateToBrushValueConverter x:Key="NodeStateToBrushValueConverter" />
             <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
-
-            <!-- ##MAR11FIXES## Removing all icons from Guidance Workflow Explorer
-      <Style x:Key="NodeIcon" TargetType="Image">
-        <Setter Property="Margin" Value="3,0" />
-        <Setter Property="Width" Value="16" />
-        <Setter Property="Height" Value="16" />
-      </Style>-->
-
-            <Style x:Key="StateText" TargetType="TextBlock">
-                <Setter Property="Foreground" Value="Black" />
-                <Style.Triggers>
-                    <MultiDataTrigger>
-                        <MultiDataTrigger.Conditions>
-                            <Condition Binding="{Binding State}" Value="Completed" />
-                            <Condition Binding="{Binding NodeType}" Value="Action" />
-                        </MultiDataTrigger.Conditions>
-                        <Setter Property="TextDecorations" Value="Strikethrough" />
-                    </MultiDataTrigger>
-                    <DataTrigger Binding="{Binding State}" Value="Disabled">
-                        <Setter Property="Foreground" Value="DarkGray" />
-                    </DataTrigger>
-                </Style.Triggers>
-            </Style>
-
-            <Style x:Key="StateIcon" TargetType="Rectangle">
-                <Setter Property="Margin" Value="3,0" />
-                <Setter Property="Width" Value="10" />
-                <Setter Property="Height" Value="10" />
-                <Setter Property="RadiusX" Value="3" />
-                <Setter Property="RadiusY" Value="3" />
-                <Setter Property="Fill" Value="{Binding State, Converter={StaticResource NodeStateToBrushValueConverter}}" />
-                <Setter Property="Stroke" Value="{Binding State, Converter={StaticResource NodeStateToBrushValueConverter}, ConverterParameter=true}" />
-                <Setter Property="StrokeThickness" Value="1" />
-                <Setter Property="ToolTip" Value="{Binding State, Converter={StaticResource EnumToDescriptionValueConverter}}" />
-                <Style.Triggers>
-                    <DataTrigger Binding="{Binding State}" Value="Unknown">
-                        <Setter Property="Visibility" Value="Collapsed" />
-                    </DataTrigger>
-                </Style.Triggers>
-            </Style>
         </Grid.Resources>
 
         <Grid.RowDefinitions>
@@ -77,6 +37,39 @@
             VirtualizingStackPanel.IsVirtualizing="True"
             VirtualizingStackPanel.VirtualizationMode="Recycling">
             <TreeView.Resources>
+                <Style x:Key="StateText" TargetType="TextBlock">
+                    <Setter Property="Foreground" Value="{DynamicResource VsBrush.WindowText}" />
+                    <Style.Triggers>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding State}" Value="Completed" />
+                                <Condition Binding="{Binding NodeType}" Value="Action" />
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="TextDecorations" Value="Strikethrough" />
+                        </MultiDataTrigger>
+                        <DataTrigger Binding="{Binding State}" Value="Disabled">
+                            <Setter Property="Foreground" Value="{DynamicResource VsBrush.GrayText}" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+
+                <Style x:Key="StateIcon" TargetType="Rectangle">
+                    <Setter Property="Margin" Value="3,0" />
+                    <Setter Property="Width" Value="10" />
+                    <Setter Property="Height" Value="10" />
+                    <Setter Property="RadiusX" Value="3" />
+                    <Setter Property="RadiusY" Value="3" />
+                    <Setter Property="Fill" Value="{Binding State, Converter={StaticResource NodeStateToBrushValueConverter}}" />
+                    <Setter Property="Stroke" Value="{Binding State, Converter={StaticResource NodeStateToBrushValueConverter}, ConverterParameter=true}" />
+                    <Setter Property="StrokeThickness" Value="1" />
+                    <Setter Property="ToolTip" Value="{Binding State, Converter={StaticResource EnumToDescriptionValueConverter}}" />
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding State}" Value="Unknown">
+                            <Setter Property="Visibility" Value="Collapsed" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+
                 <Style TargetType="TreeViewItem" BasedOn="{StaticResource {x:Type TreeViewItem}}">
                     <Setter Property="ToolTip" Value="{Binding ToolTip}" />
                     <Setter Property="IsExpanded" Value="{Binding IsExpanded, Mode=TwoWay}" />
@@ -86,9 +79,6 @@
                 <HierarchicalDataTemplate ItemsSource="{Binding Nodes}" DataType="{x:Type viewModels:NodeViewModel}">
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                         <Rectangle Style="{StaticResource StateIcon}" />
-                        <!-- ##MAR11FIXES## Removing all icons from Guidance Workflow Explorer 
-                        <Image Source="{Binding Icon}" Style="{StaticResource NodeIcon}" />
-            -->
                         <TextBlock Text="{Binding Name}" Style="{StaticResource StateText}" />
                     </StackPanel>
                 </HierarchicalDataTemplate>
@@ -97,21 +87,18 @@
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                         <Rectangle Style="{StaticResource StateIcon}" />
                         <CheckBox
-              SnapsToDevicePixels="True"
-              VerticalAlignment="Center"
-              IsChecked="{Binding IsUserAccepted}"
-              Visibility="{Binding RequiresUserAcceptance, Converter={StaticResource BooleanToVisibilityConverter}}" />
-                        <!-- ##MAR11FIXES## Removing all icons from Guidance Workflow Explorer 
-                        <Image Source="{Binding Icon}" Style="{StaticResource NodeIcon}" />
-            -->
+                          SnapsToDevicePixels="True"
+                          VerticalAlignment="Center"
+                          IsChecked="{Binding IsUserAccepted}"
+                          Visibility="{Binding RequiresUserAcceptance, Converter={StaticResource BooleanToVisibilityConverter}}" />
                         <TextBlock Text="{Binding Name}" Style="{StaticResource StateText}" />
                         <StackPanel.ContextMenu>
                             <ContextMenu>
                                 <ContextMenu.Items>
                                     <MenuItem
-                    Header="Override"
-                    IsCheckable="True"
-                    IsChecked="{Binding HasStateOverride}" />
+                                        Header="Override"
+                                        IsCheckable="True"
+                                        IsChecked="{Binding HasStateOverride}" />
                                 </ContextMenu.Items>
                             </ContextMenu>
                         </StackPanel.ContextMenu>
@@ -139,11 +126,11 @@
                 </Style>
             </DockPanel.Resources>
             <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Style="{StaticResource CommandBar.Panel}">
-                <Button ToolTip="Refresh" Command="{Binding RefreshDetailsCommand}" Margin="2">
+                <Button ToolTip="Refresh" Command="{Binding RefreshDetailsCommand}" Margin="2" Focusable="False">
                     <BitmapImage UriSource="../../Resources/CommandRefresh.png" />
                 </Button>
             </StackPanel>
-            <TextBlock Text="{Binding Description}" DockPanel.Dock="Top" Margin="2" TextWrapping="Wrap" />
+            <TextBlock Text="{Binding Description}" DockPanel.Dock="Top" Margin="2" TextWrapping="Wrap" Foreground="{DynamicResource VsBrush.WindowText}" />
             <TreeView
                 Visibility="{Binding IsConditionalNode, Converter={StaticResource BooleanToVisibilityConverter}}"
                 ItemsSource="{Binding Conditions}"
@@ -155,11 +142,11 @@
                     </Style>
 
                     <HierarchicalDataTemplate ItemsSource="{Binding Conditions}" DataType="{x:Type viewModels:LabelViewModel}">
-                        <TextBlock Text="{Binding Label}" />
+                        <TextBlock Text="{Binding Label}" Foreground="{DynamicResource VsBrush.WindowText}" />
                     </HierarchicalDataTemplate>
 
                     <HierarchicalDataTemplate ItemsSource="{Binding EvaluationResults}"  DataType="{x:Type viewModels:ConditionViewModel}">
-                        <TextBlock Text="{Binding UserMessage}">
+                        <TextBlock Text="{Binding UserMessage}" Foreground="{DynamicResource VsBrush.WindowText}">
                             <TextBlock.Style>
                                 <Style TargetType="TextBlock">
                                     <Setter Property="Foreground" Value="Green" />
@@ -174,7 +161,7 @@
                     </HierarchicalDataTemplate>
 
                     <HierarchicalDataTemplate ItemsSource="{Binding Results}" DataType="{x:Type viewModels:BindingResultViewModel}">
-                        <TextBlock>
+                        <TextBlock Foreground="{DynamicResource VsBrush.WindowText}">
                             <TextBlock.Text>
                                 <MultiBinding StringFormat="{}{0}: {1}">
                                     <Binding Path="PropertyName" />
@@ -183,7 +170,6 @@
                             </TextBlock.Text>
                         </TextBlock>
                     </HierarchicalDataTemplate>
-
                 </TreeView.Resources>
             </TreeView>
         </DockPanel>
