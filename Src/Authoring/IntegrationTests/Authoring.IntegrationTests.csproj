@@ -431,6 +431,18 @@
       <Project>{0216A624-C5C5-4335-8361-F640B91B4DEA}</Project>
       <Name>Authoring.PatternToolkit</Name>
     </ProjectReference>
+    <ProjectReference Include="..\UnfoldTests\ExtensionItem\ExtensionItem.csproj">
+      <Project>{fc09e8ed-2cc3-4bef-b4e8-2636587ddeec}</Project>
+      <Name>ExtensionItem</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnfoldTests\ExtensionProject\ExtensionProject.csproj">
+      <Project>{f5b750ea-7891-4f83-a5c8-a46f65682586}</Project>
+      <Name>ExtensionProject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnfoldTests\MainTestToolkit\MainTestToolkit.csproj">
+      <Project>{397c660a-72da-44eb-a4ff-1ec8e673c594}</Project>
+      <Name>MainTestToolkit</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.TestProjects.targets" />

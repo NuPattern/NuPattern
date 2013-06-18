@@ -24,7 +24,7 @@ namespace NuPattern.IntegrationTests.VisualStudio.Solution
         }
 
         [HostType("VS IDE")]
-        [TestMethod]
+        [TestMethod, TestCategory("Integration")]
         public void WhenGettingPropertyByName_ThenSucceeds()
         {
             var item = this.solution.Find<IItem>().First();
@@ -34,7 +34,7 @@ namespace NuPattern.IntegrationTests.VisualStudio.Solution
         }
 
         [HostType("VS IDE")]
-        [TestMethod]
+        [TestMethod, TestCategory("Integration")]
         public void WhenSettingPropertyByName_ThenSucceeds()
         {
             var item = this.solution.Find<IItem>().First();

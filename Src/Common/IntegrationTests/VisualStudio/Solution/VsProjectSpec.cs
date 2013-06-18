@@ -24,7 +24,7 @@ namespace NuPattern.IntegrationTests.VisualStudio.Solution
         }
 
         [HostType("VS IDE")]
-        [TestMethod]
+        [TestMethod, TestCategory("Integration")]
         public void WhenConfigurationDoesNotExist_ThenReadsAsPropertyName()
         {
             var project = this.solution.Find<IProject>().First();
@@ -34,7 +34,7 @@ namespace NuPattern.IntegrationTests.VisualStudio.Solution
         }
 
         [HostType("VS IDE")]
-        [TestMethod]
+        [TestMethod, TestCategory("Integration")]
         public void WhenReadingConfigurationProperty_ThenSucceeds()
         {
             var project = this.solution.Find<IProject>().First();
@@ -44,7 +44,7 @@ namespace NuPattern.IntegrationTests.VisualStudio.Solution
         }
 
         [HostType("VS IDE")]
-        [TestMethod]
+        [TestMethod, TestCategory("Integration")]
         public void WhenReadingPlatformProperty_ThenSucceeds()
         {
             var project = this.solution.Find<IProject>().First();
@@ -54,7 +54,7 @@ namespace NuPattern.IntegrationTests.VisualStudio.Solution
         }
 
         [HostType("VS IDE")]
-        [TestMethod]
+        [TestMethod, TestCategory("Integration")]
         public void WhenSettingPlatformProperty_ThenSucceeds()
         {
             var project = this.solution.Find<IProject>().First();
@@ -66,7 +66,7 @@ namespace NuPattern.IntegrationTests.VisualStudio.Solution
         }
 
         [HostType("VS IDE")]
-        [TestMethod]
+        [TestMethod, TestCategory("Integration")]
         public void WhenSettingConfigurationProperty_ThenSucceeds()
         {
             var project = this.solution.Find<IProject>().First();

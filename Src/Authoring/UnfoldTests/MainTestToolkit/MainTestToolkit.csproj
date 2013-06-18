@@ -22,10 +22,10 @@
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.VsixProjects.gen.props" />
   <ItemGroup>
-		<Reference Include="NuPattern.Common">
-			<HintPath>$(PatternToolkitRuntime)\NuPattern.Common.dll</HintPath>
-			<Private>false</Private>
-		</Reference>
+    <Reference Include="NuPattern.Common">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Common.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
     <Reference Include="NuPattern.VisualStudio">
       <HintPath>$(PatternToolkitRuntime)\NuPattern.VisualStudio.dll</HintPath>
       <Private>false</Private>
