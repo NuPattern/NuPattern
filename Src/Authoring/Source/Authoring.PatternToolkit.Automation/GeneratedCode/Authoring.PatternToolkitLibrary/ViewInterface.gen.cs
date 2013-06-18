@@ -23,7 +23,7 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 	/// </summary>
 	[Description("Description for PatternToolkitLibrary.Development")]
 	[ToolkitInterface(ExtensionId = "97bd7ab2-964b-43f1-8a08-be6db68b018b", DefinitionId = "e0779d33-8f19-4025-9a57-e75bc53a03ff", ProxyType = typeof(Development))]
-	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.21.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.22.0")]
 	public partial interface IDevelopment : IToolkitInterface
 	{
 

@@ -59,7 +59,7 @@ public static class VersionInfo
     // Assembly Versions
     public const int AssemblyMajor = 1;
     public const int AssemblyMinor = 3;
-    public const int AssemblyBuild = 21;
+    public const int AssemblyBuild = 22;
     public const int AssemblyRevision = 0;
     public static Version AssemblyVersion = new Version(AssemblyMajor, AssemblyMinor, AssemblyBuild, AssemblyRevision);
     public static Version TemplateWizardVersion = new Version(AssemblyMajor, 0, 0, 0);
