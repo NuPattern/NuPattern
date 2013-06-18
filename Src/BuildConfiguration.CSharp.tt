@@ -38,18 +38,18 @@
            Text="The current solution build configuration '$(Configuration)' is only valid in Visual Studio 2012. You must change the solution build configuration to match this version of Visual Studio."/>
   </Target>
 
-	<Target Name="VerifyDelaySignSkipVerification" Condition="'$(DelaySign)' == 'true'">
-		<PropertyGroup>
-			<SkipVerificationKey>$([MSBuild]::GetRegistryValueFromView('HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\StrongName\Verification\*,<#=VersionInfo.AssemblyPublicKeyToken#>', '', 'empty', RegistryView.Registry32, RegistryView.Registry64))</SkipVerificationKey>
-		</PropertyGroup>
+  <Target Name="VerifyDelaySignSkipVerification" Condition="'$(DelaySign)' == 'true'">
+    <PropertyGroup>
+      <SkipVerificationKey>$([MSBuild]::GetRegistryValueFromView('HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\StrongName\Verification\*,<#=VersionInfo.AssemblyPublicKeyToken#>', '', 'empty', RegistryView.Registry32, RegistryView.Registry64))</SkipVerificationKey>
+    </PropertyGroup>
 
-		<Message
-			Importance="normal"
-			Text="Verifying 'Skip Strong Name Verifcation' configured for building (DelaySigned) NuPattern assemblies"/>
+    <Message
+      Importance="normal"
+      Text="Verifying 'Skip Strong Name Verifcation' configured for building (DelaySigned) NuPattern assemblies"/>
 
-		<Error Condition="'$(SkipVerificationKey)'=='empty'"
-					 Text="'Skip Strong Name Verification' has not been configured for building NuPattern assemblies. Please run 'sn.exe -Vr *,<#=VersionInfo.AssemblyPublicKeyToken#>', as 'Administrator' in the VS Command prompt, to skip verification for all NuPattern assemblies. See 'Developer Notes' for more details (https://nupattern.codeplex.com/wikipage?title=Developer%20Notes&amp;referringTitle=Documentation)."/>
-	</Target>
+    <Error Condition="'$(SkipVerificationKey)'=='empty'"
+           Text="'Skip Strong Name Verification' has not been configured for building NuPattern assemblies. Please run 'sn.exe -Vr *,<#=VersionInfo.AssemblyPublicKeyToken#>', as 'Administrator' in the VS Command prompt, to skip verification for all NuPattern assemblies. See 'Developer Notes' for more details (https://nupattern.codeplex.com/wikipage?title=Developer%20Notes&amp;referringTitle=Documentation)."/>
+  </Target>
   
   <!-- Tool includes -->
   <!--<Import Project="$(MSBuildExtensionsPath)\Microsoft\StyleCop\v4.3\Microsoft.StyleCop.targets" />-->
@@ -61,9 +61,10 @@
     <IncludeDslT4Settings>false</IncludeDslT4Settings>
   </PropertyGroup>
   <ItemGroup>
-    <!-- Paths for DirectiveProcessor dependency assemblies -->
+    <!-- Paths for DirectiveProcessor dependency assemblies (Some 11.0 assemblies depend on some 10.0 assemblies) -->
     <T4ReferencePath Condition="'$(TargetVsVersion)' == '10.0'" Include="$(ProjectDir)$(BranchRoot)..\Lib\VMSDK\10.0\TextTemplating\v10.0\" />
     <T4ReferencePath Condition="'$(TargetVsVersion)' == '11.0'" Include="$(ProjectDir)$(BranchRoot)..\Lib\VMSDK\11.0\MSBuild\TextTemplating\" />
+    <T4ReferencePath Condition="'$(TargetVsVersion)' == '11.0'" Include="$(ProjectDir)$(BranchRoot)..\Lib\VisualStudio\10.0\" />
     <T4ReferencePath Include="$(ProjectDir)$(BranchRoot)..\Lib\VisualStudio\" />
     <T4ReferencePath Include="$(ProjectDir)$(BranchRoot)..\Lib\VisualStudio\$(TargetVsVersion)\" />
     <!-- Parameters for MSBUILD transforms -->
@@ -88,11 +89,11 @@
     <Delete Files="@(T4TrackingFilesToDelete)" ContinueOnError="true"/>
   </Target>
 
-	<PropertyGroup>
-		<!-- Insert our targets in normal build processes -->
-		<BuildDependsOn>VerifyTargetBuildConfiguration;VerifyDelaySignSkipVerification;$(BuildDependsOn)</BuildDependsOn>
-		<RebuildDependsOn>CleanT4TrackingFiles;$(RebuildDependsOn)</RebuildDependsOn>
-	</PropertyGroup>
+  <PropertyGroup>
+    <!-- Insert our targets in normal build processes -->
+    <BuildDependsOn>VerifyTargetBuildConfiguration;VerifyDelaySignSkipVerification;$(BuildDependsOn)</BuildDependsOn>
+    <RebuildDependsOn>CleanT4TrackingFiles;$(RebuildDependsOn)</RebuildDependsOn>
+  </PropertyGroup>
   
   <!-- 
         Include items in VSIX using alternative file name.

@@ -6,8 +6,8 @@
   </PropertyGroup>
 
     <!-- Visual Studio Properties -->
-  <Import Condition="'$(VisualStudioVersion)' == '11.0'" Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
-  <Import Condition="'$(VisualStudioVersion)' == '11.0'" Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.VisualStudioVersion.v11.Common.props" />
+  <Import Condition="'$(VisualStudioVersion)' == '11.0'" Project="..\Lib\VisualStudio\11.0\MSBuild\Microsoft.Common.props" />
+  <Import Condition="'$(VisualStudioVersion)' == '11.0'" Project="..\Lib\VisualStudio\11.0\MSBuild\Microsoft.VisualStudioVersion.v11.Common.props" />
 
   <PropertyGroup>
     <!--<VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>-->
