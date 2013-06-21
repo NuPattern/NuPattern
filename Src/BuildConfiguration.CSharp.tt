@@ -61,10 +61,9 @@
     <IncludeDslT4Settings>false</IncludeDslT4Settings>
   </PropertyGroup>
   <ItemGroup>
-    <!-- Paths for DirectiveProcessor dependency assemblies (Some 11.0 assemblies depend on some 10.0 assemblies) -->
+    <!-- Paths for DirectiveProcessor dependency assemblies -->
     <T4ReferencePath Condition="'$(TargetVsVersion)' == '10.0'" Include="$(ProjectDir)$(BranchRoot)..\Lib\VMSDK\10.0\TextTemplating\v10.0\" />
     <T4ReferencePath Condition="'$(TargetVsVersion)' == '11.0'" Include="$(ProjectDir)$(BranchRoot)..\Lib\VMSDK\11.0\MSBuild\TextTemplating\" />
-    <T4ReferencePath Condition="'$(TargetVsVersion)' == '11.0'" Include="$(ProjectDir)$(BranchRoot)..\Lib\VisualStudio\10.0\" />
     <T4ReferencePath Include="$(ProjectDir)$(BranchRoot)..\Lib\VisualStudio\" />
     <T4ReferencePath Include="$(ProjectDir)$(BranchRoot)..\Lib\VisualStudio\$(TargetVsVersion)\" />
     <!-- Parameters for MSBUILD transforms -->
