@@ -47,7 +47,8 @@ namespace NuPattern.Runtime.IntegrationTests.UriProviders
         {
             var service = VsIdeTestHostContext.ServiceProvider.GetService<IUriReferenceService>();
             Assert.NotNull(service);
-            var installed = VsIdeTestHostContext.ServiceProvider.GetService<IExtensionManager>().GetInstalledExtensions().First();
+            var installed = VsIdeTestHostContext.ServiceProvider.GetService<IExtensionManager>()
+                .GetInstalledExtensions().First(e => e.Header.Name.Contains("NuPattern"));
 
             Assert.True(service.CanCreateUri(installed));
             Assert.True(service.CanCreateUri<IExtension>(installed));
