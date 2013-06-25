@@ -1,14 +1,20 @@
-﻿extern alias npvs;
+﻿using Microsoft.VisualStudio.TemplateWizard;
 using System;
-using VsTemplateWizards = npvs::NuPattern.VisualStudio.TemplateWizards;
 
 namespace NuPattern.VisualStudio.TemplateWizards
 {
     /// <summary>
-    /// Proxy for the <see cref="VsTemplateWizards.FixLinkPathTemplateWizard"/> class.
+    /// Proxy for the <c>FixLinkPathTemplateWizard</c> class.
     /// </summary>
     [CLSCompliant(false)]
-    public sealed class FixLinkPathTemplateWizard : VsTemplateWizards.FixLinkPathTemplateWizard
+    public sealed class FixLinkPathTemplateWizard : WizardProxy
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FixLinkPathTemplateWizard"/> class.
+        /// </summary>
+        public FixLinkPathTemplateWizard()
+            : base(TemplateWizardInfo.FixLinkPathTemplateWizardFullTypeName)
+        {
+        }
     }
 }

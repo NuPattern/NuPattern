@@ -1,14 +1,20 @@
-﻿extern alias npvs;
+﻿using Microsoft.VisualStudio.TemplateWizard;
 using System;
-using VsTemplateWizards = npvs::NuPattern.VisualStudio.TemplateWizards;
 
 namespace NuPattern.VisualStudio.TemplateWizards
 {
     /// <summary>
-    /// Proxy for the <see cref="VsTemplateWizards.CustomToolRunnerTemplateWizard"/> class.
+    /// Proxy for the <c>CustomToolRunnerTemplateWizard</c> class.
     /// </summary>
     [CLSCompliant(false)]
-    public sealed class CustomToolRunnerTemplateWizard : VsTemplateWizards.CustomToolRunnerTemplateWizard
+    public sealed class CustomToolRunnerTemplateWizard : WizardProxy
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomToolRunnerTemplateWizard"/> class.
+        /// </summary>
+        public CustomToolRunnerTemplateWizard()
+            : base(TemplateWizardInfo.CustomToolRunnerTemplateWizardFullTypeName)
+        {
+        }
     }
 }
