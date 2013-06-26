@@ -17,11 +17,11 @@
   </PropertyGroup>
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
   <ItemGroup>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
     <Reference Include="Microsoft.VisualStudio.TemplateWizardInterface">
       <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.TemplateWizardInterface.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Shell.Immutable.10.0">
-      <HintPath>$(BranchReferencesPath)\VisualStudio\10.0\Microsoft.VisualStudio.Shell.Immutable.10.0.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -55,6 +55,7 @@
       <DependentUpon>TemplateWizardInfo.tt</DependentUpon>
     </Compile>
     <Compile Include="VsRootSuffixTemplateWizard.cs" />
+    <Compile Include="WizardProxy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\VersionInfo.tt">
@@ -65,21 +66,6 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>TemplateWizardInfo.gen.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\Library\Source\Library.csproj">
-      <Project>{c6519e4a-2077-4e80-a280-e8ba90d53a3e}</Project>
-      <Name>Library</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Common.VisualStudio\Common.VisualStudio.csproj">
-      <Project>{5dcc5923-f1d8-43f1-b23f-178c7618819e}</Project>
-      <Name>Common.VisualStudio</Name>
-      <Aliases>global,npvs</Aliases>
-    </ProjectReference>
-    <ProjectReference Include="..\Common\Common.csproj">
-      <Project>{67a9dea6-d17d-453e-b55a-72b6223da3a8}</Project>
-      <Name>Common</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

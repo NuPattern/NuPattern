@@ -1,14 +1,20 @@
-﻿extern alias npvs;
+﻿using Microsoft.VisualStudio.TemplateWizard;
 using System;
-using VsTemplateWizards = npvs::NuPattern.VisualStudio.TemplateWizards;
 
 namespace NuPattern.VisualStudio.TemplateWizards
 {
     /// <summary>
-    /// Proxy for the <see cref="VsTemplateWizards.SolutionNameGetTemplateWizard"/> class.
+    /// Proxy for the <c>SolutionNameGetTemplateWizard</c> class.
     /// </summary>
     [CLSCompliant(false)]
-    public sealed class SolutionNameGetTemplateWizard : VsTemplateWizards.SolutionNameGetTemplateWizard
+    public sealed class SolutionNameGetTemplateWizard : WizardProxy
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SolutionNameGetTemplateWizard"/> class.
+        /// </summary>
+        public SolutionNameGetTemplateWizard()
+            : base(TemplateWizardInfo.SolutionNameGetTemplateWizardFullTypeName)
+        {
+        }
     }
 }

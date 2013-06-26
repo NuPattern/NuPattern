@@ -1,27 +1,29 @@
 ﻿<#@ output extension=".gen.cs" #>
 <#@ Include File="..\..\..\MasterVersion.gen.ttinclude" #>
 <#
-var ns = "NuPattern.VisualStudio.TemplateWizards";
-var assemblyName = ns + ", Version=" + VersionInfo.TemplateWizardVersion.ToString(4) + ", Culture=neutral, PublicKeyToken=" + VersionInfo.AssemblyPublicKeyToken;
+var vsAsm = "NuPattern.VisualStudio";
+var vsNs = "NuPattern.VisualStudio.TemplateWizards";
+var libAsm = "NuPattern.Library";
+var libNs = "NuPattern.Library.TemplateWizards";
+var assemblyVersion = "Version=" + VersionInfo.AssemblyVersion + ", Culture=neutral, PublicKeyToken=" + VersionInfo.AssemblyPublicKeyToken;
 
 var templateWizards = new[]
 {
-    "CoordinatorTemplateWizard",
-    "CustomToolRunnerTemplateWizard",
-    "ElementReplacementsTemplateWizard",
-    "FixLinkPathTemplateWizard",
-    "GuidGeneratorTemplateWizard",
-    "InstantiationTemplateWizard",
-    "OpenDesignerTemplateWizard",
-    "ReplacementTemplateWizard",
-    "SolutionNameGetTemplateWizard",
-    "SolutionNameSetTemplateWizard",
-    "VsRootSuffixTemplateWizard",
+    new { Name = "CoordinatorTemplateWizard", Namespace = vsNs, Assembly = vsAsm },
+    new { Name = "CustomToolRunnerTemplateWizard", Namespace = vsNs, Assembly = vsAsm },
+    new { Name = "FixLinkPathTemplateWizard", Namespace = vsNs, Assembly = vsAsm },
+    new { Name = "GuidGeneratorTemplateWizard", Namespace = vsNs, Assembly = vsAsm },
+    new { Name = "OpenDesignerTemplateWizard", Namespace = vsNs, Assembly = vsAsm },
+    new { Name = "ReplacementTemplateWizard", Namespace = vsNs, Assembly = vsAsm },
+    new { Name = "SolutionNameGetTemplateWizard", Namespace = vsNs, Assembly = vsAsm },
+    new { Name = "SolutionNameSetTemplateWizard", Namespace = vsNs, Assembly = vsAsm },
+    new { Name = "VsRootSuffixTemplateWizard", Namespace = vsNs, Assembly = vsAsm },
+    new { Name = "InstantiationTemplateWizard", Namespace = libNs, Assembly = libAsm },
+    new { Name = "ElementReplacementsTemplateWizard", Namespace = libNs, Assembly = libAsm },
 };
 
 #>
-
-namespace <#=ns #>
+namespace <#= vsNs #>
 {
     /// <summary>
     /// Information about TemplateWizards.
@@ -32,7 +34,7 @@ namespace <#=ns #>
     foreach (var templateWizard in templateWizards)
     {
 #>
-        public const string <#=templateWizard#>FullTypeName = "<#=ns#>.<#=templateWizard#>, <#=assemblyName #>";
+        public const string <#=templateWizard.Name#>FullTypeName = "<#= templateWizard.Namespace #>.<#=templateWizard.Name#>, <#=templateWizard.Assembly #>, <#= assemblyVersion #>";
 <#
 
     }

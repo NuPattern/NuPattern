@@ -1,12 +1,20 @@
-﻿using System;
+﻿using Microsoft.VisualStudio.TemplateWizard;
+using System;
 
 namespace NuPattern.VisualStudio.TemplateWizards
 {
     /// <summary>
-    /// Proxy for the <see cref="Library.TemplateWizards.InstantiationTemplateWizard"/> class.
+    /// Proxy for the <c>InstantiationTemplateWizard</c> class.
     /// </summary>
     [CLSCompliant(false)]
-    public sealed class InstantiationTemplateWizard : Library.TemplateWizards.InstantiationTemplateWizard
+    public sealed class InstantiationTemplateWizard : WizardProxy
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="InstantiationTemplateWizard"/> class.
+        /// </summary>
+        public InstantiationTemplateWizard()
+            : base(TemplateWizardInfo.InstantiationTemplateWizardFullTypeName)
+        {
+        }
     }
 }
