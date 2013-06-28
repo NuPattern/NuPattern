@@ -14,6 +14,8 @@
     <OldToolsVersion Condition="'$(VisualStudioVersion)' == '11.0'">4.0</OldToolsVersion>
     <MinimumVisualStudioVersion>$(VisualStudioVersion)</MinimumVisualStudioVersion>
     <BranchReferencesPath>$(BranchRoot)..\Lib</BranchReferencesPath>
+    <!-- http://connect.microsoft.com/VisualStudio/feedback/details/540902 -->
+    <TrackFileAccess>false</TrackFileAccess>
   </PropertyGroup>
 
   <!-- Common Assembly Properties -->

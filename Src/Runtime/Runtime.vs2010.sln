@@ -47,7 +47,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime.Core", "Source\Runt
 		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime.UnitTests", "UnitTests\Runtime.UnitTests.csproj", "{D43AF2D1-F811-4AC8-B5B5-0D4360731385}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime.UnitTests", "Tests\Runtime.UnitTests\Runtime.UnitTests.csproj", "{D43AF2D1-F811-4AC8-B5B5-0D4360731385}"
 	ProjectSection(ProjectDependencies) = postProject
 		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
 	EndProjectSection
@@ -87,17 +87,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime.Schema", "Source\Ru
 		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime.Schema.UnitTests", "Runtime.Schema.UnitTests\Runtime.Schema.UnitTests.csproj", "{1249F63B-95F5-47E3-BC06-BC92BFCE9C0E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime.Schema.UnitTests", "Tests\Runtime.Schema.UnitTests\Runtime.Schema.UnitTests.csproj", "{1249F63B-95F5-47E3-BC06-BC92BFCE9C0E}"
 	ProjectSection(ProjectDependencies) = postProject
 		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime.Extensibility.UnitTests", "Runtime.Extensibility.UnitTests\Runtime.Extensibility.UnitTests.csproj", "{87E50B58-FF4A-434F-A800-5455E86BEBDD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime.Extensibility.UnitTests", "Tests\Runtime.Extensibility.UnitTests\Runtime.Extensibility.UnitTests.csproj", "{87E50B58-FF4A-434F-A800-5455E86BEBDD}"
 	ProjectSection(ProjectDependencies) = postProject
 		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime.IntegrationTests", "IntegrationTests\Runtime.IntegrationTests.csproj", "{727AFA69-15BC-4899-95CD-920B466BF9C1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime.IntegrationTests", "Tests\IntegrationTests\Runtime.IntegrationTests.csproj", "{727AFA69-15BC-4899-95CD-920B466BF9C1}"
 	ProjectSection(ProjectDependencies) = postProject
 		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
 		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF} = {CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}
@@ -114,12 +114,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.IntegrationTests", 
 		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime.IntegrationTests.SampleVsix", "IntegrationTests.SampleVsix\Runtime.IntegrationTests.SampleVsix.csproj", "{BBD7F731-F49B-4A10-90A0-9CDE33D6B745}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime.IntegrationTests.SampleVsix", "Tests\IntegrationTests.SampleVsix\Runtime.IntegrationTests.SampleVsix.csproj", "{BBD7F731-F49B-4A10-90A0-9CDE33D6B745}"
 	ProjectSection(ProjectDependencies) = postProject
 		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime.Extensibility.IntegrationTests", "Runtime.Extensibility.IntegrationTests\Runtime.Extensibility.IntegrationTests.csproj", "{206ED22C-1F59-40D6-8B49-14B2A56DC9D2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime.Extensibility.IntegrationTests", "Tests\Runtime.Extensibility.IntegrationTests\Runtime.Extensibility.IntegrationTests.csproj", "{206ED22C-1F59-40D6-8B49-14B2A56DC9D2}"
 	ProjectSection(ProjectDependencies) = postProject
 		{D3E93083-99C9-4186-95B5-339A822C63EE} = {D3E93083-99C9-4186-95B5-339A822C63EE}
 		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
@@ -137,7 +137,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime.Extensibility.Seria
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Versioning", "..\Common\Source\Versioning\Versioning.csproj", "{AE530C9B-34B7-416F-8477-15B8257CDAC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime.IntegrationTests.TestToolkit", "IntegrationTests.TestToolkit\Runtime.IntegrationTests.TestToolkit.csproj", "{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime.IntegrationTests.TestToolkit", "Tests\IntegrationTests.TestToolkit\Runtime.IntegrationTests.TestToolkit.csproj", "{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}"
 	ProjectSection(ProjectDependencies) = postProject
 		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
 	EndProjectSection

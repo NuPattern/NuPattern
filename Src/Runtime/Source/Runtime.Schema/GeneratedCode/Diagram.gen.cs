@@ -158,41 +158,35 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		private void CompartmentItemAdded(object sender, DslModeling::ElementAddedEventArgs e)
 		{
-			// If in Undo, Redo or Rollback the compartment item rules are not run so we must refresh the compartment list at this point if required
-			bool repaintOnly = !e.ModelElement.Store.InUndoRedoOrRollback;
-			CompartmentItemAddRule.ElementAdded(e, repaintOnly);
+			CompartmentItemAddRule.ElementAdded(e, true /* repaint only */);
 		}
 		/// <summary>
 		/// Event for element deleted.
 		/// </summary>
 		private void CompartmentItemDeleted(object sender, DslModeling::ElementDeletedEventArgs e)
 		{
-			bool repaintOnly = !e.ModelElement.Store.InUndoRedoOrRollback;
-			CompartmentItemDeleteRule.ElementDeleted(e, repaintOnly);
+			CompartmentItemDeleteRule.ElementDeleted(e, true /* repaint only */);
 		}
 		/// <summary>
 		/// Event for element property changed.
 		/// </summary>
 		private void CompartmentItemPropertyChanged(object sender, DslModeling::ElementPropertyChangedEventArgs e)
 		{
-			bool repaintOnly = !e.ModelElement.Store.InUndoRedoOrRollback;
-			CompartmentItemChangeRule.ElementPropertyChanged(e, repaintOnly);
+			CompartmentItemChangeRule.ElementPropertyChanged(e, true /* repaint only */);
 		}
 		/// <summary>
 		/// Event for role-player changed.
 		/// </summary>
 		private void CompartmentItemRolePlayerChanged(object sender, DslModeling::RolePlayerChangedEventArgs e)
 		{
-			bool repaintOnly = !e.ElementLink.Store.InUndoRedoOrRollback;
-			CompartmentItemRolePlayerChangeRule.RolePlayerChanged(e, repaintOnly);
+			CompartmentItemRolePlayerChangeRule.RolePlayerChanged(e, true /* repaint only */);
 		}
 		/// <summary>
 		/// Event for role-player order changed.
 		/// </summary>
 		private void CompartmentItemRolePlayerOrderChanged(object sender, DslModeling::RolePlayerOrderChangedEventArgs e)
 		{
-			bool repaintOnly = !e.Link.Store.InUndoRedoOrRollback;
-			CompartmentItemRolePlayerPositionChangeRule.RolePlayerPositionChanged(e, repaintOnly);
+			CompartmentItemRolePlayerPositionChangeRule.RolePlayerPositionChanged(e, true /* repaint only */);
 		}
 		#endregion
 		#endregion

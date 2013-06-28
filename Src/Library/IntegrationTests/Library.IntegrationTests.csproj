@@ -13,11 +13,9 @@
     <AssemblyName>NuPattern.Library.IntegrationTests</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\Runtime\</SolutionDir>
-    <RestorePackages>true</RestorePackages>
-  </PropertyGroup>
-  <PropertyGroup>
     <BranchRoot>..\..\</BranchRoot>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">$(BranchRoot)Runtime\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
   <ItemGroup>
@@ -93,11 +91,11 @@
     <CodeAnalysisDictionary Include="..\..\CodeAnalysis.Dictionary.xml">
       <Link>Properties\CodeAnalysis.Dictionary.xml</Link>
     </CodeAnalysisDictionary>
-    <Content Include="..\..\Runtime\IntegrationTests.TestToolkit\Assets\Templates\Projects\MyTemplate1\MyTemplate1.gen.vstemplate">
+    <Content Include="..\..\Runtime\Tests\IntegrationTests.TestToolkit\Assets\Templates\Projects\MyTemplate1\MyTemplate1.gen.vstemplate">
       <Link>Library.IntegrationTests.Content\MyTemplate1.gen.vstemplate</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\..\Runtime\IntegrationTests.TestToolkit\Assets\Templates\Projects\MyTemplate2\MyTemplate2.gen.vstemplate">
+    <Content Include="..\..\Runtime\Tests\IntegrationTests.TestToolkit\Assets\Templates\Projects\MyTemplate2\MyTemplate2.gen.vstemplate">
       <Link>Library.IntegrationTests.Content\MyTemplate2.gen.vstemplate</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

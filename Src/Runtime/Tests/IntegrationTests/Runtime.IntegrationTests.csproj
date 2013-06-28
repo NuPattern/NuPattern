@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{727AFA69-15BC-4899-95CD-920B466BF9C1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NuPattern.Runtime.IntegrationTests</RootNamespace>
+    <AssemblyName>NuPattern.Runtime.IntegrationTests</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <BranchRoot>..\..\..\</BranchRoot>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">$(BranchRoot)Runtime\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
+  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.VsixProjects.gen.props" />
+  <ItemGroup>
+    <Reference Include="EnvDTE">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\envdte.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.ExtensibilityHosting">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ExtensibilityHosting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.ComponentModelHost">
+      <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ComponentModelHost.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix)">
+      <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix).dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Shell$(DslToolsVersionSuffix)" Condition="'$(TargetVsVersion)' == '10.0'">
+      <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk.Shell$(DslToolsVersionSuffix).dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Integration$(DslToolsVersionSuffix)">
+      <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk.Integration$(DslToolsVersionSuffix).dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Settings" Condition="'$(TargetVsVersion)' == '10.0'">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\10.0\Microsoft.VisualStudio.Settings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0" Condition="'$(TargetVsVersion)' == '10.0'">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.Shell.Interop.8.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.9.0" Condition="'$(TargetVsVersion)' == '10.0'">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.Shell.Interop.9.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell$(VsxVersionSuffix)">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.Shell$(VsxVersionSuffix).dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TextTemplating.Interfaces.10.0">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\10.0\Microsoft.VisualStudio.TextTemplating.Interfaces.10.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TemplateWizardInterface" Condition="'$(TargetVsVersion)' == '10.0'">
+      <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.TemplateWizardInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+      <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VSSDK.TestHostFramework">
+      <HintPath>$(BranchReferencesPath)\VSSDK\$(TargetVsVersion)\Microsoft.VSSDK.TestHostFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ComponentModel.Composition.Diagnostics">
+      <HintPath>$(BranchRoot)..\Lib\MEF\Microsoft.ComponentModel.Composition.Diagnostics.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Moq">
+      <HintPath>$(SolutionDir)packages\Moq.4.0.10827\lib\NET40\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\Common\Helpers\Assertions.cs">
+      <Link>Assertions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\Helpers\IntegrationTest.cs">
+      <Link>IntegrationTest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\Helpers\VsixPackagingSpec.cs">
+      <Link>VsixPackagingSpec.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\GlobalAssemblyInfo.gen.cs">
+      <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
+    </Compile>
+    <Compile Include="Shell\ComponentModelExportsSpec.cs" />
+    <None Include="Shell\RuntimeShellVsixPackagingSpec.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>RuntimeShellVsixPackagingSpec.gen.cs</LastGenOutput>
+    </None>
+    <Compile Include="Shell\GuidanceExtensionSpec.cs" />
+    <Compile Include="InstalledToolkitInfoSpec.cs" />
+    <Compile Include="Core\UriProviders\PackUriProviderSpec.cs" />
+    <Compile Include="Shell\RuntimeShellVsixPackagingSpec.gen.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RuntimeShellVsixPackagingSpec.tt</DependentUpon>
+    </Compile>
+    <Content Include="Runtime.IntegrationTests.Content\PackUriProvider\LinkedBitmap1.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Runtime.IntegrationTests.Content\PackUriProvider\TestIcon.bmp" />
+    <Content Include="Runtime.IntegrationTests.Content\PackUriProvider\TestProviders.sln">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Runtime.IntegrationTests.Content\PackUriProvider\TestProviders\Resources\Bitmap1.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Runtime.IntegrationTests.Content\PackUriProvider\TestProviders\Resources\Bitmap2 With Spaces.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Runtime.IntegrationTests.Content\PackUriProvider\TestProviders\TopLevelProject.csproj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Runtime.IntegrationTests.Content\Sample\SolutionFolder\Library\Properties\AssemblyInfo.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Runtime.IntegrationTests.Content\SolutionUriProvider\TestProviders2\TopProjectItem.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Runtime.IntegrationTests.Content\SolutionUriProvider\TestProviders\TopProjectFolder\SecProjectFolder\SecProjectFolderItem.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Runtime.IntegrationTests.Content\SolutionUriProvider\TestProviders\TopProjectFolder\SecProjectFolder\TrdProjectFolder\TrdProjectFolderItem.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Runtime.IntegrationTests.Content\SolutionUriProvider\TestProviders\TopProjectFolder\TopProjectFolderItem.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Runtime.IntegrationTests.Content\SolutionUriProvider\TestProviders\TopProjectItem.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Compile Include="Core\PatternManagerSpec.cs" />
+    <Content Include="Runtime.IntegrationTests.Content\SolutionUriProvider\TestProviders2\TopProjectItemWithItemGuid.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Compile Include="Shell\RuntimeShellPackageSpec.cs" />
+    <Compile Include="Store\StoreAdapterSpec.cs" />
+    <Compile Include="EventsIntegrationSpec.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Core\UriProviders\SolutionUriProviderSpec.cs" />
+    <Compile Include="Shell\MefLogger.cs" />
+    <Content Include="Runtime.IntegrationTests.Content\Sample\Sample.sln">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Runtime.IntegrationTests.Content\Sample\SolutionFolder\Library\Library.csproj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Runtime.IntegrationTests.Content\SolutionUriProvider\SecSolutionItem.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Runtime.IntegrationTests.Content\SolutionUriProvider\TestProviders2\Properties\AssemblyInfo.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Runtime.IntegrationTests.Content\SolutionUriProvider\TestProviders2\TrdProject.csproj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Runtime.IntegrationTests.Content\SolutionUriProvider\TestProviders\Properties\AssemblyInfo.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Compile Include="Core\Settings\SettingsManagerSpec.cs" />
+    <Compile Include="Core\UriProviders\TemplateUriProviderSpec.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Core\UriProviders\TextTemplateSpec.cs" />
+    <Compile Include="Core\UriProviders\VsixExtensionUriProviderSpec.cs" />
+    <Compile Include="Core\UriProviders\VsTemplateUriProviderSpec.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDictionary Include="..\..\..\CodeAnalysis.Dictionary.xml">
+      <Link>Properties\CodeAnalysis.Dictionary.xml</Link>
+    </CodeAnalysisDictionary>
+    <Content Include="Runtime.IntegrationTests.Content\SolutionUriProvider\TestProviders.sln">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Runtime.IntegrationTests.Content\SolutionUriProvider\TestProviders\TopProject.csproj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Runtime.IntegrationTests.Content\SolutionUriProvider\TrdSolutionItem.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Runtime.IntegrationTests.Content\SolutionUriProvider\TopSolutionItem.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\Source\Common\Common.csproj">
+      <Project>{67a9dea6-d17d-453e-b55a-72b6223da3a8}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Source\Runtime.Extensibility\Runtime.Extensibility.csproj">
+      <Project>{76718F52-8F7E-43B4-9085-EF08DB52AC46}</Project>
+      <Name>Runtime.Extensibility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common\Source\Common.VisualStudio\Common.VisualStudio.csproj">
+      <Project>{5dcc5923-f1d8-43f1-b23f-178c7618819e}</Project>
+      <Name>Common.VisualStudio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IntegrationTests.SampleVsix\Runtime.IntegrationTests.SampleVsix.csproj">
+      <Project>{BBD7F731-F49B-4A10-90A0-9CDE33D6B745}</Project>
+      <Name>Runtime.IntegrationTests.SampleVsix</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IntegrationTests.TestToolkit\Runtime.IntegrationTests.TestToolkit.csproj">
+      <Project>{cb2872d6-f4b1-493c-be4e-b590c03f5fef}</Project>
+      <Name>Runtime.IntegrationTests.TestToolkit</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Source\Runtime.Guidance\Runtime.Guidance.csproj">
+      <Project>{6DDE6662-D037-45C1-8E80-960828CEB21C}</Project>
+      <Name>Runtime.Guidance</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Source\Runtime.Shell\Runtime.Shell.csproj">
+      <Project>{D3E93083-99C9-4186-95B5-339A822C63EE}</Project>
+      <Name>Runtime.Shell</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Source\Runtime.Store\Runtime.Store.csproj">
+      <Project>{0EF7E7D4-B10B-4FC9-B4D0-66E360F4338A}</Project>
+      <Name>Runtime.Store</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Source\Runtime.Core\Runtime.Core.csproj">
+      <Project>{79A7E018-1A92-47F4-A478-17BCC57CC7AD}</Project>
+      <Name>Runtime.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Runtime.IntegrationTests.Content\UnfoldTemplate\BlankSolution.sln">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Runtime.IntegrationTests.Content\TextTemplate\TestTextTemplate.t4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Runtime.IntegrationTests.Content\Sample\SolutionFolder\Library\Folder\" />
+    <Folder Include="Schema\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(SolutionDir)..\Binaries\$(TargetVSVersion)\$(RuntimeShellVsixFileName)">
+      <Link>Runtime.IntegrationTests.Content\$(RuntimeShellVsixFileName)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Runtime.IntegrationTests.Content\Sample\Sample.gen.slnbldr">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sample.tt</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Runtime.IntegrationTests.Content\Sample\Sample.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Sample.gen.slnbldr</LastGenOutput>
+    </None>
+    <None Include="Runtime.IntegrationTests.Content\Toolkit1.vsix">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.TestProjects.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+</Project>
