@@ -29,6 +29,7 @@ using NuPattern.Runtime.Settings;
 using NuPattern.Runtime.Shell.Commands;
 using NuPattern.Runtime.Shell.OptionPages;
 using NuPattern.Runtime.Shell.Properties;
+using NuPattern.Runtime.Shell.Shortcuts;
 using NuPattern.Runtime.Shell.ToolWindows;
 using NuPattern.Runtime.Store;
 using NuPattern.Runtime.ToolkitInterface;
@@ -48,6 +49,8 @@ namespace NuPattern.Runtime.Shell
     [ProvideAutoLoad(UIContextGuids.NoSolution)]
     [PackageRegistration(UseManagedResourcesOnly = true)]
     [ProvideMenuResource(@"Menus.ctmenu", 1)]
+    [ProvideEditorExtension(typeof(ShortcutEditorFactory), Constants.GuidanceShortcutExtension, 32, DefaultName = "")]
+    [ProvideEditorExtension(typeof(ShortcutEditorFactory), Constants.PatternShortcutExtension, 32, DefaultName = "")]
     [ProvideToolWindow(typeof(SolutionBuilderToolWindow), Window = ToolWindowGuids.Toolbox, Orientation = ToolWindowOrientation.Right, Style = VsDockStyle.Tabbed)]
     [ProvideToolWindow(typeof(GuidanceExplorerToolWindow), Window = Constants.SolutionBuilderToolWindowGuid, Orientation = ToolWindowOrientation.Bottom, Style = VsDockStyle.Linked)]
     [ProvideToolWindow(typeof(GuidanceBrowserToolWindow), Window = ToolWindowGuids.TaskList, Style = VsDockStyle.Tabbed)]
@@ -179,6 +182,7 @@ namespace NuPattern.Runtime.Shell
 
             this.InitializeCommands();
             this.RegisterEditorFactory(new ProductStateEditorFactory(this.PatternManager));
+            this.RegisterEditorFactory(new ShortcutEditorFactory(this));
             this.productStateValidator = new ProductStateValidator(this);
 
             this.ShellEvents.ShellInitialized += OnShellInitialized;

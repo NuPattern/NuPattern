@@ -26,6 +26,21 @@ namespace NuPattern.Runtime.Shell
         public const string RuntimeShellPkgGuid = @"93373818-600f-414b-8181-3a0cb79fa785";
 
         /// <summary>
+        /// The GUID for the shortcut editor.
+        /// </summary>
+        public const string ShortcutEditorGuid = @"7E1A5664-96C1-4CA3-8FE7-C1E26E5752A7";
+
+        /// <summary>
+        /// Guidance shortcut extension.
+        /// </summary>
+        public const string GuidanceShortcutExtension = @".guidance";
+
+        /// <summary>
+        /// Pattern shortcut extension.
+        /// </summary>
+        public const string PatternShortcutExtension = @".pattern";
+
+        /// <summary>
         /// Description for the runtime store T4 process
         /// </summary>
         public const string ProductStateStoreDirectiveProcessorDescription = @"Provides access to the solution builder store.";

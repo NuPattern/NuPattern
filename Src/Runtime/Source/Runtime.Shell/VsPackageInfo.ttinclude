@@ -8,6 +8,7 @@ internal static class RuntimeShellPackageInfo
     public const string OutputWindowTitle = "NuPattern Toolkit Extensions";
     public const string OptionPageCategory = "NuPattern Toolkit Extensions";
     public const string OptionPageSubCategoryTracing = "Tracing";
+    public const string ShortcutEditorGuid = "7E1A5664-96C1-4CA3-8FE7-C1E26E5752A7";
 
     internal static class SolutionBuilder
     {

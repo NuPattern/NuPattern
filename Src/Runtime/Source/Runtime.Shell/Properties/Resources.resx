@@ -158,6 +158,12 @@ To remedy this problem, open the 'Extension Manager' window in Visual Studio (To
   <data name="RuntimeShellPackage_OnAssemblyResolved_UnexpectedError" xml:space="preserve">
     <value>Unexpected error resolving partially named assembly, the error was: {0}</value>
   </data>
+  <data name="ShortcutEditorFactory_ErrorShortcutFormat" xml:space="preserve">
+    <value>Shortcut cannot be executed, file content is invalid.</value>
+  </data>
+  <data name="ShortcutEditorFactory_ErrorShortcutIO" xml:space="preserve">
+    <value>Shortcut cannot be read or written to file. Check the permissions to the file and whether the file is locked.</value>
+  </data>
   <data name="SolutionBuilderToolWindow_WindowTitle" xml:space="preserve">
     <value>Solution Builder</value>
   </data>

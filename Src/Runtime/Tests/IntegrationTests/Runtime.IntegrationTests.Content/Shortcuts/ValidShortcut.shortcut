@@ -1,0 +1,7 @@
+<shortcut type="custom">
+  <description>somedescription</description>
+  <parameters>
+    <parameter key="foo" value="bar"/>
+    <parameter key="foo2" value="bar2"/>
+  </parameters>
+</shortcut>
