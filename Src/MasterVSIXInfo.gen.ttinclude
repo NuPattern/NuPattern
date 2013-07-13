@@ -60,9 +60,9 @@ public static class VsixInfo
     {
         public const string Name = "Microsoft Visual Studio SDK";
         public const string Author = "Microsoft";
-        public const string Version = "10.0";
+        public const string Version = "11.0";
         public const string Identifier = "Microsoft.VisualStudio.SDK";
-        public const string MoreInfoUrl = "http://www.microsoft.com/en-us/download/details.aspx?id=2680";
+        public const string MoreInfoUrl = "http://www.microsoft.com/en-us/download/details.aspx?id=30668";
     }
 }
 #>
