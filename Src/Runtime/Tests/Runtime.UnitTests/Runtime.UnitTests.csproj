@@ -108,6 +108,8 @@
     <Compile Include="Core\ShortcutProviders\ShortcutLaunchServiceSpec.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Core\UriProviders\RuntimeElementUriProviderSpec.cs" />
+    <Compile Include="Guidance\ShortcutProviders\GudianceShortcutProviderSpec.cs" />
+    <Compile Include="Guidance\ShortcutProviders\GuidanceShortcutSpec.cs" />
     <Compile Include="Shell\Shortcuts\ShortcutLaunchCoordinatorSpec.cs" />
     <Compile Include="Store\DomainModel\PatternElementValidationSpec.cs" />
     <Compile Include="Core\PatternManagerExtensionsSpec.cs" />
@@ -165,6 +167,10 @@
     <ProjectReference Include="..\..\..\Common\Source\Common.VisualStudio\Common.VisualStudio.csproj">
       <Project>{5dcc5923-f1d8-43f1-b23f-178c7618819e}</Project>
       <Name>Common.VisualStudio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Source\Runtime.Guidance\Runtime.Guidance.csproj">
+      <Project>{6DDE6662-D037-45C1-8E80-960828CEB21C}</Project>
+      <Name>Runtime.Guidance</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Source\Runtime.Shell\Runtime.Shell.csproj">
       <Project>{d3e93083-99c9-4186-95b5-339a822c63ee}</Project>

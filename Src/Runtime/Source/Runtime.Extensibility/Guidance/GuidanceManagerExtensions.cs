@@ -19,7 +19,10 @@ namespace NuPattern.Runtime.Guidance
         /// </summary>
         public static bool IsInstalled(this IGuidanceManager manager, string extensionId)
         {
-            return manager.InstalledGuidanceExtensions.Any(registration => registration.ExtensionId == extensionId);
+            Guard.NotNull(() => manager, manager);
+            Guard.NotNullOrEmpty(() => extensionId, extensionId);
+
+            return manager.FindRegistration(extensionId) != null;
         }
 
         /// <summary>
@@ -27,7 +30,46 @@ namespace NuPattern.Runtime.Guidance
         /// </summary>
         public static bool IsInstantiated(this IGuidanceManager manager, string extensionId)
         {
-            return manager.InstantiatedGuidanceExtensions.Any(e => e.ExtensionId == extensionId);
+            Guard.NotNull(() => manager, manager);
+            Guard.NotNullOrEmpty(() => extensionId, extensionId);
+
+            return manager.InstantiatedGuidanceExtensions.Any(ge => ge.ExtensionId.Equals(extensionId, StringComparison.OrdinalIgnoreCase));
+        }
+
+        /// <summary>
+        /// Gets whether the given guidance extension has been instantiated in the solution.
+        /// </summary>
+        public static bool IsInstantiated(this IGuidanceManager manager, string extensionId, string instanceName)
+        {
+            Guard.NotNull(() => manager, manager);
+            Guard.NotNullOrEmpty(() => extensionId, extensionId);
+            Guard.NotNullOrEmpty(() => instanceName, instanceName);
+
+            return FindInstance(manager, extensionId, instanceName) != null;
+        }
+
+        /// <summary>
+        /// Gets the registration with given extension 
+        /// </summary>
+        public static IGuidanceExtensionRegistration FindRegistration(this IGuidanceManager manager, string extensionId)
+        {
+            Guard.NotNull(() => manager, manager);
+            Guard.NotNullOrEmpty(() => extensionId, extensionId);
+
+            return manager.InstalledGuidanceExtensions.FirstOrDefault(reg => reg.ExtensionId.Equals(extensionId, StringComparison.OrdinalIgnoreCase));
+        }
+
+        /// <summary>
+        /// Gets the instance with given name and extension 
+        /// </summary>
+        public static IGuidanceExtension FindInstance(this IGuidanceManager manager, string extensionId, string instanceName)
+        {
+            Guard.NotNull(() => manager, manager);
+            Guard.NotNullOrEmpty(() => extensionId, extensionId);
+            Guard.NotNullOrEmpty(() => instanceName, instanceName);
+
+            return manager.InstantiatedGuidanceExtensions.FirstOrDefault(ge => ge.ExtensionId.Equals(extensionId, StringComparison.OrdinalIgnoreCase)
+                && ge.InstanceName.Equals(instanceName, StringComparison.OrdinalIgnoreCase));
         }
 
         /// <summary>
@@ -48,7 +90,7 @@ namespace NuPattern.Runtime.Guidance
             Guard.NotNull(() => baseName, baseName);
 
             return UniqueNameGenerator.EnsureUnique(baseName,
-                newName => !guidanceManager.InstantiatedGuidanceExtensions.Any(e => e.InstanceName.Equals(newName, StringComparison.OrdinalIgnoreCase)));
+                newName => !guidanceManager.InstantiatedGuidanceExtensions.Any(ge => ge.InstanceName.Equals(newName, StringComparison.OrdinalIgnoreCase)));
         }
 
         /// <summary>
@@ -77,6 +119,7 @@ namespace NuPattern.Runtime.Guidance
         public static void ActivateSharedGuidanceWorkflow(this IGuidanceManager guidanceManager, IServiceProvider provider, string extensionId)
         {
             Guard.NotNull(() => guidanceManager, guidanceManager);
+            Guard.NotNull(() => provider, provider);
             Guard.NotNullOrEmpty(() => extensionId, extensionId);
 
             var registration = guidanceManager.InstalledGuidanceExtensions.First(e => e.ExtensionId == extensionId);
@@ -113,6 +156,7 @@ namespace NuPattern.Runtime.Guidance
         public static void ActivateGuidanceInstance(this IGuidanceManager guidanceManager, IServiceProvider provider, IGuidanceExtension instance)
         {
             Guard.NotNull(() => guidanceManager, guidanceManager);
+            Guard.NotNull(() => provider, provider);
             Guard.NotNull(() => instance, instance);
 
             if (provider != null)
@@ -122,22 +166,34 @@ namespace NuPattern.Runtime.Guidance
 
             tracer.Info(Resources.GuidanceManagerExtensions_TraceActivation, instance.InstanceName);
 
-            // (workaround) Force a refresh of the active guidance extension in Guidance Explorer
-            guidanceManager.ActiveGuidanceExtension = null;
+            // Activate guidance extension in Guidance Explorer
             guidanceManager.ActiveGuidanceExtension = instance;
         }
 
         /// <summary>
-        /// Determines whether the given guidance extension extension is installed and registered.
+        /// Instantiates a new guidance workflow instance, and displays the guidance workflow in the guidance toolwindows.
         /// </summary>
-        /// <returns></returns>
         [CLSCompliant(false)]
-        public static bool IsGuidanceRegistered(this IGuidanceManager guidanceManager, string extensionId)
+        public static IGuidanceExtension InstantiateGuidanceInstance(this IGuidanceManager guidanceManager, IServiceProvider provider, string extensionId, string instanceName)
         {
             Guard.NotNull(() => guidanceManager, guidanceManager);
+            Guard.NotNull(() => provider, provider);
             Guard.NotNullOrEmpty(() => extensionId, extensionId);
 
-            return guidanceManager.InstalledGuidanceExtensions.Any(e => e.ExtensionId == extensionId);
+            if (provider != null)
+            {
+                guidanceManager.ShowGuidanceWindows(provider);
+            }
+
+            tracer.Info(Resources.GuidanceManagerExtensions_TraceInstantiation, extensionId, instanceName);
+
+            // Create a new instance of guidance workflow
+            var instance = guidanceManager.Instantiate(extensionId, instanceName);
+
+            // Activate guidance extension in Guidance Explorer
+            guidanceManager.ActiveGuidanceExtension = instance;
+
+            return instance;
         }
     }
 }

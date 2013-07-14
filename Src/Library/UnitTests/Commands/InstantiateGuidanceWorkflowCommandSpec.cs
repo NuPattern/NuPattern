@@ -89,7 +89,7 @@ namespace NuPattern.Library.UnitTests.Commands
                 this.command.Execute();
 
                 this.mockManager.Verify(fm => fm.Instantiate(this.command.ExtensionId, "DefaultInstanceName"), Times.Once());
-                this.mockManager.VerifySet(fm => fm.ActiveGuidanceExtension = mockExtension.Object, Times.Never());
+                this.mockManager.VerifySet(fm => fm.ActiveGuidanceExtension = mockExtension.Object, Times.Once());
             }
 
             [TestMethod, TestCategory("Unit")]
@@ -114,7 +114,7 @@ namespace NuPattern.Library.UnitTests.Commands
                 this.command.Execute();
 
                 this.mockManager.Verify(fm => fm.Instantiate(this.command.ExtensionId, "DefaultInstanceName"), Times.Once());
-                this.mockManager.VerifySet(fm => fm.ActiveGuidanceExtension = mockExtension.Object, Times.Never());
+                this.mockManager.VerifySet(fm => fm.ActiveGuidanceExtension = mockExtension.Object, Times.Once());
 
                 Assert.Equal(ReferenceKindConstants.Guidance, reference.Object.Kind);
                 Assert.Equal("DefaultInstanceName", reference.Object.Value);

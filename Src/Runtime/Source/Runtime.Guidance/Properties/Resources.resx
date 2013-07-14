@@ -226,4 +226,16 @@
   <data name="ProjectTypeProvider_TraceLoadProjectTypes" xml:space="preserve">
     <value>Retrieving types from project {0}</value>
   </data>
+  <data name="GuidanceShortcutProvider_ActivateInstanceNotFound" xml:space="preserve">
+    <value>The guidance workflow with name '{0}' has not yet been created, and cannot be displayed.</value>
+  </data>
+  <data name="GuidanceShortcutProvider_ActivateSharedExtensionNotFound" xml:space="preserve">
+    <value>The guidance extension with identifier '{0}' is not yet installed, and cannot be used to display or create a new instance of this workflow.</value>
+  </data>
+  <data name="GuidanceShortcutProvider_InstantiateExtensionNotFound" xml:space="preserve">
+    <value>The guidance extension with identifier '{0}' is not yet installed, and cannot be used to create a new instance of this workflow.</value>
+  </data>
+  <data name="GuidanceShortcutProvider_InvalidParameters" xml:space="preserve">
+    <value>The shortcut configuration is missing vital information necessary to display any guidance.</value>
+  </data>
 </root>

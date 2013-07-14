@@ -66,9 +66,10 @@ namespace NuPattern.Runtime.ShortcutProviders
 
             try
             {
-                dynamic provider = GetProvidersAssignableTo(shortcut.Type, typeof(T)).Single();
                 // it is not ok to cast provider to IShortcutProvider<T> this would only be valid of IShortcutProvider<T> is covariant.
-                return provider.ResolveShortcut(shortcut);
+                dynamic provider = GetProvidersAssignableTo(shortcut.Type, typeof(T)).Single();
+                return provider.GetType().InvokeMember(@"ResolveShortcut",
+                    BindingFlags.Public | BindingFlags.Instance | BindingFlags.InvokeMethod, null, provider, new object[] { shortcut });
             }
             catch (Exception ex)
             {
@@ -91,9 +92,10 @@ namespace NuPattern.Runtime.ShortcutProviders
 
             try
             {
-                dynamic provider = GetProvidersAssignableTo(shortcut.Type).Single();
                 // it is not ok to cast provider to IShortcutProvider<T> this would only be valid of IShortcutProvider<T> is covariant.
-                return provider.ResolveShortcut(shortcut);
+                dynamic provider = GetProvidersAssignableTo(shortcut.Type).Single();
+                return (IShortcut)provider.GetType().InvokeMember(@"ResolveShortcut",
+                    BindingFlags.Public | BindingFlags.Instance | BindingFlags.InvokeMethod, null, provider, new object[] { shortcut });
             }
             catch (Exception ex)
             {

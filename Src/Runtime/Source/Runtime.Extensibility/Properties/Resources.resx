@@ -326,7 +326,7 @@
     <value>Showing guidance windows</value>
   </data>
   <data name="GuidanceManagerExtensions_TraceActivation" xml:space="preserve">
-    <value>Activating guidance workflow '{0}'</value>
+    <value>Activating guidance workflow with name '{0}'</value>
   </data>
   <data name="ImageUriEditor_EmptyItemsMessage" xml:space="preserve">
     <value>There were no image files ({0}) found in the current solution.
@@ -647,5 +647,8 @@ Please add a new or existing image file {0} to the project and try again.</value
   </data>
   <data name="ToolkitInterfaceLayer_TraceFailedInstantiation" xml:space="preserve">
     <value>Failed to instantiate the interface layer proxy type '{0}'.</value>
+  </data>
+  <data name="GuidanceManagerExtensions_TraceInstantiation" xml:space="preserve">
+    <value>Instantiating guidance workflow from extension '{0}' with default name '{1}'</value>
   </data>
 </root>

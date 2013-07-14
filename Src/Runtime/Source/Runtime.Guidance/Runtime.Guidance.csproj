@@ -73,6 +73,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="ShortcutProviders\GuidanceShortcut.cs" />
+    <Compile Include="ShortcutProviders\GuidanceShortcutProvider.cs" />
+    <Compile Include="ShortcutProviders\GuidanceShortcutType.cs" />
     <Compile Include="UI\ViewModels\GuidanceBrowserContext.cs" />
     <Compile Include="UI\ViewModels\GuidanceWorkflowContext.cs" />
     <Compile Include="GuidanceContent.cs" />

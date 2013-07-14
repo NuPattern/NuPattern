@@ -251,18 +251,22 @@ namespace NuPattern.Runtime.Guidance
         public IGuidanceExtension Instantiate(string extensionId, string instanceName)
         {
             Guard.NotNullOrEmpty(() => extensionId, extensionId);
-            Guard.NotNullOrEmpty(() => instanceName, instanceName);
 
             using (tracer.StartActivity(Resources.GuidanceManager_TraceInstantiateExtension, instanceName, extensionId))
             {
                 try
                 {
+                    // Gets the installed version of the extension
+                    var registration = this.InstalledGuidanceExtensions.First(f => f.ExtensionId == extensionId);
+
+                    if (string.IsNullOrEmpty(instanceName))
+                    {
+                        instanceName = registration.DefaultName;
+                    }
+
                     //this.ThrowIfNoSolutionState();
                     this.ThrowIfExtensionNotInstalled(extensionId);
                     this.ThrowIfAlreadyInstantiated(extensionId, instanceName);
-
-                    // Gets the installed version of the extension
-                    var registration = this.InstalledGuidanceExtensions.First(f => f.ExtensionId == extensionId);
 
                     var extension = this.InitializeExtension(extensionId,
                         instanceName,
