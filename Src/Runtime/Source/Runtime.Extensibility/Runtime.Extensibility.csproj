@@ -133,6 +133,7 @@
     <Compile Include="Diagnostics\ITracePane.cs" />
     <Compile Include="Diagnostics\ITraceOutputWindowManager.cs" />
     <Compile Include="Shortcuts\IShortcut.cs" />
+    <Compile Include="Shortcuts\IShortcutLaunchService.cs" />
     <Compile Include="Shortcuts\IShortcutProvider.cs" />
     <Compile Include="SolutionUri.cs" />
     <Compile Include="Guidance\CommandBinding.cs" />

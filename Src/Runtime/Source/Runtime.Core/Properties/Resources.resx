@@ -455,4 +455,10 @@ Skipping guidance extension type with identifier {1}.</value>
   <data name="TraceOutputWindowManager_ErrorDuplicateTraceId" xml:space="preserve">
     <value>Trace pane with ID '{0}', has already been created.</value>
   </data>
+  <data name="ShortcutLaunchService_ErrorFailedResolveShortcut" xml:space="preserve">
+    <value>Failed to resolve provider for shortcut type {0} and type {1}</value>
+  </data>
+  <data name="ShortcutLaunchService_ErrorFailedResolveShortcutUntyped" xml:space="preserve">
+    <value>Failed to resolve provider for shortcut type {0}</value>
+  </data>
 </root>

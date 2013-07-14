@@ -4,6 +4,7 @@ using System.Text;
 using System.Xml;
 using System.Xml.Linq;
 using System.Xml.Serialization;
+using NuPattern.Runtime.Shortcuts;
 
 namespace NuPattern.Runtime.Shell.Shortcuts
 {
@@ -36,8 +37,8 @@ namespace NuPattern.Runtime.Shell.Shortcuts
         /// Returns the shortcut from the specified file.
         /// </summary>
         /// <exception cref="FileNotFoundException">The file not found.</exception>
-        /// <exception cref="ShortcutIOException">The format of the shortcut was invalid</exception>
-        public IGenericShortcut ReadShortcut()
+        /// <exception cref="ShortcutFileAccessException">The format of the shortcut was invalid</exception>
+        public IShortcut ReadShortcut()
         {
             if (!File.Exists(this.FilePath))
             {
@@ -49,21 +50,21 @@ namespace NuPattern.Runtime.Shell.Shortcuts
                 // Load the file
                 var xDoc = XDocument.Load(this.FilePath);
 
-                var serializer = new XmlSerializer(typeof(GenericShortcut));
+                var serializer = new XmlSerializer(typeof(Shortcut));
                 var reader = xDoc.CreateReader();
                 if (!serializer.CanDeserialize(reader))
                 {
-                    throw new ShortcutFormatException();
+                    throw new ShortcutFileFormatException();
                 }
 
                 // Deserialize the shortcut
-                var shortcut = (GenericShortcut)serializer.Deserialize(reader);
+                var shortcut = (Shortcut)serializer.Deserialize(reader);
 
                 return shortcut;
             }
             catch (Exception)
             {
-                throw new ShortcutFormatException();
+                throw new ShortcutFileFormatException();
             }
         }
 
@@ -71,7 +72,7 @@ namespace NuPattern.Runtime.Shell.Shortcuts
         /// Writes the shortcut to the specified file.
         /// </summary>
         /// <param name="shortcut">The shortcut to write to the file</param>
-        public void WriteShortcut(IGenericShortcut shortcut)
+        public void WriteShortcut(IShortcut shortcut)
         {
             Guard.NotNull(() => shortcut, shortcut);
 
@@ -82,7 +83,7 @@ namespace NuPattern.Runtime.Shell.Shortcuts
 
             try
             {
-                var serializer = new XmlSerializer(typeof(GenericShortcut));
+                var serializer = new XmlSerializer(typeof(Shortcut));
                 using (var stream = new FileStream(this.FilePath, FileMode.OpenOrCreate))
                 {
                     using (var writer = new XmlTextWriter(stream, Encoding.Unicode))
@@ -97,7 +98,7 @@ namespace NuPattern.Runtime.Shell.Shortcuts
             }
             catch (Exception)
             {
-                throw new ShortcutIOException();
+                throw new ShortcutFileAccessException();
             }
         }
     }

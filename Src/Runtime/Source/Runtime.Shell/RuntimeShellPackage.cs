@@ -31,6 +31,7 @@ using NuPattern.Runtime.Shell.OptionPages;
 using NuPattern.Runtime.Shell.Properties;
 using NuPattern.Runtime.Shell.Shortcuts;
 using NuPattern.Runtime.Shell.ToolWindows;
+using NuPattern.Runtime.Shortcuts;
 using NuPattern.Runtime.Store;
 using NuPattern.Runtime.ToolkitInterface;
 using NuPattern.Runtime.UI;
@@ -49,8 +50,8 @@ namespace NuPattern.Runtime.Shell
     [ProvideAutoLoad(UIContextGuids.NoSolution)]
     [PackageRegistration(UseManagedResourcesOnly = true)]
     [ProvideMenuResource(@"Menus.ctmenu", 1)]
-    [ProvideEditorExtension(typeof(ShortcutEditorFactory), Constants.GuidanceShortcutExtension, 32, DefaultName = "")]
-    [ProvideEditorExtension(typeof(ShortcutEditorFactory), Constants.PatternShortcutExtension, 32, DefaultName = "")]
+    [ProvideEditorExtension(typeof(ShortcutEditorFactory), Constants.GuidanceShortcutExtension, int.MaxValue, DefaultName = "")]
+    [ProvideEditorExtension(typeof(ShortcutEditorFactory), Constants.PatternShortcutExtension, int.MaxValue, DefaultName = "")]
     [ProvideToolWindow(typeof(SolutionBuilderToolWindow), Window = ToolWindowGuids.Toolbox, Orientation = ToolWindowOrientation.Right, Style = VsDockStyle.Tabbed)]
     [ProvideToolWindow(typeof(GuidanceExplorerToolWindow), Window = Constants.SolutionBuilderToolWindowGuid, Orientation = ToolWindowOrientation.Bottom, Style = VsDockStyle.Linked)]
     [ProvideToolWindow(typeof(GuidanceBrowserToolWindow), Window = ToolWindowGuids.TaskList, Style = VsDockStyle.Tabbed)]
@@ -61,6 +62,7 @@ namespace NuPattern.Runtime.Shell
     [Guid(Constants.RuntimeShellPkgGuid)]
     [CLSCompliant(false)]
     [ProvideService(typeof(IUriReferenceService), ServiceName = @"IUriReferenceService")]
+    [ProvideService(typeof(IShortcutLaunchService), ServiceName = @"IShortcutLaunchService")]
     [ProvideService(typeof(ITemplateService), ServiceName = @"TemplateService")]
     [ProvideService(typeof(ISolution), ServiceName = @"ISolution")]
     [ProvideService(typeof(IExtensionManager), ServiceName = @"IExtensionManager")]
@@ -94,6 +96,8 @@ namespace NuPattern.Runtime.Shell
         private INuPatternCompositionService CompositionService { get; set; }
         [Import]
         private IGuidanceManager GuidanceManager { get; set; }
+        [Import]
+        private IShortcutLaunchService ShortcutLaunchService { get; set; }
         [Import]
         private IUriReferenceService UriReferenceService { get; set; }
         [Import]
@@ -244,6 +248,7 @@ namespace NuPattern.Runtime.Shell
         private void AddServices()
         {
             var serviceContainer = (IServiceContainer)this;
+            serviceContainer.AddService(typeof(IShortcutLaunchService), new ServiceCreatorCallback((c, s) => this.ShortcutLaunchService), true);
             serviceContainer.AddService(typeof(IUriReferenceService), new ServiceCreatorCallback((c, s) => this.UriReferenceService), true);
             serviceContainer.AddService(typeof(ITemplateService), new ServiceCreatorCallback((c, s) => this.TemplateService), true);
             serviceContainer.AddService(typeof(ISolution), new ServiceCreatorCallback((c, s) => this.Solution), true);

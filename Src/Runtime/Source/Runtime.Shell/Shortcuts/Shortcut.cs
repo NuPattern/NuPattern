@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Xml.Serialization;
+using NuPattern.Runtime.Shortcuts;
 
 namespace NuPattern.Runtime.Shell.Shortcuts
 {
@@ -7,7 +8,7 @@ namespace NuPattern.Runtime.Shell.Shortcuts
     /// A generic (all purpose) shortcut
     /// </summary>
     [XmlRoot(RootXmlElementName)]
-    public class GenericShortcut : IGenericShortcut
+    public class Shortcut : IShortcut
     {
         private const string RootXmlElementName = "shortcut";
         private const string TypeXmlElementName = "type";
@@ -15,32 +16,11 @@ namespace NuPattern.Runtime.Shell.Shortcuts
         private const string ParametersXmlElementName = "parameters";
 
         /// <summary>
-        /// Creates a new instance of the <see cref="GenericShortcut"/> class.
+        /// Creates a new instance of the <see cref="Shortcut"/> class.
         /// </summary>
-        public GenericShortcut()
+        public Shortcut()
         {
             this.Parameters = new ShortcutParameters();
-        }
-
-        /// <summary>
-        /// Executes the shortcut
-        /// </summary>
-        public void Execute()
-        {
-            // Delegate to the proper shortcut
-        }
-
-        /// <summary>
-        /// Gets a value indicating whether the shortcut requires updating.
-        /// </summary>
-        [XmlIgnore]
-        public bool Upated
-        {
-            get
-            {
-                // Delegate to the proper shortcut
-                return false;
-            }
         }
 
         /// <summary>
@@ -56,7 +36,7 @@ namespace NuPattern.Runtime.Shell.Shortcuts
         public string Description { get; set; }
 
         [XmlIgnore]
-        IDictionary<string, string> IGenericShortcut.Parameters
+        IDictionary<string, string> IShortcut.Parameters
         {
             get
             {

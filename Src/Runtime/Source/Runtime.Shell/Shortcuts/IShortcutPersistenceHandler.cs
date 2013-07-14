@@ -1,4 +1,6 @@
 ﻿
+using NuPattern.Runtime.Shortcuts;
+
 namespace NuPattern.Runtime.Shell.Shortcuts
 {
     /// <summary>
@@ -9,12 +11,12 @@ namespace NuPattern.Runtime.Shell.Shortcuts
         /// <summary>
         /// Returns the shortcut from the persistence store
         /// </summary>
-        IGenericShortcut ReadShortcut();
+        IShortcut ReadShortcut();
 
         /// <summary>
         /// Writes the shortcut to the persistence store.
         /// </summary>
         /// <param name="shortcut">The shortcut to write to the store</param>
-        void WriteShortcut(IGenericShortcut shortcut);
+        void WriteShortcut(IShortcut shortcut);
     }
 }

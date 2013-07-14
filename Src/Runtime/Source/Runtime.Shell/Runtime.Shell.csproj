@@ -24,6 +24,7 @@
       <HintPath>$(BranchReferencesPath)\VisualStudio\envdte.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(BranchReferencesPath)\EntLib5\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
@@ -133,12 +134,12 @@
     </Compile>
     <Compile Include="GuidanceRegistration.cs" />
     <Compile Include="GuidanceRegistrationAdapter.cs" />
+    <Compile Include="Shortcuts\ShortcutProviderNotExistException.cs" />
     <Compile Include="Shortcuts\IShortcutPersistenceHandler.cs" />
     <Compile Include="Shortcuts\ShortcutLaunchCoordinator.cs" />
-    <Compile Include="Shortcuts\ShortcutIOException.cs" />
-    <Compile Include="Shortcuts\GenericShortcut.cs" />
-    <Compile Include="Shortcuts\IGenericShortcut.cs" />
-    <Compile Include="Shortcuts\ShortcutFormatException.cs" />
+    <Compile Include="Shortcuts\ShortcutFileAccessException.cs" />
+    <Compile Include="Shortcuts\Shortcut.cs" />
+    <Compile Include="Shortcuts\ShortcutFileFormatException.cs" />
     <Compile Include="Shortcuts\ShortcutFileHandler.cs" />
     <Compile Include="Shortcuts\ShortcutEditorFactory.cs" />
     <Compile Include="PatternWindowsService.cs" />

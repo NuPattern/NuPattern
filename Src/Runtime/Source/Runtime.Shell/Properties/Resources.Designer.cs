@@ -192,6 +192,24 @@ namespace NuPattern.Runtime.Shell.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Shortcut cannot be executed, its type is unknown, or the format of the shortcut is invalid..
+        /// </summary>
+        internal static string ShortcutEditorFactory_ErrorShortcutProviderNotExist {
+            get {
+                return ResourceManager.GetString("ShortcutEditorFactory_ErrorShortcutProviderNotExist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shortcut cannot be opened, an unexpected error has occured..
+        /// </summary>
+        internal static string ShortcutEditorFactory_ErrorUnknown {
+            get {
+                return ResourceManager.GetString("ShortcutEditorFactory_ErrorUnknown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Solution Builder.
         /// </summary>
         internal static string SolutionBuilderToolWindow_WindowTitle {

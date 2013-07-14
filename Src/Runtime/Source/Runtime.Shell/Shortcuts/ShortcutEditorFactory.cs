@@ -56,20 +56,20 @@ namespace NuPattern.Runtime.Shell.Shortcuts
             pgrfCDW = 0;
 
             // Ensure that the file exists
-            if (!File.Exists(pszMkDocument))
+            if (File.Exists(pszMkDocument))
             {
-                return VSConstants.S_FALSE;
+                // Ensure we have a file handler.
+                if (this.PersistenceHandler == null)
+                {
+                    this.PersistenceHandler = new ShortcutFileHandler(pszMkDocument);
+                }
+
+                // Launch the shortcut
+                var result = ShortcutLaunchCoordinator.LaunchShortcut(this.serviceProvider, this.PersistenceHandler);
+                return result ? VSConstants.S_OK : VSConstants.S_FALSE;
             }
 
-            // Ensure we have a file handler.
-            if (this.PersistenceHandler == null)
-            {
-                this.PersistenceHandler = new ShortcutFileHandler(pszMkDocument);
-            }
-
-            // Launch the shortcut
-            var result = ShortcutLaunchCoordinator.LaunchShortcut(this.serviceProvider, this.PersistenceHandler);
-            return result ? VSConstants.S_OK : VSConstants.S_FALSE;
+            return VSConstants.S_FALSE;
         }
 
         /// <summary>

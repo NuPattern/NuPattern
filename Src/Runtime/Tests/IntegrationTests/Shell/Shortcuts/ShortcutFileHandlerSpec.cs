@@ -30,13 +30,13 @@ namespace NuPattern.Runtime.IntegrationTests.Shell.Shortcuts
             [TestMethod, TestCategory("Integration")]
             public void WhenShortcutFileEmpty_ThenReadShortcutThrows()
             {
-                Assert.Throws<ShortcutFormatException>(() => new ShortcutFileHandler(@"Runtime.IntegrationTests.Content\Shortcuts\EmptyShortcut.shortcut").ReadShortcut());
+                Assert.Throws<ShortcutFileFormatException>(() => new ShortcutFileHandler(@"Runtime.IntegrationTests.Content\Shortcuts\EmptyShortcut.shortcut").ReadShortcut());
             }
 
             [TestMethod, TestCategory("Integration")]
             public void WhenShortcutFileInvalid_ThenReadShortcutThrows()
             {
-                Assert.Throws<ShortcutFormatException>(() => new ShortcutFileHandler(@"Runtime.IntegrationTests.Content\Shortcuts\InvalidShortcut.shortcut").ReadShortcut());
+                Assert.Throws<ShortcutFileFormatException>(() => new ShortcutFileHandler(@"Runtime.IntegrationTests.Content\Shortcuts\InvalidShortcut.shortcut").ReadShortcut());
             }
 
             [TestMethod, TestCategory("Integration")]

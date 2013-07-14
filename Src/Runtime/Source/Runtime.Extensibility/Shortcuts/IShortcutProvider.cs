@@ -18,13 +18,6 @@ namespace NuPattern.Runtime.Shortcuts
     public interface IShortcutProvider<T> : IShortcutProvider where T : IShortcut
     {
         /// <summary>
-        /// Creates a shortcut for the given type.
-        /// </summary>
-        /// <param name="instance"></param>
-        /// <returns></returns>
-        IShortcut CreateShortcut(T instance);
-
-        /// <summary>
         /// Resolves the shortcut to the given type.
         /// </summary>
         /// <param name="shortcut"></param>

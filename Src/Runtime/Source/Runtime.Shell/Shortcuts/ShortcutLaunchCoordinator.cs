@@ -1,6 +1,7 @@
 ﻿
 using System;
 using NuPattern.Runtime.Shell.Properties;
+using NuPattern.Runtime.Shortcuts;
 using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.Shell.Shortcuts
@@ -18,49 +19,70 @@ namespace NuPattern.Runtime.Shell.Shortcuts
             Guard.NotNull(() => serviceProvider, serviceProvider);
             Guard.NotNull(() => fileHandler, fileHandler);
 
-            // Read the file content
+            var messageService = serviceProvider.GetService<IUserMessageService>();
+            var launchService = serviceProvider.GetService<IShortcutLaunchService>();
+
             try
             {
+                // Read the file content
                 var shortcut = fileHandler.ReadShortcut();
                 if (shortcut != null)
                 {
-                    // Execute the shortcut
-                    shortcut.Execute();
-
-                    // Update the shortcut
-                    if (shortcut.Upated)
+                    // Check if type is registered
+                    if (!launchService.IsTypeRegistered(shortcut.Type))
                     {
-                        fileHandler.WriteShortcut(shortcut);
+                        throw new ShortcutProviderNotExistException();
                     }
+
+                    // Get an actual instance of the provided shortcut
+                    var specificShortcut = launchService.ResolveShortcut(shortcut);
+                    if (specificShortcut == null)
+                    {
+                        throw new ShortcutProviderNotExistException();
+                    }
+
+                    // Execute the shortcut
+                    var newShortcut = launchService.Execute(specificShortcut);
+
+                    // Update the shortcut (if updated at all)
+                    if (newShortcut != null)
+                    {
+                        fileHandler.WriteShortcut(newShortcut);
+                    }
+
+                    return true;
                 }
             }
-            catch (ShortcutFormatException)
+            catch (ShortcutProviderNotExistException)
             {
-                var messageService = serviceProvider.GetService<IUserMessageService>();
+                if (messageService != null)
+                {
+                    messageService.ShowError(Resources.ShortcutEditorFactory_ErrorShortcutProviderNotExist);
+                }
+            }
+            catch (ShortcutFileFormatException)
+            {
                 if (messageService != null)
                 {
                     messageService.ShowError(Resources.ShortcutEditorFactory_ErrorShortcutFormat);
                 }
-
-                return false;
             }
-            catch (ShortcutIOException)
+            catch (ShortcutFileAccessException)
             {
-                var messageService = serviceProvider.GetService<IUserMessageService>();
                 if (messageService != null)
                 {
                     messageService.ShowError(Resources.ShortcutEditorFactory_ErrorShortcutIO);
                 }
-
-                return false;
             }
             catch (Exception)
             {
-                // Ignore exception and just return
-                return false;
+                if (messageService != null)
+                {
+                    messageService.ShowError(Resources.ShortcutEditorFactory_ErrorUnknown);
+                }
             }
 
-            return true;
+            return false;
         }
     }
 }

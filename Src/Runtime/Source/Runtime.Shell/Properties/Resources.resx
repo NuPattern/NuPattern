@@ -164,6 +164,12 @@ To remedy this problem, open the 'Extension Manager' window in Visual Studio (To
   <data name="ShortcutEditorFactory_ErrorShortcutIO" xml:space="preserve">
     <value>Shortcut cannot be read or written to file. Check the permissions to the file and whether the file is locked.</value>
   </data>
+  <data name="ShortcutEditorFactory_ErrorShortcutProviderNotExist" xml:space="preserve">
+    <value>Shortcut cannot be executed, its type is unknown, or the format of the shortcut is invalid.</value>
+  </data>
+  <data name="ShortcutEditorFactory_ErrorUnknown" xml:space="preserve">
+    <value>Shortcut cannot be opened, an unexpected error has occured.</value>
+  </data>
   <data name="SolutionBuilderToolWindow_WindowTitle" xml:space="preserve">
     <value>Solution Builder</value>
   </data>

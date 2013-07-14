@@ -9,6 +9,11 @@ namespace NuPattern.Runtime.Shortcuts
     public interface IShortcut
     {
         /// <summary>
+        /// Gets the type of the shortcut.
+        /// </summary>
+        string Type { get; }
+
+        /// <summary>
         /// Gets the description of the shortcut.
         /// </summary>
         string Description { get; }
