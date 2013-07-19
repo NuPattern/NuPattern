@@ -76,29 +76,64 @@ namespace NuPattern.Runtime.Shell.Shortcuts
         {
             Guard.NotNull(() => shortcut, shortcut);
 
-            if (!File.Exists(this.FilePath))
+            if (!Directory.Exists(Path.GetDirectoryName(this.FilePath)))
             {
-                throw new FileNotFoundException();
+                throw new DirectoryNotFoundException();
             }
 
             try
             {
-                var serializer = new XmlSerializer(typeof(Shortcut));
                 using (var stream = new FileStream(this.FilePath, FileMode.OpenOrCreate))
                 {
-                    using (var writer = new XmlTextWriter(stream, Encoding.Unicode))
-                    {
-                        // Pretty print
-                        writer.Formatting = Formatting.Indented;
+                    SerializeShortcutToStream(shortcut, stream);
+                }
+            }
+            catch (Exception)
+            {
+                throw new ShortcutFileAccessException();
+            }
+        }
 
-                        // Serialize the shortcut
-                        serializer.Serialize(writer, shortcut);
+        /// <summary>
+        /// Serialize the shortcut
+        /// </summary>
+        public static string SerializeShortcut(IShortcut shortcut)
+        {
+            try
+            {
+                using (var stream = new MemoryStream())
+                {
+                    SerializeShortcutToStream(shortcut, stream);
+
+                    // Read the serialized data
+                    using (var reader = new StreamReader(stream))
+                    {
+                        stream.Position = 0;
+                        return reader.ReadToEnd();
                     }
                 }
             }
             catch (Exception)
             {
                 throw new ShortcutFileAccessException();
+            }
+        }
+
+        private static void SerializeShortcutToStream(IShortcut shortcut, Stream stream)
+        {
+            var serializer = new XmlSerializer(typeof(Shortcut));
+
+            using (var writer = XmlTextWriter.Create(stream, new XmlWriterSettings
+            {
+                OmitXmlDeclaration = true,
+                Encoding = Encoding.UTF8,
+                Indent = true,
+            }))
+            {
+                // Serialize the shortcut (no XSD XSI namespaces)
+                var ns = new XmlSerializerNamespaces();
+                ns.Add(string.Empty, string.Empty);
+                serializer.Serialize(writer, shortcut, ns);
             }
         }
     }

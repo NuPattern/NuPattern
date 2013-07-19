@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using NuPattern.Runtime.Guidance;
+using NuPattern.Runtime.Guidance.Properties;
 using NuPattern.Runtime.Guidance.ShortcutProviders;
 using NuPattern.Runtime.Shortcuts;
 using NuPattern.VisualStudio;
@@ -18,280 +16,293 @@ namespace NuPattern.Runtime.UnitTests.Guidance.ShortcutProviders
         public class GivenAShortcut
         {
             private GuidanceShortcutProvider provider;
-            private Mock<IGuidanceManager> guidanceManager;
             private Mock<IUserMessageService> messageService;
+            private Mock<IGuidanceProvider> guidanceProvider;
+            private Mock<IShortcut> shortcut;
 
             [TestInitialize]
             public void Initialize()
             {
+                this.shortcut = new Mock<IShortcut>();
+                this.guidanceProvider = new Mock<IGuidanceProvider>();
                 this.messageService = new Mock<IUserMessageService>();
-                this.guidanceManager = new Mock<IGuidanceManager>();
-                this.provider = new GuidanceShortcutProvider();
-                this.provider.GuidanceManager = this.guidanceManager.Object;
-                this.provider.MessageService = this.messageService.Object;
-                this.provider.ServiceProvider = Mock.Of<IServiceProvider>();
+                this.provider = new GuidanceShortcutProvider
+                {
+                    MessageService = this.messageService.Object,
+                    GuidanceProvider = guidanceProvider.Object,
+                };
             }
 
             [TestMethod, TestCategory("Unit")]
-            public void TheReturnsType()
+            public void ThenTypeReturnsGuidance()
             {
-                Assert.Equal(GuidanceShortcut.ShortcutType, provider.Type);
+                Assert.Equal("guidance", provider.Type);
             }
 
             [TestMethod, TestCategory("Unit")]
-            public void WhenResolveWithNullShortcut_TheThrows()
+            public void WhenExecuteWithNoParameters_ThenDisplaysError()
             {
-                Assert.Throws<ArgumentNullException>(() =>
-                    provider.ResolveShortcut(null));
+                provider.Execute((new GuidanceShortcut(new Mock<IShortcut>().Object)));
+
+                this.guidanceProvider.Verify(gp => gp.CreateInstance(It.IsAny<string>(), It.IsAny<string>()), Times.Never());
+                this.guidanceProvider.Verify(gp => gp.ActivateInstance(It.IsAny<string>()), Times.Never());
+                this.messageService.Verify(ums => ums.ShowError(Resources.GuidanceShortcutProvider_InvalidParameters), Times.Once());
+            }
+        }
+
+        [TestClass]
+        public class GivenARegisteredShortcutWithAnInstanceName
+        {
+            private GuidanceShortcutProvider provider;
+            private Mock<IUserMessageService> messageService;
+            private Mock<IGuidanceProvider> guidanceProvider;
+            private Mock<IShortcut> shortcut;
+            private Dictionary<string, string> parameters;
+
+            [TestInitialize]
+            public void Initialize()
+            {
+                this.shortcut = new Mock<IShortcut>();
+                this.parameters = new Dictionary<string, string>
+                    {
+                        {GuidanceShortcut.ExtensionIdParameterName, "foo"},
+                        {GuidanceShortcut.InstanceNameParameterName, "bar"},
+                    };
+                shortcut.Setup(s => s.Parameters).Returns(this.parameters);
+                this.guidanceProvider = new Mock<IGuidanceProvider>();
+                this.messageService = new Mock<IUserMessageService>();
+                this.provider = new GuidanceShortcutProvider
+                {
+                    MessageService = this.messageService.Object,
+                    GuidanceProvider = guidanceProvider.Object,
+                };
             }
 
             [TestMethod, TestCategory("Unit")]
-            public void WhenResolve_TheReturnsAGuidanceShortcut()
+            public void WhenExecuteWithForcedRegisteredExistingInstance_ThenCreatesNewUniqueNamedInstance()
             {
-                var result = provider.ResolveShortcut(Mock.Of<IShortcut>(sc => sc.Type == GuidanceShortcut.ShortcutType));
+                this.parameters.Add(GuidanceShortcut.AlwaysCreateParameterName, "true");
+                this.guidanceProvider.Setup(gp => gp.IsRegistered("foo")).Returns(true);
+                this.guidanceProvider.Setup(gp => gp.InstanceExists("foo", "bar")).Returns(true);
+                this.guidanceProvider.Setup(gp => gp.GetUniqueInstanceName("bar")).Returns("bar1");
 
-                Assert.NotNull(result);
-                Assert.Equal(GuidanceShortcut.ShortcutType, result.Type);
-                Assert.True(result.GetType() == typeof(GuidanceShortcut));
+                provider.Execute((new GuidanceShortcut(shortcut.Object)));
+
+                this.guidanceProvider.Verify(gp => gp.ActivateInstance(It.IsAny<string>()), Times.Never());
+                this.guidanceProvider.Verify(gp => gp.CreateInstance("foo", "bar1"), Times.Once());
+                this.messageService.Verify(ums => ums.ShowError(It.IsAny<string>()), Times.Never());
             }
 
             [TestMethod, TestCategory("Unit")]
-            public void WhenExecuteWithNullShortcut_TheThrows()
+            public void WhenExecuteWithUnregisteredExistingInstance_ThenActivatesExistingInstance()
             {
-                Assert.Throws<ArgumentNullException>(() =>
-                    provider.Execute(null));
+                this.guidanceProvider.Setup(gp => gp.IsRegistered("foo")).Returns(true);
+                this.guidanceProvider.Setup(gp => gp.InstanceExists("foo", "bar")).Returns(true);
+
+                provider.Execute((new GuidanceShortcut(shortcut.Object)));
+
+                guidanceProvider.Verify(gp => gp.ActivateInstance("bar"), Times.Once());
+                this.guidanceProvider.Verify(gp => gp.CreateInstance(It.IsAny<string>(), It.IsAny<string>()), Times.Never());
+                this.messageService.Verify(ums => ums.ShowError(It.IsAny<string>()), Times.Never());
             }
 
             [TestMethod, TestCategory("Unit")]
-            public void WhenExecute_ThenReturnsNull()
+            public void WhenExecuteWithRegisteredExistingInstance_ThenActivatesExistingInstance()
             {
-                var result = provider.Execute(new GuidanceShortcut((Mock.Of<IShortcut>(sc => sc.Type == GuidanceShortcut.ShortcutType))));
+                this.guidanceProvider.Setup(gp => gp.IsRegistered("foo")).Returns(false);
+                this.guidanceProvider.Setup(gp => gp.InstanceExists("foo", "bar")).Returns(true);
 
-                Assert.Null(result);
+                provider.Execute((new GuidanceShortcut(shortcut.Object)));
+
+                this.guidanceProvider.Verify(gp => gp.ActivateInstance("bar"), Times.Once());
+                this.guidanceProvider.Verify(gp => gp.CreateInstance(It.IsAny<string>(), It.IsAny<string>()), Times.Never());
+                this.messageService.Verify(ums => ums.ShowError(It.IsAny<string>()), Times.Never());
             }
 
             [TestMethod, TestCategory("Unit")]
-            public void WhenExecuteWithUndefined_ThenDisplayError()
+            public void WhenExecuteWithRegisteredNotExistingInstance_ThenCreateNewInstance()
             {
-                var shortcut = Mock.Of<IShortcut>(
-                    sc => sc.Type == GuidanceShortcut.ShortcutType
-                    && sc.Parameters == new Dictionary<string, string>
-                        {
-                            {GuidanceShortcut.ExtensionIdParameterName, string.Empty},
-                            {GuidanceShortcut.CommandTypeParameterName, GuidanceShortcutCommandType.Undefined.ToString().ToLowerInvariant()},
-                            {GuidanceShortcut.DefaultNameParameterName, string.Empty},
-                            {GuidanceShortcut.InstanceNameParameterName, string.Empty},
-                        });
+                this.guidanceProvider.Setup(gp => gp.IsRegistered("foo")).Returns(true);
+                this.guidanceProvider.Setup(gp => gp.InstanceExists("foo", "bar")).Returns(false);
 
-                var result = provider.Execute(new GuidanceShortcut(shortcut));
+                provider.Execute((new GuidanceShortcut(shortcut.Object)));
 
-                this.guidanceManager.Verify(gm => gm.ActiveGuidanceExtension, Times.Never());
-                this.guidanceManager.Verify(gm => gm.Instantiate(It.IsAny<string>(), It.IsAny<string>()), Times.Never());
-                this.messageService.Verify(ms => ms.ShowError(It.IsAny<string>()), Times.Once());
-                Assert.Null(result);
+                this.guidanceProvider.Verify(gp => gp.ActivateInstance(It.IsAny<string>()), Times.Never());
+                this.guidanceProvider.Verify(gp => gp.CreateInstance("foo", "bar"), Times.Once());
+                this.messageService.Verify(ums => ums.ShowError(It.IsAny<string>()), Times.Never());
             }
 
             [TestMethod, TestCategory("Unit")]
-            public void WhenExecuteWithActivationAndNoData_ThenDisplayError()
+            public void WhenExecuteWithForcedRegisteredNotExistingInstance_ThenCreateNewInstance()
             {
-                var shortcut = Mock.Of<IShortcut>(
-                    sc => sc.Type == GuidanceShortcut.ShortcutType
-                    && sc.Parameters == new Dictionary<string, string>
-                        {
-                            {GuidanceShortcut.ExtensionIdParameterName, string.Empty},
-                            {GuidanceShortcut.CommandTypeParameterName, GuidanceShortcutCommandType.Activation.ToString().ToLowerInvariant()},
-                            {GuidanceShortcut.DefaultNameParameterName, string.Empty},
-                            {GuidanceShortcut.InstanceNameParameterName, string.Empty},
-                        });
+                this.parameters.Add(GuidanceShortcut.AlwaysCreateParameterName, "true");
+                this.guidanceProvider.Setup(gp => gp.IsRegistered("foo")).Returns(true);
+                this.guidanceProvider.Setup(gp => gp.InstanceExists("foo", "bar")).Returns(false);
 
-                var result = provider.Execute(new GuidanceShortcut(shortcut));
+                provider.Execute((new GuidanceShortcut(shortcut.Object)));
 
-                this.guidanceManager.Verify(gm => gm.ActiveGuidanceExtension, Times.Never());
-                this.guidanceManager.Verify(gm => gm.Instantiate(It.IsAny<string>(), It.IsAny<string>()), Times.Never());
-                this.messageService.Verify(ms => ms.ShowError(It.IsAny<string>()), Times.Once());
-                Assert.Null(result);
+                this.guidanceProvider.Verify(gp => gp.ActivateInstance(It.IsAny<string>()), Times.Never());
+                this.guidanceProvider.Verify(gp => gp.CreateInstance("foo", "bar"), Times.Once());
+                this.messageService.Verify(ums => ums.ShowError(It.IsAny<string>()), Times.Never());
             }
 
             [TestMethod, TestCategory("Unit")]
-            public void WhenExecuteWithInstantiationAndNoData_ThenDisplayError()
+            public void WhenExecuteWithForcedUnregistered_ThenDisplaysError()
             {
-                var shortcut = Mock.Of<IShortcut>(
-                    sc => sc.Type == GuidanceShortcut.ShortcutType
-                    && sc.Parameters == new Dictionary<string, string>
-                        {
-                            {GuidanceShortcut.ExtensionIdParameterName, string.Empty},
-                            {GuidanceShortcut.CommandTypeParameterName, GuidanceShortcutCommandType.Instantiation.ToString().ToLowerInvariant()},
-                            {GuidanceShortcut.DefaultNameParameterName, string.Empty},
-                            {GuidanceShortcut.InstanceNameParameterName, string.Empty},
-                        });
+                this.parameters.Add(GuidanceShortcut.AlwaysCreateParameterName, "true");
+                this.guidanceProvider.Setup(gp => gp.IsRegistered("foo")).Returns(false);
+                this.guidanceProvider.Setup(gp => gp.InstanceExists("foo", "bar")).Returns(false);
 
-                var result = provider.Execute(new GuidanceShortcut(shortcut));
+                provider.Execute((new GuidanceShortcut(shortcut.Object)));
 
-                this.guidanceManager.Verify(gm => gm.ActiveGuidanceExtension, Times.Never());
-                this.guidanceManager.Verify(gm => gm.Instantiate(It.IsAny<string>(), It.IsAny<string>()), Times.Never());
-                this.messageService.Verify(ms => ms.ShowError(It.IsAny<string>()), Times.Once());
-                Assert.Null(result);
+                this.guidanceProvider.Verify(gp => gp.ActivateInstance(It.IsAny<string>()), Times.Never());
+                this.guidanceProvider.Verify(gp => gp.CreateInstance(It.IsAny<string>(), It.IsAny<string>()), Times.Never());
+                this.messageService.Verify(ums => ums.ShowError(Resources.GuidanceShortcutProvider_NotRegistered.FormatWith("foo", "bar")), Times.Once());
+            }
+        }
+
+        [TestClass]
+        public class GivenARegisteredShortcutWithNoInstanceName
+        {
+            private GuidanceShortcutProvider provider;
+            private Mock<IUserMessageService> messageService;
+            private Mock<IGuidanceProvider> guidanceProvider;
+            private Mock<IShortcut> shortcut;
+            private Dictionary<string, string> parameters;
+
+            [TestInitialize]
+            public void Initialize()
+            {
+                this.shortcut = new Mock<IShortcut>();
+                this.parameters = new Dictionary<string, string>
+                    {
+                        {GuidanceShortcut.ExtensionIdParameterName, "foo"},
+                    };
+                shortcut.Setup(s => s.Parameters).Returns(this.parameters);
+                this.guidanceProvider = new Mock<IGuidanceProvider>();
+                this.messageService = new Mock<IUserMessageService>();
+                this.provider = new GuidanceShortcutProvider
+                    {
+                        MessageService = this.messageService.Object,
+                        GuidanceProvider = guidanceProvider.Object,
+                    };
             }
 
             [TestMethod, TestCategory("Unit")]
-            public void WhenExecuteWithActivationAndInstanceNotFound_ThenDisplayError()
+            public void WhenExecuteWithForcedRegisteredExistingDefaultInstance_ThenCreatesNewUniqueDefaultNamedInstance()
             {
-                var shortcut = Mock.Of<IShortcut>(
-                    sc => sc.Type == GuidanceShortcut.ShortcutType
-                    && sc.Parameters == new Dictionary<string, string>
-                        {
-                            {GuidanceShortcut.ExtensionIdParameterName, string.Empty},
-                            {GuidanceShortcut.CommandTypeParameterName, GuidanceShortcutCommandType.Activation.ToString().ToLowerInvariant()},
-                            {GuidanceShortcut.DefaultNameParameterName, string.Empty},
-                            {GuidanceShortcut.InstanceNameParameterName, "foo"},
-                        });
-                this.guidanceManager.Setup(gm => gm.InstantiatedGuidanceExtensions).Returns(Enumerable.Empty<IGuidanceExtension>());
+                this.parameters.Add(GuidanceShortcut.AlwaysCreateParameterName, "true");
+                this.guidanceProvider.Setup(gp => gp.GetDefaultInstanceName("foo")).Returns("default");
+                this.guidanceProvider.Setup(gp => gp.IsRegistered("foo")).Returns(true);
+                this.guidanceProvider.Setup(gp => gp.InstanceExists("foo", "default")).Returns(true);
+                this.guidanceProvider.Setup(gp => gp.GetUniqueInstanceName("default")).Returns("default1");
 
-                var result = provider.Execute(new GuidanceShortcut(shortcut));
+                provider.Execute((new GuidanceShortcut(shortcut.Object)));
 
-                this.guidanceManager.Verify(gm => gm.ActiveGuidanceExtension, Times.Never());
-                this.guidanceManager.Verify(gm => gm.Instantiate(It.IsAny<string>(), It.IsAny<string>()), Times.Never());
-                this.messageService.Verify(ms => ms.ShowError(It.IsAny<string>()), Times.Once());
-                Assert.Null(result);
+                this.guidanceProvider.Verify(gp => gp.ActivateInstance(It.IsAny<string>()), Times.Never());
+                this.guidanceProvider.Verify(gp => gp.CreateInstance("foo", "default1"), Times.Once());
+                this.messageService.Verify(ums => ums.ShowError(It.IsAny<string>()), Times.Never());
             }
 
             [TestMethod, TestCategory("Unit")]
-            public void WhenExecuteWithActivationAndExtensionNotFound_ThenDisplayError()
+            public void WhenExecuteWithUnregisteredExistingDefaultInstance_ThenActivatesExistingDefaultInstance()
             {
-                var shortcut = Mock.Of<IShortcut>(
-                    sc => sc.Type == GuidanceShortcut.ShortcutType
-                    && sc.Parameters == new Dictionary<string, string>
-                        {
-                            {GuidanceShortcut.ExtensionIdParameterName, "foo"},
-                            {GuidanceShortcut.CommandTypeParameterName, GuidanceShortcutCommandType.Activation.ToString().ToLowerInvariant()},
-                            {GuidanceShortcut.DefaultNameParameterName, string.Empty},
-                            {GuidanceShortcut.InstanceNameParameterName, string.Empty},
-                        });
-                this.guidanceManager.Setup(gm => gm.InstalledGuidanceExtensions).Returns(Enumerable.Empty<IGuidanceExtensionRegistration>());
+                this.guidanceProvider.Setup(gp => gp.IsRegistered("foo")).Returns(true);
+                this.guidanceProvider.Setup(gp => gp.GetDefaultInstanceName("foo")).Returns("default");
+                this.guidanceProvider.Setup(gp => gp.InstanceExists("foo", "default")).Returns(true);
 
-                var result = provider.Execute(new GuidanceShortcut(shortcut));
+                provider.Execute((new GuidanceShortcut(shortcut.Object)));
 
-                this.guidanceManager.Verify(gm => gm.ActiveGuidanceExtension, Times.Never());
-                this.guidanceManager.Verify(gm => gm.Instantiate(It.IsAny<string>(), It.IsAny<string>()), Times.Never());
-                this.messageService.Verify(ms => ms.ShowError(It.IsAny<string>()), Times.Once());
-                Assert.Null(result);
+                guidanceProvider.Verify(gp => gp.ActivateInstance("default"), Times.Once());
+                this.guidanceProvider.Verify(gp => gp.CreateInstance(It.IsAny<string>(), It.IsAny<string>()), Times.Never());
+                this.messageService.Verify(ums => ums.ShowError(It.IsAny<string>()), Times.Never());
             }
 
             [TestMethod, TestCategory("Unit")]
-            public void WhenExecuteWithInstantiationAndExtensionNotFound_ThenDisplayError()
+            public void WhenExecuteWithRegisteredExistingDefaultInstance_ThenActivatesExistingDefaultInstance()
             {
-                var shortcut = Mock.Of<IShortcut>(
-                    sc => sc.Type == GuidanceShortcut.ShortcutType
-                    && sc.Parameters == new Dictionary<string, string>
-                        {
-                            {GuidanceShortcut.ExtensionIdParameterName, "foo"},
-                            {GuidanceShortcut.CommandTypeParameterName, GuidanceShortcutCommandType.Instantiation.ToString().ToLowerInvariant()},
-                            {GuidanceShortcut.DefaultNameParameterName, string.Empty},
-                            {GuidanceShortcut.InstanceNameParameterName, string.Empty},
-                        });
-                this.guidanceManager.Setup(gm => gm.InstalledGuidanceExtensions).Returns(Enumerable.Empty<IGuidanceExtensionRegistration>());
+                this.guidanceProvider.Setup(gp => gp.IsRegistered("foo")).Returns(false);
+                this.guidanceProvider.Setup(gp => gp.GetDefaultInstanceName("foo")).Returns("default");
+                this.guidanceProvider.Setup(gp => gp.InstanceExists("foo", "default")).Returns(true);
 
-                var result = provider.Execute(new GuidanceShortcut(shortcut));
+                provider.Execute((new GuidanceShortcut(shortcut.Object)));
 
-                this.guidanceManager.Verify(gm => gm.ActiveGuidanceExtension, Times.Never());
-                this.guidanceManager.Verify(gm => gm.Instantiate(It.IsAny<string>(), It.IsAny<string>()), Times.Never());
-                this.messageService.Verify(ms => ms.ShowError(It.IsAny<string>()), Times.Once());
-                Assert.Null(result);
+                this.guidanceProvider.Verify(gp => gp.ActivateInstance("default"), Times.Once());
+                this.guidanceProvider.Verify(gp => gp.CreateInstance(It.IsAny<string>(), It.IsAny<string>()), Times.Never());
+                this.messageService.Verify(ums => ums.ShowError(It.IsAny<string>()), Times.Never());
             }
 
             [TestMethod, TestCategory("Unit")]
-            public void WhenExecuteWithActivationOfNamedInstance_ThenActivates()
+            public void WhenExecuteWithRegisteredNotExistingInstance_ThenCreateNewDefaultInstance()
             {
-                var shortcut = Mock.Of<IShortcut>(
-                    sc => sc.Type == GuidanceShortcut.ShortcutType
-                    && sc.Parameters == new Dictionary<string, string>
-                        {
-                            {GuidanceShortcut.ExtensionIdParameterName, string.Empty},
-                            {GuidanceShortcut.CommandTypeParameterName, GuidanceShortcutCommandType.Activation.ToString().ToLowerInvariant()},
-                            {GuidanceShortcut.DefaultNameParameterName, string.Empty},
-                            {GuidanceShortcut.InstanceNameParameterName, "foo"},
-                        });
-                var instance = Mock.Of<IGuidanceExtension>(ge => ge.InstanceName == "foo");
-                this.guidanceManager.Setup(gm => gm.InstantiatedGuidanceExtensions).Returns(new[] { instance });
+                this.guidanceProvider.Setup(gp => gp.IsRegistered("foo")).Returns(true);
+                this.guidanceProvider.Setup(gp => gp.GetDefaultInstanceName("foo")).Returns("default");
+                this.guidanceProvider.Setup(gp => gp.InstanceExists("foo", "default")).Returns(false);
 
-                var result = provider.Execute(new GuidanceShortcut(shortcut));
+                provider.Execute((new GuidanceShortcut(shortcut.Object)));
 
-                this.guidanceManager.VerifySet(gm => gm.ActiveGuidanceExtension = instance, Times.Once());
-                this.guidanceManager.Verify(gm => gm.Instantiate(It.IsAny<string>(), It.IsAny<string>()), Times.Never());
-                this.messageService.Verify(ms => ms.ShowError(It.IsAny<string>()), Times.Never());
-                Assert.Null(result);
+                this.guidanceProvider.Verify(gp => gp.ActivateInstance(It.IsAny<string>()), Times.Never());
+                this.guidanceProvider.Verify(gp => gp.CreateInstance("foo", "default"), Times.Once());
+                this.messageService.Verify(ums => ums.ShowError(It.IsAny<string>()), Times.Never());
             }
 
             [TestMethod, TestCategory("Unit")]
-            public void WhenExecuteWithActivationOfNotExistingSharedInstance_ThenInstantiatesActivates()
+            public void WhenExecuteWithForcedRegisteredNotExistingInstance_ThenCreateNewDefaultInstance()
             {
-                var shortcut = Mock.Of<IShortcut>(
-                    sc => sc.Type == GuidanceShortcut.ShortcutType
-                    && sc.Parameters == new Dictionary<string, string>
-                        {
-                            {GuidanceShortcut.ExtensionIdParameterName, "foo"},
-                            {GuidanceShortcut.CommandTypeParameterName, GuidanceShortcutCommandType.Activation.ToString().ToLowerInvariant()},
-                            {GuidanceShortcut.DefaultNameParameterName, string.Empty},
-                            {GuidanceShortcut.InstanceNameParameterName, string.Empty},
-                        });
-                var instance = Mock.Of<IGuidanceExtension>(ge => ge.InstanceName == "bar");
-                this.guidanceManager.Setup(gm => gm.InstalledGuidanceExtensions).Returns(new[] { Mock.Of<IGuidanceExtensionRegistration>(ger => ger.ExtensionId == "foo") });
-                this.guidanceManager.Setup(gm => gm.Instantiate("foo", It.IsAny<string>())).Returns(instance);
+                this.parameters.Add(GuidanceShortcut.AlwaysCreateParameterName, "true");
+                this.guidanceProvider.Setup(gp => gp.IsRegistered("foo")).Returns(true);
+                this.guidanceProvider.Setup(gp => gp.GetDefaultInstanceName("foo")).Returns("default");
+                this.guidanceProvider.Setup(gp => gp.InstanceExists("foo", "default")).Returns(false);
 
-                var result = provider.Execute(new GuidanceShortcut(shortcut));
+                provider.Execute((new GuidanceShortcut(shortcut.Object)));
 
-                this.guidanceManager.VerifySet(gm => gm.ActiveGuidanceExtension = instance, Times.Once());
-                this.guidanceManager.Verify(gm => gm.Instantiate("foo", It.IsAny<string>()), Times.Once());
-                this.messageService.Verify(ms => ms.ShowError(It.IsAny<string>()), Times.Never());
-                Assert.Null(result);
+                this.guidanceProvider.Verify(gp => gp.ActivateInstance(It.IsAny<string>()), Times.Never());
+                this.guidanceProvider.Verify(gp => gp.CreateInstance("foo", "default"), Times.Once());
+                this.messageService.Verify(ums => ums.ShowError(It.IsAny<string>()), Times.Never());
             }
 
             [TestMethod, TestCategory("Unit")]
-            public void WhenExecuteWithActivationOfExistingSharedInstance_ThenInstantiatesActivates()
+            public void WhenExecuteWithForcedUnregisteredExistingDefaultInstance_ThenDisplaysError()
             {
-                var shortcut = Mock.Of<IShortcut>(
-                    sc => sc.Type == GuidanceShortcut.ShortcutType
-                    && sc.Parameters == new Dictionary<string, string>
-                        {
-                            {GuidanceShortcut.ExtensionIdParameterName, "foo"},
-                            {GuidanceShortcut.CommandTypeParameterName, GuidanceShortcutCommandType.Activation.ToString().ToLowerInvariant()},
-                            {GuidanceShortcut.DefaultNameParameterName, string.Empty},
-                            {GuidanceShortcut.InstanceNameParameterName, string.Empty},
-                        });
-                var instance = Mock.Of<IGuidanceExtension>(ge => ge.InstanceName == "bar" && ge.ExtensionId == "foo");
-                this.guidanceManager.Setup(gm => gm.InstalledGuidanceExtensions).Returns(new[] { Mock.Of<IGuidanceExtensionRegistration>(ger => ger.ExtensionId == "foo") });
-                this.guidanceManager.Setup(gm => gm.InstantiatedGuidanceExtensions).Returns(new[] { instance });
+                this.parameters.Add(GuidanceShortcut.AlwaysCreateParameterName, "true");
+                this.guidanceProvider.Setup(gp => gp.IsRegistered("foo")).Returns(false);
+                this.guidanceProvider.Setup(gp => gp.GetDefaultInstanceName("foo")).Returns("default");
+                this.guidanceProvider.Setup(gp => gp.InstanceExists("foo", "default")).Returns(true);
 
-                var result = provider.Execute(new GuidanceShortcut(shortcut));
+                provider.Execute((new GuidanceShortcut(shortcut.Object)));
 
-                this.guidanceManager.VerifySet(gm => gm.ActiveGuidanceExtension = instance, Times.Once());
-                this.guidanceManager.Verify(gm => gm.Instantiate(It.IsAny<string>(), It.IsAny<string>()), Times.Never());
-                this.messageService.Verify(ms => ms.ShowError(It.IsAny<string>()), Times.Never());
-                Assert.Null(result);
+                this.guidanceProvider.Verify(gp => gp.ActivateInstance(It.IsAny<string>()), Times.Never());
+                this.guidanceProvider.Verify(gp => gp.CreateInstance(It.IsAny<string>(), It.IsAny<string>()), Times.Never());
+                this.messageService.Verify(ums => ums.ShowError(Resources.GuidanceShortcutProvider_NotRegistered.FormatWith("foo", "bar")), Times.Once());
             }
 
             [TestMethod, TestCategory("Unit")]
-            public void WhenExecuteWithInstantiationNewInstance_ThenInstantiatesActivates()
+            public void WhenExecuteWithForcedUnregistered_ThenDisplaysError()
             {
-                var shortcut = Mock.Of<IShortcut>(
-                    sc => sc.Type == GuidanceShortcut.ShortcutType
-                    && sc.Parameters == new Dictionary<string, string>
-                        {
-                            {GuidanceShortcut.ExtensionIdParameterName, "foo"},
-                            {GuidanceShortcut.CommandTypeParameterName, GuidanceShortcutCommandType.Instantiation.ToString().ToLowerInvariant()},
-                            {GuidanceShortcut.DefaultNameParameterName, "bar"},
-                            {GuidanceShortcut.InstanceNameParameterName, string.Empty},
-                        });
-                var instance = Mock.Of<IGuidanceExtension>(ge => ge.InstanceName == "bar" && ge.ExtensionId == "foo");
-                this.guidanceManager.Setup(gm => gm.InstalledGuidanceExtensions).Returns(new[] { Mock.Of<IGuidanceExtensionRegistration>(ger => ger.ExtensionId == "foo" && ger.DefaultName == "foobar") });
-                this.guidanceManager.Setup(gm => gm.Instantiate("foo", It.IsAny<string>())).Returns(instance);
+                this.parameters.Add(GuidanceShortcut.AlwaysCreateParameterName, "true");
+                this.guidanceProvider.Setup(gp => gp.IsRegistered("foo")).Returns(false);
+                this.guidanceProvider.Setup(gp => gp.GetDefaultInstanceName("foo")).Returns("default");
+                this.guidanceProvider.Setup(gp => gp.InstanceExists("foo", "default")).Returns(false);
 
-                var result = provider.Execute(new GuidanceShortcut(shortcut));
+                provider.Execute((new GuidanceShortcut(shortcut.Object)));
 
-                this.guidanceManager.VerifySet(gm => gm.ActiveGuidanceExtension = instance, Times.Once());
-                this.guidanceManager.Verify(gm => gm.Instantiate("foo", "bar"), Times.Once());
-                this.messageService.Verify(ms => ms.ShowError(It.IsAny<string>()), Times.Never());
-                Assert.Null(result);
+                this.guidanceProvider.Verify(gp => gp.ActivateInstance(It.IsAny<string>()), Times.Never());
+                this.guidanceProvider.Verify(gp => gp.CreateInstance(It.IsAny<string>(), It.IsAny<string>()), Times.Never());
+                this.messageService.Verify(ums => ums.ShowError(Resources.GuidanceShortcutProvider_NotRegistered.FormatWith("foo", "bar")), Times.Once());
+            }
+
+            [TestMethod, TestCategory("Unit")]
+            public void WhenExecuteUnregistered_ThenDisplaysError()
+            {
+                this.guidanceProvider.Setup(gp => gp.IsRegistered("foo")).Returns(false);
+                this.guidanceProvider.Setup(gp => gp.GetDefaultInstanceName("foo")).Returns("default");
+                this.guidanceProvider.Setup(gp => gp.InstanceExists("foo", "default")).Returns(false);
+
+                provider.Execute((new GuidanceShortcut(shortcut.Object)));
+
+                this.guidanceProvider.Verify(gp => gp.ActivateInstance(It.IsAny<string>()), Times.Never());
+                this.guidanceProvider.Verify(gp => gp.CreateInstance(It.IsAny<string>(), It.IsAny<string>()), Times.Never());
+                this.messageService.Verify(ums => ums.ShowError(Resources.GuidanceShortcutProvider_NotRegisteredNoInstance.FormatWith("foo")), Times.Once());
             }
         }
     }

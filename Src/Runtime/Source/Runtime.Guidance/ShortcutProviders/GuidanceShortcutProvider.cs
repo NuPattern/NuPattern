@@ -1,8 +1,4 @@
-﻿using System;
-using System.ComponentModel.Composition;
-using System.Globalization;
-using System.Linq;
-using Microsoft.VisualStudio.Shell;
+﻿using System.ComponentModel.Composition;
 using NuPattern.Runtime.Guidance.Properties;
 using NuPattern.Runtime.Shortcuts;
 using NuPattern.VisualStudio;
@@ -12,27 +8,10 @@ namespace NuPattern.Runtime.Guidance.ShortcutProviders
     /// <summary>
     /// Provides shortcuts for guidance
     /// </summary>
+    [PartCreationPolicy(CreationPolicy.Shared)]
     [Export(typeof(IShortcutProvider))]
     internal class GuidanceShortcutProvider : IShortcutProvider<GuidanceShortcut>
     {
-        /// <summary>
-        /// Gets the <see cref="IServiceProvider"/>
-        /// </summary>
-        [Import(typeof(SVsServiceProvider))]
-        internal IServiceProvider ServiceProvider { get; set; }
-
-        /// <summary>
-        /// Gets the <see cref="IGuidanceManager"/>
-        /// </summary>
-        [Import]
-        internal IGuidanceManager GuidanceManager { get; set; }
-
-        /// <summary>
-        /// Gets the <see cref="IUserMessageService"/>
-        /// </summary>
-        [Import]
-        internal IUserMessageService MessageService { get; set; }
-
         /// <summary>
         /// Gets the type of the shortcut.
         /// </summary>
@@ -48,90 +27,183 @@ namespace NuPattern.Runtime.Guidance.ShortcutProviders
         /// <returns></returns>
         public GuidanceShortcut ResolveShortcut(IShortcut shortcut)
         {
-            Guard.NotNull(() => shortcut, shortcut);
-
             return new GuidanceShortcut(shortcut);
         }
+
+        /// <summary>
+        /// Gets the <see cref="IUserMessageService"/>
+        /// </summary>
+        [Import]
+        internal IUserMessageService MessageService { get; set; }
+
+        /// <summary>
+        /// Gets the <see cref="IGuidanceProvider"/> 
+        /// </summary>
+        [Import]
+        internal IGuidanceProvider GuidanceProvider { get; set; }
 
         /// <summary>
         /// Executes the shortcut.
         /// </summary>
         /// <param name="instance">An instance of the pattern shortcut</param>
-        public GuidanceShortcut Execute(GuidanceShortcut instance)
+        public void Execute(GuidanceShortcut instance)
         {
-            Guard.NotNull(() => instance, instance);
+            var instanceName = instance.InstanceName;
+            var extensionId = instance.GuidanceExtensionId;
+            var forceCreate = instance.AlwaysCreate;
 
-            // Execute the shortcut
-            switch (instance.CommandType)
+            if (!string.IsNullOrEmpty(extensionId))
             {
-                case GuidanceShortcutCommandType.Activation:
-                    if (!string.IsNullOrEmpty(instance.InstanceName))
-                    {
-                        // Locate existing workflow
-                        var workflow = this.GuidanceManager.InstantiatedGuidanceExtensions.FirstOrDefault(ge => ge.InstanceName.Equals(instance.InstanceName, StringComparison.OrdinalIgnoreCase));
-                        if (workflow != null)
-                        {
-                            this.GuidanceManager.ActivateGuidanceInstance(this.ServiceProvider, workflow);
-                        }
-                        else
-                        {
-                            this.MessageService.ShowError(
-                                string.Format(CultureInfo.CurrentCulture, Resources.GuidanceShortcutProvider_ActivateInstanceNotFound, instance.InstanceName));
-                        }
-                    }
-                    else if (!string.IsNullOrEmpty(instance.GuidanceExtensionId))
-                    {
-                        if (this.GuidanceManager.IsInstalled(instance.GuidanceExtensionId))
-                        {
-                            // Create a (single instance) of shared workflow
-                            this.GuidanceManager.ActivateSharedGuidanceWorkflow(this.ServiceProvider, instance.GuidanceExtensionId);
-                        }
-                        else
-                        {
-                            this.MessageService.ShowError(
-                                string.Format(CultureInfo.CurrentCulture, Resources.GuidanceShortcutProvider_ActivateSharedExtensionNotFound, instance.GuidanceExtensionId));
-                        }
-                    }
-                    else
-                    {
-                        this.MessageService.ShowError(Resources.GuidanceShortcutProvider_InvalidParameters);
-                    }
-                    break;
+                if (!string.IsNullOrEmpty(instanceName))
+                {
+                    var instanceExists = this.GuidanceProvider.InstanceExists(extensionId, instanceName);
+                    var isRegistered = this.GuidanceProvider.IsRegistered(extensionId);
 
-                case GuidanceShortcutCommandType.Instantiation:
-                    if (!string.IsNullOrEmpty(instance.GuidanceExtensionId))
+                    if (isRegistered)
                     {
-                        var registration = this.GuidanceManager.FindRegistration(instance.GuidanceExtensionId);
-                        if (registration != null)
+                        if (instanceExists)
                         {
-                            //Ensure unique instance name
-                            var instanceName = this.GuidanceManager.GetUniqueInstanceName(registration.DefaultName);
-                            if (!string.IsNullOrEmpty(instance.DefaultName))
+                            if (forceCreate)
                             {
-                                instanceName = this.GuidanceManager.GetUniqueInstanceName(instance.DefaultName);
+                                instanceName = this.GuidanceProvider.GetUniqueInstanceName(instanceName);
+                                this.GuidanceProvider.CreateInstance(extensionId, instanceName);
                             }
-
-                            // Create a new instance of guidance 
-                            this.GuidanceManager.InstantiateGuidanceInstance(this.ServiceProvider, instance.GuidanceExtensionId, instanceName);
+                            else
+                            {
+                                this.GuidanceProvider.ActivateInstance(instanceName);
+                            }
                         }
                         else
                         {
-                            this.MessageService.ShowError(
-                                string.Format(CultureInfo.CurrentCulture, Resources.GuidanceShortcutProvider_InstantiateExtensionNotFound, instance.GuidanceExtensionId));
+                            this.GuidanceProvider.CreateInstance(extensionId, instanceName);
+                        }
+
+                    }
+                    else
+                    {
+                        if (instanceExists)
+                        {
+                            if (forceCreate)
+                            {
+                                this.MessageService.ShowError(
+                                    Resources.GuidanceShortcutProvider_NotRegistered.FormatWith(extensionId));
+                            }
+                            else
+                            {
+                                this.GuidanceProvider.ActivateInstance(instanceName);
+                            }
+                        }
+                        else
+                        {
+                            if (forceCreate)
+                            {
+                                this.MessageService.ShowError(
+                                    Resources.GuidanceShortcutProvider_NotRegistered.FormatWith(extensionId));
+                            }
+                            else
+                            {
+                                this.MessageService.ShowError(
+                                    Resources.GuidanceShortcutProvider_NotRegisteredInstanceNotExist.FormatWith(
+                                        instanceName, extensionId));
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    var defaultInstanceName = this.GuidanceProvider.GetDefaultInstanceName(extensionId);
+                    var defaultInstanceExists = this.GuidanceProvider.InstanceExists(extensionId, defaultInstanceName);
+                    var isRegistered = this.GuidanceProvider.IsRegistered(extensionId);
+
+                    if (isRegistered)
+                    {
+                        if (defaultInstanceExists)
+                        {
+                            if (forceCreate)
+                            {
+                                instanceName = this.GuidanceProvider.GetUniqueInstanceName(defaultInstanceName);
+                                this.GuidanceProvider.CreateInstance(extensionId, instanceName);
+                            }
+                            else
+                            {
+                                this.GuidanceProvider.ActivateInstance(defaultInstanceName);
+                            }
+                        }
+                        else
+                        {
+                            this.GuidanceProvider.CreateInstance(extensionId, defaultInstanceName);
                         }
                     }
                     else
                     {
-                        this.MessageService.ShowError(Resources.GuidanceShortcutProvider_InvalidParameters);
+                        if (defaultInstanceExists)
+                        {
+                            if (forceCreate)
+                            {
+                                this.MessageService.ShowError(Resources.GuidanceShortcutProvider_NotRegistered.FormatWith(extensionId));
+                            }
+                            else
+                            {
+                                this.GuidanceProvider.ActivateInstance(defaultInstanceName);
+                            }
+                        }
+                        else
+                        {
+                            if (forceCreate)
+                            {
+                                this.MessageService.ShowError(Resources.GuidanceShortcutProvider_NotRegistered.FormatWith(extensionId));
+                            }
+                            else
+                            {
+                                this.MessageService.ShowError(Resources.GuidanceShortcutProvider_NotRegisteredNoInstance.FormatWith(extensionId));
+                            }
+                        }
                     }
-                    break;
-
-                default:
-                    this.MessageService.ShowError(Resources.GuidanceShortcutProvider_InvalidParameters);
-                    break;
+                }
             }
+            else
+            {
+                if (!string.IsNullOrEmpty(instanceName))
+                {
+                    var instanceExists = this.GuidanceProvider.InstanceExists(extensionId, instanceName);
+                    if (instanceExists)
+                    {
+                        if (forceCreate)
+                        {
+                            this.MessageService.ShowError(Resources.GuidanceShortcutProvider_RegistrationNotExist);
+                        }
+                        else
+                        {
+                            this.GuidanceProvider.ActivateInstance(instanceName);
+                        }
+                    }
+                    else
+                    {
+                        if (forceCreate)
+                        {
+                            this.MessageService.ShowError(Resources.GuidanceShortcutProvider_RegistrationNotExist);
+                        }
+                        else
+                        {
+                            this.MessageService.ShowError(Resources.GuidanceShortcutProvider_RegistrationNotExistForInstance.FormatWith(instanceName));
+                        }
+                    }
+                }
+                else
+                {
+                    this.MessageService.ShowError(Resources.GuidanceShortcutProvider_InvalidParameters);
+                }
+            }
+        }
 
-            return null;
+        /// <summary>
+        /// Creates a new shortcut
+        /// </summary>
+        /// <param name="instance"></param>
+        /// <returns></returns>
+        public IShortcut CreateShortcut(GuidanceShortcut instance)
+        {
+            return instance;
         }
     }
 }

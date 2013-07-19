@@ -18,14 +18,6 @@ namespace NuPattern.Runtime.ShortcutProviders
         /// <summary>
         /// Creates a new instance of the <see cref="ShortcutLaunchService"/> class.
         /// </summary>
-        public ShortcutLaunchService()
-        {
-            this.Providers = Enumerable.Empty<IShortcutProvider>();
-        }
-
-        /// <summary>
-        /// Creates a new instance of the <see cref="ShortcutLaunchService"/> class.
-        /// </summary>
         [ImportingConstructor]
         public ShortcutLaunchService(
             [ImportMany]IEnumerable<IShortcutProvider> providers)
@@ -113,7 +105,6 @@ namespace NuPattern.Runtime.ShortcutProviders
         public IShortcut Execute<T>(T instance, string type = null) where T : class
         {
             var provider = GetReferenceProvider(instance, type);
-
             if (provider == null)
             {
                 throw new NotSupportedException();
@@ -121,6 +112,39 @@ namespace NuPattern.Runtime.ShortcutProviders
 
             return (IShortcut)provider.GetType().InvokeMember(@"Execute",
                 BindingFlags.Public | BindingFlags.Instance | BindingFlags.InvokeMethod, null, provider, new object[] { instance });
+        }
+
+        /// <summary>
+        /// Creates a new shortcut 
+        /// </summary>
+        /// <param name="instance">The instance to create</param>
+        /// <param name="type">The type of the shortcut</param>
+        /// <returns></returns>
+        public IShortcut CreateShortcut<T>(T instance, string type = null) where T : class
+        {
+            var provider = GetReferenceProvider(instance, type);
+            if (provider == null)
+            {
+                throw new NotSupportedException();
+            }
+
+            return (IShortcut)provider.GetType().InvokeMember(@"CreateShortcut",
+                BindingFlags.Public | BindingFlags.Instance | BindingFlags.InvokeMethod, null, provider, new object[] { instance });
+        }
+
+        /// <summary>
+        /// Whether the shortcut can be created.
+        /// </summary>
+        /// <param name="instance">The instance to create</param>
+        /// <param name="type">The type of the shortcut</param>
+        public bool CanCreateShortcut<T>(T instance, string type = null) where T : class
+        {
+            if (!this.Providers.Any())
+            {
+                return false;
+            }
+
+            return GetReferenceProvider(instance, type) != null;
         }
 
         private IShortcutProvider GetReferenceProvider<T>(T instance, string type) where T : class

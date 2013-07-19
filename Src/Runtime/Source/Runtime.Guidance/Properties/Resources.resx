@@ -226,16 +226,22 @@
   <data name="ProjectTypeProvider_TraceLoadProjectTypes" xml:space="preserve">
     <value>Retrieving types from project {0}</value>
   </data>
-  <data name="GuidanceShortcutProvider_ActivateInstanceNotFound" xml:space="preserve">
-    <value>The guidance workflow with name '{0}' has not yet been created, and cannot be displayed.</value>
-  </data>
-  <data name="GuidanceShortcutProvider_ActivateSharedExtensionNotFound" xml:space="preserve">
-    <value>The guidance extension with identifier '{0}' is not yet installed, and cannot be used to display or create a new instance of this workflow.</value>
-  </data>
-  <data name="GuidanceShortcutProvider_InstantiateExtensionNotFound" xml:space="preserve">
-    <value>The guidance extension with identifier '{0}' is not yet installed, and cannot be used to create a new instance of this workflow.</value>
-  </data>
   <data name="GuidanceShortcutProvider_InvalidParameters" xml:space="preserve">
     <value>The shortcut configuration is missing vital information necessary to display any guidance.</value>
+  </data>
+  <data name="GuidanceShortcutProvider_NotRegistered" xml:space="preserve">
+    <value>The guidance extension with identifier '{0}' is not yet installed, and cannot be used to display or create a new instance of this workflow.</value>
+  </data>
+  <data name="GuidanceShortcutProvider_NotRegisteredInstanceNotExist" xml:space="preserve">
+    <value>The guidance workflow '{0}' does not exist, and the guidance extension with identifier '{1}' is not yet installed, and cannot be used to display or create a new instance of this workflow.</value>
+  </data>
+  <data name="GuidanceShortcutProvider_RegistrationNotExist" xml:space="preserve">
+    <value>A new guidance workflow cannot be created for an unamed guidance extension.</value>
+  </data>
+  <data name="GuidanceShortcutProvider_RegistrationNotExistForInstance" xml:space="preserve">
+    <value>The guidance workflow with name '{0}' is not yet created, and cannot be displayed.</value>
+  </data>
+  <data name="GuidanceShortcutProvider_NotRegisteredNoInstance" xml:space="preserve">
+    <value>There is no guidance workflow yet created for guidance extension '{0}'.</value>
   </data>
 </root>

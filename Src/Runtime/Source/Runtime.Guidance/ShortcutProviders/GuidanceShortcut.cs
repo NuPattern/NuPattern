@@ -10,10 +10,9 @@ namespace NuPattern.Runtime.Guidance.ShortcutProviders
     /// </summary>
     internal class GuidanceShortcut : IShortcut
     {
-        internal const string CommandTypeParameterName = "command";
-        internal const string DefaultNameParameterName = "defaultname";
-        internal const string InstanceNameParameterName = "instancename";
         internal const string ExtensionIdParameterName = "guidanceid";
+        internal const string InstanceNameParameterName = "instancename";
+        internal const string AlwaysCreateParameterName = "alwayscreate";
         internal const string ShortcutType = "guidance";
         private IShortcut shortcut;
 
@@ -54,24 +53,6 @@ namespace NuPattern.Runtime.Guidance.ShortcutProviders
         }
 
         /// <summary>
-        /// Gets or sets the shortcut type
-        /// </summary>
-        public GuidanceShortcutCommandType CommandType
-        {
-            get
-            {
-                var enumVal = GetParameterValue(CommandTypeParameterName);
-                GuidanceShortcutCommandType commandType;
-                if (Enum.TryParse(enumVal, true, out commandType))
-                {
-                    return commandType;
-                }
-
-                return GuidanceShortcutCommandType.Undefined;
-            }
-        }
-
-        /// <summary>
         /// Gets or sets the ID of the guidance extension.
         /// </summary>
         public string GuidanceExtensionId
@@ -80,7 +61,7 @@ namespace NuPattern.Runtime.Guidance.ShortcutProviders
         }
 
         /// <summary>
-        /// Gets or sets the name of the instance to activate or instantiate
+        /// Gets or sets the instance name.
         /// </summary>
         public string InstanceName
         {
@@ -88,11 +69,19 @@ namespace NuPattern.Runtime.Guidance.ShortcutProviders
         }
 
         /// <summary>
-        /// Gets or sets the default name for instantiating a new instance of a workflow
+        /// Gets or sets a value indicating whether to create  anew instance.
         /// </summary>
-        public string DefaultName
+        public bool AlwaysCreate
         {
-            get { return GetParameterValue(DefaultNameParameterName); }
+            get
+            {
+                var tryBool = false;
+                if (bool.TryParse(GetParameterValue(AlwaysCreateParameterName), out tryBool))
+                {
+                    return tryBool;
+                }
+                return false;
+            }
         }
 
         private string GetParameterValue(string parameterName)

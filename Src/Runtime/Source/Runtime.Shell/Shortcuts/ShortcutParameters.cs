@@ -10,6 +10,9 @@ namespace NuPattern.Runtime.Shell.Shortcuts
     /// <summary>
     /// Parameters for a shortcut
     /// </summary>
+    /// <remarks>
+    /// Must be public for XML serialization.
+    /// </remarks>
     [Serializable]
     public class ShortcutParameters : Dictionary<string, string>, IXmlSerializable
     {

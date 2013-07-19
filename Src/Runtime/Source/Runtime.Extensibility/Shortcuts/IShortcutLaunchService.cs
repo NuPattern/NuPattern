@@ -28,15 +28,15 @@ namespace NuPattern.Runtime.Shortcuts
         /// <returns>The resolved reference</returns>
         T ResolveShortcut<T>(IShortcut shortcut) where T : class;
 
-        ///// <summary>
-        ///// Creates a reference for the instance of T. 
-        ///// If the type is not provided the type of T should be used to determine how the reference should be created. 
-        ///// </summary>
-        ///// <typeparam name="T">The type of the instance</typeparam>
-        ///// <param name="instance">The instance</param>
-        ///// <param name="type">The type will be used to determine how the reference should be created</param>
-        ///// <returns>The reference to the instance</returns>
-        //IShortcut CreateShortcut<T>(T instance, string type = null) where T : class;
+        /// <summary>
+        /// Creates a reference for the instance of T. 
+        /// If the type is not provided the type of T should be used to determine how the reference should be created. 
+        /// </summary>
+        /// <typeparam name="T">The type of the instance</typeparam>
+        /// <param name="instance">The instance</param>
+        /// <param name="type">The type will be used to determine how the reference should be created</param>
+        /// <returns>The reference to the instance</returns>
+        IShortcut CreateShortcut<T>(T instance, string type = null) where T : class;
 
         /// <summary>
         /// Executes the instance, and returns an updated shortcut (if any)
@@ -46,13 +46,13 @@ namespace NuPattern.Runtime.Shortcuts
         /// <param name="type">The type of the instance</param>
         IShortcut Execute<T>(T instance, string type = null) where T : class;
 
-        ///// <summary>
-        ///// Determines if the reference can be created for the instance of T
-        ///// </summary>
-        ///// <typeparam name="T">The type of the instance</typeparam>
-        ///// <param name="instance">The instance</param>
-        ///// <param name="type">The type will be used to determine how the reference should be created</param>
-        ///// <returns>True if the reference can be created</returns>
-        //bool CanCreateShortcut<T>(T instance, string type = null) where T : class;
+        /// <summary>
+        /// Determines if the reference can be created for the instance of T
+        /// </summary>
+        /// <typeparam name="T">The type of the instance</typeparam>
+        /// <param name="instance">The instance</param>
+        /// <param name="type">The type will be used to determine how the reference should be created</param>
+        /// <returns>True if the reference can be created</returns>
+        bool CanCreateShortcut<T>(T instance, string type = null) where T : class;
     }
 }

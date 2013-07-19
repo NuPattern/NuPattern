@@ -49,25 +49,19 @@ namespace NuPattern.Runtime.UnitTests.Guidance.ShortcutProviders
             }
 
             [TestMethod, TestCategory("Unit")]
-            public void ThenCommandTypeUndefined()
+            public void ThenAlwaysCreateIsFalse()
             {
-                Assert.Equal(GuidanceShortcutCommandType.Undefined, this.guidanceShortcut.CommandType);
+                Assert.False(this.guidanceShortcut.AlwaysCreate);
             }
 
             [TestMethod, TestCategory("Unit")]
-            public void ThenDefaultNameNull()
-            {
-                Assert.Null(this.guidanceShortcut.DefaultName);
-            }
-
-            [TestMethod, TestCategory("Unit")]
-            public void ThenInstanceNameIdNull()
+            public void ThenInstanceNameIsNull()
             {
                 Assert.Null(this.guidanceShortcut.InstanceName);
             }
 
             [TestMethod, TestCategory("Unit")]
-            public void ThenExtensionIdNull()
+            public void ThenExtensionIsNull()
             {
                 Assert.Null(this.guidanceShortcut.GuidanceExtensionId);
             }
@@ -87,8 +81,7 @@ namespace NuPattern.Runtime.UnitTests.Guidance.ShortcutProviders
                 this.shortcut.Setup(sc => sc.Description).Returns("bar");
                 this.shortcut.Setup(sc => sc.Parameters).Returns(new Dictionary<string, string>
                     {
-                        { GuidanceShortcut.CommandTypeParameterName, GuidanceShortcutCommandType.Activation.ToString().ToLowerInvariant() },
-                        { GuidanceShortcut.DefaultNameParameterName, "bar" },
+                        { GuidanceShortcut.AlwaysCreateParameterName, "true" },
                         { GuidanceShortcut.InstanceNameParameterName, "bar2" },
                         { GuidanceShortcut.ExtensionIdParameterName, "bar3" },
                     });
@@ -111,19 +104,13 @@ namespace NuPattern.Runtime.UnitTests.Guidance.ShortcutProviders
             [TestMethod, TestCategory("Unit")]
             public void ThenParametersAreSet()
             {
-                Assert.Equal(4, this.guidanceShortcut.Parameters.Count);
+                Assert.Equal(3, this.guidanceShortcut.Parameters.Count);
             }
 
             [TestMethod, TestCategory("Unit")]
-            public void ThenCommandTypeAssigned()
+            public void ThenAlwaysCreateAssigned()
             {
-                Assert.Equal(GuidanceShortcutCommandType.Activation, this.guidanceShortcut.CommandType);
-            }
-
-            [TestMethod, TestCategory("Unit")]
-            public void ThenDefaultNameAssigned()
-            {
-                Assert.Equal("bar", this.guidanceShortcut.DefaultName);
+                Assert.True(this.guidanceShortcut.AlwaysCreate);
             }
 
             [TestMethod, TestCategory("Unit")]

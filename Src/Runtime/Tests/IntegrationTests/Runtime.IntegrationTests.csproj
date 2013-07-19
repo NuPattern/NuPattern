@@ -95,6 +95,7 @@
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\..\..\Common\Helpers\Assertions.cs">
@@ -116,12 +117,6 @@
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
     <Compile Include="Shell\ComponentModelExportsSpec.cs" />
-    <Content Include="Runtime.IntegrationTests.Content\Shortcuts\EmptyGuidanceShortcut.guidance">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Runtime.IntegrationTests.Content\Shortcuts\EmptyPatternShortcut.pattern">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Runtime.IntegrationTests.Content\Shortcuts\InvalidShortcut.shortcut">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -131,9 +126,15 @@
     <Content Include="Runtime.IntegrationTests.Content\Shortcuts\ValidShortcut.shortcut">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Runtime.IntegrationTests.Content\Shortcuts\UpdatedGuidanceShortcut.guidance">
+    <None Include="Runtime.IntegrationTests.Content\Shortcuts\InvalidGuidanceShortcut.guidance">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    </None>
+    <None Include="Runtime.IntegrationTests.Content\Shortcuts\ValidGuidanceShortcut.guidance">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Runtime.IntegrationTests.Content\Shortcuts\EmptyGuidanceShortcut.guidance">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Shell\RuntimeShellVsixPackagingSpec.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>RuntimeShellVsixPackagingSpec.gen.cs</LastGenOutput>

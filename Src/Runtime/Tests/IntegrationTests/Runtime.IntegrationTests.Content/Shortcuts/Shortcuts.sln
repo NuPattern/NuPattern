@@ -3,7 +3,8 @@
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0AB15FA7-92BC-4923-ACCC-847D0F478E97}"
 	ProjectSection(SolutionItems) = preProject
 		EmptyGuidanceShortcut.guidance = EmptyGuidanceShortcut.guidance
-		EmptyPatternShortcut.pattern = EmptyPatternShortcut.pattern
+		ValidGuidanceShortcut.guidance = ValidGuidanceShortcut.guidance
+		InvalidGuidanceShortcut.guidance = InvalidGuidanceShortcut.guidance
 	EndProjectSection
 EndProject
 Global

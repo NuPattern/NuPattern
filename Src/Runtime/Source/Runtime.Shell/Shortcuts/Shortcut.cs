@@ -7,6 +7,9 @@ namespace NuPattern.Runtime.Shell.Shortcuts
     /// <summary>
     /// A generic (all purpose) shortcut
     /// </summary>
+    /// <remarks>
+    /// Must be public for XML serialization.
+    /// </remarks>
     [XmlRoot(RootXmlElementName)]
     public class Shortcut : IShortcut
     {
@@ -47,7 +50,24 @@ namespace NuPattern.Runtime.Shell.Shortcuts
         /// <summary>
         /// Gets the parameters of the shortcut 
         /// </summary>
+        /// <remarks>Setter must be public for XML serialization</remarks>
         [XmlElement(ParametersXmlElementName)]
         public ShortcutParameters Parameters { get; set; }
+
+        /// <summary>
+        /// Creates a new shortcut from given shortcut
+        /// </summary>
+        /// <param name="shortcut">A shortcut to use</param>
+        public static Shortcut CreateShortcut(IShortcut shortcut)
+        {
+            var newShortcut = new Shortcut
+                {
+                    Type = shortcut.Type,
+                    Description = shortcut.Description,
+                };
+            newShortcut.Parameters.AddRange(shortcut.Parameters);
+
+            return newShortcut;
+        }
     }
 }

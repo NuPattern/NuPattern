@@ -1,0 +1,7 @@
+﻿<shortcut type="guidance">
+  <description>somedescription</description>
+  <parameters>
+    <parameter key="guidanceid" value="foo"/>
+    <parameter key="instancename" value="bar"/>
+  </parameters>
+</shortcut>

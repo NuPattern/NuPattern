@@ -27,7 +27,11 @@ namespace NuPattern.Runtime.Shortcuts
         /// <summary>
         /// Executes the shortcut.
         /// </summary>
-        /// <returns>An updated instance of the shortcut, if any.</returns>
-        T Execute(T instance);
+        void Execute(T instance);
+
+        /// <summary>
+        /// Creates a new shortcut
+        /// </summary>
+        IShortcut CreateShortcut(T instance);
     }
 }

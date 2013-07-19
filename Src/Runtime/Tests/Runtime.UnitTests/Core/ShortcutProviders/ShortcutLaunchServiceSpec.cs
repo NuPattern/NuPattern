@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Runtime.ShortcutProviders;
@@ -18,7 +19,7 @@ namespace NuPattern.Runtime.UnitTests.Core.ShortcutProviders
             [TestInitialize]
             public void Initialize()
             {
-                this.service = new ShortcutLaunchService();
+                this.service = new ShortcutLaunchService(new List<IShortcutProvider>());
             }
 
             [TestMethod, TestCategory("Unit")]
@@ -28,7 +29,7 @@ namespace NuPattern.Runtime.UnitTests.Core.ShortcutProviders
             }
 
             [TestMethod, TestCategory("Unit")]
-            public void WhenResolveShortcut_ThenReturnsFalse()
+            public void WhenResolveShortcut_ThenReturnsNull()
             {
                 Assert.Null(this.service.ResolveShortcut(Mock.Of<IShortcut>()));
             }
@@ -44,6 +45,19 @@ namespace NuPattern.Runtime.UnitTests.Core.ShortcutProviders
             {
                 Assert.Throws<NotSupportedException>(() =>
                     this.service.Execute(Mock.Of<IShortcut>()));
+            }
+
+            [TestMethod, TestCategory("Unit")]
+            public void WhenCanCreateShortcut_ThenReturnsFalse()
+            {
+                Assert.False(this.service.CanCreateShortcut(Mock.Of<IShortcut>()));
+            }
+
+            [TestMethod, TestCategory("Unit")]
+            public void WhenCreateShortcut_ThenThrows()
+            {
+                Assert.Throws<NotSupportedException>(() =>
+                    this.service.CreateShortcut(Mock.Of<IShortcut>()));
             }
         }
 
@@ -86,13 +100,12 @@ namespace NuPattern.Runtime.UnitTests.Core.ShortcutProviders
             }
 
             [TestMethod, TestCategory("Unit")]
-            public void WhenExecute_ThenReturnsNull()
+            public void WhenCreateShortcut_ThenReturnsShortcut()
             {
                 var shortcut = new TestShortcut();
-                this.provider.Setup(p => p.Execute(shortcut)).Returns((TestShortcut)null);
+                this.provider.Setup(p => p.CreateShortcut(shortcut)).Returns(shortcut);
 
-                var result = this.service.Execute(new TestShortcut());
-                Assert.Null(result);
+                Assert.Equal(shortcut, this.service.CreateShortcut(shortcut));
             }
         }
 

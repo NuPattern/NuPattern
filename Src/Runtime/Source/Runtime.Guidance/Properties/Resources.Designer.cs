@@ -350,38 +350,56 @@ namespace NuPattern.Runtime.Guidance.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The guidance workflow with name &apos;{0}&apos; has not yet been created, and cannot be displayed..
+        ///   Looks up a localized string similar to The shortcut configuration is missing vital information necessary to display any guidance..
         /// </summary>
-        internal static string GuidanceShortcutProvider_ActivateInstanceNotFound {
+        internal static string GuidanceShortcutProvider_InvalidParameters {
             get {
-                return ResourceManager.GetString("GuidanceShortcutProvider_ActivateInstanceNotFound", resourceCulture);
+                return ResourceManager.GetString("GuidanceShortcutProvider_InvalidParameters", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to The guidance extension with identifier &apos;{0}&apos; is not yet installed, and cannot be used to display or create a new instance of this workflow..
         /// </summary>
-        internal static string GuidanceShortcutProvider_ActivateSharedExtensionNotFound {
+        internal static string GuidanceShortcutProvider_NotRegistered {
             get {
-                return ResourceManager.GetString("GuidanceShortcutProvider_ActivateSharedExtensionNotFound", resourceCulture);
+                return ResourceManager.GetString("GuidanceShortcutProvider_NotRegistered", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The guidance extension with identifier &apos;{0}&apos; is not yet installed, and cannot be used to create a new instance of this workflow..
+        ///   Looks up a localized string similar to The guidance workflow &apos;{0}&apos; does not exist, and the guidance extension with identifier &apos;{1}&apos; is not yet installed, and cannot be used to display or create a new instance of this workflow..
         /// </summary>
-        internal static string GuidanceShortcutProvider_InstantiateExtensionNotFound {
+        internal static string GuidanceShortcutProvider_NotRegisteredInstanceNotExist {
             get {
-                return ResourceManager.GetString("GuidanceShortcutProvider_InstantiateExtensionNotFound", resourceCulture);
+                return ResourceManager.GetString("GuidanceShortcutProvider_NotRegisteredInstanceNotExist", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The shortcut configuration is missing vital information necessary to display any guidance..
+        ///   Looks up a localized string similar to There is no guidance workflow yet created for guidance extension &apos;{0}&apos;..
         /// </summary>
-        internal static string GuidanceShortcutProvider_InvalidParameters {
+        internal static string GuidanceShortcutProvider_NotRegisteredNoInstance {
             get {
-                return ResourceManager.GetString("GuidanceShortcutProvider_InvalidParameters", resourceCulture);
+                return ResourceManager.GetString("GuidanceShortcutProvider_NotRegisteredNoInstance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A new guidance workflow cannot be created for an unamed guidance extension..
+        /// </summary>
+        internal static string GuidanceShortcutProvider_RegistrationNotExist {
+            get {
+                return ResourceManager.GetString("GuidanceShortcutProvider_RegistrationNotExist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The guidance workflow with name &apos;{0}&apos; is not yet created, and cannot be displayed..
+        /// </summary>
+        internal static string GuidanceShortcutProvider_RegistrationNotExistForInstance {
+            get {
+                return ResourceManager.GetString("GuidanceShortcutProvider_RegistrationNotExistForInstance", resourceCulture);
             }
         }
         
