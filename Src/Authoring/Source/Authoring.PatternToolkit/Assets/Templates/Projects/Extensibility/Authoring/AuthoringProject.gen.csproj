@@ -106,6 +106,7 @@
         <Folder Include="Assets\Wizards\" />
         <Folder Include="Assets\Wizards\Pages\" />
         <Folder Include="Resources\" />
+        <Content Include="Creating Pattern Toolkits.guidance"/>
         <Content Include="Resources\ToolkitIcon.png">
             <IncludeInVSIX>True</IncludeInVSIX>
         </Content>

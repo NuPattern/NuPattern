@@ -1,0 +1,8 @@
+﻿<#@ output extension=".gen.guidance" #>
+<#@ include file="..\..\..\..\..\..\..\..\MasterVSIXInfo.gen.ttinclude" #>
+<shortcut type="guidance">
+  <parameters>
+    <parameter key="guidanceid" value="<#=VsixInfo.PatternToolkitBuilder.Identifier#>"/>
+    <parameter key="instancename" value="Creating Pattern Toolkits"/>
+  </parameters>
+</shortcut>

@@ -1,9 +1,9 @@
 MIME-Version: 1.0
-Content-Type: multipart/related; boundary="----=_NextPart_01CE3FB8.6A19C850"
+Content-Type: multipart/related; boundary="----=_NextPart_01CEAF23.A7EDD1A0"
 
 This document is a Single File Web Page, also known as a Web Archive file.  If you are seeing this message, your browser or editor doesn't support Web Archive files.  Please download a browser that supports Web Archive, such as Windows® Internet Explorer®.
 
-------=_NextPart_01CE3FB8.6A19C850
+------=_NextPart_01CEAF23.A7EDD1A0
 Content-Location: file:///C:/23664A33/HowToReusingExtensions.htm
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/html; charset="windows-1252"
@@ -36,8 +36,8 @@ w\:* {behavior:url(#default#VML);}
   <o:LastAuthor>Jezz</o:LastAuthor>
   <o:Revision>1</o:Revision>
   <o:TotalTime>0</o:TotalTime>
-  <o:Created>2013-04-22T12:20:00Z</o:Created>
-  <o:LastSaved>2013-04-22T12:20:00Z</o:LastSaved>
+  <o:Created>2013-09-11T07:18:00Z</o:Created>
+  <o:LastSaved>2013-09-11T07:18:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
   <o:Words>371</o:Words>
   <o:Characters>2117</o:Characters>
@@ -2263,6 +2263,100 @@ table.MsoTableGrid
 	mso-hansi-theme-font:minor-latin;
 	mso-ansi-language:EN-US;
 	mso-fareast-language:EN-US;}
+table.MsoTableLightList
+	{mso-style-name:"Light List";
+	mso-tstyle-rowband-size:1;
+	mso-tstyle-colband-size:1;
+	mso-style-priority:61;
+	mso-style-unhide:no;
+	border:solid black 1.0pt;
+	mso-border-themecolor:text1;
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
+table.MsoTableLightListFirstRow
+	{mso-style-name:"Light List";
+	mso-table-condition:first-row;
+	mso-style-priority:61;
+	mso-style-unhide:no;
+	mso-tstyle-shading:black;
+	mso-tstyle-shading-themecolor:text1;
+	mso-para-margin-top:0cm;
+	mso-para-margin-bottom:0cm;
+	mso-para-margin-bottom:.0001pt;
+	line-height:normal;
+	color:white;
+	mso-themecolor:background1;
+	mso-ansi-font-weight:bold;
+	mso-bidi-font-weight:bold;}
+table.MsoTableLightListLastRow
+	{mso-style-name:"Light List";
+	mso-table-condition:last-row;
+	mso-style-priority:61;
+	mso-style-unhide:no;
+	mso-tstyle-border-top:2.25pt double black;
+	mso-tstyle-border-top-themecolor:text1;
+	mso-tstyle-border-left:1.0pt solid black;
+	mso-tstyle-border-left-themecolor:text1;
+	mso-tstyle-border-bottom:1.0pt solid black;
+	mso-tstyle-border-bottom-themecolor:text1;
+	mso-tstyle-border-right:1.0pt solid black;
+	mso-tstyle-border-right-themecolor:text1;
+	mso-para-margin-top:0cm;
+	mso-para-margin-bottom:0cm;
+	mso-para-margin-bottom:.0001pt;
+	line-height:normal;
+	mso-ansi-font-weight:bold;
+	mso-bidi-font-weight:bold;}
+table.MsoTableLightListFirstCol
+	{mso-style-name:"Light List";
+	mso-table-condition:first-column;
+	mso-style-priority:61;
+	mso-style-unhide:no;
+	mso-ansi-font-weight:bold;
+	mso-bidi-font-weight:bold;}
+table.MsoTableLightListLastCol
+	{mso-style-name:"Light List";
+	mso-table-condition:last-column;
+	mso-style-priority:61;
+	mso-style-unhide:no;
+	mso-ansi-font-weight:bold;
+	mso-bidi-font-weight:bold;}
+table.MsoTableLightListOddColumn
+	{mso-style-name:"Light List";
+	mso-table-condition:odd-column;
+	mso-style-priority:61;
+	mso-style-unhide:no;
+	mso-tstyle-border-top:1.0pt solid black;
+	mso-tstyle-border-top-themecolor:text1;
+	mso-tstyle-border-left:1.0pt solid black;
+	mso-tstyle-border-left-themecolor:text1;
+	mso-tstyle-border-bottom:1.0pt solid black;
+	mso-tstyle-border-bottom-themecolor:text1;
+	mso-tstyle-border-right:1.0pt solid black;
+	mso-tstyle-border-right-themecolor:text1;}
+table.MsoTableLightListOddRow
+	{mso-style-name:"Light List";
+	mso-table-condition:odd-row;
+	mso-style-priority:61;
+	mso-style-unhide:no;
+	mso-tstyle-border-top:1.0pt solid black;
+	mso-tstyle-border-top-themecolor:text1;
+	mso-tstyle-border-left:1.0pt solid black;
+	mso-tstyle-border-left-themecolor:text1;
+	mso-tstyle-border-bottom:1.0pt solid black;
+	mso-tstyle-border-bottom-themecolor:text1;
+	mso-tstyle-border-right:1.0pt solid black;
+	mso-tstyle-border-right-themecolor:text1;}
 </style>
 <![endif]--><!--[if gte mso 9]><xml>
  <o:shapedefaults v:ext=3D"edit" spidmax=3D"1026"/>
@@ -2469,10 +2563,10 @@ he
 ‘ViewForm’ extension point AND reuses the ‘ViewForm’ extension point, which=
  is
 why the user see two possible ‘View’ (‘Extension Point1’) types on offer (‘=
-My Pattern’
-and ‘Search Form’) to add to their pattern. The former coming from this
-toolkit, the later coming from the ‘Search Form’ toolkit.<o:p></o:p></span>=
-</p>
+My
+Pattern’ and ‘Search Form’) to add to their pattern. The former coming from
+this toolkit, the later coming from the ‘Search Form’ toolkit.<o:p></o:p></=
+span></p>
 
 </div>
 
@@ -2484,7 +2578,7 @@ toolkit, the later coming from the ‘Search Form’ toolkit.<o:p></o:p></span>=
 
 </html>
 
-------=_NextPart_01CE3FB8.6A19C850
+------=_NextPart_01CEAF23.A7EDD1A0
 Content-Location: file:///C:/23664A33/HowToReusingExtensions_files/themedata.thmx
 Content-Transfer-Encoding: base64
 Content-Type: application/vnd.ms-officetheme
@@ -2545,7 +2639,7 @@ AAAAAAAAANYCAAB0aGVtZS90aGVtZS90aGVtZTEueG1sUEsBAi0AFAAGAAgAAAAhAA3RkJ+2AAAA
 GwEAACcAAAAAAAAAAAAAAAAAsgkAAHRoZW1lL3RoZW1lL19yZWxzL3RoZW1lTWFuYWdlci54bWwu
 cmVsc1BLBQYAAAAABQAFAF0BAACtCgAAAAA=
 
-------=_NextPart_01CE3FB8.6A19C850
+------=_NextPart_01CEAF23.A7EDD1A0
 Content-Location: file:///C:/23664A33/HowToReusingExtensions_files/colorschememapping.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml
@@ -2555,7 +2649,7 @@ Content-Type: text/xml
  bg1=3D"lt1" tx1=3D"dk1" bg2=3D"lt2" tx2=3D"dk2" accent1=3D"accent1" accent=
 2=3D"accent2" accent3=3D"accent3" accent4=3D"accent4" accent5=3D"accent5" a=
 ccent6=3D"accent6" hlink=3D"hlink" folHlink=3D"folHlink"/>
-------=_NextPart_01CE3FB8.6A19C850
+------=_NextPart_01CEAF23.A7EDD1A0
 Content-Location: file:///C:/23664A33/HowToReusingExtensions_files/image001.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -3089,7 +3183,7 @@ AOLrsNhgtaMPZLD71w+qWrxrr34d2nb074+eW1p2vLnhyJ46X6Lt46a5pfdwPgTO9NAlq5c+fvEs
 ZAQcgEOa9wGy13/kqh8sMAMEgAAQAAJAAAhEjYAaX4+6PAoCASAABIAAEAAC7kHg/wO1ToffHk12
 rQAAAABJRU5ErkJggk==
 
-------=_NextPart_01CE3FB8.6A19C850
+------=_NextPart_01CEAF23.A7EDD1A0
 Content-Location: file:///C:/23664A33/HowToReusingExtensions_files/image002.jpg
 Content-Transfer-Encoding: base64
 Content-Type: image/jpeg
@@ -3271,7 +3365,7 @@ APQYvf8Av8aPYsPaI+hfskXo3/fZ/wAaPskXo3/fZ/xr56/4S7X/APoMXv8A3+NJ/wAJfr//AEGL
 5NGTTEOopMmjJoAWikyaMmgBaKTJoyaAFopMmjJoAWikyaMmgBaKTJoyaAFopMmjJoAWikyaMmgB
 aKTJoyaAP//Z
 
-------=_NextPart_01CE3FB8.6A19C850
+------=_NextPart_01CEAF23.A7EDD1A0
 Content-Location: file:///C:/23664A33/HowToReusingExtensions_files/image003.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -3393,7 +3487,7 @@ Qt+EACGA/Y6wyF35jW3I8BIgbPWHlYTYVBMjJmClbrUYZXFZarVk7h/zA8lY0Q+82yKgdBGlHqM5
 agEyRi3ZsIr9y3glJrfFlxru5ghIB11WUIuxS+QSOxbDFYxXbo4sNZ8QAAJSgrHB2P8D0x13Fcgl
 cqwAAAAASUVORK5CYIJ=
 
-------=_NextPart_01CE3FB8.6A19C850
+------=_NextPart_01CEAF23.A7EDD1A0
 Content-Location: file:///C:/23664A33/HowToReusingExtensions_files/image004.jpg
 Content-Transfer-Encoding: base64
 Content-Type: image/jpeg
@@ -3444,7 +3538,7 @@ HN5B7J/zMof2nrX/ADyH/fv/AOvR/aetf88h/wB+/wD69X/7Mtf+eZ/77b/Gj+zLX/nmf++2/wAa
 ObyD2T/mZQ/tPWv+eQ/79/8A162dOaR1LSjEjKCwxjnmqv8AZlr/AM8z/wB9t/jVyxhSAMsYIB9S
 T/Ok3cuEHHrc/9n=
 
-------=_NextPart_01CE3FB8.6A19C850
+------=_NextPart_01CEAF23.A7EDD1A0
 Content-Location: file:///C:/23664A33/HowToReusingExtensions_files/image005.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -3749,7 +3843,7 @@ hSd31AE9SLQBtg0gy+roPwnRwlgxHODaGtbbYqmKiQA4rzBoDIepKRbg9RwwA+di0ZtHG+CgDSDL
 c3QtWAcigAgwCBTkZsNfMmAo+9Ysxsk3dxEHxKFMbQB9WeykEYHygADOy6LnhN48N20Afdny0MNi
 GxAB9NjQg0cb4KYN/B+DSlGBiwWGjwAAAABJRU5ErkJggk==
 
-------=_NextPart_01CE3FB8.6A19C850
+------=_NextPart_01CEAF23.A7EDD1A0
 Content-Location: file:///C:/23664A33/HowToReusingExtensions_files/image006.jpg
 Content-Transfer-Encoding: base64
 Content-Type: image/jpeg
@@ -3837,7 +3931,7 @@ b/v2tHMgsZlnNqL3LC6jjSEFsYHJ5G3v6ZNWLw/6FP8A9c2/lVv+w7n/AKCDf9+1pH0CeRGRtQcq
 wwR5a9KOZBY07D/jwg/65j+VWKjhiEMCRg5CKFzUlQUeBeNf+Rz1X/ruf5CsOtzxr/yOeq/9dz/I
 Vh12x2RzvcKKKKYgooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKXigD/9k=
 
-------=_NextPart_01CE3FB8.6A19C850
+------=_NextPart_01CEAF23.A7EDD1A0
 Content-Location: file:///C:/23664A33/HowToReusingExtensions_files/filelist.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml; charset="utf-8"
@@ -3854,4 +3948,4 @@ Content-Type: text/xml; charset="utf-8"
  <o:File HRef=3D"image006.jpg"/>
  <o:File HRef=3D"filelist.xml"/>
 </xml>
-------=_NextPart_01CE3FB8.6A19C850--
+------=_NextPart_01CEAF23.A7EDD1A0--
