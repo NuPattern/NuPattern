@@ -26,7 +26,7 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 	/// </summary>
 	[Description("A library that contains reusable automation types for sharing between Pattern Toolkit projects.")]
 	[ToolkitInterfaceProxy(ExtensionId = "97bd7ab2-964b-43f1-8a08-be6db68b018b", DefinitionId = "d6139b37-9971-4834-a9dc-2b3daef962cf", ProxyType = typeof(PatternToolkitLibrary))]
-	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.22.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.23.0")]
 	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 	internal partial class PatternToolkitLibrary : IPatternToolkitLibrary
 	{

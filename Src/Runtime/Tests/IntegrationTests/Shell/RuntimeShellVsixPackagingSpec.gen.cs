@@ -35,7 +35,7 @@ namespace NuPattern.Runtime.IntegrationTests
                 Assert.Equal(@"NuPattern Toolkit Manager", this.VsixInfo.Header.Name);
                 Assert.Equal(@"Includes the 'Solution Builder' window, and the automation framework for accelerating solution development using NuPattern Toolkits.", this.VsixInfo.Header.Description);
                 Assert.Equal(@"NuPattern", this.VsixInfo.Header.Author);
-                Assert.Equal("1.3.22.0", this.VsixInfo.Header.Version.ToString());
+                Assert.Equal("1.3.23.0", this.VsixInfo.Header.Version.ToString());
                 
                 //License, Icon, PreviewImage, MoreInfoUrl, GettingStartedGuide
                 Assert.Equal(@"LICENSE.txt", this.VsixInfo.Header.License);

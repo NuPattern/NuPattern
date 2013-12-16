@@ -24,7 +24,7 @@ namespace NuPattern.Authoring.PatternToolkit
 	/// </summary>
 	[Description("The assets used in this toolkit.")]
 	[ToolkitInterface(ExtensionId = "9f6dc301-6f66-4d21-9f9c-b37412b162f6", DefinitionId = "58df3920-65bc-4078-b6a4-ab583f906881", ProxyType = typeof(Assets))]
-	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.22.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.23.0")]
 	public partial interface IAssets : IToolkitInterface
 	{
 
@@ -135,7 +135,7 @@ namespace NuPattern.Authoring.PatternToolkit
 	/// </summary>
 	[Description("The templates used in this toolkit.")]
 	[ToolkitInterface(ExtensionId = "9f6dc301-6f66-4d21-9f9c-b37412b162f6", DefinitionId = "f53b1915-e5c9-47f0-b33f-64487813d87c", ProxyType = typeof(Templates))]
-	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.22.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.23.0")]
 	public partial interface ITemplates : IToolkitInterface
 	{
 
@@ -246,7 +246,7 @@ namespace NuPattern.Authoring.PatternToolkit
 	/// </summary>
 	[Description("VS item templates")]
 	[ToolkitInterface(ExtensionId = "9f6dc301-6f66-4d21-9f9c-b37412b162f6", DefinitionId = "48591d87-4482-4dae-b5af-3ab807bcd947", ProxyType = typeof(ItemTemplates))]
-	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.22.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.23.0")]
 	public partial interface IItemTemplates : IToolkitInterface
 	{
 
@@ -333,7 +333,7 @@ namespace NuPattern.Authoring.PatternToolkit
 	/// </summary>
 	[Description("VS project templates.")]
 	[ToolkitInterface(ExtensionId = "9f6dc301-6f66-4d21-9f9c-b37412b162f6", DefinitionId = "b48e216c-da3e-46db-9fdd-51af29559489", ProxyType = typeof(ProjectTemplates))]
-	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.22.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.23.0")]
 	public partial interface IProjectTemplates : IToolkitInterface
 	{
 
@@ -420,7 +420,7 @@ namespace NuPattern.Authoring.PatternToolkit
 	/// </summary>
 	[Description("T4 code generation templates.")]
 	[ToolkitInterface(ExtensionId = "9f6dc301-6f66-4d21-9f9c-b37412b162f6", DefinitionId = "81dde21d-392a-4c60-a048-5c5445bf6542", ProxyType = typeof(TextTemplates))]
-	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.22.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.23.0")]
 	public partial interface ITextTemplates : IToolkitInterface
 	{
 
@@ -507,7 +507,7 @@ namespace NuPattern.Authoring.PatternToolkit
 	/// </summary>
 	[Description("Wizards to gather user information")]
 	[ToolkitInterface(ExtensionId = "9f6dc301-6f66-4d21-9f9c-b37412b162f6", DefinitionId = "e341bc69-c2e1-44ef-811f-6d092497c277", ProxyType = typeof(Wizards))]
-	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.22.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.23.0")]
 	public partial interface IWizards : IToolkitInterface
 	{
 
@@ -606,7 +606,7 @@ namespace NuPattern.Authoring.PatternToolkit
 	/// </summary>
 	[Description("The pages of the wizard")]
 	[ToolkitInterface(ExtensionId = "9f6dc301-6f66-4d21-9f9c-b37412b162f6", DefinitionId = "3906075a-6263-4e5d-be94-3750e6fc1e57", ProxyType = typeof(WizardPages))]
-	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.22.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.23.0")]
 	public partial interface IWizardPages : IToolkitInterface
 	{
 
@@ -693,7 +693,7 @@ namespace NuPattern.Authoring.PatternToolkit
 	/// </summary>
 	[Description("Automation for the pattern model.")]
 	[ToolkitInterface(ExtensionId = "9f6dc301-6f66-4d21-9f9c-b37412b162f6", DefinitionId = "994965b7-d2b1-4460-8947-44ca73227b5f", ProxyType = typeof(AutomationCollection))]
-	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.22.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.23.0")]
 	public partial interface IAutomationCollection : IToolkitInterface
 	{
 
@@ -780,7 +780,7 @@ namespace NuPattern.Authoring.PatternToolkit
 	/// </summary>
 	[Description("The views (or aspects) being modeled in the pattern.")]
 	[ToolkitInterface(ExtensionId = "9f6dc301-6f66-4d21-9f9c-b37412b162f6", DefinitionId = "739aef21-5f1e-421b-804a-47f11f93c9c3", ProxyType = typeof(Views))]
-	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.22.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.23.0")]
 	public partial interface IViews : IToolkitInterface
 	{
 
