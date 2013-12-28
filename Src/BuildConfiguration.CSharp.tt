@@ -8,14 +8,14 @@
   </PropertyGroup>
 
   <!-- CA settings for build configurations -->
-  <PropertyGroup Condition=" '$(Configuration)' == 'Debug-VS2010' or '$(Configuration)' == 'Debug-VS2012' ">
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug-VS2010' or '$(Configuration)' == 'Debug-VS2012' or '$(Configuration)' == 'Debug-VS2013' ">
     <!-- XML documentation errors should be fixed always -->
     <DocumentationFile>$(OutDir)\$(TargetName).xml</DocumentationFile>
     <WarningsAsErrors>1570;1573;1574;1591;1658;1711;1734;1735;</WarningsAsErrors>
     <RunCodeAnalysis>false</RunCodeAnalysis>
     <StyleCopEnabled>false</StyleCopEnabled>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'Release-VS2010' or '$(Configuration)' == 'Release-VS2012' ">
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release-VS2010' or '$(Configuration)' == 'Release-VS2012' or '$(Configuration)' == 'Release-VS2013'">
     <!-- XML documentation generation should be turned on always -->
     <DocumentationFile>$(OutDir)\$(TargetName).xml</DocumentationFile>
     <DefineConstants>$(DefineConstants);CODE_ANALYSIS</DefineConstants>
@@ -36,6 +36,8 @@
            Text="The current solution build configuration '$(Configuration)' is only valid in Visual Studio 2010. You must change the solution build configuration to match this version of Visual Studio."/>
     <Error Condition="(('$(Configuration)' == 'Debug-VS2012' or '$(Configuration)' == 'Release-VS2012') and '$(VisualStudioVersion)' != '11.0')"
            Text="The current solution build configuration '$(Configuration)' is only valid in Visual Studio 2012. You must change the solution build configuration to match this version of Visual Studio."/>
+    <Error Condition="(('$(Configuration)' == 'Debug-VS2013' or '$(Configuration)' == 'Release-VS2013') and '$(VisualStudioVersion)' != '12.0')"
+           Text="The current solution build configuration '$(Configuration)' is only valid in Visual Studio 2013. You must change the solution build configuration to match this version of Visual Studio."/>
   </Target>
 
   <Target Name="VerifyDelaySignSkipVerification" Condition="'$(DelaySign)' == 'true'">
@@ -62,8 +64,9 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- Paths for DirectiveProcessor dependency assemblies -->
-    <T4ReferencePath Condition="'$(TargetVsVersion)' == '10.0'" Include="$(ProjectDir)$(BranchRoot)..\Lib\VMSDK\10.0\TextTemplating\v10.0\" />
-    <T4ReferencePath Condition="'$(TargetVsVersion)' == '11.0'" Include="$(ProjectDir)$(BranchRoot)..\Lib\VMSDK\11.0\MSBuild\TextTemplating\" />
+    <T4ReferencePath Condition="'$(TargetVsVersion)' == '10.0'" Include="$(ProjectDir)$(BranchRoot)..\Lib\VMSDK\$(TargetVsVersion)\TextTemplating\v10.0\" />
+    <T4ReferencePath Condition="'$(TargetVsVersion)' == '11.0'" Include="$(ProjectDir)$(BranchRoot)..\Lib\VMSDK\$(TargetVsVersion)\MSBuild\TextTemplating\" />
+    <T4ReferencePath Condition="'$(TargetVsVersion)' == '12.0'" Include="$(ProjectDir)$(BranchRoot)..\Lib\VMSDK\$(TargetVsVersion)\MSBuild\TextTemplating\" />
     <T4ReferencePath Include="$(ProjectDir)$(BranchRoot)..\Lib\VisualStudio\" />
     <T4ReferencePath Include="$(ProjectDir)$(BranchRoot)..\Lib\VisualStudio\$(TargetVsVersion)\" />
     <!-- Parameters for MSBUILD transforms -->

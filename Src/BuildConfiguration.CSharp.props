@@ -6,12 +6,15 @@
   </PropertyGroup>
 
     <!-- Visual Studio Properties -->
-  <Import Condition="'$(VisualStudioVersion)' == '11.0'" Project="..\Lib\VisualStudio\11.0\MSBuild\Microsoft.Common.props" />
-  <Import Condition="'$(VisualStudioVersion)' == '11.0'" Project="..\Lib\VisualStudio\11.0\MSBuild\Microsoft.VisualStudioVersion.v11.Common.props" />
+  <Import Condition="'$(VisualStudioVersion)' == '11.0'" Project="..\Lib\VisualStudio\$(VisualStudioVersion)\MSBuild\Microsoft.Common.props" />
+  <Import Condition="'$(VisualStudioVersion)' == '11.0'" Project="..\Lib\VisualStudio\$(VisualStudioVersion)\MSBuild\Microsoft.VisualStudioVersion.v11.Common.props" />
+  <Import Condition="'$(VisualStudioVersion)' == '12.0'" Project="..\Lib\VisualStudio\$(VisualStudioVersion)\MSBuild\Microsoft.Common.props" />
+  <Import Condition="'$(VisualStudioVersion)' == '12.0'" Project="..\Lib\VisualStudio\$(VisualStudioVersion)\MSBuild\Microsoft.VisualStudioVersion.v12.Common.props" />
 
   <PropertyGroup>
     <!--<VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>-->
     <OldToolsVersion Condition="'$(VisualStudioVersion)' == '11.0'">4.0</OldToolsVersion>
+    <OldToolsVersion Condition="'$(VisualStudioVersion)' == '12.0'">4.0</OldToolsVersion>
     <MinimumVisualStudioVersion>$(VisualStudioVersion)</MinimumVisualStudioVersion>
     <BranchReferencesPath>$(BranchRoot)..\Lib</BranchReferencesPath>
     <!-- http://connect.microsoft.com/VisualStudio/feedback/details/540902 -->
@@ -31,6 +34,7 @@
     <TargetVsVersion>$(VisualStudioVersion)</TargetVsVersion>
     <TargetFrameworkVersion Condition="'$(VisualStudioVersion)' == '10.0'">v4.0</TargetFrameworkVersion>
     <TargetFrameworkVersion Condition="'$(VisualStudioVersion)' == '11.0'">v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion Condition="'$(VisualStudioVersion)' == '12.0'">v4.5</TargetFrameworkVersion>
     <MpfVersion>$(TargetVsVersion)</MpfVersion>
     <VsxVersionSuffix Condition="'$(VsxVersionSuffix)' == ''">.$(MpfVersion)</VsxVersionSuffix>
     <MpfVersionSuffix Condition="'$(MpfVersionSuffix)' == ''">.$(MpfVersion)</MpfVersionSuffix>
@@ -42,6 +46,7 @@
     <DslTargetsPath>$(BranchRoot)..\Lib\VMSDK\$(TargetVsVersion)\MSBuild\DSLTools</DslTargetsPath>
     <T4TargetsPath Condition="'$(VisualStudioVersion)' == '10.0'">$(BranchRoot)..\Lib\VMSDK\$(TargetVsVersion)\TextTemplating\v$(TargetVsVersion)</T4TargetsPath>
     <T4TargetsPath Condition="'$(VisualStudioVersion)' == '11.0'">$(BranchRoot)..\Lib\VMSDK\$(TargetVsVersion)\MSBuild\TextTemplating</T4TargetsPath>
+    <T4TargetsPath Condition="'$(VisualStudioVersion)' == '12.0'">$(BranchRoot)..\Lib\VMSDK\$(TargetVsVersion)\MSBuild\TextTemplating</T4TargetsPath>
   </PropertyGroup>
 
   <!--
@@ -75,9 +80,23 @@
     <DslTargetsPath>$(BranchRoot)..\Lib\VMSDK\$(TargetVsVersion)\MSBuild\DSLTools</DslTargetsPath>
     <T4TargetsPath>$(BranchRoot)..\Lib\VMSDK\$(TargetVsVersion)\MSBuild\TextTemplating</T4TargetsPath>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug-VS2013' or '$(Configuration)' == 'Release-VS2013' ">
+    <TargetVsVersion>12.0</TargetVsVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MpfVersion>$(TargetVsVersion)</MpfVersion>
+    <VsxVersionSuffix>.$(MpfVersion)</VsxVersionSuffix>
+    <MpfVersionSuffix>.$(MpfVersion)</MpfVersionSuffix>
+    <VsxTargetsPath>$(BranchRoot)..\Lib\VSSDK\$(TargetVsVersion)\MSBuild</VsxTargetsPath>
+    <DslToolsVersion>$(TargetVsVersion)</DslToolsVersion>
+    <DslToolsVersionSuffix>.$(DslToolsVersion)</DslToolsVersionSuffix>
+    <T4Version>$(DslToolsVersion)</T4Version>
+    <T4VersionSuffix>.$(T4Version)</T4VersionSuffix>
+    <DslTargetsPath>$(BranchRoot)..\Lib\VMSDK\$(TargetVsVersion)\MSBuild\DSLTools</DslTargetsPath>
+    <T4TargetsPath>$(BranchRoot)..\Lib\VMSDK\$(TargetVsVersion)\MSBuild\TextTemplating</T4TargetsPath>
+  </PropertyGroup>
 
   <!-- Build Configurations -->
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug-VS2010|AnyCPU' or '$(Configuration)|$(Platform)' == 'Debug-VS2012|AnyCPU' ">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug-VS2010|AnyCPU' or '$(Configuration)|$(Platform)' == 'Debug-VS2012|AnyCPU' or '$(Configuration)|$(Platform)' == 'Debug-VS2013|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -85,7 +104,7 @@
     <WarningLevel>4</WarningLevel>
     <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release-VS2010|AnyCPU' or '$(Configuration)|$(Platform)' == 'Release-VS2012|AnyCPU' ">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release-VS2010|AnyCPU' or '$(Configuration)|$(Platform)' == 'Release-VS2012|AnyCPU' or '$(Configuration)|$(Platform)' == 'Release-VS2013|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <ErrorReport>prompt</ErrorReport>
@@ -100,6 +119,10 @@
     <OutputPath>bin\AnyCPU\Debug-VS2012\</OutputPath>
     <DefineConstants>DEBUG;TRACE;VSVER11</DefineConstants>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug-VS2013' ">
+    <OutputPath>bin\AnyCPU\Debug-VS2012\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;VSVER12</DefineConstants>
+  </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release-VS2010' ">
     <OutputPath>bin\AnyCPU\Release-VS2010\</OutputPath>
     <DefineConstants>TRACE;VSVER10</DefineConstants>
@@ -107,5 +130,9 @@
   <PropertyGroup Condition=" '$(Configuration)' == 'Release-VS2012' ">
     <OutputPath>bin\AnyCPU\Release-VS2012\</OutputPath>
     <DefineConstants>TRACE;VSVER11</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release-VS2013' ">
+    <OutputPath>bin\AnyCPU\Release-VS2013\</OutputPath>
+    <DefineConstants>TRACE;VSVER12</DefineConstants>
   </PropertyGroup>
 </Project>

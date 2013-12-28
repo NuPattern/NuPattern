@@ -78,6 +78,12 @@ public static class VsixInfo
         public const string MoreInfoUrl = "http://www.microsoft.com/en-us/download/details.aspx?id=30668";
 <#
     }
+    else if (VersionInfo.TargetVsVersion == "11.0")
+    {
+#>
+        public const string MoreInfoUrl = "http://www.microsoft.com/en-us/download/details.aspx?id=40758";
+<#
+    }
 #>
     }
 }
