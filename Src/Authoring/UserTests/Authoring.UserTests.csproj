@@ -22,6 +22,13 @@
     <BranchRoot>..\..\</BranchRoot>
   </PropertyGroup>
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' Or '$(VisualStudioVersion)' == '11.0'">
+      <ItemGroup>
+        <Reference Include="UIAutomationTypes" />
+      </ItemGroup>
+    </When>
+  </Choose>
   <ItemGroup>
     <Reference Include="NuPattern.Runtime.Extensibility">
       <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Extensibility.dll</HintPath>
@@ -44,7 +51,6 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="UIAutomationTypes" />
     <Reference Include="WindowsBase" />
     <Reference Include="EnvDTE">
       <EmbedInteropTypes>False</EmbedInteropTypes>
