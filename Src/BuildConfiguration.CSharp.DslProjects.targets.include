@@ -30,6 +30,11 @@
   <!-- Include (modified) DSL Tools targets, which includes TextTemplating.targets -->
   <Import Project="$(ProjectDir)$(DslTargetsPath)\Microsoft.DSLTools.targets" />
 
+  <PropertyGroup>
+    <!-- Turn off default T4 MSBUILD settings, so that we can fully control the templates to include, and which assembly dependencies to use in the transform -->
+    <IncludeDslT4Settings>false</IncludeDslT4Settings>
+  </PropertyGroup>
+
   <!-- Copy DSLTools T4 include files to sub-folder of Project Folder, only if not already existing -->
   <ItemGroup>
     <DslIncludeFiles Include="$(DslIncludeSourceDir)\**\*.tt"/>
