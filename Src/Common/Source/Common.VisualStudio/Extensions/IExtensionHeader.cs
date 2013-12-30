@@ -117,7 +117,7 @@ namespace NuPattern.VisualStudio.Extensions
         IEnumerable<Version> SupportedVSVersions { get; }
 #endif
 
-#if VSVER11
+#if VSVER11 || VSVER12
         /// <summary>
         /// Gets the addtional unsupported elements in the header
         /// </summary>

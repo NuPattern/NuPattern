@@ -13,7 +13,7 @@ namespace NuPattern.IntegrationTests.VisualStudio
         private const string VsixContentTypeMefComponent = "MefComponent";
         private const string VsixContentTypeProjectTemplate = "ProjectTemplate";
 #endif
-#if VSVER11
+#if VSVER11 || VSVER12
         private const string VsixContentTypeMefComponent = "Microsoft.VisualStudio.MefComponent";
         private const string VsixContentTypeProjectTemplate = "Microsoft.VisualStudio.ProjectTemplate";
 #endif

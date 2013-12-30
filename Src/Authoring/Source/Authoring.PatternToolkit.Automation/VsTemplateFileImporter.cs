@@ -27,6 +27,9 @@ namespace NuPattern.Authoring.PatternToolkit.Automation
 #if VSVER11
         private static string VsSettingsRegistryKey = @"Software\Microsoft\VisualStudio\11.0";
 #endif
+#if VSVER12
+        private static string VsSettingsRegistryKey = @"Software\Microsoft\VisualStudio\12.0";
+#endif
         private static string VsSettingsRegistryValue = @"VisualStudioLocation";
         private static string exportPath;
         private string tempFolderPath;

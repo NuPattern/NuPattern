@@ -15,7 +15,7 @@ namespace NuPattern.Presentation.Data
     public sealed class DisabledImageConverter : Microsoft.VisualStudio.PlatformUI.GrayscaleImageConverter
     {	}
 #endif
-#if VSVER11
+#if VSVER11 || VSVER12
     /// <summary>
     /// Converts an image <see cref="BitmapSource"/> into a disabled version of the same image as an <see cref="Image"/>.
     /// </summary>

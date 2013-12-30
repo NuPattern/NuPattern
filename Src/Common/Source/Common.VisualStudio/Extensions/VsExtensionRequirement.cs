@@ -3,7 +3,7 @@ using ExtMan = Microsoft.VisualStudio.ExtensionManager;
 
 namespace NuPattern.VisualStudio.Extensions
 {
-#if VSVER11
+#if VSVER11 || VSVER12
     /// <summary>
     /// A wrapper for a VS VSIX registration requirement
     /// </summary>

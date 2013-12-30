@@ -33,7 +33,7 @@ namespace NuPattern.VisualStudio.Extensions
         /// </summary>
         EnabledState State { get; }
 
-#if VSVER11
+#if VSVER11 || VSVER12
         /// <summary>
         /// Gets a value to indicate whether the extension is a pack component.
         /// </summary>

@@ -23,7 +23,7 @@ namespace NuPattern.VisualStudio.Extensions
         /// </summary>
         string NestedExtensionPath { get; }
 
-#if VSVER11
+#if VSVER11 || VSVER12
         /// <summary>
         /// Gets a value to indicate whether the dependency can be downloaded automatically.
         /// </summary>

@@ -24,6 +24,9 @@ namespace NuPattern.VisualStudio.TemplateWizards
 #if VSVER11
         private static string VsSettingsRegistryKey = @"Software\Microsoft\VisualStudio\11.0";
 #endif
+#if VSVER12
+        private static string VsSettingsRegistryKey = @"Software\Microsoft\VisualStudio\12.0";
+#endif
         /// <summary>
         /// Runs custom wizard logic at the beginning of a template wizard run.
         /// </summary>

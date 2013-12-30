@@ -35,7 +35,7 @@ namespace NuPattern.VisualStudio.Extensions
         /// </summary>
         string Type { get; }
 
-#if VSVER11
+#if VSVER11 || VSVER12
         /// <summary>
         /// Gets the addtional unsupported elements defined in the VSIX manifest
         /// </summary>

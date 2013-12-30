@@ -30,7 +30,7 @@ namespace NuPattern.VisualStudio.Extensions
             get { return this.vsReference.NestedExtensionPath; }
         }
 
-#if VSVER11
+#if VSVER11 || VSVER12
         public bool CanAutoDownload
         {
             get { return this.vsReference.CanAutoDownload; }

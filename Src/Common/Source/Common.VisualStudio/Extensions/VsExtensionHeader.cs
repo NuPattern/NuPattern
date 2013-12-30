@@ -145,7 +145,7 @@ namespace NuPattern.VisualStudio.Extensions
             }
         }
 #endif
-#if VSVER11
+#if VSVER11 || VSVER12
         public IList<XmlElement> AdditionalElements
         {
             get { return this.vsHeader.AdditionalElements; }

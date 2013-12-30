@@ -34,7 +34,7 @@ namespace NuPattern.VisualStudio.Extensions
             get { return this.vsContent.RelativePath; }
         }
 
-#if VSVER11
+#if VSVER11 || VSVER12
         public IList<XmlElement> AdditionalElements
         {
             get { return this.vsContent.AdditionalElements; }

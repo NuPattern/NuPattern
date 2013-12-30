@@ -24,7 +24,7 @@ namespace NuPattern.Library.IntegrationTests
         private IPatternManager manager;
         private IInstalledToolkitInfo toolkit;
         private EnvDTE.DTE dte;
-#if VSVER11
+#if VSVER11 || VSVER12
         private string testToolkitTemplatePath;
 #endif
 
@@ -38,7 +38,7 @@ namespace NuPattern.Library.IntegrationTests
 
             this.toolkit = installedToolkits.SingleOrDefault(t => t.Id == TestToolkitId);
 
-#if VSVER11
+#if VSVER11 || VSVER12
             //Copy TestToolkit template to VSExp template cache
             this.testToolkitTemplatePath = string.Format(CultureInfo.InvariantCulture, TestToolkitTemplateCacheFormat, dte.Version);
             Directory.CreateDirectory(Environment.ExpandEnvironmentVariables(this.testToolkitTemplatePath + @"\~PC\Projects\MyTemplate1.zip"));
@@ -50,7 +50,7 @@ namespace NuPattern.Library.IntegrationTests
 #endif
         }
 
-#if VSVER11
+#if VSVER11 || VSVER12
 
         [TestCleanup]
         public void CleanUp()
@@ -91,7 +91,7 @@ namespace NuPattern.Library.IntegrationTests
             Assert.Equal(result.Id, TestToolkitId);
         }
 
-#if VSVER11
+#if VSVER11 || VSVER12
         [HostType("VS IDE")]
         [TestMethod, TestCategory("Integration")]
         public void WhenFindToolkitOrThrowWithToolkitTemplateVs2012_ThenReturnsToolkit()

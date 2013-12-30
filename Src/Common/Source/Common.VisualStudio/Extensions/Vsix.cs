@@ -202,6 +202,9 @@ namespace NuPattern.VisualStudio.Extensions
 
         private static Type GetExtensionManagerType()
         {
+#if VSVER12
+            var version = @"12.0";
+#endif
 #if VSVER11
             var version = @"11.0";
 #endif

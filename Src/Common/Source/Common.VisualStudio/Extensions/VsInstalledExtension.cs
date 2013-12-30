@@ -71,7 +71,7 @@ namespace NuPattern.VisualStudio.Extensions
             get { return this.vsInstalledExtension.Type; }
         }
 
-#if VSVER11
+#if VSVER11 || VSVER12
         public bool IsPackComponent
         {
             get { return this.vsInstalledExtension.IsPackComponent; }
