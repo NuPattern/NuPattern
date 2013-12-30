@@ -1,8 +1,23 @@
 ﻿<#@ output extension=".gen.sln" #>
 <#@ Include File="..\..\..\..\..\MasterVersion.gen.ttinclude"#>
 <#
-    var formatVersion = (VersionInfo.TargetVsVersion == "11.0") ? "12.00" : "11.00";
-    var vsVersion = (VersionInfo.TargetVsVersion == "11.0") ? "2012" : "2010";
+    var formatVersion = "";
+    var vsVersion = "";
+	if (VersionInfo.TargetVsVersion == "10.0") 
+	{
+		formatVersion = "11.00";
+		vsVersion = "2010";
+	}
+	else if (VersionInfo.TargetVsVersion == "11.0")
+	{
+		formatVersion = "12.00";
+		vsVersion = "2012";
+	}
+	else if (VersionInfo.TargetVsVersion == "12.0")
+	{
+		formatVersion = "12.00";
+		vsVersion = "2013";
+	}
 #>
 Microsoft Visual Studio Solution File, Format Version <#=formatVersion#>
 # Visual Studio <#=vsVersion#>

@@ -70,7 +70,7 @@ public const string libraryProjectName = @"\<#=libraryProjectName\#>";
 public const string supportedVsVersion = @"<#=VersionInfo.TargetVsVersion#>";
 public const string supportedFrxMinVersion = @"4.0";
 <#
-    if (VersionInfo.TargetVsVersion == "11.0")
+    if (VersionInfo.TargetVsVersion == "11.0"|| VersionInfo.TargetVsVersion == "12.0")
 { 
 #>
 public const string supportedFrxMaxVersion = @"4.5";

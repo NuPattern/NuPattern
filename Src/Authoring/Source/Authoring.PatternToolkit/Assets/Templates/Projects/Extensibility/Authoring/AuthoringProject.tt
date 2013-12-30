@@ -10,7 +10,7 @@
         <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
     </PropertyGroup>
 <#
-if (VersionInfo.TargetVsVersion == "11.0")
+if (VersionInfo.TargetVsVersion == "11.0"|| VersionInfo.TargetVsVersion == "12.0")
 {
 #>
     <PropertyGroup>

@@ -58,8 +58,11 @@ namespace NuPattern.Authoring.IntegrationTests
 #if VSVER10
                 Assert.Equal(1, this.VsixInfo.Header.SupportedVSVersions.Count(t => t.Major.ToString() + "." + t.Minor.ToString() == "10.0"));
 #endif
-#if VSVER11 || VSVER12
+#if VSVER11
                 Assert.Equal(1, this.VsixInfo.Targets.Count(t => t.VersionRange.Minimum.ToString() == "11.0"));
+#endif
+#if VSVER12
+                Assert.Equal(1, this.VsixInfo.Targets.Count(t => t.VersionRange.Minimum.ToString() == "12.0"));
 #endif
             }
 
