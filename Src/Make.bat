@@ -3,6 +3,7 @@ ECHO OFF
 SET vsname=%1
 IF %1==2010 SET vsver="10.0"
 IF %1==2012 SET vsver="11.0"
+IF %1==2013 SET vsver="12.0"
 SET silent=%2
 
 SET progfiles=%ProgramFiles%

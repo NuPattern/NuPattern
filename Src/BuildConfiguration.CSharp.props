@@ -120,7 +120,7 @@
     <DefineConstants>DEBUG;TRACE;VSVER11</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug-VS2013' ">
-    <OutputPath>bin\AnyCPU\Debug-VS2012\</OutputPath>
+    <OutputPath>bin\AnyCPU\Debug-VS2013\</OutputPath>
     <DefineConstants>DEBUG;TRACE;VSVER12</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release-VS2010' ">
