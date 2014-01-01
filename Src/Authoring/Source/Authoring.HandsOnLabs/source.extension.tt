@@ -20,20 +20,21 @@
             <Edition>Pro</Edition>
           </VisualStudio>
         </SupportedProducts>
-<# 
-if (VersionInfo.TargetVsVersion == "11.0"|| VersionInfo.TargetVsVersion == "12.0")
-{ 
-#>
-        <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5"/>
-<# 
-} 
-else
-{
-#>
-        <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0"/>
 <#
-}
+    var minFrameworkVersion = "4.0";
+    var maxFrameworkVersion = "";
+    switch (VersionInfo.TargetVsVersion)
+    {
+        case "11.0":
+            minFrameworkVersion = "4.0";
+            break;
+
+        case "12.0":
+            minFrameworkVersion = "4.5";
+            break;
+    }
 #>
+        <SupportedFrameworkRuntimeEdition MinVersion="<#=minFrameworkVersion#>" MaxVersion="<#=maxFrameworkVersion#>"/>
     </Identifier>
     <References>
         <Reference Id="<#=VsixInfo.PatternToolkitBuilder.Identifier #>" MinVersion="<#=VsixInfo.PatternToolkitBuilder.Version #>">

@@ -68,21 +68,21 @@ public const string libraryProjectName = @"\<#=libraryProjectName\#>";
 // Environment Info
 //------------------------------------------------------------------------------
 public const string supportedVsVersion = @"<#=VersionInfo.TargetVsVersion#>";
-public const string supportedFrxMinVersion = @"4.0";
 <#
-    if (VersionInfo.TargetVsVersion == "11.0"|| VersionInfo.TargetVsVersion == "12.0")
-{ 
+    var supportedFrxMinVersion = "4.0";
+    switch (VersionInfo.TargetVsVersion)
+    {
+        case "11.0":
+            supportedFrxMinVersion = "4.0";
+            break;
+
+        case "12.0":
+            supportedFrxMinVersion = "4.5";
+            break;
+    }
 #>
-public const string supportedFrxMaxVersion = @"4.5";
-<# 
-} 
-else
-{
-#>
-public const string supportedFrxMaxVersion = @"4.0";
-<#
-}
-#>
+public const string supportedFrxMinVersion = @"<#=supportedFrxMinVersion#>";
+public const string supportedFrxMaxVersion = @"";
 \<#
     UnIndent();
     WriteBlankLine();

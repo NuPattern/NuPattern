@@ -1,16 +1,26 @@
 ﻿<#@ output extension=".gen.csproj" #>
 <#@ Include File="..\..\..\..\..\..\..\MasterVersion.gen.ttinclude" #>
 <?xml version="1.0" encoding="utf-8"?>
+<#
+  switch (VersionInfo.TargetVsVersion)
+  {
+    case "10.0":
+#>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 <#
-  if (VersionInfo.TargetVsVersion == "11.0"|| VersionInfo.TargetVsVersion == "12.0")
-  {
-  #>
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-<#
-  }
+      break;
+
+    case "11.0":
+    case "12.0":
+        var toolsVersion = (VersionInfo.TargetVsVersion == "12.0") ? "12.0" : "4.0";
 #>
-    <PropertyGroup>
+<Project ToolsVersion="<#=toolsVersion#>" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+<#
+      break;
+    }
+#>
+  <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
