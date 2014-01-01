@@ -21,16 +21,19 @@
         </VisualStudio>
       </SupportedProducts>
 <#
-    var minFrameworkVersion = "4.0";
+    var minFrameworkVersion = "";
     var maxFrameworkVersion = "";
     switch (VersionInfo.TargetVsVersion)
     {
-        case "11.0":
+        case "10.0":
             minFrameworkVersion = "4.0";
+            maxFrameworkVersion ="4.0";
             break;
 
+        case "11.0":
         case "12.0":
             minFrameworkVersion = "4.5";
+            maxFrameworkVersion ="";
             break;
     }
 #>

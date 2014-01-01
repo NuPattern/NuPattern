@@ -52,8 +52,8 @@ namespace NuPattern.Runtime.IntegrationTests
                 Assert.Equal(@"4.0", this.VsixInfo.Header.SupportedFrameworkMaxVersion.ToString());
 #endif
 #if VSVER11 || VSVER12
-                Assert.Equal(@"4.0", this.VsixInfo.Header.SupportedFrameworkVersionRange.Minimum.ToString());
-                Assert.Equal(@"4.5", this.VsixInfo.Header.SupportedFrameworkVersionRange.Maximum.ToString());
+                Assert.Equal(@"4.5", this.VsixInfo.Header.SupportedFrameworkVersionRange.Minimum.ToString());
+                Assert.Null(this.VsixInfo.Header.SupportedFrameworkVersionRange.Maximum);
 #endif
                 //SupportedProducts
 #if VSVER10
