@@ -67,6 +67,8 @@
     <T4ReferencePath Condition="'$(TargetVsVersion)' == '12.0'" Include="$(ProjectDir)$(BranchRoot)..\Lib\VMSDK\$(TargetVsVersion)\MSBuild\TextTemplating\" />
     <T4ReferencePath Include="$(ProjectDir)$(BranchRoot)..\Lib\VisualStudio\" />
     <T4ReferencePath Include="$(ProjectDir)$(BranchRoot)..\Lib\VisualStudio\$(TargetVsVersion)\" />
+    <T4ReferencePath Condition="'$(TargetVsVersion)' &gt; '10.0'" Include="$(ProjectDir)$(BranchRoot)..\Lib\VisualStudio\10.0\" />
+    <T4ReferencePath Condition="'$(TargetVsVersion)' &gt; '11.0'" Include="$(ProjectDir)$(BranchRoot)..\Lib\VisualStudio\11.0\" />
     <!-- Parameters for MSBUILD transforms -->
     <T4ParameterValues Include="VsVer">
       <Value>$(TargetVsVersion)</Value>

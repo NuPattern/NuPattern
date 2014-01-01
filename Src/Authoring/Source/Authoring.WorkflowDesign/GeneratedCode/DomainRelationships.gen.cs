@@ -2286,3 +2286,4 @@ namespace NuPattern.Authoring.WorkflowDesign
 		#endregion
 	}
 }
+

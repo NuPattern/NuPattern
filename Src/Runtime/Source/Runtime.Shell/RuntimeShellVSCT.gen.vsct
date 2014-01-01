@@ -28,9 +28,9 @@
       </Button>
     </Buttons>
     <Bitmaps>
-      <Bitmap guid="guidOpenSolutionBuilderBitmap" href="..\..\..\Images\11.0\ToolWindowSolutionBuilder.bmp" usedList="bmpPic1" />
-      <Bitmap guid="guidOpenGuidanceExplorerBitmap" href="..\..\..\Images\11.0\ToolWindowGuidanceExplorer.bmp" usedList="bmpPic1" />
-      <Bitmap guid="guidOpenGuidanceBrowserBitmap" href="..\..\..\Images\11.0\ToolWindowGuidanceBrowser.bmp" usedList="bmpPic1" />
+      <Bitmap guid="guidOpenSolutionBuilderBitmap" href="..\..\..\Images\12.0\ToolWindowSolutionBuilder.bmp" usedList="bmpPic1" />
+      <Bitmap guid="guidOpenGuidanceExplorerBitmap" href="..\..\..\Images\12.0\ToolWindowGuidanceExplorer.bmp" usedList="bmpPic1" />
+      <Bitmap guid="guidOpenGuidanceBrowserBitmap" href="..\..\..\Images\12.0\ToolWindowGuidanceBrowser.bmp" usedList="bmpPic1" />
     </Bitmaps>
   </Commands>
   <CommandPlacements>

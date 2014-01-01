@@ -2409,12 +2409,12 @@ namespace NuPattern.Runtime.Schema
 			{
 				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::NuPattern.Runtime.Schema.AutomationSettingsSchema.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::NuPattern.Runtime.Schema.PropertySchema.DomainClassId)) 
 				{
 					return true;
 				}
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::NuPattern.Runtime.Schema.PropertySchema.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::NuPattern.Runtime.Schema.AutomationSettingsSchema.DomainClassId)) 
 				{
 					return true;
 				}
@@ -2443,20 +2443,20 @@ namespace NuPattern.Runtime.Schema
 			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
 		
 				
-			global::NuPattern.Runtime.Schema.AutomationSettingsSchema sourceAutomationSettingsSchema1 = sourceElement as global::NuPattern.Runtime.Schema.AutomationSettingsSchema;
-			if (sourceAutomationSettingsSchema1 != null)
+			global::NuPattern.Runtime.Schema.PropertySchema sourcePropertySchema1 = sourceElement as global::NuPattern.Runtime.Schema.PropertySchema;
+			if (sourcePropertySchema1 != null)
 			{
-				// Create link for path PatternElementHasAutomationSettings.AutomationSettings
-				this.AutomationSettings.Add(sourceAutomationSettingsSchema1);
+				// Create link for path PatternElementHasProperties.Properties
+				this.Properties.Add(sourcePropertySchema1);
 
 				return;
 			}
 				
-			global::NuPattern.Runtime.Schema.PropertySchema sourcePropertySchema2 = sourceElement as global::NuPattern.Runtime.Schema.PropertySchema;
-			if (sourcePropertySchema2 != null)
+			global::NuPattern.Runtime.Schema.AutomationSettingsSchema sourceAutomationSettingsSchema2 = sourceElement as global::NuPattern.Runtime.Schema.AutomationSettingsSchema;
+			if (sourceAutomationSettingsSchema2 != null)
 			{
-				// Create link for path PatternElementHasProperties.Properties
-				this.Properties.Add(sourcePropertySchema2);
+				// Create link for path PatternElementHasAutomationSettings.AutomationSettings
+				this.AutomationSettings.Add(sourceAutomationSettingsSchema2);
 
 				return;
 			}
@@ -2483,29 +2483,29 @@ namespace NuPattern.Runtime.Schema
 		{
 			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
 				
-			global::NuPattern.Runtime.Schema.AutomationSettingsSchema sourceAutomationSettingsSchema1 = sourceElement as global::NuPattern.Runtime.Schema.AutomationSettingsSchema;
-			if (sourceAutomationSettingsSchema1 != null)
+			global::NuPattern.Runtime.Schema.PropertySchema sourcePropertySchema1 = sourceElement as global::NuPattern.Runtime.Schema.PropertySchema;
+			if (sourcePropertySchema1 != null)
 			{
-				// Delete link for path PatternElementHasAutomationSettings.AutomationSettings
+				// Delete link for path PatternElementHasProperties.Properties
 				
-				foreach (DslModeling::ElementLink link in global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings.GetLinks((global::NuPattern.Runtime.Schema.PatternElementSchema)this, sourceAutomationSettingsSchema1))
+				foreach (DslModeling::ElementLink link in global::NuPattern.Runtime.Schema.PatternElementHasProperties.GetLinks((global::NuPattern.Runtime.Schema.PatternElementSchema)this, sourcePropertySchema1))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings.PatternElementSchemaDomainRoleId, global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings.AutomationSettingsSchemaDomainRoleId);
+					link.Delete(global::NuPattern.Runtime.Schema.PatternElementHasProperties.PatternElementSchemaDomainRoleId, global::NuPattern.Runtime.Schema.PatternElementHasProperties.PropertySchemaDomainRoleId);
 				}
 
 				return;
 			}
 				
-			global::NuPattern.Runtime.Schema.PropertySchema sourcePropertySchema2 = sourceElement as global::NuPattern.Runtime.Schema.PropertySchema;
-			if (sourcePropertySchema2 != null)
+			global::NuPattern.Runtime.Schema.AutomationSettingsSchema sourceAutomationSettingsSchema2 = sourceElement as global::NuPattern.Runtime.Schema.AutomationSettingsSchema;
+			if (sourceAutomationSettingsSchema2 != null)
 			{
-				// Delete link for path PatternElementHasProperties.Properties
+				// Delete link for path PatternElementHasAutomationSettings.AutomationSettings
 				
-				foreach (DslModeling::ElementLink link in global::NuPattern.Runtime.Schema.PatternElementHasProperties.GetLinks((global::NuPattern.Runtime.Schema.PatternElementSchema)this, sourcePropertySchema2))
+				foreach (DslModeling::ElementLink link in global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings.GetLinks((global::NuPattern.Runtime.Schema.PatternElementSchema)this, sourceAutomationSettingsSchema2))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::NuPattern.Runtime.Schema.PatternElementHasProperties.PatternElementSchemaDomainRoleId, global::NuPattern.Runtime.Schema.PatternElementHasProperties.PropertySchemaDomainRoleId);
+					link.Delete(global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings.PatternElementSchemaDomainRoleId, global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings.AutomationSettingsSchemaDomainRoleId);
 				}
 
 				return;
@@ -4170,12 +4170,12 @@ namespace NuPattern.Runtime.Schema
 			{
 				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::NuPattern.Runtime.Schema.ExtensionPointSchema.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::NuPattern.Runtime.Schema.AbstractElementSchema.DomainClassId)) 
 				{
 					return true;
 				}
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::NuPattern.Runtime.Schema.AbstractElementSchema.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::NuPattern.Runtime.Schema.ExtensionPointSchema.DomainClassId)) 
 				{
 					return true;
 				}
@@ -4204,20 +4204,20 @@ namespace NuPattern.Runtime.Schema
 			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
 		
 				
-			global::NuPattern.Runtime.Schema.ExtensionPointSchema sourceExtensionPointSchema1 = sourceElement as global::NuPattern.Runtime.Schema.ExtensionPointSchema;
-			if (sourceExtensionPointSchema1 != null)
+			global::NuPattern.Runtime.Schema.AbstractElementSchema sourceAbstractElementSchema1 = sourceElement as global::NuPattern.Runtime.Schema.AbstractElementSchema;
+			if (sourceAbstractElementSchema1 != null)
 			{
-				// Create link for path ViewHasExtensionPoints.ExtensionPoints
-				this.ExtensionPoints.Add(sourceExtensionPointSchema1);
+				// Create link for path ViewHasElements.Elements
+				this.Elements.Add(sourceAbstractElementSchema1);
 
 				return;
 			}
 				
-			global::NuPattern.Runtime.Schema.AbstractElementSchema sourceAbstractElementSchema2 = sourceElement as global::NuPattern.Runtime.Schema.AbstractElementSchema;
-			if (sourceAbstractElementSchema2 != null)
+			global::NuPattern.Runtime.Schema.ExtensionPointSchema sourceExtensionPointSchema2 = sourceElement as global::NuPattern.Runtime.Schema.ExtensionPointSchema;
+			if (sourceExtensionPointSchema2 != null)
 			{
-				// Create link for path ViewHasElements.Elements
-				this.Elements.Add(sourceAbstractElementSchema2);
+				// Create link for path ViewHasExtensionPoints.ExtensionPoints
+				this.ExtensionPoints.Add(sourceExtensionPointSchema2);
 
 				return;
 			}
@@ -4244,29 +4244,29 @@ namespace NuPattern.Runtime.Schema
 		{
 			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
 				
-			global::NuPattern.Runtime.Schema.ExtensionPointSchema sourceExtensionPointSchema1 = sourceElement as global::NuPattern.Runtime.Schema.ExtensionPointSchema;
-			if (sourceExtensionPointSchema1 != null)
+			global::NuPattern.Runtime.Schema.AbstractElementSchema sourceAbstractElementSchema1 = sourceElement as global::NuPattern.Runtime.Schema.AbstractElementSchema;
+			if (sourceAbstractElementSchema1 != null)
 			{
-				// Delete link for path ViewHasExtensionPoints.ExtensionPoints
+				// Delete link for path ViewHasElements.Elements
 				
-				foreach (DslModeling::ElementLink link in global::NuPattern.Runtime.Schema.ViewHasExtensionPoints.GetLinks((global::NuPattern.Runtime.Schema.ViewSchema)this, sourceExtensionPointSchema1))
+				foreach (DslModeling::ElementLink link in global::NuPattern.Runtime.Schema.ViewHasElements.GetLinks((global::NuPattern.Runtime.Schema.ViewSchema)this, sourceAbstractElementSchema1))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::NuPattern.Runtime.Schema.ViewHasExtensionPoints.ViewSchemaDomainRoleId, global::NuPattern.Runtime.Schema.ViewHasExtensionPoints.ExtensionPointSchemaDomainRoleId);
+					link.Delete(global::NuPattern.Runtime.Schema.ViewHasElements.ViewSchemaDomainRoleId, global::NuPattern.Runtime.Schema.ViewHasElements.AbstractElementSchemaDomainRoleId);
 				}
 
 				return;
 			}
 				
-			global::NuPattern.Runtime.Schema.AbstractElementSchema sourceAbstractElementSchema2 = sourceElement as global::NuPattern.Runtime.Schema.AbstractElementSchema;
-			if (sourceAbstractElementSchema2 != null)
+			global::NuPattern.Runtime.Schema.ExtensionPointSchema sourceExtensionPointSchema2 = sourceElement as global::NuPattern.Runtime.Schema.ExtensionPointSchema;
+			if (sourceExtensionPointSchema2 != null)
 			{
-				// Delete link for path ViewHasElements.Elements
+				// Delete link for path ViewHasExtensionPoints.ExtensionPoints
 				
-				foreach (DslModeling::ElementLink link in global::NuPattern.Runtime.Schema.ViewHasElements.GetLinks((global::NuPattern.Runtime.Schema.ViewSchema)this, sourceAbstractElementSchema2))
+				foreach (DslModeling::ElementLink link in global::NuPattern.Runtime.Schema.ViewHasExtensionPoints.GetLinks((global::NuPattern.Runtime.Schema.ViewSchema)this, sourceExtensionPointSchema2))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::NuPattern.Runtime.Schema.ViewHasElements.ViewSchemaDomainRoleId, global::NuPattern.Runtime.Schema.ViewHasElements.AbstractElementSchemaDomainRoleId);
+					link.Delete(global::NuPattern.Runtime.Schema.ViewHasExtensionPoints.ViewSchemaDomainRoleId, global::NuPattern.Runtime.Schema.ViewHasExtensionPoints.ExtensionPointSchemaDomainRoleId);
 				}
 
 				return;
@@ -5140,12 +5140,12 @@ namespace NuPattern.Runtime.Schema
 			{
 				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::NuPattern.Runtime.Schema.ExtensionPointSchema.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::NuPattern.Runtime.Schema.AbstractElementSchema.DomainClassId)) 
 				{
 					return true;
 				}
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::NuPattern.Runtime.Schema.AbstractElementSchema.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::NuPattern.Runtime.Schema.ExtensionPointSchema.DomainClassId)) 
 				{
 					return true;
 				}
@@ -5174,20 +5174,20 @@ namespace NuPattern.Runtime.Schema
 			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
 		
 				
-			global::NuPattern.Runtime.Schema.ExtensionPointSchema sourceExtensionPointSchema1 = sourceElement as global::NuPattern.Runtime.Schema.ExtensionPointSchema;
-			if (sourceExtensionPointSchema1 != null)
+			global::NuPattern.Runtime.Schema.AbstractElementSchema sourceAbstractElementSchema1 = sourceElement as global::NuPattern.Runtime.Schema.AbstractElementSchema;
+			if (sourceAbstractElementSchema1 != null)
 			{
-				// Create link for path ElementHasExtensionPoints.ExtensionPoints
-				this.ExtensionPoints.Add(sourceExtensionPointSchema1);
+				// Create link for path ElementHasElements.Elements
+				this.Elements.Add(sourceAbstractElementSchema1);
 
 				return;
 			}
 				
-			global::NuPattern.Runtime.Schema.AbstractElementSchema sourceAbstractElementSchema2 = sourceElement as global::NuPattern.Runtime.Schema.AbstractElementSchema;
-			if (sourceAbstractElementSchema2 != null)
+			global::NuPattern.Runtime.Schema.ExtensionPointSchema sourceExtensionPointSchema2 = sourceElement as global::NuPattern.Runtime.Schema.ExtensionPointSchema;
+			if (sourceExtensionPointSchema2 != null)
 			{
-				// Create link for path ElementHasElements.Elements
-				this.Elements.Add(sourceAbstractElementSchema2);
+				// Create link for path ElementHasExtensionPoints.ExtensionPoints
+				this.ExtensionPoints.Add(sourceExtensionPointSchema2);
 
 				return;
 			}
@@ -5214,29 +5214,29 @@ namespace NuPattern.Runtime.Schema
 		{
 			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
 				
-			global::NuPattern.Runtime.Schema.ExtensionPointSchema sourceExtensionPointSchema1 = sourceElement as global::NuPattern.Runtime.Schema.ExtensionPointSchema;
-			if (sourceExtensionPointSchema1 != null)
+			global::NuPattern.Runtime.Schema.AbstractElementSchema sourceAbstractElementSchema1 = sourceElement as global::NuPattern.Runtime.Schema.AbstractElementSchema;
+			if (sourceAbstractElementSchema1 != null)
 			{
-				// Delete link for path ElementHasExtensionPoints.ExtensionPoints
+				// Delete link for path ElementHasElements.Elements
 				
-				foreach (DslModeling::ElementLink link in global::NuPattern.Runtime.Schema.ElementHasExtensionPoints.GetLinks((global::NuPattern.Runtime.Schema.AbstractElementSchema)this, sourceExtensionPointSchema1))
+				foreach (DslModeling::ElementLink link in global::NuPattern.Runtime.Schema.ElementHasElements.GetLinks((global::NuPattern.Runtime.Schema.AbstractElementSchema)this, sourceAbstractElementSchema1))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::NuPattern.Runtime.Schema.ElementHasExtensionPoints.ParentElementDomainRoleId, global::NuPattern.Runtime.Schema.ElementHasExtensionPoints.ChildElementDomainRoleId);
+					link.Delete(global::NuPattern.Runtime.Schema.ElementHasElements.ParentElementDomainRoleId, global::NuPattern.Runtime.Schema.ElementHasElements.ChildElementDomainRoleId);
 				}
 
 				return;
 			}
 				
-			global::NuPattern.Runtime.Schema.AbstractElementSchema sourceAbstractElementSchema2 = sourceElement as global::NuPattern.Runtime.Schema.AbstractElementSchema;
-			if (sourceAbstractElementSchema2 != null)
+			global::NuPattern.Runtime.Schema.ExtensionPointSchema sourceExtensionPointSchema2 = sourceElement as global::NuPattern.Runtime.Schema.ExtensionPointSchema;
+			if (sourceExtensionPointSchema2 != null)
 			{
-				// Delete link for path ElementHasElements.Elements
+				// Delete link for path ElementHasExtensionPoints.ExtensionPoints
 				
-				foreach (DslModeling::ElementLink link in global::NuPattern.Runtime.Schema.ElementHasElements.GetLinks((global::NuPattern.Runtime.Schema.AbstractElementSchema)this, sourceAbstractElementSchema2))
+				foreach (DslModeling::ElementLink link in global::NuPattern.Runtime.Schema.ElementHasExtensionPoints.GetLinks((global::NuPattern.Runtime.Schema.AbstractElementSchema)this, sourceExtensionPointSchema2))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::NuPattern.Runtime.Schema.ElementHasElements.ParentElementDomainRoleId, global::NuPattern.Runtime.Schema.ElementHasElements.ChildElementDomainRoleId);
+					link.Delete(global::NuPattern.Runtime.Schema.ElementHasExtensionPoints.ParentElementDomainRoleId, global::NuPattern.Runtime.Schema.ElementHasExtensionPoints.ChildElementDomainRoleId);
 				}
 
 				return;

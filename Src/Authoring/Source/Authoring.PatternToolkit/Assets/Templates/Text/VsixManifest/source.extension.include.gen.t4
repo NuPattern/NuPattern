@@ -64,9 +64,9 @@ public const string libraryProjectName = @"<#=libraryProjectName#>";
 //------------------------------------------------------------------------------
 // Environment Info
 //------------------------------------------------------------------------------
-public const string supportedVsVersion = @"11.0";
-public const string supportedFrxMinVersion = @"4.0";
-public const string supportedFrxMaxVersion = @"4.5";
+public const string supportedVsVersion = @"12.0";
+public const string supportedFrxMinVersion = @"4.5";
+public const string supportedFrxMaxVersion = @"";
 <#
     UnIndent();
     WriteBlankLine();

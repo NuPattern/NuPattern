@@ -23,7 +23,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// This class implements the VS package that integrates this DSL into Visual Studio.
 	/// </summary>
-	[VSShell::DefaultRegistryRoot("Software\\Microsoft\\VisualStudio\\11.0")]
+	[VSShell::DefaultRegistryRoot("Software\\Microsoft\\VisualStudio\\12.0")]
 	[VSShell::PackageRegistration(RegisterUsing = VSShell::RegistrationMethod.Assembly, UseManagedResourcesOnly = true)]
 	[VSShell::ProvideStaticToolboxGroup("@Production ToolingToolboxTab;NuPattern.Authoring.WorkflowDesign.dll", "NuPattern.Authoring.WorkflowDesign.Production ToolingToolboxTab")]
 	[VSShell::ProvideStaticToolboxItem("NuPattern.Authoring.WorkflowDesign.Production ToolingToolboxTab",
@@ -32,28 +32,32 @@ namespace NuPattern.Authoring.WorkflowDesign
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"SuppliedAsset", 
 					"@SuppliedAssetToolboxBitmap;NuPattern.Authoring.WorkflowDesign.dll", 
-					0xff00ff)]
+					0xff00ff,
+					Index = 0)]
 	[VSShell::ProvideStaticToolboxItem("NuPattern.Authoring.WorkflowDesign.Production ToolingToolboxTab",
 					"@ProductionToolToolboxItem;NuPattern.Authoring.WorkflowDesign.dll", 
 					"NuPattern.Authoring.WorkflowDesign.ProductionToolToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"ProductionTool", 
 					"@ProductionToolToolboxBitmap;NuPattern.Authoring.WorkflowDesign.dll", 
-					0xff00ff)]
+					0xff00ff,
+					Index = 1)]
 	[VSShell::ProvideStaticToolboxItem("NuPattern.Authoring.WorkflowDesign.Production ToolingToolboxTab",
 					"@ProducedAssetToolboxItem;NuPattern.Authoring.WorkflowDesign.dll", 
 					"NuPattern.Authoring.WorkflowDesign.ProducedAssetToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"ProducedAsset", 
 					"@ProducedAssetToolboxBitmap;NuPattern.Authoring.WorkflowDesign.dll", 
-					0xff00ff)]
+					0xff00ff,
+					Index = 2)]
 	[VSShell::ProvideStaticToolboxItem("NuPattern.Authoring.WorkflowDesign.Production ToolingToolboxTab",
 					"@ProductionWorkflowConnectorToolboxItem;NuPattern.Authoring.WorkflowDesign.dll", 
 					"NuPattern.Authoring.WorkflowDesign.ProductionWorkflowConnectorToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"ProductionWorkflowConnector", 
 					"@ProductionWorkflowConnectorToolboxBitmap;NuPattern.Authoring.WorkflowDesign.dll", 
-					0xff00ff)]
+					0xff00ff,
+					Index = 3)]
 	[VSShell::ProvideEditorFactory(typeof(WorkflowDesignEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(WorkflowDesignEditorFactory), "." + Constants.DesignerFileExtension, 50)]
 	[VSShell::ProvideEditorLogicalView(typeof(WorkflowDesignEditorFactory), "{7651A702-06E5-11D1-8EBD-00A0C90F26EA}")] // Designer logical view GUID i.e. VSConstants.LOGVIEWID_Designer
