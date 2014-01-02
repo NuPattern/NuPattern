@@ -35,7 +35,7 @@
     <FullClassName>NuPattern.VisualStudio.TemplateWizards.CoordinatorTemplateWizard</FullClassName>
   </WizardExtension>	
   <WizardData>
-    <Replacement Key="$runtimeVSIXVersion$"  Value="1.3.23.0" />
+    <Replacement Key="$runtimeVSIXVersion$"  Value="1.4.24.0" />
     <CoordinatedWizards>
       <WizardExtension>
         <Assembly>NuPattern.VisualStudio.TemplateWizards, Version=1.0.0.0, Culture=neutral, PublicKeyToken=24c7786d4a8b1a88</Assembly>

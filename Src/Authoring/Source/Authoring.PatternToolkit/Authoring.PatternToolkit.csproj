@@ -872,7 +872,7 @@
     </None>
     <None Include="source.extension.gen.ttinclude">
       <DependentUpon>source.extension.tt</DependentUpon>
-      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Element/E:\NuPattern RightClick\nupatternrightclick\Src\Authoring\Authoring.slnbldr%252f875cc557-a93c-4b12-b9ea-54a732b9c242</SourceModelReference>
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Element/C:\Projects\CodePlex\NuPattern\origin\Src\Authoring\Authoring.slnbldr%252f875cc557-a93c-4b12-b9ea-54a732b9c242</SourceModelReference>
       <ItemGuid>13058dda-d9fb-4b59-b5ca-bde04f01b2ae</ItemGuid>
     </None>
     <ItemTemplate Include="Assets\Templates\Items\Extensibility\PatternTooling\PatternTooling.gen.vstemplate">

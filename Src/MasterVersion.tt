@@ -62,8 +62,8 @@ public static class VersionInfo
 
     // Assembly Versions
     public const int AssemblyMajor = 1;
-    public const int AssemblyMinor = 3;
-    public const int AssemblyBuild = 23;
+    public const int AssemblyMinor = 4;
+    public const int AssemblyBuild = 24;
     public const int AssemblyRevision = 0;
     public static Version AssemblyVersion = new Version(AssemblyMajor, AssemblyMinor, AssemblyBuild, AssemblyRevision);
     public static Version TemplateWizardVersion = new Version(AssemblyMajor, 0, 0, 0);
@@ -77,7 +77,7 @@ public static class VersionInfo
     // Ownership
     public const string VsixAuthor = "NuPattern";
     public const string AssemblyAuthor = "NuPattern";
-    public const string AssemblyCopyright = "Copyright 2012, NuPattern under Apache 2.0 license.";
+    public const string AssemblyCopyright = "Copyright 2014, NuPattern under Apache 2.0 license.";
     public const string ProjectHomePage = @"http://www.nupattern.org/";
     
     // Assembly Identity

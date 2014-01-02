@@ -3,7 +3,7 @@
   <Identifier Id="6370b1db-500b-44d0-82dd-a61eb6db992a">
     <Name>Pattern Toolkit Designers</Name>
     <Author>NuPattern</Author>
-    <Version>1.3.23.0</Version>
+    <Version>1.4.24.0</Version>
     <Description>The design time experience for creating pattern toolkits that guide and automate the creation of elements in a solution.</Description>
     <Locale>1033</Locale>
     <InstalledByMsi>false</InstalledByMsi>
@@ -18,7 +18,7 @@
     <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5"/>
   </Identifier>
     <References>
-        <Reference Id="93373818-600f-414b-8181-3a0cb79fa785" MinVersion="1.3.23.0">
+        <Reference Id="93373818-600f-414b-8181-3a0cb79fa785" MinVersion="1.4.24.0">
             <Name>NuPattern Toolkit Manager</Name>
             <VsixPath>NuPatternToolkitManager.vsix</VsixPath>
         </Reference>

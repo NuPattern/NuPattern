@@ -8,8 +8,10 @@
     <SetProperty Id="TOOLKITBUILDERLABS2010VSIXID" After="AppSearch" Value="5d64cfe6-a6ff-4e73-a000-c6a8832740ff"/>
     <SetProperty Id="TOOLKITBUILDER2012VSIXID" After="AppSearch" Value="9f6dc301-6f66-4d21-9f9c-b37412b162f6"/>
     <SetProperty Id="TOOLKITBUILDERLABS2012VSIXID" After="AppSearch" Value="5d64cfe6-a6ff-4e73-a000-c6a8832740ff"/>
+    <SetProperty Id="TOOLKITBUILDER2013VSIXID" After="AppSearch" Value="9f6dc301-6f66-4d21-9f9c-b37412b162f6"/>
+    <SetProperty Id="TOOLKITBUILDERLABS2013VSIXID" After="AppSearch" Value="5d64cfe6-a6ff-4e73-a000-c6a8832740ff"/>
 
-    <!-- Required component for parent directory -->
+      <!-- Required component for parent directory -->
     <Component Id="InstallFolder" Guid="729727B9-68B6-4872-B324-48727AD48C63" Directory="INSTALLFOLDER">
       <RegistryKey Root="HKCU" Key="Software\!(loc.ManufacturerName)\!(loc.ApplicationName)">
         <RegistryValue Name="InstallDir" Value="[INSTALLFOLDER]" Type="string" KeyPath="yes"/>
@@ -37,6 +39,7 @@
       <RemoveFile Id="RemoveFileToolkitBuilderLabsVsixFile2010" Name="NuPatternToolkitBuilderLabs.vsix" On="both"/>
       <RemoveFolder Id="RemoveFolderToolkitBuilderLabsVsixFile2010" On="both"/>
     </Component>
+
     <Component Id="ToolkitBuilderVsix2012" Guid="BAD88824-C92D-4F07-92A7-BF0BEA57CA5D" Directory="V11">
       <File Id="ToolkitBuilderVsixFile2012" Source="..\..\..\Binaries\11.0\NuPatternToolkitBuilder.vsix"/>
       <RegistryKey Root="HKCU" Key="Software\!(loc.ManufacturerName)\!(loc.ApplicationName)">
@@ -54,6 +57,25 @@
       </RegistryKey>
       <RemoveFile Id="RemoveFileToolkitBuilderLabsVsixFile2012" Name="NuPatternToolkitBuilderLabs.vsix" On="both"/>
       <RemoveFolder Id="RemoveFolderToolkitBuilderLabsVsixFile2012" On="both"/>
-    </Component>      
+    </Component>
+
+    <Component Id="ToolkitBuilderVsix2013" Guid="D7AA9277-6FFB-4D76-A592-6DD48D3E8CDA" Directory="V12">
+      <File Id="ToolkitBuilderVsixFile2013" Source="..\..\..\Binaries\12.0\NuPatternToolkitBuilder.vsix"/>
+      <RegistryKey Root="HKCU" Key="Software\!(loc.ManufacturerName)\!(loc.ApplicationName)">
+        <RegistryValue Name="InstallDir" Value="[INSTALLFOLDER]" Type="string" KeyPath="yes"/>
+        <RegistryValue Name="Version" Value="[ProductVersion]" Type="string" KeyPath="no"/>
+      </RegistryKey>
+      <RemoveFile Id="RemoveFileToolkitBuilderVsixFile2013" Name="NuPatternToolkitBuilder.vsix" On="both"/>
+      <RemoveFolder Id="RemoveFolderToolkitBuilderVsixFile2013" On="both"/>
+    </Component>
+    <Component Id="ToolkitBuilderLabsVsix2013" Guid="A3A33261-57C7-45EC-95CB-66F6A104BB5E" Directory="V12">
+      <File Id="ToolkitBuilderLabsVsixFile2013" Source="..\..\..\Binaries\12.0\NuPatternToolkitBuilderLabs.vsix"/>
+      <RegistryKey Root="HKCU" Key="Software\!(loc.ManufacturerName)\!(loc.ApplicationName)">
+        <RegistryValue Name="InstallDir" Value="[INSTALLFOLDER]" Type="string" KeyPath="yes"/>
+        <RegistryValue Name="Version" Value="[ProductVersion]" Type="string" KeyPath="no"/>
+      </RegistryKey>
+      <RemoveFile Id="RemoveFileToolkitBuilderLabsVsixFile2013" Name="NuPatternToolkitBuilderLabs.vsix" On="both"/>
+      <RemoveFolder Id="RemoveFolderToolkitBuilderLabsVsixFile2013" On="both"/>
+    </Component>
   </Fragment>
 </Wix>

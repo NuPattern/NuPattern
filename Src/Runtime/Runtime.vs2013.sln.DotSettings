@@ -1,0 +1,74 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=RedundantCommaInArrayInitializer/@EntryIndexedValue">DO_NOT_SHOW</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=RedundantThisQualifier/@EntryIndexedValue">DO_NOT_SHOW</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CSharpNaming/PredefinedNamingRules/=MethodPropertyEvent/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb_AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CSharpNaming/PredefinedNamingRules/=PrivateInstanceFields/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CSharpNaming/PredefinedNamingRules/=PrivateStaticReadonly/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb"&gt;&lt;ExtraRule Prefix="" Suffix="" Style="aaBb" /&gt;&lt;/Policy&gt;</s:String>
+	<s:Boolean x:Key="/Default/Environment/UnitTesting/SaveSessionState/@EntryValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=224A8F7369059E40BB5FEEBDE33F0BB2/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=224A8F7369059E40BB5FEEBDE33F0BB2/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=224A8F7369059E40BB5FEEBDE33F0BB2/Categories/=Imported_002011_002F11_002F2012/@EntryIndexedValue">Imported 11/11/2012</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=224A8F7369059E40BB5FEEBDE33F0BB2/Categories/=Imported_002015_002F03_002F2013/@EntryIndexedValue">Imported 15/03/2013</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=224A8F7369059E40BB5FEEBDE33F0BB2/Description/@EntryValue">Test Class</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=224A8F7369059E40BB5FEEBDE33F0BB2/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=224A8F7369059E40BB5FEEBDE33F0BB2/Shortcut/@EntryValue">testc</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=224A8F7369059E40BB5FEEBDE33F0BB2/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=224A8F7369059E40BB5FEEBDE33F0BB2/Text/@EntryValue">using System;&#xD;
+using Microsoft.VisualStudio.TestTools.UnitTesting;&#xD;
+&#xD;
+public class $filename$&#xD;
+{&#xD;
+	private static readonly IAssertion Assert = new Assertion();&#xD;
+&#xD;
+	[TestClass]&#xD;
+	public class GivenAContext&#xD;
+	{&#xD;
+		private $Type$ $variable$;&#xD;
+&#xD;
+		[TestInitialize]&#xD;
+		public void Initialize()&#xD;
+		{&#xD;
+		}&#xD;
+&#xD;
+		[TestMethod, TestCategory("Unit")]&#xD;
+		public void When_ThenThrows()&#xD;
+		{&#xD;
+			Assert.Throws&lt;InvalidOperationException&gt;(() =&gt; $Type$.somemethod);&#xD;
+		}&#xD;
+&#xD;
+		[TestMethod, TestCategory("Unit")]&#xD;
+		public void When_Then()&#xD;
+		{&#xD;
+			Assert.Equal(0, $Type$.something);&#xD;
+		}&#xD;
+	}&#xD;
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=224A8F7369059E40BB5FEEBDE33F0BB2/Field/=filename/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=224A8F7369059E40BB5FEEBDE33F0BB2/Field/=filename/Expression/@EntryValue">getFileNameWithoutExtension()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=224A8F7369059E40BB5FEEBDE33F0BB2/Field/=filename/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=224A8F7369059E40BB5FEEBDE33F0BB2/Field/=filename/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=224A8F7369059E40BB5FEEBDE33F0BB2/Field/=Type/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=224A8F7369059E40BB5FEEBDE33F0BB2/Field/=Type/Expression/@EntryValue">capitalize()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=224A8F7369059E40BB5FEEBDE33F0BB2/Field/=Type/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=224A8F7369059E40BB5FEEBDE33F0BB2/Field/=variable/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=224A8F7369059E40BB5FEEBDE33F0BB2/Field/=variable/Expression/@EntryValue">decapitalize()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=224A8F7369059E40BB5FEEBDE33F0BB2/Field/=variable/Order/@EntryValue">2</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=224A8F7369059E40BB5FEEBDE33F0BB2/Scope/=C3001E7C0DA78E4487072B7E050D86C5/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=224A8F7369059E40BB5FEEBDE33F0BB2/Scope/=C3001E7C0DA78E4487072B7E050D86C5/CustomProperties/=minimumLanguageVersion/@EntryIndexedValue">2.0</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=224A8F7369059E40BB5FEEBDE33F0BB2/Scope/=C3001E7C0DA78E4487072B7E050D86C5/Type/@EntryValue">InCSharpFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F97D6536341BCD42B46E812CE57621ED/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F97D6536341BCD42B46E812CE57621ED/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F97D6536341BCD42B46E812CE57621ED/Categories/=Imported_002011_002F11_002F2012/@EntryIndexedValue">Imported 11/11/2012</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F97D6536341BCD42B46E812CE57621ED/Categories/=Imported_002015_002F03_002F2013/@EntryIndexedValue">Imported 15/03/2013</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F97D6536341BCD42B46E812CE57621ED/Description/@EntryValue">Test Method</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F97D6536341BCD42B46E812CE57621ED/Reformat/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F97D6536341BCD42B46E812CE57621ED/Shortcut/@EntryValue">testm</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F97D6536341BCD42B46E812CE57621ED/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F97D6536341BCD42B46E812CE57621ED/Text/@EntryValue">[TestMethod, TestCategory("Unit")]&#xD;
+public void When_Then()&#xD;
+{&#xD;
+    Assert.Equal(0, something);&#xD;
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F97D6536341BCD42B46E812CE57621ED/Scope/=C3001E7C0DA78E4487072B7E050D86C5/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F97D6536341BCD42B46E812CE57621ED/Scope/=C3001E7C0DA78E4487072B7E050D86C5/CustomProperties/=minimumLanguageVersion/@EntryIndexedValue">2.0</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F97D6536341BCD42B46E812CE57621ED/Scope/=C3001E7C0DA78E4487072B7E050D86C5/Type/@EntryValue">InCSharpFile</s:String></wpf:ResourceDictionary>

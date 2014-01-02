@@ -24,7 +24,7 @@ namespace NuPattern.Authoring.PatternToolkit
 	/// </summary>
 	[Description("The development view of a toolkit.")]
 	[ToolkitInterfaceProxy(ExtensionId = "9f6dc301-6f66-4d21-9f9c-b37412b162f6", DefinitionId = "e4f9702a-3b97-4b11-bb76-037a32de07c7", ProxyType = typeof(Development))]
-	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.23.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.4.24.0")]
 	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 	internal partial class Development : IDevelopment
 	{
@@ -176,7 +176,7 @@ namespace NuPattern.Authoring.PatternToolkit
 	/// </summary>
 	[Description("The design view of the toolkit.")]
 	[ToolkitInterfaceProxy(ExtensionId = "9f6dc301-6f66-4d21-9f9c-b37412b162f6", DefinitionId = "a5541c90-1637-4405-9fe7-4b31f28eb3cd", ProxyType = typeof(Design))]
-	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.23.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.4.24.0")]
 	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 	internal partial class Design : IDesign
 	{

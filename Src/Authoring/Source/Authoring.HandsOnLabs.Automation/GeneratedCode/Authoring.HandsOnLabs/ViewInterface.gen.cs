@@ -23,7 +23,7 @@ namespace NuPattern.Authoring.HandsOnLabs
 	/// </summary>
 	[Description("Description for PatternToolkitHandsOnLabs.DefaultView")]
 	[ToolkitInterface(ExtensionId = "5d64cfe6-a6ff-4e73-a000-c6a8832740ff", DefinitionId = "ac1fde3b-bfa2-4fcf-a1c5-50167323063d", ProxyType = typeof(DefaultView))]
-	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.23.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.4.24.0")]
 	public partial interface IDefaultView : IToolkitInterface
 	{
 

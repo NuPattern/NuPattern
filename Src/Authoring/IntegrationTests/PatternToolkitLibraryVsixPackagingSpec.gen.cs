@@ -35,7 +35,7 @@ namespace NuPattern.Authoring.IntegrationTests
                 Assert.Equal(@"NuPattern Toolkit Library", this.VsixInfo.Header.Name);
                 Assert.Equal(@"An extension for creating shared automation libraries for NuPattern Toolkits.", this.VsixInfo.Header.Description);
                 Assert.Equal(@"NuPattern", this.VsixInfo.Header.Author);
-                Assert.Equal("1.3.23.0", this.VsixInfo.Header.Version.ToString());
+                Assert.Equal("1.4.24.0", this.VsixInfo.Header.Version.ToString());
                 
                 //License, Icon, PreviewImage, MoreInfoUrl, GettingStartedGuide
                 Assert.Equal(@"LICENSE.txt", this.VsixInfo.Header.License);

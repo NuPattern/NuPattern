@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 
 [assembly: AssemblyCompany("NuPattern")]
 [assembly: AssemblyProduct("NuPattern")]
-[assembly: AssemblyCopyright("Copyright 2012, NuPattern under Apache 2.0 license.")]
+[assembly: AssemblyCopyright("Copyright 2014, NuPattern under Apache 2.0 license.")]
 [assembly: AssemblyTrademark("NuPattern")]
 [assembly: AssemblyCulture("")]
 

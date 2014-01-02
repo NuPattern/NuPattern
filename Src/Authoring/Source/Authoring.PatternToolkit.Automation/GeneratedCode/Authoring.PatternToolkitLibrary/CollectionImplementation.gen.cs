@@ -25,7 +25,7 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 	/// </summary>
 	[Description("The commands defined in this library.")]
 	[ToolkitInterfaceProxy(ExtensionId = "97bd7ab2-964b-43f1-8a08-be6db68b018b", DefinitionId = "184bf063-7339-4866-978c-964d9d995c32", ProxyType = typeof(Commands))]
-	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.23.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.4.24.0")]
 	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 	internal partial class Commands : ICommands
 	{
@@ -182,7 +182,7 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 	/// </summary>
 	[Description("The conditions defined in this library.")]
 	[ToolkitInterfaceProxy(ExtensionId = "97bd7ab2-964b-43f1-8a08-be6db68b018b", DefinitionId = "2226c6bc-3e33-4570-8807-f68bbfbbffcd", ProxyType = typeof(Conditions))]
-	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.23.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.4.24.0")]
 	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 	internal partial class Conditions : IConditions
 	{
@@ -339,7 +339,7 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 	/// </summary>
 	[Description("The events defined in this library.")]
 	[ToolkitInterfaceProxy(ExtensionId = "97bd7ab2-964b-43f1-8a08-be6db68b018b", DefinitionId = "f0e386f0-bf6f-4560-978f-32396e30c4e5", ProxyType = typeof(Events))]
-	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.23.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.4.24.0")]
 	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 	internal partial class Events : IEvents
 	{
@@ -496,7 +496,7 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 	/// </summary>
 	[Description("The type converters defined in this library.")]
 	[ToolkitInterfaceProxy(ExtensionId = "97bd7ab2-964b-43f1-8a08-be6db68b018b", DefinitionId = "96227e6c-f4a5-421c-8f0a-e38763d86740", ProxyType = typeof(TypeConverters))]
-	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.23.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.4.24.0")]
 	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 	internal partial class TypeConverters : ITypeConverters
 	{
@@ -671,7 +671,7 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 	/// </summary>
 	[Description("The type editors defined in this library.")]
 	[ToolkitInterfaceProxy(ExtensionId = "97bd7ab2-964b-43f1-8a08-be6db68b018b", DefinitionId = "7fe79778-3880-4daf-a4e5-c401f131c5db", ProxyType = typeof(TypeEditors))]
-	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.23.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.4.24.0")]
 	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 	internal partial class TypeEditors : ITypeEditors
 	{
@@ -846,7 +846,7 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 	/// </summary>
 	[Description("The validation rules defined in this library.")]
 	[ToolkitInterfaceProxy(ExtensionId = "97bd7ab2-964b-43f1-8a08-be6db68b018b", DefinitionId = "c398e040-eb92-481a-a1a4-67d1eac1edff", ProxyType = typeof(ValidationRules))]
-	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.23.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.4.24.0")]
 	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 	internal partial class ValidationRules : IValidationRules
 	{
@@ -1021,7 +1021,7 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 	/// </summary>
 	[Description("The value providers defined in this library.")]
 	[ToolkitInterfaceProxy(ExtensionId = "97bd7ab2-964b-43f1-8a08-be6db68b018b", DefinitionId = "fa75b840-b733-4365-bcb0-5e513092f4dd", ProxyType = typeof(ValueProviders))]
-	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.23.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.4.24.0")]
 	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 	internal partial class ValueProviders : IValueProviders
 	{
@@ -1178,7 +1178,7 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 	/// </summary>
 	[Description("The value comparers defined in this library.")]
 	[ToolkitInterfaceProxy(ExtensionId = "97bd7ab2-964b-43f1-8a08-be6db68b018b", DefinitionId = "18765960-f08b-4bd2-a0e5-fb547a182517", ProxyType = typeof(ValueComparers))]
-	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.23.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.4.24.0")]
 	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 	internal partial class ValueComparers : IValueComparers
 	{

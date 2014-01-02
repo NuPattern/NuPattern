@@ -28,7 +28,7 @@
       <FullClassName>NuPattern.VisualStudio.TemplateWizards.ElementReplacementsTemplateWizard</FullClassName>
     </WizardExtension>
   <WizardData>
-    <Replacement Key="$assemblyVersion$"  Value="1.3.23.0" />
+    <Replacement Key="$assemblyVersion$"  Value="1.4.24.0" />
     <NewGuid Key="$guid11$" />
     <NewGuid Key="$guid12$" />
     <NewGuid Key="$guid13$" />

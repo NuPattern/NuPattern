@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <productState xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.2.0.0" Id="59b64efa-ec4c-4b61-b270-da35d631a7cb" xmlns="http://schemas.microsoft.com/visualstudio/patterning/runtime/productstate">
   <products>
-    <product Id="eba0a4b0-d271-4785-8691-5963645ed0bd" definitionId="c034429e-01f9-48dd-a478-0321fb708dd3" definitionName="PatternToolkit" instanceName="Authoring.PatternToolkit" extensionId="9f6dc301-6f66-4d21-9f9c-b37412b162f6" extensionName="NuPattern Toolkit Builder" author="NuPattern" version="1.3.23.0">
+    <product Id="eba0a4b0-d271-4785-8691-5963645ed0bd" definitionId="c034429e-01f9-48dd-a478-0321fb708dd3" definitionName="PatternToolkit" instanceName="Authoring.PatternToolkit" extensionId="9f6dc301-6f66-4d21-9f9c-b37412b162f6" extensionName="NuPattern Toolkit Builder" author="NuPattern" version="1.4.24.0">
       <properties>
         <property Id="14a939cc-11d5-4850-a9c3-7aa5d90d416a" definitionId="7ce5ad5a-88c2-4336-b038-e4998aa02b03" definitionName="TransformOnBuild" rawValue="Never" />
         <property Id="086d0ba3-1a71-4cbf-9a5f-ffdf37633910" definitionId="293802b7-0b69-440e-be60-927f07f4e636" definitionName="PatternName" rawValue="PatternToolkit" />
         <property Id="f6cad4d0-0edb-46db-8bec-14774f5c7d5c" definitionId="710634cd-4863-4314-9785-dc33f6501903" definitionName="PatternDescription" />
         <property Id="26d41893-9262-49a7-bb49-fe15a66b3927" definitionId="00123e2b-3459-4924-9f18-628406735664" definitionName="ExistingToolkitId" />
-        <property Id="c085bbc3-2229-4b94-900d-2e41d453ff17" definitionId="5976c04c-d8ad-433f-9794-22e9cd55ac41" definitionName="SolutionName" rawValue="Authoring.vs2012" />
+        <property Id="c085bbc3-2229-4b94-900d-2e41d453ff17" definitionId="5976c04c-d8ad-433f-9794-22e9cd55ac41" definitionName="SolutionName" rawValue="Authoring.vs2013" />
         <property Id="eb27dc3a-dc47-4d4e-b2c9-fd1fa9dc920d" definitionId="e73753b6-45e3-479f-b953-1c9ab6836362" definitionName="ProjectRootNamespace" rawValue="NuPattern.Authoring.PatternToolkit" />
         <property Id="dd8df702-af7e-4cd8-b975-8e6aa5ed70a8" definitionId="4b4b1fdf-ea6d-4ea4-b142-c2f1685c0091" definitionName="ProjectAssemblyName" rawValue="NuPattern.Authoring.PatternToolkit" />
         <property Id="beb1ecc0-a85a-490f-a233-830da1134ee0" definitionId="4121d8f0-87a2-4757-a6d4-6f28d9fa8728" definitionName="ExcludeFromCodeCoverage" rawValue="True" />
@@ -22,7 +22,7 @@
             <element Id="1186d3f3-8e0e-4d15-a439-35c493f9c1c3" definitionId="5da53e5a-0ba8-48f8-a922-1712244c388c" definitionName="PatternModel" instanceName="Pattern Tool">
               <properties>
                 <property Id="5ea97f86-b4c5-45ad-8f7c-f77034ddabf3" definitionId="53ef780a-fc40-40dd-8c5c-34c70f7b9c90" definitionName="ValidateOnBuild" rawValue="Never" />
-                <property Id="7b13891c-b529-4fb6-ba08-3cb686e0d71b" definitionId="a3436f96-4d42-4ad4-92c4-07a16502b397" definitionName="ToolkitDefinitionFile" rawValue="E:\NuPattern RightClick\nupatternrightclick\Src\Authoring\Source\Authoring.PatternToolkit\PatternModel.patterndefinition" />
+                <property Id="7b13891c-b529-4fb6-ba08-3cb686e0d71b" definitionId="a3436f96-4d42-4ad4-92c4-07a16502b397" definitionName="ToolkitDefinitionFile" rawValue="C:\Projects\CodePlex\NuPattern\origin\Src\Authoring\Source\Authoring.PatternToolkit\PatternModel.patterndefinition" />
               </properties>
               <references>
                 <reference Id="b5108fe9-3080-4839-92c2-cb6d482d9527" value="solution://0216A624-C5C5-4335-8361-F640B91B4DEA/aa404b57-5bb4-4521-95fa-b103034d26e3" kind="NuPattern.Runtime.References.SolutionArtifactLinkReference" tag="{&#xD;&#xA;  &quot;TargetFileName&quot;: &quot;PatternModel.patterndefinition&quot;,&#xD;&#xA;  &quot;SyncNames&quot;: false,&#xD;&#xA;  &quot;Id&quot;: &quot;e52d1228-39f9-422d-b667-1e6f26249aa0&quot;&#xD;&#xA;}" />
@@ -46,7 +46,7 @@
             </element>
             <collection Id="7748d9c9-29f1-45fe-a8cb-45de4d3667ee" definitionId="994965b7-d2b1-4460-8947-44ca73227b5f" definitionName="Automation" instanceName="Automation">
               <extensionProducts>
-                <product Id="994ad7c1-20d3-4b83-a06c-70caedc6cf91" definitionId="d6139b37-9971-4834-a9dc-2b3daef962cf" definitionName="PatternToolkitLibrary" instanceName="Library" extensionId="97bd7ab2-964b-43f1-8a08-be6db68b018b" extensionName="NuPattern Toolkit Library" author="NuPattern" version="1.3.23.0">
+                <product Id="994ad7c1-20d3-4b83-a06c-70caedc6cf91" definitionId="d6139b37-9971-4834-a9dc-2b3daef962cf" definitionName="PatternToolkitLibrary" instanceName="Library" extensionId="97bd7ab2-964b-43f1-8a08-be6db68b018b" extensionName="NuPattern Toolkit Library" author="NuPattern" version="1.4.24.0">
                   <properties>
                     <property Id="947b2c7b-499a-4784-9822-73cf07d1d951" definitionId="96a8d40e-c7e5-47ba-b550-489745d95cd2" definitionName="TransformOnBuild" rawValue="Never" />
                     <property Id="6ddfcc42-0ca3-4ef1-a892-8203cde86e90" definitionId="32699d9a-aa7d-4a51-8c86-6b2a708be486" definitionName="ToolkitProjectRootNamespace" rawValue="NuPattern.Authoring.PatternToolkit" />
@@ -183,7 +183,7 @@
                 <element Id="b05cc972-cb01-4a17-9627-cf110c7b376c" definitionId="c3d66aa5-3199-44ad-b7d7-f375a9ab16d3" definitionName="Guidance" instanceName="Guidance">
                   <properties>
                     <property Id="bc1d478c-4349-4375-8641-e6a79c36a351" definitionId="70d70df3-799d-4107-b77b-0001119484a6" definitionName="ProjectContentPath" rawValue="GeneratedCode\Guidance\Content" />
-                    <property Id="73b42b09-6666-41fa-87cf-b93d8eeebcc6" definitionId="39537f0e-76a8-409b-adb5-e54fbdbd8b27" definitionName="DocumentFilePath" rawValue="E:\NuPattern RightClick\nupatternrightclick\Src\Common\Guidance\AuthoringToolkitGuidance.doc" />
+                    <property Id="73b42b09-6666-41fa-87cf-b93d8eeebcc6" definitionId="39537f0e-76a8-409b-adb5-e54fbdbd8b27" definitionName="DocumentFilePath" rawValue="C:\Projects\CodePlex\NuPattern\origin\Src\Common\Guidance\AuthoringToolkitGuidance.doc" />
                     <property Id="7c57a0ac-d732-4feb-a523-cb5ba694a472" definitionId="81c7a831-97e3-4067-9d15-8d7fb671a755" definitionName="DefaultInstanceName" rawValue="Working with Pattern Toolkits" />
                   </properties>
                   <references>
@@ -220,13 +220,13 @@
         </view>
       </views>
     </product>
-    <product Id="116b0a90-24bd-405d-b94f-301c1d1661e9" definitionId="c034429e-01f9-48dd-a478-0321fb708dd3" definitionName="PatternToolkit" instanceName="Authoring.PatternToolkitLibrary" extensionId="9f6dc301-6f66-4d21-9f9c-b37412b162f6" extensionName="NuPattern Toolkit Builder" author="NuPattern" version="1.3.23.0">
+    <product Id="116b0a90-24bd-405d-b94f-301c1d1661e9" definitionId="c034429e-01f9-48dd-a478-0321fb708dd3" definitionName="PatternToolkit" instanceName="Authoring.PatternToolkitLibrary" extensionId="9f6dc301-6f66-4d21-9f9c-b37412b162f6" extensionName="NuPattern Toolkit Builder" author="NuPattern" version="1.4.24.0">
       <properties>
         <property Id="36e158db-3bb4-4116-9ca9-1f1d9db527ae" definitionId="7ce5ad5a-88c2-4336-b038-e4998aa02b03" definitionName="TransformOnBuild" rawValue="Never" />
         <property Id="1726ca66-eff0-4c5e-b94c-e8a9a0966a76" definitionId="293802b7-0b69-440e-be60-927f07f4e636" definitionName="PatternName" rawValue="PatternToolkitLibrary" />
         <property Id="d8931bc6-5e93-49ca-88b2-a6ae7baf2ebc" definitionId="710634cd-4863-4314-9785-dc33f6501903" definitionName="PatternDescription" />
         <property Id="07ae0c83-f464-48eb-8ca1-f01d92ec4c01" definitionId="00123e2b-3459-4924-9f18-628406735664" definitionName="ExistingToolkitId" />
-        <property Id="6f1d4d03-bd86-4ca8-82b9-ba7b85cc0f80" definitionId="5976c04c-d8ad-433f-9794-22e9cd55ac41" definitionName="SolutionName" rawValue="Authoring.vs2012" />
+        <property Id="6f1d4d03-bd86-4ca8-82b9-ba7b85cc0f80" definitionId="5976c04c-d8ad-433f-9794-22e9cd55ac41" definitionName="SolutionName" rawValue="Authoring.vs2013" />
         <property Id="074f7a75-51a4-4ece-8c23-3ec702d2d788" definitionId="e73753b6-45e3-479f-b953-1c9ab6836362" definitionName="ProjectRootNamespace" rawValue="NuPattern.Authoring.PatternToolkitLibrary" />
         <property Id="dac19e5e-d6be-4d85-bede-55a29ffa09f4" definitionId="4b4b1fdf-ea6d-4ea4-b142-c2f1685c0091" definitionName="ProjectAssemblyName" rawValue="NuPattern.Authoring.PatternToolkitLibrary" />
         <property Id="908876a7-61b7-4e72-bcf0-db2c2fe7dfcc" definitionId="4121d8f0-87a2-4757-a6d4-6f28d9fa8728" definitionName="ExcludeFromCodeCoverage" rawValue="True" />
@@ -241,7 +241,7 @@
             <element Id="d3cfafe7-ae36-419a-853e-1b496681c616" definitionId="5da53e5a-0ba8-48f8-a922-1712244c388c" definitionName="PatternModel" instanceName="Pattern Model">
               <properties>
                 <property Id="f5ec9071-911f-4ec0-811f-522e6ab07dbe" definitionId="53ef780a-fc40-40dd-8c5c-34c70f7b9c90" definitionName="ValidateOnBuild" rawValue="Never" />
-                <property Id="cfe0e0a4-09bc-44d5-8d1a-a8842ce5b940" definitionId="a3436f96-4d42-4ad4-92c4-07a16502b397" definitionName="ToolkitDefinitionFile" rawValue="E:\NuPattern RightClick\nupatternrightclick\Src\Authoring\Source\Authoring.PatternToolkitLibrary\PatternModel.patterndefinition" />
+                <property Id="cfe0e0a4-09bc-44d5-8d1a-a8842ce5b940" definitionId="a3436f96-4d42-4ad4-92c4-07a16502b397" definitionName="ToolkitDefinitionFile" rawValue="C:\Projects\CodePlex\NuPattern\origin\Src\Authoring\Source\Authoring.PatternToolkitLibrary\PatternModel.patterndefinition" />
               </properties>
               <references>
                 <reference Id="ac774585-f116-433c-9c1c-36b14ef3b859" value="solution://2f73d922-e3c5-49f8-ab6d-af54e76ee47e/c8131dba-0954-41b1-bf71-defcc7035456" kind="NuPattern.Runtime.References.SolutionArtifactLinkReference" tag="{&#xD;&#xA;  &quot;TargetFileName&quot;: &quot;PatternModel.patterndefinition&quot;,&#xD;&#xA;  &quot;SyncNames&quot;: false,&#xD;&#xA;  &quot;Id&quot;: &quot;e52d1228-39f9-422d-b667-1e6f26249aa0&quot;&#xD;&#xA;}" />
@@ -275,7 +275,7 @@
                 <element Id="64a27b45-faa5-48fc-8aac-8acbaad5964b" definitionId="c3d66aa5-3199-44ad-b7d7-f375a9ab16d3" definitionName="Guidance" instanceName="Guidance">
                   <properties>
                     <property Id="c0ff273a-f4c5-4ed4-89e7-1cccf20ccb50" definitionId="70d70df3-799d-4107-b77b-0001119484a6" definitionName="ProjectContentPath" rawValue="GeneratedCode\Guidance\Content" />
-                    <property Id="c32bf7e6-a844-4975-a0e1-82cbb7ef9846" definitionId="39537f0e-76a8-409b-adb5-e54fbdbd8b27" definitionName="DocumentFilePath" rawValue="E:\NuPattern RightClick\nupatternrightclick\Src\Authoring\Source\Authoring.PatternToolkitLibrary\Assets\Guidance\ToolkitGuidance.doc" />
+                    <property Id="c32bf7e6-a844-4975-a0e1-82cbb7ef9846" definitionId="39537f0e-76a8-409b-adb5-e54fbdbd8b27" definitionName="DocumentFilePath" rawValue="C:\Projects\CodePlex\NuPattern\origin\Src\Authoring\Source\Authoring.PatternToolkitLibrary\Assets\Guidance\ToolkitGuidance.doc" />
                     <property Id="07fa19c6-9f70-4ea1-a9ef-f03e16215870" definitionId="81c7a831-97e3-4067-9d15-8d7fb671a755" definitionName="DefaultInstanceName" rawValue="Working with Automation Libraries" />
                   </properties>
                   <references>
@@ -287,7 +287,7 @@
             </collection>
             <collection Id="53019e62-5f17-4099-a4f5-a344ff6b5f11" definitionId="994965b7-d2b1-4460-8947-44ca73227b5f" definitionName="Automation" instanceName="Automation">
               <extensionProducts>
-                <product Id="6defbb92-8435-4e41-bd89-8b30a73ca42b" definitionId="d6139b37-9971-4834-a9dc-2b3daef962cf" definitionName="PatternToolkitLibrary" instanceName="Library" extensionId="97bd7ab2-964b-43f1-8a08-be6db68b018b" extensionName="NuPattern Toolkit Library" author="NuPattern" version="1.3.23.0">
+                <product Id="6defbb92-8435-4e41-bd89-8b30a73ca42b" definitionId="d6139b37-9971-4834-a9dc-2b3daef962cf" definitionName="PatternToolkitLibrary" instanceName="Library" extensionId="97bd7ab2-964b-43f1-8a08-be6db68b018b" extensionName="NuPattern Toolkit Library" author="NuPattern" version="1.4.24.0">
                   <properties>
                     <property Id="af2b28ec-2804-4389-84d3-c0bf0ec49f0e" definitionId="96a8d40e-c7e5-47ba-b550-489745d95cd2" definitionName="TransformOnBuild" rawValue="Never" />
                     <property Id="73ee5dbe-dc6e-444c-9c36-a904436bea1b" definitionId="32699d9a-aa7d-4a51-8c86-6b2a708be486" definitionName="ToolkitProjectRootNamespace" rawValue="NuPattern.Authoring.PatternToolkitLibrary" />
@@ -352,13 +352,13 @@
         </view>
       </views>
     </product>
-    <product Id="e4307138-e098-4091-9960-7752f98835a1" definitionId="c034429e-01f9-48dd-a478-0321fb708dd3" definitionName="PatternToolkit" instanceName="Authoring.HandsOnLabs" extensionId="9f6dc301-6f66-4d21-9f9c-b37412b162f6" extensionName="NuPattern Toolkit Builder" author="NuPattern" version="1.3.23.0">
+    <product Id="e4307138-e098-4091-9960-7752f98835a1" definitionId="c034429e-01f9-48dd-a478-0321fb708dd3" definitionName="PatternToolkit" instanceName="Authoring.HandsOnLabs" extensionId="9f6dc301-6f66-4d21-9f9c-b37412b162f6" extensionName="NuPattern Toolkit Builder" author="NuPattern" version="1.4.24.0">
       <properties>
         <property Id="60800785-f732-4c5a-ac0a-4273863d91a5" definitionId="7ce5ad5a-88c2-4336-b038-e4998aa02b03" definitionName="TransformOnBuild" rawValue="Never" />
         <property Id="4fa8d975-0219-4010-9626-5e4a3e99e3e0" definitionId="293802b7-0b69-440e-be60-927f07f4e636" definitionName="PatternName" rawValue="PatternToolkitHandsOnLabs" />
         <property Id="0f9795c5-60a7-47bf-a6dd-9ff6e687329a" definitionId="710634cd-4863-4314-9785-dc33f6501903" definitionName="PatternDescription" />
         <property Id="a5c9985e-1aef-4059-9805-7ab6f690ecaf" definitionId="00123e2b-3459-4924-9f18-628406735664" definitionName="ExistingToolkitId" />
-        <property Id="c4b1a329-a0ea-4bc2-bf11-7b066b0b4a6a" definitionId="5976c04c-d8ad-433f-9794-22e9cd55ac41" definitionName="SolutionName" rawValue="Authoring.vs2012" />
+        <property Id="c4b1a329-a0ea-4bc2-bf11-7b066b0b4a6a" definitionId="5976c04c-d8ad-433f-9794-22e9cd55ac41" definitionName="SolutionName" rawValue="Authoring.vs2013" />
         <property Id="d35094fb-c72d-4a92-a56d-1529c22229b7" definitionId="e73753b6-45e3-479f-b953-1c9ab6836362" definitionName="ProjectRootNamespace" rawValue="NuPattern.Authoring.HandsOnLabs" />
         <property Id="b3c22fd0-554e-4066-8382-847e502884b6" definitionId="4b4b1fdf-ea6d-4ea4-b142-c2f1685c0091" definitionName="ProjectAssemblyName" rawValue="NuPattern.Authoring.HandsOnLabs" />
         <property Id="498ecb54-391a-493b-9abf-83ea28780196" definitionId="4121d8f0-87a2-4757-a6d4-6f28d9fa8728" definitionName="ExcludeFromCodeCoverage" rawValue="True" />
@@ -373,7 +373,7 @@
             <element Id="2f0598c8-7344-48b5-b47b-c5dd40c3cbab" definitionId="5da53e5a-0ba8-48f8-a922-1712244c388c" definitionName="PatternModel" instanceName="Pattern Model">
               <properties>
                 <property Id="920ee9e9-a8ff-409b-982d-a3c1b28f8161" definitionId="53ef780a-fc40-40dd-8c5c-34c70f7b9c90" definitionName="ValidateOnBuild" rawValue="Never" />
-                <property Id="29897012-50e9-4715-a368-8669ddd5367d" definitionId="a3436f96-4d42-4ad4-92c4-07a16502b397" definitionName="ToolkitDefinitionFile" rawValue="E:\NuPattern RightClick\nupatternrightclick\Src\Authoring\Source\Authoring.HandsOnLabs\PatternTool.patterndefinition" />
+                <property Id="29897012-50e9-4715-a368-8669ddd5367d" definitionId="a3436f96-4d42-4ad4-92c4-07a16502b397" definitionName="ToolkitDefinitionFile" rawValue="C:\Projects\CodePlex\NuPattern\origin\Src\Authoring\Source\Authoring.HandsOnLabs\PatternTool.patterndefinition" />
               </properties>
               <references>
                 <reference Id="0689686d-5e84-4b2f-a119-638540ccd42c" value="solution://fb67bcad-dfb0-40b1-9e02-ce4d8da5be9d/02473a51-4ef9-46d1-b712-e4e4d53fc61a" kind="NuPattern.Runtime.References.SolutionArtifactLinkReference" tag="{&#xD;&#xA;  &quot;TargetFileName&quot;: &quot;PatternModel.patterndefinition&quot;,&#xD;&#xA;  &quot;SyncNames&quot;: false,&#xD;&#xA;  &quot;Id&quot;: &quot;e52d1228-39f9-422d-b667-1e6f26249aa0&quot;&#xD;&#xA;}" />
@@ -415,7 +415,7 @@
                 <element Id="14fc43ef-9d28-4b36-905f-adc76a9c92f3" definitionId="c3d66aa5-3199-44ad-b7d7-f375a9ab16d3" definitionName="Guidance" instanceName="Guidance">
                   <properties>
                     <property Id="b6cea843-c8f8-40bd-96e1-42745e1e9fe1" definitionId="70d70df3-799d-4107-b77b-0001119484a6" definitionName="ProjectContentPath" rawValue="GeneratedCode\Guidance\Content" />
-                    <property Id="147e02fd-b0ff-45fa-9ec1-43bc7b164ba5" definitionId="39537f0e-76a8-409b-adb5-e54fbdbd8b27" definitionName="DocumentFilePath" rawValue="E:\NuPattern RightClick\nupatternrightclick\Src\Authoring\Source\Authoring.HandsOnLabs\Assets\Guidance\ToolkitGuidance.doc" />
+                    <property Id="147e02fd-b0ff-45fa-9ec1-43bc7b164ba5" definitionId="39537f0e-76a8-409b-adb5-e54fbdbd8b27" definitionName="DocumentFilePath" rawValue="C:\Projects\CodePlex\NuPattern\origin\Src\Authoring\Source\Authoring.HandsOnLabs\Assets\Guidance\ToolkitGuidance.doc" />
                     <property Id="3902e61e-e096-40f6-afde-0822585c51e7" definitionId="81c7a831-97e3-4067-9d15-8d7fb671a755" definitionName="DefaultInstanceName" />
                   </properties>
                   <references>
@@ -427,7 +427,7 @@
             </collection>
             <collection Id="1a508ac7-9a7f-4ac4-99aa-4e5e54a3ab3a" definitionId="994965b7-d2b1-4460-8947-44ca73227b5f" definitionName="Automation" instanceName="Automation">
               <extensionProducts>
-                <product Id="e83ef1c4-cd20-4bfd-b9aa-2d07f99210e8" definitionId="d6139b37-9971-4834-a9dc-2b3daef962cf" definitionName="PatternToolkitLibrary" instanceName="Library" extensionId="97bd7ab2-964b-43f1-8a08-be6db68b018b" extensionName="NuPattern Toolkit Library" author="NuPattern" version="1.3.23.0">
+                <product Id="e83ef1c4-cd20-4bfd-b9aa-2d07f99210e8" definitionId="d6139b37-9971-4834-a9dc-2b3daef962cf" definitionName="PatternToolkitLibrary" instanceName="Library" extensionId="97bd7ab2-964b-43f1-8a08-be6db68b018b" extensionName="NuPattern Toolkit Library" author="NuPattern" version="1.4.24.0">
                   <properties>
                     <property Id="58f38032-3902-457f-95b5-5fbb89267fd6" definitionId="96a8d40e-c7e5-47ba-b550-489745d95cd2" definitionName="TransformOnBuild" rawValue="Never" />
                     <property Id="fa8cff69-2e13-4afb-bb1e-18d818344aee" definitionId="32699d9a-aa7d-4a51-8c86-6b2a708be486" definitionName="ToolkitProjectRootNamespace" rawValue="NuPattern.Authoring.HandsOnLabs" />
