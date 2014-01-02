@@ -461,4 +461,8 @@ Skipping guidance extension type with identifier {1}.</value>
   <data name="ShortcutLaunchService_ErrorFailedResolveShortcutUntyped" xml:space="preserve">
     <value>Failed to resolve provider for shortcut type {0}</value>
   </data>
+  <data name="GuidanceRegistrationAdapter_TraceMissingExtensionExport" xml:space="preserve">
+    <value>Could not locate exported guidance extension registration. 
+Skipping guidance extension type with identifier {0}.</value>
+  </data>
 </root>
