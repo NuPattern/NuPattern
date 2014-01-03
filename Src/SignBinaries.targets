@@ -179,11 +179,6 @@
     <AddFilesToZipPackage
       SourceArchive="%(UnsignedParentVsixes.FullPath)"
       SourcePath="$(SignedVSIXesPath)\%(UnsignedParentVsixes.RecursiveDir)"
-      MatchExpression="$(Child1VSIXMatchExpression)"
-      CompressionLevel="Normal"/>
-    <AddFilesToZipPackage
-      SourceArchive="%(UnsignedParentVsixes.FullPath)"
-      SourcePath="$(SignedVSIXesPath)\%(UnsignedParentVsixes.RecursiveDir)"
       MatchExpression="$(Child2VSIXMatchExpression)"
       CompressionLevel="Normal"/>
     <AddFilesToZipPackage
