@@ -17,6 +17,7 @@
     <IncludeCopyLocalReferencesInVSIXContainer>true</IncludeCopyLocalReferencesInVSIXContainer>
     <!--<CopyBuildOutputToOutputDirectory>false</CopyBuildOutputToOutputDirectory>-->
     <!--<CopyOutputSymbolsToOutputDirectory>false</CopyOutputSymbolsToOutputDirectory>-->
+    <ZipPackageCompressionLevel>Normal</ZipPackageCompressionLevel>
   </PropertyGroup>
 
   <!-- VSIX file name overrides -->
