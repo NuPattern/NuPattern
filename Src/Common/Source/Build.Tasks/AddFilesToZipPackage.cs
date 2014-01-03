@@ -50,13 +50,6 @@ namespace NuPattern.Build.Tasks
         {
             base.Log.LogMessage(Resources.AddFilesToZipPackage_AddFilesToArchive, this.SourceArchive, this.SourcePath, this.MatchExpression);
 
-            // Ensure we have an existing archive
-            if (!File.Exists(this.SourceArchive))
-            {
-                base.Log.LogError(Resources.AddFileToZipPackage_SourceArchiveNotExist, this.SourceArchive);
-                return false;
-            }
-
             // Ensure source path exists
             if (!Directory.Exists(this.SourcePath))
             {
@@ -71,20 +64,17 @@ namespace NuPattern.Build.Tasks
             if (!string.IsNullOrWhiteSpace(this.CompressionLevel))
             {
                 if (!Enum.TryParse<CompressionOption>(this.CompressionLevel, true, out this.packageCompressionLevel)
-                    || (this.packageCompressionLevel != CompressionOption.Normal
-                    && this.packageCompressionLevel != CompressionOption.NotCompressed))
+                    || (this.packageCompressionLevel != CompressionOption.Normal && 
+                    this.packageCompressionLevel != CompressionOption.Maximum && 
+                    this.packageCompressionLevel != CompressionOption.NotCompressed))
                 {
                     base.Log.LogWarning(Resources.AddFileToZipPackage_CompressionLevelNotSupported, new object[]
                         {
                             this.CompressionLevel,
-                            CompressionOption.Normal.ToString() + "," + CompressionOption.NotCompressed
+                            string.Join(",", new[]{CompressionOption.Normal.ToString(), CompressionOption.Maximum.ToString(), CompressionOption.NotCompressed.ToString()})
                         });
                     this.packageCompressionLevel = CompressionOption.NotCompressed;
                 }
-            }
-            else
-            {
-                base.Log.LogMessage(MessageImportance.Low, Resources.AddFileToZipPackage_CompressionLevelNotSet, new object[0]);
             }
 
             AddFilesToArchive(this.SourceArchive, matchExpression, this.packageCompressionLevel);
@@ -97,7 +87,7 @@ namespace NuPattern.Build.Tasks
             // Locate source files matching expression
             var sourceFilePaths = Directory.EnumerateFiles(this.SourcePath, matchExpression, SearchOption.AllDirectories);
 
-            using (var package = Package.Open(archivePath, FileMode.Open, FileAccess.ReadWrite))
+            using (var package = Package.Open(archivePath, FileMode.OpenOrCreate, FileAccess.ReadWrite))
             {
                 sourceFilePaths.ToList().ForEach(sourceFilePath =>
                 {

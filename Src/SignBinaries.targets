@@ -5,7 +5,7 @@
   <UsingTask TaskName="AddFilesToZipPackage" AssemblyFile="Binaries\NuPattern.Build.Tasks.dll" />
 
   <PropertyGroup>
-    <SignAllBinariesDependsOn>VerifyCredentials;SetupFolders;HarvestUnsignedVsixes;ExtractAssemblies;SignAssemblies;ReconstructAllVsixes;SignChildVsixes;ReconstructParentVsixes;SignParentVsixes;ResyncVsixes;RebuildInstaller;SignInstaller</SignAllBinariesDependsOn>
+    <SignAllBinariesDependsOn>VerifyCredentials;SetupFolders;HarvestUnsignedVsixes;RecompressUnsignedVsixes;ExtractAssemblies;SignAssemblies;ReconstructAllVsixes;SignChildVsixes;ReconstructParentVsixes;SignParentVsixes;ResyncVsixes;RebuildInstaller;SignInstaller</SignAllBinariesDependsOn>
   </PropertyGroup>
   
   <!-- The Signing Process -->
@@ -27,6 +27,7 @@
     <Child2VSIXMatchExpression>NuPatternToolkitLibrary.vsix</Child2VSIXMatchExpression>
     <Child3VSIXMatchExpression>NuPatternToolkitManager.vsix</Child3VSIXMatchExpression>
     <AllInstallerMatchExpression>*.msi</AllInstallerMatchExpression>
+    <CompressionLevel>Maximum</CompressionLevel>
 
     <SignServiceUrl>https://api.outercurve.org</SignServiceUrl>
     <SignUserName></SignUserName>
@@ -100,7 +101,32 @@
       <Output TaskParameter="CopiedFiles" ItemName="CopiedVsixes"/>
     </Copy>
   </Target>
+  
+  <!-- Re-Compress Unsigned VSIXes for maximum compression -->
+  <Target Name="RecompressUnsignedVsixes">
+    <Message Text="Re-Compressing all VSIXes ($(CompressionLevel))"/>
 
+    <ItemGroup>
+      <OriginalVsixes Include="$(BinariesPath)\**\$(AllVSIXMatchExpression)"/>
+    </ItemGroup>
+
+    <!-- Extract all Unsigned VSIXes -->
+    <ExtractFilesFromZipPackage
+      SourceArchive="%(CopiedVsixes.FullPath)"
+      MatchExpression=""
+      TargetPath="%(CopiedVsixes.RootDir)%(CopiedVsixes.Directory)%(CopiedVsixes.Filename)"/>
+    <Delete Files="@(CopiedVsixes)"/>
+
+    <!-- Recompress Unsigned VSIXes (maximum compression) -->
+    <AddFilesToZipPackage
+      SourceArchive="%(CopiedVsixes.RootDir)%(CopiedVsixes.Directory)%(CopiedVsixes.Filename)%(CopiedVsixes.Extension)"
+      SourcePath="%(CopiedVsixes.RootDir)%(CopiedVsixes.Directory)%(CopiedVsixes.Filename)"
+      MatchExpression=""
+      CompressionLevel="$(CompressionLevel)"/>
+    <RemoveDir Directories="%(CopiedVsixes.RootDir)%(CopiedVsixes.Directory)%(CopiedVsixes.Filename)"/>
+  </Target>
+  
+  <!-- Extract all Unsigned Assemblies -->
   <Target Name="ExtractAssemblies">
     <Message Text="Extracting All Assemblies from All VSIXes"/>
 
@@ -115,7 +141,7 @@
       TargetPath="$(UnsignedAssembliesPath)\%(UnsignedVsixes.RecursiveDir)%(UnsignedVsixes.Filename)"/>
   </Target>
 
-  <!-- Signing Assemblies (Signing Round 1) -->
+  <!-- Signing All Assemblies (Signing Round 1) -->
   <Target Name="SignAssemblies">
     <ItemGroup>
       <UnsignedAssemblies Include="$(UnsignedAssembliesPath)\**\$(AllAssemblyMatchExpression)"/>
@@ -145,7 +171,7 @@
       SourceArchive="%(UnsignedVsixes.FullPath)"
       SourcePath="$(SignedAssembliesPath)\%(UnsignedVsixes.RecursiveDir)%(UnsignedVsixes.Filename)"
       MatchExpression="$(AllAssemblyMatchExpression)"
-      CompressionLevel="Normal"/>
+      CompressionLevel="$(CompressionLevel)"/>
   </Target>
 
   <!-- Signing Child VSIXes (Signing Round 2) -->
@@ -180,12 +206,12 @@
       SourceArchive="%(UnsignedParentVsixes.FullPath)"
       SourcePath="$(SignedVSIXesPath)\%(UnsignedParentVsixes.RecursiveDir)"
       MatchExpression="$(Child2VSIXMatchExpression)"
-      CompressionLevel="Normal"/>
+      CompressionLevel="$(CompressionLevel)"/>
     <AddFilesToZipPackage
       SourceArchive="%(UnsignedParentVsixes.FullPath)"
       SourcePath="$(SignedVSIXesPath)\%(UnsignedParentVsixes.RecursiveDir)"
       MatchExpression="$(Child3VSIXMatchExpression)"
-      CompressionLevel="Normal"/>
+      CompressionLevel="$(CompressionLevel)"/>
   </Target>
 
   <!-- Signing Parent VSIXes (Signing Round 3) -->

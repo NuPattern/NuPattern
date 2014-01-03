@@ -32,7 +32,6 @@ namespace NuPattern.Build.Tasks
         /// <summary>
         /// Gets or sets the regular expression of files to extract from the archive.
         /// </summary>
-        [Required]
         public string MatchExpression { get; set; }
 
         /// <summary>

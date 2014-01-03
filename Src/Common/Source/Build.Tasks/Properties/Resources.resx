@@ -123,11 +123,8 @@
   <data name="AddFileToZipPackage_AddFileFailed" xml:space="preserve">
     <value>Failed to add file '{0} to archive. Error was: {1}.</value>
   </data>
-  <data name="AddFileToZipPackage_CompressionLevelNotSet" xml:space="preserve">
-    <value>Not compressing added files as 'CompressionLevel' '{0}' is unsupported. Supported values are: '{1}'</value>
-  </data>
   <data name="AddFileToZipPackage_CompressionLevelNotSupported" xml:space="preserve">
-    <value>Not compressing added files as 'CompressionLevel' is empty.</value>
+    <value>Not compressing added files as 'CompressionLevel' '{0}' is unsupported. Supported values are: '{1}'</value>
   </data>
   <data name="AddFileToZipPackage_SourceArchiveNotExist" xml:space="preserve">
     <value>The 'SourceArchive': '{0}' does not exist.</value>

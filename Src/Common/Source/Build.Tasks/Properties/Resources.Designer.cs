@@ -99,15 +99,6 @@ namespace NuPattern.Build.Tasks.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Not compressing added files as &apos;CompressionLevel&apos; &apos;{0}&apos; is unsupported. Supported values are: &apos;{1}&apos;.
         /// </summary>
-        internal static string AddFileToZipPackage_CompressionLevelNotSet {
-            get {
-                return ResourceManager.GetString("AddFileToZipPackage_CompressionLevelNotSet", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Not compressing added files as &apos;CompressionLevel&apos; is empty..
-        /// </summary>
         internal static string AddFileToZipPackage_CompressionLevelNotSupported {
             get {
                 return ResourceManager.GetString("AddFileToZipPackage_CompressionLevelNotSupported", resourceCulture);
