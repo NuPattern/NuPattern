@@ -293,7 +293,7 @@ namespace NuPattern.Runtime.UI.ViewModels
             var guidanceManager = this.serviceProvider.GetService<IGuidanceManager>();
             if (guidanceManager != null)
             {
-                return guidanceManager.IsGuidanceRegistered(UsingGuidanceExtensionId);
+                return guidanceManager.IsInstalled(UsingGuidanceExtensionId);
             }
 
             return false;

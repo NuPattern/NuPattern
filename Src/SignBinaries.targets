@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="SignAllBinaries">
 
+  <UsingTask TaskName="ExtractFilesFromZipPackage" AssemblyFile="Binaries\NuPattern.Build.Tasks.dll" />
+  <UsingTask TaskName="AddFilesToZipPackage" AssemblyFile="Binaries\NuPattern.Build.Tasks.dll" />
+
   <PropertyGroup>
-    <SignAllBinariesDependsOn>VerifyCredentials;SetupFolders;HarvestAndCompressVsixes;ExtractAssemblies;SignAssemblies;ReconstructAllVsixes;SignChildVsixes;ReconstructParentVsixes;SignParentVsixes;ResyncVsixes;RebuildInstaller;SignInstaller</SignAllBinariesDependsOn>
+    <SignAllBinariesDependsOn>VerifyCredentials;SetupFolders;HarvestUnsignedVsixes;RecompressUnsignedVsixes;ExtractAssemblies;SignAssemblies;ReconstructAllVsixes;SignChildVsixes;ReconstructParentVsixes;SignParentVsixes;ResyncVsixes;RebuildInstaller;SignInstaller</SignAllBinariesDependsOn>
   </PropertyGroup>
   
   <!-- The Signing Process -->
@@ -24,7 +27,7 @@
     <Child2VSIXMatchExpression>NuPatternToolkitLibrary.vsix</Child2VSIXMatchExpression>
     <Child3VSIXMatchExpression>NuPatternToolkitManager.vsix</Child3VSIXMatchExpression>
     <AllInstallerMatchExpression>*.msi</AllInstallerMatchExpression>
-    <Zip7Exe>$(BranchRoot)\Lib\7-Zip\7z.exe</Zip7Exe>
+    <CompressionLevel>Maximum</CompressionLevel>
 
     <SignServiceUrl>https://api.outercurve.org</SignServiceUrl>
     <SignUserName></SignUserName>
@@ -49,11 +52,17 @@
       <SigningDirectory Include="11Assemblies">
         <Path>$(SignedAssembliesPath)\11.0</Path>
       </SigningDirectory>
+      <SigningDirectory Include="12Assemblies">
+        <Path>$(SignedAssembliesPath)\12.0</Path>
+      </SigningDirectory>
       <SigningDirectory Include="10VSIXes">
         <Path>$(SignedVSIXesPath)\10.0</Path>
       </SigningDirectory>
       <SigningDirectory Include="11VSIXes">
         <Path>$(SignedVSIXesPath)\11.0</Path>
+      </SigningDirectory>
+      <SigningDirectory Include="12VSIXes">
+        <Path>$(SignedVSIXesPath)\12.0</Path>
       </SigningDirectory>
       <SigningDirectory Include="10Assemblies">
         <Path>$(UnsignedAssembliesPath)\10.0</Path>
@@ -61,11 +70,17 @@
       <SigningDirectory Include="11Assemblies">
         <Path>$(UnsignedAssembliesPath)\11.0</Path>
       </SigningDirectory>
+      <SigningDirectory Include="12Assemblies">
+        <Path>$(UnsignedAssembliesPath)\12.0</Path>
+      </SigningDirectory>
       <SigningDirectory Include="10VSIXes">
         <Path>$(UnsignedVSIXesPath)\10.0</Path>
       </SigningDirectory>
       <SigningDirectory Include="11VSIXes">
         <Path>$(UnsignedVSIXesPath)\11.0</Path>
+      </SigningDirectory>
+      <SigningDirectory Include="12VSIXes">
+        <Path>$(UnsignedVSIXesPath)\12.0</Path>
       </SigningDirectory>
     </ItemGroup>
 
@@ -73,26 +88,45 @@
     <MakeDir Directories="%(SigningDirectory.Path)"/>
   </Target>
 
-  <!-- Preparing Artifacts to Sign -->
-  <Target Name="HarvestAndCompressVsixes">
+  <!-- Harvesting compiled and Unsigned VSIXes and Assemblies from 'Binaries' directory -->
+  <Target Name="HarvestUnsignedVsixes">
     <Message Text="Harvesting all VSIXes"/>
 
     <ItemGroup>
       <OriginalVsixes Include="$(BinariesPath)\**\$(AllVSIXMatchExpression)"/>
     </ItemGroup>
 
-    <!-- Copy built VSIXes-->
+    <!-- Harvest Unsigned VSIXes -->
     <Copy SourceFiles="@(OriginalVsixes)" DestinationFiles="@(OriginalVsixes->'$(UnsignedVSIXesPath)\%(RecursiveDir)%(Filename)%(Extension)')">
       <Output TaskParameter="CopiedFiles" ItemName="CopiedVsixes"/>
     </Copy>
+  </Target>
+  
+  <!-- Re-Compress Unsigned VSIXes for maximum compression -->
+  <Target Name="RecompressUnsignedVsixes">
+    <Message Text="Re-Compressing all VSIXes ($(CompressionLevel))"/>
 
-    <!-- Recompress VSIXes (maximum compression) -->
-    <Exec Command="%22$(Zip7Exe)%22 x -tzip %22%(CopiedVsixes.FullPath)%22 -o%22%(CopiedVsixes.RootDir)%(CopiedVsixes.Directory)%(CopiedVsixes.Filename)%22" />
+    <ItemGroup>
+      <OriginalVsixes Include="$(BinariesPath)\**\$(AllVSIXMatchExpression)"/>
+    </ItemGroup>
+
+    <!-- Extract all Unsigned VSIXes -->
+    <ExtractFilesFromZipPackage
+      SourceArchive="%(CopiedVsixes.FullPath)"
+      MatchExpression=""
+      TargetPath="%(CopiedVsixes.RootDir)%(CopiedVsixes.Directory)%(CopiedVsixes.Filename)"/>
     <Delete Files="@(CopiedVsixes)"/>
-    <Exec Command="%22$(Zip7Exe)%22 a -tzip %22%(CopiedVsixes.RootDir)%(CopiedVsixes.Directory)%(CopiedVsixes.Filename)%(CopiedVsixes.Extension)%22 %22%(CopiedVsixes.RootDir)%(CopiedVsixes.Directory)%(CopiedVsixes.Filename)\*%22 -mx9" />
+
+    <!-- Recompress Unsigned VSIXes (maximum compression) -->
+    <AddFilesToZipPackage
+      SourceArchive="%(CopiedVsixes.RootDir)%(CopiedVsixes.Directory)%(CopiedVsixes.Filename)%(CopiedVsixes.Extension)"
+      SourcePath="%(CopiedVsixes.RootDir)%(CopiedVsixes.Directory)%(CopiedVsixes.Filename)"
+      MatchExpression=""
+      CompressionLevel="$(CompressionLevel)"/>
     <RemoveDir Directories="%(CopiedVsixes.RootDir)%(CopiedVsixes.Directory)%(CopiedVsixes.Filename)"/>
   </Target>
-
+  
+  <!-- Extract all Unsigned Assemblies -->
   <Target Name="ExtractAssemblies">
     <Message Text="Extracting All Assemblies from All VSIXes"/>
 
@@ -100,20 +134,23 @@
       <UnsignedVsixes Include="$(UnsignedVSIXesPath)\**\$(AllVSIXMatchExpression)"/>
     </ItemGroup>
 
-    <!-- Extract Assemblies -->
-    <Exec Command="%22$(Zip7Exe)%22 e -tzip -aoa %22%(UnsignedVsixes.FullPath)%22 $(AllAssemblyMatchExpression) -o$(UnsignedAssembliesPath)\%(UnsignedVsixes.RecursiveDir)*" />
+    <!-- Extract Assemblies (into sub-folders of 'Unsigned' directory, which are named after the archives where the assemblies originated from) -->
+    <ExtractFilesFromZipPackage
+      SourceArchive="%(UnsignedVsixes.FullPath)"
+      MatchExpression="$(AllAssemblyMatchExpression)"
+      TargetPath="$(UnsignedAssembliesPath)\%(UnsignedVsixes.RecursiveDir)%(UnsignedVsixes.Filename)"/>
   </Target>
 
-  <!-- Signing Phase -->
+  <!-- Signing All Assemblies (Signing Round 1) -->
   <Target Name="SignAssemblies">
-    <Message Text="Signing Assemblies from: $(UnsignedAssembliesPath)"/>
-
     <ItemGroup>
       <UnsignedAssemblies Include="$(UnsignedAssembliesPath)\**\$(AllAssemblyMatchExpression)"/>
     </ItemGroup>
 
     <!-- Create containing directories for signed assemblies -->
     <MakeDir Directories="$(SignedAssembliesPath)\%(UnsignedAssemblies.RecursiveDir)" Condition="!exists('$(SignedAssembliesPath)\%(UnsignedAssemblies.RecursiveDir)')"/>
+
+    <Message Text="Signing Assemblies from: $(UnsignedAssembliesPath)"/>
 
     <!--Sign the assemblies -->
     <SetSignature
@@ -129,10 +166,15 @@
       <UnsignedVsixes Include="$(UnsignedVSIXesPath)\**\$(AllVSIXMatchExpression)"/>
     </ItemGroup>
 
-    <!-- Merge Signed Assemblies into Unsigned VSIXes -->
-    <Exec Command="%22$(Zip7Exe)%22 a -tzip %22%(UnsignedVsixes.FullPath)%22 %22$(SignedAssembliesPath)\%(UnsignedVsixes.RecursiveDir)%(UnsignedVsixes.Filename)\$(AllAssemblyMatchExpression)%22 -mx9" />
+    <!-- Merge (add back with overwrite) the Signed Assemblies into the Unsigned VSIXes -->
+    <AddFilesToZipPackage
+      SourceArchive="%(UnsignedVsixes.FullPath)"
+      SourcePath="$(SignedAssembliesPath)\%(UnsignedVsixes.RecursiveDir)%(UnsignedVsixes.Filename)"
+      MatchExpression="$(AllAssemblyMatchExpression)"
+      CompressionLevel="$(CompressionLevel)"/>
   </Target>
 
+  <!-- Signing Child VSIXes (Signing Round 2) -->
   <Target Name="SignChildVsixes">
     <Message Text="Signing Child VSIXes from: $(UnsignedVSIXesPath)"/>
 
@@ -159,12 +201,20 @@
       <UnsignedParentVsixes Include="$(UnsignedVSIXesPath)\**\$(ParentVSIXMatchExpression)"/>
     </ItemGroup>
 
-    <!-- Merge Signed VSIXes into Unsigned VSIX -->
-    <Exec Command="%22$(Zip7Exe)%22 a -tzip %22%(UnsignedParentVsixes.FullPath)%22 %22$(SignedVSIXesPath)\%(UnsignedParentVsixes.RecursiveDir)$(Child1VSIXMatchExpression)%22 -mx9" />
-    <Exec Command="%22$(Zip7Exe)%22 a -tzip %22%(UnsignedParentVsixes.FullPath)%22 %22$(SignedVSIXesPath)\%(UnsignedParentVsixes.RecursiveDir)$(Child2VSIXMatchExpression)%22 -mx9" />
-    <Exec Command="%22$(Zip7Exe)%22 a -tzip %22%(UnsignedParentVsixes.FullPath)%22 %22$(SignedVSIXesPath)\%(UnsignedParentVsixes.RecursiveDir)$(Child3VSIXMatchExpression)%22 -mx9" />
+    <!-- Merge (add back with overwrite) Signed child VSIXes into the Unsigned parent VSIXes -->
+    <AddFilesToZipPackage
+      SourceArchive="%(UnsignedParentVsixes.FullPath)"
+      SourcePath="$(SignedVSIXesPath)\%(UnsignedParentVsixes.RecursiveDir)"
+      MatchExpression="$(Child2VSIXMatchExpression)"
+      CompressionLevel="$(CompressionLevel)"/>
+    <AddFilesToZipPackage
+      SourceArchive="%(UnsignedParentVsixes.FullPath)"
+      SourcePath="$(SignedVSIXesPath)\%(UnsignedParentVsixes.RecursiveDir)"
+      MatchExpression="$(Child3VSIXMatchExpression)"
+      CompressionLevel="$(CompressionLevel)"/>
   </Target>
 
+  <!-- Signing Parent VSIXes (Signing Round 3) -->
   <Target Name="SignParentVsixes">
     <Message Text="Signing Parent VSIXes from: $(UnsignedVSIXesPath)"/>
 
@@ -172,7 +222,7 @@
       <UnsignedParentVsixes Include="$(UnsignedVSIXesPath)\**\$(ParentVSIXMatchExpression)"/>
     </ItemGroup>
 
-    <!-- Create containing directories for signed VSIXes -->
+    <!-- Create containing directories for Signed VSIXes -->
     <MakeDir Directories="$(SignedVSIXesPath)\%(UnsignedParentVsixes.RecursiveDir)" Condition="!exists('$(SignedVSIXesPath)\%(UnsignedParentVsixes.RecursiveDir)')"/>
 
     <!--Sign the VSIXes -->
@@ -182,6 +232,7 @@
       ContinueOnError="false" ServiceUrl="$(SignServiceUrl)" UserName="$(SignUserName)" Password="$(SignUserPassword)"/>
   </Target>
 
+  <!-- Reap Signed VSIXes back to 'Binaries' directory -->
   <Target Name="ResyncVsixes">
     <Message Text="Resyncing VSIXes"/>
 
@@ -197,8 +248,8 @@
     <Message Text="Rebuilding Installer"/>
 
     <ItemGroup>
-      <SetupProjectToBuild Include="$(BranchRoot)\Src\Authoring\Authoring.Setup.vs2012.sln">
-        <Properties>Configuration=Release-VS2012</Properties>
+      <SetupProjectToBuild Include="$(BranchRoot)\Src\Authoring\Authoring.Setup.vs2013.sln">
+        <Properties>Configuration=Release-VS2013</Properties>
       </SetupProjectToBuild>
     </ItemGroup>
 
@@ -217,6 +268,7 @@
     <Copy SourceFiles="@(OriginalInstallers)" DestinationFiles="@(OriginalInstallers->'$(UnsignedPath)\%(RecursiveDir)%(Filename)%(Extension)')"/>
   </Target>
 
+  <!-- Signing MSI Installer (Signing Round 4) -->
   <Target Name="SignInstaller">
     <Message Text="Signing Installers from: $(UnsignedPath)"/>
 
@@ -227,7 +279,7 @@
     <!-- Create containing directories for signed installers -->
     <MakeDir Directories="$(SignedPath)\%(UnsignedInstallers.RecursiveDir)" Condition="!exists('$(SignedPath)\%(UnsignedInstallers.RecursiveDir)')"/>
 
-    <!--Sign the installers -->
+    <!--Sign the Installers -->
     <SetSignature
       InputFiles="%(UnsignedInstallers.FullPath)"
       OutputDir="$(SignedPath)\%(UnsignedInstallers.RecursiveDir)" StrongName="false"

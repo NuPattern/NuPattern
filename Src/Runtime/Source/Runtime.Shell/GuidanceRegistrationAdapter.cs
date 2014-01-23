@@ -56,56 +56,70 @@ namespace NuPattern.Runtime.Shell
                     {
                         var registration = new GuidanceRegistration();
 
-                        // We need to create the guidance extension to determine where the VSXI manifest is located.
+                        // We need to create the guidance extension to determine where the VSIX manifest is located.
                         // We should find a way to locate the manifest without creating an instance of the guidance extension.
                         // Note: guidance manager, and therefore this adapter, would live in the global VS container, 
                         // not our custom containers.
                         registration.ExtensionId = export.Metadata.ExtensionId;
                         var guidanceExtension = CreateExtension(registration);
-                        var extensionManifestFilename = Path.Combine(Path.GetDirectoryName(guidanceExtension.GetType().Assembly.Location), ManifestFilename);
-
-                        if (File.Exists(extensionManifestFilename))
+                        if (guidanceExtension != null)
                         {
-                            var extension = this.ExtensionManager.CreateExtension(extensionManifestFilename);
+                            var extensionManifestFilename =
+                                Path.Combine(Path.GetDirectoryName(guidanceExtension.GetType().Assembly.Location),
+                                    ManifestFilename);
 
-                            // The guidance extension id metadata value is used both as part 
-                            // of the export definition as well as the assembly-level 
-                            // attribute to group components from multiple projects 
-                            // into a single feature.
-                            // We need the ID to be part of the metadata as it's 
-                            // the only way we have of relocating the export 
-                            // for a given guidance extension Id (unless we find a way 
-                            // to query directly the catalog for the export definition 
-                            // but then we'd need to expose either an aggregate catalog 
-                            // or something.
-
-                            // Verify that both IDs match and issue a warning if they don't.
-                            if (export.Metadata.ExtensionId != extension.Header.Identifier)
+                            if (File.Exists(extensionManifestFilename))
                             {
-                                tracer.Warn(Resources.GuidanceRegistrationAdapter_TraceSkipIdMismatch,
-                                    export.Metadata.ExtensionId, extension.Header.Identifier);
+                                var extension = this.ExtensionManager.CreateExtension(extensionManifestFilename);
+
+                                // The guidance extension id metadata value is used both as part 
+                                // of the export definition as well as the assembly-level 
+                                // attribute to group components from multiple projects 
+                                // into a single feature.
+                                // We need the ID to be part of the metadata as it's 
+                                // the only way we have of relocating the export 
+                                // for a given guidance extension Id (unless we find a way 
+                                // to query directly the catalog for the export definition 
+                                // but then we'd need to expose either an aggregate catalog 
+                                // or something.
+
+                                // Verify that both IDs match and issue a warning if they don't.
+                                if (export.Metadata.ExtensionId != extension.Header.Identifier)
+                                {
+                                    tracer.Warn(Resources.GuidanceRegistrationAdapter_TraceSkipIdMismatch,
+                                        export.Metadata.ExtensionId, extension.Header.Identifier);
+                                    continue;
+                                }
+
+                                registration.ExtensionId = extension.Header.Identifier;
+                                registration.DefaultName = export.Metadata.DefaultName;
+
+                                var installedExtension =
+                                    this.ExtensionManager.GetInstalledExtension(extension.Header.Identifier);
+
+                                registration.ExtensionManifest = extension;
+                                registration.InstalledExtension = installedExtension;
+                                registration.InstallPath = installedExtension.InstallPath;
+                                registration.PreviewImage = BitmapHelper.Load(registration.InstallPath,
+                                    extension.Header.PreviewImage);
+                                registration.Icon =
+                                    BitmapHelper.Load(registration.InstallPath, extension.Header.Icon).ToIcon();
+                            }
+                            else
+                            {
+                                tracer.Warn(Resources.GuidanceRegistrationAdapter_TraceMissingManifest,
+                                    extensionManifestFilename, export.Metadata.ExtensionId);
                                 continue;
                             }
 
-                            registration.ExtensionId = extension.Header.Identifier;
-                            registration.DefaultName = export.Metadata.DefaultName;
-
-                            var installedExtension = this.ExtensionManager.GetInstalledExtension(extension.Header.Identifier);
-
-                            registration.ExtensionManifest = extension;
-                            registration.InstalledExtension = installedExtension;
-                            registration.InstallPath = installedExtension.InstallPath;
-                            registration.PreviewImage = BitmapHelper.Load(registration.InstallPath, extension.Header.PreviewImage);
-                            registration.Icon = BitmapHelper.Load(registration.InstallPath, extension.Header.Icon).ToIcon();
+                            yield return registration;
                         }
                         else
                         {
-                            tracer.Warn(Resources.GuidanceRegistrationAdapter_TraceMissingManifest,
-                                extensionManifestFilename, export.Metadata.ExtensionId);
+                            tracer.Warn(Resources.GuidanceRegistrationAdapter_TraceMissingExtensionExport,
+                                registration.ExtensionId);
                             continue;
                         }
-
-                        yield return registration;
                     }
                 }
             }
@@ -124,11 +138,11 @@ namespace NuPattern.Runtime.Shell
             // lazily re-evaluate the export as it's a non-shared 
             // component that needs to be re-created every time.
             // If we cache the export, we're basically caching the 
-            // lazy instance for *one* particular instantiation. 				
-            return NuPatternGlobalContainer.Instance
+            // lazy instance for *one* particular instantiation.
+            var extension = NuPatternGlobalContainer.Instance
                 .GetExports<IGuidanceExtension, IGuidanceExtensionMetadata>()
-                .First(e => e.Metadata.ExtensionId == registration.ExtensionId)
-                .Value;
+                .FirstOrDefault(e => e.Metadata.ExtensionId == registration.ExtensionId);
+            return extension != null ? extension.Value : null;
         }
 
         /// <summary>

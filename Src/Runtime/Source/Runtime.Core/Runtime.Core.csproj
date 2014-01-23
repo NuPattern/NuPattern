@@ -103,6 +103,7 @@
     <Compile Include="Settings\RuntimeSettings.cs" />
     <Compile Include="Settings\TraceSourceSetting.cs" />
     <Compile Include="Settings\TracingSettings.cs" />
+    <Compile Include="ShortcutProviders\ShortcutLaunchService.cs" />
     <Compile Include="UI\FilteredItemContainerExtensions.cs" />
     <Compile Include="ShellConstants.gen.cs">
       <AutoGen>True</AutoGen>

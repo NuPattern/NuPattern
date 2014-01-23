@@ -47,7 +47,7 @@ namespace NuPattern.VisualStudio.Extensions
             get { return this.vsExtension.Type; }
         }
 
-#if VSVER11
+#if VSVER11 || VSVER12
         public IList<XmlElement> AdditionalElements
         {
             get { return this.vsExtension.AdditionalElements; }

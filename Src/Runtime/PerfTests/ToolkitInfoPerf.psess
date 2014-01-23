@@ -193,7 +193,7 @@
       <ProjName>ToolkitDesign.Shell</ProjName>
     </ProjBinary>
     <Binary>
-      <Path>C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.3.22.0\NuPattern.Extensibility.dll</Path>
+      <Path>C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.4.24.0\NuPattern.Extensibility.dll</Path>
       <AdditionalArgruments />
       <TargetCLRVersion>Automatic</TargetCLRVersion>
       <ArgumentTimestamp>01/01/2012 01:21:16</ArgumentTimestamp>
@@ -217,13 +217,13 @@
       </PreinstrumentEvent>
       <PostinstrumentEvent>
         <InstrEventProgram>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\NETFX 4.0 Tools\sn.exe</InstrEventProgram>
-        <InstrEventArguments>   -Ra "C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.3.22.0\NuPattern.Extensibility.dll" "C:\Projects\Platu\Main\Src\NuPattern.snk"</InstrEventArguments>
+        <InstrEventArguments>   -Ra "C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.4.24.0\NuPattern.Extensibility.dll" "C:\Projects\Platu\Main\Src\NuPattern.snk"</InstrEventArguments>
         <InstrEventDescription>Sign Assembly</InstrEventDescription>
         <InstrEventExclude>false</InstrEventExclude>
       </PostinstrumentEvent>
     </Binary>
     <Binary>
-      <Path>C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.3.22.0\NuPattern.Library.dll</Path>
+      <Path>C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.4.24.0\NuPattern.Library.dll</Path>
       <AdditionalArgruments />
       <TargetCLRVersion>Automatic</TargetCLRVersion>
       <ArgumentTimestamp>01/01/2012 01:21:16</ArgumentTimestamp>
@@ -247,13 +247,13 @@
       </PreinstrumentEvent>
       <PostinstrumentEvent>
         <InstrEventProgram>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\NETFX 4.0 Tools\sn.exe</InstrEventProgram>
-        <InstrEventArguments>    -Ra "C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.3.22.0\NuPattern.Library.dll" "C:\Projects\Platu\Main\Src\NuPattern.snk"</InstrEventArguments>
+        <InstrEventArguments>    -Ra "C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.4.24.0\NuPattern.Library.dll" "C:\Projects\Platu\Main\Src\NuPattern.snk"</InstrEventArguments>
         <InstrEventDescription>Sign Assembly</InstrEventDescription>
         <InstrEventExclude>false</InstrEventExclude>
       </PostinstrumentEvent>
     </Binary>
     <Binary>
-      <Path>C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.3.22.0\NuPattern.Runtime.dll</Path>
+      <Path>C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.4.24.0\NuPattern.Runtime.dll</Path>
       <TargetCLRVersion>Automatic</TargetCLRVersion>
       <ArgumentTimestamp>01/01/2012 01:21:16</ArgumentTimestamp>
       <Instrument>true</Instrument>
@@ -276,13 +276,13 @@
       </PreinstrumentEvent>
       <PostinstrumentEvent>
         <InstrEventProgram>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\NETFX 4.0 Tools\sn.exe</InstrEventProgram>
-        <InstrEventArguments>    -Ra "C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.3.22.0\NuPattern.Runtime.dll" "C:\Projects\Platu\Main\Src\NuPattern.snk"</InstrEventArguments>
+        <InstrEventArguments>    -Ra "C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.4.24.0\NuPattern.Runtime.dll" "C:\Projects\Platu\Main\Src\NuPattern.snk"</InstrEventArguments>
         <InstrEventDescription>Sign Assembly</InstrEventDescription>
         <InstrEventExclude>false</InstrEventExclude>
       </PostinstrumentEvent>
     </Binary>
     <Binary>
-      <Path>C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.3.22.0\NuPattern.Runtime.Interfaces.dll</Path>
+      <Path>C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.4.24.0\NuPattern.Runtime.Interfaces.dll</Path>
       <TargetCLRVersion>Automatic</TargetCLRVersion>
       <ArgumentTimestamp>01/01/2012 01:21:16</ArgumentTimestamp>
       <Instrument>true</Instrument>
@@ -305,13 +305,13 @@
       </PreinstrumentEvent>
       <PostinstrumentEvent>
         <InstrEventProgram>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\NETFX 4.0 Tools\sn.exe</InstrEventProgram>
-        <InstrEventArguments>    -Ra "C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.3.22.0\NuPattern.Runtime.Interfaces.dll" "C:\Projects\Platu\Main\Src\NuPattern.snk"</InstrEventArguments>
+        <InstrEventArguments>    -Ra "C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.4.24.0\NuPattern.Runtime.Interfaces.dll" "C:\Projects\Platu\Main\Src\NuPattern.snk"</InstrEventArguments>
         <InstrEventDescription>Sign Assembly</InstrEventDescription>
         <InstrEventExclude>false</InstrEventExclude>
       </PostinstrumentEvent>
     </Binary>
     <Binary>
-      <Path>C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.3.22.0\NuPattern.Runtime.Schema.dll</Path>
+      <Path>C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.4.24.0\NuPattern.Runtime.Schema.dll</Path>
       <TargetCLRVersion>Automatic</TargetCLRVersion>
       <ArgumentTimestamp>01/01/2012 01:21:16</ArgumentTimestamp>
       <Instrument>true</Instrument>
@@ -334,13 +334,13 @@
       </PreinstrumentEvent>
       <PostinstrumentEvent>
         <InstrEventProgram>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\NETFX 4.0 Tools\sn.exe</InstrEventProgram>
-        <InstrEventArguments>    -Ra "C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.3.22.0\NuPattern.Runtime.Schema.dll" "C:\Projects\Platu\Main\Src\NuPattern.snk"</InstrEventArguments>
+        <InstrEventArguments>    -Ra "C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.4.24.0\NuPattern.Runtime.Schema.dll" "C:\Projects\Platu\Main\Src\NuPattern.snk"</InstrEventArguments>
         <InstrEventDescription>Sign Assembly</InstrEventDescription>
         <InstrEventExclude>false</InstrEventExclude>
       </PostinstrumentEvent>
     </Binary>
     <Binary>
-      <Path>C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.3.22.0\NuPattern.Runtime.Shell.dll</Path>
+      <Path>C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.4.24.0\NuPattern.Runtime.Shell.dll</Path>
       <TargetCLRVersion>Automatic</TargetCLRVersion>
       <ArgumentTimestamp>01/01/2012 01:21:16</ArgumentTimestamp>
       <Instrument>true</Instrument>
@@ -363,13 +363,13 @@
       </PreinstrumentEvent>
       <PostinstrumentEvent>
         <InstrEventProgram>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\NETFX 4.0 Tools\sn.exe</InstrEventProgram>
-        <InstrEventArguments>    -Ra "C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.3.22.0\NuPattern.Runtime.Shell.dll" "C:\Projects\Platu\Main\Src\NuPattern.snk"</InstrEventArguments>
+        <InstrEventArguments>    -Ra "C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.4.24.0\NuPattern.Runtime.Shell.dll" "C:\Projects\Platu\Main\Src\NuPattern.snk"</InstrEventArguments>
         <InstrEventDescription>Sign Assembly</InstrEventDescription>
         <InstrEventExclude>false</InstrEventExclude>
       </PostinstrumentEvent>
     </Binary>
     <Binary>
-      <Path>C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.3.22.0\NuPattern.Runtime.Store.dll</Path>
+      <Path>C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.4.24.0\NuPattern.Runtime.Store.dll</Path>
       <TargetCLRVersion>Automatic</TargetCLRVersion>
       <ArgumentTimestamp>01/01/2012 01:21:16</ArgumentTimestamp>
       <Instrument>true</Instrument>
@@ -392,7 +392,7 @@
       </PreinstrumentEvent>
       <PostinstrumentEvent>
         <InstrEventProgram>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\NETFX 4.0 Tools\sn.exe</InstrEventProgram>
-        <InstrEventArguments>    -Ra "C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.3.22.0\NuPattern.Runtime.Store.dll" "C:\Projects\Platu\Main\Src\NuPattern.snk"</InstrEventArguments>
+        <InstrEventArguments>    -Ra "C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.4.24.0\NuPattern.Runtime.Store.dll" "C:\Projects\Platu\Main\Src\NuPattern.snk"</InstrEventArguments>
         <InstrEventDescription>Sign Assembly</InstrEventDescription>
         <InstrEventExclude>false</InstrEventExclude>
       </PostinstrumentEvent>

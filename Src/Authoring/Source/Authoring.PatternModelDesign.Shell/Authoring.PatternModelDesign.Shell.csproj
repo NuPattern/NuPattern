@@ -114,9 +114,17 @@
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.TextTemplating$(T4VersionSuffix).dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.TextTemplating.Interfaces.10.0" Condition="'$(TargetVsVersion)' &gt; '10.0'">
+    <Reference Include="Microsoft.VisualStudio.TextTemplating.Interfaces.10.0">
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\10.0\Microsoft.VisualStudio.TextTemplating.Interfaces.10.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TextTemplating.Interfaces.11.0" Condition="'$(TargetVsVersion)' &gt;= '11.0'">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\11.0\Microsoft.VisualStudio.TextTemplating.Interfaces.11.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TextTemplating.Interfaces.12.0" Condition="'$(TargetVsVersion)' &gt;= '12.0'">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\12.0\Microsoft.VisualStudio.TextTemplating.Interfaces.12.0.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.TextTemplating.Interfaces$(T4VersionSuffix)">
       <EmbedInteropTypes>False</EmbedInteropTypes>

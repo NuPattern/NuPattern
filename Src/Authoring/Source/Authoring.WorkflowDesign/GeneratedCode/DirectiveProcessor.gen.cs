@@ -415,7 +415,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 			references.Add(this.GetType().Assembly.Location);
 			references.Add(typeof(global::Microsoft.VisualStudio.Modeling.Diagrams.Diagram).Assembly.Location);
 			references.Add(typeof(DslModeling::Store).Assembly.Location);
-			references.Add("Microsoft.VisualStudio.TextTemplating.Modeling.11.0.dll");
+			references.Add("Microsoft.VisualStudio.TextTemplating.Modeling.12.0");
 			return references.ToArray();
 		}
 	}

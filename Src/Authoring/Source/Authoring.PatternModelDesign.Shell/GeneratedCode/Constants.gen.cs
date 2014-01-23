@@ -37,6 +37,7 @@ namespace NuPattern.Runtime.Schema
 		
 	}
 }
+
 //
 // Constants not generated from values in DesignerDefinition.dsl are defined below
 //

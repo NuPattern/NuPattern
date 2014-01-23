@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Microsoft.VisualStudio.ExtensibilityHosting;
 
-[assembly: AssemblyTitle("Runtime.Guidance")]
+[assembly: AssemblyTitle("NuPattern.Runtime.Guidance")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 

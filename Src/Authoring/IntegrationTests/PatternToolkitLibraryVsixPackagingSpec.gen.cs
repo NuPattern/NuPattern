@@ -35,7 +35,7 @@ namespace NuPattern.Authoring.IntegrationTests
                 Assert.Equal(@"NuPattern Toolkit Library", this.VsixInfo.Header.Name);
                 Assert.Equal(@"An extension for creating shared automation libraries for NuPattern Toolkits.", this.VsixInfo.Header.Description);
                 Assert.Equal(@"NuPattern", this.VsixInfo.Header.Author);
-                Assert.Equal("1.3.22.0", this.VsixInfo.Header.Version.ToString());
+                Assert.Equal("1.4.24.0", this.VsixInfo.Header.Version.ToString());
                 
                 //License, Icon, PreviewImage, MoreInfoUrl, GettingStartedGuide
                 Assert.Equal(@"LICENSE.txt", this.VsixInfo.Header.License);
@@ -48,9 +48,9 @@ namespace NuPattern.Authoring.IntegrationTests
                 Assert.Equal(@"4.0", this.VsixInfo.Header.SupportedFrameworkMinVersion.ToString());
                 Assert.Equal(@"4.0", this.VsixInfo.Header.SupportedFrameworkMaxVersion.ToString());
 #endif
-#if VSVER11
-                Assert.Equal(@"4.0", this.VsixInfo.Header.SupportedFrameworkVersionRange.Minimum.ToString());
-                Assert.Equal(@"4.5", this.VsixInfo.Header.SupportedFrameworkVersionRange.Maximum.ToString());
+#if VSVER11 || VSVER12
+                Assert.Equal(@"4.5", this.VsixInfo.Header.SupportedFrameworkVersionRange.Minimum.ToString());
+                Assert.Null(this.VsixInfo.Header.SupportedFrameworkVersionRange.Maximum);
 #endif
                 //SupportedProducts
 #if VSVER10
@@ -58,6 +58,9 @@ namespace NuPattern.Authoring.IntegrationTests
 #endif
 #if VSVER11
                 Assert.Equal(1, this.VsixInfo.Targets.Count(t => t.VersionRange.Minimum.ToString() == "11.0"));
+#endif
+#if VSVER12
+                Assert.Equal(1, this.VsixInfo.Targets.Count(t => t.VersionRange.Minimum.ToString() == "12.0"));
 #endif
             }
 

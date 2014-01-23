@@ -10,9 +10,14 @@ CD /d %~dp0
 CALL Make.bat 2012 q
 IF %errorlevel% neq 0 GOTO :error
 
+REM Build VS2013 Versions
+CD /d %~dp0 
+CALL Make.bat 2013 q
+IF %errorlevel% neq 0 GOTO :error
+
 REM Build MSI Installer
 CD Authoring
-msbuild.exe Authoring.Setup.vs2012.sln /t:Rebuild /p:Configuration=Debug-VS2012
+msbuild.exe Authoring.Setup.vs2013.sln /t:Rebuild /p:Configuration=Debug-VS2013
 IF %errorlevel% neq 0 GOTO :error
 
 ECHO Built MSI can be found in the 'Binaries' directory.

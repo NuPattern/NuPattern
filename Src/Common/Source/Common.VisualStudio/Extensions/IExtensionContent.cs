@@ -23,7 +23,7 @@ namespace NuPattern.VisualStudio.Extensions
         /// </summary>
         string RelativePath { get; }
 
-#if VSVER11
+#if VSVER11 || VSVER12
         /// <summary>
         /// Gets the addtional unsupported elements of the content
         /// </summary>

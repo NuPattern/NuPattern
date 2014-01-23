@@ -24,6 +24,7 @@
       <HintPath>$(BranchReferencesPath)\VisualStudio\envdte.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(BranchReferencesPath)\EntLib5\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
@@ -63,13 +64,17 @@
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.Shell.Interop.9.0.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Shell.Interop.10.0" Condition="'$(TargetVsVersion)' &gt; '10.0'">
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.10.0">
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\10.0\Microsoft.VisualStudio.Shell.Interop.10.0.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Shell.Interop$(VsxVersionSuffix)">
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.11.0" Condition="'$(TargetVsVersion)' &gt;= '11.0'">
       <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.Shell.Interop$(VsxVersionSuffix).dll</HintPath>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\11.0\Microsoft.VisualStudio.Shell.Interop.11.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.12.0" Condition="'$(TargetVsVersion)' &gt;= '12.0'">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\12.0\Microsoft.VisualStudio.Shell.Interop.12.0.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Shell$(VsxVersionSuffix)">
       <EmbedInteropTypes>False</EmbedInteropTypes>
@@ -83,9 +88,17 @@
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.TextTemplating$(T4VersionSuffix).dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.TextTemplating.Interfaces$(T4VersionSuffix)">
+    <Reference Include="Microsoft.VisualStudio.TextTemplating.Interfaces.10.0">
       <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.TextTemplating.Interfaces$(T4VersionSuffix).dll</HintPath>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\10.0\Microsoft.VisualStudio.TextTemplating.Interfaces.10.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TextTemplating.Interfaces.11.0" Condition="'$(TargetVsVersion)' &gt;= '11.0'">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\11.0\Microsoft.VisualStudio.TextTemplating.Interfaces.11.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TextTemplating.Interfaces.12.0" Condition="'$(TargetVsVersion)' &gt;= '12.0'">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\12.0\Microsoft.VisualStudio.TextTemplating.Interfaces.12.0.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.TextTemplating.VSHost$(T4VersionSuffix)">
       <EmbedInteropTypes>False</EmbedInteropTypes>
@@ -112,6 +125,8 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="WindowsBase" />
     <Reference Include="System.Xaml" />
   </ItemGroup>
@@ -131,7 +146,16 @@
     </Compile>
     <Compile Include="GuidanceRegistration.cs" />
     <Compile Include="GuidanceRegistrationAdapter.cs" />
+    <Compile Include="Shortcuts\ShortcutProviderNotExistException.cs" />
+    <Compile Include="Shortcuts\IShortcutPersistenceHandler.cs" />
+    <Compile Include="Shortcuts\ShortcutLaunchCoordinator.cs" />
+    <Compile Include="Shortcuts\ShortcutFileAccessException.cs" />
+    <Compile Include="Shortcuts\Shortcut.cs" />
+    <Compile Include="Shortcuts\ShortcutFileFormatException.cs" />
+    <Compile Include="Shortcuts\ShortcutFileHandler.cs" />
+    <Compile Include="Shortcuts\ShortcutEditorFactory.cs" />
     <Compile Include="PatternWindowsService.cs" />
+    <Compile Include="Shortcuts\ShortcutParameters.cs" />
     <Compile Include="ToolWindows\GuidanceBrowserToolWindow.cs" />
     <Compile Include="ToolWindows\GuidanceExplorerToolWindow.cs" />
     <Compile Include="GeneratedCode\Guidance\GuidanceWorkflow.gen.cs">

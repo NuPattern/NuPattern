@@ -407,7 +407,7 @@ namespace NuPattern.Library.TemplateWizards
             var toolkitInfo = patternManager.InstalledToolkits
                 .FirstOrDefault(f => templateFile.StartsWith(f.Extension.InstallPath, StringComparison.OrdinalIgnoreCase));
 
-#if VSVER11
+#if VSVER11 || VSVER12
             // In VS2012, vstemplates are loaded from cache not from toolkit installation path.
             if (toolkitInfo == null)
             {

@@ -14,6 +14,9 @@ REM Build VS2012 Versions
 CALL Make.bat 2012 q
 IF %errorlevel% neq 0 GOTO :error
 
+REM Build VS2013 Versions
+CALL Make.bat 2013 q
+IF %errorlevel% neq 0 GOTO :error
 
 REM Sign the Binaries
 msbuild.exe Make-AllandSign.proj /t:SignAllBinaries /p:SignUserName=%signusername%;SignUserPassword=%signuserpassword%

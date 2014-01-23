@@ -1,0 +1,21 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<!--
+  Common settings for DSL Tools projects.
+-->
+  <!-- Common properties (defines VSToolsPath) -->
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="'$(MicrosoftCommonPropsHasBeenImported)'==''" />
+
+  <!-- Version numbers for projects referencing this version of the DSL Tools targets -->
+  <PropertyGroup>
+    <VSToolsPath Condition="'$(VSToolsPath)'==''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <MpfVersion>$(VisualStudioVersion)</MpfVersion>
+    <MpfVersionSuffix>.$(MpfVersion)</MpfVersionSuffix>
+    <DslToolsVersion>$(VisualStudioVersion)</DslToolsVersion>
+    <DslToolsVersionSuffix>.$(DslToolsVersion)</DslToolsVersionSuffix>
+    <T4Version>$(DslToolsVersion)</T4Version>
+    <T4VersionSuffix>.$(T4Version)</T4VersionSuffix>
+    <DslTargetsPath>$(VSToolsPath)\DSLTools</DslTargetsPath>
+  </PropertyGroup>
+
+</Project>
+

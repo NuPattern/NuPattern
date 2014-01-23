@@ -142,7 +142,7 @@ namespace NuPattern.Library.Commands
                         Resources.InstantiateGuidanceWorkflowCommand_TraceInstantiateNew, this.CurrentElement.InstanceName, this.ExtensionId, instanceName);
 
                     // Instantiate the feature and activate it.
-                    var feature = this.GuidanceManager.Instantiate(this.ExtensionId, instanceName);
+                    var feature = this.GuidanceManager.InstantiateGuidanceInstance(this.ServiceProvider, this.ExtensionId, instanceName);
                     if (this.ActivateOnInstantiation)
                     {
                         tracer.Info(

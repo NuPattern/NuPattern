@@ -4393,3 +4393,4 @@ namespace NuPattern.Runtime.Schema
 		#endregion
 	}
 }
+

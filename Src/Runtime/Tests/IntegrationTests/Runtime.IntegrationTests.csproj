@@ -42,17 +42,33 @@
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\10.0\Microsoft.VisualStudio.Settings.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0" Condition="'$(TargetVsVersion)' == '10.0'">
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.Shell.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0">
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.Shell.Interop.8.0.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Shell.Interop.9.0" Condition="'$(TargetVsVersion)' == '10.0'">
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.9.0">
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.Shell.Interop.9.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.10.0">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\10.0\Microsoft.VisualStudio.Shell.Interop.10.0.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Shell$(VsxVersionSuffix)">
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.Shell$(VsxVersionSuffix).dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Immutable.10.0">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\10.0\Microsoft.VisualStudio.Shell.Immutable.10.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.OLE.Interop">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.OLE.Interop.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.TextTemplating.Interfaces.10.0">
       <EmbedInteropTypes>False</EmbedInteropTypes>
@@ -79,13 +95,20 @@
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\..\..\Common\Helpers\Assertions.cs">
       <Link>Assertions.cs</Link>
     </Compile>
+    <Compile Include="..\..\..\Common\Helpers\DialogboxPurger.cs">
+      <Link>DialogboxPurger.cs</Link>
+    </Compile>
     <Compile Include="..\..\..\Common\Helpers\IntegrationTest.cs">
       <Link>IntegrationTest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\Helpers\NativeMethods.cs">
+      <Link>NativeMethods.cs</Link>
     </Compile>
     <Compile Include="..\..\..\Common\Helpers\VsixPackagingSpec.cs">
       <Link>VsixPackagingSpec.cs</Link>
@@ -94,6 +117,24 @@
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
     <Compile Include="Shell\ComponentModelExportsSpec.cs" />
+    <Content Include="Runtime.IntegrationTests.Content\Shortcuts\InvalidShortcut.shortcut">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Runtime.IntegrationTests.Content\Shortcuts\EmptyShortcut.shortcut">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Runtime.IntegrationTests.Content\Shortcuts\ValidShortcut.shortcut">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Runtime.IntegrationTests.Content\Shortcuts\InvalidGuidanceShortcut.guidance">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Runtime.IntegrationTests.Content\Shortcuts\ValidGuidanceShortcut.guidance">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Runtime.IntegrationTests.Content\Shortcuts\EmptyGuidanceShortcut.guidance">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Shell\RuntimeShellVsixPackagingSpec.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>RuntimeShellVsixPackagingSpec.gen.cs</LastGenOutput>
@@ -125,6 +166,9 @@
     <Content Include="Runtime.IntegrationTests.Content\Sample\SolutionFolder\Library\Properties\AssemblyInfo.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Runtime.IntegrationTests.Content\Shortcuts\Shortcuts.sln">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Runtime.IntegrationTests.Content\SolutionUriProvider\TestProviders2\TopProjectItem.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -145,6 +189,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Compile Include="Shell\RuntimeShellPackageSpec.cs" />
+    <Compile Include="Shell\Shortcuts\ShortcutSpec.cs" />
+    <Compile Include="Shell\Shortcuts\ShortcutFileHandlerSpec.cs" />
     <Compile Include="Store\StoreAdapterSpec.cs" />
     <Compile Include="EventsIntegrationSpec.cs" />
     <Compile Include="GlobalSuppressions.cs" />

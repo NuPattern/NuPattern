@@ -13,6 +13,16 @@ namespace NuPattern
     public static class StringExtensions
     {
         /// <summary>
+        /// Formats the current string with the <see cref="CultureInfo.CurrentCulture"/>
+        /// </summary>
+        /// <param name="format">The format of the string</param>
+        /// <param name="args">Arguments to substitute into string</param>
+        public static string FormatWith(this string format, params object[] args)
+        {
+            return string.Format(CultureInfo.CurrentCulture, format, args);
+        }
+
+        /// <summary>
         /// Formats the given string using the given object for formatting.
         /// </summary>
         public static string NamedFormat(this string format, object source)

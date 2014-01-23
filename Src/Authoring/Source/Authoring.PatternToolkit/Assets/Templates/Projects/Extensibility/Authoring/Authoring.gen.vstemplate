@@ -26,6 +26,7 @@
         <ProjectItem ReplaceParameters="false" TargetFileName="PatternIcon.png">PatternNodeDefault.png</ProjectItem>
       </Folder>
       <ProjectItem ReplaceParameters="true">BindingPath.pkgdef</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Creating Pattern Toolkits.guidance">Creating Pattern Toolkits.gen.guidance</ProjectItem>
     </Project>
   </TemplateContent>
   <WizardExtension>
@@ -33,7 +34,7 @@
     <FullClassName>NuPattern.VisualStudio.TemplateWizards.CoordinatorTemplateWizard</FullClassName>
   </WizardExtension>
   <WizardData>
-    <Replacement Key="$runtimeVSIXVersion$"  Value="1.3.22.0" />
+    <Replacement Key="$runtimeVSIXVersion$"  Value="1.4.24.0" />
     <NewGuid Key="$guid11$" />
     <NewGuid Key="$guid12$" />
     <NewGuid Key="$guid13$" />
@@ -65,7 +66,7 @@
         <FullClassName>NuPattern.VisualStudio.TemplateWizards.FixLinkPathTemplateWizard</FullClassName>
       </WizardExtension>
       <WizardExtension>
-        <Assembly>NuPattern.Runtime.Shell, Version=1.3.22.0, Culture=neutral, PublicKeyToken=24c7786d4a8b1a88</Assembly>
+        <Assembly>NuPattern.Runtime.Shell, Version=1.4.24.0, Culture=neutral, PublicKeyToken=24c7786d4a8b1a88</Assembly>
         <FullClassName>NuPattern.Runtime.Shell.TemplateWizards.OpenSolutionBuilderTemplateWizard</FullClassName>
       </WizardExtension>
     </CoordinatedWizards>

@@ -161,9 +161,25 @@
     <Content Include="Assets\Templates\Text\Utilities.t4include">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Assets\Templates\Projects\Extensibility\Authoring\Creating Pattern Toolkits.gen.guidance">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Creating Pattern Toolkits.tt</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Assets\Templates\Projects\Extensibility\Authoring\Creating Pattern Toolkits.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Creating Pattern Toolkits.gen.guidance</LastGenOutput>
+    </None>
     <None Include="b6d2a705-07fa-4a9b-86ea-b80e1c8214a8.patterndefinition.diagram">
       <DependentUpon>PatternModel.patterndefinition</DependentUpon>
     </None>
+    <Content Include="GeneratedCode\Guidance\Content\HowToCreatingaGuidanceShortcut.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\UnderstandingWhatareGuidanceShortcuts.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <None Include="PatternToolkitInfo.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>PatternToolkitInfo.gen.cs</LastGenOutput>
@@ -1027,7 +1043,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Assets\Templates\Projects\Extensibility\Authoring\AuthoringProject.tt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>AuthoringProject.gen.csproj</LastGenOutput>
     </None>

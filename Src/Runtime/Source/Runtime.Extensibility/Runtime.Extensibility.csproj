@@ -74,9 +74,13 @@
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\10.0\Microsoft.VisualStudio.Shell.Interop.10.0.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Shell.Interop.11.0" Condition="'$(TargetVsVersion)' == '11.0'">
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.11.0" Condition="'$(TargetVsVersion)' &gt;= '11.0'">
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\11.0\Microsoft.VisualStudio.Shell.Interop.11.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.12.0" Condition="'$(TargetVsVersion)' &gt;= '12.0'">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\12.0\Microsoft.VisualStudio.Shell.Interop.12.0.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Shell$(VsxVersionSuffix)">
       <EmbedInteropTypes>False</EmbedInteropTypes>
@@ -132,6 +136,9 @@
     <Compile Include="Bindings\BindingPropertyDescriptor.cs" />
     <Compile Include="Diagnostics\ITracePane.cs" />
     <Compile Include="Diagnostics\ITraceOutputWindowManager.cs" />
+    <Compile Include="Shortcuts\IShortcut.cs" />
+    <Compile Include="Shortcuts\IShortcutLaunchService.cs" />
+    <Compile Include="Shortcuts\IShortcutProvider.cs" />
     <Compile Include="SolutionUri.cs" />
     <Compile Include="Guidance\CommandBinding.cs" />
     <Compile Include="Guidance\Workflow\NodeType.cs" />

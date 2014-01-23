@@ -28,6 +28,7 @@
         <ProjectItem ReplaceParameters="false" TargetFileName="PatternIcon.png">PatternNodeDefault.png</ProjectItem>
       </Folder>
       <ProjectItem ReplaceParameters="true">BindingPath.pkgdef</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Creating Pattern Toolkits.guidance">Creating Pattern Toolkits.gen.guidance</ProjectItem>
     </Project>
   </TemplateContent>
   <WizardExtension>
