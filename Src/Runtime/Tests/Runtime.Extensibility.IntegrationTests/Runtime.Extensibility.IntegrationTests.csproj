@@ -63,6 +63,7 @@
       <Link>VsixPackagingSpec.cs</Link>
     </Compile>
     <Compile Include="Binding\BindingCompositionServiceSpec.cs" />
+    <Compile Include="CompositionServiceSpec.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
