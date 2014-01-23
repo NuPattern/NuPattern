@@ -75,7 +75,8 @@ namespace NuPattern.Runtime.Composition
                             VsExportProvidingPreference.BeforeExportsFromOtherContainers,
                             VsExportSharingPolicy.IncludeExportsFromOthers);
 
-                        Instance = VsCompositionContainer.Create(componentsCatalog, providerSettings);
+						//Instance = VsCompositionContainer.Create(componentsCatalog, providerSettings);
+						Instance = new CompositionContainer(componentsCatalog, globalComponentModel.DefaultExportProvider);
                     }
                     catch (Exception ex)
                     {
