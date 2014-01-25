@@ -17,7 +17,7 @@
     <VSDebuggingExtensionsRegKey>$(VSSDKTargetPlatformRegRoot)$(VSSDKTargetPlatformRegRootSuffix)\ExtensionManager\EnabledExtensions</VSDebuggingExtensionsRegKey>
     <CopyVsixDebuggingDependencies Condition="'$(CopyVsixDebuggingDependencies)' == ''">true</CopyVsixDebuggingDependencies>
     <PatternToolkitRuntimeDebugging Condition="'$(VisualStudioVersion)' == '10.0'">$(LocalAppData)\$(ExtensionsDeploymentSubPath)Extensions-$(VsSDKVersion)\\<#=VsixInfo.PatternToolkitRuntime.Author #>\\<#=VsixInfo.PatternToolkitRuntime.Name #>\\<#=VsixInfo.PatternToolkitRuntime.Version #></PatternToolkitRuntimeDebugging>
-    <PatternToolkitRuntimeDebugging Condition="'$(VisualStudioVersion)' == '11.0'">$(LocalAppData)\$(ExtensionsDeploymentSubPath)Extensions-$(VsSDKVersion)\\<#=VsixInfo.PatternToolkitRuntime.Name #></PatternToolkitRuntimeDebugging>
+    <PatternToolkitRuntimeDebugging Condition="'$(VisualStudioVersion)' != '10.0'">$(LocalAppData)\$(ExtensionsDeploymentSubPath)Extensions-$(VsSDKVersion)\\<#=VsixInfo.PatternToolkitRuntime.Name #></PatternToolkitRuntimeDebugging>
   </PropertyGroup>
   
   <!-- Building pattern toolkit projects -->
