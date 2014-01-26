@@ -25,10 +25,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{9ADEA3
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Toolkits", "_Toolkits", "{D283BB26-C5A2-46E1-AA9D-799FF3F16445}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Designers", "Designers", "{774C4C25-1863-4064-ADBE-5A7C5E9F41D5}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authoring.UnitTests", "UnitTests\Authoring.UnitTests.csproj", "{63F04D57-AC8A-4813-A98F-9927AA7C3C6C}"
 	ProjectSection(ProjectDependencies) = postProject
 		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
@@ -125,6 +121,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authoring.HandsOnLabs", "So
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Versioning", "..\Common\Source\Versioning\Versioning.csproj", "{AE530C9B-34B7-416F-8477-15B8257CDAC0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Toolkits", "_Toolkits", "{D283BB26-C5A2-46E1-AA9D-799FF3F16445}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Designers", "Designers", "{774C4C25-1863-4064-ADBE-5A7C5E9F41D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
