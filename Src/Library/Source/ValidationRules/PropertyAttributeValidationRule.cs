@@ -54,7 +54,7 @@ namespace NuPattern.Library.ValidationRules
                 validator.ErrorMessage = this.ErrorMessage;
             }
 
-            var result = validator.GetValidationResult(this.CurrentProperty.RawValue, new ValidationContext(this.CurrentProperty, this.ServiceProvider, null));
+            var result = validator.GetValidationResult(this.CurrentProperty.Value, new ValidationContext(this.CurrentProperty, this.ServiceProvider, null));
             if (result == ValidationResult.Success)
             {
                 yield break;
