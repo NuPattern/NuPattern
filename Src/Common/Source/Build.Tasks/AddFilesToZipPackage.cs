@@ -93,26 +93,27 @@ namespace NuPattern.Build.Tasks
                 {
                     try
                     {
+                        PackagePart packagePart;
+                        var relSourceFilePath = sourceFilePath.Substring(this.SourcePath.Length);
+                        var partUri = PackUriHelper.CreatePartUri(new Uri(relSourceFilePath, UriKind.Relative));
+                        if (!package.PartExists(partUri))
+                        {
+                            base.Log.LogMessage(Resources.AddFilesToZipPackage_AddNewFileToArchive, relSourceFilePath, sourceFilePath);
+                        }
+                        else
+                        {
+                            base.Log.LogMessage(Resources.AddFilesToZipPackage_AddExistingFileToArchive, relSourceFilePath, sourceFilePath);
+
+                            // Replace old part with new part
+                            package.DeletePart(partUri);
+                        }
+
+                        packagePart = package.CreatePart(partUri,
+                            GetMimeTypeFromExtension(Path.GetExtension(sourceFilePath)), compressionLevel);
+
                         // Add file to archive
                         using (Stream streamForFile = new FileStream(sourceFilePath, FileMode.Open, FileAccess.Read))
                         {
-                            PackagePart packagePart;
-                            var relSourceFilePath = sourceFilePath.Substring(this.SourcePath.Length);
-                            var partUri = PackUriHelper.CreatePartUri(new Uri(relSourceFilePath, UriKind.Relative));
-                            if (!package.PartExists(partUri))
-                            {
-                                base.Log.LogMessage(Resources.AddFilesToZipPackage_AddNewFileToArchive, relSourceFilePath, sourceFilePath);
-
-                                packagePart = package.CreatePart(partUri,
-                                    GetMimeTypeFromExtension(Path.GetExtension(sourceFilePath)), compressionLevel);
-                            }
-                            else
-                            {
-                                base.Log.LogMessage(Resources.AddFilesToZipPackage_AddExistingFileToArchive, relSourceFilePath, sourceFilePath);
-
-                                packagePart = package.GetPart(partUri);
-                            }
-
                             streamForFile.CopyStream(packagePart.GetStream());
                         }
                     }

@@ -27,7 +27,7 @@
     <Child2VSIXMatchExpression>NuPatternToolkitLibrary.vsix</Child2VSIXMatchExpression>
     <Child3VSIXMatchExpression>NuPatternToolkitManager.vsix</Child3VSIXMatchExpression>
     <AllInstallerMatchExpression>*.msi</AllInstallerMatchExpression>
-    <CompressionLevel>Maximum</CompressionLevel>
+    <CompressionLevel>Normal</CompressionLevel>
 
     <SignServiceUrl>https://api.outercurve.org</SignServiceUrl>
     <SignUserName></SignUserName>
@@ -117,7 +117,7 @@
       TargetPath="%(CopiedVsixes.RootDir)%(CopiedVsixes.Directory)%(CopiedVsixes.Filename)"/>
     <Delete Files="@(CopiedVsixes)"/>
 
-    <!-- Recompress Unsigned VSIXes (maximum compression) -->
+    <!-- Recompress Unsigned VSIXes -->
     <AddFilesToZipPackage
       SourceArchive="%(CopiedVsixes.RootDir)%(CopiedVsixes.Directory)%(CopiedVsixes.Filename)%(CopiedVsixes.Extension)"
       SourcePath="%(CopiedVsixes.RootDir)%(CopiedVsixes.Directory)%(CopiedVsixes.Filename)"
