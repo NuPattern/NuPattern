@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
 using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.References
@@ -36,5 +39,31 @@ namespace NuPattern.Runtime.References
             return referenceService.TryResolveUri<IItemContainer>(referenceUri);
         }
 
+        /// <summary>
+        /// Adds the specified tag to the <see cref="IReference.Tag"/> if it does not already exist.
+        /// </summary>
+        public static void AddTag(this IReference reference, string tag)
+        {
+            Guard.NotNull(()=> reference, reference);
+
+            if (!string.IsNullOrEmpty(tag))
+            {
+                var tags = new List<string>();
+                if (!string.IsNullOrEmpty(reference.Tag))
+                {
+                    tags = reference.Tag.Split(PathResolver.ReferenceTagDelimiter)
+                        .Select(t => t.Trim(new[] {' '}))
+                        .Where(t => !string.IsNullOrEmpty(t))
+                        .ToList();
+                }
+
+                if (!tags.Contains(tag, StringComparer.OrdinalIgnoreCase))
+                {
+                    tags.Add(tag);
+                    reference.Tag = string.Join(PathResolver.ReferenceTagDelimiter.ToString(CultureInfo.InvariantCulture), 
+                        tags);
+                }
+            }
+        }
     }
 }

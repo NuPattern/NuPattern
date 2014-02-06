@@ -657,4 +657,10 @@ Please add a new or existing image file {0} to the project and try again.</value
   <data name="ProductElementExtensions_GetSafeInstanceName_UnNamed" xml:space="preserve">
     <value>unnamed [{0}]</value>
   </data>
+  <data name="PathResolver_TraceResolvedMultipleReferences" xml:space="preserve">
+    <value>Found multiple references to solution items for element '{0}' using first. </value>
+  </data>
+  <data name="PathResolver_ErrorPathInvalidFormat" xml:space="preserve">
+    <value>The path'{0}' is in an invalid format (i.e. contains invalid syntax or characters) and cannot be read.</value>
+  </data>
 </root>

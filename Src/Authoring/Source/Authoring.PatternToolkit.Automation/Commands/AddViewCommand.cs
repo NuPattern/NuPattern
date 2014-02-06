@@ -66,7 +66,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
                             }
 
                             // Add artifact link (if not exist)
-                            if (ViewArtifactLinkReference.GetReference(this.CurrentElement.AsElement()) == null)
+                            if (ViewArtifactLinkReference.GetReferenceValues(this.CurrentElement.AsElement()).FirstOrDefault() == null)
                             {
                                 tracer.Info(
                                     Resources.AddViewCommand_TraceAddingReference, this.CurrentElement.InstanceName);

@@ -70,7 +70,7 @@ namespace NuPattern.Library.UnitTests.Commands
             public void WhenReferenceNotResolved_ThenLogsWarning()
             {
                 Mock<IReference> reference = new Mock<IReference>();
-                reference.Setup(r => r.Kind).Returns(ReferenceKindConstants.ArtifactLink);
+                reference.Setup(r => r.Kind).Returns(ReferenceKindConstants.SolutionItem);
                 reference.Setup(r => r.Value).Returns("solution://testuri/item");
                 reference.Setup(r => r.Owner).Returns(this.OwnerElement.Object);
 
@@ -98,7 +98,7 @@ namespace NuPattern.Library.UnitTests.Commands
                 base.Initialize();
 
                 Mock<IReference> reference = new Mock<IReference>();
-                reference.Setup(r => r.Kind).Returns(ReferenceKindConstants.ArtifactLink);
+                reference.Setup(r => r.Kind).Returns(ReferenceKindConstants.SolutionItem);
                 reference.Setup(r => r.Value).Returns("solution://testuri/item");
                 this.OwnerElement.Setup(e => e.References).Returns(new[] { reference.Object });
                 this.OwnerElement.Setup(ce => ce.InstanceName).Returns("TestElementName");
@@ -209,7 +209,7 @@ namespace NuPattern.Library.UnitTests.Commands
                 base.Initialize();
 
                 Mock<IReference> reference = new Mock<IReference>();
-                reference.Setup(r => r.Kind).Returns(ReferenceKindConstants.ArtifactLink);
+                reference.Setup(r => r.Kind).Returns(ReferenceKindConstants.SolutionItem);
                 reference.Setup(r => r.Value).Returns("solution://testuri/item");
                 this.OwnerElement.Setup(e => e.References).Returns(new[] { reference.Object });
                 this.OwnerElement.Setup(ce => ce.InstanceName).Returns("TestProductName");

@@ -66,7 +66,7 @@ namespace NuPattern.Library.Automation.Template
         {
             var parentWithArtifactLink = element.Traverse(
                 x => x.GetParent(),
-                x => x.TryGetReference(ReferenceKindConstants.ArtifactLink) != null);
+                x => x.TryGetReference(ReferenceKindConstants.SolutionItem) != null);
 
             if (parentWithArtifactLink != null)
             {

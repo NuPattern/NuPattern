@@ -82,7 +82,7 @@ namespace NuPattern.Library.Commands
         public bool SyncName { get; set; }
 
         /// <summary>
-        /// An optional value to atg the generated reference for the generated file.
+        /// An optional value to tag the generated reference for the generated file.
         /// </summary>
         [Dsl.DisplayNameResource(@"NuPattern.Library.Automation.TemplateSettings/Tag.DisplayName", typeof(LibraryDomainModel), @"NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
         [Dsl.DescriptionResource(@"NuPattern.Library.Automation.TemplateSettings/Tag.Description", typeof(LibraryDomainModel), @"NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
@@ -139,7 +139,7 @@ namespace NuPattern.Library.Commands
             // If there is an existing artifact that we can resolve, override the configured settings and 
             // reuse that one instead.
             var existingArtifactLink = SolutionArtifactLinkReference
-                .GetReferences(this.CurrentElement, r => GetIdFromReferenceTag(r) == this.Settings.Id)
+                .GetReferenceValues(this.CurrentElement, r => GetIdFromReferenceTag(r) == this.Settings.Id)
                 .FirstOrDefault();
             if (existingArtifactLink != null)
             {

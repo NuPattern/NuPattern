@@ -61,7 +61,7 @@ namespace NuPattern.Library.Automation
                                 new PropertyBindingSettings
                                 {
                                     Name = Reflector<ElementReferenceExistsCondition>.GetPropertyName(cond => cond.Kind),
-                                    Value = ReferenceKindConstants.Guidance
+                                    Value = ReferenceKindConstants.GuidanceTopic
                                 },
                             }
                         }

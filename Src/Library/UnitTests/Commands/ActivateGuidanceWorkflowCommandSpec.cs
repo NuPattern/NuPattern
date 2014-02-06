@@ -50,7 +50,7 @@ namespace NuPattern.Library.UnitTests.Commands
             public void WhenGuidanceReferenceNotExistInSolution_ThenDoesNotActivateGuidanceWorkflow()
             {
                 var mockRef = new Mock<IReference>();
-                mockRef.Setup(r => r.Kind).Returns(ReferenceKindConstants.Guidance);
+                mockRef.Setup(r => r.Kind).Returns(ReferenceKindConstants.GuidanceTopic);
                 mockRef.Setup(r => r.Value).Returns("Foo");
                 this.mockOwner.Setup(o => o.References).Returns(new[] { mockRef.Object });
 
@@ -63,7 +63,7 @@ namespace NuPattern.Library.UnitTests.Commands
             public void WhenGuidanceReferenceExistsInSolution_ThenActivatesGuidanceWorkflow()
             {
                 var mockRef = new Mock<IReference>();
-                mockRef.Setup(r => r.Kind).Returns(ReferenceKindConstants.Guidance);
+                mockRef.Setup(r => r.Kind).Returns(ReferenceKindConstants.GuidanceTopic);
                 mockRef.Setup(r => r.Value).Returns("Foo");
                 this.mockOwner.Setup(o => o.References).Returns(new[] { mockRef.Object });
                 Mock<IGuidanceExtension> mockExtension = new Mock<IGuidanceExtension>();

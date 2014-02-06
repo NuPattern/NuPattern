@@ -41,7 +41,7 @@ namespace NuPattern.Library.Automation
 
             try
             {
-                var references = SolutionArtifactLinkReference.GetReferences(element);
+                var references = SolutionArtifactLinkReference.GetReferenceValues(element);
 
                 foreach (var reference in references)
                 {

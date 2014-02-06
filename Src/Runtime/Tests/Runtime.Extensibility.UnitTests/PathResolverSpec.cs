@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
@@ -89,7 +90,7 @@ namespace NuPattern.Runtime.UnitTests
                     .Setup(x => x.References)
                     .Returns(new[] 
                     {
-                        Mock.Of<IReference>(r => r.Kind == ReferenceKindConstants.ArtifactLink && r.Value == "solution://root/Foo"),
+                        Mock.Of<IReference>(r => r.Kind == ReferenceKindConstants.SolutionItem && r.Value == "solution://root/Foo"),
                     });
 
                 Assert.Throws<InvalidOperationException>(
@@ -106,7 +107,7 @@ namespace NuPattern.Runtime.UnitTests
                     .Setup(x => x.References)
                     .Returns(new[] 
                     {
-                        Mock.Of<IReference>(r => r.Kind == ReferenceKindConstants.ArtifactLink && r.Value == "solution://root/Bar"),
+                        Mock.Of<IReference>(r => r.Kind == ReferenceKindConstants.SolutionItem && r.Value == "solution://root/Bar"),
                     });
 
                 this.UriService
@@ -128,8 +129,8 @@ namespace NuPattern.Runtime.UnitTests
                     .Setup(x => x.References)
                     .Returns(new[] 
                     {
-                        Mock.Of<IReference>(r => r.Kind == ReferenceKindConstants.ArtifactLink && r.Value == "solution://root/Bar"),
-                        Mock.Of<IReference>(r => r.Kind == ReferenceKindConstants.ArtifactLink && r.Value == "solution://root/Baz"),
+                        Mock.Of<IReference>(r => r.Kind == ReferenceKindConstants.SolutionItem && r.Value == "solution://root/Bar"),
+                        Mock.Of<IReference>(r => r.Kind == ReferenceKindConstants.SolutionItem && r.Value == "solution://root/Baz"),
                     });
 
                 this.UriService
@@ -160,7 +161,7 @@ namespace NuPattern.Runtime.UnitTests
                             { 
                                 Mock.Of<IReference>(r => 
                                     r.Owner == ancestor && 
-                                    r.Kind == ReferenceKindConstants.ArtifactLink && 
+                                    r.Kind == ReferenceKindConstants.SolutionItem && 
                                     r.Value == "solution://root/Bar"),
                             } &&
                             ancestor.Root == this.Root) &&
@@ -223,7 +224,7 @@ namespace NuPattern.Runtime.UnitTests
                 descendant.Setup(ae => ae.References).Returns(new[] 
                                         { 
                                             Mock.Of<IReference>(r => 
-                                                r.Kind == ReferenceKindConstants.ArtifactLink && 
+                                                r.Kind == ReferenceKindConstants.SolutionItem && 
                                                 r.Value == "solution://root/Bar"),
                                         });
 
@@ -292,6 +293,157 @@ namespace NuPattern.Runtime.UnitTests
                 this.resolver.Resolve();
 
                 Assert.Equal(@"Foo\Bar", this.resolver.Path);
+            }
+        }
+
+        [TestClass]
+        public class GivenAProductElementWithMultipleReferences
+        {
+            private Mock<IProductElement> element;
+            private Mock<IUriReferenceService> uriService;
+            private PathResolver resolver;
+            private IProduct root;
+            private Mock<IProductElement> ancestor;
+            private Mock<IProductElement> parent;
+
+            [TestInitialize]
+            public void Initialize()
+            {
+                this.uriService = new Mock<IUriReferenceService>();
+                this.root = Mock.Of<IProduct>(p =>
+                        p.ProductState.GetService(typeof(IUriReferenceService)) == Mock.Of<IUriReferenceService>());
+
+                this.parent = new Mock<IProductElement>();
+                parent.Setup(ae => ae.DefinitionName).Returns("parent");
+                this.ancestor = new Mock<IProductElement>();
+                ancestor.Setup(ae => ae.DefinitionName).Returns("ancestor");
+                ancestor.Setup(ae => ae.References).Returns(new[] 
+                                        { 
+                                            Mock.Of<IReference>(r => 
+                                                r.Kind == ReferenceKindConstants.SolutionItem && 
+                                                r.Value == "solution://root/Foo" &&
+                                                r.Tag == "foo"),
+                                            Mock.Of<IReference>(r => 
+                                                r.Kind == ReferenceKindConstants.SolutionItem && 
+                                                r.Value == "solution://root/Bar" &&
+                                                r.Tag == "bar;bar5;bar8"),
+                                        });
+                parent.Setup(p => p.Parent).Returns(ancestor.Object);
+                parent.Setup(p => p.Root).Returns(this.root);
+
+                this.element = new Mock<IProductElement>();
+                this.element.Setup(ae => ae.DefinitionName).Returns("element");
+                this.element.Setup(x => x.Root).Returns(this.root);
+                this.element.Setup(x => x.Parent).Returns(parent.Object);
+
+                this.uriService
+                    .Setup(x => x.ResolveUri<IItemContainer>(It.Is<Uri>(u => u.ToString() == "solution://root/Foo")))
+                    .Returns(Mock.Of<IItemContainer>(item => item.Name == "Foo" &&
+                        item.Parent == Mock.Of<ISolution>(p => p.Name == "Solution")));
+                this.uriService
+                    .Setup(x => x.ResolveUri<IItemContainer>(It.Is<Uri>(u => u.ToString() == "solution://root/Bar")))
+                    .Returns(Mock.Of<IItemContainer>(item => item.Name == "Bar" &&
+                        item.Parent == Mock.Of<ISolution>(p => p.Name == "Solution")));
+            }
+
+            [TestMethod, TestCategory("Unit")]
+            public void WhenPathReferencesNoTag_ThenResolvesFirstArtifactLink()
+            {
+                this.resolver = new PathResolver(this.element.Object, this.uriService.Object);
+                this.resolver.Path = @"..\..\~\Bar2";
+
+                this.resolver.Resolve();
+
+                Assert.Equal(@"Foo\Bar2", this.resolver.Path);
+            }
+
+            [TestMethod, TestCategory("Unit")]
+            public void WhenPathReferencesTag_ThenResolvesToSpecificArtifactLink()
+            {
+                this.resolver = new PathResolver(this.element.Object, this.uriService.Object);
+                this.resolver.Path = @"..\..\~[bar5]\Bar2";
+
+                this.resolver.Resolve();
+
+                Assert.Equal(@"Bar\Bar2", this.resolver.Path);
+            }
+        }
+
+        [TestClass]
+        public class GivenVariousPaths
+        {
+            [TestInitialize]
+            public void Initialize()
+            {
+                
+            }
+
+            [TestMethod, TestCategory("Unit")]
+            public void WhenPathBlank_ThenValid()
+            {
+                Assert.True(IsValidExpression(@""));
+            }
+
+            [TestMethod, TestCategory("Unit")]
+            public void WhenPathStartsWithTilda_Then()
+            {
+                Assert.True(IsValidExpression(@"~"));
+                Assert.True(IsValidExpression(@"~\"));
+                Assert.True(IsValidExpression(@"~/"));
+                Assert.True(IsValidExpression(@"~Project Folder"));
+                Assert.True(IsValidExpression(@"~ProjectFolder"));
+                Assert.True(IsValidExpression(@"~ProjectFolder1\ProjectFolder2"));
+                Assert.True(IsValidExpression(@"~\ProjectFolder"));
+                Assert.True(IsValidExpression(@"~/ProjectFolder"));
+                Assert.True(IsValidExpression(@"~\ProjectFolder1\ProjectFolder2\ProjectFolder3"));
+                Assert.True(IsValidExpression(@"~\ProjectFolder1\{Substitution.Substitution}\{Substitution}Substitution"));
+                Assert.True(IsValidExpression(@"~\..\..\ProjectFolder"));
+                Assert.True(IsValidExpression(@"~\.\..\ProjectFolder\{Substitution}"));
+                Assert.False(IsValidExpression(@"~[]"));
+                Assert.False(IsValidExpression(@"~[{Substitution}]"));
+                Assert.True(IsValidExpression(@"~[tag1]"));
+                Assert.True(IsValidExpression(@"~[tag1;tag2,tag3-4_9]"));
+            }
+
+            [TestMethod, TestCategory("Unit")]
+            public void WhenPathHasNoTilda_Then()
+            {
+                Assert.True(IsValidExpression(@"\"));
+                Assert.True(IsValidExpression(@"/"));
+                Assert.True(IsValidExpression(@"SolutionFolder"));
+                Assert.True(IsValidExpression(@"SolutionFolder\SolutionFolder\SolutionFolder"));
+                Assert.True(IsValidExpression(@"SolutionFolder\..\SolutionFolder"));
+                Assert.True(IsValidExpression(@"\SolutionFolder"));
+                Assert.True(IsValidExpression(@"\Solution Folder"));
+                Assert.True(IsValidExpression(@"/SolutionFolder"));
+                Assert.True(IsValidExpression(@"\SolutionFolder\SolutionFolder\SolutionFolder"));
+                Assert.True(IsValidExpression(@".\"));
+                Assert.True(IsValidExpression(@"./"));
+                Assert.True(IsValidExpression(@"..\"));
+                Assert.True(IsValidExpression(@"../"));
+                Assert.True(IsValidExpression(@"..\..\"));
+                Assert.True(IsValidExpression(@"..\..\Element1\Element2"));
+                Assert.True(IsValidExpression(@"../../Element1/Element2"));
+            }
+
+            [TestMethod, TestCategory("Unit")]
+            public void WhenPathHasTilda_Then()
+            {
+                Assert.True(IsValidExpression(@"..\~"));
+                Assert.True(IsValidExpression(@"../~"));
+                Assert.True(IsValidExpression(@"../~..\ProjectFolder"));
+                Assert.True(IsValidExpression(@"../~.\"));
+                Assert.True(IsValidExpression(@"..\~ProjectFolder"));
+                Assert.True(IsValidExpression(@"..\~\ProjectFolder"));
+                Assert.True(IsValidExpression(@"..\~\ProjectFolder1\ProjectFolder2"));
+                Assert.True(IsValidExpression(@"..\Element1\~\ProjectFolder1"));
+                Assert.True(IsValidExpression(@".\~{Substitution}{Substitution}\ParentProjectFolder1"));
+                Assert.True(IsValidExpression(@".\~\{Substitution}{Substitution}\..\ParentProjectFolder1"));
+            }
+
+            private bool IsValidExpression(string expression)
+            {
+                return Regex.IsMatch(expression, PathResolver.PathRegExpression);
             }
         }
     }

@@ -40,7 +40,7 @@ namespace NuPattern.Runtime.References
             Guard.NotNull(() => uriService, uriService);
             Guard.NotNull(() => whereFilter, whereFilter);
 
-            return GetReferences(element, whereFilter)
+            return GetReferenceValues(element, whereFilter)
                 .Select(reference => uriService.TryResolveUri<IItemContainer>(reference))
                 .Where(item => item != null);
         }

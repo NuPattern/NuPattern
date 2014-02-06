@@ -158,7 +158,7 @@ namespace NuPattern.Library.Commands
                     Resources.InstantiateGuidanceWorkflowCommand_TraceAddingReference, this.CurrentElement.InstanceName, instanceName);
 
                 // Add the Guidance reference
-                this.CurrentElement.AddReference(ReferenceKindConstants.Guidance, instanceName, true);
+                this.CurrentElement.AddReference(ReferenceKindConstants.GuidanceTopic, instanceName, true);
             }
             else
             {

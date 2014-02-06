@@ -58,17 +58,17 @@ namespace NuPattern.Runtime.UnitTests.References
         }
 
         [TestMethod, TestCategory("Unit")]
-        public void WhenGetReferencesWithNullElement_ThenThrows()
-        {
-            Assert.Throws<ArgumentNullException>(
-                () => TestReferenceWithoutItsTypeConverter.GetReference(null));
-        }
-
-        [TestMethod, TestCategory("Unit")]
         public void WhenGetReferenceWithNullElement_ThenThrows()
         {
             Assert.Throws<ArgumentNullException>(
-                () => TestReferenceWithoutItsTypeConverter.GetReference(null));
+                () => TestReferenceWithoutItsTypeConverter.GetReference(null, new Uri("solution://")));
+        }
+
+        [TestMethod, TestCategory("Unit")]
+        public void WhenGetReferenceWithNullValue_ThenThrows()
+        {
+            Assert.Throws<ArgumentNullException>(
+                () => TestReferenceWithoutItsTypeConverter.GetReference(this.element.Object, null));
         }
 
         [TestClass]
@@ -102,7 +102,7 @@ namespace NuPattern.Runtime.UnitTests.References
                 element.AddReference(typeof(TestReferenceWithoutItsTypeConverterAndNonConvertibleValue).FullName, "foo://null");
 
                 Assert.Throws<NotSupportedException>(() =>
-                    TestReferenceWithoutItsTypeConverterAndNonConvertibleValue.GetReference(this.element));
+                    TestReferenceWithoutItsTypeConverterAndNonConvertibleValue.GetReference(this.element, new Foo()));
             }
         }
 
@@ -146,7 +146,7 @@ namespace NuPattern.Runtime.UnitTests.References
                 Assert.True(this.element.References.Count == 1);
                 Assert.Equal(typeof(TestReferenceWithoutItsTypeConverter).FullName, reference.Kind);
                 Assert.Equal(newUri.ToString(), reference.Value);
-                Assert.Equal(newUri, TestReferenceWithoutItsTypeConverter.GetReference(this.element));
+                Assert.Equal(newUri, TestReferenceWithoutItsTypeConverter.GetReferenceValues(this.element).First());
             }
 
             [TestMethod, TestCategory("Unit")]
@@ -159,13 +159,13 @@ namespace NuPattern.Runtime.UnitTests.References
                 Assert.True(this.element.References.Count == 1);
                 Assert.Equal(typeof(TestReferenceWithoutItsTypeConverter).FullName, reference.Kind);
                 Assert.Equal(newUri.ToString(), reference.Value);
-                Assert.Equal(newUri, TestReferenceWithoutItsTypeConverter.GetReference(this.element));
+                Assert.Equal(newUri, TestReferenceWithoutItsTypeConverter.GetReferenceValues(this.element).First());
             }
 
             [TestMethod, TestCategory("Unit")]
             public void WhenGetReferenceWithNoReference_ThenNullReturned()
             {
-                var uri = TestReferenceWithoutItsTypeConverter.GetReference(this.element);
+                var uri = TestReferenceWithoutItsTypeConverter.GetReferenceValues(this.element).FirstOrDefault();
 
                 Assert.Null(uri);
             }
@@ -174,7 +174,7 @@ namespace NuPattern.Runtime.UnitTests.References
             public void WhenGetReferenceAfterAddReference_ThenDefaultsToValueTypeConverter()
             {
                 TestReferenceWithoutItsTypeConverter.AddReference(this.element, new Uri("solution://foo/bar.cs"));
-                var uri = TestReferenceWithoutItsTypeConverter.GetReference(this.element);
+                var uri = TestReferenceWithoutItsTypeConverter.GetReferenceValues(this.element).First();
 
                 Assert.NotNull(uri);
             }
@@ -234,7 +234,7 @@ namespace NuPattern.Runtime.UnitTests.References
             [TestMethod, TestCategory("Unit")]
             public void WhenGetReferenceWithNoReference_ThenNullReturned()
             {
-                var uri = TestReferenceWithUriConverter.GetReference(this.element);
+                var uri = TestReferenceWithUriConverter.GetReferenceValues(this.element).FirstOrDefault();
 
                 Assert.Null(uri);
             }
@@ -243,7 +243,7 @@ namespace NuPattern.Runtime.UnitTests.References
             public void WhenGetReferenceAfterAddReference_ThenReturnsUri()
             {
                 TestReferenceWithUriConverter.AddReference(this.element, new Uri("solution://"));
-                var uri = TestReferenceWithUriConverter.GetReference(this.element);
+                var uri = TestReferenceWithUriConverter.GetReferenceValues(this.element).First();
 
                 Assert.Equal(new Uri("solution://"), uri);
             }
@@ -253,7 +253,7 @@ namespace NuPattern.Runtime.UnitTests.References
             {
                 TestReferenceWithUriConverter.AddReference(this.element, new Uri("solution://1"));
                 TestReferenceWithUriConverter.AddReference(this.element, new Uri("solution://2"));
-                var uris = TestReferenceWithUriConverter.GetReferences(this.element);
+                var uris = TestReferenceWithUriConverter.GetReferenceValues(this.element);
 
                 Assert.Equal(new Uri("solution://1/"), uris.ToList()[0]);
                 Assert.Equal(new Uri("solution://2/"), uris.ToList()[1]);

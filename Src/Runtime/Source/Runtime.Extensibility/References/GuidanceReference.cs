@@ -39,7 +39,7 @@ namespace NuPattern.Runtime.References
             Guard.NotNull(() => guidanceManager, guidanceManager);
             Guard.NotNull(() => whereFilter, whereFilter);
 
-            return GetReferences(element, whereFilter)
+            return GetReferenceValues(element, whereFilter)
                 .Select(reference => guidanceManager.InstantiatedGuidanceExtensions.FirstOrDefault(f => f.InstanceName.Equals(reference, StringComparison.OrdinalIgnoreCase)))
                 .Where(item => item != null);
         }

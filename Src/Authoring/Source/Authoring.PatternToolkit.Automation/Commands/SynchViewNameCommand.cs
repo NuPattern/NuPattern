@@ -55,7 +55,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
             {
                 using (tracer.StartActivity(Resources.SynchViewNameCommand_TraceSynchronizingViewName, patternModel.InstanceName, this.CurrentElement.InstanceName))
                 {
-                    var viewReference = ViewArtifactLinkReference.GetReferences(this.CurrentElement.AsElement()).FirstOrDefault();
+                    var viewReference = ViewArtifactLinkReference.GetReferenceValues(this.CurrentElement.AsElement()).FirstOrDefault();
                     if (viewReference != null)
                     {
                         ViewSchemaHelper.WithPatternModel(reference.PhysicalPath, (pm, docData) =>

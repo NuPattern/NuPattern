@@ -48,7 +48,7 @@ namespace NuPattern.Library.IntegrationTests
                 }));
 
             Assert.NotNull(product);
-            Assert.NotNull(product.TryGetReference(ReferenceKindConstants.ArtifactLink));
+            Assert.NotNull(product.TryGetReference(ReferenceKindConstants.SolutionItem));
 
             Assert.True(product.Views.Count() > 0);
             var view = product.Views.ElementAt(0);
@@ -56,7 +56,7 @@ namespace NuPattern.Library.IntegrationTests
             Assert.True(view.Elements.Count() > 0);
             var element = view.Elements.ElementAt(0);
 
-            Assert.NotNull(element.TryGetReference(ReferenceKindConstants.ArtifactLink));
+            Assert.NotNull(element.TryGetReference(ReferenceKindConstants.SolutionItem));
         }
     }
 }

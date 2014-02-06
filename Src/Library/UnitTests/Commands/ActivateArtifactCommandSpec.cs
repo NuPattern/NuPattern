@@ -73,7 +73,7 @@ namespace NuPattern.Library.UnitTests.Commands
                 this.item.Setup(container => container.Select());
 
                 Mock<IReference> reference = new Mock<IReference>();
-                reference.SetupGet(r => r.Kind).Returns(ReferenceKindConstants.ArtifactLink);
+                reference.SetupGet(r => r.Kind).Returns(ReferenceKindConstants.SolutionItem);
                 reference.SetupGet(r => r.Value).Returns("foo://");
                 this.OwnerElement.Setup(owner => owner.References).Returns(new[] { reference.Object });
 
@@ -124,10 +124,10 @@ namespace NuPattern.Library.UnitTests.Commands
                 this.generatedItem.Setup(container => container.Select());
 
                 Mock<IReference> unfoldedReference = new Mock<IReference>();
-                unfoldedReference.SetupGet(r => r.Kind).Returns(ReferenceKindConstants.ArtifactLink);
+                unfoldedReference.SetupGet(r => r.Kind).Returns(ReferenceKindConstants.SolutionItem);
                 unfoldedReference.SetupGet(r => r.Value).Returns("unfolded://foo/item");
                 Mock<IReference> generatedReference = new Mock<IReference>();
-                generatedReference.SetupGet(r => r.Kind).Returns(ReferenceKindConstants.ArtifactLink);
+                generatedReference.SetupGet(r => r.Kind).Returns(ReferenceKindConstants.SolutionItem);
                 generatedReference.SetupGet(r => r.Value).Returns("generated://bar/item");
                 this.OwnerElement.Setup(owner => owner.References).Returns(new[] { unfoldedReference.Object, generatedReference.Object });
 

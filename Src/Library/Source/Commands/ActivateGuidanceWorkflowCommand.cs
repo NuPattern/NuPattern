@@ -55,7 +55,7 @@ namespace NuPattern.Library.Commands
                 Resources.ActivateGuidanceWorkCommand_TraceInitial, this.CurrentElement.InstanceName);
 
             // Get the guidance reference from current element
-            var instanceName = this.CurrentElement.TryGetReference(ReferenceKindConstants.Guidance);
+            var instanceName = this.CurrentElement.TryGetReference(ReferenceKindConstants.GuidanceTopic);
             if (!String.IsNullOrEmpty(instanceName))
             {
                 tracer.Verbose(

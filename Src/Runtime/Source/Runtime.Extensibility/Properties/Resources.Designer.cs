@@ -1007,6 +1007,15 @@ namespace NuPattern.Runtime.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The path&apos;{0}&apos; is in an invalid format (i.e. contains invalid syntax or characters) and cannot be read..
+        /// </summary>
+        internal static string PathResolver_ErrorPathInvalidFormat {
+            get {
+                return ResourceManager.GetString("PathResolver_ErrorPathInvalidFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The path expression &apos;{0}&apos; evaluated to a null or empty string, which is invalid. This may be caused by a reference to a non-existent property or a property that has a null or empty value..
         /// </summary>
         internal static string PathResolver_PathEvaluatedEmpty {
@@ -1102,6 +1111,15 @@ namespace NuPattern.Runtime.Properties {
         internal static string PathResolver_TraceResolvedArtifactLink {
             get {
                 return ResourceManager.GetString("PathResolver_TraceResolvedArtifactLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Found multiple references to solution items for element &apos;{0}&apos; using first. .
+        /// </summary>
+        internal static string PathResolver_TraceResolvedMultipleReferences {
+            get {
+                return ResourceManager.GetString("PathResolver_TraceResolvedMultipleReferences", resourceCulture);
             }
         }
         

@@ -15,34 +15,18 @@ namespace NuPattern.Runtime.References
         private static readonly string typeIdFromKind = typeof(TKind).FullName;
 
         /// <summary>
-        /// Returns the first <see cref="IReference"/> for the current element.
+        /// Returns all the values of the references for the current element that can be converted to the given type and are not empty.
         /// </summary>
-        public static TValue GetReference(IProductElement element)
+        public static IEnumerable<TValue> GetReferenceValues(IProductElement element)
         {
-            Guard.NotNull(() => element, element);
-
-            var value = element.TryGetReference(typeIdFromKind);
-            if (value == null)
-            {
-                return default(TValue);
-            }
-
-            //Convert value to type of this reference
-            return GetValueOfKindType(new ElementDescriptorContext(element), value);
+            return GetReferenceValues(element, r => true);
         }
 
         /// <summary>
-        /// Returns all the <see cref="IReference"/>s for the current element that can be converted to the given type and are not empty.
+        /// Returns the values of the references for the current element that can be converted to the given type and are not empty, 
+        /// for the specified filter
         /// </summary>
-        public static IEnumerable<TValue> GetReferences(IProductElement element)
-        {
-            return GetReferences(element, r => true);
-        }
-
-        /// <summary>
-        /// Returns all the <see cref="IReference"/>s for the current element that can be converted to the given type and are not empty.
-        /// </summary>
-        public static IEnumerable<TValue> GetReferences(IProductElement element, Func<IReference, bool> whereFilter)
+        public static IEnumerable<TValue> GetReferenceValues(IProductElement element, Func<IReference, bool> whereFilter)
         {
             Guard.NotNull(() => element, element);
             Guard.NotNull(() => whereFilter, whereFilter);
@@ -51,6 +35,41 @@ namespace NuPattern.Runtime.References
                 .Where(r => r.Kind == typeIdFromKind && !string.IsNullOrEmpty(r.Value))
                 .Where(whereFilter)
                 .Select(r => GetValueOfKindType(new ElementDescriptorContext(element), r.Value));
+        }
+
+        /// <summary>
+        /// Returns the <see cref="IReference"/> for the current element that can be converted to the given type and match the specified value. 
+        /// </summary>
+        public static IReference GetReference(IProductElement element, TValue value)
+        {
+            Guard.NotNull(() => element, element);
+            Guard.NotNull(() => value, value);
+
+            return element.References
+                .Where(r => r.Kind == typeIdFromKind && !string.IsNullOrEmpty(r.Value))
+                .FirstOrDefault(r => r.Value.Equals(GetStringValue(new ElementDescriptorContext(element), value), StringComparison.OrdinalIgnoreCase));
+        }
+
+        /// <summary>
+        /// Returns all the <see cref="IReference"/>s for the current element that can be converted to the given type and are not empty.
+        /// </summary>
+        public static IEnumerable<IReference> GetReferences(IProductElement element)
+        {
+            return GetReferences(element, r => true);
+        }
+
+        /// <summary>
+        /// Returns all the <see cref="IReference"/>s for the current element that can be converted to the given type and are not empty, 
+        /// for the specified filter.
+        /// </summary>
+        public static IEnumerable<IReference> GetReferences(IProductElement element, Func<IReference, bool> whereFilter)
+        {
+            Guard.NotNull(() => element, element);
+            Guard.NotNull(() => whereFilter, whereFilter);
+
+            return element.References
+                .Where(r => r.Kind == typeIdFromKind && !string.IsNullOrEmpty(r.Value))
+                .Where(whereFilter);
         }
 
         /// <summary>

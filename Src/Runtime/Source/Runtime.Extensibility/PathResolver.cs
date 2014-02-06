@@ -2,6 +2,7 @@
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using NuPattern.Diagnostics;
 using NuPattern.Runtime.Properties;
 using NuPattern.Runtime.References;
@@ -20,6 +21,36 @@ namespace NuPattern.Runtime
         private const string NavigateUpCharacters = @"..";
         private const string NavigateCurrentCharacters = @".";
         private const int SafeDirCount = 8;
+        private const string PathElemsCharsRegExpression = @"[\w\d\-]{1,}";
+        private const string PathDirsCharsRegExpression = @"[ \w\d\.\,\{\}\(\)\-]{1,}";
+        private const string PathTagCharsRegExpression = @"[ \w\d\;\,\-]{1,}";
+        private const string PathTagRegExpression = @"\" + ResolveArtifactLinkCharacter + @"\[(?<tag>" + PathTagCharsRegExpression + @")\]";
+
+        /// <summary>
+        /// The regular expression to verify all paths
+        /// </summary>
+        /// <remarks>
+        /// This guy is a monster!
+        /// The use of group names is to help the reader understand it. These are not yet used in the code to parse it.
+        /// Basic Rules: 
+        ///  Broken in the [model path] and the [physical path], separated by the '~' character.
+        /// If no '~' then it is treated as a physical path. All slashes can be either '\' or '/'
+        /// In the model part, we are expecting: '.\' or '..\' or the name of a ancestor/relative element plus a slash, this is recursive until we reach the '~' or end of path
+        /// Names for ancestors/relative is basic: any word, digit or dash. No spaces or wierd chars. Basically CSharp identifier chars
+        /// In the physical part, we are expecting a '~'. It may come with a tag in square brackets. Only simple tag values and some simple delimitiers are allowed here
+        /// After the '~' whether there is one or not, these paths can start with slashes or not, they can be '.\' or '..\' or a foldername, this is recursive until we reach the end of the path.
+        /// Names for folders are pretty normal file characters.
+        /// </remarks>
+        public const string PathRegExpression = @"^(?<model>(?<navs>(\.[\/\\]{1})|(\.\.[\/\\]{1})|(?<elems>" 
+            + PathElemsCharsRegExpression + @"[\/\\]{1})){0,}){1}" +
+            @"(?<physical>((?<sep>[\" + ResolveArtifactLinkCharacter + @"]{0,1})(?<tag>(\[" 
+            + PathTagCharsRegExpression + @"\])){0,1}(?<path>(?<topdir>([\/\\]{1})|([\.]{1,2}[\/\\])){0,1}(?<dirs>" 
+            + PathDirsCharsRegExpression + @"[\/\\]{0,1}){0,})){1}){1}$";
+
+        /// <summary>
+        /// Character for delimiting artifact link tags
+        /// </summary>
+        public const char ReferenceTagDelimiter = ';';
 
         /// <summary>
         /// Character that resolves an artifact link.
@@ -70,13 +101,13 @@ namespace NuPattern.Runtime
         /// Tries to resolves the current element paths and filename.
         /// </summary>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031:DoNotCatchGeneralExceptionTypes", Justification = "By Design")]
-        public bool TryResolve(Func<IItemContainer, bool> artifactReferenceFilter = null)
+        public bool TryResolve(Func<IItemContainer, bool> solutionItemFilter = null)
         {
-            if (artifactReferenceFilter == null)
-                artifactReferenceFilter = item => true;
+            if (solutionItemFilter == null)
+                solutionItemFilter = item => true;
             try
             {
-                Resolve(artifactReferenceFilter);
+                Resolve(solutionItemFilter);
                 return true;
             }
             catch (Exception ex)
@@ -90,16 +121,25 @@ namespace NuPattern.Runtime
         /// Resolves the current element paths and filename.
         /// </summary>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters", MessageId = "Features.Diagnostics.ITracer.Verbose(System.String)")]
-        public void Resolve(Func<IItemContainer, bool> artifactReferenceFilter = null)
+        public void Resolve(Func<IItemContainer, bool> solutionItemFilter = null)
         {
             tracer.Verbose(
                 Resources.PathResolver_TraceResolveInitial, Path ?? string.Empty, FileName ?? string.Empty);
 
-            if (artifactReferenceFilter == null)
-                artifactReferenceFilter = item => true;
+            if (!string.IsNullOrEmpty(this.Path) 
+                && !Regex.IsMatch(this.Path, PathRegExpression, RegexOptions.IgnoreCase))
+            {
+                throw new InvalidOperationException(string.Format(
+                    CultureInfo.CurrentCulture,
+                    Resources.PathResolver_ErrorPathInvalidFormat,
+                    this.Path));
+            }
+
+            if (solutionItemFilter == null)
+                solutionItemFilter = item => true;
 
             // Navigate the path and resolve the link (if any)
-            ResolveArtifactLinkInPath(artifactReferenceFilter);
+            ResolveArtifactLinkInPath(solutionItemFilter);
 
             if (!string.IsNullOrEmpty(this.Path))
             {
@@ -179,7 +219,7 @@ namespace NuPattern.Runtime
         /// <summary>
         /// Normalizes the specified path by removing extra ".." relative path moves.
         /// </summary>
-        public static string Normalize(string path)
+        internal static string Normalize(string path)
         {
             if (string.IsNullOrEmpty(path))
                 return path;
@@ -251,27 +291,7 @@ namespace NuPattern.Runtime
             return fullPath;
         }
 
-        /// <summary>
-        /// Resolves the given path to a given type of solution item in the solution.
-        /// </summary>
-        public T ResolvePathToSolutionItem<T>(ISolution solution) where T : IItemContainer
-        {
-            Guard.NotNull(() => solution, solution);
-
-            this.Resolve();
-            if (!String.IsNullOrEmpty(this.Path))
-            {
-                var item = solution.Find<T>(this.Path).FirstOrDefault();
-                if (item != null)
-                {
-                    return item;
-                }
-            }
-
-            return default(T);
-        }
-
-        private void ResolveArtifactLinkInPath(Func<IItemContainer, bool> artifactReferenceFilter)
+        private void ResolveArtifactLinkInPath(Func<IItemContainer, bool> solutionItemFilter)
         {
             var productElement = this.Context as IProductElement;
 
@@ -295,14 +315,14 @@ namespace NuPattern.Runtime
             {
                 var ancestorWithArtifactLink = productElement.Traverse(
                     x => x.GetParent(),
-                    x => x.TryGetReference(ReferenceKindConstants.ArtifactLink) != null);
+                    x => x.TryGetReference(ReferenceKindConstants.SolutionItem) != null);
 
                 ThrowIfNoAncestorWithLink(productElement, ancestorWithArtifactLink, this.Path);
 
                 tracer.Verbose(
                     Resources.PathResolver_TraceResolveLinkInPathUsingElementReference, ancestorWithArtifactLink.GetSafeInstanceName());
 
-                this.Path = ResolveRelativeTargetPath(ancestorWithArtifactLink, pathToResolve, artifactReferenceFilter);
+                this.Path = ResolveRelativeTargetPath(ancestorWithArtifactLink, pathToResolve, solutionItemFilter);
             }
                 // Otherwise, lets see if we have to navigate the model at all
             else if (pathToResolve.Contains(ResolveArtifactLinkCharacter)) 
@@ -318,11 +338,11 @@ namespace NuPattern.Runtime
                     Resources.PathResolver_TraceResolveLinkInPathUsingElementReference, elementToResolve.GetSafeInstanceName());
 
                 // Resolve the link
-                this.Path = ResolveRelativeTargetPath(elementToResolve, pathToResolve, artifactReferenceFilter);
+                this.Path = ResolveRelativeTargetPath(elementToResolve, pathToResolve, solutionItemFilter);
             }
         }
 
-        internal static IProductElement LocateHierarchyContext(IProductElement context, string path)
+        private static IProductElement LocateHierarchyContext(IProductElement context, string path)
         {
             var currentContext = context;
 
@@ -333,7 +353,7 @@ namespace NuPattern.Runtime
                 foreach (var part in parts)
                 {
                     // Check if we reached the resolve character
-                    if (part.Equals(PathResolver.ResolveArtifactLinkCharacter))
+                    if (part.StartsWith(PathResolver.ResolveArtifactLinkCharacter))
                     {
                         break;
                     }
@@ -417,24 +437,26 @@ namespace NuPattern.Runtime
             return null;
         }
 
-        private string ResolveRelativeTargetPath(IProductElement context, string path, Func<IItemContainer, bool> artifactReferenceFilter)
+        private string ResolveRelativeTargetPath(IProductElement context, string path, Func<IItemContainer, bool> solutionItemFilter)
         {
-            // TODO: what if there are many references? Is it safe to just get the first one?
-            var targetItem = SolutionArtifactLinkReference.GetResolvedReferences(context, this.UriService).FirstOrDefault(artifactReferenceFilter);
+            // resolve the artifact link on current element
+            var targetItem = ResolveReference(context, solutionItemFilter, path);
             ThrowIfInvalidArtifactLink(context, targetItem);
 
             var oldPath = path;
             var result = path;
             
-            // Remove all characters up to the last ~. Plus the slashes /\ if they exists as next char
-            // If no ~ then dont replace anything
+            // Remove the left side of the expression (model path + ~ + [tag]) leaving just the physical path
             if (path.Contains(ResolveArtifactLinkCharacter))
             {
-                result = result.Remove(0, result.LastIndexOf(ResolveArtifactLinkCharacter, System.StringComparison.OrdinalIgnoreCase));
-                result = result.Replace(ResolveArtifactLinkCharacter + @"\", string.Empty)
-                                .Replace(ResolveArtifactLinkCharacter + @"/", string.Empty)
-                                // This covers the case where we automatically added it t signal a solution path when it was empty.
-                                .Replace(ResolveArtifactLinkCharacter, string.Empty);
+                // remove everything up to ~, and any tag expression
+                var indexOfResolveChar = result.LastIndexOf(ResolveArtifactLinkCharacter,
+                    System.StringComparison.OrdinalIgnoreCase);
+                var indexOfStartPhysicalPath =
+                    result.IndexOfAny(
+                        new[] {System.IO.Path.DirectorySeparatorChar, System.IO.Path.AltDirectorySeparatorChar},
+                        indexOfResolveChar);
+                result = result.Substring(((indexOfStartPhysicalPath > indexOfResolveChar) ? indexOfStartPhysicalPath : indexOfResolveChar) + 1);
             }
 
             result = System.IO.Path.Combine(targetItem.GetLogicalPath(), result);
@@ -447,6 +469,43 @@ namespace NuPattern.Runtime
             return result;
         }
 
+        private IItemContainer ResolveReference(IProductElement context, Func<IItemContainer, bool> solutionItemFilter, string path)
+        {
+            // create a filter function the matches any links that include the tag (if any)
+            var tagFilter = new Func<IReference, bool>(x => true);
+            var tag = GetArtifactReferenceTag(path);
+            if (!string.IsNullOrEmpty(tag))
+            {
+                tagFilter = r => r.Tag.Split(ReferenceTagDelimiter).Contains(tag, StringComparer.OrdinalIgnoreCase);
+            }
+
+            // filter by tag, and then by solution item constraints
+            var references = SolutionArtifactLinkReference.GetResolvedReferences(context, this.UriService, tagFilter)
+                .Where(solutionItemFilter);
+            if (references.Count() > 1)
+            {
+                tracer.Warn(
+                    Resources.PathResolver_TraceResolvedMultipleReferences, context.GetSafeInstanceName());
+            }
+
+            return references
+                .FirstOrDefault();
+        }
+
+        private static string GetArtifactReferenceTag(string path)
+        {
+            if (path.Contains(ResolveArtifactLinkCharacter))
+            {
+                var match = Regex.Match(path, PathTagRegExpression, RegexOptions.IgnoreCase);
+                if (match.Success)
+                {
+                    return match.Groups["tag"].Value;
+                }
+            }
+
+            return null;
+        }
+
         private static void ThrowIfInvalidArtifactLink(IProductElement elementWithArtifactLink, IItemContainer targetItem)
         {
             if (targetItem == null)
@@ -457,7 +516,7 @@ namespace NuPattern.Runtime
                 throw new InvalidOperationException(string.Format(
                     CultureInfo.CurrentCulture,
                     Resources.PathResolver_ErrorInvalidArtifactLink,
-                    elementWithArtifactLink.TryGetReference(ReferenceKindConstants.ArtifactLink),
+                    elementWithArtifactLink.TryGetReference(ReferenceKindConstants.SolutionItem),
                     elementWithArtifactLink.GetSafeInstanceName()));
             }
         }
@@ -465,7 +524,7 @@ namespace NuPattern.Runtime
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters", MessageId = "Features.Diagnostics.ITracer.Verbose(System.String)")]
         private static void ThrowIfNoLinkOnElement(IProductElement context, string path)
         {
-            if (string.IsNullOrEmpty(context.TryGetReference(ReferenceKindConstants.ArtifactLink)))
+            if (string.IsNullOrEmpty(context.TryGetReference(ReferenceKindConstants.SolutionItem)))
             {
                 tracer.Verbose(
                     Resources.PathResolver_TraceInvalidParentArtifactLink);

@@ -49,7 +49,7 @@ namespace NuPattern.Library.UnitTests.Conditions
             public void WhenArtifactReferencesExist_ThenEvaluateReturnsTrue()
             {
                 Mock<IReference> generatedReference = new Mock<IReference>();
-                generatedReference.SetupGet(r => r.Kind).Returns(ReferenceKindConstants.ArtifactLink);
+                generatedReference.SetupGet(r => r.Kind).Returns(ReferenceKindConstants.SolutionItem);
                 generatedReference.SetupGet(r => r.Value).Returns("generated://");
 
                 Mock<IProductElement> mockCurrentElement = new Mock<IProductElement>();

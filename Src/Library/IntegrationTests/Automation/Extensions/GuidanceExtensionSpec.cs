@@ -211,7 +211,7 @@ namespace NuPattern.Library.IntegrationTests.Automation.Guidance
                                     new PropertyBindingSettings
                                     {
                                         Name = Reflector<ElementReferenceExistsCondition>.GetPropertyName(cond => cond.Kind),
-                                        Value = ReferenceKindConstants.Guidance
+                                        Value = ReferenceKindConstants.GuidanceTopic
                                     },
                                 }
                             }

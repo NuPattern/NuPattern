@@ -38,7 +38,7 @@ namespace NuPattern.Library.Conditions
             tracer.Info(
                 Resources.ArtifactReferenceExistsCondition_TraceInitial, this.CurrentElement.InstanceName);
 
-            var result = SolutionArtifactLinkReference.GetReferences(this.CurrentElement).Any();
+            var result = SolutionArtifactLinkReference.GetReferenceValues(this.CurrentElement).Any();
 
             tracer.Info(
                 Resources.ArtifactReferenceExistsCondition_TraceEvaluation, this.CurrentElement.InstanceName, result);

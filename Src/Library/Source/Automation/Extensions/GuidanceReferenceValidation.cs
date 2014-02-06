@@ -37,7 +37,7 @@ namespace NuPattern.Library.Automation
                     return;
                 }
 
-                var reference = element.TryGetReference(ReferenceKindConstants.Guidance);
+                var reference = element.TryGetReference(ReferenceKindConstants.GuidanceTopic);
                 if (!string.IsNullOrEmpty(reference))
                 {
                     var uri = GuidanceReference.GetResolvedReferences(element, this.GuidanceManager).FirstOrDefault();

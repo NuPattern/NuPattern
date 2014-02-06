@@ -55,7 +55,7 @@ namespace NuPattern.Library.UnitTests.Automation.Guidance
             {
                 this.product.Store.TransactionManager.DoWithinTransaction(() =>
                     {
-                        this.product.AddReference(ReferenceKindConstants.Guidance, string.Empty);
+                        this.product.AddReference(ReferenceKindConstants.GuidanceTopic, string.Empty);
                     });
 
                 this.validator.ValidateGuidanceReference(validationContext, this.product);
@@ -68,7 +68,7 @@ namespace NuPattern.Library.UnitTests.Automation.Guidance
             {
                 this.product.Store.TransactionManager.DoWithinTransaction(() =>
                 {
-                    this.product.AddReference(ReferenceKindConstants.Guidance, "Foo");
+                    this.product.AddReference(ReferenceKindConstants.GuidanceTopic, "Foo");
                 });
 
                 this.validator.ValidateGuidanceReference(validationContext, this.product);
@@ -82,7 +82,7 @@ namespace NuPattern.Library.UnitTests.Automation.Guidance
             {
                 this.product.Store.TransactionManager.DoWithinTransaction(() =>
                 {
-                    this.product.AddReference(ReferenceKindConstants.Guidance, "Bar");
+                    this.product.AddReference(ReferenceKindConstants.GuidanceTopic, "Bar");
                 });
 
                 Mock<NuPattern.Runtime.Guidance.IGuidanceExtension> feature = new Mock<NuPattern.Runtime.Guidance.IGuidanceExtension>();

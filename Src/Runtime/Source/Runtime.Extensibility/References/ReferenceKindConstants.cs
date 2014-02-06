@@ -9,11 +9,11 @@ namespace NuPattern.Runtime.References
         /// <summary>
         /// Kind used on guidance references.
         /// </summary>
-        public static readonly string Guidance = typeof(GuidanceReference).FullName;
+        public static readonly string GuidanceTopic = typeof(GuidanceReference).FullName;
 
         /// <summary>
         /// Kind used on artifact link references.
         /// </summary>
-        public static readonly string ArtifactLink = typeof(SolutionArtifactLinkReference).FullName;
+        public static readonly string SolutionItem = typeof(SolutionArtifactLinkReference).FullName;
     }
 }

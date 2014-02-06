@@ -55,7 +55,7 @@ namespace NuPattern.Library.UnitTests.Automation.Artifact
             {
                 this.product.Store.TransactionManager.DoWithinTransaction(() =>
                     {
-                        this.product.AddReference(ReferenceKindConstants.ArtifactLink, string.Empty);
+                        this.product.AddReference(ReferenceKindConstants.SolutionItem, string.Empty);
                     });
 
                 this.validator.ValidateArtifactReferences(validationContext, this.product);
@@ -68,7 +68,7 @@ namespace NuPattern.Library.UnitTests.Automation.Artifact
             {
                 this.product.Store.TransactionManager.DoWithinTransaction(() =>
                 {
-                    this.product.AddReference(ReferenceKindConstants.ArtifactLink, "Foo");
+                    this.product.AddReference(ReferenceKindConstants.SolutionItem, "Foo");
                 });
 
                 this.validator.ValidateArtifactReferences(validationContext, this.product);
@@ -82,7 +82,7 @@ namespace NuPattern.Library.UnitTests.Automation.Artifact
             {
                 this.product.Store.TransactionManager.DoWithinTransaction(() =>
                 {
-                    this.product.AddReference(ReferenceKindConstants.ArtifactLink, "Bar");
+                    this.product.AddReference(ReferenceKindConstants.SolutionItem, "Bar");
                 });
 
                 Mock<IItemContainer> item = new Mock<IItemContainer>();
