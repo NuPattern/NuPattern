@@ -19,7 +19,7 @@ namespace NuPattern.IntegrationTests.VisualStudio
 #endif
 
         [TestClass]
-        [DeploymentItem("Extensibility.IntegrationTests.Content", "Extensibility.IntegrationTests.Content")]
+        [DeploymentItem("Common.IntegrationTests.Content", "Common.IntegrationTests.Content")]
         public class GivenAVsixFile
         {
             [TestMethod, TestCategory("Integration")]
@@ -37,19 +37,19 @@ namespace NuPattern.IntegrationTests.VisualStudio
             [TestMethod, TestCategory("Integration")]
             public void WhenTargetDirIsEmpty_ThenArgumentOutOfRangeException()
             {
-                Assert.Throws<ArgumentOutOfRangeException>(() => Vsix.Unzip("Extensibility.IntegrationTests.Content\\Toolkit1.vsix", string.Empty));
+                Assert.Throws<ArgumentOutOfRangeException>(() => Vsix.Unzip("Common.IntegrationTests.Content\\Toolkit1.vsix", string.Empty));
             }
 
             [TestMethod, TestCategory("Integration")]
             public void WhenTargetDirIsNull_ThenThrowsArgumentNullException()
             {
-                Assert.Throws<ArgumentNullException>(() => Vsix.Unzip("Extensibility.IntegrationTests.Content\\Toolkit1.vsix", null));
+                Assert.Throws<ArgumentNullException>(() => Vsix.Unzip("Common.IntegrationTests.Content\\Toolkit1.vsix", null));
             }
 
             [TestMethod, TestCategory("Integration")]
             public void WhenUnzipFromStream_ThenItIsCreated()
             {
-                using (FileStream vsixFile = File.OpenRead("Extensibility.IntegrationTests.Content\\Toolkit1.vsix"))
+                using (FileStream vsixFile = File.OpenRead("Common.IntegrationTests.Content\\Toolkit1.vsix"))
                 {
                     var vsixStreams = Vsix.Unzip(vsixFile);
 
@@ -68,7 +68,7 @@ namespace NuPattern.IntegrationTests.VisualStudio
                     targetDir.Delete(true);
                 }
 
-                Vsix.Unzip("Extensibility.IntegrationTests.Content\\Toolkit1.vsix", targetDir.FullName);
+                Vsix.Unzip("Common.IntegrationTests.Content\\Toolkit1.vsix", targetDir.FullName);
 
                 Assert.True(Directory.Exists(targetDir.FullName));
             }
@@ -87,7 +87,7 @@ namespace NuPattern.IntegrationTests.VisualStudio
                 targetDir.Create();
                 File.WriteAllText(existingFile, "Foo");
 
-                Vsix.Unzip("Extensibility.IntegrationTests.Content\\Toolkit1.vsix", targetDir.FullName);
+                Vsix.Unzip("Common.IntegrationTests.Content\\Toolkit1.vsix", targetDir.FullName);
 
                 Assert.False(File.Exists(existingFile));
             }
@@ -97,7 +97,7 @@ namespace NuPattern.IntegrationTests.VisualStudio
             {
                 var targetDir = new DirectoryInfo("Target").FullName;
 
-                Vsix.Unzip("Extensibility.IntegrationTests.Content\\Toolkit1.vsix", targetDir);
+                Vsix.Unzip("Common.IntegrationTests.Content\\Toolkit1.vsix", targetDir);
 
                 Assert.True(File.Exists(Path.Combine(targetDir, "extension.vsixmanifest")));
                 Assert.True(File.Exists(Path.Combine(targetDir, "Toolkit1.dll")));
@@ -108,7 +108,7 @@ namespace NuPattern.IntegrationTests.VisualStudio
             {
                 var targetDir = new DirectoryInfo("Target").FullName;
 
-                Vsix.Unzip("Extensibility.IntegrationTests.Content\\Toolkit1.vsix", targetDir);
+                Vsix.Unzip("Common.IntegrationTests.Content\\Toolkit1.vsix", targetDir);
 
                 Assert.True(Directory.Exists(Path.Combine(targetDir, "Documentation")));
                 Assert.True(Directory.Exists(Path.Combine(targetDir, "Automation")));
@@ -120,7 +120,7 @@ namespace NuPattern.IntegrationTests.VisualStudio
             {
                 var targetDir = new DirectoryInfo("Target").FullName;
 
-                Vsix.Unzip("Extensibility.IntegrationTests.Content\\Toolkit1.vsix", targetDir);
+                Vsix.Unzip("Common.IntegrationTests.Content\\Toolkit1.vsix", targetDir);
 
                 Assert.True(File.Exists(Path.Combine(targetDir, "Automation\\Templates\\Projects\\ToolkitCustomization.zip")));
             }
@@ -128,7 +128,7 @@ namespace NuPattern.IntegrationTests.VisualStudio
             [TestMethod, TestCategory("Integration")]
             public void WhenReadingManifest_ThenGetsFullInfo()
             {
-                var extension = Vsix.ReadManifest("Extensibility.IntegrationTests.Content\\Toolkit1.vsix");
+                var extension = Vsix.ReadManifest("Common.IntegrationTests.Content\\Toolkit1.vsix");
 
                 Assert.Equal("Toolkit1", extension.Header.Name);
                 Assert.Equal(1, extension.Content.Where(c => c.ContentTypeName == VsixContentTypeMefComponent).Count());
@@ -139,7 +139,7 @@ namespace NuPattern.IntegrationTests.VisualStudio
             [TestMethod, TestCategory("Integration")]
             public void WhenReadingVsixFromStream_ThenGetsFullInfo()
             {
-                using (FileStream vsixFile = File.OpenRead("Extensibility.IntegrationTests.Content\\Toolkit1.vsix"))
+                using (FileStream vsixFile = File.OpenRead("Common.IntegrationTests.Content\\Toolkit1.vsix"))
                 {
                     var extension = Vsix.ReadManifest(vsixFile);
 
@@ -151,14 +151,14 @@ namespace NuPattern.IntegrationTests.VisualStudio
             }
         }
 
-        [DeploymentItem("Extensibility.IntegrationTests.Content\\extension.vsixmanifest", "Extensibility.IntegrationTests.Content\\GivenAVsixManifestFile")]
+        [DeploymentItem("Common.IntegrationTests.Content\\extension.vsixmanifest", "Common.IntegrationTests.Content\\GivenAVsixManifestFile")]
         [TestClass]
         public class GivenAVsixManifestFile
         {
             [TestMethod, TestCategory("Integration")]
             public void WhenReadingManifest_ThenGetsFullInfo()
             {
-                var extension = Vsix.ReadManifest("Extensibility.IntegrationTests.Content\\GivenAVsixManifestFile\\extension.vsixmanifest");
+                var extension = Vsix.ReadManifest("Common.IntegrationTests.Content\\GivenAVsixManifestFile\\extension.vsixmanifest");
 
                 Assert.Equal("Toolkit1", extension.Header.Name);
                 Assert.Equal(1, extension.Content.Where(c => c.ContentTypeName == VsixContentTypeMefComponent).Count());
@@ -169,7 +169,7 @@ namespace NuPattern.IntegrationTests.VisualStudio
             [TestMethod, TestCategory("Integration")]
             public void WhenReadingManifestId_ThenGetsIdentifier()
             {
-                var extension = Vsix.ReadManifestIdentifier("Extensibility.IntegrationTests.Content\\GivenAVsixManifestFile\\extension.vsixmanifest");
+                var extension = Vsix.ReadManifestIdentifier("Common.IntegrationTests.Content\\GivenAVsixManifestFile\\extension.vsixmanifest");
 
                 Assert.Equal("ef4561f7-a3ea-4666-a080-bc2f195451e3", extension);
             }

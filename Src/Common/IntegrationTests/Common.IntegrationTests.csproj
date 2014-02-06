@@ -111,6 +111,9 @@
     <Compile Include="VisualStudio\TemplateWizards\ReplacementWizardSpec.cs" />
     <Compile Include="VisualStudio\TraceSourceExtensionsSpec.cs" />
     <Compile Include="VisualStudio\VsixSpec.cs" />
+    <Content Include="Common.IntegrationTests.Content\extension.vsixmanifest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <CodeAnalysisDictionary Include="..\..\CodeAnalysis.Dictionary.xml">
@@ -128,6 +131,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Common.IntegrationTests.Content\Toolkit1.vsix">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
