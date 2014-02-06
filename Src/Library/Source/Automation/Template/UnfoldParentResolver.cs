@@ -65,7 +65,7 @@ namespace NuPattern.Library.Automation.Template
         private IItemContainer GetUnfoldParent(IProductElement element, VsTemplateType templateType)
         {
             var parentWithArtifactLink = element.Traverse(
-                x => x.GetParentAutomation(),
+                x => x.GetParent(),
                 x => x.TryGetReference(ReferenceKindConstants.ArtifactLink) != null);
 
             if (parentWithArtifactLink != null)
@@ -91,7 +91,7 @@ namespace NuPattern.Library.Automation.Template
                     // The Traverse at the top first checks the stop condition on the source element itself, 
                     // meaning in our case that we would enter an infinite loop if were to get here again
                     // and pass ourselves up. So we travel one element up for the traversal.
-                    return GetUnfoldParent(parentWithArtifactLink.GetParentAutomation(), templateType);
+                    return GetUnfoldParent(parentWithArtifactLink.GetParent(), templateType);
                 }
             }
 

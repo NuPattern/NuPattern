@@ -208,16 +208,16 @@
     <value>The file name expression '{0}' evaluated to a null or empty string, which is invalid. This may be caused by a reference to a non-existent property or a property that has a null or empty value.</value>
   </data>
   <data name="PathResolver_ErrorInvalidArtifactLink" xml:space="preserve">
-    <value>Artifact link '{0}' on element '{1}' could not be resolved to a solution artifact.</value>
+    <value>Solution item reference '{0}' on element '{1}' could not be resolved to an item in the solution.</value>
   </data>
   <data name="PathResolver_ErrorNoAncestorWithArtifactLink" xml:space="preserve">
-    <value>Could not retrieve a solution artifact from the current element '{0}' or any of its ancestors. Element relative path '{1}' cannot be resolved.</value>
+    <value>Could not retrieve a solution item reference from the current element '{0}' or any of its ancestors. Element relative path '{1}' cannot be resolved.</value>
   </data>
   <data name="PathResolver_ErrorNoArtifactLinkOnParent" xml:space="preserve">
-    <value>Path '{0}' specifies a product store relative path that resolved to element '{1}', but the element does not contain an artifact link.</value>
+    <value>Path '{0}' specifies a relative path that resolved to element '{1}', but the element does not contain an solution item reference.</value>
   </data>
   <data name="PathResolver_ErrorNoParentFound" xml:space="preserve">
-    <value>Path '{0}' specifies an explicit product relative path that could not be resolved to a valid parent or ancestor element.</value>
+    <value>Path '{0}' specifies an explicit relative path that could not be resolved to a valid parent or ancestor element.</value>
   </data>
   <data name="PathResolver_PathEvaluatedEmpty" xml:space="preserve">
     <value>The path expression '{0}' evaluated to a null or empty string, which is invalid. This may be caused by a reference to a non-existent property or a property that has a null or empty value.</value>
@@ -229,7 +229,7 @@
     <value>Evaluated path '{0}' to '{1}'.</value>
   </data>
   <data name="PathResolver_TraceResolvedArtifactLink" xml:space="preserve">
-    <value>Resolved artifact link in path '{0}', which resolved to '{1}'.</value>
+    <value>Resolved solution item reference in path '{0}', which resolved to '{1}'.</value>
   </data>
   <data name="ValueProviderBindingSettings_EmptyBinding" xml:space="preserve">
     <value>(Empty Value Provider)</value>
@@ -277,7 +277,7 @@
   <data name="PathResolver_TraceResolveLinkInPathDefaulting" xml:space="preserve">
     <value>	Path to resolve is null, default to '{0}'</value>
   </data>
-  <data name="PathResolver_TraceResolveLinkInPathUsiingElementReference" xml:space="preserve">
+  <data name="PathResolver_TraceResolveLinkInPathUsingElementReference" xml:space="preserve">
     <value>	Using references from element '{0}'</value>
   </data>
   <data name="PathResolver_TraceLocateParentResolvingElement" xml:space="preserve">
@@ -650,5 +650,11 @@ Please add a new or existing image file {0} to the project and try again.</value
   </data>
   <data name="GuidanceManagerExtensions_TraceInstantiation" xml:space="preserve">
     <value>Instantiating guidance workflow from extension '{0}' with default name '{1}'</value>
+  </data>
+  <data name="ProductElementExtensions_GetSafeInstanceName_UnDefined" xml:space="preserve">
+    <value>undefined [{0}]</value>
+  </data>
+  <data name="ProductElementExtensions_GetSafeInstanceName_UnNamed" xml:space="preserve">
+    <value>unnamed [{0}]</value>
   </data>
 </root>

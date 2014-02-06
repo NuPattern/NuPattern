@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Linq;
 using NuPattern.Runtime.Comparers;
@@ -27,7 +28,7 @@ namespace NuPattern.Runtime
             }
 
             var index = 1;
-            string instanceName = string.Empty;
+            string instanceName = String.Empty;
             do
             {
                 instanceName = baseName + index++;
@@ -52,9 +53,9 @@ namespace NuPattern.Runtime
         }
 
         /// <summary>
-        /// Gets the parent automation element of the given container.
+        /// Gets the parent element of the given container.
         /// </summary>
-        public static IProductElement GetParentAutomation(this IProductElement container)
+        public static IProductElement GetParent(this IProductElement container)
         {
             Guard.NotNull(() => container, container);
 
@@ -160,7 +161,7 @@ namespace NuPattern.Runtime
         /// <summary>
         /// Returns the schema information of all children of the given element.
         /// </summary>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "Infos", Justification = "Doesn't look Hungarian at all and it's the right name here.")]
+        [SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "Infos", Justification = "Doesn't look Hungarian at all and it's the right name here.")]
         public static IEnumerable<IPatternElementInfo> FindAllChildren(this IPatternElementInfo info)
         {
             Guard.NotNull(() => info, info);
@@ -181,7 +182,7 @@ namespace NuPattern.Runtime
         /// <summary>
         /// Returns the schema information of all descendant elements of the given element, for the given type.
         /// </summary>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "Infos", Justification = "Doesn't look Hungarian at all and it's the right name here.")]
+        [SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "Infos", Justification = "Doesn't look Hungarian at all and it's the right name here.")]
         public static IEnumerable<TInfo> FindAllDescendants<TInfo>(this IPatternElementInfo info) where TInfo : IPatternElementInfo
         {
             var infos = new List<TInfo>();
@@ -232,7 +233,7 @@ namespace NuPattern.Runtime
             //Ensure container element can contain
             if ((parentElement as IElementContainer) == null && (parentElement as IProduct) == null)
             {
-                throw new InvalidOperationException(string.Format(CultureInfo.CurrentCulture,
+                throw new InvalidOperationException(String.Format(CultureInfo.CurrentCulture,
                     Resources.ProductElementExtensions_ErrorNotElementContainer, parentElement.InstanceName, childElementName));
             }
 
@@ -240,7 +241,7 @@ namespace NuPattern.Runtime
             var childElementInfo = parentElement.Info.FindAllChildren().Where(i => i.Name.Equals(childElementName, StringComparison.OrdinalIgnoreCase)).FirstOrDefault();
             if (childElementInfo == null)
             {
-                throw new InvalidOperationException(string.Format(CultureInfo.CurrentCulture,
+                throw new InvalidOperationException(String.Format(CultureInfo.CurrentCulture,
                     Resources.ProductElementExtensions_ErrorNotChildElement, parentElement.InstanceName, childElementName));
             }
 
@@ -271,7 +272,7 @@ namespace NuPattern.Runtime
                 }
             }
 
-            if (string.IsNullOrEmpty(instanceName))
+            if (String.IsNullOrEmpty(instanceName))
             {
                 instanceName = childElementInfo.DisplayName;
             }
@@ -400,6 +401,28 @@ namespace NuPattern.Runtime
 
             return orderedElements
                 .Concat(nullInfoElements);
+        }
+
+        /// <summary>
+        /// Returns the instance name of the element, whether it is named or not.
+        /// </summary>
+        public static string GetSafeInstanceName(this IProductElement element)
+        {
+            var definitionId = element.DefinitionId;
+            var definitionName = element.DefinitionName;
+            var instanceName = element.InstanceName;
+
+            if (!String.IsNullOrEmpty(instanceName))
+            {
+                return instanceName;
+            }
+
+            if (!String.IsNullOrEmpty(definitionName))
+            {
+                return String.Format(CultureInfo.InvariantCulture, Resources.ProductElementExtensions_GetSafeInstanceName_UnNamed, definitionName);
+            }
+
+            return String.Format(CultureInfo.InvariantCulture, Resources.ProductElementExtensions_GetSafeInstanceName_UnDefined, definitionId);
         }
 
         private static string GetGroupComparer<T>(IGrouping<int, IGrouping<IContainedElementInfo, T>> orderGroup)

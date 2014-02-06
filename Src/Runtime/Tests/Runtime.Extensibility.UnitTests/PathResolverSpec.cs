@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Runtime.Properties;
@@ -15,14 +18,13 @@ namespace NuPattern.Runtime.UnitTests
         [TestMethod, TestCategory("Unit")]
         public void WhenNormalizingWithoutRelativeMove_ThenReturnsSameInput()
         {
-            Assert.Equal("Foo\\Bar\\Baz", PathResolver.Normalize("Foo\\Bar\\Baz"));
+            Assert.Equal(@"Foo\Bar\Baz", PathResolver.Normalize(@"Foo\Bar\Baz"));
         }
-
 
         [TestMethod, TestCategory("Unit")]
         public void WhenNormalizingWithRelativeMove_ThenPreservesNeededOnes()
         {
-            Assert.Equal("..\\..\\Foo", PathResolver.Normalize("..\\..\\Foo"));
+            Assert.Equal(@"..\..\Foo", PathResolver.Normalize(@"..\..\Foo"));
         }
 
         [TestMethod, TestCategory("Unit")]
@@ -32,17 +34,17 @@ namespace NuPattern.Runtime.UnitTests
             // A\\B\\Bar\\ - 2
             // A\\Baz
             // == A\\B\\C\\[start] - 2 \\Baz
-            Assert.Equal("..\\..\\Baz", PathResolver.Normalize("Foo\\..\\..\\Bar\\..\\..\\Baz"));
+            Assert.Equal(@"..\..\Baz", PathResolver.Normalize(@"Foo\..\..\Bar\..\..\Baz"));
         }
 
         [TestMethod, TestCategory("Unit")]
         public void WhenPathEndsWithSlash_ThenItIsRemoved()
         {
-            var resolver = new PathResolver(Mock.Of<IProductElement>(), Mock.Of<IUriReferenceService>(), "Folder\\SubFolder\\");
+            var resolver = new PathResolver(Mock.Of<IProductElement>(), Mock.Of<IUriReferenceService>(), @"Folder\SubFolder\");
 
             resolver.Resolve();
 
-            Assert.Equal("Folder\\SubFolder", resolver.Path);
+            Assert.Equal(@"Folder\SubFolder", resolver.Path);
         }
 
         [TestClass]
@@ -71,7 +73,7 @@ namespace NuPattern.Runtime.UnitTests
             [TestMethod, TestCategory("Unit")]
             public void WhenTargetPathStartsWithTildeButNoAssetLink_ThenThrowsInvalidOperationException()
             {
-                this.Resolver.Path = "~\\Foo";
+                this.Resolver.Path = @"~\Foo";
 
                 Assert.Throws<InvalidOperationException>(
                     Resources.PathResolver_ErrorNoAncestorWithArtifactLink,
@@ -81,7 +83,7 @@ namespace NuPattern.Runtime.UnitTests
             [TestMethod, TestCategory("Unit")]
             public void WhenArtifactLinkFailsToResolve_ThenThrowsInvalidOperationException()
             {
-                this.Resolver.Path = "~\\Foo";
+                this.Resolver.Path = @"~\Foo";
 
                 this.Element
                     .Setup(x => x.References)
@@ -114,13 +116,13 @@ namespace NuPattern.Runtime.UnitTests
 
                 this.Resolver.Resolve();
 
-                Assert.Equal("Foo\\Bar", this.Resolver.Path);
+                Assert.Equal(@"Foo\Bar", this.Resolver.Path);
             }
 
             [TestMethod, TestCategory("Unit")]
             public void WhenMultipleArtifactLinkResolve_ThenCanFilterDesiredOne()
             {
-                this.Resolver.Path = "~\\Fixed";
+                this.Resolver.Path = @"~\Fixed";
 
                 this.Element
                     .Setup(x => x.References)
@@ -143,13 +145,13 @@ namespace NuPattern.Runtime.UnitTests
 
                 this.Resolver.Resolve(item => item.Kind == ItemKind.Folder);
 
-                Assert.Equal("Baz\\Fixed", this.Resolver.Path);
+                Assert.Equal(@"Baz\Fixed", this.Resolver.Path);
             }
 
             [TestMethod, TestCategory("Unit")]
             public void WhenPathContainsProductRelativeParentThen_ThenResolvesArtifact()
             {
-                this.Resolver.Path = "..\\..\\~\\Bar";
+                this.Resolver.Path = @"..\..\~\Bar";
 
                 this.Element.Setup(x => x.Parent).Returns(
                     Mock.Of<IProductElement>(parent =>
@@ -171,13 +173,13 @@ namespace NuPattern.Runtime.UnitTests
 
                 this.Resolver.Resolve();
 
-                Assert.Equal("Foo\\Bar", this.Resolver.Path);
+                Assert.Equal(@"Foo\Bar", this.Resolver.Path);
             }
 
             [TestMethod, TestCategory("Unit")]
             public void WhenPathStartsWithSlash_ThenDoesNotResolveArtifactLink()
             {
-                this.Resolver.Path = "\\Solution Items";
+                this.Resolver.Path = @"\Solution Items";
 
                 this.UriService
                     .Setup(x => x.ResolveUri<IItemContainer>(It.IsAny<Uri>()))
@@ -186,6 +188,110 @@ namespace NuPattern.Runtime.UnitTests
                 this.Resolver.Resolve();
 
                 Assert.Equal("Solution Items", this.Resolver.Path);
+            }
+        }
+
+        [TestClass]
+        public class GivenAProductElementWithRichHierarchy
+        {
+            private Mock<IProductElement> element;
+            private Mock<IUriReferenceService> uriService;
+            private PathResolver resolver;
+            private IProduct root;
+            private Mock<IAbstractElement> child;
+            private Mock<IAbstractElement> descendant;
+            private Mock<IProductElement> ancestor;
+            private Mock<IProductElement> parent;
+
+            [TestInitialize]
+            public void Initialize()
+            {
+                this.uriService = new Mock<IUriReferenceService>();
+                this.root = Mock.Of<IProduct>(p =>
+                        p.ProductState.GetService(typeof(IUriReferenceService)) == Mock.Of<IUriReferenceService>());
+
+                this.parent = new Mock<IProductElement>();
+                parent.Setup(ae => ae.DefinitionName).Returns("parent");
+                this.ancestor = new Mock<IProductElement>();
+                ancestor.Setup(ae => ae.DefinitionName).Returns("ancestor");
+                this.child = new Mock<IAbstractElement>();
+                child.Setup(ae => ae.DefinitionName).Returns("child");
+                child.Setup(c => c.Info.Cardinality).Returns(Cardinality.OneToMany);
+                this.descendant = new Mock<IAbstractElement>();
+                descendant.Setup(ae => ae.DefinitionName).Returns("descendant");
+                descendant.Setup(d => d.Info.Cardinality).Returns(Cardinality.OneToMany);
+                descendant.Setup(ae => ae.References).Returns(new[] 
+                                        { 
+                                            Mock.Of<IReference>(r => 
+                                                r.Kind == ReferenceKindConstants.ArtifactLink && 
+                                                r.Value == "solution://root/Bar"),
+                                        });
+
+                child.As<IElementContainer>().Setup(ec => ec.Elements).Returns(new [] { descendant.Object });
+                ancestor.As<IElementContainer>().Setup(ec => ec.Elements).Returns(new []{child.Object});
+                parent.Setup(p => p.Parent).Returns(ancestor.Object);
+                parent.Setup(p => p.Root).Returns(this.root);
+
+                this.element = new Mock<IProductElement>();
+                this.element.Setup(ae => ae.DefinitionName).Returns("element");
+                this.element.Setup(x => x.Root).Returns(this.root);
+                this.element.Setup(x => x.Parent).Returns(parent.Object);
+
+                this.uriService
+                    .Setup(x => x.ResolveUri<IItemContainer>(It.IsAny<Uri>()))
+                    .Returns(Mock.Of<IItemContainer>(item => item.Name == "Foo" &&
+                        item.Parent == Mock.Of<ISolution>(p => p.Name == "Solution")));
+            }
+
+            [TestMethod, TestCategory("Unit")]
+            public void WhenPathNavigatesDownAncestorHierarchyWithWrongCardinalityDescendant_ThenThrows()
+            {
+                this.resolver = new PathResolver(this.element.Object, this.uriService.Object);
+                this.resolver.Path = @"..\..\child\descendant\~\Bar";
+
+                Assert.Throws<InvalidOperationException>(()=> this.resolver.Resolve());
+            }
+
+            [TestMethod, TestCategory("Unit")]
+            public void WhenPathNavigatesDownAncestorHierarchyWithSingleCardinalityDescendant_ThenResolvesArtifactLink()
+            {
+                this.resolver = new PathResolver(this.element.Object, this.uriService.Object);
+                this.resolver.Path = @"..\..\child\descendant\~\Bar";
+
+                this.child.Setup(c => c.Info.Cardinality).Returns(Cardinality.OneToOne);
+                this.descendant.Setup(d => d.Info.Cardinality).Returns(Cardinality.OneToOne);
+
+                this.resolver.Resolve();
+
+                Assert.Equal(@"Foo\Bar", this.resolver.Path);
+            }
+
+            [TestMethod, TestCategory("Unit")]
+            public void WhenPathNavigatesDownHierarchyWithSingleCardinalityDescendant_ThenResolvesArtifactLink()
+            {
+                this.resolver = new PathResolver(this.ancestor.Object, this.uriService.Object);
+                this.resolver.Path = @"child\descendant\~\Bar";
+
+                this.child.Setup(c => c.Info.Cardinality).Returns(Cardinality.OneToOne);
+                this.descendant.Setup(d => d.Info.Cardinality).Returns(Cardinality.OneToOne);
+
+                this.resolver.Resolve();
+
+                Assert.Equal(@"Foo\Bar", this.resolver.Path);
+            }
+
+            [TestMethod, TestCategory("Unit")]
+            public void WhenPathNavigatesDownHierarchyWithSingleCardinalityDescendant2_ThenResolvesArtifactLink()
+            {
+                this.resolver = new PathResolver(this.ancestor.Object, this.uriService.Object);
+                this.resolver.Path = @".\child\descendant\~\Bar";
+
+                this.child.Setup(c => c.Info.Cardinality).Returns(Cardinality.OneToOne);
+                this.descendant.Setup(d => d.Info.Cardinality).Returns(Cardinality.OneToOne);
+
+                this.resolver.Resolve();
+
+                Assert.Equal(@"Foo\Bar", this.resolver.Path);
             }
         }
     }

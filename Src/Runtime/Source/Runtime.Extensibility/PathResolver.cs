@@ -17,12 +17,19 @@ namespace NuPattern.Runtime
     {
         private static readonly ITracer tracer = Tracer.Get(typeof(PathResolver));
         private const string SafeDirSeparator = "``";
+        private const string NavigateUpCharacters = @"..";
+        private const string NavigateCurrentCharacters = @".";
         private const int SafeDirCount = 8;
 
         /// <summary>
         /// Character that resolves an artifact link.
         /// </summary>
-        public const string ResolveArtifactLinkCharacter = "~";
+        public const string ResolveArtifactLinkCharacter = @"~";
+
+        /// <summary>
+        /// Character that represents a wildcard.
+        /// </summary>
+        public const string WildcardCharacter = @"*";
 
         /// <summary>
         /// Gets or Sets the path to be resolved.
@@ -91,12 +98,13 @@ namespace NuPattern.Runtime
             if (artifactReferenceFilter == null)
                 artifactReferenceFilter = item => true;
 
+            // Navigate the path and resolve the link (if any)
             ResolveArtifactLinkInPath(artifactReferenceFilter);
 
             if (!string.IsNullOrEmpty(this.Path))
             {
                 tracer.Verbose(
-                    Resources.PathResolver_TraceResolveApplyingExpression, this.Path, ((IProductElement)this.Context).InstanceName);
+                    Resources.PathResolver_TraceResolveApplyingExpression, this.Path, ((IProductElement)this.Context).GetSafeInstanceName());
 
                 var evaluatedPath = ExpressionEvaluator.Evaluate(this.Context, this.Path);
 
@@ -134,7 +142,7 @@ namespace NuPattern.Runtime
             if (!string.IsNullOrEmpty(this.FileName))
             {
                 tracer.Verbose(
-                    Resources.PathResolver_TraceResolveApplyingExpression, this.FileName, ((IProductElement)this.Context).InstanceName);
+                    Resources.PathResolver_TraceResolveApplyingExpression, this.FileName, ((IProductElement)this.Context).GetSafeInstanceName());
 
                 var evaluatedName = ExpressionEvaluator.Evaluate(this.Context, this.FileName);
 
@@ -198,7 +206,7 @@ namespace NuPattern.Runtime
                 System.IO.Path.DirectorySeparatorChar;
 
             // Wildcards are not valid path characters for the calculation.
-            var safePath = path.Replace(@"*", @"~~");
+            var safePath = path.Replace(WildcardCharacter, @"~~");
             var fullPath = new DirectoryInfo(System.IO.Path.Combine(safeRoot, safePath)).FullName;
 
             if (!fullPath.StartsWith(safeRoot, StringComparison.OrdinalIgnoreCase))
@@ -225,7 +233,7 @@ namespace NuPattern.Runtime
                 // our root. 
                 var relativePathToRestore = string.Join(
                         System.IO.Path.DirectorySeparatorChar.ToString(),
-                        Enumerable.Range(0, missingSeparators).Select(i => @".."));
+                        Enumerable.Range(0, missingSeparators).Select(i => NavigateUpCharacters));
 
                 fullPath = System.IO.Path.Combine(relativePathToRestore, fullPath);
             }
@@ -235,7 +243,7 @@ namespace NuPattern.Runtime
             }
 
             // Restore the wildcards.
-            fullPath = fullPath.Replace(@"~~", @"*");
+            fullPath = fullPath.Replace(@"~~", WildcardCharacter);
 
             if (fullPath.StartsWith(System.IO.Path.DirectorySeparatorChar.ToString(), StringComparison.Ordinal))
                 fullPath = fullPath.Substring(1);
@@ -271,7 +279,7 @@ namespace NuPattern.Runtime
                 return;
 
             tracer.Verbose(
-                Resources.PathResolver_TraceResolveLinkInPathResolvingElement, productElement.InstanceName);
+                Resources.PathResolver_TraceResolveLinkInPathResolvingElement, productElement.GetSafeInstanceName());
 
             var pathToResolve = this.Path;
 
@@ -282,61 +290,114 @@ namespace NuPattern.Runtime
                 pathToResolve = ResolveArtifactLinkCharacter;
             }
 
+            // Navigate up hierarchy for first ancestor with artifact link
             if (pathToResolve.StartsWith(ResolveArtifactLinkCharacter, StringComparison.Ordinal))
             {
                 var ancestorWithArtifactLink = productElement.Traverse(
-                    x => x.GetParentAutomation(),
+                    x => x.GetParent(),
                     x => x.TryGetReference(ReferenceKindConstants.ArtifactLink) != null);
 
                 ThrowIfNoAncestorWithLink(productElement, ancestorWithArtifactLink, this.Path);
 
                 tracer.Verbose(
-                    Resources.PathResolver_TraceResolveLinkInPathUsiingElementReference, ancestorWithArtifactLink.InstanceName);
+                    Resources.PathResolver_TraceResolveLinkInPathUsingElementReference, ancestorWithArtifactLink.GetSafeInstanceName());
 
                 this.Path = ResolveRelativeTargetPath(ancestorWithArtifactLink, pathToResolve, artifactReferenceFilter);
             }
-            else if (pathToResolve.StartsWith(@"..", StringComparison.Ordinal))
+                // Otherwise, lets see if we have to navigate the model at all
+            else if (pathToResolve.Contains(ResolveArtifactLinkCharacter)) 
             {
-                var parentWithArtifactLink = LocateRelativeParent(productElement, pathToResolve);
+                // Navigate to location in specified path
+                var elementToResolve = LocateHierarchyContext(productElement, pathToResolve);
 
-                ThrowIfNoRelativeParent(parentWithArtifactLink, this.Path);
-                ThrowIfNoLinkOnParent(parentWithArtifactLink, this.Path);
+                // Ensure we have a link at the element at this point in the path
+                ThrowIfNoContext(elementToResolve, this.Path);
+                ThrowIfNoLinkOnElement(elementToResolve, this.Path);
 
                 tracer.Verbose(
-                    Resources.PathResolver_TraceResolveLinkInPathUsiingElementReference, parentWithArtifactLink.InstanceName);
+                    Resources.PathResolver_TraceResolveLinkInPathUsingElementReference, elementToResolve.GetSafeInstanceName());
 
-                this.Path = ResolveRelativeTargetPath(parentWithArtifactLink, pathToResolve, artifactReferenceFilter);
+                // Resolve the link
+                this.Path = ResolveRelativeTargetPath(elementToResolve, pathToResolve, artifactReferenceFilter);
             }
         }
 
-        internal static IProductElement LocateRelativeParent(IProductElement context, string path)
+        internal static IProductElement LocateHierarchyContext(IProductElement context, string path)
         {
-            var parentWithArtifactLink = context;
-            // Make the path relative to the element asset link.
-            if (path.StartsWith(@"..", StringComparison.Ordinal))
+            var currentContext = context;
+
+            // Ensure we have a navigation expression up or down the hierarchy
+            if (path.Contains(ResolveArtifactLinkCharacter))
             {
                 var parts = path.Split(System.IO.Path.DirectorySeparatorChar, System.IO.Path.AltDirectorySeparatorChar);
                 foreach (var part in parts)
                 {
-                    if (part.Equals(@"..", StringComparison.Ordinal))
-                    {
-                        parentWithArtifactLink = parentWithArtifactLink.GetParentAutomation();
-
-                        tracer.Verbose(
-                            Resources.PathResolver_TraceLocateParentResolvingElement, part, parentWithArtifactLink.InstanceName);
-
-                        if (parentWithArtifactLink == null)
-                        {
-                            break;
-                        }
-                    }
-                    else
+                    // Check if we reached the resolve character
+                    if (part.Equals(PathResolver.ResolveArtifactLinkCharacter))
                     {
                         break;
                     }
+
+                    // Check for a navigate up the hierarchy to a parent element
+                    if (part.Equals(NavigateUpCharacters, StringComparison.Ordinal))
+                    {
+                        currentContext = currentContext.GetParent();
+
+                        tracer.Verbose(
+                            Resources.PathResolver_TraceLocateParentResolvingElement, part, currentContext.GetSafeInstanceName());
+
+                        if (currentContext == null)
+                        {
+                            break;
+                        }
+
+                        continue;
+                    }
+
+                    // Check for a navigate to current element
+                    if (part.Equals(NavigateCurrentCharacters, StringComparison.Ordinal))
+                    {
+                        // Ignore this part
+                        continue;
+                    }
+
+                    // Check for a navigate down hierarchy to a child element
+                    var childElement = GetChildElement(currentContext, part);
+                    if (childElement != null)
+                    {
+                        currentContext = childElement;
+
+                        tracer.Verbose(
+                            Resources.PathResolver_TraceLocateParentResolvingElement, part, currentContext.GetSafeInstanceName());
+
+                        continue;
+                    }
+
+                    break;
                 }
             }
-            return parentWithArtifactLink;
+
+            return currentContext;
+        }
+
+        private static IProductElement GetChildElement(IProductElement context, string name)
+        {
+            // locate a child instance that is a collection or element, and has a Any-To-One cardinality
+            var element = context.GetChildren()
+                .FirstOrDefault(c => c.DefinitionName.Equals(name, StringComparison.OrdinalIgnoreCase));
+            if (element != null)
+            {
+                var abstractElement = element as IAbstractElement;
+                if (abstractElement != null && abstractElement.Info != null)
+                {
+                    if (abstractElement.Info.Cardinality.IsAnyToOne())
+                    {
+                        return element;
+                    }
+                }
+            }
+
+            return null;
         }
 
         /// <summary>
@@ -363,16 +424,18 @@ namespace NuPattern.Runtime
             ThrowIfInvalidArtifactLink(context, targetItem);
 
             var oldPath = path;
-
-            var result = path
-                .Replace(@"..\", string.Empty)
-                .Replace(@".\", string.Empty)
-                .Replace(@"../", string.Empty)
-                .Replace(@"./", string.Empty)
-                .Replace(ResolveArtifactLinkCharacter + @"\", string.Empty)
-                .Replace(ResolveArtifactLinkCharacter + @"/", string.Empty)
-                // This covers the case where we automatically added it t signal a solution path when it was empty.
-                .Replace(ResolveArtifactLinkCharacter, string.Empty);
+            var result = path;
+            
+            // Remove all characters up to the last ~. Plus the slashes /\ if they exists as next char
+            // If no ~ then dont replace anything
+            if (path.Contains(ResolveArtifactLinkCharacter))
+            {
+                result = result.Remove(0, result.LastIndexOf(ResolveArtifactLinkCharacter, System.StringComparison.OrdinalIgnoreCase));
+                result = result.Replace(ResolveArtifactLinkCharacter + @"\", string.Empty)
+                                .Replace(ResolveArtifactLinkCharacter + @"/", string.Empty)
+                                // This covers the case where we automatically added it t signal a solution path when it was empty.
+                                .Replace(ResolveArtifactLinkCharacter, string.Empty);
+            }
 
             result = System.IO.Path.Combine(targetItem.GetLogicalPath(), result);
 
@@ -384,23 +447,23 @@ namespace NuPattern.Runtime
             return result;
         }
 
-        private static void ThrowIfInvalidArtifactLink(IProductElement parentWithArtifactLink, IItemContainer targetItem)
+        private static void ThrowIfInvalidArtifactLink(IProductElement elementWithArtifactLink, IItemContainer targetItem)
         {
             if (targetItem == null)
             {
                 tracer.Verbose(
-                    Resources.PathResolver_TraceInvalidArtifactLink, parentWithArtifactLink.InstanceName);
+                    Resources.PathResolver_TraceInvalidArtifactLink, elementWithArtifactLink.GetSafeInstanceName());
 
                 throw new InvalidOperationException(string.Format(
                     CultureInfo.CurrentCulture,
                     Resources.PathResolver_ErrorInvalidArtifactLink,
-                    parentWithArtifactLink.TryGetReference(ReferenceKindConstants.ArtifactLink),
-                    parentWithArtifactLink.InstanceName));
+                    elementWithArtifactLink.TryGetReference(ReferenceKindConstants.ArtifactLink),
+                    elementWithArtifactLink.GetSafeInstanceName()));
             }
         }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters", MessageId = "Features.Diagnostics.ITracer.Verbose(System.String)")]
-        private static void ThrowIfNoLinkOnParent(IProductElement context, string path)
+        private static void ThrowIfNoLinkOnElement(IProductElement context, string path)
         {
             if (string.IsNullOrEmpty(context.TryGetReference(ReferenceKindConstants.ArtifactLink)))
             {
@@ -411,12 +474,12 @@ namespace NuPattern.Runtime
                     CultureInfo.CurrentCulture,
                     Resources.PathResolver_ErrorNoArtifactLinkOnParent,
                     path,
-                    context.InstanceName));
+                    context.GetSafeInstanceName()));
             }
         }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters", MessageId = "Features.Diagnostics.ITracer.Verbose(System.String)")]
-        private static void ThrowIfNoRelativeParent(IProductElement context, string path)
+        private static void ThrowIfNoContext(IProductElement context, string path)
         {
             if (context == null)
             {
@@ -441,7 +504,7 @@ namespace NuPattern.Runtime
                 throw new InvalidOperationException(string.Format(
                     CultureInfo.CurrentCulture,
                     Resources.PathResolver_ErrorNoAncestorWithArtifactLink,
-                    context.InstanceName,
+                    context.GetSafeInstanceName(),
                     path));
             }
         }
