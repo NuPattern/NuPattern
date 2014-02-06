@@ -72,6 +72,7 @@
     <Reference Include="Microsoft.VisualStudio.TextTemplating.Interfaces.12.0" Condition="'$(TargetVsVersion)' &gt;= '12.0'">
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\12.0\Microsoft.VisualStudio.TextTemplating.Interfaces.12.0.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.TextTemplating.Modeling$(VsxVersionSuffix)">
       <EmbedInteropTypes>False</EmbedInteropTypes>
