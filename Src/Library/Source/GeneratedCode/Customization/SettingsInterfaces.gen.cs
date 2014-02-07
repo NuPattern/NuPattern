@@ -91,7 +91,7 @@ namespace NuPattern.Library.Automation
         global::System.String RawTargetPath { get; set; }
         
         /// <summary>
-        /// An optional arbitrary text value to tag the generated solution item, that is used as an aid in resolving the artifact reference to the solution item.
+        /// An optional delimited text value that will be associated to the reference to the generated solution item, and can be used in distinguishing this reference from others.
         /// </summary>
         global::System.String Tag { get; set; }
     }

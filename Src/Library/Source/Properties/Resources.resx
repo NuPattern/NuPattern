@@ -2514,4 +2514,34 @@ Select the related solution items to delete and press 'OK', or press 'Cancel' to
   <data name="ItemPropertyValueProvider_DisplayName" xml:space="preserve">
     <value>Solution Item Property</value>
   </data>
+  <data name="AssociateDroppedArtifactsCommand_Tag_Description" xml:space="preserve">
+    <value>An optional delimited text value that will be associated to the reference for each dropped solution item, and can be used in distinguishing this reference from others.</value>
+  </data>
+  <data name="AssociateDroppedArtifactsCommand_Tag_DisplayName" xml:space="preserve">
+    <value>Tag</value>
+  </data>
+  <data name="CreateArtifactLinkCommand_Tag_Description" xml:space="preserve">
+    <value>An optional delimited text value that will be associated to the reference for each solution item, and can be used in distinguishing this reference from others.</value>
+  </data>
+  <data name="CreateArtifactLinkCommand_Tag_DisplayName" xml:space="preserve">
+    <value>Tag</value>
+  </data>
+  <data name="CreateElementFromFileCommand_Tag_Description" xml:space="preserve">
+    <value>An optional delimited text value that will be associated to the reference for each solution item, and can be used in distinguishing this reference from others.</value>
+  </data>
+  <data name="CreateElementFromFileCommand_Tag_DisplayName" xml:space="preserve">
+    <value>Tag</value>
+  </data>
+  <data name="DeleteArtifactsCommand_Tag_Description" xml:space="preserve">
+    <value>An optional delimited text value that can be used in filtering which referenced solution items should be deleted.</value>
+  </data>
+  <data name="DeleteArtifactsCommand_Tag_DisplayName" xml:space="preserve">
+    <value>Filter Tag</value>
+  </data>
+  <data name="ReferencedSolutionItemPathValueProvider_Tag_Description" xml:space="preserve">
+    <value>An optional delimited text value that can be used in filtering which referenced solution items should be returned.</value>
+  </data>
+  <data name="ReferencedSolutionItemPathValueProvider_Tag_DisplayName" xml:space="preserve">
+    <value>Filter Tag</value>
+  </data>
 </root>

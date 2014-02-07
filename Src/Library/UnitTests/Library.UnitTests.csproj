@@ -112,6 +112,7 @@
     <Compile Include="Automation\Menu\ImageUriEditorSpec.cs" />
     <Compile Include="Automation\Menu\MenuAutomationSpec.cs" />
     <Compile Include="Automation\Menu\MenuSettingsValidationSpec.cs" />
+    <Compile Include="Commands\AssociateDroppedArtifactsCommandSpec.cs" />
     <Compile Include="Conditions\DragDropHelpersSpec.cs" />
     <Compile Include="Design\ProductElementDictionaryConverterSpec.cs" />
     <Compile Include="Automation\Template\TemplateAutomationSpec.cs" />

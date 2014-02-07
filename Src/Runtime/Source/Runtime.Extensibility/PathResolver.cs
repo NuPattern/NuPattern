@@ -50,7 +50,7 @@ namespace NuPattern.Runtime
         /// <summary>
         /// Character for delimiting artifact link tags
         /// </summary>
-        public const char ReferenceTagDelimiter = ';';
+        public const char ReferenceTagDelimiter = ',';
 
         /// <summary>
         /// Character that resolves an artifact link.
@@ -476,7 +476,7 @@ namespace NuPattern.Runtime
             var tag = GetArtifactReferenceTag(path);
             if (!string.IsNullOrEmpty(tag))
             {
-                tagFilter = r => r.Tag.Split(ReferenceTagDelimiter).Contains(tag, StringComparer.OrdinalIgnoreCase);
+                tagFilter = r => r.ContainsTag(tag);
             }
 
             // filter by tag, and then by solution item constraints

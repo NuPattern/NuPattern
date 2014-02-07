@@ -42,6 +42,9 @@ namespace NuPattern.Runtime.References
         /// <summary>
         /// Adds the specified tag to the <see cref="IReference.Tag"/> if it does not already exist.
         /// </summary>
+        /// <remarks>
+        /// A tag can be any kind of text, in some cases JSON, it is delimitied with the <see cref="PathResolver.ReferenceTagDelimiter"/>
+        /// </remarks>
         public static void AddTag(this IReference reference, string tag)
         {
             Guard.NotNull(()=> reference, reference);
@@ -64,6 +67,23 @@ namespace NuPattern.Runtime.References
                         tags);
                 }
             }
+        }
+
+        /// <summary>
+        /// Determines if the <see cref="IReference.Tag"/> contains any of the delimited values in the specified tag
+        /// </summary>
+        public static bool ContainsTag(this IReference reference, string tag)
+        {
+            if (!string.IsNullOrEmpty(tag))
+            {
+                var tags = tag.Split(PathResolver.ReferenceTagDelimiter);
+
+                var refTags = reference.Tag.Split(PathResolver.ReferenceTagDelimiter);
+
+                return refTags.Intersect(tags, StringComparer.OrdinalIgnoreCase).Any();
+            }
+
+            return false;
         }
     }
 }

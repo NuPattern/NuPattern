@@ -80,7 +80,7 @@
         <!-- Property: Tag -->
         <xsd:attribute name="tag" type="xsd:string" >
           <xsd:annotation>
-            <xsd:documentation>An optional arbitrary text value to tag the generated solution item, that is used as an aid in resolving the artifact reference to the solution item.</xsd:documentation>
+            <xsd:documentation>An optional delimited text value that will be associated to the reference to the generated solution item, and can be used in distinguishing this reference from others.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
       </xsd:extension>

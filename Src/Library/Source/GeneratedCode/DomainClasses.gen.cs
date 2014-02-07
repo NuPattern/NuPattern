@@ -1152,8 +1152,9 @@ namespace NuPattern.Library.Automation
 		
 		/// <summary>
 		/// Gets or sets the value of Tag domain property.
-		/// An optional arbitrary text value to tag the generated solution item, that is
-		/// used as an aid in resolving the artifact reference to the solution item.
+		/// An optional delimited text value that will be associated to the reference to the
+		/// generated solution item, and can be used in distinguishing this reference from
+		/// others.
 		/// </summary>
 		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.TemplateSettings/Tag.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::DescriptionResource("NuPattern.Library.Automation.TemplateSettings/Tag.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]

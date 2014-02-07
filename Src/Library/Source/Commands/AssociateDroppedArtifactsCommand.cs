@@ -7,6 +7,7 @@ using System.Linq;
 using System.Windows;
 using NuPattern.ComponentModel.Design;
 using NuPattern.Diagnostics;
+using NuPattern.Library.Automation;
 using NuPattern.Library.Properties;
 using NuPattern.Library.ValueProviders;
 using NuPattern.Runtime;
@@ -53,6 +54,14 @@ namespace NuPattern.Library.Commands
         public IUriReferenceService UriService { get; set; }
 
         /// <summary>
+        /// Gets or sets an optional tag on the generated reference for each dropped file
+        /// </summary>
+        [DisplayNameResource(@"AssociateDroppedArtifactsCommand_Tag_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"AssociateDroppedArtifactsCommand_Tag_Description", typeof(Resources))]
+        [DefaultValue("")]
+        public string Tag { get; set; }
+
+        /// <summary>
         /// Based on the <see cref="DragArgs"/>, finds the dropped solution 
         /// items in the solution, creates Uris for them using the <see cref="UriService"/> 
         /// and adds those references (if they don't exist already) to the current element.
@@ -67,11 +76,16 @@ namespace NuPattern.Library.Commands
                 ((IEnumerable<string>)new DroppedItemContainerValueProvider { DragArgs = this.DragArgs }.Evaluate())
                 .Select(s => s.ToLowerInvariant()));
 
+            AssociateDroppedSolutionItems(paths);
+        }
+
+        internal void AssociateDroppedSolutionItems(HashSet<string> paths)
+        {
             if (paths.Count == 0)
                 return;
 
             var existingUris = new HashSet<string>(SolutionArtifactLinkReference
-                .GetReferences(this.CurrentElement)
+                .GetReferenceValues(this.CurrentElement)
                 .Select(u => u.ToString().ToLowerInvariant()));
 
             var items = this.Solution.Find(i =>
@@ -82,7 +96,20 @@ namespace NuPattern.Library.Commands
             {
                 var uri = UriService.CreateUri(item);
                 if (!existingUris.Contains(uri.ToString().ToLowerInvariant()))
-                    ReferenceKindProvider<SolutionArtifactLinkReference, Uri>.AddReference(CurrentElement, uri);
+                {
+                    // add new reference with tag
+                    ReferenceKindProvider<SolutionArtifactLinkReference, Uri>.AddReference(CurrentElement, uri).Tag =
+                        this.Tag ?? string.Empty;
+                }
+                else
+                {
+                    // Update tag on reference (add if not already exist)
+                    var reference = ReferenceKindProvider<SolutionArtifactLinkReference, Uri>.GetReference(CurrentElement, uri);
+                    if (reference != null)
+                    {
+                        reference.AddTag(this.Tag);
+                    }
+                }
             }
         }
     }

@@ -214,7 +214,7 @@
     <comment>DisplayName for DomainProperty &apos;RawTargetPath&apos; on DomainClass &apos;TemplateSettings&apos;</comment>
   </data>
   <data name="NuPattern.Library.Automation.TemplateSettings/Tag.Description" xml:space="preserve">
-    <value>An optional arbitrary text value to tag the generated solution item, that is used as an aid in resolving the artifact reference to the solution item.</value>
+    <value>An optional delimited text value that will be associated to the reference to the generated solution item, and can be used in distinguishing this reference from others.</value>
     <comment>Description for DomainProperty &apos;Tag&apos; on DomainClass &apos;TemplateSettings&apos;</comment>
   </data>
   <data name="NuPattern.Library.Automation.TemplateSettings/Tag.DisplayName" xml:space="preserve">

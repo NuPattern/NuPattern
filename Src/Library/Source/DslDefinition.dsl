@@ -79,7 +79,7 @@
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="7b2582b2-ce44-470b-b179-a2ab92fd0e3b" Description="An optional arbitrary text value to tag the generated solution item, that is used as an aid in resolving the artifact reference to the solution item." Name="Tag" DisplayName="Tag">
+        <DomainProperty Id="7b2582b2-ce44-470b-b179-a2ab92fd0e3b" Description="An optional delimited text value that will be associated to the reference to the generated solution item, and can be used in distinguishing this reference from others." Name="Tag" DisplayName="Tag">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>

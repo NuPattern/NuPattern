@@ -710,6 +710,24 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An optional delimited text value that will be associated to the reference for each dropped solution item, and can be used in distinguishing this reference from others..
+        /// </summary>
+        internal static string AssociateDroppedArtifactsCommand_Tag_Description {
+            get {
+                return ResourceManager.GetString("AssociateDroppedArtifactsCommand_Tag_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tag.
+        /// </summary>
+        internal static string AssociateDroppedArtifactsCommand_Tag_DisplayName {
+            get {
+                return ResourceManager.GetString("AssociateDroppedArtifactsCommand_Tag_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Executing association of dropped solution items for current element &apos;{0}&apos;..
         /// </summary>
         internal static string AssociateDroppedArtifactsCommand_TraceInitial {
@@ -1152,6 +1170,24 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An optional delimited text value that will be associated to the reference for each solution item, and can be used in distinguishing this reference from others..
+        /// </summary>
+        internal static string CreateArtifactLinkCommand_Tag_Description {
+            get {
+                return ResourceManager.GetString("CreateArtifactLinkCommand_Tag_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tag.
+        /// </summary>
+        internal static string CreateArtifactLinkCommand_Tag_DisplayName {
+            get {
+                return ResourceManager.GetString("CreateArtifactLinkCommand_Tag_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Creating solution item reference on current element &apos;{0}&apos; for item &apos;{1}&apos;..
         /// </summary>
         internal static string CreateArtifactLinkCommand_TraceCreateLink {
@@ -1292,6 +1328,24 @@ namespace NuPattern.Library.Properties {
         internal static string CreateElementFromFileCommand_SyncName_DisplayName {
             get {
                 return ResourceManager.GetString("CreateElementFromFileCommand_SyncName_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An optional delimited text value that will be associated to the reference for each solution item, and can be used in distinguishing this reference from others..
+        /// </summary>
+        internal static string CreateElementFromFileCommand_Tag_Description {
+            get {
+                return ResourceManager.GetString("CreateElementFromFileCommand_Tag_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tag.
+        /// </summary>
+        internal static string CreateElementFromFileCommand_Tag_DisplayName {
+            get {
+                return ResourceManager.GetString("CreateElementFromFileCommand_Tag_DisplayName", resourceCulture);
             }
         }
         
@@ -1645,6 +1699,24 @@ namespace NuPattern.Library.Properties {
         internal static string DeleteArtifactsCommand_SelectorTitle {
             get {
                 return ResourceManager.GetString("DeleteArtifactsCommand_SelectorTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An optional delimited text value that can be used in filtering which referenced solution items should be deleted..
+        /// </summary>
+        internal static string DeleteArtifactsCommand_Tag_Description {
+            get {
+                return ResourceManager.GetString("DeleteArtifactsCommand_Tag_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filter Tag.
+        /// </summary>
+        internal static string DeleteArtifactsCommand_Tag_DisplayName {
+            get {
+                return ResourceManager.GetString("DeleteArtifactsCommand_Tag_DisplayName", resourceCulture);
             }
         }
         
@@ -4668,6 +4740,24 @@ namespace NuPattern.Library.Properties {
         internal static string ReferencedSolutionItemPathValueProvider_Extension_DisplayName {
             get {
                 return ResourceManager.GetString("ReferencedSolutionItemPathValueProvider_Extension_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An optional delimited text value that can be used in filtering which referenced solution items should be returned..
+        /// </summary>
+        internal static string ReferencedSolutionItemPathValueProvider_Tag_Description {
+            get {
+                return ResourceManager.GetString("ReferencedSolutionItemPathValueProvider_Tag_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filter Tag.
+        /// </summary>
+        internal static string ReferencedSolutionItemPathValueProvider_Tag_DisplayName {
+            get {
+                return ResourceManager.GetString("ReferencedSolutionItemPathValueProvider_Tag_DisplayName", resourceCulture);
             }
         }
         

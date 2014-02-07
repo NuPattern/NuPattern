@@ -326,7 +326,7 @@ namespace NuPattern.Runtime.UnitTests
                                             Mock.Of<IReference>(r => 
                                                 r.Kind == ReferenceKindConstants.SolutionItem && 
                                                 r.Value == "solution://root/Bar" &&
-                                                r.Tag == "bar;bar5;bar8"),
+                                                r.Tag == "bar,bar5,bar8"),
                                         });
                 parent.Setup(p => p.Parent).Returns(ancestor.Object);
                 parent.Setup(p => p.Root).Returns(this.root);
