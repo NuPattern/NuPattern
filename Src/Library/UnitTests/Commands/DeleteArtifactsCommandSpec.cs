@@ -81,7 +81,18 @@ namespace NuPattern.Library.UnitTests.Commands
                 this.uriService = new Mock<IUriReferenceService>();
                 this.uriService.Setup(us => us.ResolveUri<IItemContainer>(It.IsAny<Uri>())).Returns(solutionItem.Object);
                 this.currentElement = new Mock<IProductElement>();
-                this.currentElement.Setup(ce => ce.References).Returns(new[] { Mock.Of<IReference>(re => re.Kind == typeof(SolutionArtifactLinkReference).FullName && re.Value == "solution://foo") });
+
+                this.currentElement.Setup(ce => ce.References).Returns(new[]
+                {
+                    Mock.Of<IReference>(re => 
+                        re.Kind == typeof(SolutionArtifactLinkReference).FullName 
+                        && re.Value == "solution://foo"
+                        && re.Tag =="foo"),
+                    Mock.Of<IReference>(re => 
+                        re.Kind == typeof(SolutionArtifactLinkReference).FullName 
+                        && re.Value == "solution://bar"
+                        && re.Tag =="bar")
+                });
 
                 this.command = new DeleteArtifactsCommand
                 {
@@ -94,13 +105,38 @@ namespace NuPattern.Library.UnitTests.Commands
             }
 
             [TestMethod, TestCategory("Unit")]
-            public void ThenDeletesSolutionItem()
+            public void ThenDeletesAllSolutionItems()
             {
                 this.command.Execute();
 
                 this.currentElement.VerifyGet(ce => ce.References, Times.AtLeastOnce());
                 this.uriService.Verify(us => us.ResolveUri<IItemContainer>(It.Is<Uri>(x => x.OriginalString == "solution://foo")), Times.AtLeastOnce());
-                this.projectItem.Verify(pe => pe.Delete(), Times.Once());
+                this.uriService.Verify(us => us.ResolveUri<IItemContainer>(It.Is<Uri>(x => x.OriginalString == "solution://bar")), Times.AtLeastOnce());
+                this.projectItem.Verify(pe => pe.Delete(), Times.Exactly(2));
+            }
+
+            [TestMethod, TestCategory("Unit")]
+            public void WhenFilterTagButNotMatchReference_ThenDeletesNoSolutionItems()
+            {
+                this.command.Tag = "foo2";
+                this.command.Execute();
+
+                this.currentElement.VerifyGet(ce => ce.References, Times.AtLeastOnce());
+                this.uriService.Verify(us => us.ResolveUri<IItemContainer>(It.Is<Uri>(x => x.OriginalString == "solution://foo")), Times.Never());
+                this.uriService.Verify(us => us.ResolveUri<IItemContainer>(It.Is<Uri>(x => x.OriginalString == "solution://bar")), Times.Never());
+                this.projectItem.Verify(pe => pe.Delete(), Times.Never());
+            }
+
+            [TestMethod, TestCategory("Unit")]
+            public void WhenFilterTagAndMatchReference_ThenDeletesSomeSolutionItems()
+            {
+                this.command.Tag = "foo,bar";
+                this.command.Execute();
+
+                this.currentElement.VerifyGet(ce => ce.References, Times.AtLeastOnce());
+                this.uriService.Verify(us => us.ResolveUri<IItemContainer>(It.Is<Uri>(x => x.OriginalString == "solution://foo")), Times.AtLeastOnce());
+                this.uriService.Verify(us => us.ResolveUri<IItemContainer>(It.Is<Uri>(x => x.OriginalString == "solution://bar")), Times.AtLeastOnce());
+                this.projectItem.Verify(pe => pe.Delete(), Times.Exactly(2));
             }
         }
 

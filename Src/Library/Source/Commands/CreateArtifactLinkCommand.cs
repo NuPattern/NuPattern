@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -53,6 +54,14 @@ namespace NuPattern.Library.Commands
         public virtual IEnumerable<string> Items { get; set; }
 
         /// <summary>
+        /// Gets or sets an optional tag on the generated reference for each link
+        /// </summary>
+        [DisplayNameResource(@"CreateArtifactLinkCommand_Tag_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"CreateArtifactLinkCommand_Tag_Description", typeof(Resources))]
+        [DefaultValue("")]
+        public string Tag { get; set; }
+
+        /// <summary>
         /// Executes the command linking the Items to the owner element.
         /// </summary>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1308:NormalizeStringsToUppercase")]
@@ -68,7 +77,8 @@ namespace NuPattern.Library.Commands
                 tracer.Info(
                     Resources.CreateArtifactLinkCommand_TraceCreateLink, this.CurrentElement.InstanceName, item.GetLogicalPath());
 
-                SolutionArtifactLinkReference.AddReference(this.CurrentElement, UriService.CreateUri(item));
+                SolutionArtifactLinkReference.AddReference(this.CurrentElement, UriService.CreateUri(item))
+                    .Tag = this.Tag ?? string.Empty;
             }
         }
     }

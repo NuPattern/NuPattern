@@ -79,6 +79,14 @@ namespace NuPattern.Library.Commands
         public DeleteAction Action { get; set; }
 
         /// <summary>
+        /// Gets or sets an optional tag to filter which solution items get deleted
+        /// </summary>
+        [DisplayNameResource(@"DeleteArtifactsCommand_Tag_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"DeleteArtifactsCommand_Tag_Description", typeof(Resources))]
+        [DefaultValue("")]
+        public string Tag { get; set; }
+
+        /// <summary>
         /// Gets or sets the solution selector.
         /// </summary>
         [Required]
@@ -108,8 +116,14 @@ namespace NuPattern.Library.Commands
             tracer.Info(
                 Resources.DeleteArtifactsCommand_TraceInitial, this.CurrentElement.InstanceName, this.Action);
 
+            var tagFilter = new Func<IReference, bool>(x => true);
+            if (!string.IsNullOrEmpty(this.Tag))
+            {
+                tagFilter = r => r.ContainsTag(this.Tag);
+            }
+
             // Verify whether there are any (valid) artifact links
-            var artifactLinks = SolutionArtifactLinkReference.GetResolvedReferences(this.CurrentElement, this.UriReferenceService);
+            var artifactLinks = SolutionArtifactLinkReference.GetResolvedReferences(this.CurrentElement, this.UriReferenceService, tagFilter);
             if (artifactLinks == null || !artifactLinks.Any())
             {
                 tracer.Info(

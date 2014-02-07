@@ -72,7 +72,9 @@ namespace NuPattern.Library.ValueProviders
             tracer.Info(
                 Resources.VsProjectPropertyValueProvider_TraceInitial, this.CurrentElement.InstanceName, this.ProjectPath);
 
-            var resolver = new PathResolver(this.CurrentElement, this.UriService, path: (!String.IsNullOrEmpty(this.ProjectPath)) ? this.ProjectPath : String.Empty);
+            // Ensure the path resolves to some solution item
+            var resolver = new PathResolver(this.CurrentElement, this.UriService, 
+                (!String.IsNullOrEmpty(this.ProjectPath)) ? this.ProjectPath : String.Empty);
             if (!resolver.TryResolve(i => i.Kind == ItemKind.Project))
             {
                 tracer.Error(
@@ -81,8 +83,8 @@ namespace NuPattern.Library.ValueProviders
                 return string.Empty;
             }
 
+            // Verify project still item exists
             var item = this.Solution.Find(resolver.Path).FirstOrDefault();
-
             if (item == null)
             {
                 tracer.Warn(

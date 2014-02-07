@@ -46,6 +46,14 @@ namespace NuPattern.Library.Commands
         }
 
         /// <summary>
+        /// Gets or sets an optional tag on the generated reference for each file
+        /// </summary>
+        [DisplayNameResource(@"CreateElementFromFileCommand_Tag_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"CreateElementFromFileCommand_Tag_Description", typeof(Resources))]
+        [DefaultValue("")]
+        public string Tag { get; set; }
+
+        /// <summary>
         /// Gets the identifiers of the items.
         /// </summary>
         /// <returns></returns>
@@ -100,10 +108,12 @@ namespace NuPattern.Library.Commands
                     Resources.CreateElementFromFileCommand_TraceAddingReference, this.CurrentElement.InstanceName, childElement.InstanceName, solutionItem.GetLogicalPath());
 
                 // Create artifact link
-                SolutionArtifactLinkReference.AddReference(childElement, this.UriService.CreateUri(solutionItem)).Tag = BindingSerializer.Serialize(new ReferenceTag
+                var reference = SolutionArtifactLinkReference.AddReference(childElement, this.UriService.CreateUri(solutionItem));
+                reference.AddTag(this.Tag);
+                reference.AddTag(BindingSerializer.Serialize(new ReferenceTag
                 {
                     SyncNames = this.SyncName
-                });
+                }));
             }
             else
             {
