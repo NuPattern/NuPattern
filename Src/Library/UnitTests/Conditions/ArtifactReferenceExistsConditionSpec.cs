@@ -25,7 +25,7 @@ namespace NuPattern.Library.UnitTests.Conditions
             [TestMethod, TestCategory("Unit")]
             public void WhenNoReferencesExist_ThenEvaluateReturnsFalse()
             {
-                Mock<IProductElement> mockCurrentElement = new Mock<IProductElement>();
+                var mockCurrentElement = new Mock<IProductElement>();
                 this.condition.CurrentElement = mockCurrentElement.Object;
 
                 Assert.False(this.condition.Evaluate());
@@ -34,11 +34,11 @@ namespace NuPattern.Library.UnitTests.Conditions
             [TestMethod, TestCategory("Unit")]
             public void WhenNoArtifactReferencesExist_ThenEvaluateReturnsFalse()
             {
-                Mock<IReference> fooReference = new Mock<IReference>();
+                var fooReference = new Mock<IReference>();
                 fooReference.SetupGet(r => r.Kind).Returns("foo");
                 fooReference.SetupGet(r => r.Value).Returns("unfolded://");
 
-                Mock<IProductElement> mockCurrentElement = new Mock<IProductElement>();
+                var mockCurrentElement = new Mock<IProductElement>();
                 mockCurrentElement.Setup(owner => owner.References).Returns(new[] { fooReference.Object });
                 this.condition.CurrentElement = mockCurrentElement.Object;
 
@@ -48,13 +48,44 @@ namespace NuPattern.Library.UnitTests.Conditions
             [TestMethod, TestCategory("Unit")]
             public void WhenArtifactReferencesExist_ThenEvaluateReturnsTrue()
             {
-                Mock<IReference> generatedReference = new Mock<IReference>();
+                var generatedReference = new Mock<IReference>();
                 generatedReference.SetupGet(r => r.Kind).Returns(ReferenceKindConstants.SolutionItem);
                 generatedReference.SetupGet(r => r.Value).Returns("generated://");
 
-                Mock<IProductElement> mockCurrentElement = new Mock<IProductElement>();
+                var mockCurrentElement = new Mock<IProductElement>();
                 mockCurrentElement.Setup(owner => owner.References).Returns(new[] { generatedReference.Object });
                 this.condition.CurrentElement = mockCurrentElement.Object;
+
+                Assert.True(this.condition.Evaluate());
+            }
+
+            [TestMethod, TestCategory("Unit")]
+            public void WhenArtifactReferencesExistWithNotMatchingTag_ThenEvaluateReturnsFalse()
+            {
+                var generatedReference = new Mock<IReference>();
+                generatedReference.SetupGet(r => r.Kind).Returns(ReferenceKindConstants.SolutionItem);
+                generatedReference.SetupGet(r => r.Value).Returns("generated://");
+
+                var mockCurrentElement = new Mock<IProductElement>();
+                mockCurrentElement.Setup(owner => owner.References).Returns(new[] { generatedReference.Object });
+                this.condition.CurrentElement = mockCurrentElement.Object;
+                this.condition.Tag = "tag1";
+
+                Assert.False(this.condition.Evaluate());
+            }
+
+            [TestMethod, TestCategory("Unit")]
+            public void WhenArtifactReferencesExistWithTMatchingTag_ThenEvaluateReturnsFalse()
+            {
+                var generatedReference = new Mock<IReference>();
+                generatedReference.SetupGet(r => r.Kind).Returns(ReferenceKindConstants.SolutionItem);
+                generatedReference.SetupGet(r => r.Value).Returns("generated://");
+                generatedReference.SetupGet(r => r.Tag).Returns("tag1");
+
+                var mockCurrentElement = new Mock<IProductElement>();
+                mockCurrentElement.Setup(owner => owner.References).Returns(new[] { generatedReference.Object });
+                this.condition.CurrentElement = mockCurrentElement.Object;
+                this.condition.Tag = "tag1";
 
                 Assert.True(this.condition.Evaluate());
             }

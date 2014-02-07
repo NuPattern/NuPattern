@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -54,6 +55,14 @@ namespace NuPattern.Library.ValueProviders
         }
 
         /// <summary>
+        /// Gets or sets an optional tag to filter which solution items get considered
+        /// </summary>
+        [DisplayNameResource(@"ReferencedSolutionItemPathValueProvider_Tag_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"ReferencedSolutionItemPathValueProvider_Tag_Description", typeof(Resources))]
+        [DefaultValue("")]
+        public string Tag { get; set; }
+
+        /// <summary>
         /// Gets the first artifact link of given file extension.
         /// </summary>
         public override object Evaluate()
@@ -71,9 +80,15 @@ namespace NuPattern.Library.ValueProviders
                 extension = @"." + extension;
             }
 
+            var tagFilter = new Func<IReference, bool>(x => true);
+            if (!string.IsNullOrEmpty(this.Tag))
+            {
+                tagFilter = r => r.ContainsTag(this.Tag);
+            }
+
             var item =
-                SolutionArtifactLinkReference.GetResolvedReferences(this.CurrentElement, this.UriReferenceService).FirstOrDefault(
-                    r => r.PhysicalPath.EndsWith(extension, StringComparison.OrdinalIgnoreCase));
+                SolutionArtifactLinkReference.GetResolvedReferences(this.CurrentElement, this.UriReferenceService, tagFilter)
+                .FirstOrDefault(r => r.PhysicalPath.EndsWith(extension, StringComparison.OrdinalIgnoreCase));
             if (item != null)
             {
                 var result = item.PhysicalPath;

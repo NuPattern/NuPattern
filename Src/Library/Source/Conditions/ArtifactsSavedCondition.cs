@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -37,6 +38,14 @@ namespace NuPattern.Library.Conditions
         public IUriReferenceService UriReferenceService { get; set; }
 
         /// <summary>
+        /// Gets or sets an optional tag to filter which solution items get considered
+        /// </summary>
+        [DisplayNameResource(@"ArtifactsSavedCondition_Tag_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"ArtifactsSavedCondition_Tag_Description", typeof(Resources))]
+        [DefaultValue("")]
+        public string Tag { get; set; }
+
+        /// <summary>
         /// Evaluates the condition by verifying the existence of any artifact references.
         /// </summary>
         public override bool Evaluate()
@@ -46,7 +55,16 @@ namespace NuPattern.Library.Conditions
             tracer.Info(
                 Resources.ArtifactsSavedCondition_TraceInitial, this.CurrentElement.InstanceName);
 
-            var solutionItems = SolutionArtifactLinkReference.GetResolvedReferences(this.CurrentElement, this.UriReferenceService).ToList();
+            var tagFilter = new Func<IReference, bool>(x => true);
+            if (!string.IsNullOrEmpty(this.Tag))
+            {
+                tagFilter = r => r.ContainsTag(this.Tag);
+            }
+
+            var solutionItems =
+                SolutionArtifactLinkReference.GetResolvedReferences(this.CurrentElement, this.UriReferenceService,
+                    tagFilter)
+                    .ToList();
             foreach (IItemContainer solutionItem in solutionItems)
             {
                 // Filter for items only

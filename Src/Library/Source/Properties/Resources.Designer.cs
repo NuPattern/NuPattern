@@ -566,6 +566,24 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An optional delimited text value that can be used in filtering which referenced solution items should be evaluated..
+        /// </summary>
+        internal static string ArtifactReferenceExistsCondition_Tag_Description {
+            get {
+                return ResourceManager.GetString("ArtifactReferenceExistsCondition_Tag_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filter Tag.
+        /// </summary>
+        internal static string ArtifactReferenceExistsCondition_Tag_DisplayName {
+            get {
+                return ResourceManager.GetString("ArtifactReferenceExistsCondition_Tag_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Determined if the current element &apos;{0}&apos; has any solution artifact references, as &apos;{1}&apos;.
         /// </summary>
         internal static string ArtifactReferenceExistsCondition_TraceEvaluation {
@@ -598,6 +616,24 @@ namespace NuPattern.Library.Properties {
         internal static string ArtifactsSavedCondition_DisplayName {
             get {
                 return ResourceManager.GetString("ArtifactsSavedCondition_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An optional delimited text value that can be used in filtering which referenced solution items should be evaluated..
+        /// </summary>
+        internal static string ArtifactsSavedCondition_Tag_Description {
+            get {
+                return ResourceManager.GetString("ArtifactsSavedCondition_Tag_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filter Tag.
+        /// </summary>
+        internal static string ArtifactsSavedCondition_Tag_DisplayName {
+            get {
+                return ResourceManager.GetString("ArtifactsSavedCondition_Tag_DisplayName", resourceCulture);
             }
         }
         
@@ -692,7 +728,7 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Associates the dropped solution items with the current element, by adding artifact links to those items to the current element..
+        ///   Looks up a localized string similar to Associates the dropped solution items with the current element, by adding artifact link references to those items to the current element..
         /// </summary>
         internal static string AssociateDroppedArtifactsCommand_Description {
             get {
@@ -1134,7 +1170,7 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Creates solution item artifact links for each of the given Items..
+        ///   Looks up a localized string similar to Creates solution item artifact links for each of the items in the Items property..
         /// </summary>
         internal static string CreateArtifactLinkCommand_Description {
             get {
@@ -2221,6 +2257,24 @@ namespace NuPattern.Library.Properties {
         internal static string ElementReferenceExistsCondition_Kind_DisplayName {
             get {
                 return ResourceManager.GetString("ElementReferenceExistsCondition_Kind_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An optional delimited text value that can be used in filtering which references should be evaluated..
+        /// </summary>
+        internal static string ElementReferenceExistsCondition_Tag_Description {
+            get {
+                return ResourceManager.GetString("ElementReferenceExistsCondition_Tag_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filter Tag.
+        /// </summary>
+        internal static string ElementReferenceExistsCondition_Tag_DisplayName {
+            get {
+                return ResourceManager.GetString("ElementReferenceExistsCondition_Tag_DisplayName", resourceCulture);
             }
         }
         
@@ -4708,7 +4762,7 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Retrieves the full physical path to the first referenced solution item of the current element with the given extension..
+        ///   Looks up a localized string similar to Retrieves the full physical path to the first referenced solution item of the current element with the given extension. References to solution items can be filtered using the Filter Tag..
         /// </summary>
         internal static string ReferencedSolutionItemPathValueProvider_Description {
             get {
@@ -5019,6 +5073,24 @@ namespace NuPattern.Library.Properties {
         internal static string SaveArtifactCommand_DisplayName {
             get {
                 return ResourceManager.GetString("SaveArtifactCommand_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An optional delimited text value that can be used in filtering which referenced solution items should be saved..
+        /// </summary>
+        internal static string SaveArtifactCommand_Tag_Description {
+            get {
+                return ResourceManager.GetString("SaveArtifactCommand_Tag_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filter Tag.
+        /// </summary>
+        internal static string SaveArtifactCommand_Tag_DisplayName {
+            get {
+                return ResourceManager.GetString("SaveArtifactCommand_Tag_DisplayName", resourceCulture);
             }
         }
         

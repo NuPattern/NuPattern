@@ -1209,7 +1209,7 @@ Please open and make a note of the updates that were automatically made to the *
     <value>Drag/Dropped Items from Solution Explorer</value>
   </data>
   <data name="CreateArtifactLinkCommand_Description" xml:space="preserve">
-    <value>Creates solution item artifact links for each of the given Items.</value>
+    <value>Creates solution item artifact links for each of the items in the Items property.</value>
   </data>
   <data name="CreateArtifactLinkCommand_DisplayName" xml:space="preserve">
     <value>Creates Artifact Links to Solution Items</value>
@@ -1539,7 +1539,7 @@ Please open and make a note of the updates that were automatically made to the *
     <value>Adding solution item reference to first unfolded solution item for the current element '{0}'</value>
   </data>
   <data name="ReferencedSolutionItemPathValueProvider_Description" xml:space="preserve">
-    <value>Retrieves the full physical path to the first referenced solution item of the current element with the given extension.</value>
+    <value>Retrieves the full physical path to the first referenced solution item of the current element with the given extension. References to solution items can be filtered using the Filter Tag.</value>
   </data>
   <data name="ReferencedSolutionItemPathValueProvider_DisplayName" xml:space="preserve">
     <value>Path of First Related Solution Item</value>
@@ -2455,7 +2455,7 @@ Select the related solution items to delete and press 'OK', or press 'Cancel' to
     <value>Determining if dragged data contains any projects, with extensions '{0}'</value>
   </data>
   <data name="AssociateDroppedArtifactsCommand_Description" xml:space="preserve">
-    <value>Associates the dropped solution items with the current element, by adding artifact links to those items to the current element.</value>
+    <value>Associates the dropped solution items with the current element, by adding artifact link references to those items to the current element.</value>
   </data>
   <data name="AssociateDroppedArtifactsCommand_DisplayName" xml:space="preserve">
     <value>Associate Dropped Solution Items with Element</value>
@@ -2542,6 +2542,30 @@ Select the related solution items to delete and press 'OK', or press 'Cancel' to
     <value>An optional delimited text value that can be used in filtering which referenced solution items should be returned.</value>
   </data>
   <data name="ReferencedSolutionItemPathValueProvider_Tag_DisplayName" xml:space="preserve">
+    <value>Filter Tag</value>
+  </data>
+  <data name="SaveArtifactCommand_Tag_Description" xml:space="preserve">
+    <value>An optional delimited text value that can be used in filtering which referenced solution items should be saved.</value>
+  </data>
+  <data name="SaveArtifactCommand_Tag_DisplayName" xml:space="preserve">
+    <value>Filter Tag</value>
+  </data>
+  <data name="ArtifactReferenceExistsCondition_Tag_Description" xml:space="preserve">
+    <value>An optional delimited text value that can be used in filtering which referenced solution items should be evaluated.</value>
+  </data>
+  <data name="ArtifactReferenceExistsCondition_Tag_DisplayName" xml:space="preserve">
+    <value>Filter Tag</value>
+  </data>
+  <data name="ElementReferenceExistsCondition_Tag_Description" xml:space="preserve">
+    <value>An optional delimited text value that can be used in filtering which references should be evaluated.</value>
+  </data>
+  <data name="ElementReferenceExistsCondition_Tag_DisplayName" xml:space="preserve">
+    <value>Filter Tag</value>
+  </data>
+  <data name="ArtifactsSavedCondition_Tag_Description" xml:space="preserve">
+    <value>An optional delimited text value that can be used in filtering which referenced solution items should be evaluated.</value>
+  </data>
+  <data name="ArtifactsSavedCondition_Tag_DisplayName" xml:space="preserve">
     <value>Filter Tag</value>
   </data>
 </root>

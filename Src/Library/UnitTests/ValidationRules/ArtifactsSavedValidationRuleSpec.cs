@@ -7,7 +7,7 @@ using NuPattern.Runtime;
 using NuPattern.Runtime.References;
 using NuPattern.VisualStudio.Solution;
 
-namespace NuPattern.Library.UnitTests
+namespace NuPattern.Library.UnitTests.ValidationRules
 {
     [TestClass]
     public class ArtifactsSavedValidationRuleSpec

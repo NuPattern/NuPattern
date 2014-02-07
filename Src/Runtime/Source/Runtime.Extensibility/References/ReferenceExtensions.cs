@@ -74,7 +74,7 @@ namespace NuPattern.Runtime.References
         /// </summary>
         public static bool ContainsTag(this IReference reference, string tag)
         {
-            if (!string.IsNullOrEmpty(tag))
+            if (!string.IsNullOrEmpty(tag) && !string.IsNullOrEmpty(reference.Tag))
             {
                 var tags = tag.Split(PathResolver.ReferenceTagDelimiter);
 

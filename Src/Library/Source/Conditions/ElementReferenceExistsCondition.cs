@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -6,6 +7,7 @@ using NuPattern.ComponentModel.Design;
 using NuPattern.Diagnostics;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;
+using NuPattern.Runtime.References;
 
 namespace NuPattern.Library.Conditions
 {
@@ -36,6 +38,14 @@ namespace NuPattern.Library.Conditions
         public IProductElement CurrentElement { get; set; }
 
         /// <summary>
+        /// Gets or sets an optional tag to filter which solution items get considered
+        /// </summary>
+        [DisplayNameResource(@"ElementReferenceExistsCondition_Tag_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"ElementReferenceExistsCondition_Tag_Description", typeof(Resources))]
+        [DefaultValue("")]
+        public string Tag { get; set; }
+
+        /// <summary>
         /// Evaluates the condition by verifying the existance of the reference of the given kind.
         /// </summary>
         public override bool Evaluate()
@@ -45,7 +55,13 @@ namespace NuPattern.Library.Conditions
             tracer.Info(
                 Resources.ElementReferenceExistsCondition_TraceInitial, this.CurrentElement.InstanceName, this.Kind);
 
-            var result = (this.CurrentElement.References.FirstOrDefault(reference => reference.Kind.Equals(this.Kind, StringComparison.OrdinalIgnoreCase)) != null);
+            // Get the first reference
+            var reference = this.CurrentElement.References
+                .FirstOrDefault(r => 
+                    r.Kind.Equals(this.Kind, StringComparison.OrdinalIgnoreCase)
+                    && (!string.IsNullOrEmpty(this.Tag)) ? r.ContainsTag(this.Tag) : true);
+
+            var result = (reference != null);
 
             tracer.Info(
                 Resources.ElementReferenceExistsCondition_TraceEvaluation, this.CurrentElement.InstanceName, this.Kind, result);

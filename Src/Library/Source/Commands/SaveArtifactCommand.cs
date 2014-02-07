@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics.CodeAnalysis;
@@ -38,6 +39,14 @@ namespace NuPattern.Library.Commands
         public IUriReferenceService UriReferenceService { get; set; }
 
         /// <summary>
+        /// Gets or sets an optional tag to filter which solution items get deleted
+        /// </summary>
+        [DisplayNameResource(@"SaveArtifactCommand_Tag_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"SaveArtifactCommand_Tag_Description", typeof(Resources))]
+        [DefaultValue("")]
+        public string Tag { get; set; }
+
+        /// <summary>
         /// Executes the command.
         /// </summary>
         [SuppressMessage("Microsoft.Design", "CA1031:DoNotCatchGeneralExceptionTypes")]
@@ -48,7 +57,13 @@ namespace NuPattern.Library.Commands
             tracer.Info(
                 Resources.SaveArtifactCommand_TraceInitial, this, CurrentElement.InstanceName);
 
-            var items = SolutionArtifactLinkReference.GetResolvedReferences(this.CurrentElement, this.UriReferenceService)
+            var tagFilter = new Func<IReference, bool>(x => true);
+            if (!string.IsNullOrEmpty(this.Tag))
+            {
+                tagFilter = r => r.ContainsTag(this.Tag);
+            }
+
+            var items = SolutionArtifactLinkReference.GetResolvedReferences(this.CurrentElement, this.UriReferenceService, tagFilter)
                 .OfType<IItem>().ToList();
             foreach (var item in items)
             {

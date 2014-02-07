@@ -157,6 +157,7 @@
     <Compile Include="ValidationRules\ArtifactsSavedValidationRuleSpec.cs" />
     <Compile Include="ValidationRules\CardinalityValidationRuleSpec.cs" />
     <Compile Include="ValidationRules\PropertyStringValueForbiddenCharsValidationRuleSpec.cs" />
+    <Compile Include="ValueProviders\ReferencedSolutionItemPathValueProviderSpec.cs" />
     <Compile Include="ValueProviders\RemoveForbiddenCharsExpressionValueProvider.cs" />
     <Compile Include="ValueProviders\RandomGuidValueProvider.cs" />
     <Compile Include="ValueProviders\RegisteredMachineUserValueProviderSpec.cs" />
