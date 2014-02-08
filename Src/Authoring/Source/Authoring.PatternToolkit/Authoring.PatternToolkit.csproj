@@ -144,10 +144,6 @@
       <IncludeInVSIXAs>GuidanceWorkflow.t4</IncludeInVSIXAs>
       <ItemGuid>0891b2f7-6a6a-4a7f-8d9d-7320d1884b1c</ItemGuid>
     </Content>
-    <Content Include="..\..\..\..\Docs\Release Notes.docx">
-      <Link>Release Notes.docx</Link>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Assets\Templates\Text\VsixManifest\source.extension.gen.t4">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

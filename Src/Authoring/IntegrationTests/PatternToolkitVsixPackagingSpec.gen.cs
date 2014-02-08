@@ -173,7 +173,6 @@ namespace NuPattern.Authoring.IntegrationTests
                             //"[Content_Types].xml",
                             "LICENSE.txt",
                             "redist.txt",
-                            "Release%20Notes.docx",
 
                             //Authoring Assemblies
                             "NuPattern.Authoring.Guidance.dll",
