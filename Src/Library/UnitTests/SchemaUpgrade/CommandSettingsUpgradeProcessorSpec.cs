@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NuPattern.Library.SchemaUpgrade;
 using NuPattern.Runtime.Bindings;
 
-namespace NuPattern.Library.UnitTests.Migration
+namespace NuPattern.Library.UnitTests.SchemaUpgrade
 {
     [TestClass]
     public class CommandSettingsUpgradeProcessorSpec

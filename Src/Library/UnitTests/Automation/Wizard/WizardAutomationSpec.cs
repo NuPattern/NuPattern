@@ -8,7 +8,7 @@ using NuPattern.Presentation;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Composition;
 
-namespace NuPattern.Library.IntegrationTests
+namespace NuPattern.Library.UnitTests.Automation.Wizard
 {
     public class WizardAutomationSpec
     {

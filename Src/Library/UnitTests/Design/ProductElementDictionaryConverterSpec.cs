@@ -10,7 +10,7 @@ using NuPattern.Modeling;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Store;
 
-namespace NuPattern.Library.UnitTests
+namespace NuPattern.Library.UnitTests.Design
 {
     /// <summary>
     /// Test Data for this class:

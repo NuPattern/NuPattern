@@ -4,7 +4,7 @@ using NuPattern.Library.Commands;
 using NuPattern.Runtime;
 using NuPattern.VisualStudio.Solution;
 
-namespace NuPattern.Library.UnitTests.Commands.Helpers
+namespace NuPattern.Library.UnitTests.Commands
 {
     [TestClass]
     public class CreateElementFromDroppedWindowsFileCommandSpec

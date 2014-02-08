@@ -5,7 +5,7 @@ using NuPattern.Library.Design;
 using NuPattern.Runtime;
 using NuPattern.VisualStudio.Solution;
 
-namespace NuPattern.Library.UnitTests
+namespace NuPattern.Library.UnitTests.TypeEditors
 {
     public class TextTemplateUriEditorSpec
     {

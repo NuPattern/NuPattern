@@ -9,7 +9,7 @@ using NuPattern.Modeling;
 using NuPattern.Reflection;
 using NuPattern.Runtime.Schema;
 
-namespace NuPattern.Library.UnitTests.Automation.Artifact
+namespace NuPattern.Library.UnitTests.Automation.Extensions
 {
     public class ArtifactExtensionDisplaySpec
     {

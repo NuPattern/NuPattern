@@ -9,7 +9,7 @@ using NuPattern.Runtime.Guidance;
 using NuPattern.Runtime.References;
 using NuPattern.Runtime.Store;
 
-namespace NuPattern.Library.UnitTests.Automation.Guidance
+namespace NuPattern.Library.UnitTests.Automation.Extensions
 {
     [TestClass]
     public class GuidanceReferenceValidationSpec

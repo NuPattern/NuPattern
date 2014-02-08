@@ -10,7 +10,7 @@ using NuPattern.Runtime;
 using NuPattern.Runtime.Composition;
 using NuPattern.Runtime.Schema;
 
-namespace NuPattern.Library.UnitTests.Automation.Event
+namespace NuPattern.Library.UnitTests.Automation.DragDrop
 {
     public class DragDropSettingsValidationSpec
     {

@@ -12,7 +12,7 @@ using NuPattern.Runtime.Bindings;
 using NuPattern.VisualStudio.Solution;
 using NuPattern.VisualStudio.Solution.Templates;
 
-namespace NuPattern.Library.UnitTests
+namespace NuPattern.Library.UnitTests.Automation.Template
 {
     [TestClass]
     public class TemplateAutomationSpec

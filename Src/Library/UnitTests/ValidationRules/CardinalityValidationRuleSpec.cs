@@ -6,7 +6,7 @@ using Moq;
 using NuPattern.Library.ValidationRules;
 using NuPattern.Runtime;
 
-namespace NuPattern.Library.UnitTests
+namespace NuPattern.Library.UnitTests.ValidationRules
 {
     public class CardinalityValidationRuleSpec
     {

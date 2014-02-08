@@ -9,7 +9,7 @@ using NuPattern.Modeling;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Schema;
 
-namespace NuPattern.Library.UnitTests
+namespace NuPattern.Library.UnitTests.Automation.Template
 {
     [TestClass]
     public class TemplateSettingsValidationSpec

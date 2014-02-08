@@ -10,7 +10,7 @@ using NuPattern.Runtime.References;
 using NuPattern.Runtime.Store;
 using NuPattern.VisualStudio.Solution;
 
-namespace NuPattern.Library.UnitTests.Automation.Artifact
+namespace NuPattern.Library.UnitTests.Automation.Extensions
 {
     public class ArtifactReferenceValidationSpec
     {

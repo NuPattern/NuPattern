@@ -5,7 +5,7 @@ using NuPattern.Library.Automation;
 using NuPattern.Modeling;
 using NuPattern.Runtime.Schema;
 
-namespace NuPattern.Library.UnitTests.Automation.Event
+namespace NuPattern.Library.UnitTests.Automation.Wizard
 {
     [TestClass]
     public class WizardSettingsValidationSpec

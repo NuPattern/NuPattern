@@ -9,7 +9,7 @@ using NuPattern.Modeling;
 using NuPattern.Reflection;
 using NuPattern.Runtime.Schema;
 
-namespace NuPattern.Library.UnitTests.Automation.Guidance
+namespace NuPattern.Library.UnitTests.Automation.Extensions
 {
     [TestClass]
     public class GuidanceExtensionDisplaySpec
