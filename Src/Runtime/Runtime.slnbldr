@@ -7,7 +7,7 @@
         <property Id="97649644-bcb9-4567-ae24-4224e0b14320" definitionId="293802b7-0b69-440e-be60-927f07f4e636" definitionName="PatternName" rawValue="MyPattern" />
         <property Id="940b0356-066e-4526-ac13-3ca47b6f890e" definitionId="710634cd-4863-4314-9785-dc33f6501903" definitionName="PatternDescription" rawValue="A Description of MyPattern" />
         <property Id="bea5e842-e950-4abb-895a-85f25d292027" definitionId="00123e2b-3459-4924-9f18-628406735664" definitionName="ExistingToolkitId" />
-        <property Id="edde12f7-2581-48dc-9f49-fbbaf52df5d0" definitionId="5976c04c-d8ad-433f-9794-22e9cd55ac41" definitionName="SolutionName" rawValue="Runtime.vs2012" />
+        <property Id="edde12f7-2581-48dc-9f49-fbbaf52df5d0" definitionId="5976c04c-d8ad-433f-9794-22e9cd55ac41" definitionName="SolutionName" rawValue="Runtime.vs2013" />
         <property Id="eb984bf2-6101-4510-ba06-8335c8992524" definitionId="e73753b6-45e3-479f-b953-1c9ab6836362" definitionName="ProjectRootNamespace" rawValue="NuPattern.Runtime.Shell" />
         <property Id="74721404-3868-4d5b-b462-bea439b2a32e" definitionId="4b4b1fdf-ea6d-4ea4-b142-c2f1685c0091" definitionName="ProjectAssemblyName" rawValue="NuPattern.Runtime.Shell" />
         <property Id="f438170e-7a16-4b62-bc9c-4f4b3251d822" definitionId="4121d8f0-87a2-4757-a6d4-6f28d9fa8728" definitionName="ExcludeFromCodeCoverage" rawValue="True" />
@@ -47,7 +47,7 @@
                 <element Id="29623964-bb7b-4778-b7d4-d79652ac5a5e" definitionId="c3d66aa5-3199-44ad-b7d7-f375a9ab16d3" definitionName="Guidance" instanceName="Guidance">
                   <properties>
                     <property Id="adef027a-dd73-4ff6-b6f5-c825314c0184" definitionId="70d70df3-799d-4107-b77b-0001119484a6" definitionName="ProjectContentPath" rawValue="GeneratedCode\Guidance\Content" />
-                    <property Id="85aa968f-7a14-46bf-829e-b01da14e7cd2" definitionId="39537f0e-76a8-409b-adb5-e54fbdbd8b27" definitionName="DocumentFilePath" rawValue="C:\Projects\CodePlex\NuPattern\Sprint20\Src\Common\Guidance\RuntimeGuidance.doc" />
+                    <property Id="85aa968f-7a14-46bf-829e-b01da14e7cd2" definitionId="39537f0e-76a8-409b-adb5-e54fbdbd8b27" definitionName="DocumentFilePath" rawValue="C:\Projects\CodePlex\NuPattern\origin\Src\Common\Guidance\RuntimeGuidance.doc" />
                     <property Id="64cf70d9-0d22-4696-948f-d96f8af287cd" definitionId="81c7a831-97e3-4067-9d15-8d7fb671a755" definitionName="DefaultInstanceName" rawValue="Using Patterns in Solution Development" />
                   </properties>
                   <references>

@@ -1,9 +1,9 @@
 MIME-Version: 1.0
-Content-Type: multipart/related; boundary="----=_NextPart_01CEAF24.14922A90"
+Content-Type: multipart/related; boundary="----=_NextPart_01CF2576.A9017F50"
 
 This document is a Single File Web Page, also known as a Web Archive file.  If you are seeing this message, your browser or editor doesn't support Web Archive files.  Please download a browser that supports Web Archive, such as Windows® Internet Explorer®.
 
-------=_NextPart_01CEAF24.14922A90
+------=_NextPart_01CF2576.A9017F50
 Content-Location: file:///C:/ADC8DC98/TargetPathSyntax.htm
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/html; charset="windows-1252"
@@ -27,14 +27,14 @@ xmlns=3D"http://www.w3.org/TR/REC-html40">
   <o:LastAuthor>Jezz</o:LastAuthor>
   <o:Revision>1</o:Revision>
   <o:TotalTime>0</o:TotalTime>
-  <o:Created>2013-09-11T07:21:00Z</o:Created>
-  <o:LastSaved>2013-09-11T07:21:00Z</o:LastSaved>
+  <o:Created>2014-02-08T20:09:00Z</o:Created>
+  <o:LastSaved>2014-02-08T20:09:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
-  <o:Words>859</o:Words>
-  <o:Characters>4902</o:Characters>
-  <o:Lines>40</o:Lines>
-  <o:Paragraphs>11</o:Paragraphs>
-  <o:CharactersWithSpaces>5750</o:CharactersWithSpaces>
+  <o:Words>1246</o:Words>
+  <o:Characters>7108</o:Characters>
+  <o:Lines>59</o:Lines>
+  <o:Paragraphs>16</o:Paragraphs>
+  <o:CharactersWithSpaces>8338</o:CharactersWithSpaces>
   <o:Version>14.00</o:Version>
  </o:DocumentProperties>
  <o:OfficeDocumentSettings>
@@ -2369,29 +2369,33 @@ S>Target
 Path Syntax</span></span></span></a><span lang=3DEN-US><o:p></o:p></span></=
 h4>
 
-<p class=3DMsoNormal><span lang=3DEN-US>Several of the automation commands,
-conditions and value providers that work upon items in Solution Explorer us=
-e a
-specific syntax for referencing files, folders, projects and solution folde=
-rs
-in the solution. This syntax is complex because it mixes both the hierarchi=
-cal
-structure of the pattern and the physical solution structure in Solution
+<p class=3DMsoNormal><span lang=3DEN-US>Several automation commands, condit=
+ions and
+value providers that work upon items in Solution Explorer use a specific sy=
+ntax
+for referencing files, folders, projects and solution folders in the soluti=
+on.
+This syntax is complex because it mixes both the hierarchical structure of =
+the
+pattern model with the physical solution structure as seen in Solution
 Explorer.<o:p></o:p></span></p>
 
 <p class=3DMsoNormal><span lang=3DEN-US>For example, the ‘UnfoldVsTemplateC=
 ommand’
 can be configured to unfold a project or file into a specific project, or
-folder in the current solution. <o:p></o:p></span></p>
+folder in the current solution, and once the template is unfolded a project=
+ or
+item is then bound to the element upon which the command was defined.<o:p><=
+/o:p></span></p>
 
 <p class=3DMsoNormal><span lang=3DEN-US>For many pattern toolkits, the solu=
 tion
-structure is either well known by the pattern, as it is the pattern that wo=
-uld
-have determined that project structure via automation, or certain artifacts=
- in
-the solution are referenced by elements in the pattern model.<o:p></o:p></s=
-pan></p>
+structure is either well known or assumed by the pattern, as it is the patt=
+ern
+that may have pre-determined that project structure via automation, or cert=
+ain
+artifacts in the solution are referenced by elements in the pattern model.<=
+o:p></o:p></span></p>
 
 <p class=3DMsoNormal><span lang=3DEN-US>The syntax of these paths always st=
 arts
@@ -2405,106 +2409,151 @@ projects, folders etc. <o:p></o:p></span></p>
 optional parts: <b style=3D'mso-bidi-font-weight:normal'>[Model Path
 Space]~[Solution Path Space]</b>, where the '~' character denotes the trave=
 rsal
-from model to solution path space.<b style=3D'mso-bidi-font-weight:normal'>=
-<o:p></o:p></b></span></p>
+from mode path to solution path space.<b style=3D'mso-bidi-font-weight:norm=
+al'><o:p></o:p></b></span></p>
 
-<p class=3DMsoNormal><span lang=3DEN-US>The starting point for these paths =
-is the
-current element in the model. The first part of the path (model space) allo=
-ws
-you to define a relative path in the model from the current element. For
-example: a path starting with '..\..\..\' moves the scope from the current
-element to the grandparent element of the current element.<o:p></o:p></span=
-></p>
+<p class=3DMsoNormal><span lang=3DEN-US>The [Model Path Space] expression c=
+annot
+exist without a ~ character, since it will not itself resolve to any physic=
+al
+path in the solution. However a [Solution Path Space] expression can exist
+without a ~ or a [Model Path Space] expression.<o:p></o:p></span></p>
+
+<p class=3DMsoNormal><span lang=3DEN-US>The starting point for the [Model P=
+ath
+Space] is the current element in the model. It also allows you to define a
+relative path in the model from the current element either up or down the m=
+odel
+hierarchy. For example: a path starting with '..\..\..\' moves the scope fr=
+om
+the current element to the grandparent elements of the current element, and
+‘.\Child\Child’ indicates down through the child elements of the current
+element.<o:p></o:p></span></p>
 
 <p class=3DMsoNormal><span lang=3DEN-US>Next in the path is the tilda '~'
-character. This character resolves the first artifact link of the element in
-scope to a physical solution item (such as a: file, folder, project or solu=
-tion
-folder or even the solution itself).<o:p></o:p></span></p>
+character. This character <i style=3D'mso-bidi-font-style:normal'>resolves<=
+/i>
+the first artifact link of the element in scope to a physical solution item
+(such as a: file, folder, project or solution folder or even the solution
+itself). You may also specify a tag to match an artifact link with the same
+tag, typically when the element has multiple links. The tag modifier is pla=
+ced
+in ‘[]’ brackets after the ‘~’ character (i.e. ~[tag] ).<o:p></o:p></span><=
+/p>
 
 <p class=3DMsoNormal><span lang=3DEN-US>Without an artifact link on some el=
 ement in
-the model, no traversal from model to solution is possible, and the '~'
-character can be omitted. In this case the solution is the assumed starting
-point. You do this if you want to specify only a solution path.<o:p></o:p><=
-/span></p>
+the reference [Model Path Space] expression, no traversal from the model to=
+ the
+solution is possible, and the '~' character can be omitted. When the ~ is
+omitted the path is strictly a [Solution Path Space] expression. You do thi=
+s if
+you want to specify only a solution path starting from the Solution node.<o=
+:p></o:p></span></p>
 
-<p class=3DMsoNormal><span lang=3DEN-US>The last part of the path is relati=
-ve from
-the resolved solution item, (or from the solution when '~' is omitted). This
-solution path is the logical path in solution explorer and can traverse
-solution folders, projects, project folders and even files to nested files.=
- <o:p></o:p></span></p>
+<p class=3DMsoNormal><span lang=3DEN-US>This [Solution Path Space] expressi=
+on is
+the logical path as seen in Solution Explorer, and can traverse into soluti=
+on
+folders, projects, project folders and even into files into nested files. T=
+he
+[Solution Path Space] expression can also contain property substitutions (u=
+sing
+<a
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+ce/Content/ExpressionSyntax.mht">Expression
+Syntax</a>) for properties of elements in the model, so that destination
+folders and file names can be calculated. <o:p></o:p></span></p>
 
-<h5><span lang=3DEN-US>Example Syntaxes:<o:p></o:p></span></h5>
+<div style=3D'mso-element:para-border-div;border:solid windowtext 1.0pt;
+padding:6.0pt 4.0pt 6.0pt 4.0pt;mso-border-shadow:yes;background:#FFFFCC;
+margin-left:28.8pt;margin-right:28.8pt'>
+
+<p class=3DNote style=3D'margin-top:0cm;margin-right:0cm;margin-bottom:10.0=
+pt;
+margin-left:0cm;mso-add-space:auto;background:#FFFFCC'><b style=3D'mso-bidi=
+-font-weight:
+normal'><span lang=3DEN-US>Note</span></b><span lang=3DEN-US>: Substitution=
+s are
+not permitted in the [Model Path Space].<o:p></o:p></span></p>
+
+</div>
+
+<h5><span lang=3DEN-US>Notations:<o:p></o:p></span></h5>
 
 <table class=3DMsoTableGrid border=3D1 cellspacing=3D0 cellpadding=3D0
  style=3D'border-collapse:collapse;border:none;mso-border-alt:solid windowt=
 ext .5pt;
  mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
  <tr style=3D'mso-yfti-irow:0;mso-yfti-firstrow:yes;height:12.55pt'>
-  <td valign=3Dtop style=3D'border:solid black 1.0pt;mso-border-themecolor:=
-text1;
-  mso-border-alt:solid black .5pt;mso-border-themecolor:text1;padding:0cm 5=
-.4pt 0cm 5.4pt;
-  height:12.55pt'>
+  <td width=3D54 valign=3Dtop style=3D'width:40.85pt;border:solid black 1.0=
+pt;
+  mso-border-themecolor:text1;mso-border-alt:solid black .5pt;mso-border-th=
+emecolor:
+  text1;padding:0cm 5.4pt 0cm 5.4pt;height:12.55pt'>
   <p class=3DMsoNormal style=3D'margin-bottom:10.0pt;line-height:115%'><b
-  style=3D'mso-bidi-font-weight:normal'><span lang=3DEN-US>Path<o:p></o:p><=
-/span></b></p>
+  style=3D'mso-bidi-font-weight:normal'><span lang=3DEN-US>Syntax<o:p></o:p=
+></span></b></p>
   </td>
-  <td valign=3Dtop style=3D'border:solid black 1.0pt;mso-border-themecolor:=
-text1;
-  border-left:none;mso-border-left-alt:solid black .5pt;mso-border-left-the=
-mecolor:
-  text1;mso-border-alt:solid black .5pt;mso-border-themecolor:text1;padding:
-  0cm 5.4pt 0cm 5.4pt;height:12.55pt'>
+  <td width=3D350 valign=3Dtop style=3D'width:262.25pt;border:solid black 1=
+.0pt;
+  mso-border-themecolor:text1;border-left:none;mso-border-left-alt:solid bl=
+ack .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-bord=
+er-themecolor:
+  text1;padding:0cm 5.4pt 0cm 5.4pt;height:12.55pt'>
   <p class=3DMsoNormal style=3D'margin-bottom:10.0pt;line-height:115%'><b
   style=3D'mso-bidi-font-weight:normal'><span lang=3DEN-US>Meaning<o:p></o:=
 p></span></b></p>
   </td>
-  <td valign=3Dtop style=3D'border:solid black 1.0pt;mso-border-themecolor:=
-text1;
-  border-left:none;mso-border-left-alt:solid black .5pt;mso-border-left-the=
-mecolor:
-  text1;mso-border-alt:solid black .5pt;mso-border-themecolor:text1;padding:
-  0cm 5.4pt 0cm 5.4pt;height:12.55pt'>
+  <td width=3D570 valign=3Dtop style=3D'width:427.7pt;border:solid black 1.=
+0pt;
+  mso-border-themecolor:text1;border-left:none;mso-border-left-alt:solid bl=
+ack .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-bord=
+er-themecolor:
+  text1;padding:0cm 5.4pt 0cm 5.4pt;height:12.55pt'>
   <p class=3DMsoNormal style=3D'margin-bottom:10.0pt;line-height:115%'><b
   style=3D'mso-bidi-font-weight:normal'><span lang=3DEN-US>Notes<o:p></o:p>=
 </span></b></p>
   </td>
  </tr>
  <tr style=3D'mso-yfti-irow:1'>
-  <td valign=3Dtop style=3D'border:solid black 1.0pt;mso-border-themecolor:=
-text1;
-  border-top:none;mso-border-top-alt:solid black .5pt;mso-border-top-themec=
-olor:
-  text1;mso-border-alt:solid black .5pt;mso-border-themecolor:text1;padding:
-  0cm 5.4pt 0cm 5.4pt'>
+  <td width=3D54 valign=3Dtop style=3D'width:40.85pt;border:solid black 1.0=
+pt;
+  mso-border-themecolor:text1;border-top:none;mso-border-top-alt:solid blac=
+k .5pt;
+  mso-border-top-themecolor:text1;mso-border-alt:solid black .5pt;mso-borde=
+r-themecolor:
+  text1;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=3DMsoNormal style=3D'margin-bottom:0cm;margin-bottom:.0001pt;lin=
 e-height:
   normal'><span lang=3DEN-US>\<o:p></o:p></span></p>
   </td>
-  <td valign=3Dtop style=3D'border-top:none;border-left:none;border-bottom:=
-solid black 1.0pt;
-  mso-border-bottom-themecolor:text1;border-right:solid black 1.0pt;mso-bor=
-der-right-themecolor:
-  text1;mso-border-top-alt:solid black .5pt;mso-border-top-themecolor:text1;
-  mso-border-left-alt:solid black .5pt;mso-border-left-themecolor:text1;
-  mso-border-alt:solid black .5pt;mso-border-themecolor:text1;padding:0cm 5=
-.4pt 0cm 5.4pt'>
+  <td width=3D350 valign=3Dtop style=3D'width:262.25pt;border-top:none;bord=
+er-left:
+  none;border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-bord=
+er-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:soli=
+d black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-bord=
+er-themecolor:
+  text1;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=3DMsoNormal style=3D'margin-bottom:0cm;margin-bottom:.0001pt;lin=
 e-height:
   normal'><span lang=3DEN-US>The solution<o:p></o:p></span></p>
   </td>
-  <td valign=3Dtop style=3D'border-top:none;border-left:none;border-bottom:=
-solid black 1.0pt;
-  mso-border-bottom-themecolor:text1;border-right:solid black 1.0pt;mso-bor=
-der-right-themecolor:
-  text1;mso-border-top-alt:solid black .5pt;mso-border-top-themecolor:text1;
-  mso-border-left-alt:solid black .5pt;mso-border-left-themecolor:text1;
-  mso-border-alt:solid black .5pt;mso-border-themecolor:text1;padding:0cm 5=
-.4pt 0cm 5.4pt'>
+  <td width=3D570 valign=3Dtop style=3D'width:427.7pt;border-top:none;borde=
+r-left:
+  none;border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-bord=
+er-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:soli=
+d black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-bord=
+er-themecolor:
+  text1;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=3DMsoNormal style=3D'margin-bottom:0cm;margin-bottom:.0001pt;lin=
 e-height:
   normal'><span lang=3DEN-US>Paths starting with ‘\’ character imply the so=
@@ -2513,46 +2562,56 @@ lution
   </td>
  </tr>
  <tr style=3D'mso-yfti-irow:2'>
-  <td valign=3Dtop style=3D'border:solid black 1.0pt;mso-border-themecolor:=
-text1;
-  border-top:none;mso-border-top-alt:solid black .5pt;mso-border-top-themec=
-olor:
-  text1;mso-border-alt:solid black .5pt;mso-border-themecolor:text1;padding:
-  0cm 5.4pt 0cm 5.4pt'>
+  <td width=3D54 valign=3Dtop style=3D'width:40.85pt;border:solid black 1.0=
+pt;
+  mso-border-themecolor:text1;border-top:none;mso-border-top-alt:solid blac=
+k .5pt;
+  mso-border-top-themecolor:text1;mso-border-alt:solid black .5pt;mso-borde=
+r-themecolor:
+  text1;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=3DMsoNormal style=3D'margin-bottom:10.0pt;line-height:115%'><span
   lang=3DEN-US>~<o:p></o:p></span></p>
   </td>
-  <td valign=3Dtop style=3D'border-top:none;border-left:none;border-bottom:=
-solid black 1.0pt;
-  mso-border-bottom-themecolor:text1;border-right:solid black 1.0pt;mso-bor=
-der-right-themecolor:
-  text1;mso-border-top-alt:solid black .5pt;mso-border-top-themecolor:text1;
-  mso-border-left-alt:solid black .5pt;mso-border-left-themecolor:text1;
-  mso-border-alt:solid black .5pt;mso-border-themecolor:text1;padding:0cm 5=
-.4pt 0cm 5.4pt'>
+  <td width=3D350 valign=3Dtop style=3D'width:262.25pt;border-top:none;bord=
+er-left:
+  none;border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-bord=
+er-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:soli=
+d black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-bord=
+er-themecolor:
+  text1;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=3DMsoNormal style=3D'margin-bottom:10.0pt;line-height:115%'><span
-  lang=3DEN-US>Traverse the artifact link of the current element. <o:p></o:=
-p></span></p>
+  lang=3DEN-US>Traverse the first artifact link of the current element, or =
+first
+  ancestor with an artifact link.<o:p></o:p></span></p>
   </td>
-  <td valign=3Dtop style=3D'border-top:none;border-left:none;border-bottom:=
-solid black 1.0pt;
-  mso-border-bottom-themecolor:text1;border-right:solid black 1.0pt;mso-bor=
-der-right-themecolor:
-  text1;mso-border-top-alt:solid black .5pt;mso-border-top-themecolor:text1;
-  mso-border-left-alt:solid black .5pt;mso-border-left-themecolor:text1;
-  mso-border-alt:solid black .5pt;mso-border-themecolor:text1;padding:0cm 5=
-.4pt 0cm 5.4pt'>
-  <p class=3DMsoNormal style=3D'margin-bottom:10.0pt;line-height:115%'><span
-  lang=3DEN-US>This traverses the first artifact link found, starting with =
-the
-  current element and then ancestor elements (if none found on current
-  element).<o:p></o:p></span></p>
-  <p class=3DMsoNormal style=3D'margin-bottom:10.0pt;line-height:115%'><span
-  lang=3DEN-US>By default, if ~ is specified as first character, an artifac=
-t link
-  is searched for by traversing up the ancestry from the current element
-  (starting with the current element) until an element is found that has an
-  artifact link, and that link is then resolved. <span
+  <td width=3D570 valign=3Dtop style=3D'width:427.7pt;border-top:none;borde=
+r-left:
+  none;border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-bord=
+er-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:soli=
+d black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-bord=
+er-themecolor:
+  text1;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=3DMsoNormal style=3D'margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:
+  normal'><span lang=3DEN-US>This traverses the <i style=3D'mso-bidi-font-s=
+tyle:
+  normal'>first</i> artifact link found in the hierarchy, starting with the
+  current element and then progressively searching ancestor elements for
+  artifact links (if none found on current element).<o:p></o:p></span></p>
+  <p class=3DMsoNormal style=3D'margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:
+  normal'><span lang=3DEN-US>By default, if ~ is specified as first charact=
+er, an
+  artifact link is searched for by traversing up the ancestry from the curr=
+ent
+  element (starting with the current element) until an element is found that
+  has an artifact link, and that link is then resolved. <span
   style=3D'mso-spacerun:yes'> </span>Be aware that if specifying ~ as the f=
 irst
   character in the path on an element that has an artifact link, will resol=
@@ -2562,57 +2621,210 @@ ded
   that ~ is always explicitly fully qualified with a relative ancestral path
   (i.e. ..\..\) to the ancestral element to avoid errors in resolving the
   artifact links at runtime.<o:p></o:p></span></p>
-  <p class=3DMsoNormal style=3D'margin-bottom:10.0pt;line-height:115%'><span
-  lang=3DEN-US>If no ancestor is found with an artifact link, then the ~ is
-  resolved to being the solution itself.<o:p></o:p></span></p>
+  <p class=3DMsoNormal style=3D'margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:
+  normal'><span lang=3DEN-US>If no ancestor is found with an artifact link,=
+ then
+  the ~ is resolved to being the solution itself.<o:p></o:p></span></p>
   </td>
  </tr>
  <tr style=3D'mso-yfti-irow:3'>
-  <td valign=3Dtop style=3D'border:solid black 1.0pt;mso-border-themecolor:=
-text1;
-  border-top:none;mso-border-top-alt:solid black .5pt;mso-border-top-themec=
-olor:
-  text1;mso-border-alt:solid black .5pt;mso-border-themecolor:text1;padding:
-  0cm 5.4pt 0cm 5.4pt'>
+  <td width=3D54 valign=3Dtop style=3D'width:40.85pt;border:solid black 1.0=
+pt;
+  mso-border-themecolor:text1;border-top:none;mso-border-top-alt:solid blac=
+k .5pt;
+  mso-border-top-themecolor:text1;mso-border-alt:solid black .5pt;mso-borde=
+r-themecolor:
+  text1;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=3DMsoNormal style=3D'margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:
+  normal'><span lang=3DEN-US>~[tag]<o:p></o:p></span></p>
+  </td>
+  <td width=3D350 valign=3Dtop style=3D'width:262.25pt;border-top:none;bord=
+er-left:
+  none;border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-bord=
+er-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:soli=
+d black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-bord=
+er-themecolor:
+  text1;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=3DMsoNormal style=3D'margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:
+  normal'><span lang=3DEN-US>Traverse the artifact link of the current elem=
+ent,
+  or first ancestor with an artifact link, where the tag property of the
+  artifact link matches the tag. Value must be in square brackets.<o:p></o:=
+p></span></p>
+  </td>
+  <td width=3D570 valign=3Dtop style=3D'width:427.7pt;border-top:none;borde=
+r-left:
+  none;border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-bord=
+er-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:soli=
+d black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-bord=
+er-themecolor:
+  text1;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=3DMsoNormal style=3D'margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:
+  normal'><span lang=3DEN-US>Same as above, but instead of selecting the fi=
+rst
+  artifact link of the ancestor element, it traverses the first artifact li=
+nk
+  that matches the ‘tag’.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style=3D'mso-yfti-irow:4'>
+  <td width=3D54 valign=3Dtop style=3D'width:40.85pt;border:solid black 1.0=
+pt;
+  mso-border-themecolor:text1;border-top:none;mso-border-top-alt:solid blac=
+k .5pt;
+  mso-border-top-themecolor:text1;mso-border-alt:solid black .5pt;mso-borde=
+r-themecolor:
+  text1;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=3DMsoNormal style=3D'margin-bottom:10.0pt;line-height:115%'><span
   lang=3DEN-US>..\<o:p></o:p></span></p>
   </td>
-  <td valign=3Dtop style=3D'border-top:none;border-left:none;border-bottom:=
-solid black 1.0pt;
-  mso-border-bottom-themecolor:text1;border-right:solid black 1.0pt;mso-bor=
-der-right-themecolor:
-  text1;mso-border-top-alt:solid black .5pt;mso-border-top-themecolor:text1;
-  mso-border-left-alt:solid black .5pt;mso-border-left-themecolor:text1;
-  mso-border-alt:solid black .5pt;mso-border-themecolor:text1;padding:0cm 5=
-.4pt 0cm 5.4pt'>
+  <td width=3D350 valign=3Dtop style=3D'width:262.25pt;border-top:none;bord=
+er-left:
+  none;border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-bord=
+er-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:soli=
+d black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-bord=
+er-themecolor:
+  text1;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=3DMsoNormal style=3D'margin-bottom:10.0pt;line-height:115%'><span
   lang=3DEN-US>Traverse to parent element in either the model or solution.<=
 o:p></o:p></span></p>
   </td>
-  <td valign=3Dtop style=3D'border-top:none;border-left:none;border-bottom:=
-solid black 1.0pt;
-  mso-border-bottom-themecolor:text1;border-right:solid black 1.0pt;mso-bor=
-der-right-themecolor:
-  text1;mso-border-top-alt:solid black .5pt;mso-border-top-themecolor:text1;
-  mso-border-left-alt:solid black .5pt;mso-border-left-themecolor:text1;
-  mso-border-alt:solid black .5pt;mso-border-themecolor:text1;padding:0cm 5=
-.4pt 0cm 5.4pt'>
-  <p class=3DMsoNormal style=3D'margin-bottom:10.0pt;line-height:115%'><span
-  lang=3DEN-US>Before a ~ is resolved in the path, this path traverses up t=
-he model
-  path to a parent element. After a ~ is resolved in the path, this path
+  <td width=3D570 valign=3Dtop style=3D'width:427.7pt;border-top:none;borde=
+r-left:
+  none;border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-bord=
+er-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:soli=
+d black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-bord=
+er-themecolor:
+  text1;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=3DMsoNormal style=3D'margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:
+  normal'><span lang=3DEN-US>Before a ~ is resolved in the path, this syntax
+  traverses up the model path to a parent element. <o:p></o:p></span></p>
+  <p class=3DMsoNormal style=3D'margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:
+  normal'><span lang=3DEN-US>After a ~ is resolved in the path, this path
   traverses up the solution path from current solution item.<o:p></o:p></sp=
 an></p>
-  <p class=3DMsoNormal style=3D'margin-bottom:10.0pt;line-height:115%'><span
-  lang=3DEN-US>Note: that if the intended ancestor element is the root patt=
-ern
-  element, then do not include a<span style=3D'mso-spacerun:yes'> 
+  <p class=3DMsoNormal style=3D'margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:
+  normal'><span lang=3DEN-US>Note: that if the intended ancestor element is=
+ the
+  root pattern element, then do not include a<span style=3D'mso-spacerun:ye=
+s'> 
   </span>..\<span style=3D'mso-spacerun:yes'>  </span>for the View (which is
   actual the immediate child of the root pattern element).<o:p></o:p></span=
 ></p>
   </td>
  </tr>
- <tr style=3D'mso-yfti-irow:4'>
+ <tr style=3D'mso-yfti-irow:5;mso-yfti-lastrow:yes'>
+  <td width=3D54 valign=3Dtop style=3D'width:40.85pt;border:solid black 1.0=
+pt;
+  mso-border-themecolor:text1;border-top:none;mso-border-top-alt:solid blac=
+k .5pt;
+  mso-border-top-themecolor:text1;mso-border-alt:solid black .5pt;mso-borde=
+r-themecolor:
+  text1;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=3DMsoNormal style=3D'margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:
+  normal'><span lang=3DEN-US>.\<o:p></o:p></span></p>
+  </td>
+  <td width=3D350 valign=3Dtop style=3D'width:262.25pt;border-top:none;bord=
+er-left:
+  none;border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-bord=
+er-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:soli=
+d black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-bord=
+er-themecolor:
+  text1;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=3DMsoNormal style=3D'margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:
+  normal'><span lang=3DEN-US>Remain on current element in the model<o:p></o=
+:p></span></p>
+  </td>
+  <td width=3D570 valign=3Dtop style=3D'width:427.7pt;border-top:none;borde=
+r-left:
+  none;border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-bord=
+er-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:soli=
+d black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-bord=
+er-themecolor:
+  text1;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=3DMsoNormal style=3D'margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:
+  normal'><span lang=3DEN-US>Before a ~ is resolved in the path, this path
+  indicates the current element in the model.<o:p></o:p></span></p>
+  <p class=3DMsoNormal style=3D'margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:
+  normal'><span lang=3DEN-US>After a ~ is resolved in the path, this path is
+  ignored.<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<h5><a name=3D"_Expression_Syntax"></a><span lang=3DEN-US>Example Syntaxes:=
+<o:p></o:p></span></h5>
+
+<table class=3DMsoTableGrid border=3D1 cellspacing=3D0 cellpadding=3D0
+ style=3D'border-collapse:collapse;border:none;mso-border-alt:solid windowt=
+ext .5pt;
+ mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
+ <tr style=3D'mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td valign=3Dtop style=3D'border:solid black 1.0pt;mso-border-themecolor:=
+text1;
+  mso-border-alt:solid black .5pt;mso-border-themecolor:text1;padding:0cm 5=
+.4pt 0cm 5.4pt'>
+  <p class=3DMsoNormal style=3D'margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:
+  normal'><b style=3D'mso-bidi-font-weight:normal'><span lang=3DEN-US>Examp=
+le
+  Expression<o:p></o:p></span></b></p>
+  </td>
+  <td width=3D387 valign=3Dtop style=3D'width:290.0pt;border:solid black 1.=
+0pt;
+  mso-border-themecolor:text1;border-left:none;mso-border-left-alt:solid bl=
+ack .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-bord=
+er-themecolor:
+  text1;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=3DMsoNormal style=3D'margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:
+  normal'><b style=3D'mso-bidi-font-weight:normal'><span lang=3DEN-US>Meani=
+ng<o:p></o:p></span></b></p>
+  </td>
+  <td width=3D372 valign=3Dtop style=3D'width:278.85pt;border:solid black 1=
+.0pt;
+  mso-border-themecolor:text1;border-left:none;mso-border-left-alt:solid bl=
+ack .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-bord=
+er-themecolor:
+  text1;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=3DMsoNormal style=3D'margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:
+  normal'><b style=3D'mso-bidi-font-weight:normal'><span lang=3DEN-US>Notes=
+<o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style=3D'mso-yfti-irow:1'>
   <td valign=3Dtop style=3D'border:solid black 1.0pt;mso-border-themecolor:=
 text1;
   border-top:none;mso-border-top-alt:solid black .5pt;mso-border-top-themec=
@@ -2622,14 +2834,16 @@ olor:
   <p class=3DMsoNormal style=3D'margin-bottom:10.0pt;line-height:115%'><span
   lang=3DEN-US>..\~\Dummy<o:p></o:p></span></p>
   </td>
-  <td valign=3Dtop style=3D'border-top:none;border-left:none;border-bottom:=
-solid black 1.0pt;
-  mso-border-bottom-themecolor:text1;border-right:solid black 1.0pt;mso-bor=
-der-right-themecolor:
-  text1;mso-border-top-alt:solid black .5pt;mso-border-top-themecolor:text1;
-  mso-border-left-alt:solid black .5pt;mso-border-left-themecolor:text1;
-  mso-border-alt:solid black .5pt;mso-border-themecolor:text1;padding:0cm 5=
-.4pt 0cm 5.4pt'>
+  <td width=3D387 valign=3Dtop style=3D'width:290.0pt;border-top:none;borde=
+r-left:
+  none;border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-bord=
+er-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:soli=
+d black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-bord=
+er-themecolor:
+  text1;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=3DMsoNormal style=3D'margin-bottom:10.0pt;line-height:115%'><span
   lang=3DEN-US>Move to the parent element in model, resolve its artifact li=
 nk
@@ -2637,35 +2851,40 @@ nk
   the solution (solution folder, project or project folder).<o:p></o:p></sp=
 an></p>
   </td>
-  <td valign=3Dtop style=3D'border-top:none;border-left:none;border-bottom:=
-solid black 1.0pt;
-  mso-border-bottom-themecolor:text1;border-right:solid black 1.0pt;mso-bor=
-der-right-themecolor:
-  text1;mso-border-top-alt:solid black .5pt;mso-border-top-themecolor:text1;
-  mso-border-left-alt:solid black .5pt;mso-border-left-themecolor:text1;
-  mso-border-alt:solid black .5pt;mso-border-themecolor:text1;padding:0cm 5=
-.4pt 0cm 5.4pt'>
-  <p class=3DMsoNormal style=3D'margin-bottom:10.0pt;line-height:115%'><span
-  lang=3DEN-US>Typically used to define a path into a solution container th=
-at is
-  already referenced by a specific ancestor element. <o:p></o:p></span></p>
-  <p class=3DMsoNormal style=3D'margin-bottom:10.0pt;line-height:115%'><span
-  lang=3DEN-US>For example: if the parent element had an existing artifact =
-link
-  to a project or folder, then this path points to a subfolder of that proj=
-ect
-  or folder. <o:p></o:p></span></p>
-  <p class=3DMsoNormal style=3D'margin-bottom:10.0pt;line-height:115%'><span
-  lang=3DEN-US>This path explicitly identifies that the artifact link to tr=
-averse
-  is on the parent element, and therefore the search for an ancestor’s arti=
-fact
-  link is not executed. This is useful when many of the ancestors have arti=
-fact
-  links to different solution elements.<o:p></o:p></span></p>
+  <td width=3D372 valign=3Dtop style=3D'width:278.85pt;border-top:none;bord=
+er-left:
+  none;border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-bord=
+er-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:soli=
+d black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-bord=
+er-themecolor:
+  text1;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=3DMsoNormal style=3D'margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:
+  normal'><span lang=3DEN-US>Typically used to define a path into a solutio=
+n container
+  that is already referenced by a specific ancestor element. <o:p></o:p></s=
+pan></p>
+  <p class=3DMsoNormal style=3D'margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:
+  normal'><span lang=3DEN-US>For example: if the parent element had an exis=
+ting
+  artifact link to a project or folder, then this path points to a subfolde=
+r of
+  that project or folder. <o:p></o:p></span></p>
+  <p class=3DMsoNormal style=3D'margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:
+  normal'><span lang=3DEN-US>This path explicitly identifies that the artif=
+act
+  link to traverse is on the parent element, and therefore the search for an
+  ancestor’s artifact link is not executed. This is useful when many of the
+  ancestors have artifact links to different solution elements.<o:p></o:p><=
+/span></p>
   </td>
  </tr>
- <tr style=3D'mso-yfti-irow:5'>
+ <tr style=3D'mso-yfti-irow:2'>
   <td valign=3Dtop style=3D'border:solid black 1.0pt;mso-border-themecolor:=
 text1;
   border-top:none;mso-border-top-alt:solid black .5pt;mso-border-top-themec=
@@ -2676,14 +2895,16 @@ olor:
 e-height:
   normal'><span lang=3DEN-US>~\Dummy<o:p></o:p></span></p>
   </td>
-  <td valign=3Dtop style=3D'border-top:none;border-left:none;border-bottom:=
-solid black 1.0pt;
-  mso-border-bottom-themecolor:text1;border-right:solid black 1.0pt;mso-bor=
-der-right-themecolor:
-  text1;mso-border-top-alt:solid black .5pt;mso-border-top-themecolor:text1;
-  mso-border-left-alt:solid black .5pt;mso-border-left-themecolor:text1;
-  mso-border-alt:solid black .5pt;mso-border-themecolor:text1;padding:0cm 5=
-.4pt 0cm 5.4pt'>
+  <td width=3D387 valign=3Dtop style=3D'width:290.0pt;border-top:none;borde=
+r-left:
+  none;border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-bord=
+er-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:soli=
+d black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-bord=
+er-themecolor:
+  text1;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=3DMsoNormal style=3D'margin-bottom:0cm;margin-bottom:.0001pt;lin=
 e-height:
   normal'><span lang=3DEN-US>Search the ancestry of the current element
@@ -2694,14 +2915,16 @@ my'
   container in the solution (solution folder, project or project folder).<o=
 :p></o:p></span></p>
   </td>
-  <td valign=3Dtop style=3D'border-top:none;border-left:none;border-bottom:=
-solid black 1.0pt;
-  mso-border-bottom-themecolor:text1;border-right:solid black 1.0pt;mso-bor=
-der-right-themecolor:
-  text1;mso-border-top-alt:solid black .5pt;mso-border-top-themecolor:text1;
-  mso-border-left-alt:solid black .5pt;mso-border-left-themecolor:text1;
-  mso-border-alt:solid black .5pt;mso-border-themecolor:text1;padding:0cm 5=
-.4pt 0cm 5.4pt'>
+  <td width=3D372 valign=3Dtop style=3D'width:278.85pt;border-top:none;bord=
+er-left:
+  none;border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-bord=
+er-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:soli=
+d black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-bord=
+er-themecolor:
+  text1;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=3DMsoNormal style=3D'margin-bottom:0cm;margin-bottom:.0001pt;lin=
 e-height:
   normal'><span lang=3DEN-US>Typically used as shorthand to avoid explicitly
@@ -2724,7 +2947,7 @@ st
   character. See notes above.<o:p></o:p></span></p>
   </td>
  </tr>
- <tr style=3D'mso-yfti-irow:6;mso-yfti-lastrow:yes'>
+ <tr style=3D'mso-yfti-irow:3'>
   <td valign=3Dtop style=3D'border:solid black 1.0pt;mso-border-themecolor:=
 text1;
   border-top:none;mso-border-top-alt:solid black .5pt;mso-border-top-themec=
@@ -2736,35 +2959,37 @@ e-height:
   normal'><span lang=3DEN-US>..\~\Dummy\{Parent.InstanceName}.cs<o:p></o:p>=
 </span></p>
   </td>
-  <td valign=3Dtop style=3D'border-top:none;border-left:none;border-bottom:=
-solid black 1.0pt;
-  mso-border-bottom-themecolor:text1;border-right:solid black 1.0pt;mso-bor=
-der-right-themecolor:
-  text1;mso-border-top-alt:solid black .5pt;mso-border-top-themecolor:text1;
-  mso-border-left-alt:solid black .5pt;mso-border-left-themecolor:text1;
-  mso-border-alt:solid black .5pt;mso-border-themecolor:text1;padding:0cm 5=
-.4pt 0cm 5.4pt'>
+  <td width=3D387 valign=3Dtop style=3D'width:290.0pt;border-top:none;borde=
+r-left:
+  none;border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-bord=
+er-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:soli=
+d black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-bord=
+er-themecolor:
+  text1;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=3DMsoNormal style=3D'margin-bottom:0cm;margin-bottom:.0001pt;lin=
 e-height:
-  normal'><span lang=3DEN-US>Search the ancestry of the current element
-  (including the current element first) for an artifact link, then resolve =
-the
-  artifact link over to the solution , and then navigate down into its 'Dum=
-my'
-  container in the solution (solution folder, project or project folder), t=
-hen
-  navigate to a C# source file with the name of the instance of Parent elem=
-ent.
-  (presumably already in the solution)<o:p></o:p></span></p>
+  normal'><span lang=3DEN-US>Search the parent of the current element for an
+  artifact link, then resolve the artifact link over to the solution , and =
+then
+  navigate down into its 'Dummy' container in the solution (solution folder,
+  project or project folder), then navigate to a C# source file with the na=
+me
+  of the instance of Parent element. (presumably already in the solution)<o=
+:p></o:p></span></p>
   </td>
-  <td valign=3Dtop style=3D'border-top:none;border-left:none;border-bottom:=
-solid black 1.0pt;
-  mso-border-bottom-themecolor:text1;border-right:solid black 1.0pt;mso-bor=
-der-right-themecolor:
-  text1;mso-border-top-alt:solid black .5pt;mso-border-top-themecolor:text1;
-  mso-border-left-alt:solid black .5pt;mso-border-left-themecolor:text1;
-  mso-border-alt:solid black .5pt;mso-border-themecolor:text1;padding:0cm 5=
-.4pt 0cm 5.4pt'>
+  <td width=3D372 valign=3Dtop style=3D'width:278.85pt;border-top:none;bord=
+er-left:
+  none;border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-bord=
+er-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:soli=
+d black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-bord=
+er-themecolor:
+  text1;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=3DMsoNormal style=3D'margin-bottom:0cm;margin-bottom:.0001pt;lin=
 e-height:
   normal'><span lang=3DEN-US>Typically used to define a path to file in the
@@ -2772,7 +2997,105 @@ e-height:
   model ancestry.<o:p></o:p></span></p>
   </td>
  </tr>
+ <tr style=3D'mso-yfti-irow:4'>
+  <td valign=3Dtop style=3D'border:solid black 1.0pt;mso-border-themecolor:=
+text1;
+  border-top:none;mso-border-top-alt:solid black .5pt;mso-border-top-themec=
+olor:
+  text1;mso-border-alt:solid black .5pt;mso-border-themecolor:text1;padding:
+  0cm 5.4pt 0cm 5.4pt'>
+  <p class=3DMsoNormal style=3D'margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:
+  normal'><span lang=3DEN-US>..\..\Foo\Bar\~\Dummy<o:p></o:p></span></p>
+  </td>
+  <td width=3D387 valign=3Dtop style=3D'width:290.0pt;border-top:none;borde=
+r-left:
+  none;border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-bord=
+er-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:soli=
+d black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-bord=
+er-themecolor:
+  text1;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=3DMsoNormal style=3D'margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:
+  normal'><span lang=3DEN-US>Search the ancestry from the current element u=
+p two
+  levels, then down a relative branch of the model through the child ‘Foo’ =
+and
+  ‘Descendant ‘Bar’ elements/collections (must be One-To-One or Zero-To-One
+  relationships) then resolve the artifact link on ‘Bar’ over to the soluti=
+on,
+  and then navigate down to its ‘Dummy’ container in the solution (solution
+  folder, project or project folder).<o:p></o:p></span></p>
+  </td>
+  <td width=3D372 valign=3Dtop style=3D'width:278.85pt;border-top:none;bord=
+er-left:
+  none;border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-bord=
+er-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:soli=
+d black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-bord=
+er-themecolor:
+  text1;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=3DMsoNormal style=3D'margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:
+  normal'><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+ <tr style=3D'mso-yfti-irow:5;mso-yfti-lastrow:yes'>
+  <td valign=3Dtop style=3D'border:solid black 1.0pt;mso-border-themecolor:=
+text1;
+  border-top:none;mso-border-top-alt:solid black .5pt;mso-border-top-themec=
+olor:
+  text1;mso-border-alt:solid black .5pt;mso-border-themecolor:text1;padding:
+  0cm 5.4pt 0cm 5.4pt'>
+  <p class=3DMsoNormal style=3D'margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:
+  normal'><span lang=3DEN-US>.\Foo\Bar\~\Dummy<o:p></o:p></span></p>
+  </td>
+  <td width=3D387 valign=3Dtop style=3D'width:290.0pt;border-top:none;borde=
+r-left:
+  none;border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-bord=
+er-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:soli=
+d black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-bord=
+er-themecolor:
+  text1;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=3DMsoNormal style=3D'margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:
+  normal'><span lang=3DEN-US>Search the descendants from the current elemen=
+t down
+  through the child ‘Foo’ and grandchild ‘Bar’ (must be One-To-One or
+  Zero-To-One relationships) then resolve the artifact link on ‘Bar’ over to
+  the solution, and then navigate down to its ‘Dummy’ container in the solu=
+tion
+  (solution folder, project or project folder).<o:p></o:p></span></p>
+  </td>
+  <td width=3D372 valign=3Dtop style=3D'width:278.85pt;border-top:none;bord=
+er-left:
+  none;border-bottom:solid black 1.0pt;mso-border-bottom-themecolor:text1;
+  border-right:solid black 1.0pt;mso-border-right-themecolor:text1;mso-bord=
+er-top-alt:
+  solid black .5pt;mso-border-top-themecolor:text1;mso-border-left-alt:soli=
+d black .5pt;
+  mso-border-left-themecolor:text1;mso-border-alt:solid black .5pt;mso-bord=
+er-themecolor:
+  text1;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=3DMsoNormal style=3D'margin-bottom:0cm;margin-bottom:.0001pt;lin=
+e-height:
+  normal'><span lang=3DEN-US>Typically used to explicitly state we are navi=
+gating
+  from this element down the hierarchy.<o:p></o:p></span></p>
+  </td>
+ </tr>
 </table>
+
+<p class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p>
 
 <p class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p>
 
@@ -2782,7 +3105,7 @@ e-height:
 
 </html>
 
-------=_NextPart_01CEAF24.14922A90
+------=_NextPart_01CF2576.A9017F50
 Content-Location: file:///C:/ADC8DC98/TargetPathSyntax_files/themedata.thmx
 Content-Transfer-Encoding: base64
 Content-Type: application/vnd.ms-officetheme
@@ -2843,7 +3166,7 @@ AAAAAAAAANYCAAB0aGVtZS90aGVtZS90aGVtZTEueG1sUEsBAi0AFAAGAAgAAAAhAA3RkJ+2AAAA
 GwEAACcAAAAAAAAAAAAAAAAAsgkAAHRoZW1lL3RoZW1lL19yZWxzL3RoZW1lTWFuYWdlci54bWwu
 cmVsc1BLBQYAAAAABQAFAF0BAACtCgAAAAA=
 
-------=_NextPart_01CEAF24.14922A90
+------=_NextPart_01CF2576.A9017F50
 Content-Location: file:///C:/ADC8DC98/TargetPathSyntax_files/colorschememapping.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml
@@ -2853,7 +3176,7 @@ Content-Type: text/xml
  bg1=3D"lt1" tx1=3D"dk1" bg2=3D"lt2" tx2=3D"dk2" accent1=3D"accent1" accent=
 2=3D"accent2" accent3=3D"accent3" accent4=3D"accent4" accent5=3D"accent5" a=
 ccent6=3D"accent6" hlink=3D"hlink" folHlink=3D"folHlink"/>
-------=_NextPart_01CEAF24.14922A90
+------=_NextPart_01CF2576.A9017F50
 Content-Location: file:///C:/ADC8DC98/TargetPathSyntax_files/filelist.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml; charset="utf-8"
@@ -2864,4 +3187,4 @@ Content-Type: text/xml; charset="utf-8"
  <o:File HRef=3D"colorschememapping.xml"/>
  <o:File HRef=3D"filelist.xml"/>
 </xml>
-------=_NextPart_01CEAF24.14922A90--
+------=_NextPart_01CF2576.A9017F50--
