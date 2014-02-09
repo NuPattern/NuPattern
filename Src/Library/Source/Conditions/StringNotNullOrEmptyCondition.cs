@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.Composition;
+using System.ComponentModel.DataAnnotations;
 using NuPattern.ComponentModel.Design;
 using NuPattern.Diagnostics;
 using NuPattern.Library.Properties;
@@ -15,6 +16,13 @@ namespace NuPattern.Library.Conditions
     public class StringNotNullOrEmptyCondition : Condition
     {
         private static readonly ITracer tracer = Tracer.Get<StringNotNullOrEmptyCondition>();
+
+        /// <summary>
+        /// Gets the current element.
+        /// </summary>
+        [Required]
+        [Import(AllowDefault = true)]
+        public IProductElement CurrentElement { get; set; }
 
         /// <summary>
         /// Gets or sets the value
@@ -34,7 +42,10 @@ namespace NuPattern.Library.Conditions
             tracer.Info(
                 Resources.StringNotNullOrEmptyCondition_TraceInitial, this.Value);
 
-            var result = string.IsNullOrEmpty(Value);
+            var value = (!string.IsNullOrEmpty(this.Value) && this.CurrentElement != null) 
+                ? ExpressionEvaluator.Evaluate(this.CurrentElement, this.Value) : this.Value;
+
+            var result = string.IsNullOrEmpty(value);
 
             tracer.Info(
                 Resources.StringNotNullOrEmptyCondition_TraceEvaluation, this.Value, result);
