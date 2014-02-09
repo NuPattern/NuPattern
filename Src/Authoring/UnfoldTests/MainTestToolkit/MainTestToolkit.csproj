@@ -116,11 +116,12 @@
     <Folder Include="Properties\Schemas\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.TestProjects.targets" />
+  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.NoCodeAnalysis.targets" />
   <Import Project="$(VsxTargetsPath)\Microsoft.VsSDK.targets" />
   <Import Project="$(BranchRoot)Common\Source\Versioning\Authoring.PatternToolkitVersion.gen.targets" />
   <!-- Properties for VSSDK/DSL Targets -->
   <PropertyGroup>
+    <CreateVsixContainer>false</CreateVsixContainer>
     <RegisterOutputPackage>true</RegisterOutputPackage>
     <RegisterWithCodebase>true</RegisterWithCodebase>
     <GacTargetOutput>false</GacTargetOutput>

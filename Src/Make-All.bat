@@ -20,20 +20,26 @@ CD Authoring
 msbuild.exe Authoring.Setup.vs2013.sln /t:Rebuild /p:Configuration=Debug-VS2013
 IF %errorlevel% neq 0 GOTO :error
 
-ECHO Built MSI can be found in the 'Binaries' directory.
 CD /d %~dp0
+ECHO:
+CALL SetColor.bat 0F "INFO -- Built MSI can be found in the 'Binaries' directory"
+ECHO(
 %SystemRoot%\explorer.exe "Binaries"
 REM Warning: Explore.exe return and %errorlevel% of 1
 
-ECHO NuPattern Built Successfully!
-COLOR 0A
+CD /d %~dp0
+ECHO:
+ECHO:
+CALL SetColor.bat 0A "---- NuPattern (All Versions) Built Successfully!"
+ECHO(
 PAUSE
-COLOR
 EXIT /b 0
 
 :error
-ECHO Failed Building! error #%errorlevel%
-COLOR 04
+CD /d %~dp0
+ECHO:
+ECHO:
+CALL SetColor.bat 04 "**** Failed Building! error #%errorlevel% ****"
+ECHO(
 PAUSE
-COLOR
 EXIT /b %errorlevel%

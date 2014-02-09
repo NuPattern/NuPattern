@@ -14,31 +14,54 @@ REM Setup the Visual Studio Build Environment
 CALL "%progfiles%\Microsoft Visual Studio %vsver%\VC\vcvarsall.bat" x86
 IF %errorlevel% neq 0 GOTO :error
 
+ECHO:
+CALL SetColor.bat 02 "-- Building Runtime (%vsname%)"
+ECHO(
+ECHO:
+
 REM Build Runtime
 CD Runtime
-msbuild.exe Runtime.vs%vsname%.sln /t:Rebuild /p:Configuration=Debug-VS%vsname%
+msbuild.exe Runtime.vs%vsname%.sln /t:Rebuild /p:Configuration=Debug-VS%vsname%;ExecuteTests=true /verbosity:minimal
 IF %errorlevel% neq 0 GOTO :error
+
+ECHO:
+CALL ..\SetColor.bat 0A "---- Runtime (%vsname%) Built Successfully!"
+ECHO(
+ECHO:
+CALL ..\SetColor.bat 02 "-- Building Authoring (%vsname%)"
+ECHO(
+ECHO:
 
 REM Build Authoring
 CD ..\Authoring
-msbuild.exe Authoring.vs%vsname%.sln /t:Rebuild /p:Configuration=Debug-VS%vsname%
+msbuild.exe Authoring.vs%vsname%.sln /t:Rebuild /p:Configuration=Debug-VS%vsname%;ExecuteTests=true /verbosity:minimal
 IF %errorlevel% neq 0 GOTO :error
 
+ECHO:
+CALL ..\SetColor.bat 0A "---- Authoring (%vsname%) Built Successfully!"
+ECHO(
+ECHO:
 
-ECHO Built VSIXes can be found in the 'Binaries\%vsver%' directory.
+
 CD /d %~dp0
+ECHO:
+CALL SetColor.bat 0F "INFO -- Built VSIXes can be found in the 'Binaries-%vsver%' directory."
+ECHO(
 IF NOT "%silent%"=="q" %SystemRoot%\explorer.exe "Binaries\%vsver%"
 REM Warning: Explore.exe return and %errorlevel% of 1
 
-ECHO NuPattern Built Successfully!
-COLOR 0A
+ECHO:
+CALL SetColor.bat 0A "---- NuPattern (%vsname%) Built Successfully!"
+ECHO(
+ECHO:
 IF NOT "%silent%"=="q" PAUSE
-COLOR
 EXIT /b 0
 
 :error
-ECHO Failed Building! error #%errorlevel%
-COLOR 04
+CD /d %~dp0
+ECHO:
+ECHO:
+CALL SetColor.bat 04 "**** Failed Building! error #%errorlevel% ****"
+ECHO(
 PAUSE
-COLOR
 EXIT /b %errorlevel%

@@ -76,6 +76,7 @@ namespace NuPattern.Library.UnitTests.Automation.Wizard
             }
 
             [TestMethod, TestCategory("Unit")]
+            [Ignore]
             public void WhenWizardExecutedAndCanceled_ThenTurnsIsCanceledToTrue()
             {
                 MockWizardWindow.ShouldBeCanceled = true;
@@ -85,6 +86,7 @@ namespace NuPattern.Library.UnitTests.Automation.Wizard
             }
 
             [TestMethod, TestCategory("Unit")]
+            [Ignore]
             public void WhenWizardIsExecuted_ThenCompositionServiceIsUsedToSatisfyImports()
             {
                 this.target.Execute();

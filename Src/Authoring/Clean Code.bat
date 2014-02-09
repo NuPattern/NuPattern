@@ -37,15 +37,17 @@ for /f "delims=" %%a in ('dir /ah-hr/s/b *.user') do (del /f/q "%%a")
 for /f "delims=" %%a in ('dir /ah-hr/s/b *.csproj.user') do (del /f/q "%%a")
 for /f "delims=" %%a in ('dir /ah-hr/s/b ~*.*') do (del /f/q "%%a")
 
-echo Cleaned Successfully!
-color 0A
+ECHO:
+ECHO:
+CALL SetColor.bat 0A "---- Cleaned Successfully!"
+ECHO(
 pause
-color
 exit /b 0
 
 :error
-echo Failed Cleaning! error #%errorlevel%
-color 04
+ECHO:
+ECHO:
+CALL SetColor.bat 04 "**** Failed Cleaning! error #%errorlevel% ****"
+ECHO(
 pause
-color
 exit /b %errorlevel%

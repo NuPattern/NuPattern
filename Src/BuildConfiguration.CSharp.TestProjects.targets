@@ -12,18 +12,34 @@
     <NoWarn>3003</NoWarn>
   </PropertyGroup>
 
-  <!-- VS2012 test settings -->
-  <PropertyGroup Condition="'$(Configuration)' == 'Debug-VS2012' or '$(Configuration)' == 'Release-VS2012'">
+  <!-- test settings -->
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug-VS2012' or '$(Configuration)' == 'Release-VS2012' or '$(Configuration)' == 'Debug-VS2013' or '$(Configuration)' == 'Release-VS2013'">
     <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
     <!--<IsCodedUITest>False</IsCodedUITest>
     <TestProjectType>UnitTest</TestProjectType>-->
   </PropertyGroup>
 
-  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="('$(Configuration)' == 'Debug-VS2012' or '$(Configuration)' == 'Release-VS2012') and Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="('$(Configuration)' == 'Debug-VS2012' or '$(Configuration)' == 'Release-VS2012' or '$(Configuration)' == 'Debug-VS2013' or '$(Configuration)' == 'Release-VS2013') and Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
 
   <!-- CA settings for build configurations -->
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release-VS2010|Any CPU' or '$(Configuration)|$(Platform)' == 'Release-VS2012|Any CPU' ">
     <CodeAnalysisRuleSet>$(BranchRoot)CodeAnalysis.TestProjects.ruleset</CodeAnalysisRuleSet>
     <StyleCopOverrideSettingsFile>$(BranchRoot)SourceAnalysis.TestProjects.stylecop</StyleCopOverrideSettingsFile>
   </PropertyGroup>
+
+  <!-- Test Execution -->
+  <PropertyGroup>
+    <ExecuteTests Condition="'$(ExecuteTests)' == ''">false</ExecuteTests>
+    <TestCategory Condition="'$(TestCategory)' == ''">Unit</TestCategory>
+    <TestSettingsFileName>$(SolutionName).testsettings</TestSettingsFileName>
+  </PropertyGroup>
+
+  <Target Name="ExecuteCategoryTests" AfterTargets="Build" Condition="'$(ExecuteTests)' == 'true'">
+    <Message Text="Running '$(TestCategory)' Tests" Importance="normal"/>
+
+    <Exec
+        WorkingDirectory="$(BranchRoot)"
+        Command="&quot;$(DevEnvDir)mstest.exe&quot; /testcontainer:&quot;$(TargetPath)&quot; /category:$(TestCategory) /testsettings:$(SolutionDir)$(TestSettingsFileName)"/>
+  </Target>
+
 </Project>

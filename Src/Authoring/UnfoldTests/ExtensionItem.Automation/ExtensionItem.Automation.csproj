@@ -79,7 +79,7 @@
     </CodeAnalysisDictionary>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.TestProjects.targets" />
+  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.NoCodeAnalysis.targets" />
   <Import Project="$(BranchRoot)Common\Source\Versioning\Authoring.PatternToolkitVersion.gen.targets" />
   <!-- Properties for VSSDK/DSL Targets -->
   <PropertyGroup>
