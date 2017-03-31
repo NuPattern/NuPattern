@@ -1,6 +1,8 @@
 ﻿using System;
 using System.ComponentModel;
+using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.VisualStudio.PlatformUI;
 using NuPattern.ComponentModel.Design;
 using NuPattern.Diagnostics;
 using NuPattern.Library.Properties;
@@ -28,6 +30,13 @@ namespace NuPattern.Library.Conditions
             this.LeftValue = string.Empty;
             this.RightValue = string.Empty;
         }
+
+        /// <summary>
+        /// Gets the current element.
+        /// </summary>
+        [Required]
+        [Import(AllowDefault = true)]
+        public IProductElement CurrentElement { get; set; }
 
         /// <summary>
         /// Gets the kind of comparison.
@@ -65,7 +74,12 @@ namespace NuPattern.Library.Conditions
             tracer.Info(
                 Resources.StringValueEqualsCondition_TraceInitial, this.LeftValue, this.RightValue, this.ComparisonKind);
 
-            var result = string.Equals(this.LeftValue, this.RightValue, this.ComparisonKind);
+            var leftValue = (this.CurrentElement != null) 
+                ? ExpressionEvaluator.Evaluate(this.CurrentElement, this.LeftValue) : this.LeftValue;
+            var rightValue = (this.CurrentElement != null) 
+                ? ExpressionEvaluator.Evaluate(this.CurrentElement, this.RightValue) : this.RightValue;
+
+            var result = string.Equals(leftValue, rightValue, this.ComparisonKind);
 
             tracer.Info(
                 Resources.StringValueEqualsCondition_TraceEvaluation, this.LeftValue, this.RightValue, this.ComparisonKind, result);
