@@ -28,7 +28,7 @@ Building 'Pattern Toolkits' is a new approach to adding productivity and consist
 # Getting Started
 Once you have NuPattern, you will want to get started by heading over to the [Getting Started](https://github.com/NuPattern/NuPattern/wiki/Getting-Started) page.
 
-# [Dcoumentation](https://github.com/NuPattern/NuPattern/wiki)
+# [Documentation](https://github.com/NuPattern/NuPattern/wiki)
 For more information, please see [this](https://github.com/NuPattern/NuPattern/wiki) page.
 
 
