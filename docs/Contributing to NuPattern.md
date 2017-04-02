@@ -1,0 +1,44 @@
+# Contributing to NuPattern
+We are very proud of the potential this project has to the software development community. One of the main goals of the project has always been to let the community guide its future direction, and to make a significant impact in the software industry as an illuminating technology.
+We would like to do everything we can to attract you to the project and provide you with enjoyment in getting involved with the project in any way that you can. Whether all you want to do is use the technology, or download and look at the code, or perhaps recommend a new feature or bug-fix. We are here to help you be successful.
+
+On this page you should be able to find information about how to contribute to the project, where the project needs the most help, and how you and others can get involved in changing the future of this technology.
+
+* [What can you do](#whatcangedone)
+* [How you can do it](#howcanitbedone)
+* [How things get done](#howitgetsdone)
+
+## {anchor:whatcanbedone}This is what you can do
+We need help in a lot of areas of the project as it grows in the community:
+* **Getting the word about town**
+	* NuPattern is an evolutionary new way to develop software to supplement the way you build projects. It is the first generation of tooling that helps IT professionals build their own tooling in an IDE like Visual Studio. It is the result of learning from many previous attempts from companies like Microsoft to fulfill this goal, and has now been incubated, and proven across several industries. We need more people to know about its existence, because without them knowing that this capability exists, no one will be demanding the industry to move forward in this direction of automation, which has now been proven to be totally viable. Break out your twitter account, your blogs and write some articles and get the word out so that we can finally move push the industry into a modern era of software development and automation.
+* **Creating new features and fixing bugs**
+	* NuPattern is both a platform for supporting and running toolkits, and a set of tools for building them. There is plenty of opportunity for new features that make building toolkits and using them more delightful for people. And heaps of new opportunity for creating your own toolkits!
+	* Filter the [Issue Tracker](http://nupattern.codeplex.com/workitem/list/basic) for a list of suggested new features, and existing bugs, and help us reduce the number of issues people are having. Or have a look at [this view](http://nupattern.codeplex.com/workitem/list/advanced?keyword=&status=Open%2b%28not%2bclosed%29&type=All&priority=All&release=All&assignedTo=All&component=All&sortField=Votes&sortDirection=Descending&page=0) to see what needs doing.
+	* Check out our current list of bugs/new features we think should be pretty easy to achieve in a short time frame, but still have a big impact on the project: [Easy Contributions](Easy-Contributions)
+	* Look at the [Developer Notes](Developer-Notes) for details on how to prepare, get, fork and build the source code.
+* **Creating screencasts and how-to videos**
+	* We have learned the hard way; that without videos to demonstrate NuPattern and what it can do, people find it hard to see the value of NuPattern right away. We need lots of videos so that people can very quickly how it brings value to their projects. 
+	* See the [discussion:353296](discussion_353296) thread we have about ideas for a basic set of much needed videos.
+* **Creating new toolkits, and publishing them on the Visual Studio Gallery**
+	* The success of NuPattern as an emerging technology is dependent on the value in the toolkits which are built upon it. Without which, there is no value in the framework and tools themselves. Whilst there are many toolkits being built for internal use at organizations today, there are only a very small number available publically on the Visual Studio Gallery for people to discover and learn from. As you can see from this [discussion:433400](discussion_433400) discussion thread, we need more toolkits for more development and deployment patterns. 
+	* Build your own toolkit today for the best practices and solutions that you know best, or ask the community what they need the most help with.
+	* Check out our list of toolkits we think could offer others in the community a quick introduction the value of toolkits that should be pretty easy to build in a short time frame, but still have a big impact on the community: [Easy Contributions](Easy-Contributions)
+* **Documenting what we learn, so others can learn from us**
+	* Reference documentation is boring to write, we want to focus on writing guidance that shares experiences learned from the practice of discovery, exploration and resolving issues that people may be having as well as us. NuPattern today comes with an extensive set of guidance that explains the theory, concepts and most importantly the how-to steps to be productive in building toolkits. As we learn more about how people build and use toolkits, we extend this library of guidance for others to share. Why not share what you have learned with others.
+	* Check out our list of guidance topics that we think people need the most help on that should be pretty easy to build in a short time frame, but still have a big impact on the community: [Easy Contributions](Easy-Contributions)
+
+## {anchor:howcanitbedone}This is how to do it
+Some of the ways you can contribute to this project do not require any special tools, permissions or processes, other than what you already have. Getting the word out about what this technology does in your blogs, twitter, facebook, whatever, is all part of what we all do in our everyday lives to move progress in our industry forwards for the betterment of all software development.
+
+If you want to become a contributor to the project and leave your mark, its pretty easy to do. With just browsing this site, you can follow the project, edit the wiki, join discussions, submit suggestions, or bugs, and view source code and deliverables. 
+Just follow the project, and what other people are doing.
+### {anchor:changewiki}Create Content on this Site
+Spotted a glaring error or omission?, or want to provide more infromation for others?, then you might just want update the wiki. Just send us a request to join the project (On the '[People](https://nupattern.codeplex.com/team)' page) tell us briefly that you "want to edit the wiki", and you will be made an 'Editor' of the project, and able to change the text in these pages. We would love more help with that. If we could let you do that without seeking permissions, we would, but this is just the way CodePlex projects works.
+### {anchor:changesoftware}Change the Software
+If you want to go to the next step, and start forging permanent changes to the software you might need to install some development tools (like Visual Studio 2010 or Visual Studio 2012) and install some GIT tools to manage the source code. You don’t need any special permissions to do this! Just go ahead create software, and when you are done, ‘push’ your code to the project repository, and send us a 'pull request', and we will integrate your contribution into the project. Read the [Developer Notes](Developer-Notes) for more details on how to setup your environment to download and build the source code. Then you can head over the [Easy Contributions](Easy-Contributions) page to give you some ideas about some of the things we have to get done, that are quick and easy.
+### {anchor:recordvideos}Record some Videos
+If you want to make some screencasts you might need some basic video capture software. We personally still recommend products like [Camtasia](http://www.techsmith.com/camtasia.html) for making the highest quality videos, it is simple to use and you can create great subtle effects that help others pay attention to the important details of your video. But use whatever you like, in whatever format suits you. You will need to post your videos to some internet provider like YouTube, or others, and then tell us to embed or link it on this project, or become and editor and create a page yourself.
+
+## {anchor:howitgetsdone}This is how things get done
+As with any open source project there are the ways things get done on the project, who does them, and how the project is governed in terms of its direction, and how decisions are made. Officially, they call this part the project governance part, but really but its more about steering people in a specific direction, and less about governing things. See the [Project Governance](Governance) page for more details.

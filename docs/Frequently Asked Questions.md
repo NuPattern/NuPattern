@@ -1,0 +1,3 @@
+**Q. Why is the MSI download so big! (about 135MB)?**
+
+A. The MSI installer which is included in the later versions of NuPattern is so large because it contains all four VSIX installers: both the 'NuPattern Toolkit Builder' extension and the 'NuPattern Toolkit Builder Labs' extensions, for both Visual Studio 2010 and Visual Studio 2012. This is to simplify the installation of NuPattern in both versions of Visual Studio. Each of the four VSIX installers contains a rich and extensive volume of offline guidance help files and samples that guide a person through building and using pattern toolkits.
