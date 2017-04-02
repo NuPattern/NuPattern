@@ -26,10 +26,10 @@ Building 'Pattern Toolkits' is a new approach to adding productivity and consist
 ![](https://github.com/NuPattern/NuPattern/blob/master/docs/Home_NuPattern%20on%20VSGallery.png)
 
 # Getting Started
-Once you have NuPattern, you will want to get started by heading over to the [[Getting Started]] page.
+Once you have NuPattern, you will want to get started by heading over to the [this](https://github.com/NuPattern/NuPattern/wiki/Getting-Started) page.
 
-# More Information
-For more information, please see the [[Home]] page.
+# Documentation
+For more information, please see [this](https://github.com/NuPattern/NuPattern/wiki) page.
 
 
 Software IP management and project development governance provide by [Outercurve Foundation](www.outercurve.org)
